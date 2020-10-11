@@ -19,7 +19,6 @@ title_id = "4D5307D5"
 ```
 </details>
 
-#
 ### Gears Of War 2
 <details><summary>Patches (Click to Expand)</summary>
 
@@ -30,14 +29,9 @@ title_id = "4D53082D"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options to go above 60FPS."
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
     author = "illusion"
     is_enabled = true
-
-# vsync limit // doesn't work above 60hz if not using param
-    [[patch.be32]]
-        address = 0x8298CF70
-        value = 0x39600000
 
     [[patch.be32]]
         address = 0x824A2E94
@@ -65,7 +59,46 @@ title_id = "4D53082D"
 ```
 </details>
 
-#
+### Gears Of War 3
+<details><summary>Patches (Click to Expand)</summary>
+
+```
+title_name = "Gears of Wars 3"
+title_id = "4D5308AB"
+#media_id = "4C93A17D"
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8253D9B0
+        value = 0x60000000
+```
+</details>
+
+### Gears Of War Judgement
+<details><summary>Patches (Click to Expand)</summary>
+
+```
+title_name = "Gears of Wars Judgement"
+title_id = "4D530A26"
+#media_id = "6DCAF3C2"
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8255DE08
+        value = 0x60000000
+```
+</details>
+
 ### Rockstar Table Tennis
 <details><summary>Patches (Click to Expand)</summary>
 
@@ -85,7 +118,6 @@ title_id = "545407DF"
 ```
 </details>
 
-#
 ### Mirror's Edge
 <details><summary>Patches (Click to Expand)</summary>
 
@@ -96,14 +128,10 @@ title_id = "45410850"
 
 [[patch]]
     name = "FPS Unlock"
-    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options to go above 60FPS."
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
     author = "illusion"
     is_enabled = true
-# vsync limit // doesn't work above 60hz if not using param
-    [[patch.be32]]
-        address = 0x828148e8
-        value = 0x39600000
-# 62 fps limit
+
     [[patch.be32]]
         address = 0x8254f5fc
         value = 0x60000000

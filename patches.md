@@ -8,14 +8,14 @@ title_name = "Gears Of War"
 title_id = "4D5307D5"
 
 [[patch]]
-	name = "GoW - Texture rendering"
-	desc = "None"
-	author = "Gliniak"
-	is_enabled = true
-	
-	[[patch.be32]]
-		address = 0x822306D8
-		value = 0x409AFF6C
+    name = "GoW - Texture rendering"
+    desc = "None"
+    author = "Gliniak"
+    is_enabled = true
+    
+    [[patch.be32]]
+        address = 0x822306D8
+        value = 0x409AFF6C
 ```
 </details>
 
@@ -107,14 +107,14 @@ title_name = "Rockstar Table Tennis"
 title_id = "545407DF"
 
 [[patch]]
-	name = "Rockstar Table Tennis - Crash Skip"
-	desc = "None"
-	author = "Gliniak"
-	is_enabled = true
-	
-	[[patch.be8]]
-		address = 0x8237A3DB
-		value = 0x05
+    name = "Rockstar Table Tennis - Crash Skip"
+    desc = "None"
+    author = "Gliniak"
+    is_enabled = true
+    
+    [[patch.be8]]
+        address = 0x8237A3DB
+        value = 0x05
 ```
 </details>
 

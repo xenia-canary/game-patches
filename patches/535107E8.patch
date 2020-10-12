@@ -1,0 +1,13 @@
+title_name = "NIER"
+title_id = "535107E8"
+#media_id = "426CA5A2"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Raise FPS Limit to 60"
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8256BB90
+        value = 0x60000000

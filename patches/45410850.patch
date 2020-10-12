@@ -1,0 +1,13 @@
+title_name = "Mirror's Edge"
+title_id = "45410850"
+#media_id = "426CA5A2"
+
+[[patch]]
+    name = "FPS Unlock"
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8254f5fc
+        value = 0x60000000

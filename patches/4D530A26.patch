@@ -1,0 +1,13 @@
+title_name = "Gears of Wars Judgement"
+title_id = "4D530A26"
+#media_id = "6DCAF3C2"
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8255DE08
+        value = 0x60000000

@@ -1,0 +1,12 @@
+title_name = "Gears Of War"
+title_id = "4D5307D5"
+
+[[patch]]
+    name = "GoW - Texture rendering"
+    desc = "None"
+    author = "Gliniak"
+    is_enabled = true
+    
+    [[patch.be32]]
+        address = 0x822306D8
+        value = 0x409AFF6C

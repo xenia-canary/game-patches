@@ -1,0 +1,16 @@
+title_name = "FF13-2 Demo"
+title_id = "53518810"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "None"
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8285FCEC
+        value = 0x39600001
+
+    [[patch.be32]]
+        address = 0x8285FD20
+        value = 0x39400001

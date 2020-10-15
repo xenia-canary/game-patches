@@ -1,0 +1,31 @@
+title_name = "Forza Horizon"
+title_id = "4D5309C9"
+
+[[patch]]
+    name = "Disable Depth of Field"
+    desc = "None"
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8245B494
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x8245846C
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x8245849C
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Shadows"
+    desc = "Improves performance at the cost of Graphical Quality."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824408B0
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x82442478
+        value = 0x39600000

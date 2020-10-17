@@ -1,0 +1,19 @@
+title_name = "State of Decay"
+title_id = "584111E8"
+#media_id = "6F32E742" # tu5
+
+[[patch]]
+    name = "Disable conditional rendering"
+    desc = "None"
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+            address = 0x8313A1BC
+        value = 0x39600000
+    [[patch.be32]]
+            address = 0x83139C24
+        value = 0x39600000
+    [[patch.be32]]
+            address = 0x831394CC
+        value = 0x39200000

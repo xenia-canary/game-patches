@@ -6,7 +6,7 @@ title_id = "4D53082D"
     name = "Unlock FPS"
     desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x824A2E94
@@ -26,7 +26,7 @@ title_id = "4D53082D"
     name = "Disable Motion Blur"
     desc = "None"
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8236004C

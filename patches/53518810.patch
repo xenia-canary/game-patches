@@ -5,7 +5,7 @@ title_id = "53518810"
     name = "60 FPS"
     desc = "None"
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8285FCEC

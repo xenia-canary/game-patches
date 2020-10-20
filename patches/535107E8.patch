@@ -6,7 +6,7 @@ title_id = "535107E8"
     name = "60 FPS"
     desc = "Raise FPS Limit to 60"
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8256BB90

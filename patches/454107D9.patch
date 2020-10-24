@@ -1,5 +1,6 @@
 title_name = "NFS Most Wanted 2005"
 title_id = "454107D9"
+#media_id = "00000000" # retail only
 
 [[patch]]
     name = "Disable Post Processing"
@@ -10,7 +11,6 @@ title_id = "454107D9"
     [[patch.be32]]
             address = 0x82224710
         value = 0x39400000
-
     [[patch.be32]]
         address = 0x8222442C
         value = 0x39200000

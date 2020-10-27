@@ -1,0 +1,19 @@
+title_name = "Saints Row"
+title_id = "545107D1"
+#media_id = "24367742" #tu1
+
+[[patch]]
+    name = "Enable Debug Console"
+    desc = "Enable byte 0x835F4C3E + keyboard_passthru in config"
+    author = "emoose"
+    is_enabled = true
+
+    [[patch.be32]]
+            address = 0x8265F694
+        value = 0x48000AA4
+    [[patch.be32]]
+            address = 0x82660134
+        value = 0x480B8EF9
+    [[patch.be32]]
+            address = 0x82660268
+        value = 0x480B8E14

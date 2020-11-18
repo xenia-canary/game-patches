@@ -21,3 +21,16 @@ title_id = "4D5307D1"
     [[patch.be8]]
         address = 0x824725DB
         value = 0x00
+
+[[patch]]
+    name = "21:9"
+    desc = "Disable present_letterbox in Xenia Option to take effect."
+    author = "Esppiral"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8200E2C0
+        value = 0x4000
+    [[patch.be32]]
+        address = 0x820010B0
+        value = 0x40182D83

@@ -1,0 +1,13 @@
+title_name = "PGR3"
+title_id = "4D5307D1"
+#media_id = "00000000" # invalid!
+
+[[patch]]
+    name = "60 FPS"
+    desc = ""
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82371FA4
+        value = 0x39400001

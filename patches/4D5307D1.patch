@@ -11,3 +11,13 @@ title_id = "4D5307D1"
     [[patch.be32]]
         address = 0x82371FA4
         value = 0x39400001
+
+[[patch]]
+    name = "Disable Motion Blur"
+    desc = ""
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x824725DB
+        value = 0x00

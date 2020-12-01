@@ -31,7 +31,7 @@ title_id = "4D5307DF"
         address = 0x82DEC57C # game speed
         value = 0x3f00
     [[patch.be16]]
-        address = 0x82DDA880 # battle speed
+        address = 0x82DDA880 # battle speed, disable this to avoid softlock but will result in double speed
         value = 0x3f00
     [[patch.be32]]
         address = 0x8246ab68 # vsync flip rate

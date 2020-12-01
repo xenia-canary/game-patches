@@ -11,3 +11,28 @@ title_id = "4D5307DF"
     [[patch.be32]]
         address = 0x82132D68
         value = 0x39600001
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Work-In-Progress, can be improved upon by others. Causes softlock in battles."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820ce6bc # will need to find a way to write 3f00 rather than nop
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x821a0640
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8273664c
+        value = 0x60000000
+    [[patch.be16]]
+        address = 0x82DEC57C # game speed
+        value = 0x3f00
+    [[patch.be16]]
+        address = 0x82DDA880 # battle speed
+        value = 0x3f00
+    [[patch.be32]]
+        address = 0x8246ab68 # vsync flip rate
+        value = 0x39400001

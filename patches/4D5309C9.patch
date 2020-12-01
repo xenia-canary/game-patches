@@ -29,7 +29,7 @@ title_id = "4D5309C9"
 
 [[patch]]
     name = "Disable Shadows"
-    desc = "Improves performance at the cost of Graphical Quality."
+    desc = "None"
     author = "illusion"
     is_enabled = false
 

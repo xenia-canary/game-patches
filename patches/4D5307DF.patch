@@ -1,0 +1,13 @@
+title_name = "Blue Dragon"
+title_id = "4D5307DF"
+# too many media id to count, should work on every base version.
+
+[[patch]]
+    name = "Enable Wireframe"
+    desc = "Significantly impacts performance, useful for viewing aspects of levels."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82132D68
+        value = 0x39600001

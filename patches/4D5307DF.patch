@@ -13,6 +13,16 @@ title_id = "4D5307DF"
         value = 0x39600001
 
 [[patch]]
+    name = "Enable Camera Bounding Box"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821340B0
+        value = 0x39600001
+
+[[patch]]
     name = "60 FPS"
     desc = "Work-In-Progress, can be improved upon by others. Causes softlock in battles."
     author = "illusion"

@@ -1,0 +1,21 @@
+title_name = "Banjo Tooie"
+title_id = "58410955"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82276B5C
+        value = 0x600000000
+    [[patch.be32]]
+        address = 0x82276B00
+        value = 0x600000000
+    [[patch.be32]]
+        address = 0x8269B198
+        value = 0x3c88888a
+    [[patch.be32]]
+        address = 0x822F9F18
+        value = 0x39600001

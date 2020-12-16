@@ -1,0 +1,27 @@
+title_name = "Banjo Kazooie"
+title_id = "58410954"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8210FAC4
+        value = 0x600000000
+    [[patch.be32]]
+        address = 0x8210FA8C
+        value = 0x600000000
+    [[patch.be32]]
+        address = 0x8210FAD8
+        value = 0x600000000
+    [[patch.be32]]
+        address = 0x82002684
+        value = 0x3c88888a
+    [[patch.be32]]
+        address = 0x8249D92C
+        value = 0x3c88888a
+    [[patch.be32]]
+        address = 0x821D35A8
+        value = 0x39600001

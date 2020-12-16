@@ -7,7 +7,7 @@ title_id = "58410954"
     author = "illusion"
     is_enabled = false
 
-# Enable break_on_debugbreak for patches to work!
+# Disable break_on_debugbreak for patches to work!
     [[patch.be32]]
         address = 0x8210FAC4
         value = 0x600000000

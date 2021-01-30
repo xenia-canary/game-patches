@@ -1,0 +1,12 @@
+title_name = "Batman Arkham Origins TU3"
+title_id = "57520828"
+
+[[patch]]
+    name = "Debug Menu"
+    desc = "None"
+    author = "dron_3"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8242C407
+        value = 0x00

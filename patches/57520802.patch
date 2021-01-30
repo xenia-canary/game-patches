@@ -1,0 +1,12 @@
+title_name = "Batman Arkham City TU6"
+title_id = "57520802"
+
+[[patch]]
+    name = "Debug Menu"
+    desc = "None"
+    author = "dron_3"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82436500
+        value = 0x38600000

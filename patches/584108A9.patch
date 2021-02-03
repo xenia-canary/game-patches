@@ -1,0 +1,22 @@
+title_name = "GoldenEye 007"
+title_id = "584108A9"
+
+[[patch]]
+    name = "No Reload"
+    desc = "Weapon must have ammo"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820ab8cc
+        value = 0x60000000
+
+[[patch]]
+    name = "Pause Menu"
+    desc = "Press LB"
+    author = "N/A"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82189F2B
+        value = 0x00

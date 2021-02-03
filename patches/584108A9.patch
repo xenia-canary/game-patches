@@ -3,16 +3,22 @@ title_id = "584108A9"
 
 [[patch]]
     name = "No Reload"
-    desc = "Weapon must have ammo"
+    desc = ""
     author = "illusion"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x820ab8cc
         value = 0x60000000
+    [[patch.be8]] # startup
+        address = 0x83063323
+        value = 0x01
+    [[patch.be8]] # level start
+        address = 0x821379d7
+        value = 0x01
 
 [[patch]]
-    name = "Remove Blur in Classic Graphics (Paritally)"
+    name = "Remove Blur in Classic Graphics (Partially)"
     desc = ""
     author = "illusion"
     is_enabled = false

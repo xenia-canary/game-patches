@@ -12,6 +12,19 @@ title_id = "584108A9"
         value = 0x60000000
 
 [[patch]]
+    name = "Remove Blur in Classic Graphics (Paritally)"
+    desc = ""
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821891b0
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82189270
+        value = 0x60000000
+
+[[patch]]
     name = "Pause Menu"
     desc = "Press LB"
     author = "N/A"

@@ -18,21 +18,18 @@ title_id = "584108A9"
         value = 0x01
 
 [[patch]]
-    name = "Remove Blur in Classic Graphics (Partially)"
-    desc = ""
-    author = "illusion"
+    name = "Remove Blur in Classic Graphics"
+    desc = "Can still be enabled as 'Vaseline-o-vision' cheat"
+    author = "illusion, emoose"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x821891b0
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x82189270
+        address = 0x82188E70
         value = 0x60000000
 
 [[patch]]
-    name = "Pause Menu"
-    desc = "Press LB"
+    name = "Debug Menu"
+    desc = "Press LB to open menu"
     author = "N/A"
     is_enabled = false
 

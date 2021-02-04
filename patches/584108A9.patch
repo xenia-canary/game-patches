@@ -20,7 +20,7 @@ title_id = "584108A9"
 [[patch]]
     name = "Remove Blur in Classic Graphics"
     desc = "Can still be enabled as 'Vaseline-o-vision' cheat"
-    author = "emoose"
+    author = "illusion, emoose"
     is_enabled = false
 
     [[patch.be32]]
@@ -29,7 +29,7 @@ title_id = "584108A9"
 
 [[patch]]
     name = "Debug Menu"
-    desc = "Press LB"
+    desc = "Press LB to open menu"
     author = "N/A"
     is_enabled = false
 

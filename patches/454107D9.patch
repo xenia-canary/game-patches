@@ -14,3 +14,16 @@ title_id = "454107D9"
     [[patch.be32]]
         address = 0x8222442C
         value = 0x39200000
+
+[[patch]]
+    name = "Skip audio loop stuck code"
+    desc = "None"
+    author = "Gliniak"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x825E1D3C
+        value = 0x2F050001
+    [[patch.be32]]
+        address = 0x825E1D40
+        value = 0x419A0010

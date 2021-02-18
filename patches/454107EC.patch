@@ -1,0 +1,13 @@
+title_name = "NFS Carbon"
+title_id = "454107EC"
+hash = "94FCEACB4C5CEC78"
+
+[[patch]]
+    name = "Skip audio loop stuck code"
+    desc = "None"
+    author = "Gliniak"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x826B4D38
+        value = 0x38A00000

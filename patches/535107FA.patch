@@ -1,0 +1,12 @@
+title_name = "Deus Ex: Mankind Divided"
+title_id = "535107FA"
+
+[[patch]]
+    name = "Disable looping audio code"
+    desc = "None"
+    author = "Gliniak"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x822B14BC
+        value = 0x3B800000

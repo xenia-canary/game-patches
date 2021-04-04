@@ -1,0 +1,12 @@
+title_name = "Skate 3"
+title_id = "454108E6"
+
+[[patch]]
+    name = "No Fall Damage"
+    desc = "Only works while you're on your board. Jumping from the most extreme heights may still trigger bails because your character folds up and hits their limbs on the ground, so the game thinks you skated into something at high speed."
+    author = "illusion, Aphelion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82D65EB0
+        value = 0xC80B13FC

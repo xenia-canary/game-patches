@@ -1,0 +1,40 @@
+title_name = "Red Dead Redemption"
+title_id = "5454082B"
+hash = "82CDA3C91B57C170"
+#media_id = "2AAB34E2"
+
+[[patch]]
+    name = "Bottomless Clip"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825A7F20
+        value = 0x60000000
+
+[[patch]]
+    name = "Infinite Ammo"
+    desc = "1000 in reserved mag"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825AB37C
+        value = 0x3C00447A # you may modifiy to load your ammo amount in 2 bytes, default is 1000
+    [[patch.be32]]
+        address = 0x825AB380
+        value = 0x900A0000
+
+[[patch]]
+    name = "Infinite Horse Stamina"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82C4C430
+        value = 0x3C003F80
+    [[patch.be32]]
+        address = 0x82C4C434
+        value = 0x9007000C

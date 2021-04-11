@@ -11,3 +11,12 @@ title_id = "4D5308AB"
     [[patch.be32]]
         address = 0x8253D9B0
         value = 0x60000000
+
+[[patch]]
+    name = "Disable Ambient Occlusion"
+    desc = "Disable this when using upscaling to fix various artifacts."
+    author = "illusion"
+    is_enabled = false
+    [[patch.be32]]
+        address = 0x82593DC4
+        value = 0x39600000

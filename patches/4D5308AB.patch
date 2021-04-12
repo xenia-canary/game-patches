@@ -17,6 +17,17 @@ title_id = "4D5308AB"
     desc = "Disable this when using upscaling to fix various artifacts."
     author = "illusion"
     is_enabled = false
+
     [[patch.be32]]
         address = 0x82593DC4
         value = 0x39600000
+
+[[patch]]
+    name = "Disable Lens Flare"
+    desc = "Solves most occlusion related issues."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82861FD0
+        value = 0x39400000

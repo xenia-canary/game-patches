@@ -11,3 +11,13 @@ title_id = "4D530A26"
     [[patch.be32]]
         address = 0x8255DE08
         value = 0x60000000
+
+[[patch]]
+    name = "Disable Lens Flare"
+    desc = "Solves most occlusion related issues."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8288E120
+        value = 0x39400000

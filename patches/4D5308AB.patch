@@ -14,7 +14,7 @@ title_id = "4D5308AB"
 
 [[patch]]
     name = "Disable Ambient Occlusion"
-    desc = "Disable this when using upscaling to fix various artifacts."
+    desc = "Enable this patch when using upscaling to fix various artifacts."
     author = "illusion"
     is_enabled = false
 

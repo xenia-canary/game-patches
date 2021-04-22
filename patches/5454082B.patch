@@ -38,3 +38,13 @@ hash = "82CDA3C91B57C170"
     [[patch.be32]]
         address = 0x82C4C434
         value = 0x9007000C
+
+[[patch]]
+    name = "Skip Grass Occlusion"
+    desc = "Fixes Flickering Grass."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x822ECC9C
+        value = 0x4800

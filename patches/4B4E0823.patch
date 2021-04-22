@@ -1,0 +1,13 @@
+title_name = "Silent Hill Downpour"
+title_id = "4B4E0823"
+hash = "BEE670772E454B1F"
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect. Camera movement slows down over 60 FPS."
+    author = "illusion, Aphelion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825C64C8
+        value = 0x60000000

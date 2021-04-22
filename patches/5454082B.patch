@@ -48,3 +48,13 @@ hash = "82CDA3C91B57C170"
     [[patch.be16]]
         address = 0x822ECC9C
         value = 0x4800
+
+[[patch]]
+    name = "Disable Depth of Field + Motion Blurr"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x827C697C
+        value = 0x4800

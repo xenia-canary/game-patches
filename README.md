@@ -8,7 +8,7 @@ This repository contains Game Patches available for the Xenia Emulator.
 
  - If the game you are submitting a patch for already has a .patch file, then create a Pull Request to edit that file and add your name in author.
 
- - This new file must be named `[Title ID].patch` - For example, a patch file for Halo 3 must be called `4D5307E6.patch` (All uppercase)
+ - This new file must be named `[Title ID] - Game Title.patch` - For example, a patch file for Halo 3 must be called `4D5307E6 - Halo 3.patch`
 
  - File must contain empty line at end of file.
 

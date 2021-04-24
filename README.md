@@ -35,7 +35,11 @@ title_id = "545407DF"
 
 Plugins for loading Xbox 360 executables. Only useful for developers.
 
-Breakpoints can be set in CE or MSVC with `emit_source_annotations`
+Memory Breakpoints can be set in CE or MSVC with `emit_source_annotations`
+
+This will show xex address when breakpoint is hit, although there is currently no way to set breakpoint on execution within the Xenia Debugger.
+
+Xex loader plugins for Reverse Engineering tools:
 
 [IDA 6 XEX Loader](http://xorloser.com/blog/?p=395)
 
@@ -47,11 +51,7 @@ Breakpoints can be set in CE or MSVC with `emit_source_annotations`
 
 2. Extract the patches folder to where your Xenia Canary executable is located.
 
-<details><summary>Image (Click to Expand)</summary>
-
 ![](https://cdn.discordapp.com/attachments/747164286056661153/764464248176115712/unknown.png)
-
-</details>
 
 3. To enable patches (if they're not already enabled by default), open the .patch file that corresponds to your game's ID with a text editor (Notepad, Notepad++, VSCode, etc.), and set `is_enabled` from `false` to `true`
 

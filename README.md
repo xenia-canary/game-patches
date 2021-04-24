@@ -33,8 +33,6 @@ title_id = "545407DF"
 
 ### For Developers
 
-Plugins for loading Xbox 360 executables. Only useful for developers.
-
 Memory Breakpoints can be set in CE or MSVC with `emit_source_annotations`
 
 This will show xex address when breakpoint is hit, although there is currently no way to set breakpoint on execution within the Xenia Debugger.

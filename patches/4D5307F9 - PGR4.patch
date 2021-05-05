@@ -1,0 +1,23 @@
+title_name = "PGR4"
+title_id = "4D5307F9"
+hash = "66726C5BBBB02C28"
+
+[[patch]]
+    name = "60 FPS"
+    desc = ""
+    author = "illusion"
+    is_enabled = false
+
+   [[patch.be32]]
+        address = 0x826957ec
+        value = 0x39400001
+
+[[patch]]
+    name = "Disable Motion Blur"
+    desc = ""
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829a9a9f
+        value = 0x00

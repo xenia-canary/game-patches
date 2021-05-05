@@ -10,6 +10,8 @@ This repository contains Game Patches available for the Xenia Emulator.
 
  - This new file must be named `[Title ID] - Game Title.patch` - For example, a patch file for Halo 3 must be called `4D5307E6 - Halo 3.patch`
 
+ - File must contain executable hash which can be obtained [here](#Obtaining-XEX-hash)
+
  - File must contain empty line at end of file.
 
 Example of the contents that should be included in the file:
@@ -18,6 +20,7 @@ Example of the contents that should be included in the file:
 ```
 title_name = "Rockstar Table Tennis"
 title_id = "545407DF"
+hash = "469639BD50D42E70"
 
 [[patch]]
     name = "Rockstar Table Tennis - Crash Skip"
@@ -42,6 +45,12 @@ Xex loader plugins for Reverse Engineering tools:
 [IDA 6 XEX Loader](http://xorloser.com/blog/?p=395)
 
 [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
+
+### Obtaining XEX hash
+
+Run executable of chioce once. Close Xenia Canary, Open `xenia.log` and search for `Module hash:` you should see something like: `Module hash: 66726C5BBBB02C28 for default` as an example. 
+
+`Module hash: 0000000000000000 for (xex name)`
 
 ### Installing
 

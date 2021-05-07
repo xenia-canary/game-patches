@@ -31,7 +31,7 @@ hash = "F8F5F22E950BE693"
 
 [[patch]]
     name = "Skip Grass Occlusion"
-    desc = "Fixes Flickering Grass."
+    desc = "Gets rid of Grass entirely."
     author = "illusion,boma"
     is_enabled = false
 

@@ -1,0 +1,50 @@
+title_name = "Red Dead Redemption"
+title_id = "5454082B"
+hash = "F8F5F22E950BE693"
+#media_id = "3EE87B76"
+
+[[patch]]
+    name = "Infinite Ammo"
+    desc = "100 in reserved mag"
+    author = "illusion,boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825B9DD4
+        value = 0x3C0042C8 # you may modifiy to load your ammo amount in 2 bytes, default is 100. it will reset to 100 after some idle time :(
+    [[patch.be32]]
+        address = 0x825B9DD8
+        value = 0x900A0000
+
+[[patch]]
+    name = "Infinite Horse Stamina"
+    desc = "None"
+    author = "illusion,boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82C77738
+        value = 0x3C003F80
+    [[patch.be32]]
+        address = 0x82C7773C
+        value = 0x9007000C
+
+[[patch]]
+    name = "Skip Grass Occlusion"
+    desc = "Fixes Flickering Grass."
+    author = "illusion,boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x822EE494
+        value = 0x4800
+
+[[patch]]
+    name = "Disable Depth of Field + Motion Blur"
+    desc = ""
+    author = "illusion,boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x827E8DBC
+        value = 0x4800

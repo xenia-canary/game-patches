@@ -10,8 +10,11 @@ hash = "82CDA3C91B57C170"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825A7F20
-        value = 0x60000000
+        address = 0x825A7F1C
+        value = 0x48000008 # skip fsub
+    [[patch.be32]]
+        address = 0x825A4AF4
+        value = 0x48000018 # skip ammo mainpulation check
 
 [[patch]]
     name = "Infinite Ammo"

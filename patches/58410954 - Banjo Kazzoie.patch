@@ -8,6 +8,10 @@ title_id = "58410954"
     is_enabled = false
 
 # Disable break_on_debugbreak for patches to work!
+
+# Fixme: use less nop and figure out a better way for this.
+# and maybe try to solve double speed issues.
+
     [[patch.be32]]
         address = 0x8210FAC4
         value = 0x600000000

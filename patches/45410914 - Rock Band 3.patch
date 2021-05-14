@@ -1,0 +1,13 @@
+title_name = "Rock Band 3"
+title_id = "45410914"
+hash = "A6CD6E2BDF0A7007"
+
+[[patch]]
+    name = "Skip EA hardware/software bug usage"
+    desc = "None"
+    author = "Gliniak"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8226045C
+        value = 0x485B5DDC

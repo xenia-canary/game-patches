@@ -1,0 +1,63 @@
+title_name = "Red Dead Redemption"
+title_id = "5454082B"
+hash = "82CDA3C91B57C170"
+#media_id = "2AAB34E2"
+
+[[patch]]
+    name = "Bottomless Clip"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825A7F1C
+        value = 0x48000008 # skip fsub
+    [[patch.be32]]
+        address = 0x825A4AF4
+        value = 0x48000018 # skip ammo mainpulation check
+
+[[patch]]
+    name = "Infinite Ammo"
+    desc = "100 in reserved mag"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825AB37C
+        value = 0x3C0042C8 # you may modifiy to load your ammo amount in 2 bytes, default is 100. it will reset to 100 after some idle time :(
+    [[patch.be32]]
+        address = 0x825AB380
+        value = 0x900A0000
+
+[[patch]]
+    name = "Infinite Horse Stamina"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82C4C430
+        value = 0x3C003F80
+    [[patch.be32]]
+        address = 0x82C4C434
+        value = 0x9007000C
+
+[[patch]]
+    name = "Skip Grass Occlusion"
+    desc = "Gets rid of Grass entirely."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x822ECC9C
+        value = 0x4800
+
+[[patch]]
+    name = "Disable Depth of Field + Motion Blurr"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x827C697C
+        value = 0x4800

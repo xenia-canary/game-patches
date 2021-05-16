@@ -1,0 +1,13 @@
+title_name = "Skate 2"
+title_id = "4541087F"
+hash = "E6661629EEB2ADD4"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Force 60FPS Everywhere regradless of Gameplay Mode."
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8232D4E8
+        value = 0x39600001

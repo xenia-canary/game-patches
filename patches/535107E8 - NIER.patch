@@ -4,7 +4,7 @@ title_id = "535107E8"
 
 [[patch]]
     name = "60 FPS"
-    desc = "Raise FPS Limit to 60"
+    desc = "Raise FPS Limit to 60. Readback resolve may lock the game to 30FPS."
     author = "illusion"
     is_enabled = false
 

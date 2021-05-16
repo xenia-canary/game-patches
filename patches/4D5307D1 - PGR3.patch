@@ -1,10 +1,10 @@
 title_name = "PGR3"
 title_id = "4D5307D1"
-#media_id = "00000000" # invalid!
+# TODO(illusion): add hash
 
 [[patch]]
     name = "60 FPS"
-    desc = ""
+    desc = "Some video playback may run at double speed."
     author = "illusion"
     is_enabled = false
 

@@ -42,9 +42,11 @@ This will show xex address when breakpoint is hit, although there is currently n
 
 Xex loader plugins for Reverse Engineering tools:
 
+[Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
+
 [IDA 6 XEX Loader](http://xorloser.com/blog/?p=395)
 
-[Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
+[IDA 7 XEX Loader](https://github.com/emoose/idaxex)
 
 ### Obtaining XEX hash
 

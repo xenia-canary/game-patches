@@ -1,0 +1,44 @@
+title_name = "Gears of Wars 2"
+title_id = "4D53082D"
+hash = "CE051FA9AE893BDB"
+#media_id = "22AB4F7C"
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824A2FA4
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Ambient Occlusion"
+    desc = "Enable this patch when using upscaling to fix various artifacts."
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82700198
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Motion Blur"
+    desc = "None"
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8237186C
+        value = 0x39600000
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "None"
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822E96D8
+        value = 0x39600000

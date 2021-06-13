@@ -14,3 +14,36 @@ title_id = "53510806"
     [[patch.be32]]
         address = 0x828554c8
         value = 0x39400001
+
+[[patch]]
+    name = "Debug Mode"
+    desc = "Use Controller 2 to open and navigate menus.\nFonts will be black, Requires custom font built for xenon version."
+    author = "fdsa, illusion"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8225205c
+        value = 0x40
+    [[patch.be8]]
+        address = 0x82251d6c
+        value = 0x40
+        # font goes into path below
+        # 82247cf0 addi param_1=>s_sys/debug/...   = "sys/debug/DebugFontTextureDDS"
+        # https://cdn.discordapp.com/attachments/650395105479360514/846842483849691186/DDS.7z
+        # from fdsa, has font build scripts but i couldn't get them working in xenon version
+        # todo(illusion): find a place to make cave to write custom playmode from stw at 82251fa4
+        # i think only first line is needed.
+        # bne on 8225205c allows menu to be opened.
+        # nop should boot into debug playmode
+        # lVar5 = FUN_82253798(lVar5,"alpha");
+        # (iVar1 + 0x2e4) = 2;
+        # lVar5 = FUN_82253798(lVar5,"beta");
+        # (iVar1 + 0x2e4) = 3;
+        # lVar5 = FUN_82253798(lVar5,"tgs");
+        # (iVar1 + 0x2e4) = 4;
+        # lVar5 = FUN_82253798(lVar5,"e3");
+        # (iVar1 + 0x2e4) = 5;
+        # lVar5 = FUN_82253798(lVar5,"debug");
+        # (iVar1 + 0x2e4) = 0;
+        # lVar5 = FUN_82253798(lVar5,"release");
+        # (iVar1 + 0x2e4) = 1; // default

@@ -4,7 +4,7 @@ title_id = "5454085D"
 
 [[patch]]
     name = "Disable Lens Flare"
-    desc = "Fixes onoccluded bight lights on-screen."
+    desc = "Fixes onoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
 

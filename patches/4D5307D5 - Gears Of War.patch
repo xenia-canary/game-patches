@@ -20,4 +20,3 @@ title_id = "4D5307D5"
     [[patch.be32]]
         address = 0x821364D8
         value = 0x00000000
-		

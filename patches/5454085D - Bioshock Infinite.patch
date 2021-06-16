@@ -3,8 +3,8 @@ title_id = "5454085D"
 #media_id = "7F5C4901"
 
 [[patch]]
-    name = "Disable Lens Flare"
-    desc = "Fixes onoccluded bight lights on-screen."
+    name = "Disable Lens Flares"
+    desc = "Fixes bright lights that incorrectly shine through walls."
     author = "boma"
     is_enabled = false
 

@@ -5,18 +5,8 @@ title_id = "4D5307D5"
     name = "Disable Motion Blur"
     desc = "None"
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be16]]
         address = 0x82136704
         value = 0x0000
-
-[[patch]]
-    name = "Disable Bloom"
-    desc = "None"
-    author = "boma"
-    is_enabled = true
-
-    [[patch.be32]]
-        address = 0x821364D8
-        value = 0x00000000

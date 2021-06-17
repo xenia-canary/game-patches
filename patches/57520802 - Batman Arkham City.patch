@@ -1,0 +1,14 @@
+title_name = "Batman Arkham City"
+title_id = "57520802"
+hash = "CC92C76573FD61BF"
+#media_id = "2AAB34E2"
+
+[[patch]]
+    name = "Disable Lens Flare"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8270e550
+        value = 0x39400000

@@ -7,7 +7,7 @@ hash = "EC884B235D7F930C"
     name = "Disable Lens Flare"
     desc = "Fixes Unoccluded bright lights on-screen."
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8299b48c
@@ -17,7 +17,7 @@ hash = "EC884B235D7F930C"
     name = "Unlock FPS"
     desc = "Removes 58FPS framerate cap. VSync must be disabled in Xenia config."
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 	
     [[patch.be32]]
         address = 0x825a7c20

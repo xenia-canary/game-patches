@@ -9,8 +9,8 @@ title_id = "4D5308AB"
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8232d4a0
-        value = 0x4800
+        address = 0x8253D9B0
+        value = 0x60000000
 
 [[patch]]
     name = "Disable Ambient Occlusion"

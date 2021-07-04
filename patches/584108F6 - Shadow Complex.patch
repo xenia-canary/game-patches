@@ -17,7 +17,7 @@ hash = "232A5BCC3F647153"
     name = "Remove Motion Blur"
     desc = ""
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8235423C

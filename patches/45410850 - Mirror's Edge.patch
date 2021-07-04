@@ -32,13 +32,3 @@ hash = "B1DFF4F33956DE2B"
     [[patch.be32]]
         address = 0x8239ad24
         value = 0x3af50000
-		
-[[patch]]
-    name = "Disable Depth of Field"
-    desc = ""
-    author = "boma"
-    is_enabled = false
-	
-	[[patch.be32]]
-        address = 0x8239ad2c
-        value = 0x3a7f0000

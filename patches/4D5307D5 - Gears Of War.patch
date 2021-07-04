@@ -1,0 +1,12 @@
+title_name = "Gears Of War"
+title_id = "4D5307D5"
+
+[[patch]]
+    name = "Disable Motion Blur"
+    desc = "None"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82136704
+        value = 0x0000

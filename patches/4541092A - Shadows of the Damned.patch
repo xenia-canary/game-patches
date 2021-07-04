@@ -1,5 +1,7 @@
 title_name = "Shadows of the Damned"
 title_id = "4541092A"
+hash = "1970A748370AB18"
+#media_id = "64D9671A"
 
 [[patch]]
     name = "Unlock FPS"
@@ -9,4 +11,36 @@ title_id = "4541092A"
 
     [[patch.be32]]
         address = 0x82567FD0
+        value = 0x60000000
+
+[[patch]]
+    name = "RTV - Flickering Decals Fix"
+    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8230E780
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable All Uber Post Processing Effects"
+    desc = "Removes tonemapping, image grain, motion blur, rim shading, and DoF"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82882918
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82882C44
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82882CC0
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82885B8C
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82885BA8
         value = 0x60000000

@@ -1,0 +1,62 @@
+title_name = "Lollipop Chainsaw"
+title_id = "565707D0"
+hash = "52E2D6F8696B8028"
+#media_id = "3759EFF2"
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes bright lights that incorrectly shine through meshes."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82890140
+        value = 0x39400000
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Must set vsync to false in Xenia settings. This removes in-game 58FPS limiter."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8253BC58
+        value = 0x60000000
+
+[[patch]]
+    name = "RTV - Decals Fix"
+    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822EE938
+        value = 0x39600000
+
+[[patch]]
+    name = "Clean-Up Murky Image Quality"
+    desc = "Disables film grain, vignette, and comic-book filter."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827E0140
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x827E0508
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x827E07D4
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x827E07FC
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x827E0AB0
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x827E31DC
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x827E31F8
+        value = 0x38800001

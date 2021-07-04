@@ -23,7 +23,7 @@ title_id = "4D530A26"
         value = 0x39400000
 
 [[patch]]
-    name = "FTV - Flickering Decals Fix"
+    name = "RTV - Flickering Decals Fix"
     desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
     author = "boma"
     is_enabled = false

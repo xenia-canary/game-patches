@@ -34,7 +34,7 @@ title_id = "4D53082D"
 
 [[patch]]
     name = "Black Shading Fix"
-    desc = "None"
+    desc = "Modifies spherical harmonic lighting channel to properly display character shadows."
     author = "illusion"
     is_enabled = false
 

@@ -5,7 +5,7 @@ hash = "CC92C76573FD61BF"
 
 [[patch]]
     name = "Disable Lens Flare"
-    desc = ""
+    desc = "Fixes bright lights that incorrectly shine through walls."
     author = "boma"
     is_enabled = false
 

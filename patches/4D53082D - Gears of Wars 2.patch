@@ -41,3 +41,13 @@ title_id = "4D53082D"
     [[patch.be32]]
         address = 0x822D86C0
         value = 0x39600000
+
+[[patch]]
+    name = "RTV - Flickering Decals Fix"
+    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822C5C94
+        value = 0x39600000

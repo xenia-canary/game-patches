@@ -8,9 +8,9 @@ title_id = "4D5308AB"
     author = "illusion"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x8253D9B0
-        value = 0x60000000
+    [[patch.be16]]
+        address = 0x8232d4a0
+        value = 0x4800
 
 [[patch]]
     name = "Disable Ambient Occlusion"
@@ -31,3 +31,16 @@ title_id = "4D5308AB"
     [[patch.be32]]
         address = 0x82861FD0
         value = 0x39400000
+
+[[patch]]
+    name = "RTV Flickering Decals Fix"
+    desc = "Removes decals from static meshes affected by lighting channels and translucencies when using RTV. Small visual details may be missing."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826C8BB4
+        value = 0x817F0000
+    [[patch.be32]]
+        address = 0x826C8D48
+        value = 0xC3F90000

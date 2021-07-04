@@ -20,5 +20,15 @@ hash = "EC884B235D7F930C"
     is_enabled = false
 	
     [[patch.be32]]
-        address = 0x825a7c20
+        address = 0x8242FD24
         value = 0x60000000
+
+[[patch]]
+    name = "RTV - Decals Fix"
+    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8235E1D4
+        value = 0x39600000

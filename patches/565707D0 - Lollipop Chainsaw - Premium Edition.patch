@@ -1,7 +1,7 @@
 title_name = "Lollipop Chainsaw"
 title_id = "565707D0"
-hash = "993C7315D439C7CD"
-#media_id = "31BE13D9"
+hash = "52E2D6F8696B8028"
+#media_id = "3759EFF2"
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -10,7 +10,7 @@ hash = "993C7315D439C7CD"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8288F2D0
+        address = 0x82890140
         value = 0x39400000
 
 [[patch]]
@@ -20,7 +20,7 @@ hash = "993C7315D439C7CD"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8253A7E0
+        address = 0x8253BC58
         value = 0x60000000
 
 [[patch]]
@@ -30,7 +30,7 @@ hash = "993C7315D439C7CD"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822ED998
+        address = 0x822EE938
         value = 0x39600000
 
 [[patch]]
@@ -40,23 +40,23 @@ hash = "993C7315D439C7CD"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827DF050
+        address = 0x827E0140
         value = 0x38800001
     [[patch.be32]]
-        address = 0x827DF418
+        address = 0x827E0508
         value = 0x38800001
     [[patch.be32]]
-        address = 0x827DF6E4
+        address = 0x827E07D4
         value = 0x60000000
     [[patch.be32]]
-        address = 0x827DF70C
+        address = 0x827E07FC
         value = 0x38800001
     [[patch.be32]]
-        address = 0x827DF9C0
+        address = 0x827E0AB0
         value = 0x38800001
     [[patch.be32]]
-        address = 0x827E20EC
+        address = 0x827E31DC
         value = 0x38800001
     [[patch.be32]]
-        address = 0x827E2108
+        address = 0x827E31F8
         value = 0x38800001

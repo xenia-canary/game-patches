@@ -1,0 +1,24 @@
+title_name = "Gears Of War (No TU)"
+title_id = "4D5307D5"
+#hash = ""
+
+[[patch]]
+    name = "Disable Motion Blur"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+    
+    [[patch.be16]]
+        address = 0x8228fa40
+        value = 0x4800
+
+[[patch]]
+    name = "Disable Most Post FXs"
+    desc = "None"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82289dc0
+        value = 0x4800
+

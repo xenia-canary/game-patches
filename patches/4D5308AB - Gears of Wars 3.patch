@@ -8,7 +8,7 @@ title_id = "4D5308AB"
     author = "illusion"
     is_enabled = false
 
-    [[patch.be16]]
+    [[patch.be32]]
         address = 0x8253D9B0
         value = 0x60000000
 

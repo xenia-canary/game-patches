@@ -24,8 +24,5 @@ hash = "B65283762F29121E"
         value = 0x4800
     [[patch.be32]]
         address = 0x8227E660
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x8227E664
-        value = 0x60000000
+        value = 0x48000008
 

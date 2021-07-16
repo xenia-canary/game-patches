@@ -1,0 +1,24 @@
+title_name = "Unreal Tournament 3"
+title_id = "4D5707DB"
+hash = "EB8A18FE5D59FCFD"
+#media_id = "72123E1F"
+
+[[patch]]
+    name = "Unlocked Framerate"
+    desc = "Removes 62FPS framerate cap. May increase camera sensitivity."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823FFCBC
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Post-Processing"
+    desc = "Disables motion blur, DoF, tonemapping, and bloom."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82315380
+        value = 0x48000008

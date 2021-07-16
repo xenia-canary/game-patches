@@ -44,11 +44,7 @@ hash = "82CDA3C91B57C170"
 
 [[patch]]
     name = "Skip Grass Occlusion"
-<<<<<<< Updated upstream:patches/5454082B - Red Dead Redemption - Original - NTSC.patch
-    desc = "Gets rid of Grass entirely."
-=======
     desc = "Disables grass entirely."
->>>>>>> Stashed changes:patches/5454082B - Red Dead Redemption (Launch NTSC Disc).patch
     author = "illusion"
     is_enabled = false
 

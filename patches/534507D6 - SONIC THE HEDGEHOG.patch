@@ -1,0 +1,53 @@
+title_name = "SONIC THE HEDGEHOG"
+title_id = "534507D6"
+hash = "3FAD43EC51B87429"
+
+[[patch]]
+    name = "Disable 2x MSAA"
+    desc = "Disables 2x MSAA, which is used during gameplay (except for super speed sections). This can significantly improve performance, especially in the town areas."
+    author = "Hyper"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82607B94
+        value = 0x38800000
+		
+[[patch]]
+    name = "Disable 4x MSAA"
+    desc = "Disables 4x MSAA, which is used only for the main menu."
+    author = "Hyper"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82607BB8
+        value = 0x38800000
+		
+[[patch]]
+    name = "Disable Bloom"
+    desc = "Disables bloom - this is mostly useful for upscaling and doesn't have any sort of performance impact."
+    author = "Hyper"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8260A420
+        value = 0x4E800020
+		
+[[patch]]
+    name = "Disable Radial Blur"
+    desc = "Disables radial blur when moving at high speed."
+    author = "Hyper"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8204C584
+        value = 0x8260A5B0
+		
+[[patch]]
+    name = "Disable Shadows"
+    desc = "Disables shadow rendering. This can significantly improve performance if you're willing to give up decent lighting."
+    author = "Hyper"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8260CE10
+        value = 0x4E800020

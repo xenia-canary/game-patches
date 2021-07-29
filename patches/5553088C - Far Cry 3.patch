@@ -1,0 +1,44 @@
+title_name = "Far Cry 3"
+title_id = "5553088C"
+hash = "D868DF28844095D "
+#media_id = "6F6EAD36"
+
+[[patch]]
+    name = "Infinite Health"
+    desc = "makes health not decrease"
+    author = "TeddyHammer"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825f778c
+        value = 0xd01f0124 
+    [[patch.be32]]
+        address = 0x825f74f8
+        value = 0xd1bf0120
+[[patch]]
+    name = "No Reload"
+    desc = "max ammo"
+    author = "TeddyHammer"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82fbf3ac
+        value = 0x00003960
+[[patch]]
+    name = "Max Money on Spend"
+    desc = "lots of money"
+    author = "TeddyHammer"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8300451c
+        value = 0x39407530
+[[patch]]
+    name = "$0 on Spend (For selling loot)"
+    desc = "even more money"
+    author = "TeddyHammer"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8300451c # 
+        value = 0x3940ffff # 4bytearray

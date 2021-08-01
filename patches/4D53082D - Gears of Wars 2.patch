@@ -51,3 +51,13 @@ title_id = "4D53082D"
     [[patch.be32]]
         address = 0x822C5C94
         value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering."
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82999954
+        value = 0x90DE0010

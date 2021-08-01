@@ -50,7 +50,7 @@ title_id = "4D530A26"
 
 [[patch]]
     name = "16x Anisotropic Filtering."
-    desc = "bah"
+    desc = ""
     author = "boma"
     is_enabled = false
 

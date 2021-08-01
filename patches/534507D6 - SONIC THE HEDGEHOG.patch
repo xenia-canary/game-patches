@@ -29,8 +29,8 @@ hash = "3FAD43EC51B87429"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8260A420
-        value = 0x4E800020
+        address = 0x8260A448
+        value = 0x48000094
 		
 [[patch]]
     name = "Disable Radial Blur"
@@ -49,5 +49,5 @@ hash = "3FAD43EC51B87429"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8260CE10
-        value = 0x4E800020
+        address = 0x8260CE40
+        value = 0x48000204

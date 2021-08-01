@@ -47,3 +47,13 @@ title_id = "4D530A26"
     [[patch.be32]]
         address = 0x8242CE08
         value = 0x409A0010
+
+[[patch]]
+    name = "16x Anisotropic Filtering."
+    desc = "bah"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82999954
+        value = 0x90DE0010

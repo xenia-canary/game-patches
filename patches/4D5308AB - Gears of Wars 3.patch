@@ -44,3 +44,19 @@ title_id = "4D5308AB"
     [[patch.be32]]
         address = 0x826C8D48
         value = 0xC3F90000
+
+[[patch]]
+    name = "Disable Temporal Anti-Aliasing"
+    desc = "Clearer image and higher FPS when using resolution upscaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82414018
+        value = 0x38000001
+    [[patch.be32]]
+        address = 0x8241573C
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x82415870
+        value = 0x39600000

@@ -32,3 +32,13 @@ hash = "EC884B235D7F930C"
     [[patch.be32]]
         address = 0x8235E1D4
         value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82A5C904
+        value = 0x38A00010

@@ -56,4 +56,4 @@ title_id = "4D530A26"
 
     [[patch.be32]]
         address = 0x82999954
-        value = 0x90DE0010
+        value = 0x38A00010

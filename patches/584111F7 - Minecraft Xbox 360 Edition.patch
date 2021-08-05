@@ -1,0 +1,14 @@
+title_name = "Minecraft: Xbox 360 Edition"
+title_id = "584111F7"
+hash = "8192027C51071DCB"
+#media_id = "7CD33B56"
+
+[[patch]]
+    name = "GodMode"
+    desc = "never decreases health"
+    author = "TeddyHammer"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82200904
+        value = 0x60000000

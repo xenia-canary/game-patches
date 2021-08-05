@@ -1,0 +1,24 @@
+title_name = "Banjo-Kazooie® Nuts"
+title_id = "4D5307ED"
+hash = "DF7BB7E5C2BE89B1"
+#media_id = "3E567DFF"
+
+[[patch]]
+    name = "Notes Never Decrease"
+    desc = "none"
+    author = "Etokapa , TeddyHammer"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8250C3B0
+        value = 0x60000000
+
+[[patch]]
+    name = "Screen Always Bright"
+    desc = "none"
+    author = "TeddyHammer"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829DD0D4
+        value = 0x60000000

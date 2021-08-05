@@ -12,3 +12,13 @@ hash = "BEE670772E454B1F"
     [[patch.be32]]
         address = 0x825C64C8
         value = 0x60000000
+
+[[patch]]
+    name = "Disable FXAA"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82A1097C
+        value = 0x39600000

@@ -1,0 +1,34 @@
+title_name = "Alice: Madness Returns"
+title_id = "45410916"
+hash = "EC884B235D7F930C"
+#media_id = "31C4B45C"
+
+[[patch]]
+    name = "Disable Lens Flare"
+    desc = "Fixes Unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8299b48c
+        value = 0x39400000
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Removes 58FPS framerate cap. VSync must be disabled in Xenia config."
+    author = "boma"
+    is_enabled = false
+	
+    [[patch.be32]]
+        address = 0x8242FD24
+        value = 0x60000000
+
+[[patch]]
+    name = "RTV - Decals Fix"
+    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8235E1D4
+        value = 0x39600000

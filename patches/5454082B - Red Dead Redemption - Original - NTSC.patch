@@ -44,7 +44,7 @@ hash = "82CDA3C91B57C170"
 
 [[patch]]
     name = "Skip Grass Occlusion"
-    desc = "Gets rid of Grass entirely."
+    desc = "Disables grass entirely."
     author = "illusion"
     is_enabled = false
 
@@ -53,8 +53,8 @@ hash = "82CDA3C91B57C170"
         value = 0x4800
 
 [[patch]]
-    name = "Disable Depth of Field + Motion Blurr"
-    desc = "None"
+    name = "Disable Depth of Field + Motion Blur"
+    desc = ""
     author = "illusion"
     is_enabled = false
 

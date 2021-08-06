@@ -1,0 +1,34 @@
+title_name = "Wolfenstein 3D"
+title_id = "584109CB"
+hash = "CEB5E47BDDC5A173"
+#media_id = "0729B8DE"
+
+[[patch]]
+    name = "Invincibility"
+    desc = "Always at 100% HP"
+    author = "Teddy"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x82484DCC
+        value = 0x60000000
+
+[[patch]]
+    name = "Infinite Lives"
+    desc = "Infinite Lives"
+    author = "Teddy"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x824739B0
+        value = 0x60000000
+
+[[patch]]
+    name = "Infinite Ammo"
+    desc = "Infinite Ammo"
+    author = "teddy"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x824861B8
+        value = 0x60000000

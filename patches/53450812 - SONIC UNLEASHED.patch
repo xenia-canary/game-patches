@@ -1,0 +1,22 @@
+title_name = "SONIC UNLEASHED"
+title_id = "53450812"
+hash = "C031CE0A3D7B711F"
+
+[[patch]]
+    name = "1280x720 Rendering"
+    desc = "Patches the game to render at 1280x720 instead of 880x720."
+    author = "slashiee, ICUP321"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82BA9028
+        value = 0x38800500
+    [[patch.be32]]
+        address = 0x8327B450
+        value = 0x3f800000
+    [[patch.be32]]
+        address = 0x8327B454
+        value = 0x3f800000
+    [[patch.be32]]
+        address = 0x8327B458
+        value = 0x3f800000

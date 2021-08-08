@@ -34,8 +34,8 @@ hash = "52E2D6F8696B8028"
         value = 0x39600000
 
 [[patch]]
-    name = "Clean-Up Murky Image Quality"
-    desc = "Disables film grain, vignette, and comic-book filter."
+    name = "Image Quality Fix"
+    desc = "Disables film grain, vignette, comic-book filter and other post-processing effects that do not render correctly."
     author = "boma"
     is_enabled = false
 
@@ -60,3 +60,13 @@ hash = "52E2D6F8696B8028"
     [[patch.be32]]
         address = 0x827E31F8
         value = 0x38800001
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829887AC
+        value = 0x38A00010

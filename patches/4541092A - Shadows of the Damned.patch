@@ -44,3 +44,13 @@ hash = "1970A748370AB18"
     [[patch.be32]]
         address = 0x82885BA8
         value = 0x60000000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829EE4F4
+        value = 0x38A00010

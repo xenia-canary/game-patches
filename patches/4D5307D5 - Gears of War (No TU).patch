@@ -26,3 +26,12 @@ hash = "B65283762F29121E"
         address = 0x8227E660
         value = 0x48000008
 
+[[patch]]
+    name = "8x Anisotropic Filtering"
+    desc = "Game does not natively support 16x sampling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82487484
+        value = 0x38A00010

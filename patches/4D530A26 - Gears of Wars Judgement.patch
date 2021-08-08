@@ -31,3 +31,29 @@ title_id = "4D530A26"
     [[patch.be32]]
         address = 0x8234C778
         value = 0x39600000
+
+[[patch]]
+    name = "Disable Temporal Anti-Aliasing"
+    desc = "Clearer image and higher FPS when using resolution upscaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8242B5B0
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x8242CCCC
+        value = 0x48000098
+    [[patch.be32]]
+        address = 0x8242CE08
+        value = 0x409A0010
+
+[[patch]]
+    name = "16x Anisotropic Filtering."
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82999954
+        value = 0x38A00010

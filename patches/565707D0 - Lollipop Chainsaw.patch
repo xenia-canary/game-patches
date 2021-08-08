@@ -15,7 +15,7 @@ hash = "993C7315D439C7CD"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Must set vsync to false in Xenia settings. This removes in-game 58FPS limiter."
+    desc = "Must set vsync to false in Xenia settings. This removes in-game 58FPS framelimit."
     author = "boma"
     is_enabled = false
 
@@ -34,8 +34,8 @@ hash = "993C7315D439C7CD"
         value = 0x39600000
 
 [[patch]]
-    name = "Clean-Up Murky Image Quality"
-    desc = "Disables film grain, vignette, and comic-book filter."
+    name = "Image Quality Fix"
+    desc = "Disables film grain, vignette, comic-book filter and other post-processing effects that do not render correctly."
     author = "boma"
     is_enabled = false
 
@@ -60,3 +60,13 @@ hash = "993C7315D439C7CD"
     [[patch.be32]]
         address = 0x827E2108
         value = 0x38800001
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829877AC
+        value = 0x38A00010

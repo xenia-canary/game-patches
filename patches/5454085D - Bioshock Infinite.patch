@@ -11,3 +11,23 @@ title_id = "5454085D"
     [[patch.be32]]
         address = 0x825e6370
         value = 0x39400000
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Removes 62fps framelimit. Must set vsync to false in Xenia config file."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8253D9B0
+        value = 0x60000000
+
+[[patch]]
+    name = "16x Anisotropic Filtering."
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826D7984
+        value = 0x38A00010

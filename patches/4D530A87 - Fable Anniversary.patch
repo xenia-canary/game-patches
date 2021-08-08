@@ -6,8 +6,18 @@ title_id = "4D530A87"
     name = "Unlock FPS"
     desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x826F348C
         value = 0x60000000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82BBE34C
+        value = 0x38A00010

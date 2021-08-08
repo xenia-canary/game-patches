@@ -1,0 +1,34 @@
+title_name = "Lost Planet 3"
+title_id = "43430830"
+hash = "4875F915CFF3DB27"
+#media_id = "09C0B498"
+
+[[patch]]
+    name = "Disable Lens Flare"
+    desc = "Fixes Unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82B08160
+        value = 0x39600000
+
+[[patch]]
+    name = "RTV - Decals Fix"
+    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822EE938
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829887AC
+        value = 0x38A00010

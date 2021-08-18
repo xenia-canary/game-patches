@@ -3,7 +3,7 @@ title_id = "45410914"
 hash = "A6CD6E2BDF0A7007"
 
 [[patch]]
-    name = "Skip EA hardware/software bug usage"
+    name = "Skip SEH usage to prevent nullptr write"
     desc = "None"
     author = "Gliniak"
     is_enabled = true

@@ -1,0 +1,49 @@
+title_name = "Asuras Wrath"
+title_id = "43430817"
+hash = "F3AA3A3085A3A3B9"
+#media_id = "11DFADD6"
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Removes 30fps frame-limit. Vsync must be set to false in Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824D7130
+        value = 0x60000000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828D921C
+        value = 0x38A00010
+
+[[patch]]
+    name = "Disable All Post-Processing"
+    desc = "Removes DoF, motion blur, ambient occlusion and bloom. Use this patch to fix visual artifacts due to resolution scaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82301E30
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82480820
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8249D258
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8249D4C8
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8249D598
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82800C5C
+        value = 0x60000000

@@ -1,0 +1,63 @@
+title_name = "Bulletstorm"
+title_id = "454108EF"
+hash = "1338446D7E81F1F6"
+#media_id = "1D93E609"
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82A514CC
+        value = 0x38A00010
+
+[[patch]]
+    name = "Disable Motion Blur"
+    desc = "Removes camera-based guassian blur and radial blur."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825E6870
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x82422708
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x8266B920
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8293C978
+        value = 0x39400000
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Disables 62 fps cap. Must set vsync to false in Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82591DE8
+        value = 0x60000000
+
+[[patch]]
+    name = "Texture Pop-In Partial Fix"
+    desc = "Clamps static mesh and particle LOD bias to -1."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826CB3AC
+        value = 0x3920FFFF
+    [[patch.be32]]
+        address = 0x82902980
+        value = 0x3960FFFF

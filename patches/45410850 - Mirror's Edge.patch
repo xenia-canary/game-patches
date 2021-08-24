@@ -42,3 +42,13 @@ hash = "B1DFF4F33956DE2B"
     [[patch.be32]]
         address = 0x8239CF0C
         value = 0x39600010
+
+[[patch]]
+    name = "Disable Bloom+DoF"
+    desc = ""
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8270f018
+        value = 0x40

@@ -20,3 +20,26 @@ hash = "C031CE0A3D7B711F"
     [[patch.be32]]
         address = 0x8327B458
         value = 0x3f800000
+
+[[patch]]
+    name = "Disable Depth of Field"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82BAB224
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82BAB178
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Radial Blur"
+    desc = "Does not disable gaussian blur, certain camera-based and per-object blur will still be rendered."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82FB9BE0
+        value = 0x60000000

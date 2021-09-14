@@ -1,0 +1,32 @@
+title_name = "Resident Evil 0"
+title_id = "43430842"
+hash = "13C8BCDF2EFCEE62"
+#media_id = "2A9EF17A"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Proper Game Speed up to 60FPS."
+    author = "illusion"
+    # first array is game tick
+    # second array is simulated tick (what we are patching)
+    # setting both bits to 60.0f will result in double speed
+    # however, setting only the second bit to 60.0f result in 60fps and no speedup
+    # cc implemented game speed/frametime calc based on tickrate (absolute hacks :p) for win32
+    # perhaps patch stfs instead?
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x824a0430
+        value = 0x48534a18 # branch
+    [[patch.be32]]
+         address = 0x829d4e48
+         value = 0x3c004270 # register
+     [[patch.be32]]
+         address = 0x829d4e4c
+         value = 0x901f0044 # store 
+     [[patch.be32]]
+         address = 0x829d4e50
+         value = 0xc19f0044 # read 
+     [[patch.be32]]
+         address = 0x829d4e54
+         value = 0x4bacb5e0 # branch

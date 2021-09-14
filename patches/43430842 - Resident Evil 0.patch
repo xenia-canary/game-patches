@@ -13,7 +13,10 @@ hash = "13C8BCDF2EFCEE62"
     # however, setting only the second bit to 60.0f result in 60fps and no speedup
     # cc implemented game speed/frametime calc based on tickrate (absolute hacks :p) for win32
     # perhaps patch stfs instead?
-    is_enabled = true
+    # array stfs loads from 82009988
+    # there's like 4 stfs, one for movie, and a couple at startup and another for gameplay,
+    # didn't bother to trace
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x824a0430

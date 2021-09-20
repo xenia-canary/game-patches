@@ -4,7 +4,7 @@ hash = "541A4CC449C0A274"
 #media_id = "2C261D21"
 
 [[patch]]
-    name = "60 FPS1"
+    name = "60 FPS"
     desc = "Proper Game Speed up to 60FPS."
     # first array is game tick
     # second array is simulated tick (what we are patching)

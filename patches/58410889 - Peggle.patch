@@ -5,7 +5,6 @@ title_id = "58410889"
 
 [[patch]]
     name = "Unlimited Balls"
-    desc = "TeddyHammer Porting these Balls"
     author = "Credits to the guys of peek poker,"
     is_enabled = true
 

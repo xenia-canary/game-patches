@@ -5,7 +5,6 @@ hash = "AB92C9FE8959D527"
 
 [[patch]]
     name = "God Mode"
-    desc = "No Health Decrease"
     author = "TeddyHammer"
     is_enabled = false
 

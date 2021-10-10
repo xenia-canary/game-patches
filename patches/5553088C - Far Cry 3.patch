@@ -5,7 +5,6 @@ hash = "D868DF28844095D "
 
 [[patch]]
     name = "Infinite Health"
-    desc = "makes health not decrease"
     author = "TeddyHammer"
     is_enabled = false
 
@@ -17,7 +16,6 @@ hash = "D868DF28844095D "
         value = 0xd1bf0120
 [[patch]]
     name = "No Reload"
-    desc = "max ammo"
     author = "TeddyHammer"
     is_enabled = false
 
@@ -26,7 +24,6 @@ hash = "D868DF28844095D "
         value = 0x00003960
 [[patch]]
     name = "Max Money on Spend"
-    desc = "lots of money"
     author = "TeddyHammer"
     is_enabled = false
 
@@ -35,7 +32,6 @@ hash = "D868DF28844095D "
         value = 0x39407530
 [[patch]]
     name = "$0 on Spend (For selling loot)"
-    desc = "even more money"
     author = "TeddyHammer"
     is_enabled = false
 

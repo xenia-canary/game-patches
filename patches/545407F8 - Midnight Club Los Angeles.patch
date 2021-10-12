@@ -1,0 +1,13 @@
+title_name = "Midnight Club: Los Angeles"
+title_id = "545407F8"
+hash = "D651A6BB8C7486C8"
+
+[[patch]]
+    name = "Enable Deltatime"
+    desc = "Runs at any FPS with proper game speed. Disable VSync for 30+FPS."
+    author = "illusion"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x821bdb08
+        value = 0x4800012c

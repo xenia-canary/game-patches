@@ -46,20 +46,23 @@ title_id = "4D5308AB"
         value = 0xC3F90000
 
 [[patch]]
-    name = "Disable Temporal Anti-Aliasing"
-    desc = "Clearer image and higher FPS when using resolution upscaling."
+    name = "Resolution Scaling Fix / Disable All Post-Processing"
+    desc = "This patch dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82414018
-        value = 0x38000001
+        address = 0x827B8764
+        value = 0x38A00001
     [[patch.be32]]
-        address = 0x8241573C
-        value = 0x39600000
+        address = 0x827B88C0
+        value = 0x38A00000
     [[patch.be32]]
-        address = 0x82415870
-        value = 0x39600000
+        address = 0x827B8BA8
+        value = 0x38800004
+    [[patch.be32]]
+        address = 0x827BAFA8
+        value = 0x60000000
 
 [[patch]]
     name = "16x Anisotropic Filtering."

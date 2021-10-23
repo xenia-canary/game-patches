@@ -25,25 +25,22 @@ hash = "F3AA3A3085A3A3B9"
 
 [[patch]]
     name = "Disable All Post-Processing"
-    desc = "Removes DoF, motion blur, ambient occlusion and bloom. Use this patch to fix visual artifacts due to resolution scaling."
+    desc = "This patch dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82301E30
-        value = 0x60000000
+        address = 0x8273F610
+        value = 0x38A00001
     [[patch.be32]]
-        address = 0x82480820
-        value = 0x60000000
+        address = 0x8273F76C
+        value = 0x38A00000
     [[patch.be32]]
-        address = 0x8249D258
-        value = 0x60000000
+        address = 0x8273F8D8
+        value = 0x38800004
     [[patch.be32]]
-        address = 0x8249D4C8
-        value = 0x60000000
+        address = 0x82741ED4
+        value = 0x38A00000
     [[patch.be32]]
-        address = 0x8249D598
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x82800C5C
+        address = 0x82741EF0
         value = 0x60000000

@@ -33,7 +33,7 @@ title_id = "4D530A26"
         value = 0x39600000
 
 [[patch]]
-    name = "Disable All Post-Processing"
+    name = "Resolution Scaling Fix / Disable All Post-Processing"
     desc = "This patch dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
     author = "boma"
     is_enabled = false

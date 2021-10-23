@@ -24,7 +24,7 @@ hash = "F3AA3A3085A3A3B9"
         value = 0x38A00010
 
 [[patch]]
-    name = "Disable All Post-Processing"
+    name = "Resolution Scaling Fix / Disable All Post-Processing"
     desc = "This patch dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
     author = "boma"
     is_enabled = false

@@ -20,3 +20,4 @@ hash = "3F050427A3C5B017"
     [[patch.be32]]
         address = 0x820aeda0
         value = 0x3c888889 # animation speed
+        

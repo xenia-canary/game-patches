@@ -131,6 +131,9 @@ title_id = "58410955"
     [[patch.be16]]
         address = 0x8213E362
         value = 0x0B0C
+    [[patch.be16]]
+        address = 0x821129BA
+        value = 0x1EF8
 
 [[patch]]
     name = "HD Shadows"

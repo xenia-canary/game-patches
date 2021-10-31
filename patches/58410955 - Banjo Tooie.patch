@@ -368,3 +368,15 @@ title_id = "58410955"
     [[patch.be16]]
         address = 0x8262E7BE
         value = 0xFFFE
+[[patch]]
+    name = "Classic Jump Sounds"
+    desc = "Replaces Banjo jump sounds with the original ones from the first game including transformations sharing the same sounds."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8260209C
+        value = 0x043B043C
+    [[patch.be16]]
+        address = 0x826020A0
+        value = 0x043D

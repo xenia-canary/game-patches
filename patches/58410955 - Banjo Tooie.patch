@@ -2,21 +2,366 @@ title_name = "Banjo Tooie"
 title_id = "58410955"
 
 [[patch]]
-    name = "60 FPS"
-    desc = "None"
-    author = "illusion"
+    name = "60 FPS mod"
+    desc = "Updated to fix cutscenes and timing with help from others."
+    author = "illusion retroben wedarobi"
     is_enabled = false
 
 # Disable break_on_debugbreak for patches to work!
     [[patch.be32]]
-        address = 0x82276B5C
-        value = 0x600000000
+        address = 0x825F4000
+        value = 0x3D208267
     [[patch.be32]]
-        address = 0x82276B00
-        value = 0x600000000
+        address = 0x825F4004
+        value = 0x8929EF30
     [[patch.be32]]
-        address = 0x8269B198
-        value = 0x3c88888a
+        address = 0x825F4008
+        value = 0x814B0000
+    [[patch.be32]]
+        address = 0x825F400C
+        value = 0x2C090000
+    [[patch.be32]]
+        address = 0x825F4010
+        value = 0x4182000C
+    [[patch.be32]]
+        address = 0x825F4014
+        value = 0x39200002
+    [[patch.be32]]
+        address = 0x825F4018
+        value = 0x4BC82E20
+    [[patch.be32]]
+        address = 0x825F401C
+        value = 0x39200001
+    [[patch.be32]]
+        address = 0x825F4020
+        value = 0x4BC82E18
+    [[patch.be32]]
+        address = 0x825F4024
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x825F4028
+        value = 0x3D608267
+    [[patch.be32]]
+        address = 0x825F402C
+        value = 0x896BEF30
+    [[patch.be32]]
+        address = 0x825F4030
+        value = 0x94C30004
+    [[patch.be32]]
+        address = 0x825F4034
+        value = 0x907F0030
+    [[patch.be32]]
+        address = 0x825F4038
+        value = 0x2C0B0000
+    [[patch.be32]]
+        address = 0x825F403C
+        value = 0x4182000C
+    [[patch.be32]]
+        address = 0x825F4040
+        value = 0x39600002
+    [[patch.be32]]
+        address = 0x825F4044
+        value = 0x4BD05ED4
+    [[patch.be32]]
+        address = 0x825F4048
+        value = 0x39600001
+    [[patch.be32]]
+        address = 0x825F404C
+        value = 0x4BD05ECC
+    [[patch.be32]]
+        address = 0x825F4050
+        value = 0x60000000
+    [[patch.be16]]
+        address = 0x822C8932
+        value = 0x073C
+    [[patch.be32]]
+        address = 0x82276E34
+        value = 0x4837D1CC
+    [[patch.be32]]
+        address = 0x822F9F10
+        value = 0x482FA118
+    [[patch.be32]]
+        address = 0x822F9F14
+        value = 0x60000000
     [[patch.be32]]
         address = 0x822F9F18
-        value = 0x39600001
+        value = 0x60000000
+    [[patch.be16]]
+        address = 0x821A22E6
+        value = 0x1EDC
+    [[patch.be16]]
+        address = 0x821A22EA
+        value = 0x4238
+    [[patch.be16]]
+        address = 0x821A22EE
+        value = 0x0B20
+    [[patch.be16]]
+        address = 0x821A2326
+        value = 0x1EDC
+    [[patch.be16]]
+        address = 0x821A232A
+        value = 0x0B30
+    [[patch.be16]]
+        address = 0x821A232E
+        value = 0x0800
+    [[patch.be16]]
+        address = 0x821A235A
+        value = 0x0774
+    [[patch.be16]]
+        address = 0x8213E2EE
+        value = 0x2060
+    [[patch.be16]]
+        address = 0x8213E2F2
+        value = 0x4238
+    [[patch.be16]]
+        address = 0x8213E2F6
+        value = 0x28F0
+    [[patch.be16]]
+        address = 0x8213E32E
+        value = 0x2060
+    [[patch.be16]]
+        address = 0x8213E332
+        value = 0x0B30
+    [[patch.be16]]
+        address = 0x8213E336
+        value = 0x13F4
+    [[patch.be16]]
+        address = 0x8213E342
+        value = 0x4238
+    [[patch.be16]]
+        address = 0x8213E362
+        value = 0x0B0C
+
+[[patch]]
+    name = "HD Shadows"
+    desc = "Improves player character shadows by using identical models of characters as their shadow models."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82601ECE
+        value = 0x062A
+    [[patch.be16]]
+        address = 0x82601EE2
+        value = 0x0613
+    [[patch.be16]]
+        address = 0x82601EE6
+        value = 0x060C
+    [[patch.be16]]
+        address = 0x82601EF2
+        value = 0x062A
+    [[patch.be16]]
+        address = 0x82601EF6
+        value = 0x061C
+    [[patch.be16]]
+        address = 0x82601EFE
+        value = 0x0665
+    [[patch.be16]]
+        address = 0x82601F0A
+        value = 0x0624
+    [[patch.be16]]
+        address = 0x82601F0E
+        value = 0x060E
+
+[[patch]]
+    name = "Banjo kazooie Fire Breath"
+    desc = "Swaps normal idle attack with dragon Kazooie fire breath."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826024E0
+        value = 0x820D5388
+
+[[patch]]
+    name = "Kazooie Fire Breath"
+    desc = "Swaps Kazooie alone idle wing whack with fire breath."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82602DB0
+        value = 0x820EE1B8
+
+[[patch]]
+    name = "Infinite Blue Eggs"
+    desc = "These codes change default caps to the values used by the nestking cheat which fills the eggs and feathers to 999."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E772
+        value = 0xFFFE
+
+[[patch]]
+    name = "Infinite Fire Eggs"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E776
+        value = 0xFFFE
+
+[[patch]]
+    name = "Infinite Ice Eggs"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E77A
+        value = 0xFFFE
+
+[[patch]]
+    name = "Infinite Grenade Eggs"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E77E
+        value = 0xFFFE
+
+[[patch]]
+    name = "Infinite Clockwork Eggs"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E782
+        value = 0xFFFE
+
+[[patch]]
+    name = "Infinite Red Feathers"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E78A
+        value = 0xFFFE
+
+[[patch]]
+    name = "Infinite Gold Feathers"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E78E
+        value = 0xFFFE
+
+[[patch]]
+    name = "Infinite Glowbos"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E792
+        value = 0xFFFE
+
+[[patch]]
+    name = "Replace Blue Eggs With Gold Eggs"
+    desc = "Use blue eggs to shoot gold eggs which even works for rapid fire when in first person."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A3C
+        value = 0x07
+
+[[patch]]
+    name = "Access Mine Eggs"
+    desc = "Unused in single player and only appear from forward shots but may crash if used in breegull blaster mode or if used excessively."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A41
+        value = 0x06
+    [[patch.be16]]
+        address = 0x8262E786
+        value = 0xFFFE
+
+[[patch]]
+    name = "Uncapped Blue Egg Shots"
+    desc = "These codes allow you to shoot more eggs at a time excluding first person."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A5A
+        value = 0xFF
+
+[[patch]]
+    name = "Uncapped Fire Egg Shots"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A5C
+        value = 0xFF
+
+[[patch]]
+    name = "Uncapped Ice Egg Shots"
+    desc = "None"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A5E
+        value = 0xFF
+
+[[patch]]
+    name = "Uncapped Grenade Egg Shots"
+    desc = "Shooting too many may crash the game."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A60
+        value = 0xFF
+
+[[patch]]
+    name = "Pointless Uncapped Clockwork Egg Shots"
+    desc = "Do not use this code unless you want to shoot two and have it crash when detonating them."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A62
+        value = 0xFF
+
+[[patch]]
+    name = "Uncapped Mine Egg Shots"
+    desc = "May need to be careful to not use too many of these for risk of crashing."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A64
+        value = 0xFF
+
+[[patch]]
+    name = "Uncapped Gold Egg Shots"
+    desc = "Makes gold eggs better outside of first person."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82601A66
+        value = 0xFF
+
+[[patch]]
+    name = "Infinite Ice Keys"
+    desc = "Use this to gain easy access to mega glowbo for dragon Kazooie."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8262E7BE
+        value = 0xFFFE

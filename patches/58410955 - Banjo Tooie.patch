@@ -167,6 +167,73 @@ title_id = "58410955"
         value = 0x060E
 
 [[patch]]
+    name = "Nests and Stairs Lod Hack"
+    desc = "Forces best nest model lod including contained musical notes plus Mayahem Temple stairs always 3D."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82261FDC
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82262074
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82263004
+        value = 0x48391050
+    [[patch.be32]]
+        address = 0x825F4054
+        value = 0x817C0004
+    [[patch.be32]]
+        address = 0x825F4058
+        value = 0x2C0B07A8
+    [[patch.be32]]
+        address = 0x825F405C
+        value = 0x40820010
+    [[patch.be32]]
+        address = 0x825F4060
+        value = 0x3D604F80
+    [[patch.be32]]
+        address = 0x825F4064
+        value = 0x917C07E0
+    [[patch.be32]]
+        address = 0x825F4068
+        value = 0x917C07E4
+    [[patch.be32]]
+        address = 0x825F406C
+        value = 0x81784670
+    [[patch.be32]]
+        address = 0x825F4070
+        value = 0x4BC6EF98
+    [[patch.be32]]
+        address = 0x82262088
+        value = 0x48391FEC
+    [[patch.be32]]
+        address = 0x825F4074
+        value = 0x819F0004
+    [[patch.be32]]
+        address = 0x825F4078
+        value = 0x2C0C0188
+    [[patch.be32]]
+        address = 0x825F407C
+        value = 0x40820010
+    [[patch.be32]]
+        address = 0x825F4080
+        value = 0x3D804F80
+    [[patch.be32]]
+        address = 0x825F4084
+        value = 0x919F0190
+    [[patch.be32]]
+        address = 0x825F4088
+        value = 0x919F0194
+    [[patch.be32]]
+        address = 0x825F408C
+        value = 0x38210070
+    [[patch.be32]]
+        address = 0x825F4090
+        value = 0x4BC6DFFC
+
+[[patch]]
     name = "Banjo kazooie Fire Breath"
     desc = "Swaps normal idle attack with dragon Kazooie fire breath."
     author = "retroben"

@@ -1,0 +1,14 @@
+title_name = "GE 007: Reloaded"
+title_id = "415608AF"
+hash = "7FFAE33DD2045CE7"
+#media_id = "40583A82"
+
+[[patch]]
+    name = "Lens Flare Occlusion Fix"
+    desc = "Fixes bright lights that aren't properly occluded."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8248CB40
+        value = 0x48000DB8

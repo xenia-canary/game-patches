@@ -2,31 +2,516 @@ title_name = "Banjo Kazooie"
 title_id = "58410954"
 
 [[patch]]
-    name = "60 FPS"
-    desc = "None"
-    author = "illusion"
+    name = "60 FPS mod"
+    desc = "Enable all fix codes alongside this one."
+    author = "illusion retroben"
     is_enabled = false
 
 # Disable break_on_debugbreak for patches to work!
 
-# Fixme: use less nop and figure out a better way for this.
-# and maybe try to solve double speed issues.
+# Fixme: missing parts for unfair snowman and high jumping clam fixes.
 
     [[patch.be32]]
-        address = 0x8210FAC4
-        value = 0x600000000
+        address = 0x82110B64
+        value = 0x483301CC
     [[patch.be32]]
-        address = 0x8210FA8C
-        value = 0x600000000
+        address = 0x82440D30
+        value = 0x3D60824A
     [[patch.be32]]
-        address = 0x8210FAD8
-        value = 0x600000000
+        address = 0x82440D34
+        value = 0x896BB08F
     [[patch.be32]]
-        address = 0x82002684
-        value = 0x3c88888a
+        address = 0x82440D38
+        value = 0x2B0B0000
     [[patch.be32]]
-        address = 0x8249D92C
-        value = 0x3c88888a
+        address = 0x82440D3C
+        value = 0x419A000C
+    [[patch.be32]]
+        address = 0x82440D40
+        value = 0x39600002
+    [[patch.be32]]
+        address = 0x82440D44
+        value = 0x4BCCFE24
+    [[patch.be32]]
+        address = 0x82440D48
+        value = 0x39600001
+    [[patch.be32]]
+        address = 0x82440D4C
+        value = 0x4BCCFE1C
     [[patch.be32]]
         address = 0x821D35A8
+        value = 0x4826D7A8
+    [[patch.be32]]
+        address = 0x82440D50
+        value = 0x3D60824A
+    [[patch.be32]]
+        address = 0x82440D54
+        value = 0x896BB08F
+    [[patch.be32]]
+        address = 0x82440D58
+        value = 0x2B0B0000
+    [[patch.be32]]
+        address = 0x82440D5C
+        value = 0x419A000C
+    [[patch.be32]]
+        address = 0x82440D60
+        value = 0x39600002
+    [[patch.be32]]
+        address = 0x82440D64
+        value = 0x4BD92848
+    [[patch.be32]]
+        address = 0x82440D68
         value = 0x39600001
+    [[patch.be32]]
+        address = 0x82440D6C
+        value = 0x4BD92840
+    [[patch.be32]]
+        address = 0x8216CF00
+        value = 0x482D3E00
+    [[patch.be32]]
+        address = 0x82440D00
+        value = 0x8961FFEC
+    [[patch.be32]]
+        address = 0x82440D04
+        value = 0x2F0B0040
+    [[patch.be32]]
+        address = 0x82440D08
+        value = 0x419A000C
+    [[patch.be32]]
+        address = 0x82440D0C
+        value = 0x2F0B0041
+    [[patch.be32]]
+        address = 0x82440D10
+        value = 0x409A001C
+    [[patch.be32]]
+        address = 0x82440D14
+        value = 0x897E0000
+    [[patch.be32]]
+        address = 0x82440D18
+        value = 0x2F0B0040
+    [[patch.be32]]
+        address = 0x82440D1C
+        value = 0x419A000C
+    [[patch.be32]]
+        address = 0x82440D20
+        value = 0x2F0B0041
+    [[patch.be32]]
+        address = 0x82440D24
+        value = 0x409A0008
+    [[patch.be32]]
+        address = 0x82440D28
+        value = 0x4BD2C1E0
+    [[patch.be32]]
+        address = 0x82440D2C
+        value = 0x4BD2C1EC
+
+[[patch]]
+    name = "Always HD Banjo"
+    desc = "Devs neglected to change the outdoors model ID."
+    author = "retroben"
+    is_enabled = true
+
+    [[patch.be16]]
+        address = 0x8209D24E
+        value = 0x034E
+
+[[patch]]
+    name = "Swimfix"
+    desc = "Fixes sluggish swimming on 60fps."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82001B58
+        value = 0x40B3
+    [[patch.be16]]
+        address = 0x82001B5C
+        value = 0x3FC6
+    [[patch.be16]]
+        address = 0x82001B60
+        value = 0x4049
+    [[patch.be16]]
+        address = 0x820AAA46
+        value = 0x0F38
+    [[patch.be16]]
+        address = 0x820AAA8A
+        value = 0x575C
+
+[[patch]]
+    name = "Global Fix"
+    desc = "Fixes various things that move too fast."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82166C52
+        value = 0xF6A0
+    [[patch.be16]]
+        address = 0x82166C9A
+        value = 0x1108
+    [[patch.be16]]
+        address = 0x82001048
+        value = 0x3F43
+    [[patch.be16]]
+        address = 0x821A9062
+        value = 0x0F34
+    [[patch.be16]]
+        address = 0x821A9A66
+        value = 0x6374
+    [[patch.be16]]
+        address = 0x821A9B76
+        value = 0x1684
+    [[patch.be16]]
+        address = 0x821A9C36
+        value = 0x1DD0
+    [[patch.be16]]
+        address = 0x8218A3F6
+        value = 0x0E90
+    [[patch.be16]]
+        address = 0x8218A4AA
+        value = 0x36E0
+    [[patch.be16]]
+        address = 0x82198AEE
+        value = 0x1040
+    [[patch.be16]]
+        address = 0x82198BBA
+        value = 0x0EA0
+    [[patch.be16]]
+        address = 0x821ADE5A
+        value = 0x1718
+    [[patch.be16]]
+        address = 0x821ADE5E
+        value = 0x1040
+    [[patch.be16]]
+        address = 0x821AE7E6
+        value = 0x4718
+    [[patch.be16]]
+        address = 0x8200D9CC
+        value = 0x40DB
+    [[patch.be16]]
+        address = 0x8215C2DA
+        value = 0xDD4C
+    [[patch.be16]]
+        address = 0x8217FEF6
+        value = 0x3590
+    [[patch.be16]]
+        address = 0x8200C140
+        value = 0x3FB1
+    [[patch.be16]]
+        address = 0x8217ADCE
+        value = 0xDD4C
+    [[patch.be16]]
+        address = 0x8217B22E
+        value = 0xDD4C
+    [[patch.be16]]
+        address = 0x8217B44A
+        value = 0x8200
+    [[patch.be16]]
+        address = 0x8217B456
+        value = 0x3170
+    [[patch.be16]]
+        address = 0x82156762
+        value = 0x1040
+    [[patch.be16]]
+        address = 0x82156B9E
+        value = 0x1040
+    [[patch.be16]]
+        address = 0x82156F22
+        value = 0x1040
+    [[patch.be16]]
+        address = 0x82009A78
+        value = 0x3F9C
+    [[patch.be16]]
+        address = 0x82179076
+        value = 0x8200
+    [[patch.be16]]
+        address = 0x8217907A
+        value = 0x2F50
+
+[[patch]]
+    name = "Special Fix"
+    desc = "Fixes special cases that required custom checks on the original game version."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8200D700
+        value = 0x3F800000
+    [[patch.be16]]
+        address = 0x8216D1C2
+        value = 0x0ED4
+    [[patch.be16]]
+        address = 0x821A0C7A
+        value = 0x1108
+    [[patch.be16]]
+        address = 0x821A106E
+        value = 0x10F8
+    [[patch.be16]]
+        address = 0x821A1076
+        value = 0xBFE0
+    [[patch.be16]]
+        address = 0x8218C6DE
+        value = 0x1718
+    [[patch.be16]]
+        address = 0x8218CA4E
+        value = 0x1718
+    [[patch.be16]]
+        address = 0x8218DADE
+        value = 0x0600
+    [[patch.be16]]
+        address = 0x8210EE50
+        value = 0x4800
+
+[[patch]]
+    name = "Timer Fix"
+    desc = "Fixes the hardcoded xbla 30fps timers to work with 60fps properly."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8210BADC
+        value = 0x48335294
+    [[patch.be32]]
+        address = 0x8210BAE0
+        value = 0x38A00000
+    [[patch.be32]]
+        address = 0x82440D70
+        value = 0x3C80824A
+    [[patch.be32]]
+        address = 0x82440D74
+        value = 0x8884B08F
+    [[patch.be32]]
+        address = 0x82440D78
+        value = 0x2B040000
+    [[patch.be32]]
+        address = 0x82440D7C
+        value = 0x419A000C
+    [[patch.be32]]
+        address = 0x82440D80
+        value = 0x3880FFFE
+    [[patch.be32]]
+        address = 0x82440D84
+        value = 0x4BCCAD5C
+    [[patch.be32]]
+        address = 0x82440D88
+        value = 0x3880FFFF
+    [[patch.be32]]
+        address = 0x82440D8C
+        value = 0x4BCCAD54
+
+[[patch]]
+    name = "Gravity Fix"
+    desc = "Fixes gravity for baddies that walk in midair on 60fps."
+    author = "theboy181 retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8212E9C0
+        value = 0x483123D0
+    [[patch.be32]]
+        address = 0x82440D90
+        value = 0x3CC08200
+    [[patch.be32]]
+        address = 0x82440D94
+        value = 0xC0061C34
+    [[patch.be32]]
+        address = 0x82440D98
+        value = 0xD01F0174
+    [[patch.be32]]
+        address = 0x82440D9C
+        value = 0x4BCEDC28
+
+[[patch]]
+    name = "Walker Fix"
+    desc = "Fixes various baddies that move too fast at 60fps."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8212E454
+        value = 0x4831294C
+    [[patch.be32]]
+        address = 0x82440DA0
+        value = 0xA3DB0002
+    [[patch.be32]]
+        address = 0x82440DA4
+        value = 0x2C1E0367
+    [[patch.be32]]
+        address = 0x82440DA8
+        value = 0x4182003C
+    [[patch.be32]]
+        address = 0x82440DAC
+        value = 0x2C1E03BF
+    [[patch.be32]]
+        address = 0x82440DB0
+        value = 0x41820040
+    [[patch.be32]]
+        address = 0x82440DB4
+        value = 0x2C1E03C0
+    [[patch.be32]]
+        address = 0x82440DB8
+        value = 0x41820044
+    [[patch.be32]]
+        address = 0x82440DBC
+        value = 0x2C1E034F
+    [[patch.be32]]
+        address = 0x82440DC0
+        value = 0x41820048
+    [[patch.be32]]
+        address = 0x82440DC4
+        value = 0x2C1E0006
+    [[patch.be32]]
+        address = 0x82440DC8
+        value = 0x4182004C
+    [[patch.be32]]
+        address = 0x82440DCC
+        value = 0x2C1E0350
+    [[patch.be32]]
+        address = 0x82440DD0
+        value = 0x41820050
+    [[patch.be32]]
+        address = 0x82440DD4
+        value = 0x2C1E0375
+    [[patch.be32]]
+        address = 0x82440DD8
+        value = 0x41820054
+    [[patch.be32]]
+        address = 0x82440DDC
+        value = 0x2C1E034E
+    [[patch.be32]]
+        address = 0x82440DE0
+        value = 0x40820058
+    [[patch.be32]]
+        address = 0x82440DE4
+        value = 0x3FC00105
+    [[patch.be32]]
+        address = 0x82440DE8
+        value = 0x3BDE0704
+    [[patch.be32]]
+        address = 0x82440DEC
+        value = 0x48000048
+    [[patch.be32]]
+        address = 0x82440DF0
+        value = 0x3FC00106
+    [[patch.be32]]
+        address = 0x82440DF4
+        value = 0x3BDE0903
+    [[patch.be32]]
+        address = 0x82440DF8
+        value = 0x4800003C
+    [[patch.be32]]
+        address = 0x82440DFC
+        value = 0x3FC00208
+    [[patch.be32]]
+        address = 0x82440E00
+        value = 0x3BDE0C04
+    [[patch.be32]]
+        address = 0x82440E04
+        value = 0x48000030
+    [[patch.be32]]
+        address = 0x82440E08
+        value = 0x3FC00104
+    [[patch.be32]]
+        address = 0x82440E0C
+        value = 0x3BDE0602
+    [[patch.be32]]
+        address = 0x82440E10
+        value = 0x48000024
+    [[patch.be32]]
+        address = 0x82440E14
+        value = 0x3FC00103
+    [[patch.be32]]
+        address = 0x82440E18
+        value = 0x3BDE0505
+    [[patch.be32]]
+        address = 0x82440E1C
+        value = 0x48000018
+    [[patch.be32]]
+        address = 0x82440E20
+        value = 0x3FC00105
+    [[patch.be32]]
+        address = 0x82440E24
+        value = 0x3BDE0604
+    [[patch.be32]]
+        address = 0x82440E28
+        value = 0x4800000C
+    [[patch.be32]]
+        address = 0x82440E2C
+        value = 0x3FC00107
+    [[patch.be32]]
+        address = 0x82440E30
+        value = 0x3BDE0903
+    [[patch.be32]]
+        address = 0x82440E34
+        value = 0x93CB0090
+    [[patch.be32]]
+        address = 0x82440E38
+        value = 0x83CB0008
+    [[patch.be32]]
+        address = 0x82440E3C
+        value = 0x4BCED61C
+
+[[patch]]
+    name = "Egg Gravity Fix"
+    desc = "Fixes egg bounce gravity on 60fps."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82127B06
+        value = 0x8253
+    [[patch.be16]]
+        address = 0x82127B12
+        value = 0xAA0C
+
+[[patch]]
+    name = "Concert Timer Fix"
+    desc = "Fixes it from ending early on 60fps."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820E0670
+        value = 0x483607D0
+    [[patch.be32]]
+        address = 0x82440E40
+        value = 0x3D20824A
+    [[patch.be32]]
+        address = 0x82440E44
+        value = 0x8929EBB7
+    [[patch.be32]]
+        address = 0x82440E48
+        value = 0x2B09001E
+    [[patch.be32]]
+        address = 0x82440E4C
+        value = 0x409A0024
+    [[patch.be32]]
+        address = 0x82440E50
+        value = 0x3D208249
+    [[patch.be32]]
+        address = 0x82440E54
+        value = 0xA1291968
+    [[patch.be32]]
+        address = 0x82440E58
+        value = 0x2B09426A
+    [[patch.be32]]
+        address = 0x82440E5C
+        value = 0x41980014
+    [[patch.be32]]
+        address = 0x82440E60
+        value = 0x2B09428A
+    [[patch.be32]]
+        address = 0x82440E64
+        value = 0x4199000C
+    [[patch.be32]]
+        address = 0x82440E68
+        value = 0x7D235850
+    [[patch.be32]]
+        address = 0x82440E6C
+        value = 0x4BC9F868
+    [[patch.be32]]
+        address = 0x82440E70
+        value = 0x7D235850
+    [[patch.be32]]
+        address = 0x82440E74
+        value = 0x4BC9F800

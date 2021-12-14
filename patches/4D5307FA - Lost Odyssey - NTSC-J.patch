@@ -1,0 +1,17 @@
+title_name = "Lost Odyssey"
+title_id = "4D5307FA"
+#hash = "4FA944560B7A49F7" # Disc 1
+#hash = "D3811D4222F38F9D" # Disc 2
+#hash = "61FA38436DB33BCE" # Disc 3
+#hash = "FA5C9CBE5DED16BA" # Disc 4
+#media_id = "612E5362"
+
+[[patch]]
+    name = "Disable Depth of Field"
+    desc = ""
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82305F6C
+        value = 0x40

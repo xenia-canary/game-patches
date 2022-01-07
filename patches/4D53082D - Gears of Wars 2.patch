@@ -1,10 +1,9 @@
 title_name = "Gears of Wars 2"
 title_id = "4D53082D"
-#media_id = "22AB4F7C"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
     author = "illusion"
     is_enabled = false
 
@@ -14,7 +13,7 @@ title_id = "4D53082D"
 
 [[patch]]
     name = "Disable Ambient Occlusion"
-    desc = "Enable this patch when using upscaling to fix various artifacts."
+    desc = "Fixes various artifacts when using upscaling."
     author = "illusion"
     is_enabled = false
 
@@ -24,7 +23,6 @@ title_id = "4D53082D"
 
 [[patch]]
     name = "Disable Motion Blur"
-    desc = "None"
     author = "illusion"
     is_enabled = false
 
@@ -53,8 +51,7 @@ title_id = "4D53082D"
         value = 0x39600000
 
 [[patch]]
-    name = "16x Anisotropic Filtering."
-    desc = ""
+    name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
 

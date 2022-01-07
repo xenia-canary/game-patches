@@ -1,12 +1,10 @@
 title_name = "NFS Most Wanted 2005"
 title_id = "454107D9"
-#media_id = "00000000" # retail only
 
 [[patch]]
     name = "Disable Post Processing"
-    desc = "None"
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x82224710
@@ -17,9 +15,8 @@ title_id = "454107D9"
 
 [[patch]]
     name = "Skip audio loop stuck code"
-    desc = "None"
     author = "Gliniak"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x825E1D3C

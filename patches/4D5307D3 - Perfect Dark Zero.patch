@@ -3,8 +3,8 @@ title_id = "4D5307D3"
 hash = "8AB05ACA5F683CD4"
 
 [[patch]]
-    name = "Disable Ammo Mainpulation Code (Bottomless clip?)"
-    desc = "Need to test with picked up weapons"
+    name = "Disable Ammo Manipulation Code (Bottomless clip?)"
+    desc = "Need to test with picked up weapons."
     author = "illusion"
     is_enabled = false
 

@@ -1,12 +1,11 @@
 title_name = "Peggle"
 title_id = "58410889"
 #hash = "83A690E6E0DA84F6"
-#media_id = "111272B2"
 
 [[patch]]
     name = "Unlimited Balls"
-    author = "Credits to the guys of peek poker,"
-    is_enabled = true
+    author = "Credit to the creators of Peek Poker"
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8227DA20

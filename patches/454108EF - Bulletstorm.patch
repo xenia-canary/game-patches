@@ -1,11 +1,9 @@
 title_name = "Bulletstorm"
 title_id = "454108EF"
 hash = "1338446D7E81F1F6"
-#media_id = "1D93E609"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = ""
     author = "boma"
     is_enabled = false
 
@@ -15,7 +13,7 @@ hash = "1338446D7E81F1F6"
 
 [[patch]]
     name = "Disable Motion Blur"
-    desc = "Removes both guassian blur and radial blur."
+    desc = "Removes both gaussian blur and radial blur."
     author = "boma"
     is_enabled = false
 
@@ -31,7 +29,7 @@ hash = "1338446D7E81F1F6"
 
 [[patch]]
     name = "Disable Lens Flares"
-    desc = "Fixes unoccluded bright lights on screen."
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
 
@@ -41,7 +39,7 @@ hash = "1338446D7E81F1F6"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Disables 62 fps cap. Must set vsync to false in Xenia config."
+    desc = "Disables 62 FPS cap. Requires vsync to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 

@@ -1,12 +1,10 @@
 title_name = "Fable2"
 title_id = "4D5307F1"
-#media_id = "716F0A0D" #tu1 only
 
 [[patch]]
     name = "60 FPS"
-    desc = "None"
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x82BA3018

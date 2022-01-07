@@ -1,11 +1,10 @@
 title_name = "Silent Hill Downpour"
 title_id = "4B4E0823"
 hash = "BEE670772E454B1F"
-#media_id = "7D387D17"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect. Camera movement slows down over 60 FPS."
+    desc = "Removes FPS cap. Camera movement slows down over 60 FPS. Requires vsync to be changed from true to false in the Xenia config."
     author = "illusion, Aphelion"
     is_enabled = false
 
@@ -15,7 +14,6 @@ hash = "BEE670772E454B1F"
 
 [[patch]]
     name = "Disable FXAA"
-    desc = ""
     author = "boma"
     is_enabled = false
 
@@ -25,7 +23,6 @@ hash = "BEE670772E454B1F"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = ""
     author = "boma"
     is_enabled = false
 

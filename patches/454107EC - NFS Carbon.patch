@@ -4,9 +4,8 @@ hash = "94FCEACB4C5CEC78"
 
 [[patch]]
     name = "Skip audio loop stuck code"
-    desc = "None"
     author = "Gliniak"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x826B4D38

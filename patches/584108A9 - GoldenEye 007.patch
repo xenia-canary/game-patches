@@ -3,23 +3,22 @@ title_id = "584108A9"
 
 [[patch]]
     name = "No Reload"
-    desc = ""
     author = "illusion"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x820ab8cc
         value = 0x60000000
-    [[patch.be8]] # startup
+    [[patch.be8]] # Startup
         address = 0x83063323
         value = 0x01
-    [[patch.be8]] # level start
+    [[patch.be8]] # Level start
         address = 0x821379d7
         value = 0x01
 
 [[patch]]
     name = "Remove Blur in Classic Graphics"
-    desc = "Can still be enabled as 'Vaseline-o-vision' cheat"
+    desc = "Can still be enabled as 'Vaseline-o-vision' cheat."
     author = "illusion, emoose"
     is_enabled = false
 
@@ -29,7 +28,7 @@ title_id = "584108A9"
 
 [[patch]]
     name = "Debug Menu"
-    desc = "Press LB to open menu"
+    desc = "Press LB to open menu."
     author = "N/A"
     is_enabled = false
 

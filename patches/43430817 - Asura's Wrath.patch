@@ -1,11 +1,10 @@
 title_name = "Asura's Wrath"
 title_id = "43430817"
 hash = "F3AA3A3085A3A3B9"
-#media_id = "11DFADD6"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes 30fps frame-limit. Vsync must be set to false in Xenia config."
+    desc = "Removes 30 FPS limit. Requires vsync to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 
@@ -15,7 +14,6 @@ hash = "F3AA3A3085A3A3B9"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = ""
     author = "boma"
     is_enabled = false
 
@@ -25,7 +23,7 @@ hash = "F3AA3A3085A3A3B9"
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
-    desc = "This patch dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
+    desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
     author = "boma"
     is_enabled = false
 

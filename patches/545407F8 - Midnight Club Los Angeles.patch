@@ -4,9 +4,9 @@ hash = "D651A6BB8C7486C8"
 
 [[patch]]
     name = "Enable Deltatime"
-    desc = "Runs at any FPS with proper game speed. Disable VSync for 30+FPS."
+    desc = "Runs at any FPS with proper game speed. Disable vsync for 30+ FPS."
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x821bdb08

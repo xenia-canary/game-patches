@@ -3,9 +3,8 @@ title_id = "5841096A"
 
 [[patch]]
     name = "Skip infinite loop on race end"
-    desc = "None"
     author = "Gliniak"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x82379B3C

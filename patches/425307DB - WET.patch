@@ -1,11 +1,9 @@
 title_name = "WET"
 title_id = "425307DB"
 hash = "A4E446BB9A0C048F"
-#media_id = "666E3BB8"
 
 [[patch]]
     name = "Disable Motion Blur"
-    desc = ""
     author = "boma"
     is_enabled = false
 

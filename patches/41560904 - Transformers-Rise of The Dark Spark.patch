@@ -1,11 +1,10 @@
 title_name = "Transformers: Rise of The Dark Spark"
 title_id = "41560904"
 hash = "3D80DDB6879F0E01"
-#media_id = "50D83F2D"
 
 [[patch]]
     name = "Disable Lens Flares"
-    desc = "Fixes bright lights that incorrectly shine through walls."
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
 
@@ -15,7 +14,6 @@ hash = "3D80DDB6879F0E01"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = "none"
     author = "boma"
     is_enabled = false
 

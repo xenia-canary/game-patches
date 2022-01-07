@@ -4,9 +4,9 @@ hash = "E6661629EEB2ADD4"
 
 [[patch]]
     name = "60 FPS"
-    desc = "Force 60FPS Everywhere regradless of Gameplay Mode."
+    desc = "Force 60 FPS everywhere regardless of gameplay mode."
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8232D4E8

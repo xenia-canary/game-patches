@@ -2,11 +2,10 @@ title_name = "Rockstar Table Tennis"
 title_id = "545407DF"
 
 [[patch]]
-    name = "Rockstar Table Tennis - Crash Skip"
-    desc = "None"
+    name = "Crash Skip"
     author = "Gliniak"
-    is_enabled = true
-    
+    is_enabled = false
+
     [[patch.be8]]
         address = 0x8237A3DB
         value = 0x05

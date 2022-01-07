@@ -1,7 +1,6 @@
 title_name = "Plants vs. Zombies"
 title_id = "584109FF"
 hash = "637FE58E99423985"
-#media_id = "528550BC"
 
 [[patch]]
     name = "More Sunlight Please!"

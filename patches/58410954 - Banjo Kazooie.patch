@@ -3,13 +3,13 @@ title_id = "58410954"
 
 [[patch]]
     name = "60 FPS mod"
-    desc = "Enable all fix codes alongside this one."
-    author = "illusion retroben"
+    desc = "Enable all fixes alongside this."
+    author = "illusion, retroben"
     is_enabled = false
 
-# Disable break_on_debugbreak for patches to work!
+# These patches require break_on_debugbreak to be changed from true to false in the Xenia config.
 
-# Fixme: missing parts for unfair snowman and high jumping clam fixes.
+# Fixme: Missing parts for unfair snowman, and high jumping clam fixes.
 
     [[patch.be32]]
         address = 0x82110B64
@@ -109,7 +109,7 @@ title_id = "58410954"
     name = "Always HD Banjo"
     desc = "Devs neglected to change the outdoors model ID."
     author = "retroben"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be16]]
         address = 0x8209D24E
@@ -117,7 +117,7 @@ title_id = "58410954"
 
 [[patch]]
     name = "Swimfix"
-    desc = "Fixes sluggish swimming on 60fps."
+    desc = "Fixes sluggish swimming on 60 FPS."
     author = "retroben"
     is_enabled = false
 
@@ -264,7 +264,7 @@ title_id = "58410954"
 
 [[patch]]
     name = "Timer Fix"
-    desc = "Fixes the hardcoded xbla 30fps timers to work with 60fps properly."
+    desc = "Fixes the hardcoded xbla 30 FPS timers to work with 60 FPS properly."
     author = "retroben"
     is_enabled = false
 
@@ -301,8 +301,8 @@ title_id = "58410954"
 
 [[patch]]
     name = "Gravity Fix"
-    desc = "Fixes gravity for baddies that walk in midair on 60fps."
-    author = "theboy181 retroben"
+    desc = "Fixes gravity for baddies that walk in midair at 60 FPS."
+    author = "theboy181, retroben"
     is_enabled = false
 
     [[patch.be32]]
@@ -323,7 +323,7 @@ title_id = "58410954"
 
 [[patch]]
     name = "Walker Fix"
-    desc = "Fixes various baddies that move too fast at 60fps."
+    desc = "Fixes various baddies that move too fast at 60 FPS."
     author = "retroben"
     is_enabled = false
 
@@ -453,7 +453,7 @@ title_id = "58410954"
 
 [[patch]]
     name = "Egg Gravity Fix"
-    desc = "Fixes egg bounce gravity on 60fps."
+    desc = "Fixes egg bounce gravity at 60 FPS."
     author = "retroben"
     is_enabled = false
 
@@ -466,7 +466,7 @@ title_id = "58410954"
 
 [[patch]]
     name = "Concert Timer Fix"
-    desc = "Fixes it from ending early on 60fps."
+    desc = "Fixes it from ending early at 60 FPS."
     author = "retroben"
     is_enabled = false
 

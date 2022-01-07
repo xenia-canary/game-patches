@@ -4,11 +4,9 @@ title_id = "4D5307FA"
 #hash = "B24E02CFFC2FDE56" # Disc 2
 #hash = "B3E2B9D199685FF8" # Disc 3
 #hash = "E9B7CF54159C687A" # Disc 4
-#media_id = "368DE6DD"
 
 [[patch]]
     name = "Disable Depth of Field"
-    desc = ""
     author = "boma"
     is_enabled = false
 

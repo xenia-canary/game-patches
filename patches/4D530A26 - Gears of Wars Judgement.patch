@@ -1,10 +1,9 @@
 title_name = "Gears of Wars Judgement"
 title_id = "4D530A26"
-#media_id = "6DCAF3C2"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
     author = "illusion"
     is_enabled = false
 
@@ -13,8 +12,8 @@ title_id = "4D530A26"
         value = 0x60000000
 
 [[patch]]
-    name = "Disable Lens Flare"
-    desc = "Solves most occlusion related issues."
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "illusion"
     is_enabled = false
 
@@ -34,7 +33,7 @@ title_id = "4D530A26"
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
-    desc = "This patch dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
+    desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
     author = "boma"
     is_enabled = false
 
@@ -47,13 +46,12 @@ title_id = "4D530A26"
     [[patch.be32]]
         address = 0x827E3970
         value = 0x38800004
-    [[patch.be32]]                #nop finishing render pass from branching to temporal AA resolve
+    [[patch.be32]] # nop finishing render pass from branching to temporal AA resolve
         address = 0x827E392C
         value = 0x60000000
 
 [[patch]]
-    name = "16x Anisotropic Filtering."
-    desc = ""
+    name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
 

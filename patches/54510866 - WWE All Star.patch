@@ -2,10 +2,9 @@ title_name = "WWE All Star"
 title_id = "54510866"
 
 [[patch]]
-    name = "Skip audio loop stuck code"
-    desc = "None"
+    name = "Skip Audio Loop Stuck Code"
     author = "Gliniak"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x833A6C98

@@ -1,13 +1,11 @@
 title_name = "Forza Motorsport 4"
 title_id = "4D530910"
 hash = "7566081090ECD4EC"
-#media id 26FF1101
 
 [[patch]]
     name = "Square Shadow Fix"
-    desc = "None"
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be8]]
         address = 0x828df12b

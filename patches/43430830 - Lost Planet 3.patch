@@ -1,11 +1,10 @@
 title_name = "Lost Planet 3"
 title_id = "43430830"
 hash = "4875F915CFF3DB27"
-#media_id = "09C0B498"
 
 [[patch]]
-    name = "Disable Lens Flare"
-    desc = "Fixes Unoccluded bright lights on-screen."
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
 
@@ -25,7 +24,6 @@ hash = "4875F915CFF3DB27"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = ""
     author = "boma"
     is_enabled = false
 

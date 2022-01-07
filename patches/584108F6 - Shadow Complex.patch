@@ -1,10 +1,9 @@
 title_name = "Shadow Complex"
 title_id = "584108F6"
 hash = "232A5BCC3F647153"
-#media_id = "#1E824B42"
 
 [[patch]]
-    name = "Character Shadows Fix"
+    name = "Fix Character Shadows"
     desc = "Modifies spherical harmonical lighting component."
     author = "boma"
     is_enabled = false
@@ -15,7 +14,6 @@ hash = "232A5BCC3F647153"
 
 [[patch]]
     name = "Remove Motion Blur"
-    desc = ""
     author = "boma"
     is_enabled = false
 

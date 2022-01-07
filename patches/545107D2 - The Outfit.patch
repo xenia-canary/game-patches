@@ -3,21 +3,19 @@ title_id = "545107D2"
 hash = "3F050427A3C5B017"
 
 [[patch]]
-    name = "60FPS"
-    desc = ""
+    name = "60 FPS"
     author = "illusion"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x82821158
-        value = 0x3c888889 # menu
+        value = 0x3c888889 # Menu
     [[patch.be32]]
         address = 0x8283ef0c
-        value = 0x3c888889 # fps
+        value = 0x3c888889 # FPS
     [[patch.be32]]
         address = 0x8283f094
-        value = 0x3c888889 # game
+        value = 0x3c888889 # Game
     [[patch.be32]]
         address = 0x820aeda0
-        value = 0x3c888889 # animation speed
-        
+        value = 0x3c888889 # Animation speed

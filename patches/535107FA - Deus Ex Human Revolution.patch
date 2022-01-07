@@ -2,10 +2,9 @@ title_name = "Deus Ex: Human Revolution"
 title_id = "535107FA"
 
 [[patch]]
-    name = "Disable looping audio code"
-    desc = "None"
+    name = "Disable Looping Audio Code"
     author = "Gliniak"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x822B14BC

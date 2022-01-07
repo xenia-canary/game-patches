@@ -1,10 +1,9 @@
 title_name = "Bioshock Infinite"
 title_id = "5454085D"
-#media_id = "7F5C4901"
 
 [[patch]]
     name = "Disable Lens Flares"
-    desc = "Fixes bright lights that incorrectly shine through walls."
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
 
@@ -14,7 +13,7 @@ title_id = "5454085D"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes 62fps framelimit. Must set vsync to false in Xenia config file."
+    desc = "Removes 62 FPS limit. Requires vsync to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 
@@ -23,8 +22,7 @@ title_id = "5454085D"
         value = 0x60000000
 
 [[patch]]
-    name = "16x Anisotropic Filtering."
-    desc = ""
+    name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
 

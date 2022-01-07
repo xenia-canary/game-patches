@@ -1,12 +1,10 @@
 title_name = "State of Decay"
 title_id = "584111E8"
-#media_id = "6F32E742" # tu5 only!
 
 [[patch]]
     name = "Disable conditional rendering"
-    desc = "None"
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8313A1BC

@@ -1,11 +1,10 @@
 title_name = "Lollipop Chainsaw"
 title_id = "565707D0"
 hash = "993C7315D439C7CD"
-#media_id = "31BE13D9"
 
 [[patch]]
     name = "Disable Lens Flares"
-    desc = "Fixes bright lights that incorrectly shine through meshes."
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
 
@@ -15,7 +14,7 @@ hash = "993C7315D439C7CD"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Must set vsync to false in Xenia settings. This removes in-game 58FPS framelimit."
+    desc = "Removes the in-game 58 FPS limit. Requires vsync to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 
@@ -63,7 +62,6 @@ hash = "993C7315D439C7CD"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = ""
     author = "boma"
     is_enabled = false
 

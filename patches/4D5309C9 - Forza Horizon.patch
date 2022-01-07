@@ -3,17 +3,15 @@ title_id = "4D5309C9"
 
 [[patch]]
     name = "Disable Motion Blur"
-    desc = "None"
     author = "illusion"
     is_enabled = false
 
     [[patch.be32]]
-            address = 0x82D7894C
+        address = 0x82D7894C
         value = 0x60000000
 
 [[patch]]
     name = "Disable Depth of Field"
-    desc = "None"
     author = "illusion"
     is_enabled = false
 
@@ -29,7 +27,6 @@ title_id = "4D5309C9"
 
 [[patch]]
     name = "Disable Shadows"
-    desc = "None"
     author = "illusion"
     is_enabled = false
 

@@ -1,10 +1,9 @@
 title_name = "RESIDENT EVIL 5"
 title_id = "434307D4"
 hash = "9E761F58D8ADFBC4"
-#media_id = "5B2A79D5"
 
 [[patch]]
-    name = "Make me Broke"
+    name = "Make Me Broke"
     author = "TeddyHammer"
     is_enabled = false
 
@@ -12,8 +11,8 @@ hash = "9E761F58D8ADFBC4"
         address = 0x8250A69C
         value = 0x60000000
 [[patch]]
-    name = "Under Buget"
-    desc = "When Out Of Money Items"
+    name = "Under Budget"
+    desc = "When out of money items."
     author = "TeddyHammer"
     is_enabled = false
 
@@ -32,7 +31,7 @@ hash = "9E761F58D8ADFBC4"
 
 [[patch]]
     name = "Unlimited Ammo"
-    desc = "No Ammo is Used"
+    desc = "No ammo is used."
     author = "TeddyHammer"
     is_enabled = false
 
@@ -42,7 +41,7 @@ hash = "9E761F58D8ADFBC4"
 
 [[patch]]
     name = "Never Get Hit"
-    desc = "Turns off the hit damage done to you're player you can still die if grabbed"
+    desc = "Turns off hit damage done to your player. You can still die if grabbed."
     author = "TeddyHammer"
     is_enabled = false
 

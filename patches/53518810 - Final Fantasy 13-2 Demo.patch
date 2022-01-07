@@ -3,7 +3,6 @@ title_id = "53518810"
 
 [[patch]]
     name = "60 FPS"
-    desc = "None"
     author = "illusion"
     is_enabled = false
 

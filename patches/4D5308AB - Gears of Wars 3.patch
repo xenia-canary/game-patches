@@ -1,10 +1,9 @@
 title_name = "Gears of Wars 3"
 title_id = "4D5308AB"
-#media_id = "4C93A17D"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
     author = "illusion"
     is_enabled = false
 
@@ -14,7 +13,7 @@ title_id = "4D5308AB"
 
 [[patch]]
     name = "Disable Ambient Occlusion"
-    desc = "Enable this patch when using upscaling to fix various artifacts."
+    desc = "Fixes various artifacts when using upscaling."
     author = "illusion"
     is_enabled = false
 
@@ -23,8 +22,8 @@ title_id = "4D5308AB"
         value = 0x39600000
 
 [[patch]]
-    name = "Disable Lens Flare"
-    desc = "Solves most occlusion related issues."
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "illusion"
     is_enabled = false
 
@@ -47,7 +46,7 @@ title_id = "4D5308AB"
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
-    desc = "This patch dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
+    desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
     author = "boma"
     is_enabled = false
 
@@ -65,8 +64,7 @@ title_id = "4D5308AB"
         value = 0x60000000
 
 [[patch]]
-    name = "16x Anisotropic Filtering."
-    desc = ""
+    name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
 

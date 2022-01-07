@@ -1,10 +1,9 @@
 title_name = "NIER"
 title_id = "535107E8"
-#media_id = "507D2720"
 
 [[patch]]
     name = "60 FPS"
-    desc = "Raise FPS Limit to 60. Readback resolve may lock the game to 30FPS."
+    desc = "Raise FPS limit to 60. Readback resolve may lock the game to 30 FPS."
     author = "illusion"
     is_enabled = false
 

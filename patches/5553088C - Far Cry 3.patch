@@ -1,7 +1,6 @@
 title_name = "Far Cry 3"
 title_id = "5553088C"
-hash = "D868DF28844095D "
-#media_id = "6F6EAD36"
+hash = "D868DF28844095D"
 
 [[patch]]
     name = "Infinite Health"
@@ -36,5 +35,5 @@ hash = "D868DF28844095D "
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8300451c # 
-        value = 0x3940ffff # 4bytearray
+        address = 0x8300451c
+        value = 0x3940ffff # 4 byte array

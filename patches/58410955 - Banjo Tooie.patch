@@ -4,10 +4,10 @@ title_id = "58410955"
 [[patch]]
     name = "60 FPS mod"
     desc = "Updated to fix cutscenes and timing with help from others."
-    author = "illusion retroben wedarobi"
+    author = "illusion, retroben, wedarobi"
     is_enabled = false
 
-# Disable break_on_debugbreak for patches to work!
+# These patches require break_on_debugbreak to be changed from true to false in the Xenia config.
     [[patch.be32]]
         address = 0x825F4000
         value = 0x3D208267
@@ -255,7 +255,7 @@ title_id = "58410955"
 
 [[patch]]
     name = "Infinite Blue Eggs"
-    desc = "These codes change default caps to the values used by the nestking cheat which fills the eggs and feathers to 999."
+    desc = "Changes default caps to the values used by the nestking cheat which fills the eggs and feathers to 999."
     author = "retroben"
     is_enabled = false
 
@@ -265,7 +265,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Infinite Fire Eggs"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -275,7 +274,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Infinite Ice Eggs"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -285,7 +283,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Infinite Grenade Eggs"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -295,7 +292,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Infinite Clockwork Eggs"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -305,7 +301,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Infinite Red Feathers"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -315,7 +310,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Infinite Gold Feathers"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -325,7 +319,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Infinite Glowbos"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -335,7 +328,7 @@ title_id = "58410955"
 
 [[patch]]
     name = "Replace Blue Eggs With Gold Eggs"
-    desc = "Use blue eggs to shoot gold eggs which even works for rapid fire when in first person."
+    desc = "Use blue eggs to shoot gold eggs which works even for rapid fire when in first person."
     author = "retroben"
     is_enabled = false
 
@@ -345,7 +338,7 @@ title_id = "58410955"
 
 [[patch]]
     name = "Access Mine Eggs"
-    desc = "Unused in single player and only appear from forward shots but may crash if used in breegull blaster mode or if used excessively."
+    desc = "Unused in single player and only appear from forward shots but may crash if used in breegull blaster mode, or if used excessively."
     author = "retroben"
     is_enabled = false
 
@@ -358,7 +351,7 @@ title_id = "58410955"
 
 [[patch]]
     name = "Uncapped Blue Egg Shots"
-    desc = "These codes allow you to shoot more eggs at a time excluding first person."
+    desc = "Allows you to shoot more eggs at a time excluding first person."
     author = "retroben"
     is_enabled = false
 
@@ -368,7 +361,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Uncapped Fire Egg Shots"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -378,7 +370,6 @@ title_id = "58410955"
 
 [[patch]]
     name = "Uncapped Ice Egg Shots"
-    desc = "None"
     author = "retroben"
     is_enabled = false
 
@@ -398,7 +389,7 @@ title_id = "58410955"
 
 [[patch]]
     name = "Pointless Uncapped Clockwork Egg Shots"
-    desc = "Do not use this code unless you want to shoot two and have it crash when detonating them."
+    desc = "Do not use unless you want to shoot two and have it crash when detonating them."
     author = "retroben"
     is_enabled = false
 

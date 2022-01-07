@@ -1,6 +1,6 @@
 title_name = "PGR3"
 title_id = "4D5307D1"
-# TODO(illusion): add hash
+# TODO(illusion): Add hash
 
 [[patch]]
     name = "60 FPS"
@@ -14,7 +14,6 @@ title_id = "4D5307D1"
 
 [[patch]]
     name = "Disable Motion Blur"
-    desc = ""
     author = "illusion"
     is_enabled = false
 
@@ -24,7 +23,7 @@ title_id = "4D5307D1"
 
 [[patch]]
     name = "21:9"
-    desc = "Disable present_letterbox in Xenia Option to take effect."
+    desc = "Requires present_letterbox to be changed from true to false in the Xenia config."
     author = "Esppiral"
     is_enabled = false
 

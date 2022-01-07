@@ -1,11 +1,10 @@
 title_name = "Batman Arkham City"
 title_id = "57520802"
 hash = "CC92C76573FD61BF"
-#media_id = "2AAB34E2"
 
 [[patch]]
-    name = "Disable Lens Flare"
-    desc = "Fixes bright lights that incorrectly shine through walls."
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
 
@@ -15,7 +14,6 @@ hash = "CC92C76573FD61BF"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = ""
     author = "boma"
     is_enabled = false
 

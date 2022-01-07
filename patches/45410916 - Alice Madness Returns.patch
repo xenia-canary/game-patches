@@ -1,11 +1,10 @@
 title_name = "Alice: Madness Returns"
 title_id = "45410916"
 hash = "EC884B235D7F930C"
-#media_id = "31C4B45C"
 
 [[patch]]
-    name = "Disable Lens Flare"
-    desc = "Fixes Unoccluded bright lights on-screen."
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
 
@@ -15,10 +14,10 @@ hash = "EC884B235D7F930C"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes 58FPS framerate cap. VSync must be disabled in Xenia config."
+    desc = "Removes 58 FPS cap. Requires vsync to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
-	
+
     [[patch.be32]]
         address = 0x8242FD24
         value = 0x60000000
@@ -35,7 +34,6 @@ hash = "EC884B235D7F930C"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = ""
     author = "boma"
     is_enabled = false
 

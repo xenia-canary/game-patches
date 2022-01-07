@@ -1,11 +1,9 @@
 title_name = "Gears Of War (No TU)"
 title_id = "4D5307D5"
 hash = "B65283762F29121E"
-#media_id = "76E9DF5B"
 
 [[patch]]
     name = "Disable Motion Blur"
-    desc = "None"
     author = "illusion"
     is_enabled = false
     
@@ -15,7 +13,6 @@ hash = "B65283762F29121E"
 
 [[patch]]
     name = "Disable Most Post FXs"
-    desc = "None"
     author = "illusion, boma"
     is_enabled = false
 
@@ -28,7 +25,7 @@ hash = "B65283762F29121E"
 
 [[patch]]
     name = "8x Anisotropic Filtering"
-    desc = "Game does not natively support 16x sampling."
+    desc = "Game does not natively support 16x filtering."
     author = "boma"
     is_enabled = false
 

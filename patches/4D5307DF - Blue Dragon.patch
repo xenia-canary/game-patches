@@ -1,10 +1,9 @@
 title_name = "Blue Dragon"
 title_id = "4D5307DF"
-# too many media id to count, should work on every base version.
 
 [[patch]]
     name = "Enable Wireframe"
-    desc = "Significantly impacts performance, useful for viewing aspects of levels."
+    desc = "Significantly impacts performance. Useful for viewing aspects of levels."
     author = "illusion"
     is_enabled = false
 
@@ -14,7 +13,6 @@ title_id = "4D5307DF"
 
 [[patch]]
     name = "Enable Camera Bounding Box"
-    desc = "None"
     author = "illusion"
     is_enabled = false
 
@@ -23,13 +21,13 @@ title_id = "4D5307DF"
         value = 0x39600001
 
 [[patch]]
-    name = "60 FPS"
-    desc = "Work-In-Progress, can be improved upon by others. Causes softlock in battles."
+    name = "60 FPS (WIP)"
+    desc = "Work-in-progress, can be improved upon by others. Causes softlocks in battles."
     author = "illusion"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820ce6bc # will need to find a way to write 3f00 rather than nop
+        address = 0x820ce6bc # Will need to find a way to write 3f00 rather than nop.
         value = 0x60000000
     [[patch.be32]]
         address = 0x821a0640
@@ -38,11 +36,11 @@ title_id = "4D5307DF"
         address = 0x8273664c
         value = 0x60000000
     [[patch.be16]]
-        address = 0x82DEC57C # game speed
+        address = 0x82DEC57C # Game speed
         value = 0x3f00
     [[patch.be16]]
-        address = 0x82DDA880 # battle speed, disable this to avoid softlock but will result in double speed
+        address = 0x82DDA880 # Battle speed; disabling this avoids softlocks, but doubles speed.
         value = 0x3f00
     [[patch.be32]]
-        address = 0x8246ab68 # vsync flip rate
+        address = 0x8246ab68 # Vsync flip rate
         value = 0x39400001

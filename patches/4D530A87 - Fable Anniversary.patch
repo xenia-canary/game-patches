@@ -1,10 +1,9 @@
 title_name = "Fable Anniversary"
 title_id = "4D530A87"
-#media_id = "5AA7D606"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options for the patch to take effect."
+    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
     author = "illusion"
     is_enabled = false
 
@@ -14,7 +13,6 @@ title_id = "4D530A87"
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    desc = ""
     author = "boma"
     is_enabled = false
 

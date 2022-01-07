@@ -1,7 +1,6 @@
 title_name = "SONIC UNLEASHED"
 title_id = "53450812"
 hash = "C33BC63868F5361"
-#media_id = "4BED0DDE"
 
 [[patch]]
     name = "1280x720 Rendering"
@@ -34,7 +33,6 @@ hash = "C33BC63868F5361"
 
 [[patch]]
     name = "Disable Depth of Field"
-    desc = ""
     author = "boma"
     is_enabled = false
 
@@ -57,7 +55,7 @@ hash = "C33BC63868F5361"
 
 [[patch]]
     name = "21:9 Aspect Ratio"
-    desc = "Set present_letterbox to FALSE in xenia config to take effect."
+    desc = "Requires present_letterbox to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 

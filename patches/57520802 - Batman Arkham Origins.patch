@@ -1,24 +1,22 @@
 title_name = "Batman Arkham Origins"
 title_id = "57520828"
 hash = "BCEC4C4143B6BF5F"
-#media_id = "2AAB34E2"
 
 [[patch]]
-    name = "Disable Lens Flare"
-    desc = ""
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"
     is_enabled = false
-	
+
     [[patch.be32]]
         address = 0x826AFF18
         value = 0x39400000
 
 [[patch]]
     name = "Disable MLAA Anti-Aliasing"
-    desc = ""
     author = "boma"
     is_enabled = false
-	
+
     [[patch.be16]]
         address = 0x8236EC6A
         value = 0x0000

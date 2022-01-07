@@ -1,12 +1,11 @@
 title_name = "Leisure Suit Larry"
 title_id = "434D0822"
-#media_id = "536000E3"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options to go above 60FPS."
+    desc = "Removes FPS cap. Vsync must be changed to false in the Xenia config to go above 60 FPS."
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x82507504

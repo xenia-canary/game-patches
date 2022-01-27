@@ -4,7 +4,7 @@ title_id = "584111F7"
 [[patch]]
     name = "Debug Menu"
     desc = "Replaced Credits with DebugMenu. Replaced How To Play with Debug Overlay. Do not open on the main menu."
-    author = "illusion, MinecraftDigger"
+    author = "illusion, MinecraftDigger, TeddyHammer"
     is_enabled = false
 
     [[patch.be32]]

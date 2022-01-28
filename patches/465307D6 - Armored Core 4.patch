@@ -1,0 +1,21 @@
+title_name = "Armored Core 4"
+title_id = "465307D6"
+hash = "68FB6D400D6A766C"
+
+[[patch]]
+    name = "infinite Money"
+    author = "Raven & Serenity"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x821EF78C
+        value = 0x7C000215
+
+[[patch]]
+    name = "Infinite Ammo"
+    author = "Raven and Serenity"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x822B1A8C
+        value = 0x60000000

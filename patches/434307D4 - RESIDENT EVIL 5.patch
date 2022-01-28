@@ -4,7 +4,7 @@ hash = "9E761F58D8ADFBC4"
 
 [[patch]]
     name = "Make Me Broke"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -13,7 +13,7 @@ hash = "9E761F58D8ADFBC4"
 [[patch]]
     name = "Under Budget"
     desc = "When out of money items."
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -22,7 +22,7 @@ hash = "9E761F58D8ADFBC4"
 
 [[patch]]
     name = "No Spend"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -32,7 +32,7 @@ hash = "9E761F58D8ADFBC4"
 [[patch]]
     name = "Unlimited Ammo"
     desc = "No ammo is used."
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -42,7 +42,7 @@ hash = "9E761F58D8ADFBC4"
 [[patch]]
     name = "Never Get Hit"
     desc = "Turns off hit damage done to your player. You can still die if grabbed."
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]

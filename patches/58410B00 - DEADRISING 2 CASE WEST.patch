@@ -4,7 +4,7 @@ hash = "AB92C9FE8959D527"
 
 [[patch]]
     name = "God Mode"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]

@@ -10,12 +10,12 @@ hash = "F33AAE3E07805694"
     [[patch.be32]]
         address = 0x82647EAC # No One ever Dies Even You!
         value = 0x7C000215
-		
+
 [[patch]]
     name = "Infinite Money"
     author = "Serenity"
     is_enabled = false
-	
+
     [[patch.be32]]
         address = 0x82644BD4
         value = 0x48000008
@@ -34,4 +34,3 @@ hash = "F33AAE3E07805694"
     [[patch.be32]]
         address = 0x82644C04
         value = 0x409A0015
-	

@@ -5,7 +5,7 @@ hash = "68FB6D400D6A766C"
 [[patch]]
     name = "infinite Money"
     author = "Raven & Serenity"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x821EF78C
@@ -14,7 +14,7 @@ hash = "68FB6D400D6A766C"
 [[patch]]
     name = "Infinite Ammo"
     author = "Raven and Serenity"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x822B1A8C

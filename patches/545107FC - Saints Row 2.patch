@@ -1,0 +1,36 @@
+title_name = "Saints Row 2"
+title_id = "545107FC"
+hash = "F33AAE3E07805694"
+
+[[patch]]
+    name = "Eternity Mod"
+    author = "Serenity"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82647EAC # No One ever Dies Even You!
+        value = 0x7C000215
+		
+[[patch]]
+    name = "Infinite Money"
+    author = "Serenity"
+    is_enabled = false
+	
+    [[patch.be32]]
+        address = 0x82644BD4
+        value = 0x48000008
+    [[patch.be32]]
+        address = 0x82644BE4
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x82644BE8
+        value = 0x806B00AC
+    [[patch.be32]]
+        address = 0x82644BEC
+        value = 0x806B00AC
+    [[patch.be32]]
+        address = 0x82644BF0
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82644C04
+        value = 0x409A0015

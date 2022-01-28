@@ -5,7 +5,7 @@ hash = "1B6F4BFA64747F55"
 [[patch]]
     name = "Unlimited Resources"
     desc = "Resource materials never decrease."
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]

@@ -4,7 +4,7 @@ hash = "D868DF28844095D"
 
 [[patch]]
     name = "Infinite Health"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -15,7 +15,7 @@ hash = "D868DF28844095D"
         value = 0xd1bf0120
 [[patch]]
     name = "No Reload"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -23,7 +23,7 @@ hash = "D868DF28844095D"
         value = 0x00003960
 [[patch]]
     name = "Max Money on Spend"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -31,7 +31,7 @@ hash = "D868DF28844095D"
         value = 0x39407530
 [[patch]]
     name = "$0 on Spend (For selling loot)"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]

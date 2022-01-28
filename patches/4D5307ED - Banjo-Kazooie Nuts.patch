@@ -4,7 +4,7 @@ hash = "DF7BB7E5C2BE89B1"
 
 [[patch]]
     name = "Notes Never Decrease"
-    author = "Etokapa, TeddyHammer"
+    author = "Etokapa, Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -13,7 +13,7 @@ hash = "DF7BB7E5C2BE89B1"
 
 [[patch]]
     name = "Screen Always Bright"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]

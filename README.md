@@ -5,7 +5,7 @@ This repository contains game patches for Xenia.
 
 ### All patches
 1. Download the <!--[zip](https://github.com/xenia-canary/game-patches/archive/main.zip)--> zip file.
-2. Extract the patches folder where `xenia.exe` is located:
+2. Extract the patches folder where `xenia.exe` is located.
 <!-- <br>![](https://raw.githubusercontent.com/xenia-canary/game-patches/main/images/patches.png) -->
 3. Continue to [enabling patches](#enabling-patches).
 
@@ -90,6 +90,11 @@ Xex loader plugins for reverse engineering tools:
   * [IDA 7 XEX Loader](https://github.com/emoose/idaxex)
   * [IDA 6 XEX Loader](https://xorloser.com/blog/?p=395)
 
+Other:
+  * [Xenia Patch Maker](https://github.com/oSerenity/Xenia-Patch-Maker)
+  * [Camera searching with Cheat Engine](https://github.com/emoose/xenia/issues/9)
+
+<!--
 ### Obtaining XEX hash
 1. Run the executable once.
 2. Close Xenia.
@@ -97,3 +102,4 @@ Xex loader plugins for reverse engineering tools:
 4. Search (<kbd>Ctrl+F</kbd>) for `Module hash:`
 <br>You should see something like:
 <br>`Module hash: 0000000000000000 for (xex name)`
+-->

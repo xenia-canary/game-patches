@@ -80,7 +80,7 @@ title_id = "4D5307DF"
 ```
 </details>
 
-### Developers Requirements.
+### Developer requirements
 
 [Cheat Engine](https://www.cheatengine.org)
 
@@ -88,28 +88,25 @@ Reverse Engineering Tools:
 [IDA Pro](https://hex-rays.com/ida-pro/)
 [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
 
-Plugins Needed For Ghidra:
+Plugins needed for Ghidra:
   * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
 
-Plugins Needed For IDA Pro:
+Plugins needed for IDA Pro:
   * [IDA 7 XEX Loader](https://github.com/emoose/idaxex)
   * [IDA 6 XEX Loader](https://xorloser.com/blog/?p=395)
 
 This will show an xex address when a breakpoint is hit, although there is currently no way to set a breakpoint on execution within the Xenia Debugger.
 
-### Setting Up Cheat Engine:
-
+### Setting up Cheat Engine:
 Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations`.
   * [Camera searching with Cheat Engine](https://github.com/emoose/xenia/issues/9)
  
- ### Making Your Patch:
+ ### Making your patch:
+ 0. Prerequisites
   * [Xenia Patch Maker](https://github.com/oSerenity/Xenia-Patch-Maker)
-<!--
-### Making Your Patch
-1. Run the Game once.
+1. Run the game once.
 2. Close Xenia.
 3. Locate `xenia.log`.
-4. Drag `xenia.log` Drop It In Xenia Patch Maker.
-<br>Xenia Patch Maker Will Load The Data Of The Game's Info:
-<br>`Proceed To Make Your Patch File.`
--->
+4. Drag `xenia.log` into Xenia Patch Maker.
+  * Xenia Patch Maker will load the data of the game's info:
+  * Proceed to make your patch file.

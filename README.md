@@ -18,7 +18,7 @@ This repository contains game patches for Xenia.
 #### Enabling patches
 To enable patches, open the .patch file that corresponds to your game in a text editor (Notepad, Notepad++, VSCode, etc.), and change `is_enabled` from `false` to `true`.
 
-#
+---
 ### Contributing
  * When submitting a patch, make sure to create a Pull Request for a file to be added to the `patches` folder in the repository.
  * If the game you are submitting a patch for already has a .patch file, then create a Pull Request to edit that file and add your name as an author.

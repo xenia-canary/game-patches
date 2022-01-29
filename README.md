@@ -85,7 +85,6 @@ title_id = "4D5307DF"
 
 Reverse engineering tools
   * [IDA Pro](https://hex-rays.com/ida-pro/)
-  * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
 
 Plugins needed for Ghidra
   * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)

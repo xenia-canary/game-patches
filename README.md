@@ -84,8 +84,8 @@ title_id = "4D5307DF"
   * [Cheat Engine](https://www.cheatengine.org)
 
 Reverse engineering tools
-  * [IDA Pro](https://hex-rays.com/ida-pro/)
   * [Ghidra](https://ghidra-sre.org/)
+  * [IDA Pro](https://hex-rays.com/ida-pro/)
 
 Plugins needed for Ghidra
   * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)

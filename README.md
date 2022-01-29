@@ -85,6 +85,7 @@ title_id = "4D5307DF"
 
 Reverse engineering tools
   * [IDA Pro](https://hex-rays.com/ida-pro/)
+  * [Ghidra](https://ghidra-sre.org/)
 
 Plugins needed for Ghidra
   * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
@@ -99,7 +100,7 @@ This will show an xex address when a breakpoint is hit, although there is curren
 Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations`.
   * [Camera searching with Cheat Engine](https://github.com/emoose/xenia/issues/9)
 
- ### Making your patch
+### Creating patch file
  0. Prerequisites:
     * [Xenia Patch Maker](https://github.com/oSerenity/Xenia-Patch-Maker)
 1. Run the game once.

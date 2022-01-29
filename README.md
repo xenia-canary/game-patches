@@ -24,7 +24,7 @@ To enable patches, open the .patch file that corresponds to your game in a text 
  * If the game you are submitting a patch for already has a .patch file, then create a Pull Request to edit that file and add your name as an author.
  * This new file must be named `[Title ID] - Game Title.patch`
  <br>For example, a patch file for Halo 3 must be called `4D5307E6 - Halo 3.patch`.
- * File must contain the executable hash, which can be obtained [here](#Obtaining-XEX-hash).
+ * File must contain the executable hash, which can be obtained [here](#creating-patch-file).
  * File must contain an empty line at the end.
 
 Example of the contents that should be included in the file:

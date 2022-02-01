@@ -98,7 +98,12 @@ This will show an xex address when a breakpoint is hit, although there is curren
 
 ### Setting up Cheat Engine
 Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations`.
-  * [Camera searching with Cheat Engine](https://github.com/emoose/xenia/issues/9)
+  * Cheat Engine now includes Big Endian types (Must Enable Them).
+You can enable them by going to Edit > Options > Extra Custom Types
+To search the games memory change Start in the 'Memory Scan Options' panel to 0000000100000000, and Stop to 0000000200000000.
+Once you find a value you can attach CE's debugger to it to see what accesses that address,
+Debug The Value By Adding To It Or Decreasing it To See What Is Making The Value Decrease Or Add.
+Hit View More Info Once You Determine The Perent Value Search For RCX=82XXXXXX In [IDA Pro](https://hex-rays.com/ida-pro/) Or [Ghidra](https://ghidra-sre.org/) 
 
 ### Creating patch file
  0. Prerequisites:

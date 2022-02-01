@@ -78,6 +78,7 @@ title_id = "4D5307DF"
         address = 0x8246ab68 # Vsync flip rate
         value = 0x39400001
 ```
+
 </details>
 
 ### Developer requirements
@@ -87,18 +88,20 @@ Reverse engineering tools
   * [Ghidra](https://ghidra-sre.org/)
   * [IDA Pro](https://hex-rays.com/ida-pro/)
 
-Plugins needed for Ghidra
+#### Plugins
+
+Ghidra
   * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
 
-Plugins needed for IDA Pro
+IDA Pro
   * [IDA 7 XEX Loader](https://github.com/emoose/idaxex)
   * [IDA 6 XEX Loader](https://xorloser.com/blog/?p=395)
 
 This will show an xex address when a breakpoint is hit, although there is currently no way to set a breakpoint on execution within the Xenia Debugger.
 
 ### Setting up Cheat Engine
-Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations`.
-  * Cheat Engine now includes Big Endian types (Must Enable Them).
+Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations` (this will give annotations in disassembly)
+  * Cheat Engine now includes Big Endian types (Must be enabled).
 You can enable them by going to Edit > Options > Extra Custom Types
 To search the emulator memory, change start range in 'Memory Scan Options' panel to `100000000`, and Stop to `200000000` (this may change depending on the programs you have running)
 Once you find a value you can attach CE's debugger to it to see what accesses that address.
@@ -119,4 +122,4 @@ Once you find a value you can attach CE's debugger to it to see what accesses th
 3. Open `xenia.log`.
 4. Search (<kbd>Ctrl+F</kbd>) for `Module hash:`
 <br>You should see something like:
-<br>`Module hash: 0000000000000000 for my.xex`
+<br>`Module hash: 0000000000000000 for default`

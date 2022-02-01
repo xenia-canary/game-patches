@@ -4,7 +4,7 @@ hash = "637FE58E99423985"
 
 [[patch]]
     name = "More Sunlight Please!"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -13,7 +13,7 @@ hash = "637FE58E99423985"
 
 [[patch]]
     name = "No Wait Time"
-    author = "TeddyHammer"
+    author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]

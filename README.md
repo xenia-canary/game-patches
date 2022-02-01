@@ -19,6 +19,7 @@ This repository contains game patches for Xenia.
 To enable patches, open the .patch file that corresponds to your game in a text editor (Notepad, Notepad++, VSCode, etc.), and change `is_enabled` from `false` to `true`.
 
 ---
+
 ### Contributing
  * When submitting a patch, make sure to create a Pull Request for a file to be added to the `patches` folder in the repository.
  * If the game you are submitting a patch for already has a .patch file, then create a Pull Request to edit that file and add your name as an author.
@@ -104,7 +105,7 @@ Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotati
   * Cheat Engine now includes Big Endian types (must be enabled).
 You can enable them by going to Edit > Options > Extra Custom Types
 To search the emulator memory, change start range in 'Memory Scan Options' panel to `100000000`, and Stop to `200000000` (this may change depending on the programs you have running)
-Once you find a value you can attach CE's debugger to it to see what accesses that address.
+Once you find a value you can attach CE's debugger to it to see what r/w that address.
 
 ### Creating patch file
  0. Prerequisites:

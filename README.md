@@ -100,8 +100,8 @@ IDA Pro
 This will show an xex address when a breakpoint is hit, although there is currently no way to set a breakpoint on execution within the Xenia Debugger.
 
 ### Setting up Cheat Engine
-Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations` (this will give annotations in disassembly)
-  * Cheat Engine now includes Big Endian types (Must be enabled).
+Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations` (this will give annotations in disassembly).
+  * Cheat Engine now includes Big Endian types (must be enabled).
 You can enable them by going to Edit > Options > Extra Custom Types
 To search the emulator memory, change start range in 'Memory Scan Options' panel to `100000000`, and Stop to `200000000` (this may change depending on the programs you have running)
 Once you find a value you can attach CE's debugger to it to see what accesses that address.

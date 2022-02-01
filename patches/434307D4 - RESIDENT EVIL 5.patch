@@ -3,7 +3,8 @@ title_id = "434307D4"
 hash = "9E761F58D8ADFBC4"
 
 [[patch]]
-    name = "Make Me Broke"
+    name = "Go Broke"
+    desc = "Removes All You're Money"
     author = "Serenity"
     is_enabled = false
 
@@ -12,7 +13,7 @@ hash = "9E761F58D8ADFBC4"
         value = 0x60000000
 [[patch]]
     name = "Under Budget"
-    desc = "When out of money items."
+    desc = "BuY Items While Being Broke"
     author = "Serenity"
     is_enabled = false
 
@@ -21,7 +22,8 @@ hash = "9E761F58D8ADFBC4"
         value = 0x60000000
 
 [[patch]]
-    name = "No Spend"
+    name = "Unlimited Money"
+    desc = "BuY Items Without Losing Money"
     author = "Serenity"
     is_enabled = false
 

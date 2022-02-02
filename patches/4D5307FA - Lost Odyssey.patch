@@ -13,3 +13,37 @@ title_id = "4D5307FA"
     [[patch.be8]]
         address = 0x82305D74
         value = 0x40
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x826E1884
+        value = 0x40
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x823B93CF
+        value = 0x10
+
+[[patch]]
+    name = "Disable Dynamic Shadows"
+    desc = "Provides a moderate performance boost, especially when using custom resolution scaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x823D5FCC
+        value = 0x4800
+    [[patch.be16]]
+        address = 0x823D5A98
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x823DE090
+        value = 0x60000000

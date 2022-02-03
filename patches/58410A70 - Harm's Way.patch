@@ -1,0 +1,12 @@
+title_name = "Harm's Way"
+title_id = "58410A70"
+hash = "BF264B28975293EE"
+
+[[patch]]
+    name = "Uncap FPS"
+    author = "illusion, Margen67"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82D08D10
+        value = 0x39600000

@@ -1,0 +1,12 @@
+title_name = "Ratatouille"
+title_id = "545107F1"
+hash = "B4A0053E4E8F1CAD"
+
+[[patch]]
+    name = "Uncap FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x820E04B8
+        value = 0x00

@@ -1,0 +1,12 @@
+title_name = "The Simpsons Game"
+title_id = "45410809"
+hash = "C245C55AB73D6932"
+
+[[patch]]
+    name = "60 FPS"
+    author = "illusion, Margen67"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826B8394
+        value = 0x60000000

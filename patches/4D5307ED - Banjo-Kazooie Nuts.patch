@@ -7,7 +7,7 @@ hash = "DF7BB7E5C2BE89B1"
     author = "Margen67"
     is_enabled = false
 
-    [[patch.be8]] # 8228A838  39600001
+    [[patch.be8]]
         address = 0x8228A83B
         value = 0x01
 

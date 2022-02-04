@@ -3,6 +3,15 @@ title_id = "4D5307ED"
 hash = "DF7BB7E5C2BE89B1"
 
 [[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]] # 8228A838  39600001
+        address = 0x8228A83B
+        value = 0x01
+
+[[patch]]
     name = "Notes Never Decrease"
     author = "Etokapa, Serenity"
     is_enabled = false

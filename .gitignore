@@ -1,5 +1,4 @@
 # Xenia
-.vscode/*
 /cache*
 /content
 /dumps
@@ -16,3 +15,5 @@
 # Everything else
 *.iso
 *.xex
+
+.vscode/*

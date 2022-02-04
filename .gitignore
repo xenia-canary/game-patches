@@ -1,4 +1,5 @@
 # Xenia
+.vscode/*
 /cache*
 /content
 /dumps

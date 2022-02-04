@@ -1,0 +1,13 @@
+title_name = "Eternal Sonata"
+title_id = "4E4D07E4"
+hash = "B1C413EE33DA2CFF"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Speeds up the game."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8220871F
+        value = 0x01

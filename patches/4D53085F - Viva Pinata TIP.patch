@@ -1,0 +1,12 @@
+title_name = "Viva Piñata: TIP"
+title_id = "4D53085F"
+hash = "167B2E6730CC5BD7"
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8229B71F
+        value = 0x01

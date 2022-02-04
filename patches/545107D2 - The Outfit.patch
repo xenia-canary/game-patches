@@ -9,13 +9,13 @@ hash = "3F050427A3C5B017"
 
     [[patch.be32]]
         address = 0x82821158
-        value = 0x3c888889 # Menu
+        value = 0x3C888889 # Menu
     [[patch.be32]]
-        address = 0x8283ef0c
-        value = 0x3c888889 # FPS
+        address = 0x8283EF0C
+        value = 0x3C888889 # FPS
     [[patch.be32]]
-        address = 0x8283f094
-        value = 0x3c888889 # Game
+        address = 0x8283F094
+        value = 0x3C888889 # Game
     [[patch.be32]]
-        address = 0x820aeda0
-        value = 0x3c888889 # Animation speed
+        address = 0x820AEDA0
+        value = 0x3C888889 # Animation speed

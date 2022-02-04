@@ -7,13 +7,13 @@ title_id = "584108A9"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820ab8cc
+        address = 0x820AB8CC
         value = 0x60000000
     [[patch.be8]] # Startup
         address = 0x83063323
         value = 0x01
     [[patch.be8]] # Level start
-        address = 0x821379d7
+        address = 0x821379D7
         value = 0x01
 
 [[patch]]

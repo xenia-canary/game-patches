@@ -18,17 +18,17 @@ hash = "13C8BCDF2EFCEE62"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824a0430
-        value = 0x48534a18 # branch
+        address = 0x824A0430
+        value = 0x48534A18 # branch
     [[patch.be32]]
-        address = 0x829d4e48
-        value = 0x3c004270 # register
+        address = 0x829D4E48
+        value = 0x3C004270 # register
     [[patch.be32]]
-        address = 0x829d4e4c
-        value = 0x901f0044 # store
+        address = 0x829D4E4C
+        value = 0x901F0044 # store
     [[patch.be32]]
-        address = 0x829d4e50
-        value = 0xc19f0044 # read
+        address = 0x829D4E50
+        value = 0xC19F0044 # read
     [[patch.be32]]
-        address = 0x829d4e54
-        value = 0x4bacb5e0 # branch
+        address = 0x829D4E54
+        value = 0x4BACB5E0 # branch

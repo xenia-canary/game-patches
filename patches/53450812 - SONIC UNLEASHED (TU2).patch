@@ -13,13 +13,13 @@ hash = "C33BC63868F5361"
         value = 0x38800500
     [[patch.be32]]
         address = 0x8328BB40
-        value = 0x3f800000
+        value = 0x3F800000
     [[patch.be32]]
         address = 0x8328BB44
-        value = 0x3f800000
+        value = 0x3F800000
     [[patch.be32]]
         address = 0x8328BB48
-        value = 0x3f800000
+        value = 0x3F800000
 
 [[patch]]
     name = "Disable Shadow Maps"

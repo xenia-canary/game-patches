@@ -8,7 +8,7 @@ hash = "B65283762F29121E"
     is_enabled = false
     
     [[patch.be16]]
-        address = 0x8228fa40
+        address = 0x8228FA40
         value = 0x4800
 
 [[patch]]
@@ -17,7 +17,7 @@ hash = "B65283762F29121E"
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82289dc0
+        address = 0x82289DC0
         value = 0x4800
     [[patch.be32]]
         address = 0x8227E660

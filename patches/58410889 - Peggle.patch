@@ -1,6 +1,6 @@
 title_name = "Peggle"
 title_id = "58410889"
-#hash = "83A690E6E0DA84F6"
+hash = "83A690E6E0DA84F6"
 
 [[patch]]
     name = "Unlimited Balls"

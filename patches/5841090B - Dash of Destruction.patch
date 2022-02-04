@@ -6,7 +6,7 @@ hash = "F54D95A83765205C"
     name = "Uncap FPS"
     desc = "Vsync must be changed to false in the Xenia config to go above 60 FPS."
     author = "Margen67"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be8]]
         address = 0x820C483F

@@ -81,7 +81,7 @@ title_id = "4D5307DF"
 
 </details>
 
-### Reverse engineering tools
+### Developer requirements
 * [Cheat Engine](https://www.cheatengine.org)
 * [Ghidra](https://ghidra-sre.org/)
     * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)

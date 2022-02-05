@@ -5,7 +5,7 @@ This repository contains game patches for Xenia.
 
 ### All patches
 1. Download the <!--[zip](https://github.com/xenia-canary/game-patches/archive/main.zip)--> zip file.
-2. Extract the patches folder where `xenia.exe` is located:
+2. Extract the patches folder where `xenia.exe` is located.
 <!-- <br>![](https://raw.githubusercontent.com/xenia-canary/game-patches/main/images/patches.png) -->
 3. Continue to [enabling patches](#enabling-patches).
 
@@ -18,19 +18,20 @@ This repository contains game patches for Xenia.
 #### Enabling patches
 To enable patches, open the .patch file that corresponds to your game in a text editor (Notepad, Notepad++, VSCode, etc.), and change `is_enabled` from `false` to `true`.
 
-#
+---
+
 ### Contributing
  * When submitting a patch, make sure to create a Pull Request for a file to be added to the `patches` folder in the repository.
  * If the game you are submitting a patch for already has a .patch file, then create a Pull Request to edit that file and add your name as an author.
  * This new file must be named `[Title ID] - Game Title.patch`
  <br>For example, a patch file for Halo 3 must be called `4D5307E6 - Halo 3.patch`.
- * File must contain the executable hash, which can be obtained [here](#Obtaining-XEX-hash).
+ * File must contain the executable hash, which can be [automatically](#creating-patch-file) or [manually](#obtaining-xex-hash) obtained (Log Level must be set to 2 or above).
  * File must contain an empty line at the end.
 
 Example of the contents that should be included in the file:
 <details><summary>Example (click to expand)</summary>
 
-```
+```toml
 title_name = "Blue Dragon"
 title_id = "4D5307DF"
 
@@ -78,22 +79,48 @@ title_id = "4D5307DF"
         address = 0x8246AB68 # Vsync flip rate
         value = 0x39400001
 ```
+
 </details>
 
-### For Developers
-Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations`.
+### Developer requirements
+  * [Cheat Engine](https://www.cheatengine.org)
 
-This will show an xex address when a breakpoint is hit, although there is currently no way to set a breakpoint on execution within the Xenia Debugger.
+Reverse engineering tools
+  * [Ghidra](https://ghidra-sre.org/)
+  * [IDA Pro](https://hex-rays.com/ida-pro/)
 
-Xex loader plugins for reverse engineering tools:
+#### Plugins
+
+Ghidra
   * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
+
+IDA Pro
   * [IDA 7 XEX Loader](https://github.com/emoose/idaxex)
   * [IDA 6 XEX Loader](https://xorloser.com/blog/?p=395)
 
+This will show an xex address when a breakpoint is hit, although there is currently no way to set a breakpoint on execution within the Xenia Debugger.
+
+### Setting up Cheat Engine
+Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations` (this will give annotations in disassembly).
+  * Cheat Engine now includes Big Endian types (must be enabled).
+You can enable them by going to Edit > Options > Extra Custom Types
+To search the emulator memory, change start range in 'Memory Scan Options' panel to `100000000`, and Stop to `200000000` (this may change depending on the programs you have running)
+Once you find a value you can attach CE's debugger to it to see what r/w that address.
+
+### Creating patch file
+ 0. Prerequisites:
+    * [Xenia Patch Maker](https://github.com/oSerenity/Xenia-Patch-Maker)
+1. Run the game once.
+2. Close Xenia.
+3. Locate `xenia.log`.
+4. Drag and drop `xenia.log` into Xenia Patch Maker.
+    * Xenia Patch Maker will load the game's info.
+    * Proceed to make your patch file.
+
 ### Obtaining XEX hash
-1. Run the executable once.
+1. Run the executable once with Xenia.
 2. Close Xenia.
 3. Open `xenia.log`.
 4. Search (<kbd>Ctrl+F</kbd>) for `Module hash:`
 <br>You should see something like:
-<br>`Module hash: 0000000000000000 for (xex name)`
+<br>`Module hash: 0000000000000000 for default`

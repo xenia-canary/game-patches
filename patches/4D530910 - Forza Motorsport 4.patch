@@ -8,5 +8,5 @@ hash = "7566081090ECD4EC"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x828df12b
+        address = 0x828DF12B
         value = 0x01

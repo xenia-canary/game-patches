@@ -9,7 +9,7 @@ hash = "B1DFF4F33956DE2B"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8254f5fc
+        address = 0x8254F5FC
         value = 0x60000000
 
 [[patch]]
@@ -19,7 +19,7 @@ hash = "B1DFF4F33956DE2B"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8233ac08
+        address = 0x8233AC08
         value = 0x39400000
 
 [[patch]]
@@ -28,8 +28,8 @@ hash = "B1DFF4F33956DE2B"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8239ad24
-        value = 0x3af50000
+        address = 0x8239AD24
+        value = 0x3AF50000
 
 [[patch]]
     name = "16x Anisotropic Filtering"
@@ -46,5 +46,5 @@ hash = "B1DFF4F33956DE2B"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8270f018
+        address = 0x8270F018
         value = 0x40

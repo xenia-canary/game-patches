@@ -24,14 +24,13 @@ hash = "653C43E2DE0FDEE6"
 
     [[patch.be32]]
         address = 0x821CBFEC
-        value = 0x39230001 # Last Digit Represents The Amount Of Balls To Add When You Loss one in Hex Decimal
+        value = 0x39230001 # Last digit represents the amount of balls to add when you lose one in hexadecimal
 
 [[patch]]
-    name = "Add 9 balls"
+    name = "Add 9 Balls"
     author = "Serenity"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x821CBC34
-        value = 0x39230009 # Last 2 number Represents The Amount Of Balls To Add When You gain one in Hex Decimal
-
+        value = 0x39230009 # Last 2 numbers represent the amount of balls to add when you gain one in hexadecimal

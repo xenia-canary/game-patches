@@ -2,15 +2,14 @@ title_name = "Perfect Dark: Zero"
 title_id = "4D5307D3"
 hash = "8AB05ACA5F683CD4"
 
-[[patch]]
-    name = "Disable Ammo Manipulation Code (Bottomless clip?)"
-    desc = "Need to test with picked up weapons."
+[[patch]] # TODO(illusion): Need to test with picked up weapons.
+    name = "Bottomless Clip"
     author = "illusion"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x825744A8
-        value = 0x4e800020
+        value = 0x4E800020
     [[patch.be16]]
-        address = 0x8220d138
+        address = 0x8220D138
         value = 0x4800

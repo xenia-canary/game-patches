@@ -8,7 +8,7 @@ title_id = "5454085D"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825e6370
+        address = 0x825E6370
         value = 0x39400000
 
 [[patch]]

@@ -9,7 +9,7 @@ hash = "EC884B235D7F930C"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8299b48c
+        address = 0x8299B48C
         value = 0x39400000
 
 [[patch]]

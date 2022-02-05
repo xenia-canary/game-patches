@@ -9,7 +9,7 @@ hash = "66726C5BBBB02C28"
     is_enabled = false
 
    [[patch.be32]]
-        address = 0x826957ec
+        address = 0x826957EC
         value = 0x39400001
 
 [[patch]]
@@ -18,5 +18,5 @@ hash = "66726C5BBBB02C28"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x829a9a9f
+        address = 0x829A9A9F
         value = 0x00

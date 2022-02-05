@@ -2,7 +2,7 @@ title_name = "Banjo Kazooie"
 title_id = "58410954"
 
 [[patch]]
-    name = "60 FPS mod"
+    name = "60 FPS"
     desc = "Enable all fixes alongside this."
     author = "illusion, retroben"
     is_enabled = false
@@ -117,7 +117,7 @@ title_id = "58410954"
 
 [[patch]]
     name = "Swimfix"
-    desc = "Fixes sluggish swimming on 60 FPS."
+    desc = "Fixes sluggish swimming at 60 FPS."
     author = "retroben"
     is_enabled = false
 
@@ -264,7 +264,7 @@ title_id = "58410954"
 
 [[patch]]
     name = "Timer Fix"
-    desc = "Fixes the hardcoded xbla 30 FPS timers to work with 60 FPS properly."
+    desc = "Fixes the hardcoded xbla 30 FPS timers to work with 60 FPS."
     author = "retroben"
     is_enabled = false
 

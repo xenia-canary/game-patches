@@ -2,7 +2,7 @@ title_name = "Banjo Tooie"
 title_id = "58410955"
 
 [[patch]]
-    name = "60 FPS mod"
+    name = "60 FPS"
     desc = "Updated to fix cutscenes and timing with help from others."
     author = "illusion, retroben, wedarobi"
     is_enabled = false
@@ -167,8 +167,8 @@ title_id = "58410955"
         value = 0x060E
 
 [[patch]]
-    name = "Nests and Stairs Lod Hack"
-    desc = "Forces best nest model lod including contained musical notes plus Mayahem Temple stairs always 3D."
+    name = "Nests And Stairs LOD Hack"
+    desc = "Forces best nest model LOD including contained musical notes and Mayahem Temple stairs to always be 3D."
     author = "retroben"
     is_enabled = false
 
@@ -234,7 +234,7 @@ title_id = "58410955"
         value = 0x4BC6DFFC
 
 [[patch]]
-    name = "Banjo kazooie Fire Breath"
+    name = "Banjo Kazooie Fire Breath"
     desc = "Swaps normal idle attack with dragon Kazooie fire breath."
     author = "retroben"
     is_enabled = false
@@ -244,8 +244,8 @@ title_id = "58410955"
         value = 0x820D5388
 
 [[patch]]
-    name = "Kazooie Fire Breath"
-    desc = "Swaps Kazooie alone idle wing whack with fire breath."
+    name = "Solo Kazooie Fire Breath"
+    desc = "Swaps solo Kazooie idle wing whack with fire breath."
     author = "retroben"
     is_enabled = false
 
@@ -328,7 +328,7 @@ title_id = "58410955"
 
 [[patch]]
     name = "Replace Blue Eggs With Gold Eggs"
-    desc = "Use blue eggs to shoot gold eggs which works even for rapid fire when in first person."
+    desc = "Use blue eggs to shoot gold eggs which works even with rapid fire when in first person."
     author = "retroben"
     is_enabled = false
 
@@ -338,7 +338,7 @@ title_id = "58410955"
 
 [[patch]]
     name = "Access Mine Eggs"
-    desc = "Unused in single player and only appear from forward shots but may crash if used in breegull blaster mode, or if used excessively."
+    desc = "Unused in singleplayer and only appear from forward shots, but may crash if used in breegull blaster mode, or used excessively."
     author = "retroben"
     is_enabled = false
 
@@ -399,7 +399,7 @@ title_id = "58410955"
 
 [[patch]]
     name = "Uncapped Mine Egg Shots"
-    desc = "May need to be careful to not use too many of these for risk of crashing."
+    desc = "May need to be careful to not use too many of these due to risk of crashing."
     author = "retroben"
     is_enabled = false
 

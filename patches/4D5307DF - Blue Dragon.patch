@@ -27,20 +27,20 @@ title_id = "4D5307DF"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820ce6bc # Will need to find a way to write 3f00 rather than nop.
+        address = 0x820CE6BC # Will need to find a way to write 3F00 rather than nop.
         value = 0x60000000
     [[patch.be32]]
-        address = 0x821a0640
+        address = 0x821A0640
         value = 0x60000000
     [[patch.be32]]
-        address = 0x8273664c
+        address = 0x8273664C
         value = 0x60000000
     [[patch.be16]]
         address = 0x82DEC57C # Game speed
-        value = 0x3f00
+        value = 0x3F00
     [[patch.be16]]
         address = 0x82DDA880 # Battle speed; disabling this avoids softlocks, but doubles speed.
-        value = 0x3f00
+        value = 0x3F00
     [[patch.be32]]
-        address = 0x8246ab68 # Vsync flip rate
+        address = 0x8246AB68 # Vsync flip rate
         value = 0x39400001

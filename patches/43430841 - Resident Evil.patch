@@ -14,20 +14,20 @@ hash = "541A4CC449C0A274"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82af6ddf
+        address = 0x82AF6DDF
         value = 0x24       # 0x1
     [[patch.be32]]
         address = 0x82564258
-        value = 0x4869e730 # branch
+        value = 0x4869E730 # branch
     [[patch.be32]]
-        address = 0x82c02988
-        value = 0x3c004270 # register
+        address = 0x82C02988
+        value = 0x3C004270 # register
     [[patch.be32]]
-        address = 0x82c0298c
-        value = 0x901f0044 # store
+        address = 0x82C0298C
+        value = 0x901F0044 # store
     [[patch.be32]]
-        address = 0x82c02990
-        value = 0xc19f0044 # read
+        address = 0x82C02990
+        value = 0xC19F0044 # read
     [[patch.be32]]
-        address = 0x82c02994
-        value = 0x4b9618c8 # branch
+        address = 0x82C02994
+        value = 0x4B9618C8 # branch

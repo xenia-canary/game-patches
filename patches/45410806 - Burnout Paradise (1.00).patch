@@ -9,16 +9,16 @@ hash = "13C8BCDF2EFCEE62"
 
     [[patch.be32]]
         address = 0x82192098
-        value = 0xc01f00a4
+        value = 0xC01F00A4
     [[patch.be32]]
-        address = 0x8218fbd0
-        value = 0xc00300a4
+        address = 0x8218FBD0
+        value = 0xC00300A4
     [[patch.be32]]
         address = 0x82191908
-        value = 0x3c0042a0
+        value = 0x3C0042A0
     [[patch.be32]]
-        address = 0x8219190c
-        value = 0x900300a4
+        address = 0x8219190C
+        value = 0x900300A4
     [[patch.be32]]
-        address = 0x821913bc
-        value = 0xc1bf00a4
+        address = 0x821913BC
+        value = 0xC1BF00a4

@@ -6,7 +6,6 @@ This repository contains game patches for Xenia.
 ### All patches
 1. Download the <!--[zip](https://github.com/xenia-canary/game-patches/archive/main.zip)--> zip file.
 2. Extract the patches folder where `xenia.exe` is located.
-<!-- <br>![](https://raw.githubusercontent.com/xenia-canary/game-patches/main/images/patches.png) -->
 3. Continue to [enabling patches](#enabling-patches).
 
 ### Individual patch(es)
@@ -24,7 +23,7 @@ To enable patches, open the .patch file that corresponds to your game in a text 
  * When submitting a patch, make sure to create a Pull Request for a file to be added to the `patches` folder in the repository.
  * If the game you are submitting a patch for already has a .patch file, then create a Pull Request to edit that file and add your name as an author.
  * This new file must be named `[Title ID] - Game Title.patch`
- <br>For example, a patch file for Halo 3 must be called `4D5307E6 - Halo 3.patch`.
+<br>For example, a patch file for Halo 3 must be called `4D5307E6 - Halo 3.patch`.
  * File must contain the executable hash, which can be [automatically](#creating-patch-file) or [manually](#obtaining-xex-hash) obtained (Log Level must be set to 2 or above).
  * File must contain an empty line at the end.
 
@@ -82,33 +81,31 @@ title_id = "4D5307DF"
 
 </details>
 
-### Developer requirements
-  * [Cheat Engine](https://www.cheatengine.org)
-
-Reverse engineering tools
-  * [Ghidra](https://ghidra-sre.org/)
-  * [IDA Pro](https://hex-rays.com/ida-pro/)
-
-#### Plugins
-
-Ghidra
-  * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
-
-IDA Pro
-  * [IDA 7 XEX Loader](https://github.com/emoose/idaxex)
-  * [IDA 6 XEX Loader](https://xorloser.com/blog/?p=395)
-
-This will show an xex address when a breakpoint is hit, although there is currently no way to set a breakpoint on execution within the Xenia Debugger.
+### Reverse engineering tools
+* [Cheat Engine](https://www.cheatengine.org)
+* [Ghidra](https://ghidra-sre.org/)
+    * [Ghidra XEX Loader](https://github.com/zeroKilo/XEXLoaderWV/releases)
+* [IDA Pro](https://hex-rays.com/ida-pro/)
+    * [IDA 7 XEX Loader](https://github.com/emoose/idaxex)
+    * [IDA 6 XEX Loader](https://xorloser.com/blog/?p=395)
 
 ### Setting up Cheat Engine
-Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations` (this will give annotations in disassembly).
-  * Cheat Engine now includes Big Endian types (must be enabled).
-You can enable them by going to Edit > Options > Extra Custom Types
-To search the emulator memory, change start range in 'Memory Scan Options' panel to `100000000`, and Stop to `200000000` (this may change depending on the programs you have running)
-Once you find a value you can attach CE's debugger to it to see what r/w that address.
+Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations`. This will give annotations in disassembly.
+ * Cheat Engine 7.2+ includes Big Endian types, but they must be enabled;
+     * Click `Edit` > `Options` > `Extra Custom Types` and check all of them.
+ * Also go to `Scan Settings` and enable `MEM_MAPPED`.
+
+To search the emulator memory, change 'Memory Scan Options' to:
+  |     | All
+  ----- | :----------
+  Start | `100000000`
+  Stop  | `200000000`
+ * This may change depending on the programs you have running.
+ * Once you find a value you can attach Cheat Engine's debugger to see what reads/writes to that address.
+<br>This will show an xex address when a breakpoint is hit, although there is currently no way to set a breakpoint on execution within the Xenia Debugger.
 
 ### Creating patch file
- 0. Prerequisites:
+0. Prerequisites:
     * [Xenia Patch Maker](https://github.com/oSerenity/Xenia-Patch-Maker)
 1. Run the game once.
 2. Close Xenia.
@@ -121,6 +118,6 @@ Once you find a value you can attach CE's debugger to it to see what r/w that ad
 1. Run the executable once with Xenia.
 2. Close Xenia.
 3. Open `xenia.log`.
-4. Search (<kbd>Ctrl+F</kbd>) for `Module hash:`
+4. Search <kbd>Ctrl+F</kbd> for `Module hash:`
 <br>You should see something like:
 <br>`Module hash: 0000000000000000 for default`

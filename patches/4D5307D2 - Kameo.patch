@@ -1,0 +1,12 @@
+title_id = "4D5307D2"
+title_name = "Kameo"
+hash = "EE52F3EB68FFE487"
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x820CF93F
+        value = 0x01

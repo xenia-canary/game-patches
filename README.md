@@ -17,6 +17,14 @@ This repository contains game patches for Xenia.
 #### Enabling patches
 To enable patches, open the .patch file that corresponds to your game in a text editor (Notepad, Notepad++, VSCode, etc.), and change `is_enabled` from `false` to `true`.
 
+#
+#### Note about aspect ratio patches
+While most aspect ratio patches are 21:9, they can be changed to other aspect ratios as well;
+
+1. Divide your monitor's resolution width by height (i.e. 3440/1440)
+2. [Convert the result to hex](https://gregstoll.com/~gregstoll/floattohex).
+3. Change the value to `0x########` replacing `########` with the hex value.
+
 ---
 
 ### Contributing

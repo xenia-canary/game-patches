@@ -22,7 +22,7 @@ title_id = "4D5307D1"
         value = 0x00
 
 [[patch]]
-    name = "21:9"
+    name = "21:9 Aspect Ratio"
     desc = "Requires present_letterbox to be changed from true to false in the Xenia config."
     author = "Esppiral"
     is_enabled = false

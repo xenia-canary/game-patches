@@ -10,3 +10,13 @@ hash = "EE52F3EB68FFE487"
     [[patch.be8]]
         address = 0x820CF93F
         value = 0x01
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "Default is 21:9 (3440/1440). Requires present_letterbox to be changed from true to false in the Xenia config."
+    author = "Margen67"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x82087CAC
+        value = 0x4018E38E

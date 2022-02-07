@@ -21,7 +21,7 @@ To enable patches, open the .patch file that corresponds to your game in a text 
 
 #
 #### Note about aspect ratio patches
-While most aspect ratio patches are 21:9, they can be changed to other aspect ratios as well;
+While most aspect ratio patches are 21:9 (3440/1440), they can be changed to other aspect ratios as well;
 
 1. Divide your monitor's resolution width by height (i.e. 3440/1440)
 2. [Convert the result to hex](https://gregstoll.com/~gregstoll/floattohex).

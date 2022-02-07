@@ -55,7 +55,7 @@ hash = "C031CE0A3D7B711F"
 
 [[patch]]
     name = "Aspect Ratio"
-    desc = "Default is 21:9. Requires present_letterbox to be changed from true to false in the Xenia config."
+    desc = "Default is 21:9 (3440/1440). Requires present_letterbox to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 

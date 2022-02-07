@@ -2,6 +2,25 @@ title_name = "Perfect Dark: Zero"
 title_id = "4D5307D3"
 hash = "8AB05ACA5F683CD4"
 
+[[patch]]
+    name = "Uncap FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x826CFB75
+        value = 0x00
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "Default is 21:9 (3440/1440). Requires present_letterbox to be changed from true to false in the Xenia config."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820EC158
+        value = 0x4018E38E
+
 [[patch]] # TODO(illusion): Need to test with picked up weapons.
     name = "Bottomless Clip"
     author = "illusion"

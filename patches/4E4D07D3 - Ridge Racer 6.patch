@@ -1,15 +1,6 @@
-title_id = "4D5307D2"
-title_name = "Kameo"
-hash = "EE52F3EB68FFE487"
-
-[[patch]]
-    name = "60 FPS"
-    author = "Margen67"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x820CF93F
-        value = 0x01
+title_id = "4E4D07D3"
+title_name = "Ridge Racer 6"
+hash = "7F87B6C814A99806"
 
 [[patch]]
     name = "Aspect Ratio"
@@ -18,5 +9,5 @@ hash = "EE52F3EB68FFE487"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82087CAC
+        address = 0x82001C54
         value = 0x4018E38E

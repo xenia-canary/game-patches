@@ -34,7 +34,7 @@ While most aspect ratio patches are 21:9, they can be changed to other aspect ra
  * If the game you are submitting a patch for already has a .patch file, then create a Pull Request to edit that file and add your name as an author.
  * This new file must be named `[Title ID] - Game Title.patch`
 <br>For example, a patch file for Halo 3 must be called `4D5307E6 - Halo 3.patch`.
- * File must contain the executable hash, which can be [automatically](#creating-patch-file) or [manually](#obtaining-xex-hash) obtained (Log Level must be set to 2 or above).
+ * File must contain the module hash, which can be [automatically](#creating-patch-file) or [manually](#obtaining-xex-hash) obtained.
  * File must contain an empty line at the end.
 
 Example of the contents that should be included in the file:
@@ -125,9 +125,10 @@ To search the emulator memory, change 'Memory Scan Options' to:
     * Proceed to make your patch file.
 
 ### Obtaining XEX hash
-1. Run the executable once with Xenia.
-2. Close Xenia.
-3. Open `xenia.log`.
-4. Search <kbd>Ctrl+F</kbd> for `Module hash:`
+1. Set [`log_level`](https://github.com/xenia-canary/xenia-canary/wiki/Options) to at least [`2`](https://github.com/xenia-canary/xenia-canary/wiki/Options).
+2. Run the executable once with Xenia.
+3. Close Xenia.
+4. Open `xenia.log`.
+5. Search <kbd>Ctrl+F</kbd> for `Module hash:`
 <br>You should see something like:
 <br>`Module hash: 0000000000000000 for default`

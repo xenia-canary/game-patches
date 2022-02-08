@@ -3,8 +3,8 @@ title_id = "53450812"
 hash = "C031CE0A3D7B711F"
 
 [[patch]]
-    name = "1280x720 Rendering"
-    desc = "Patches the game to render at 1280x720 instead of 880x720."
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 880x720."
     author = "slashiee, ICUP321"
     is_enabled = false
 

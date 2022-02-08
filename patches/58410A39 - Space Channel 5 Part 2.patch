@@ -3,7 +3,7 @@ title_id = "58410A39"
 hash = "2DF35F5AEE1D0783"
 
 [[patch]]
-    name = "1280x675 Rendering"
+    name = "1280x675 Resolution"
     desc = "Original resolution is 960x540. 1280x720 breaks rendering and requires further research."
     author = "Margen67"
     is_enabled = false

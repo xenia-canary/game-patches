@@ -3,7 +3,7 @@ title_id = "4541096D"
 hash = "AEFAB3CD2B779CC1"
 
 [[patch]]
-    name = "1280x720 Rendering"
+    name = "1280x720 Resolution"
     desc = "Original resolution is 1120x584."
     author = "Margen67"
     is_enabled = false

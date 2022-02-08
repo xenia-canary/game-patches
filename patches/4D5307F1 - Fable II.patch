@@ -1,0 +1,13 @@
+title_id = "4D5307F1"
+title_name = "Fable II"
+hash = "94F0641F3D0F2490"
+
+[[patch]]
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 1120x720. Breaks idle videos in main menu."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8238DF5A
+        value = 0x0500

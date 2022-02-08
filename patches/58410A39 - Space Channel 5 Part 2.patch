@@ -1,0 +1,16 @@
+title_name = "Space Channel 5 Part 2"
+title_id = "58410A39"
+hash = "2DF35F5AEE1D0783"
+
+[[patch]]
+    name = "1280x675 Rendering"
+    desc = "Original resolution is 960x540. 1280x720 breaks rendering and requires further research."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x823C4BAE
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x823C4BCE
+        value = 0x02A3

@@ -12,6 +12,27 @@ hash = "DF7BB7E5C2BE89B1"
         value = 0x01
 
 [[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82B96D7C
+        value = 0x38A00010
+    [[patch.be32]]
+        address = 0x82B96E10
+        value = 0x38A00010
+    [[patch.be32]]
+        address = 0x82B96E10
+        value = 0x38A00010
+    [[patch.be32]]
+        address = 0x82B96B98
+        value = 0x38A00010
+    [[patch.be32]]
+        address = 0x823A8308
+        value = 0x38A00010
+
+[[patch]]
     name = "Notes Never Decrease"
     author = "Etokapa, Serenity"
     is_enabled = false

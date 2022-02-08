@@ -1,0 +1,13 @@
+title_name = "Small Arms"
+title_id = "584107D5"
+hash = "89FF04F58E605CDC"
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "Default is 21:9 (3440/1440). Requires present_letterbox to be changed from true to false in the Xenia config."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8201FB54
+        value = 0x4018E38E

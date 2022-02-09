@@ -1,10 +1,10 @@
 title_name = "Saints Row"
 title_id = "545107D1"
-#hash = "877C7A32ED459835"
+hash = "877C7A32ED459835"
 
 [[patch]]
     name = "Enable Debug Console"
-    desc = "Enable byte 0x835F4C3E; Requires keyboard_passthru to be changed from false to true in the Xenia config."
+    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia config."
     author = "emoose"
     is_enabled = false
 
@@ -17,3 +17,6 @@ title_id = "545107D1"
     [[patch.be32]]
         address = 0x82660268
         value = 0x480B8E14
+	[[patch.be8]]
+        address = 0x835F4C3E
+        value = 0x01

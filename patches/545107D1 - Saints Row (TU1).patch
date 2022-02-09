@@ -17,6 +17,6 @@ hash = "877C7A32ED459835"
     [[patch.be32]]
         address = 0x82660268
         value = 0x480B8E14
-	[[patch.be8]]
+    [[patch.be8]]
         address = 0x835F4C3E
         value = 0x01

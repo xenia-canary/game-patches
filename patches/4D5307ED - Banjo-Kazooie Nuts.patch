@@ -33,6 +33,24 @@ hash = "DF7BB7E5C2BE89B1"
         value = 0x38A00010
 
 [[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8229F480
+        value = 0x4800
+
+[[patch]]
+    name = "Disable SSAO"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8235F350
+        value = 0x4800
+
+[[patch]]
     name = "Notes Never Decrease"
     author = "Etokapa, Serenity"
     is_enabled = false

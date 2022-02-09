@@ -1,5 +1,5 @@
-title_name = "Gears of Wars 3"
-title_id = "4D5308AB"
+title_name = "Gears of War Judgement"
+title_id = "4D530A26"
 #hash = ""
 
 [[patch]]
@@ -9,18 +9,8 @@ title_id = "4D5308AB"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8253D9B0
+        address = 0x8255DE08
         value = 0x60000000
-
-[[patch]]
-    name = "Disable Ambient Occlusion"
-    desc = "Fixes various artifacts when using upscaling."
-    author = "illusion"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82593DC4
-        value = 0x39600000
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -29,21 +19,18 @@ title_id = "4D5308AB"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82861FD0
+        address = 0x8288E120
         value = 0x39400000
 
 [[patch]]
-    name = "RTV Flickering Decals Fix"
-    desc = "Removes decals from static meshes affected by lighting channels and translucencies when using RTV. Small visual details may be missing."
+    name = "RTV - Flickering Decals Fix"
+    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826C8BB4
-        value = 0x817F0000
-    [[patch.be32]]
-        address = 0x826C8D48
-        value = 0xC3F90000
+        address = 0x8234C778
+        value = 0x39600000
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
@@ -52,16 +39,16 @@ title_id = "4D5308AB"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827B8764
-        value = 0x38A00001
-    [[patch.be32]]
-        address = 0x827B88C0
+        address = 0x827E363C
         value = 0x38A00000
     [[patch.be32]]
-        address = 0x827B8BA8
-        value = 0x38800004
+        address = 0x827E3810
+        value = 0x38A00000
     [[patch.be32]]
-        address = 0x827BAFA8
+        address = 0x827E3970
+        value = 0x38800004
+    [[patch.be32]] # nop finishing render pass from branching to temporal AA resolve
+        address = 0x827E392C
         value = 0x60000000
 
 [[patch]]
@@ -70,5 +57,5 @@ title_id = "4D5308AB"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82969614
+        address = 0x82999954
         value = 0x38A00010

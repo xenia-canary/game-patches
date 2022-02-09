@@ -1,5 +1,6 @@
 title_name = "GoldenEye 007"
 title_id = "584108A9"
+#hash = ""
 
 [[patch]]
     name = "No Reload"

@@ -1,5 +1,6 @@
 title_name = "Leisure Suit Larry"
 title_id = "434D0822"
+#hash = ""
 
 [[patch]]
     name = "Unlock FPS"

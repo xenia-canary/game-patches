@@ -1,6 +1,6 @@
 title_name = "PGR3"
 title_id = "4D5307D1"
-# TODO(illusion): Add hash
+#hash = "" TODO(illusion): Add hash
 
 [[patch]]
     name = "60 FPS"

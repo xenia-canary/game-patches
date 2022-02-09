@@ -1,5 +1,6 @@
 title_name = "Saints Row"
 title_id = "545107D1"
+#hash = ""
 
 [[patch]]
     name = "Enable Debug Console"

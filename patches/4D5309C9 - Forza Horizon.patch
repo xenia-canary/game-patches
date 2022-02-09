@@ -1,5 +1,6 @@
 title_name = "Forza Horizon"
 title_id = "4D5309C9"
+#hash = ""
 
 [[patch]]
     name = "Disable Motion Blur"

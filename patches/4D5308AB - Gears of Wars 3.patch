@@ -1,5 +1,6 @@
 title_name = "Gears of Wars 3"
 title_id = "4D5308AB"
+#hash = ""
 
 [[patch]]
     name = "Unlock FPS"

@@ -1,5 +1,6 @@
 title_name = "WWE All Stars"
 title_id = "54510866"
+#hash = ""
 
 [[patch]]
     name = "Skip Audio Loop Stuck Code"

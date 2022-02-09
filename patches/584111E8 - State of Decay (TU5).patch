@@ -1,5 +1,6 @@
 title_name = "State of Decay"
 title_id = "584111E8"
+#hash = ""
 
 [[patch]]
     name = "Disable conditional rendering"

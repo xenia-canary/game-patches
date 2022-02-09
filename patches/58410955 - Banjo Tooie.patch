@@ -1,5 +1,6 @@
 title_name = "Banjo Tooie"
 title_id = "58410955"
+#hash = ""
 
 [[patch]]
     name = "60 FPS"

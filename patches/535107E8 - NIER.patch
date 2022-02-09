@@ -1,5 +1,6 @@
 title_name = "NIER"
 title_id = "535107E8"
+#hash = ""
 
 [[patch]]
     name = "60 FPS"

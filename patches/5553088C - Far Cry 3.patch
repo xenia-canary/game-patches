@@ -13,6 +13,7 @@ hash = "D868DF28844095D"
     [[patch.be32]]
         address = 0x825F74F8
         value = 0xD1BF0120
+
 [[patch]]
     name = "No Reload"
     author = "Serenity"
@@ -21,6 +22,7 @@ hash = "D868DF28844095D"
     [[patch.be32]]
         address = 0x82FBF3AC
         value = 0x00003960
+
 [[patch]]
     name = "Max Money on Spend"
     author = "Serenity"
@@ -29,6 +31,7 @@ hash = "D868DF28844095D"
     [[patch.be32]]
         address = 0x8300451C
         value = 0x39407530
+
 [[patch]]
     name = "$0 on Spend (For selling loot)"
     author = "Serenity"

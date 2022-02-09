@@ -1,5 +1,6 @@
 title_name = "Gears of Wars Judgement"
 title_id = "4D530A26"
+#hash = ""
 
 [[patch]]
     name = "Unlock FPS"

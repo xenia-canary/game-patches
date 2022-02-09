@@ -13,7 +13,6 @@ hash = "B50E6ABED4729547"
 
 [[patch]]
     name = "Disable Motion Blur"
-    desc = ""
     author = "Boma"
     is_enabled = false
 

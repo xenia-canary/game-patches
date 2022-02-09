@@ -1,5 +1,6 @@
 title_name = "Fable2"
 title_id = "4D5307F1"
+#hash = ""
 
 [[patch]]
     name = "60 FPS"

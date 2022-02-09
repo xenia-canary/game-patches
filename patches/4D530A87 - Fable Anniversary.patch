@@ -1,5 +1,6 @@
 title_name = "Fable Anniversary"
 title_id = "4D530A87"
+#hash = ""
 
 [[patch]]
     name = "Unlock FPS"

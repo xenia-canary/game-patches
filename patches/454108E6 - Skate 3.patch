@@ -1,5 +1,6 @@
 title_name = "Skate 3"
 title_id = "454108E6"
+#hash = ""
 
 [[patch]]
     name = "No Fall Damage"

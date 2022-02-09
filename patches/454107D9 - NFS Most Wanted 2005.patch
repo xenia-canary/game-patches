@@ -1,5 +1,6 @@
 title_name = "NFS Most Wanted 2005"
 title_id = "454107D9"
+#hash = ""
 
 [[patch]]
     name = "Disable Post Processing"

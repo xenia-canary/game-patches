@@ -1,5 +1,6 @@
 title_name = "Blue Dragon"
 title_id = "4D5307DF"
+#hash = ""
 
 [[patch]]
     name = "Enable Wireframe"

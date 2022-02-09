@@ -1,5 +1,6 @@
 title_name = "Deus Ex: Human Revolution"
 title_id = "535107FA"
+#hash = ""
 
 [[patch]]
     name = "Disable Looping Audio Code"

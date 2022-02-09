@@ -1,5 +1,6 @@
 title_name = "Batman Arkham City TU6"
 title_id = "57520802"
+#hash = ""
 
 [[patch]]
     name = "Debug Menu"

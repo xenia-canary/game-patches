@@ -6,6 +6,16 @@ title_id = "4D5307FA"
 #hash = "E9B7CF54159C687A" # Disc 4
 
 [[patch]]
+    name = "60 FPS"
+    desc = "Disabling vsync in Xenia config for over 60 fps is not recommended as it causes numerous gameplay issues."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x827B4A0F
+        value = 0x01
+
+[[patch]]
     name = "Disable Depth of Field"
     author = "boma"
     is_enabled = false

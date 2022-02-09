@@ -1,0 +1,16 @@
+title_name = "El Shaddai"
+title_id = "494F07D1"
+hash = "291BA41B6836FC74"
+
+[[patch]]
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 1120x584."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82220B36
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x82220B32
+        value = 0x0500

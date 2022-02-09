@@ -3,6 +3,15 @@ title_id = "425307DB"
 hash = "A4E446BB9A0C048F"
 
 [[patch]]
+    name = "60 FPS"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83066E67
+        value = 0x01
+
+[[patch]]
     name = "Disable Motion Blur"
     author = "boma"
     is_enabled = false

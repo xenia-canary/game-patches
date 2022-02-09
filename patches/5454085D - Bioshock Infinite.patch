@@ -1,6 +1,6 @@
 title_name = "Bioshock Infinite"
 title_id = "5454085D"
-#hash = ""
+hash = "1189C9EC9A36D5E2"
 
 [[patch]]
     name = "Disable Lens Flares"

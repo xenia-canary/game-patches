@@ -1,6 +1,6 @@
 title_name = "Gears of War 2"
 title_id = "4D53082D"
-#hash = ""
+hash = "189743DB219FBE78"
 
 [[patch]]
     name = "Unlock FPS"

@@ -1,6 +1,6 @@
 title_name = "Banjo Kazooie"
 title_id = "58410954"
-#hash = ""
+hash = "9106B5AE9EF7A44A"
 
 [[patch]]
     name = "60 FPS"

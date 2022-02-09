@@ -1,6 +1,6 @@
 title_name = "Hydro Thunder Hurricane"
 title_id = "5841096A"
-#hash = ""
+hash = "909F5A586DC17D55"
 
 [[patch]]
     name = "Skip infinite loop on race end"

@@ -11,3 +11,22 @@ hash = "C1AE7398CAEB21BF"
     [[patch.be32]]
         address = 0x8202588C
         value = 0x4018E38E
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Removes unoccluded bright lights on-screen."  
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8245AD60
+        value = 0x4800
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82195FD8
+        value = 0x38A00010

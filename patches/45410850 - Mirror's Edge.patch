@@ -3,8 +3,8 @@ title_id = "45410850"
 hash = "B1DFF4F33956DE2B"
 
 [[patch]]
-    name = "FPS Unlock"
-    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
+    name = "Unlock FPS"
+    desc = "Requires vsync to be changed from true to false in the Xenia config."
     author = "illusion"
     is_enabled = false
 

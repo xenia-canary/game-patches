@@ -4,7 +4,7 @@ hash = "BEE670772E454B1F"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS cap. Camera movement slows down over 60 FPS. Requires vsync to be changed from true to false in the Xenia config."
+    desc = "Camera movement slows down over 60 FPS. Requires vsync to be changed from true to false in the Xenia config."
     author = "illusion, Aphelion"
     is_enabled = false
 

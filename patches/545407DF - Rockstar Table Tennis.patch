@@ -1,6 +1,6 @@
 title_name = "Rockstar Table Tennis"
 title_id = "545407DF"
-#hash = ""
+hash = "315638E4941B836E"
 
 [[patch]]
     name = "Crash Skip"

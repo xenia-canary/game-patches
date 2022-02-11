@@ -1,19 +1,7 @@
-# Xenia
-/cache*
-/content
-/dumps
-/scratch
-/trace*
-*.config*
-*.toml
-*.exe
-*.log
-*.pdb
-*.sav
-*.txt
+*
+!*/
+!.gitignore
 
-# Everything else
-*.iso
-*.xex
-
-.vscode/*
+!/.github
+# TODO: Change this to .patch.toml
+!/patches/*.patch*

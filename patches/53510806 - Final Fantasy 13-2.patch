@@ -10,7 +10,6 @@ title_id = "53510806"
     [[patch.be32]]
         address = 0x82855494
         value = 0x39600001
-
     [[patch.be32]]
         address = 0x828554C8
         value = 0x39400001

@@ -1,6 +1,6 @@
 title_name = "Final Fantasy 13-2 Demo"
 title_id = "53518810"
-#hash = ""
+hash = "1FAF55E44128B6CA"
 
 [[patch]]
     name = "60 FPS"
@@ -10,7 +10,6 @@ title_id = "53518810"
     [[patch.be32]]
         address = 0x8285FCEC
         value = 0x39600001
-
     [[patch.be32]]
         address = 0x8285FD20
         value = 0x39400001

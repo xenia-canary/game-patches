@@ -8,7 +8,7 @@ hash = "66726C5BBBB02C28"
     author = "illusion"
     is_enabled = false
 
-   [[patch.be32]]
+    [[patch.be32]]
         address = 0x826957EC
         value = 0x39400001
 

@@ -1,6 +1,6 @@
 title_name = "Final Fantasy 13-2" # XIII
 title_id = "53510806"
-#hash = ""
+hash = "D5249A7F8EECF9FC"
 
 [[patch]]
     name = "60 FPS"

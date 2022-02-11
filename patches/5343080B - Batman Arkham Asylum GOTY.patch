@@ -1,6 +1,6 @@
 title_name = "Batman Arkham Asylum GOTY"
 title_id = "5343080B"
-#hash = ""
+hash = "FAA969D8A240F7FC"
 
 [[patch]]
     name = "Debug Menu"

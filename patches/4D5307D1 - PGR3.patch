@@ -1,6 +1,6 @@
-title_name = "PGR3"
+title_name = "PGR3" # Project Gotham Racing 3
 title_id = "4D5307D1"
-#hash = "" TODO(illusion): Add hash
+hash = "F9626EEF132DFCC4"
 
 [[patch]]
     name = "60 FPS"

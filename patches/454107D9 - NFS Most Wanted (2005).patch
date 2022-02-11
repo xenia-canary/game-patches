@@ -1,6 +1,6 @@
-title_name = "NFS Most Wanted (2005)"
+title_name = "NFS Most Wanted (2005)" # Need for Speed
 title_id = "454107D9"
-#hash = ""
+hash = "AAB47567B8183E97"
 
 [[patch]]
     name = "Disable Post Processing"

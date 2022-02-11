@@ -1,0 +1,12 @@
+title_name = "Family Guy: BTTM" # Back to the Multiverse
+title_id = "415608C5"
+hash = "F3CB75CAEB34325C"
+
+[[patch]]
+    name = "Fix hang on BINK videos"
+    author = "Gliniak"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82636A9C
+        value = 0x2B0B0000

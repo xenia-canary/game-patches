@@ -10,6 +10,7 @@ hash = "9E761F58D8ADFBC4"
     [[patch.be32]]
         address = 0x8250A69C
         value = 0x60000000
+
 [[patch]]
     name = "Buy Items While Broke"
     author = "Serenity"

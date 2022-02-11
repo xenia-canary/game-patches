@@ -427,6 +427,7 @@ hash = "7C090DA75AB4E883"
     [[patch.be16]]
         address = 0x8262E7BE
         value = 0xFFFE
+
 [[patch]]
     name = "Classic Jump Sounds"
     desc = "Replaces Banjo jump sounds with the original ones from the first game including transformations sharing the same sounds."

@@ -1,6 +1,6 @@
-title_name = "Leisure Suit Larry"
+title_name = "Leisure Suit Larry" # Box Office Bust
 title_id = "434D0822"
-#hash = ""
+hash = "2FCBAB95F13C4FEC"
 
 [[patch]]
     name = "Unlock FPS"

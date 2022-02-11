@@ -4,7 +4,7 @@ hash = "3B01998F8516817A"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS cap. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
     author = "illusion, boma"
     is_enabled = false
 

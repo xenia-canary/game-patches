@@ -1,10 +1,10 @@
 title_name = "NIER"
 title_id = "535107E8"
-#hash = ""
+hash = "B98F120F0DAAF44C"
 
 [[patch]]
     name = "60 FPS"
-    desc = "Raise FPS limit to 60. Readback resolve may lock the game to 30 FPS."
+    desc = "Readback resolve may lock the game to 30 FPS."
     author = "illusion"
     is_enabled = false
 

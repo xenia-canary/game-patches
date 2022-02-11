@@ -7,7 +7,7 @@ hash = "A4E446BB9A0C048F"
     author = "boma"
     is_enabled = false
 
-    [[patch.be32]]
+    [[patch.be8]]
         address = 0x83066E67
         value = 0x01
 

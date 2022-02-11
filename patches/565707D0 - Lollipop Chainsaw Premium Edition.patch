@@ -14,16 +14,19 @@ hash = "52E2D6F8696B8028"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes the in-game 58 FPS limit. Requires vsync to be changed from true to false in the Xenia config."
+    desc = "Removes the in-game 58 FPS limit. Framerates higher than 60 FPS requires vsync to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8253BC58
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x829EB10B
+        value = 0x01
 
 [[patch]]
-    name = "RTV - Decals Fix"
+    name = "RTV - Flickering Decals Fix"
     desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
     author = "boma"
     is_enabled = false
@@ -38,27 +41,9 @@ hash = "52E2D6F8696B8028"
     author = "boma"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x827E0140
-        value = 0x38800001
-    [[patch.be32]]
-        address = 0x827E0508
-        value = 0x38800001
-    [[patch.be32]]
-        address = 0x827E07D4
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x827E07FC
-        value = 0x38800001
-    [[patch.be32]]
-        address = 0x827E0AB0
-        value = 0x38800001
-    [[patch.be32]]
-        address = 0x827E31DC
-        value = 0x38800001
-    [[patch.be32]]
-        address = 0x827E31F8
-        value = 0x38800001
+    [[patch.be16]]
+        address = 0x827E1650
+        value = 0x4800
 
 [[patch]]
     name = "16x Anisotropic Filtering"

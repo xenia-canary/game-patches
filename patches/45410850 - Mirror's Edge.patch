@@ -3,14 +3,17 @@ title_id = "45410850"
 hash = "B1DFF4F33956DE2B"
 
 [[patch]]
-    name = "FPS Unlock"
-    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
-    author = "illusion"
+    name = "Unlock FPS"
+    desc = "Removes FPS cap. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8254F5FC
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x8281492B
+        value = 0x01
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -41,7 +44,7 @@ hash = "B1DFF4F33956DE2B"
         value = 0x39600010
 
 [[patch]]
-    name = "Disable Bloom+DoF"
+    name = "Disable Bloom & Depth of Field"
     author = "illusion"
     is_enabled = false
 

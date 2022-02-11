@@ -3,6 +3,16 @@ title_id = "5451083B"
 hash = "B50E6ABED4729547"
 
 [[patch]]
+    name = "60 FPS"
+    author = "Boma"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82316C9B
+        value = 0x01
+
+[[patch]]
     name = "16x Anisotropic Filtering"
     author = "Boma"
     is_enabled = false

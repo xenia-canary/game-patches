@@ -4,13 +4,16 @@ hash = "BEE670772E454B1F"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS cap. Camera movement slows down over 60 FPS. Requires vsync to be changed from true to false in the Xenia config."
-    author = "illusion, Aphelion"
+    desc = "Camera movement slows down over 60 FPS. Framerates above 60 require vsync to be changed from true to false in the Xenia config."
+    author = "illusion, Aphelion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x825C64C8
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x82D20F83
+        value = 0x01
 
 [[patch]]
     name = "Disable FXAA"

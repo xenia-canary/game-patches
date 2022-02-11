@@ -4,13 +4,16 @@ hash = "5795A866F73FE4E0"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
-    author = "illusion"
+    desc = "Removes FPS cap. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8255DE08
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x82BDC65B
+        value = 0x01
 
 [[patch]]
     name = "Disable Lens Flares"

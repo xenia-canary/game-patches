@@ -14,13 +14,16 @@ hash = "1189C9EC9A36D5E2"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes 62 FPS limit. Requires vsync to be changed from true to false in the Xenia config."
+    desc = "Removes FPS cap. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8253D9B0
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x8227FE7F
+        value = 0x01
 
 [[patch]]
     name = "16x Anisotropic Filtering"

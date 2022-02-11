@@ -3,14 +3,26 @@ title_id = "4D5707DB"
 hash = "EB8A18FE5D59FCFD"
 
 [[patch]]
-    name = "Unlocked Framerate"
-    desc = "Removes 62 FPS cap. May increase camera sensitivity."
+    name = "Unlock FPS"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x823FFCBC
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x826E7050
+        value = 0x01
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823F4E9C
+        value = 0x38A00010
 
 [[patch]]
     name = "Disable Post-Processing"

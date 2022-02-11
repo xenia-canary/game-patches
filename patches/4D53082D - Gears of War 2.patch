@@ -4,13 +4,16 @@ hash = "189743DB219FBE78"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
-    author = "illusion"
+    desc = "Removes FPS cap. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x824A2E94
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x8298CFB3
+        value = 0x01
 
 [[patch]]
     name = "Disable Ambient Occlusion"
@@ -57,5 +60,5 @@ hash = "189743DB219FBE78"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82999954
+        address = 0x8280E7FC
         value = 0x38A00010

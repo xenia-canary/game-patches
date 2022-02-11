@@ -4,13 +4,16 @@ hash = "CE051FA9AE893BDB"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes FPS cap. Requires vsync to be changed from true to false in the Xenia config."
+    desc = "Removes FPS cap. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
     author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x824A2FA4
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x829A6F53
+        value = 0x01
 
 [[patch]]
     name = "Disable Ambient Occlusion"
@@ -33,9 +36,29 @@ hash = "CE051FA9AE893BDB"
 
 [[patch]]
     name = "Black Shading Fix"
+    desc = "Modifies spherical harmonic lighting channel to properly display character shadows."
     author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x822E96D8
         value = 0x39600000
+
+[[patch]]
+    name = "RTV - Flickering Decals Fix"
+    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822D6F04
+        value = 0x39200000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8281E3B4
+        value = 0x38A00010

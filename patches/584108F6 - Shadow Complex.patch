@@ -3,8 +3,17 @@ title_id = "584108F6"
 hash = "232A5BCC3F647153"
 
 [[patch]]
-    name = "Fix Character Shadows"
-    desc = "Modifies spherical harmonical lighting component."
+    name = "60 FPS"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x828F01E7
+        value = 0x01
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Modifies spherical harmonic lighting channel to properly display character shadows."
     author = "boma"
     is_enabled = false
 
@@ -13,7 +22,16 @@ hash = "232A5BCC3F647153"
         value = 0x39600000
 
 [[patch]]
-    name = "Remove Motion Blur"
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8283F4F4
+        value = 0x38A00010
+
+[[patch]]
+    name = "Disable Motion Blur"
     author = "boma"
     is_enabled = false
 

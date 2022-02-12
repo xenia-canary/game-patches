@@ -1,0 +1,13 @@
+title_name = "DOA 5 Ultimate" # Dead or Alive 5
+title_id = "4B5607E8"
+hash = "6484F0805E01E757"
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "Default is 21:9 (3440/1440). Requires present_letterbox to be changed from true to false in the Xenia config."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82101B0C
+        value = 0x4018E38E

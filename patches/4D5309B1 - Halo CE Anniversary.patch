@@ -1,0 +1,16 @@
+title_name = "Halo: CE Anniversary" # Combat Evolved
+title_id = "4D5309B1"
+hash = "222A0F4D9FE0F2D0"
+
+[[patch]]
+    name = "1280x720 Resolution"
+    desc = "Breaks non-classic mode. Native resolution is 1152x648."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82499306
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x8249930A
+        value = 0x02D0

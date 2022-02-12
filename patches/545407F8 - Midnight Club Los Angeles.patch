@@ -4,10 +4,20 @@ hash = "D651A6BB8C7486C8"
 
 [[patch]]
     name = "Enable Deltatime"
-    desc = "Runs at any FPS with proper game speed. Disable vsync for 30+ FPS."
+    desc = "Runs at any FPS with proper game speed. Can be used in conjunction with 60 FPS patch. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
     author = "illusion"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x821BDB08
         value = 0x4800012C
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Framerates higher than 60 FPS requires vsync to be changed from true to false in the Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82419AA3
+        value = 0x01

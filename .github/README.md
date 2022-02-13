@@ -1,6 +1,8 @@
 # Xenia Game Patches
 This repository contains game patches for Xenia.
 
+[![Game Patches Discord](https://img.shields.io/discord/930763773109735484?color=5865F2&label=Game%20Patches%20Discord&logo=discord&logoColor=white)](https://discord.gg/fyRWq3xYNz)
+
 ## Installing
 
 ### All patches

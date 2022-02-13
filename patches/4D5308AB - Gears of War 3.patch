@@ -15,11 +15,17 @@ hash = "3B01998F8516817A"
 [[patch]]
     name = "Disable Ambient Occlusion"
     desc = "Fixes various artifacts when using upscaling."
-    author = "illusion"
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x82593DC4
+        value = 0x39600000
+     [[patch.be32]]
+        address = 0x82762C54
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x827C9628
         value = 0x39600000
 
 [[patch]]
@@ -39,11 +45,8 @@ hash = "3B01998F8516817A"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826C8BB4
-        value = 0x817F0000
-    [[patch.be32]]
-        address = 0x826C8D48
-        value = 0xC3F90000
+        address = 0x823445D8
+        value = 0x39200000
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"

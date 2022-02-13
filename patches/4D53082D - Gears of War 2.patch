@@ -59,3 +59,13 @@ hash = "189743DB219FBE78"
     [[patch.be32]]
         address = 0x82999954
         value = 0x38A00010
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827B817C
+        value = 0x39400000

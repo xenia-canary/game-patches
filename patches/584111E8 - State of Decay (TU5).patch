@@ -1,6 +1,6 @@
 title_name = "State of Decay" # TU5
 title_id = "584111E8"
-#hash = ""
+hash = "513745B21E19ABD4" # TODO: Hashes for TUs aren't correct
 
 [[patch]]
     name = "Disable conditional rendering"

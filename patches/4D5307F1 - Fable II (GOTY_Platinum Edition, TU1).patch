@@ -1,6 +1,6 @@
-title_name = "Fable II" # Fable 2 TU1
+title_name = "Fable II" # Fable 2 GOTY (Game Of The Year)/Platinum Edition TU1
 title_id = "4D5307F1"
-#hash = ""
+hash = "E2F4CAA0C6DEB217" # TODO: Hashes for TUs aren't correct
 
 [[patch]]
     name = "60 FPS"

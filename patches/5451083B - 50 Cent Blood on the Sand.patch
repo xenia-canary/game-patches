@@ -16,7 +16,7 @@ hash = "B50E6ABED4729547"
     author = "Boma"
     is_enabled = false
 
-    [[patch.be32]] 
+    [[patch.be32]]
         address = 0x8296359C
         value = 0x39600000
     [[patch.be32]]

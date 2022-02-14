@@ -3,6 +3,19 @@ title_id = "584107D5"
 hash = "89FF04F58E605CDC"
 
 [[patch]]
+    name = "1280x720 Resolution"
+    desc = "Native resolution is 1000x562."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8219D62A
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x8219D62E
+        value = 0x02D0
+
+[[patch]]
     name = "Aspect Ratio"
     desc = "See note about aspect ratio patches in README."
     author = "Margen67"

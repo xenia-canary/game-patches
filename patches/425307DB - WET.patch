@@ -18,4 +18,4 @@ hash = "A4E446BB9A0C048F"
 
     [[patch.be32]]
         address = 0x82CB09B8
-        value = 0xC3E92AA0 
+        value = 0xC3E92AA0

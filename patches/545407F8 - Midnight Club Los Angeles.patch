@@ -21,3 +21,22 @@ hash = "D651A6BB8C7486C8"
     [[patch.be8]]
         address = 0x82419AA3
         value = 0x01
+
+[[patch]]
+    name = "Disable Imposter Shadows - Performance Mode"
+    desc = "Trees and other foliage won't cast shadows, resulting in a moderate performance boost."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8230C87C
+        value = 0x4800
+
+[[patch]]
+    name = "Disable MSAA"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822E4B80
+        value = 0x39600001

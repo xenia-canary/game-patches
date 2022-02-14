@@ -4,7 +4,7 @@ hash = "6F029CD15605318F"
 
 [[patch]]
     name = "Aspect Ratio"
-    desc = "Default is 21:9 (3440/1440). Requires present_letterbox to be changed from true to false in the Xenia config."
+    desc = "See note about aspect ratio patches in README."
     author = "Margen67"
     is_enabled = false
 

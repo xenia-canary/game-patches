@@ -4,7 +4,7 @@ hash = "DC167618365E3A8C"
 
 [[patch]]
     name = "Aspect Ratio"
-    desc = "Makes FMVs stretch vertically. Default is 21:9 (3440/1440). Requires present_letterbox to be changed from true to false in the Xenia config."
+    desc = "Makes FMVs stretch vertically. See note about aspect ratio patches in README."
     author = "Margen67"
     is_enabled = false
 

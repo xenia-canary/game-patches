@@ -8,7 +8,7 @@ title_id = "57520828"
 
 [[patch]]
     name = "Debug Menu"
-    author = "dron_3"
+    author = "dron_3" # https://dron-3.blogspot.com/2020/11/batman-arkham-series-xbox-360-debug-menu.html
     is_enabled = false
 
     [[patch.be8]]

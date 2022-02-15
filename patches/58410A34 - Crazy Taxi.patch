@@ -1,0 +1,16 @@
+title_name = "Crazy Taxi"
+title_id = "58410A34"
+hash = "F1CD6279D0DD436A"
+
+[[patch]]
+    name = "1040x720 Resolution"
+    desc = "Native resolution is 920x690. Game guest crashes above 1040x720."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82208A46
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x82208A4E
+        value = 0x0410

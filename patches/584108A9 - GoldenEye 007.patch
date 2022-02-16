@@ -3,6 +3,44 @@ title_id = "584108A9"
 #hash = "33740A3A613F0A36" # Modified
 
 [[patch]]
+    name = "Remove Blur in Classic Graphics"
+    desc = "Can still be enabled as 'Vaseline-o-vision' cheat."
+    author = "illusion, emoose"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82188E70
+        value = 0x60000000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82426063
+        value = 0x10
+    [[patch.be32]]
+        address = 0x8238F7FC
+        value = 0x38A00010
+    [[patch.be32]]
+        address = 0x823A5188
+        value = 0x38A00010
+    [[patch.be32]]
+        address = 0x823A59E8
+        value = 0x38A00010
+
+[[patch]]
+    name = "Debug Menu"
+    desc = "Press LB to open menu."
+    author = "N/A"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82189F2B
+        value = 0x00
+
+[[patch]]
     name = "No Reload"
     author = "illusion"
     is_enabled = false
@@ -16,23 +54,3 @@ title_id = "584108A9"
     [[patch.be8]] # Level start
         address = 0x821379D7
         value = 0x01
-
-[[patch]]
-    name = "Remove Blur in Classic Graphics"
-    desc = "Can still be enabled as 'Vaseline-o-vision' cheat."
-    author = "illusion, emoose"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82188E70
-        value = 0x60000000
-
-[[patch]]
-    name = "Debug Menu"
-    desc = "Press LB to open menu."
-    author = "N/A"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x82189F2B
-        value = 0x00

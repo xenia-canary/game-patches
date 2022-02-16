@@ -13,6 +13,19 @@ hash = "F9626EEF132DFCC4"
         value = 0x39400001
 
 [[patch]]
+    name = "1280x720 Resolution"
+    desc = "Native resolution is 1024x600."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8217229E
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x821722A2
+        value = 0x0500
+
+[[patch]]
     name = "Disable Motion Blur"
     author = "illusion"
     is_enabled = false

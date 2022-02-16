@@ -1,0 +1,52 @@
+title_name = "Army of Two: The 40th Day"
+title_id = "454108D8"
+hash = "51247CE8E5B60296"
+#media_id = "44388CF4"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82EB05D7
+        value = 0x01
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8292B858
+        value = 0x48000020
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82CFF13F
+        value = 0x10
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82C9E2A8
+        value = 0x480001C4
+
+[[patch]]
+    name = "Disable FSAA Anti-Aliasing"
+    desc = "May help with edge-detection issues when upscaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8371360B
+        value = 0x00

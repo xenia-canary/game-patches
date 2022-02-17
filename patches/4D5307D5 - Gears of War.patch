@@ -6,7 +6,7 @@ hash = "B65283762F29121E"
     name = "Disable Motion Blur"
     author = "illusion"
     is_enabled = false
-    
+
     [[patch.be16]]
         address = 0x8228FA40
         value = 0x4800

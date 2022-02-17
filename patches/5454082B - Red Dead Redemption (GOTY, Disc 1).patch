@@ -3,39 +3,17 @@ title_id = "5454082B"
 hash = "F8F5F22E950BE693"
 
 [[patch]]
-    name = "Infinite Ammo"
-    desc = "100 in reserved magazine."
-    author = "illusion, boma"
+    name = "Unlock FPS"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825B9DD4
-        value = 0x3C0042C8 # Ammo amount in 2 bytes float. Default is 100. It will reset to 100 after some idle time.
-    [[patch.be32]]
-        address = 0x825B9DD8
-        value = 0x900A0000
-
-[[patch]]
-    name = "Infinite Horse Stamina"
-    author = "illusion, boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82C77738
-        value = 0x3C003F80
-    [[patch.be32]]
-        address = 0x82C7773C
-        value = 0x9007000C
-
-[[patch]]
-    name = "Skip Grass Occlusion"
-    desc = "Gets rid of grass."
-    author = "illusion, boma"
-    is_enabled = false
-
-    [[patch.be16]]
-        address = 0x822EE494
-        value = 0x4800
+        address = 0x823C674C
+        value = 0x48000048
+    [[patch.be8]]
+        address = 0x82C4E607
+        value = 0x01
 
 [[patch]]
     name = "Disable Depth of Field + Motion Blur"
@@ -54,3 +32,128 @@ hash = "F8F5F22E950BE693"
     [[patch.be32]]
         address = 0x822B5E10
         value = 0x38A00010
+
+[[patch]]
+    name = "Skip Grass Occlusion"
+    desc = "Gets rid of grass."
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x822EE494
+        value = 0x4800
+
+[[patch]]
+    name = "No Trees"
+    desc = "Provides a substantial performance boost."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8276CEC8
+        value = 0x39600001
+
+[[patch]]
+    name = "Disable Shadows"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82927B40
+        value = 0x60000000
+
+[[patch]]
+    name = "480p Mode"
+    desc = "Internally renders the game at 480p and upscales to 720p. Certain objects and terrain will exhibit irregular pop-in."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82770D08
+        value = 0x39400001
+
+[[patch]]
+    name = "Higher Quality Post Processing"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827D809C
+        value = 0x39600001
+
+[[patch]]
+    name = "Disable SSAO"
+    desc = "Probably won't improve overall performance but may help with graphical artifacts when upscaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822FCB40
+        value = 0x48000114
+
+[[patch]]
+    name = "Skip Intro Rockstar Movie"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8278F56C
+        value = 0x41
+
+[[patch]]
+    name = "Alternative Script Timing & Asset Garbage Collection"
+    desc = "May provide a small performance boost for CPU-limited systems."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82300AD0
+        value = 0x39600001
+    [[patch.be32]]
+        address = 0x8242011C
+        value = 0x39600001
+
+[[patch]]
+    name = "Use Separate Audio Heap"
+    desc = "Changes audio component heap memory. Will lower the quality of realtime audio post-processing but may provide a small performance boost for CPU-limited systems."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823DF33C
+        value = 0x39600001
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "See note about aspect ratio patches in README."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82000D7C
+        value = 0x4018E38E
+
+[[patch]]
+    name = "Infinite Horse Stamina"
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82C77738
+        value = 0x3C003F80
+    [[patch.be32]]
+        address = 0x82C7773C
+        value = 0x9007000C
+
+[[patch]]
+    name = "Infinite Ammo"
+    desc = "100 in reserved magazine."
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825B9DD4
+        value = 0x3C0042C8 # Ammo amount in 2 bytes float. Default is 100. It will reset to 100 after some idle time.
+    [[patch.be32]]
+        address = 0x825B9DD8
+        value = 0x900A0000

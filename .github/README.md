@@ -6,7 +6,7 @@ This repository contains game patches for Xenia.
 ## Installing
 
 ### All patches
-1. Download the <!--[zip](https://github.com/xenia-canary/game-patches/archive/main.zip)--> zip file.
+1. Download the [zip](../../../archive/main.zip) file.
 2. Extract the patches folder to the proper location:
     * Default: `Documents\xenia`
     * portable.txt: Same directory as `xenia.exe`.

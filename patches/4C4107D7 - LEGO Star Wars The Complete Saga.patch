@@ -1,0 +1,12 @@
+title_name = "LEGO Star Wars: The Complete Saga"
+title_id = "4C4107D7"
+hash = "9FADAA64467DF6"
+
+[[patch]]
+    name = "Allow Swears"
+    author = "Margen67"
+    is_enabled = true
+
+    [[patch.be8]]
+        address = 0x8200F241
+        value = 0x34

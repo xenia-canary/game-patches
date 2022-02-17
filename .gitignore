@@ -2,6 +2,7 @@
 !*/
 !.gitignore
 
-!/.github
+!/.github/**/*
 # TODO: Change this to .patch.toml
 !/patches/*.patch*
+!.eslintrc.js

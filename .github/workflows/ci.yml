@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    paths:
+      - '.github/workflows/ci.yml'
+      - 'patches/*'
+      - '.eslintrc.js'
+  pull_request:
+    paths:
+      - '.github/workflows/ci.yml'
+      - 'patches/*'
+      - '.eslintrc.js'
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint
+        run: | # TODO: Check patch filenames
+          for file in patches/*; do
+            mv "$file" "${file}.toml"
+          done
+          npm install -D --no-fund eslint eslint-plugin-toml
+          npx eslint patches --ext .toml

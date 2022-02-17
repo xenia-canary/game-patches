@@ -85,7 +85,7 @@ hash = "82CDA3C91B57C170"
     name = "Disable SSAO"
     desc = "Probably won't improve overall performance but may help with graphical artifacts when upscaling."
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x822FAFE8

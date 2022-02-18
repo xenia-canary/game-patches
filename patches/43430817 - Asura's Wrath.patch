@@ -4,13 +4,16 @@ hash = "F3AA3A3085A3A3B9"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Removes 30 FPS limit. Requires vsync to be changed from true to false in the Xenia config."
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config. Button mashing QTEs are tied to framerate and when vsync is disabled it's difficult to correctly time them."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x824D7130
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x8299A70F
+        value = 0x01
 
 [[patch]]
     name = "16x Anisotropic Filtering"

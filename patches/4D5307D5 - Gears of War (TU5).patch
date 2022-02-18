@@ -1,6 +1,6 @@
-title_name = "Gears Of War"
+title_name = "Gears Of War" # TU5
 title_id = "4D5307D5"
-hash = "B65283762F29121E"
+hash = "FD3300E440A69EE9"
 
 [[patch]]
     name = "60 FPS"
@@ -9,16 +9,16 @@ hash = "B65283762F29121E"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8223E7BB
+        address = 0x82250DDB
         value = 0x01
 
 [[patch]]
     name = "Disable Motion Blur"
-    author = "illusion"
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8228FA40
+        address = 0x822A14C8
         value = 0x4800
 
 [[patch]]
@@ -27,10 +27,10 @@ hash = "B65283762F29121E"
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82289DC0
+        address = 0x8229B988
         value = 0x4800
     [[patch.be32]]
-        address = 0x8227E660
+        address = 0x82290B18
         value = 0x48000008
 
 [[patch]]
@@ -40,5 +40,5 @@ hash = "B65283762F29121E"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82487484
+        address = 0x8249D4D4
         value = 0x38A00008

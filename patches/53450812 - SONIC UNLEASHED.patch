@@ -3,6 +3,16 @@ title_id = "53450812"
 hash = "C031CE0A3D7B711F"
 
 [[patch]]
+    name = "60 FPS"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82BD24A3
+        value = 0x01
+
+[[patch]]
     name = "1280x720 Resolution"
     desc = "Original resolution is 880x720."
     author = "slashiee, ICUP321"

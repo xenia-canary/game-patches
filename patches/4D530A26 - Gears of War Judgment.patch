@@ -4,13 +4,16 @@ hash = "5795A866F73FE4E0"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Requires vsync to be changed from true to false in the Xenia config."
-    author = "illusion"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8255DE08
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x82BDC65B
+        value = 0x01
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -24,13 +27,22 @@ hash = "5795A866F73FE4E0"
 
 [[patch]]
     name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8234C778
         value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82999954
+        value = 0x38A00010
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
@@ -52,10 +64,26 @@ hash = "5795A866F73FE4E0"
         value = 0x60000000
 
 [[patch]]
-    name = "16x Anisotropic Filtering"
+    name = "Disable Ambient Occlusion"
+    desc = "May slightly increase performance and prevent graphical arifacts when upscaling."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82999954
-        value = 0x38A00010
+        address = 0x824297FC
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x8242B598
+        value = 0x39400000
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824427A8
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x827CBD8C
+        value = 0x39600000

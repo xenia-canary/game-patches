@@ -4,29 +4,16 @@ hash = "3B01998F8516817A"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Requires vsync to be changed from true to false in the Xenia config."
-    author = "illusion"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8253D9B0
         value = 0x60000000
-
-[[patch]]
-    name = "Disable Ambient Occlusion"
-    desc = "Fixes various artifacts when using upscaling."
-    author = "illusion, boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82593DC4
-        value = 0x39600000
-     [[patch.be32]]
-        address = 0x82762C54
-        value = 0x39600000
-    [[patch.be32]]
-        address = 0x827C9628
-        value = 0x39600000
+    [[patch.be8]]
+        address = 0x82AF66BF
+        value = 0x01
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -39,14 +26,39 @@ hash = "3B01998F8516817A"
         value = 0x39400000
 
 [[patch]]
-    name = "RTV Flickering Decals Fix"
-    desc = "Removes decals from static meshes affected by lighting channels and translucencies when using RTV. Small visual details may be missing."
+    name = "RTV - Flickering Decals Fix"
+    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x823445D8
         value = 0x39200000
+
+[[patch]]
+    name = "Disable Ambient Occlusion"
+    desc = "Fixes various artifacts when using upscaling."
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82593DC4
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x82762C54
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x827C9628
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82969614
+        value = 0x38A00010
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
@@ -63,15 +75,15 @@ hash = "3B01998F8516817A"
     [[patch.be32]]
         address = 0x827B8BA8
         value = 0x38800004
-    [[patch.be32]]
-        address = 0x827BAFA8
-        value = 0x60000000
 
 [[patch]]
-    name = "16x Anisotropic Filtering"
+    name = "Disable Motion Blur"
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82969614
-        value = 0x38A00010
+        address = 0x82430640
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x827A2BCC
+        value = 0x39600000

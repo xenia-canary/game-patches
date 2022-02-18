@@ -4,17 +4,20 @@ hash = "1970A748370AB18"
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Requires vsync to be changed from true to false in the Xenia config."
-    author = "illusion"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x82567FD0
         value = 0x60000000
+    [[patch.be8]]
+        address = 0x82A9F7C4
+        value = 0x01
 
 [[patch]]
     name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
     author = "boma"
     is_enabled = false
 
@@ -23,26 +26,14 @@ hash = "1970A748370AB18"
         value = 0x39600000
 
 [[patch]]
-    name = "Disable All Uber Post Processing Effects"
-    desc = "Removes tonemapping, image grain, motion blur, rim shading, and DoF"
+    name = "Disable All Post-Processing"
+    desc = "Removes tonemapping, image grain, motion blur, rim shading and depth of field."
     author = "boma"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x82882918
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x82882C44
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x82882CC0
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x82885B8C
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x82885BA8
-        value = 0x60000000
+    [[patch.be16]]
+        address = 0x82883958
+        value = 0x4800
 
 [[patch]]
     name = "16x Anisotropic Filtering"

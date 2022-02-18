@@ -3,6 +3,39 @@ title_id = "454108EF"
 hash = "1338446D7E81F1F6"
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82591DE8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82C7BB5F
+        value = 0x01
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8293C978
+        value = 0x39400000
+
+[[patch]]
+    name = "RTV - Flickering Decals Fix"
+    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8232E680
+        value = 0x39200000
+
+[[patch]]
     name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
@@ -26,33 +59,3 @@ hash = "1338446D7E81F1F6"
     [[patch.be32]]
         address = 0x8266B920
         value = 0x39600000
-
-[[patch]]
-    name = "Disable Lens Flares"
-    desc = "Fixes unoccluded bright lights on-screen."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8293C978
-        value = 0x39400000
-
-[[patch]]
-    name = "Unlock FPS"
-    desc = "Disables 62 FPS cap. Requires vsync to be changed from true to false in the Xenia config."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82591DE8
-        value = 0x60000000
-
-[[patch]]
-    name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8232E680
-        value = 0x39200000

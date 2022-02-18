@@ -3,30 +3,19 @@ title_id = "5451083B"
 hash = "B50E6ABED4729547"
 
 [[patch]]
-    name = "16x Anisotropic Filtering"
-    author = "Boma"
+    name = "60 FPS"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "boma"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x825C6C84
-        value = 0x38A00010
-
-[[patch]]
-    name = "Disable Motion Blur"
-    author = "Boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8296359C
-        value = 0x39600000
-    [[patch.be32]]
-        address = 0x82963F18
-        value = 0x39600000
+    [[patch.be8]]
+        address = 0x82316C9B
+        value = 0x01
 
 [[patch]]
     name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause flickering with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
-    author = "Boma"
+    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
     is_enabled = false
 
     [[patch.be32]]
@@ -40,4 +29,25 @@ hash = "B50E6ABED4729547"
         value = 0x39200000
     [[patch.be32]]
         address = 0x82B237B4
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825C6C84
+        value = 0x38A00010
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8296359C
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x82963F18
         value = 0x39600000

@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/ci.yml'
-      - 'patches/*'
+      #- 'patches/*'
       - '.eslintrc.js'
   pull_request:
     paths:

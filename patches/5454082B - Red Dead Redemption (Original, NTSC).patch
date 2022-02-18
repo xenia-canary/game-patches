@@ -69,7 +69,7 @@ hash = "82CDA3C91B57C170"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82754B10  # change to 0x82754BC4 for alternative 480p mode without asset pop-in but less performance gains 
+        address = 0x82754B10  # change to 0x82754BC4 for alternative 480p mode without asset pop-in but less performance gains
         value = 0x39400001 # change to 0x39600001 for alternative 480p mode
 
 [[patch]]

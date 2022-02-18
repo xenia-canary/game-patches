@@ -3,6 +3,159 @@ title_id = "5454082B"
 hash = "82CDA3C91B57C170"
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823C53F4
+        value = 0x48000048
+    [[patch.be8]]
+        address = 0x82C23347
+        value = 0x01
+
+[[patch]]
+    name = "Disable Depth of Field & Motion Blur"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x827C697C
+        value = 0x4800
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822B4B30
+        value = 0x38A00010
+
+[[patch]]
+    name = "Skip Grass Occlusion"
+    desc = "Gets rid of grass."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x822ECC9C
+        value = 0x4800
+
+[[patch]]
+    name = "No Trees"
+    desc = "Provides a substantial performance boost."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82750D18
+        value = 0x39600001
+
+[[patch]]
+    name = "Disable Shadows"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82902070
+        value = 0x60000000
+
+[[patch]]
+    name = "480p Mode"
+    desc = "Internally renders the game at 480p and upscales to 720p. Certain objects and terrain will exhibit irregular pop-in."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82754B10  # change to 0x82754BC4 for alternative 480p mode without asset pop-in but less performance gains
+        value = 0x39400001 # change to 0x39600001 for alternative 480p mode
+
+[[patch]]
+    name = "Higher Quality Post Processing"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827B63FC
+        value = 0x39600001
+
+[[patch]]
+    name = "Disable SSAO"
+    desc = "Probably won't improve overall performance but may help with graphical artifacts when upscaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822FAFE8
+        value = 0x48000114
+
+[[patch]]
+    name = "Skip Intro Rockstar Movie"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82770814
+        value = 0x41
+
+[[patch]]
+    name = "Alternative Script Timing & Asset Garbage Collection"
+    desc = "May provide a small performance boost for CPU-limited systems."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822FEF88
+        value = 0x39600001
+    [[patch.be32]]
+        address = 0x8241A53C
+        value = 0x39600001
+
+[[patch]]
+    name = "Use Separate Audio Heap"
+    desc = "Changes audio component heap memory. Will lower the quality of realtime audio post-processing but may provide a small performance boost for CPU-limited systems."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823DF854
+        value = 0x39600001
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "See note about aspect ratio patches in README."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82000D70
+        value = 0x4018E38E
+
+[[patch]]
+    name = "Use Cheats Without Losing Autosave"
+    desc = "Autosave will be disabled for the rest of your play session after activating a cheat but will function normally upon reopening the game."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82419ED8
+        value = 0x60000000
+
+[[patch]]
+    name = "Infinite Horse Stamina"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82C4C430
+        value = 0x3C003F80
+    [[patch.be32]]
+        address = 0x82C4C434
+        value = 0x9007000C
+
+[[patch]]
     name = "Bottomless Clip"
     author = "illusion"
     is_enabled = false
@@ -26,34 +179,3 @@ hash = "82CDA3C91B57C170"
     [[patch.be32]]
         address = 0x825AB380
         value = 0x900A0000
-
-[[patch]]
-    name = "Infinite Horse Stamina"
-    author = "illusion"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82C4C430
-        value = 0x3C003F80
-    [[patch.be32]]
-        address = 0x82C4C434
-        value = 0x9007000C
-
-[[patch]]
-    name = "Skip Grass Occlusion"
-    desc = "Gets rid of grass."
-    author = "illusion"
-    is_enabled = false
-
-    [[patch.be16]]
-        address = 0x822ECC9C
-        value = 0x4800
-
-[[patch]]
-    name = "Disable Depth of Field + Motion Blur"
-    author = "illusion"
-    is_enabled = false
-
-    [[patch.be16]]
-        address = 0x827C697C
-        value = 0x4800

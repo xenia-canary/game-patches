@@ -36,7 +36,7 @@ hash = "4E1A34D8073D1390"
         value = 0x39200000
 
 [[patch]]
-    name = "Disable Ambient Occlusion" 
+    name = "Disable Ambient Occlusion"
     desc = "Fixes various artifacts when using upscaling."
     author = "illusion, boma"
     is_enabled = false

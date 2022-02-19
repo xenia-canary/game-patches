@@ -1,0 +1,12 @@
+title_name = "SpongeBob: Truth-Sq." # Truth or Square
+title_id = "54510850"
+hash = "D818B3AD0B84D271"
+
+[[patch]]
+    name = "Fix hang on BINK videos"
+    author = "Gliniak"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8216AD94
+        value = 0x419AFFEC

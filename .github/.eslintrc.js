@@ -5,7 +5,6 @@ module.exports = {
   rules: {
     'toml/indent': 'off',
     'toml/padding-line-between-tables': 'off',
-    'toml/padding-line-between-tables': 'off',
     'toml/spaced-comment': 'off',
     'toml/tables-order': 'off',
     'toml/no-mixed-type-in-array': 'error',

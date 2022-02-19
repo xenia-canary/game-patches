@@ -25,4 +25,4 @@ jobs:
           done
           npm install -D --no-fund eslint eslint-plugin-toml
       - name: Lint
-        run: npx eslint patches --ext .toml
+        run: npx eslint -c .github/.eslintrc.js patches --ext .toml

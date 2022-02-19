@@ -3,5 +3,4 @@
 !.gitignore
 
 !/.github/**/*
-# TODO: Change this to .patch.toml
-!/patches/*.patch*
+!/patches/*.patch.toml

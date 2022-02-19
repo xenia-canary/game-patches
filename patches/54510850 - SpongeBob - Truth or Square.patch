@@ -5,7 +5,7 @@ hash = "D818B3AD0B84D271"
 [[patch]]
     name = "Fix hang on BINK videos"
     author = "Gliniak"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8216AD94

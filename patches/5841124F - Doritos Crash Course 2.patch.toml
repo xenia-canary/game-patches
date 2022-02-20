@@ -1,0 +1,15 @@
+title_name = "Doritos Crash Course 2"
+title_id = "5841124F"
+hash = "AE4222C940E0B2C8"
+
+[[patch]]
+    name = "Disable FXAA"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82AECB08
+        value = 0x41
+    [[patch.be8]]
+        address = 0x82AECB48
+        value = 0x41

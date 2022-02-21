@@ -12,7 +12,7 @@ hash = "EB8A18FE5D59FCFD"
         address = 0x823FFCBC
         value = 0x60000000
     [[patch.be8]]
-        address = 0x826E7050
+        address = 0x826E7053
         value = 0x01
 
 [[patch]]

@@ -3,4 +3,4 @@
 !.gitignore
 
 !/.github/**/*
-!/patches/*.patch.toml
+!/patches/*.toml

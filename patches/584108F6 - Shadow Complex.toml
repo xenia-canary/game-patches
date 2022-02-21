@@ -3,8 +3,21 @@ title_id = "584108F6"
 hash = "232A5BCC3F647153"
 
 [[patch]]
-    name = "Fix Character Shadows"
-    desc = "Modifies spherical harmonical lighting component."
+    name = "Unlock FPS"
+    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824913D8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x828F01E7
+        value = 0x01
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Modifies how dynamic shadows are cast from spherical harmonic lighting. Most of the shadowing artifacts are mediated but there are still instances of character self-shadowing that won't look good."
     author = "boma"
     is_enabled = false
 
@@ -13,10 +26,19 @@ hash = "232A5BCC3F647153"
         value = 0x39600000
 
 [[patch]]
-    name = "Remove Motion Blur"
+    name = "Disable Motion Blur"
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8235423C
         value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8283F4F4
+        value = 0x38A00010

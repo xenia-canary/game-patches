@@ -4,4 +4,4 @@
 
 !/.github/**/*
 !/patches/*.toml
-!.eslintrc.js
+!./.eslintrc.js

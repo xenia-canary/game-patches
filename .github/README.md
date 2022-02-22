@@ -38,15 +38,25 @@ While most aspect ratio patches are 21:9 (3440/1440), they can be changed to oth
  * If the game you are submitting a patch for already has a .toml file, then create a Pull Request to edit that file and add your name as an author.
  * This new file must be named `[Title ID] - Game Title.toml`
 <br>For example, a patch file for Halo 3 must be called `4D5307E6 - Halo 3.toml`.
- * File must contain the module hash, which can be [automatically](#creating-patch-file) or [manually](#obtaining-xex-hash) obtained.
+ * File must contain the module hash, which can be [automatically or manually](#creating-patch-file) obtained.
+    * For games with multiple executables or discs, it can have multiple hashes, but they must be commented out like so:
+        ```toml
+        title_name = "Blue Dragon"
+        title_id = "4D5307DF"
+        #hash = "963F85A9409C139A" # Disc 1
+        #hash = "B66A5943E36BE149" # Disc 2
+        #hash = "A44338F34EA83167" # Disc 3
+        ```
  * File must contain an empty line at the end.
 
-Example of the contents that should be included in the file:
-<details><summary>Example (click to expand)</summary>
+<details><summary>Example of the contents that should be included in the file (click to expand)</summary>
 
 ```toml
 title_name = "Blue Dragon"
 title_id = "4D5307DF"
+#hash = "963F85A9409C139A" # Disc 1
+#hash = "B66A5943E36BE149" # Disc 2
+#hash = "A44338F34EA83167" # Disc 3
 
 [[patch]]
     name = "Enable Wireframe"
@@ -102,6 +112,16 @@ title_id = "4D5307DF"
 * [IDA Pro](https://hex-rays.com/ida-pro/)
     * [IDA 7 XEX Loader](https://github.com/emoose/idaxex)
     * [IDA 6 XEX Loader](https://xorloser.com/blog/?p=395)
+* Recommended but optional:
+    * [ESLint TOML plugin](https://ota-meshi.github.io/eslint-plugin-toml/user-guide/#installation)
+        * See [Editor Integrations](https://ota-meshi.github.io/eslint-plugin-toml/user-guide/#editor-integrations)
+    * If using Visual Studio Code:
+        * Settings <kbd>Ctrl+,</kbd>:
+            * `Files`
+                * `☑️ Insert Final Newline`
+                * `☑️ Trim Final Newlines`
+        * Extensions:
+            * [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
 
 ### Setting up Cheat Engine
 Memory Breakpoints can be set in Cheat Engine or MSVC with `emit_source_annotations`. This will give annotations in disassembly.
@@ -120,19 +140,19 @@ To search the emulator memory, change 'Memory Scan Options' to:
 
 ### Creating patch file
 0. Prerequisites:
-    * [Xenia Patch Maker](https://github.com/oSerenity/Xenia-Patch-Maker)
+    * **[Xenia Patch Maker](https://github.com/oSerenity/Xenia-Patch-Maker)**
+    <br>or text editor like [Visual Studio Code](https://code.visualstudio.com/)
 1. Run the game once.
 2. Close Xenia.
 3. Locate `xenia.log`.
-4. Drag and drop `xenia.log` into Xenia Patch Maker.
-    * Xenia Patch Maker will load the game's info.
-    * Proceed to make your patch file.
-
-### Obtaining XEX hash
-1. Set [`log_level`](https://github.com/xenia-canary/xenia-canary/wiki/Options) to at least [`2`](https://github.com/xenia-canary/xenia-canary/wiki/Options).
-2. Run the executable once with Xenia.
-3. Close Xenia.
-4. Open `xenia.log`.
-5. Search <kbd>Ctrl+F</kbd> for `Module hash:`
-<br>You should see something like:
-<br>`Module hash: 0000000000000000 for default`
+4. Obtain xex hash;
+    * Automatic:
+        1. Drag and drop `xenia.log` into Xenia Patch Maker.
+    * Manual:
+        1. Set [`log_level`](https://github.com/xenia-canary/xenia-canary/wiki/Options) to at least [`2` (default)](https://github.com/xenia-canary/xenia-canary/wiki/Options) in the Xenia config; See [How to use](https://github.com/xenia-canary/xenia-canary/wiki/Options#how-to-use) for location.
+        2. Run the executable at least once with Xenia.
+        3. Close Xenia.
+        4. Open `xenia.log`.
+        5. Search <kbd>Ctrl+F</kbd> for `Module hash:`
+        <br>You should see something like:
+        <br>`Module hash: 0000000000000000 for default`

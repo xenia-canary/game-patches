@@ -11,9 +11,9 @@ module.exports = {
     'eol-last': ["error", "always"],
     'no-mixed-spaces-and-tabs': "error",
     'no-multi-spaces': ["error", { ignoreEOLComments: true }],
-    'no-multiple-empty-lines': ["error", { "max": 1, "maxBOF": 0}],
+    'no-multiple-empty-lines': ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0}],
     'no-tabs': "error",
     'no-trailing-spaces': "error",
-    'unicode-bom': "error",
+    'unicode-bom': "error"
   }
 }

@@ -8,10 +8,8 @@ hash = "9106B5AE9EF7A44A"
     author = "illusion, retroben"
     is_enabled = false
 
-# These patches require break_on_debugbreak to be changed from true to false in the Xenia config.
-
-# Fixme: Missing parts for unfair snowman, and high jumping clam fixes.
-
+    # These patches require break_on_debugbreak to be changed from true to false in the Xenia config.
+    # Fixme: Missing parts for unfair snowman, and high jumping clam fixes.
     [[patch.be32]]
         address = 0x82110B64
         value = 0x483301CC

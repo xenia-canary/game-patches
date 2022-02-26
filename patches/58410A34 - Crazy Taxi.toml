@@ -4,7 +4,7 @@ hash = "F1CD6279D0DD436A"
 
 [[patch]]
     name = "1040x720 Resolution"
-    desc = "Native resolution is 920x690. Game guest crashes above 1040x720."
+    desc = "Original resolution is 920x690. Game guest crashes above 1040x720."
     author = "Margen67"
     is_enabled = false
 

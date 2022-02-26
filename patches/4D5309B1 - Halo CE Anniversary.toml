@@ -4,7 +4,7 @@ hash = "222A0F4D9FE0F2D0"
 
 [[patch]]
     name = "1280x720 Resolution"
-    desc = "Breaks non-classic mode. Native resolution is 1152x648."
+    desc = "Breaks non-classic mode. Original resolution is 1152x648."
     author = "Margen67"
     is_enabled = false
 

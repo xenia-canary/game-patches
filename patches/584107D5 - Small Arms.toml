@@ -4,7 +4,7 @@ hash = "89FF04F58E605CDC"
 
 [[patch]]
     name = "1280x720 Resolution"
-    desc = "Native resolution is 1000x562."
+    desc = "Original resolution is 1000x562."
     author = "Margen67"
     is_enabled = false
 

@@ -1,0 +1,13 @@
+title_name = "Skyrim"
+title_id = "425307E6"
+hash = "7F1771905580DCF5"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Camera speed is tied to framerate."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x822B7643
+        value = 0x01

@@ -3,10 +3,23 @@ title_id = "545107D2"
 hash = "3F050427A3C5B017"
 
 [[patch]]
-    name = "60 FPS"
-    author = "illusion"
+    name = "60 FPS (WIP)"
+    desc = "Work in progress. Game speed is halved."
+    author = "illusion, Margen67"
     is_enabled = false
 
+    [[patch.be32]]
+        address = 0x820AEDA0
+        value = 0x3C888889 # Animation speed
+    [[patch.be8]]
+        address = 0x821B6AA7
+        value = 0x01       # Present interval
+    [[patch.be8]]
+        address = 0x821B6AAF
+        value = 0x01       # Present interval
+    [[patch.be32]]
+        address = 0x821B6ABC
+        value = 0x39400001 # Present interval
     [[patch.be32]]
         address = 0x82821158
         value = 0x3C888889 # Menu
@@ -16,6 +29,3 @@ hash = "3F050427A3C5B017"
     [[patch.be32]]
         address = 0x8283F094
         value = 0x3C888889 # Game
-    [[patch.be32]]
-        address = 0x820AEDA0
-        value = 0x3C888889 # Animation speed

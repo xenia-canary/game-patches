@@ -1,6 +1,6 @@
-title_name = "DOA 5 Ultimate" # Dead or Alive 5
-title_id = "4B5607E8"
-hash = "6484F0805E01E757"
+title_name = "Gel: Set & Match" # And
+title_id = "58410908"
+hash = "6F029CD15605318F"
 
 [[patch]]
     name = "Aspect Ratio"
@@ -9,5 +9,5 @@ hash = "6484F0805E01E757"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82101B0C
+        address = 0x8201ACCC
         value = 0x4018E38E

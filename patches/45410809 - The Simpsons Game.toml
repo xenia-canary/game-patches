@@ -4,6 +4,7 @@ hash = "C245C55AB73D6932"
 
 [[patch]]
     name = "60 FPS"
+    desc = "Game speeds up past ~60 FPS."
     author = "illusion, Margen67"
     is_enabled = false
 

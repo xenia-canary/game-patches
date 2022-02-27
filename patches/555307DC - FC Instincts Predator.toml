@@ -1,0 +1,12 @@
+title_name = "Far Cry Instincts Predator"
+title_id = "555307DC"
+hash = "E37894C548DEFFD6"
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8273E89F
+        value = 0x01

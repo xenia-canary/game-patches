@@ -3,6 +3,15 @@ title_id = "4D5307F1"
 hash = "94F0641F3D0F2490"
 
 [[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82B9C8EB
+        value = 0x01
+
+[[patch]]
     name = "1280x720 Resolution"
     desc = "Original resolution is 1120x720. Breaks idle videos in main menu."
     author = "Margen67"

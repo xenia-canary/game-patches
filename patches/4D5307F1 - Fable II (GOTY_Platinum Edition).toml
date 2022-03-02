@@ -20,3 +20,12 @@ hash = "94F0641F3D0F2490"
     [[patch.be16]]
         address = 0x8238DF5A
         value = 0x0500
+
+[[patch]]
+    name = "Disable MSAA (Multi-Sample Anti-Aliasing)"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8238DF3F
+        value = 0x01

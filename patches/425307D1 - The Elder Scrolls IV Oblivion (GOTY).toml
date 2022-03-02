@@ -3,6 +3,15 @@ title_id = "425307D1"
 hash = "EDCE0AC85A1AFA86"
 
 [[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8255F547
+        value = 0x01
+
+[[patch]]
     name = "1280x720 Resolution"
     desc = "Original resolution is 1024x600."
     author = "Margen67"

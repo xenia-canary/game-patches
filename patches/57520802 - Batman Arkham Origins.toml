@@ -13,7 +13,7 @@ hash = "BCEC4C4143B6BF5F"
         value = 0x39400000
 
 [[patch]]
-    name = "Disable MLAA Anti-Aliasing"
+    name = "Disable MLAA (Morphological Anti-Aliasing)"
     author = "boma"
     is_enabled = false
 

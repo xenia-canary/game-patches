@@ -42,7 +42,7 @@ hash = "51247CE8E5B60296"
         value = 0x480001C4
 
 [[patch]]
-    name = "Disable FSAA Anti-Aliasing"
+    name = "Disable FSAA (Full-Screen Anti-Aliasing)"
     desc = "May help with edge-detection issues when upscaling."
     author = "boma"
     is_enabled = false

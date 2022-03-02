@@ -1,0 +1,15 @@
+title_name = "Amped 3"
+title_id = "545407D4"
+hash = "ED0221D6CAE77CB0"
+
+[[patch]]
+    name = "Unlock FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x825AB5D7
+        value = 0x00
+    [[patch.be8]]
+        address = 0x825AB5D7
+        value = 0x00

@@ -3,6 +3,82 @@ title_id = "4E4D07D3"
 hash = "7F87B6C814A99806"
 
 [[patch]]
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 1440x800."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x821466E6
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x821466EA
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x82149102
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x82149106
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8217F00E
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8217F012
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x8217F046
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8217F04E
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8217F05A
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8217F05E
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x8217F06E
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8217F072
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x82224042
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x82224062
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x82224066
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x8222415A
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x8222415E
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x82224576
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8222457A
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x8222A326
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8222A32A
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x8222ADE6
+        value = 0x02D0
+    [[patch.be16]]
+        address = 0x8222ADEE
+        value = 0x0500
+
+[[patch]]
     name = "Aspect Ratio"
     desc = "See note about aspect ratio patches in README."
     author = "Margen67"

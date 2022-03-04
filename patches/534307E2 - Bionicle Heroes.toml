@@ -1,0 +1,12 @@
+title_name = "Bionicle Heroes"
+title_id = "534307E2"
+hash = "6B1A9BEF4F93EC7B"
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8228D763
+        value = 0x01

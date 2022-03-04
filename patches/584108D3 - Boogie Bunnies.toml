@@ -1,0 +1,24 @@
+title_name = "Boogie Bunnies"
+title_id = "584108D3"
+hash = "494C81FD1D6D1E5C"
+
+[[patch]]
+    name = "Disable MSAA (Multi-Sample Anti-Aliasing)"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821E6037
+        value = 0x00
+
+[[patch]]
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 1920x1080."
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x821E608E
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x821E6092
+        value = 0x02D0

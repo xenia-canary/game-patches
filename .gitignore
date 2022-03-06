@@ -3,5 +3,5 @@
 !.gitignore
 
 !/.github/**/*
+!/package.json
 !/patches/*.toml
-!./.eslintrc.js

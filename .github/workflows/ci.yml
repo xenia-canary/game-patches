@@ -4,13 +4,9 @@ on:
   push:
     paths:
       - '.github/workflows/ci.yml'
-      - 'patches/*' #.toml
-      - '.eslintrc.js'
+      - 'package.json'
+      - 'patches/*.toml'
   pull_request:
-    #paths:
-    #  - '.github/workflows/ci.yml'
-    #  - 'patches/*' #.toml
-    #  - '.eslintrc.js'
   workflow_dispatch:
 
 jobs:
@@ -19,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup
-        run: npm i -D --no-fund eslint eslint-plugin-toml
+        run: npm i -D --no-fund
       - name: Lint
         run: |
           npx eslint patches/*.toml

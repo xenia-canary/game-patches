@@ -1,0 +1,12 @@
+title_name = "LEGO Star Wars III" # 3: The Clone Wars
+title_id = "4C4107F3"
+hash = "173B74152B3BE24"
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82A2E70F
+        value = 0x01

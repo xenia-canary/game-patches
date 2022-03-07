@@ -1,0 +1,12 @@
+title_name = "Kinect Star Wars"
+title_id = "4D53090E"
+hash = "98E936BD03D4011C"
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82454BBB
+        value = 0x01

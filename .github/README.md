@@ -86,8 +86,11 @@ To make things easier, it's recommended to put Xenia in the directory that conta
 2. Run the game at least once.
 3. Close Xenia.
 4. Obtain module hash/title ID/title name;
-    * Automatic:
+    * Automatic (Xenia Patch Maker):
       * Drag and drop `xenia.log` into Xenia Patch Maker.
+    * Automatic (Bash script):
+      1. Open `create_patch.sh`
+      2. Follow the instructions.
     * Manual:
         * Search <kbd>Ctrl+F</kbd> for `Module hash:` in `xenia.log`
         <br>You should see something like:

@@ -23,6 +23,8 @@ Game patches are now included with Xenia Canary.
 4. Continue to [enabling patches](#enabling-patches).
 
 #### Enabling patches
+**`apply_patches` must be set to `true` in the Xenia config!**
+
 To enable patches, open the .toml file that corresponds to your game in a text editor (Notepad, [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [Notepad++](https://notepad-plus-plus.org/), etc.), and change `is_enabled` from `false` to `true`.
 
 #

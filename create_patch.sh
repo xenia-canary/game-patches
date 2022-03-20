@@ -83,7 +83,6 @@ check_multiple_choice() {
                 new_patch_thing_prompt+=" ${valid_input_key_number}. ${expanded_2[$i]} - ${!expanded_4}"$'\n'
             fi
         done
-        valid_input_length=1
         prompt "${new_patch_thing_prompt/%$'\n'}" new_patch_thing_choice
         declare -g "$3"="${expanded_2[($new_patch_thing_choice - 1)]}"
     elif [ ${#expanded_2[@]} -gt 0 ]; then
@@ -101,7 +100,7 @@ else
 fi
 if [ -n "$new_patch_title_id" ] && [ -n "$new_patch_title_name" ] && [ -n "$new_patch_hash" ]; then
     new_patch_filename="$new_patch_title_id - $(tr -d '(/|\\|:|\*|\?|\"|<|>|\|)' <<<${new_patch_title_name}.toml)"
-    echo $'\n'$'\n'"Patch filename: $new_patch_filename"$'\n'"    Patch hash: $new_patch_hash"$'\n'
+    echo $'\n'$'\n'"Patch filename: $new_patch_filename"$'\n'"Patch hash:     $new_patch_hash"$'\n'
 else
     prompt_error 'Title ID, title name, and/or hash are missing from the log.'$'\n''Make sure log_level is set to 2 in the Xenia config.'
 fi
@@ -166,19 +165,19 @@ valid_input_params=({1..6})
 prompt $'\n''What is the type of your patch?         [(Q)uit]'$'\n'" 1. ${valid_patch_types[0]}"$'\n'" 2. ${valid_patch_types[1]}"$'\n'" 3. ${valid_patch_types[2]}"$'\n'" 4. ${valid_patch_types[3]}"$'\n'" 5. ${valid_patch_types[4]}"$'\n'" 6. ${valid_patch_types[5]}" new_patch_type_input
 case "$new_patch_type_input" in
     1)
-        new_patch_type="${valid_patch_types[0]}"
+        new_patch_type=${valid_patch_types[0]}
         valid_input_length=2;;
     2)
-        new_patch_type="${valid_patch_types[1]}"
+        new_patch_type=${valid_patch_types[1]}
         valid_input_length=4;;
     3)
-        new_patch_type="${valid_patch_types[2]}"
+        new_patch_type=${valid_patch_types[2]}
         valid_input_length=8;;
     4)
-        new_patch_type="${valid_patch_types[3]}"
+        new_patch_type=${valid_patch_types[3]}
         valid_input_length=16;;
     5)
-        new_patch_type="${valid_patch_types[4]}"
+        new_patch_type=${valid_patch_types[4]}
         valid_input_length=nonempty;; # This probably isn't right
     6)
         new_patch_type="${valid_patch_types[5]}"

@@ -35,7 +35,7 @@ prompt() {
         exit
     fi
     if [ -n "$valid_input_length" ]; then
-        if [[ ( -z "$user_input" && $valid_input_length = nonempty ) || ( ${#user_input} != $valid_input_length && $valid_input_length != nonempty ) ]]; then
+        if [[ ( -z "$user_input" && $valid_input_length = nonempty ) || ( ${#user_input} != $valid_input_length && $valid_input_length != nonempty && -z "$minimum_input_length" ) || ( -n "$minimum_input_length" && ${#user_input} -lt $minimum_input_length ) ]]; then
             ${FUNCNAME[0]} "$@"
         fi
     fi
@@ -59,9 +59,7 @@ prompt() {
             ${FUNCNAME[0]} "$@"
         fi
     fi
-    if [ -n "$valid_input_length" ]; then
-        unset valid_input_length
-    fi
+    unset valid_input_length
 }
 check_multiple_choice() {
     local array_2="$2"'[@]'
@@ -71,17 +69,24 @@ check_multiple_choice() {
             valid_input_length=1
         else
             valid_input_length=2
+            minimum_input_length=1
         fi
         new_patch_thing_prompt="What is the $1 of your patch?  [(Q)uit]"$'\n'
         for (( i=0; i <= ( ${#expanded_2[@]} - 1 ); i++ )); do
             valid_input_key_number=$(($i + 1))
             valid_input_params+=($valid_input_key_number)
-            if [ -z "$4" ]; then
-                new_patch_thing_prompt+=" ${valid_input_key_number}. ${expanded_2[$i]}"$'\n'
-            else
+            if [ -n "$4" ]; then
                 local expanded_4="$4"'[$i]'
-                new_patch_thing_prompt+=" ${valid_input_key_number}. ${expanded_2[$i]} - ${!expanded_4}"$'\n'
+                local new_patch_thing_prompt_addendum=" - ${!expanded_4}"
             fi
+            if [ $valid_input_key_number -le 9 ] && [ ${#expanded_2[@]} -ge 10 ]; then
+                if [ -z "$space" ]; then
+                    local space=' '
+                fi
+            else
+                unset space
+            fi
+            local new_patch_thing_prompt+=" ${space}${valid_input_key_number}. ${expanded_2[$i]}$new_patch_thing_prompt_addendum"$'\n'
         done
         prompt "${new_patch_thing_prompt/%$'\n'}" new_patch_thing_choice
         declare -g "$3"="${expanded_2[($new_patch_thing_choice - 1)]}"

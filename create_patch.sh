@@ -23,6 +23,7 @@ xenia_log_cleaned=$(grep -oP ' {7}Title ID: [0-9A-F]{8}|i> [0-9A-F]{8} Title nam
 new_patch_title_ids=($(grep -oP '(?<= {7}Title ID: )[0-9A-F]{8}' <<<"$xenia_log_cleaned"))
 readarray -t new_patch_title_names < <(grep -oP '(?<=i> [0-9A-F]{8} Title name: ).+' <<<"$xenia_log_cleaned")
 new_patch_hashes=($(grep -oP '(?<=i> [0-9A-F]{8} Module hash: )[0-9A-F]{16}(?= for .+)' <<<"$xenia_log_cleaned"))
+new_patch_hashes_modules=($(grep -oP '(?<=i> [0-9A-F]{8} Module hash: [0-9A-F]{16} for ).+' <<<"$xenia_log_cleaned"))
 set -e
 prompt() {
     if [ -n "$valid_input_length" ] && [ $valid_input_length != nonempty ]; then
@@ -90,20 +91,22 @@ check_multiple_choice() {
         done
         prompt "${new_patch_thing_prompt/%$'\n'}" new_patch_thing_choice
         declare -g "$3"="${expanded_2[($new_patch_thing_choice - 1)]}"
+        if [ -n "$4" ] && [ -n "$5" ]; then
+            local unexpanded_4_user_choice="$4"\[$(($new_patch_thing_choice - 1))\]
+            declare -g "$5"="${!unexpanded_4_user_choice}"
+        fi
     elif [ ${#expanded_2[@]} -gt 0 ]; then
         declare -g "$3"="$expanded_2"
+        if [ -n "$4" ] && [ -n "$5" ]; then
+            declare -g "$5"="${!expanded_4}"
+        fi
     fi
 }
 check_multiple_choice 'title ID' new_patch_title_ids new_patch_title_id
 check_multiple_choice 'title name' new_patch_title_names new_patch_title_name
 new_patch_title_name=$(tr -d '"\\' <<<$new_patch_title_name) # " and \ are unsafe even for TOML
-if [ ${#new_patch_hashes[@]} -gt 1 ]; then
-    new_patch_hashes_modules=($(grep -oP '(?<=i> [0-9A-F]{8} Module hash: [0-9A-F]{16} for ).+' <<<"$xenia_log_cleaned"))
-    check_multiple_choice hash new_patch_hashes new_patch_hash new_patch_hashes_modules
-else
-    new_patch_hash=$new_patch_hashes
-fi
-if [ -n "$new_patch_title_id" ] && [ -n "$new_patch_title_name" ] && [ -n "$new_patch_hash" ]; then
+check_multiple_choice hash new_patch_hashes new_patch_hash new_patch_hashes_modules new_patch_hash_module
+if [ -n "$new_patch_title_id" ] && [ -n "$new_patch_title_name" ] && [ -n "$new_patch_hash" ] && [ -n "$new_patch_hash_module" ]; then
     new_patch_filename="$new_patch_title_id - $(tr -d '(/|\\|:|\*|\?|\"|<|>|\|)' <<<${new_patch_title_name}.toml)"
     echo $'\n'$'\n'"Patch filename: $new_patch_filename"$'\n'"Patch hash:     $new_patch_hash"$'\n'
 else
@@ -196,7 +199,7 @@ prompt $'\n''What is the value of your patch?        [(Q)uit]' new_patch_value
 new_patch_path="patches/$new_patch_filename"
 new_patch_contents="title_name = \"${new_patch_title_name}\"
 title_id = \"${new_patch_title_id}\"
-hash = \"${new_patch_hash}\"
+hash = \"${new_patch_hash}\" # $new_patch_hash_module
 
 [[patch]]
     name = \"${new_patch_name^}\""
@@ -219,9 +222,7 @@ valid_input_params=(o p)
 prompt 'What would you like to do?              [(O)pen patch, (P)review patch, (Q)uit]' answer keep_params
 case $answer in
     ${valid_input_params[0]})
-        if [ "$OSTYPE" = cygwin ] || [ "$OSTYPE" = msys ]; then
-            powershell -NoLogo -command ./\""$new_patch_path\"" &
-        else
+        if [ ! "$OSTYPE" = cygwin ] && [ ! "$OSTYPE" = msys ]; then
             editors=($EDITOR {xdg-,}open code{,-insiders} codium gedit atom emacs notepadqq subl nano pico {g,n}vim vi)
             for editor in "${editors[@]}"; do
                 if hash $editor 2>/dev/null; then
@@ -229,6 +230,8 @@ case $answer in
                 fi
             done
             $editor "$new_patch_path" &
+        else
+            powershell -NoLogo -command ./\""$new_patch_path\"" &
         fi;;
     ${valid_input_params[1]})
         echo $'\n'$'\n'$'\n'"$(cat "$new_patch_path")"

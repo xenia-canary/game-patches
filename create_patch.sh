@@ -98,7 +98,7 @@ check_multiple_choice() {
     elif [ ${#expanded_2[@]} -gt 0 ]; then
         declare -g "$3"="$expanded_2"
         if [ -n "$4" ] && [ -n "$5" ]; then
-            declare -g "$5"="${!expanded_4}"
+            declare -g "$5"="${!4}"
         fi
     fi
 }

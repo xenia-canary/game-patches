@@ -107,7 +107,7 @@ check_multiple_choice 'title name' new_patch_title_names new_patch_title_name
 new_patch_title_name=$(tr -d '"\\' <<<$new_patch_title_name) # " and \ are unsafe even for TOML
 check_multiple_choice hash new_patch_hashes new_patch_hash new_patch_hashes_modules new_patch_hash_module
 if [ -n "$new_patch_title_id" ] && [ -n "$new_patch_title_name" ] && [ -n "$new_patch_hash" ] && [ -n "$new_patch_hash_module" ]; then
-    new_patch_filename="$new_patch_title_id - $(tr -d '(/|\\|:|\*|\?|\"|<|>|\|)' <<<${new_patch_title_name}.toml)"
+    new_patch_filename="$new_patch_title_id - $(tr -d '/:*?<>|' <<<${new_patch_title_name}.toml)"
     echo $'\n'$'\n'"Patch filename: $new_patch_filename"$'\n'"Patch hash:     $new_patch_hash"$'\n'
 else
     prompt_error 'Title ID, title name, and/or hash are missing from the log.'$'\n''Make sure log_level is set to 2 in the Xenia config.'

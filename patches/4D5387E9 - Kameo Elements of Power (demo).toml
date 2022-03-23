@@ -1,0 +1,12 @@
+title_name = "Kameo: Elements of Power" # Demo
+title_id = "4D5387E9"
+hash = "F630669103FC7AEB" # default
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x820F2037
+        value = 0x01

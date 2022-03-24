@@ -26,17 +26,19 @@ new_patch_hashes=($(grep -oP '(?<=i> [0-9A-F]{8} Module hash: )[0-9A-F]{16}(?= f
 new_patch_hashes_modules=($(grep -oP '(?<=i> [0-9A-F]{8} Module hash: [0-9A-F]{16} for ).+' <<<"$xenia_log_cleaned"))
 set -e
 prompt() {
-    if [ -n "$valid_input_length" ] && [ $valid_input_length != nonempty ]; then
-        read -rn $valid_input_length -p $'\n'"$1"$'\n' "$2"
+    if [ -n "$valid_input_length" ] && [ $valid_input_length != nonempty ] && [ -z $valid_input_length_maximum ]; then
+        read -rn$valid_input_length -p$'\n'"$1"$'\n' "$2"
+    elif [ -n "$valid_input_length_maximum" ]; then
+        read -rn$valid_input_length_maximum -p$'\n'"$1"$'\n' "$2"
     else
-        read -rp $'\n'"$1"$'\n' "$2"
+        read -rp$'\n'"$1"$'\n' "$2"
     fi
     local user_input="${!2,,}"
     if [ "$user_input" = q ] || [ "$user_input" = quit ]; then
         exit
     fi
     if [ -n "$valid_input_length" ]; then
-        if [[ ( -z "$user_input" && $valid_input_length = nonempty ) || ( ${#user_input} != $valid_input_length && $valid_input_length != nonempty && -z "$minimum_input_length" ) || ( -n "$minimum_input_length" && ${#user_input} -lt $minimum_input_length ) ]]; then
+        if [[ ( -z "$user_input" && $valid_input_length = nonempty ) || ( ${#user_input} != $valid_input_length && $valid_input_length != nonempty && -z $valid_input_length_minimum ) || ( -n "$valid_input_length_minimum" && ${#user_input} -lt $valid_input_length_minimum ) || ( -n "$valid_input_length_maximum" && ${#user_input} -gt $valid_input_length_maximum ) ]]; then
             ${FUNCNAME[0]} "$@"
         fi
     fi
@@ -49,7 +51,7 @@ prompt() {
         done
         if [ -z $valid_input ]; then
             ${FUNCNAME[0]} "$@"
-        elif [ -z "$3" ]; then
+        elif [ -z $3 ]; then
             unset valid_input_params
         fi
     fi
@@ -61,6 +63,8 @@ prompt() {
         fi
     fi
     unset valid_input_length
+    unset valid_input_length_minimum
+    #unset valid_input_length_maximum
 }
 check_multiple_choice() {
     local array_2="$2"'[@]'
@@ -70,7 +74,7 @@ check_multiple_choice() {
             valid_input_length=1
         else
             valid_input_length=2
-            minimum_input_length=1
+            valid_input_length_minimum=1
         fi
         new_patch_thing_prompt="What is the $1 of your patch?  [(Q)uit]"$'\n'
         for (( i=0; i <= ( ${#expanded_2[@]} - 1 ); i++ )); do
@@ -107,26 +111,26 @@ check_multiple_choice 'title name' new_patch_title_names new_patch_title_name
 new_patch_title_name=$(tr -d '"\\' <<<$new_patch_title_name) # " and \ are unsafe even for TOML
 check_multiple_choice hash new_patch_hashes new_patch_hash new_patch_hashes_modules new_patch_hash_module
 if [ -n "$new_patch_title_id" ] && [ -n "$new_patch_title_name" ] && [ -n "$new_patch_hash" ] && [ -n "$new_patch_hash_module" ]; then
-    new_patch_filename="$new_patch_title_id - $(tr -d '/:*?<>|' <<<${new_patch_title_name}.toml)"
+    new_patch_filename="$new_patch_title_id - $(tr -d '/:*?<>|™©' <<<${new_patch_title_name}.toml)"
     echo $'\n'$'\n'"Patch filename: $new_patch_filename"$'\n'"Patch hash:     $new_patch_hash"$'\n'
 else
     prompt_error 'Title ID, title name, and/or hash are missing from the log.'$'\n''Make sure log_level is set to 2 in the Xenia config.'
 fi
 
 for existing_patch in patches/*; do
-    if [[ "$existing_patch" =~ "$new_patch_title_id" ]]; then
+    if [[ "$existing_patch" =~ $new_patch_title_id ]]; then
         if [[ "$existing_patch" =~ "$new_patch_filename" ]]; then
-            if [ -z "$patch_conflict_level" ]; then
+            if [ -z $patch_conflict_level ]; then
                 echo -e '\e[1;33mWARNING:\e[0m Patch already exists;'
                 patch_conflict_level=2
             fi
-            echo -n " Matched with: $existing_patch"
+            echo " Matched with: $existing_patch"
         else
-            if [ -z "$patch_conflict_level" ]; then
+            if [ -z $patch_conflict_level ]; then
                 echo -e '\e[1;33mWARNING:\e[0m Patch might already exist;'
                 patch_conflict_level=1
             fi
-            echo -n " Partially matched with: $existing_patch"
+            echo " Partially matched with: $existing_patch"
         fi
     fi
 done
@@ -152,7 +156,7 @@ prompt 'Who are the authors of your patch?      [(Q)uit]' new_patch_author
 valid_input_length=1
 valid_input_params=(t f)
 prompt 'Do you want this patch to be enabled?   [(t)rue, (f)alse, (q)uit]' new_patch_is_enabled keep_params
-case "$new_patch_is_enabled" in
+case $new_patch_is_enabled in
     ${valid_input_params[0]})
         new_patch_is_enabled=true;;
     ${valid_input_params[1]})
@@ -168,33 +172,67 @@ prompt $'\n''What is the address of your patch?      [(Q)uit]' new_patch_address
 
 # New patch type
 valid_patch_types=(be{8,16,32,64} f{32,64})
+valid_patch_types_length=(2 4 8 16)
 valid_input_length=1
-valid_input_params=({1..6})
-prompt $'\n''What is the type of your patch?         [(Q)uit]'$'\n'" 1. ${valid_patch_types[0]}"$'\n'" 2. ${valid_patch_types[1]}"$'\n'" 3. ${valid_patch_types[2]}"$'\n'" 4. ${valid_patch_types[3]}"$'\n'" 5. ${valid_patch_types[4]}"$'\n'" 6. ${valid_patch_types[5]}" new_patch_type_input
+valid_input_params=({1..6} a)
+prompt $'\n''What is the type of your patch?         [(Q)uit]'$'\n'" 1. ${valid_patch_types[0]}"$'\n'" 2. ${valid_patch_types[1]}"$'\n'" 3. ${valid_patch_types[2]}"$'\n'" 4. ${valid_patch_types[3]}"$'\n'" 5. ${valid_patch_types[4]}"$'\n'" 6. ${valid_patch_types[5]}"$'\n'" a. Automatic" new_patch_type_input keep_params
 case "$new_patch_type_input" in
-    1)
+    ${valid_input_params[0]})
         new_patch_type=${valid_patch_types[0]}
-        valid_input_length=2;;
-    2)
+        valid_input_length=${valid_patch_types_length[0]};;
+    ${valid_input_params[1]})
         new_patch_type=${valid_patch_types[1]}
-        valid_input_length=4;;
-    3)
+        valid_input_length=${valid_patch_types_length[1]};;
+    ${valid_input_params[2]})
         new_patch_type=${valid_patch_types[2]}
-        valid_input_length=8;;
-    4)
+        valid_input_length=${valid_patch_types_length[2]};;
+    ${valid_input_params[3]})
         new_patch_type=${valid_patch_types[3]}
-        valid_input_length=16;;
-    5)
+        valid_input_length=${valid_patch_types_length[3]};;
+    ${valid_input_params[4]})
         new_patch_type=${valid_patch_types[4]}
         valid_input_length=nonempty;; # This probably isn't right
-    6)
-        new_patch_type="${valid_patch_types[5]}"
+    ${valid_input_params[5]})
+        new_patch_type=${valid_patch_types[5]}
         valid_input_length=nonempty;; # This probably isn't right
+    ${valid_input_params[6]})
+        valid_input_length=nonempty
+        valid_input_length_maximum=32;;
 esac
-if [ $valid_input_length != nonempty ]; then
-    eval valid_input_regex=$valid_input_regex_hex # eval might be bad
+unset valid_input_params
+if [ -n "$new_patch_type" ]; then
+    if [ $new_patch_type != ${valid_patch_types[4]} ] && [ $new_patch_type != ${valid_patch_types[5]} ]; then
+        eval valid_input_regex=$valid_input_regex_hex # eval might be bad
+    fi
+else
+    valid_input_regex="^[0-9a-f]{${valid_patch_types_length[0]}}$|^[0-9a-f]{${valid_patch_types_length[1]}}$|^[0-9a-f]{${valid_patch_types_length[2]}}$|^[0-9a-f]{${valid_patch_types_length[3]}}$|^[0-9]+(\.[0-9]{1,${valid_input_length_maximum}}){0,1}$"
 fi
 prompt $'\n''What is the value of your patch?        [(Q)uit]' new_patch_value
+if [ -z $new_patch_type ]; then
+    case ${#new_patch_value} in
+        ${valid_patch_types_length[0]})
+            new_patch_type=${valid_patch_types[0]};;
+        ${valid_patch_types_length[1]})
+            new_patch_type=${valid_patch_types[1]};;
+        ${valid_patch_types_length[2]})
+            new_patch_type=${valid_patch_types[2]};;
+        ${valid_patch_types_length[3]})
+            new_patch_type=${valid_patch_types[3]};;
+        *)
+            if [[ $new_patch_value =~ ^[0-9]+(\.[0-9]{1,6}){0,1}$ ]]; then
+                new_patch_type=${valid_patch_types[4]}
+            elif [[ $new_patch_value =~ ^[0-9]+(\.[0-9]{7,$valid_input_length_maximum}){0,1}$ ]]; then
+                new_patch_type=${valid_patch_types[5]}
+            fi;;
+    esac
+    #if [ -z $new_patch_type ]; then
+    #    prompt_error "No patch type! This should never happen..."
+    #fi
+fi
+unset valid_input_length_maximum
+if [ $new_patch_type != ${valid_patch_types[4]} ] && [ $new_patch_type != ${valid_patch_types[5]} ]; then
+    new_patch_value="0x${new_patch_value^^}"
+fi
 
 new_patch_path="patches/$new_patch_filename"
 new_patch_contents="title_name = \"${new_patch_title_name}\"
@@ -213,7 +251,7 @@ new_patch_contents+="
 
     [[patch.${new_patch_type}]]
         address = 0x${new_patch_address^^}
-        value = 0x${new_patch_value^^}"
+        value = ${new_patch_value}"
 echo "$new_patch_contents" > "$new_patch_path"
 echo -e $'\n'$'\n'"\e[32mPatch '$new_patch_path' created successfully! \e[0m"
 

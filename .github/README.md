@@ -60,8 +60,6 @@ While most aspect ratio patches are 21:9 (3440/1440), they can be changed to oth
   * [Visual Studio Code](https://code.visualstudio.com/)
   * [VSCodium](https://vscodium.com/)
   * [Notepad++](https://notepad-plus-plus.org/)
-  * [Xenia Patch Maker](https://github.com/oSerenity/Xenia-Patch-Maker)
-      * *Not recommended, see https://github.com/oSerenity/Xenia-Patch-Maker/issues/5*
 * Recommended but optional:
   * [ESLint TOML plugin](https://ota-meshi.github.io/eslint-plugin-toml/user-guide/#installation)
       * See [Editor Integrations](https://ota-meshi.github.io/eslint-plugin-toml/user-guide/#editor-integrations)
@@ -98,8 +96,6 @@ To make things easier, it's recommended to put Xenia in the directory that conta
             ./create_patch.sh
             ```
       2. Follow the instructions.
-    * Automatic (Xenia Patch Maker, *not recommended*):
-      * Drag and drop `xenia.log` into Xenia Patch Maker.
     * Manual:
         * Search <kbd>Ctrl+F</kbd> for `Module hash:` in `xenia.log`
         <br>You should see something like:

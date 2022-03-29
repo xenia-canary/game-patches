@@ -34,14 +34,54 @@ hash = "BCEC4C4143B6BF5F"
         value = 0x38A00010
 
 [[patch]]
-    name = "No Trees"
-    desc = "Provides a substantial performance boost."
+    name = "360p Mode"
+    desc = "Internally renders the game at 360p and upscales to 720p. Certain objects and terrain will exhibit irregular pop-in."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8274267C
+        value = 0x39600001
+
+[[patch]]
+    name = "480p Mode"
+    desc = "Internally renders the game at 480p and upscales to 720p."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827425C8
+        value = 0x39400001
+
+[[patch]]
+    name = "540p Mode, 4x MSAA"
+    desc = "Internally renders the game at 540p, upscales to 720p and increases multisample anti-aliasing from 2x to 4x."
+    author = "cornishlardon, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82742600
+        value = 0x38E00001
+
+[[patch]]
+    name = "No Trees - Performance Mode"
+    desc = "Prevents trees and all other foliage from rendering. Provides a substantial performance boost."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8273E758
         value = 0x39600001
+
+[[patch]]
+    name = "Skip Grass Occlusion"
+    desc = "Gets rid of grass."
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x822EDE84
+        value = 0x4800
 
 [[patch]]
     name = "Disable Shadows"
@@ -51,16 +91,6 @@ hash = "BCEC4C4143B6BF5F"
     [[patch.be32]]
         address = 0x828F9220
         value = 0x60000000
-
-[[patch]]
-    name = "480p Mode"
-    desc = "Internally renders the game at 480p and upscales to 720p. Certain objects and terrain will exhibit irregular pop-in."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x827425C8  # change to 0x8274267C for alternative 480p mode without asset pop-in but less performance gains
-        value = 0x39400001 # change to 0x39600001 for alternative 480p mode
 
 [[patch]]
     name = "Higher Quality Post Processing"
@@ -124,16 +154,6 @@ hash = "BCEC4C4143B6BF5F"
         value = 0x4018E38E
 
 [[patch]]
-    name = "Skip Grass Occlusion"
-    desc = "Gets rid of grass."
-    author = "illusion, boma"
-    is_enabled = false
-
-    [[patch.be16]]
-        address = 0x822EDE84
-        value = 0x4800
-
-[[patch]]
     name = "Infinite Horse Stamina"
     author = "illusion, boma"
     is_enabled = false
@@ -144,6 +164,18 @@ hash = "BCEC4C4143B6BF5F"
     [[patch.be32]]
         address = 0x82C48714
         value = 0x9007000C
+
+[[patch]]
+    name = "Bottomless Clip / Infinite Gun Magazine Size"
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825B5AA4
+        value = 0x48000008 # Skip fsub
+    [[patch.be32]]
+        address = 0x825B2594
+        value = 0x48000018 # Skip ammo manipulation check
 
 [[patch]]
     name = "Infinite Ammo"

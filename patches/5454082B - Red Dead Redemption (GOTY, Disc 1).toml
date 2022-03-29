@@ -16,7 +16,7 @@ hash = "F8F5F22E950BE693"
         value = 0x01
 
 [[patch]]
-    name = "Disable Depth of Field + Motion Blur"
+    name = "Disable Depth of Field & Motion Blur"
     author = "illusion, boma"
     is_enabled = false
 
@@ -34,6 +34,46 @@ hash = "F8F5F22E950BE693"
         value = 0x38A00010
 
 [[patch]]
+    name = "360p Mode"
+    desc = "Internally renders the game at 360p and upscales to 720p. Certain objects and terrain will exhibit irregular pop-in."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82770DBC
+        value = 0x39600001
+
+[[patch]]
+    name = "480p Mode"
+    desc = "Internally renders the game at 480p and upscales to 720p."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82770D08
+        value = 0x39400001
+
+[[patch]]
+    name = "540p Mode, 4x MSAA"
+    desc = "Internally renders the game at 540p, upscales to 720p and increases multisample anti-aliasing from 2x to 4x."
+    author = "cornishlardon, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82770D40
+        value = 0x38E00001
+
+[[patch]]
+    name = "No Trees - Performance Mode"
+    desc = "Prevents trees and all other foliage from rendering. Provides a substantial performance boost."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8276CEC8
+        value = 0x39600001
+
+[[patch]]
     name = "Skip Grass Occlusion"
     desc = "Gets rid of grass."
     author = "illusion, boma"
@@ -44,16 +84,6 @@ hash = "F8F5F22E950BE693"
         value = 0x4800
 
 [[patch]]
-    name = "No Trees"
-    desc = "Provides a substantial performance boost."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8276CEC8
-        value = 0x39600001
-
-[[patch]]
     name = "Disable Shadows"
     author = "boma"
     is_enabled = false
@@ -61,16 +91,6 @@ hash = "F8F5F22E950BE693"
     [[patch.be32]]
         address = 0x82927B40
         value = 0x60000000
-
-[[patch]]
-    name = "480p Mode"
-    desc = "Internally renders the game at 480p and upscales to 720p. Certain objects and terrain will exhibit irregular pop-in."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82770D08
-        value = 0x39400001
 
 [[patch]]
     name = "Higher Quality Post Processing"
@@ -144,6 +164,18 @@ hash = "F8F5F22E950BE693"
     [[patch.be32]]
         address = 0x82C7773C
         value = 0x9007000C
+
+[[patch]]
+    name = "Bottomless Clip / Infinite Gun Magazine Size"
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825B8544
+        value = 0x48000008 # Skip fsub
+    [[patch.be32]]
+        address = 0x825B503C
+        value = 0x48000018 # Skip ammo manipulation check
 
 [[patch]]
     name = "Infinite Ammo"

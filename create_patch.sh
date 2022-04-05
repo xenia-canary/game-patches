@@ -19,7 +19,8 @@ fi
 echo "Found $xenia_log"
 
 echo 'Checking log...'
-xenia_log_cleaned=$(grep -oP ' {7}Title ID: [0-9A-F]{8}|i> [0-9A-F]{8} Title name:.+|i> [0-9A-F]{8} Module hash: [0-9A-F]{16} for.+' "$xenia_log" | sort -u)
+xenia_log_cleaned=$(grep -oP ' {7}(Media|Title) ID: [0-9A-F]{8}|i> [0-9A-F]{8} Title name:.+|i> [0-9A-F]{8} Module hash: [0-9A-F]{16} for.+' "$xenia_log" | sort -u)
+new_patch_media_ids=($(grep -oP '(?<= {7}Media ID: )[0-9A-F]{8}' <<<"$xenia_log_cleaned"))
 new_patch_title_ids=($(grep -oP '(?<= {7}Title ID: )[0-9A-F]{8}' <<<"$xenia_log_cleaned"))
 readarray -t new_patch_title_names < <(grep -oP '(?<=i> [0-9A-F]{8} Title name: ).+' <<<"$xenia_log_cleaned")
 new_patch_hashes=($(grep -oP '(?<=i> [0-9A-F]{8} Module hash: )[0-9A-F]{16}(?= for .+)' <<<"$xenia_log_cleaned"))
@@ -106,15 +107,17 @@ check_multiple_choice() {
         fi
     fi
 }
+# Media/Title ID (and maybe name?) can potentially mismatch, but having more than 1 is already rare so meh
+check_multiple_choice 'media ID' new_patch_media_ids new_patch_media_id
 check_multiple_choice 'title ID' new_patch_title_ids new_patch_title_id
 check_multiple_choice 'title name' new_patch_title_names new_patch_title_name
 new_patch_title_name=$(tr -d '"\\' <<<$new_patch_title_name) # " and \ are unsafe even for TOML
 check_multiple_choice hash new_patch_hashes new_patch_hash new_patch_hashes_modules new_patch_hash_module
-if [[ -n "$new_patch_title_id" && -n "$new_patch_title_name" && -n "$new_patch_hash" && -n "$new_patch_hash_module" ]]; then
+if [[ -n "$new_patch_media_id" && -n "$new_patch_title_id" && -n "$new_patch_title_name" && -n "$new_patch_hash" && -n "$new_patch_hash_module" ]]; then
     new_patch_filename="$new_patch_title_id - $(tr -d '/:*?<>|™©' <<<${new_patch_title_name}.toml)"
     echo -e "\n\nPatch filename: $new_patch_filename\nPatch hash:     $new_patch_hash\n"
 else
-    prompt_error 'Title ID, title name, and/or hash are missing from the log.'$'\nMake sure log_level is set to 2 in the Xenia config.'
+    prompt_error 'Media ID, title ID, title name, and/or hash are missing from the log.'$'\nMake sure log_level is set to 2 in the Xenia config.'
 fi
 
 echo_warning() {
@@ -241,6 +244,7 @@ new_patch_path="patches/$new_patch_filename"
 new_patch_contents="title_name = \"${new_patch_title_name}\"
 title_id = \"${new_patch_title_id}\"
 hash = \"${new_patch_hash}\" # $new_patch_hash_module
+#media_id = \"${new_patch_media_id}\"
 
 [[patch]]
     name = \"${new_patch_name^}\""

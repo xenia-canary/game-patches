@@ -1,6 +1,7 @@
 title_name = "WWE All Stars"
 title_id = "54510866"
 hash = "594B67ACC7305834"
+#media_id = ""
 
 [[patch]]
     name = "Skip Audio Loop Stuck Code"

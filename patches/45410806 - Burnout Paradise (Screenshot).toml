@@ -1,6 +1,7 @@
 title_name = "Burnout Paradise" # Screenshot
 title_id = "45410806"
 hash = "469639BD50D42E70" # Burnout_X360_ScreenShot.xex
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

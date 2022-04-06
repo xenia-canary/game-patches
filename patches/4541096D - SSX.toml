@@ -1,6 +1,7 @@
 title_name = "SSX™"
 title_id = "4541096D"
 hash = "AEFAB3CD2B779CC1"
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

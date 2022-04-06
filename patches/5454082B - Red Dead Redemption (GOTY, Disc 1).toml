@@ -1,6 +1,7 @@
 title_name = "Red Dead Redemption" # GOTY/Game Of The Year, Disc 1
 title_id = "5454082B"
 hash = "F8F5F22E950BE693"
+#media_id = "3EE87B76"
 
 [[patch]]
     name = "Unlock FPS"

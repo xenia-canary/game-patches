@@ -5,6 +5,7 @@ title_id = "57520828"
 #hash = "D1113F8666E72E6D" # Disc 2, default.xex
 #hash = "88408BE9B78AA995" # Disc 2, ExpansionInstaller.xex
 #hash = "501FEA1A782E8EC1" # Disc 2, MP.xex
+#media_id = ""
 
 [[patch]]
     name = "Debug Menu"

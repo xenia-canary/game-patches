@@ -1,6 +1,7 @@
 title_name = "Resident Evil"
 title_id = "43430841"
 hash = "541A4CC449C0A274"
+#media_id = "2C261D21"
 
 [[patch]]
     name = "60 FPS"

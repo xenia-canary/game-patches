@@ -1,6 +1,7 @@
 title_name = "Onechanbara"
 title_id = "445007EA"
 hash = "D0033F0009FCD5E1"
+#media_id = ""
 
 [[patch]]
     name = "Invincibility"

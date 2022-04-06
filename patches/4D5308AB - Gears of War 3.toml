@@ -1,6 +1,7 @@
 title_name = "Gears of War 3"
 title_id = "4D5308AB"
 hash = "3B01998F8516817A"
+#media_id = "4C93A17D"
 
 [[patch]]
     name = "Unlock FPS"

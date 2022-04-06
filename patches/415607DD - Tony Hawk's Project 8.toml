@@ -1,6 +1,7 @@
 title_name = "Tony Hawk's Project 8"
 title_id = "415607DD"
 hash = "18E27553FDBD0CC"
+#media_id = ""
 
 [[patch]]
     name = "1280x720 Resolution"

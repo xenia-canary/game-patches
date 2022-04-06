@@ -1,6 +1,7 @@
 title_name = "Halo 3"
 title_id = "4D5307E6"
 hash = "C1AE7398CAEB21BF"
+#media_id = ""
 
 [[patch]]
     name = "Aspect Ratio"

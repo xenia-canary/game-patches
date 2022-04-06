@@ -1,6 +1,7 @@
 title_name = "Boogie Bunnies"
 title_id = "584108D3"
 hash = "494C81FD1D6D1E5C"
+#media_id = ""
 
 [[patch]]
     name = "Disable MSAA (Multi-Sample Anti-Aliasing)"

@@ -1,6 +1,7 @@
 title_name = "Red Dead Redemption" # Original, NTSC, TU9
 title_id = "5454082B"
 hash = "BCEC4C4143B6BF5F"
+#media_id = "2AAB34E2"
 
 [[patch]]
     name = "Unlock FPS"

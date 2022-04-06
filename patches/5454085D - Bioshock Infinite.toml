@@ -1,6 +1,7 @@
 title_name = "Bioshock Infinite"
 title_id = "5454085D"
 hash = "1189C9EC9A36D5E2"
+#media_id = "7F5C4901"
 
 [[patch]]
     name = "Unlock FPS"

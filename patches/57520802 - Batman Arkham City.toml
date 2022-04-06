@@ -1,6 +1,7 @@
 title_name = "Batman: Arkham City"
 title_id = "57520802"
 hash = "CC92C76573FD61BF"
+#media_id = ""
 
 [[patch]]
     name = "Disable Lens Flares"

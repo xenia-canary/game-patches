@@ -1,6 +1,7 @@
 title_name = "NIER"
 title_id = "535107E8"
 hash = "B98F120F0DAAF44C"
+#media_id = "507D2720"
 
 [[patch]]
     name = "60 FPS"

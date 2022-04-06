@@ -1,6 +1,7 @@
 title_name = "Gears of War: Judgment"
 title_id = "4D530A26"
 hash = "5795A866F73FE4E0"
+#media_id = "6DCAF3C2"
 
 [[patch]]
     name = "Unlock FPS"

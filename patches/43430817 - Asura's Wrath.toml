@@ -1,6 +1,7 @@
 title_name = "Asura's Wrath"
 title_id = "43430817"
 hash = "F3AA3A3085A3A3B9"
+#media_id = "11DFADD6"
 
 [[patch]]
     name = "Unlock FPS"

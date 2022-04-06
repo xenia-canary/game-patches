@@ -1,6 +1,7 @@
 title_name = "Kinect Star Wars"
 title_id = "4D53090E"
 hash = "98E936BD03D4011C"
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

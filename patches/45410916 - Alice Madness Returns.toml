@@ -1,6 +1,7 @@
 title_name = "Alice: Madness Returns"
 title_id = "45410916"
 hash = "EC884B235D7F930C"
+#media_id = "31C4B45C"
 
 [[patch]]
     name = "Disable Lens Flares"

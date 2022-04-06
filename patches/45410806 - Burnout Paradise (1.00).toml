@@ -1,6 +1,7 @@
 title_name = "Burnout Paradise" # 1.00
 title_id = "45410806"
 hash = "13C8BCDF2EFCEE62"
+#media_id = ""
 
 [[patch]]
     name = "Infinite Boost + Endless Burnout Chain"

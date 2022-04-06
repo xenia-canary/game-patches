@@ -1,6 +1,7 @@
 title_name = "Halo: Combat Evolved Anniversary" # CE
 title_id = "4D5309B1"
 hash = "222A0F4D9FE0F2D0"
+#media_id = ""
 
 [[patch]]
     name = "1280x720 Resolution"

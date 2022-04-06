@@ -1,6 +1,7 @@
 title_name = "GoldenEye 007: Reloaded" # GE
 title_id = "415608AF"
 hash = "7FFAE33DD2045CE7"
+#media_id = "40583A82"
 
 [[patch]]
     name = "Lens Flare Occlusion Fix"

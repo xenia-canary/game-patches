@@ -1,6 +1,7 @@
 title_name = "Shadows of the Damned"
 title_id = "4541092A"
 hash = "1970A748370AB18"
+#media_id = "64D9671A"
 
 [[patch]]
     name = "Unlock FPS"

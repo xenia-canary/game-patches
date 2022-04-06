@@ -3,6 +3,7 @@ title_id = "4D5307DF"
 #hash = "963F85A9409C139A" # Disc 1
 #hash = "B66A5943E36BE149" # Disc 2
 #hash = "A44338F34EA83167" # Disc 3
+#media_id = ""
 
 [[patch]]
     name = "Enable Wireframe"

@@ -1,6 +1,7 @@
 title_name = "Dead or Alive 5 Ultimate" # DOA
 title_id = "4B5607E8"
 hash = "6484F0805E01E757"
+#media_id = ""
 
 [[patch]]
     name = "Aspect Ratio"

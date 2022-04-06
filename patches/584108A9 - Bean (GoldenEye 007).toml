@@ -4,6 +4,7 @@ title_id = "584108A9"
 #hash = "A74F02B720F8B5AD" # Bean.xex (unmodified)
 #hash = "C1E9C427B84FE4BD" # Bean_debug.xex
 #hash = "E62BF80121496796" # Bean_team.xex
+#media_id = ""
 
 [[patch]]
     name = "Remove Blur in Classic Graphics"

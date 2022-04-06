@@ -1,6 +1,7 @@
 title_name = "Bionicle Heroes"
 title_id = "534307E2"
 hash = "6B1A9BEF4F93EC7B"
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

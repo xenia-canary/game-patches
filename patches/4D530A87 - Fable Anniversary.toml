@@ -1,6 +1,7 @@
 title_name = "Fable Anniversary"
 title_id = "4D530A87"
 hash = "9458F4EC8F0E4AC2"
+#media_id = "5AA7D606"
 
 [[patch]]
     name = "Unlock FPS"

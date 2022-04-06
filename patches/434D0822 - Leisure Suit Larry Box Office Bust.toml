@@ -1,6 +1,7 @@
 title_name = "Leisure Suit Larry: Box Office Bust"
 title_id = "434D0822"
 hash = "2FCBAB95F13C4FEC"
+#media_id = "536000E3"
 
 [[patch]]
     name = "Unlock FPS"

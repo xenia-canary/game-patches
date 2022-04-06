@@ -1,6 +1,7 @@
 title_name = "Resident Evil 5"
 title_id = "434307D4"
 hash = "9E761F58D8ADFBC4"
+#media_id = "5B2A79D5"
 
 [[patch]]
     name = "Remove All Your Money"

@@ -1,6 +1,7 @@
 title_name = "Armored Core 4"
 title_id = "465307D6"
 hash = "68FB6D400D6A766C"
+#media_id = ""
 
 [[patch]]
     name = "infinite Money"

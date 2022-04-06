@@ -1,6 +1,7 @@
 title_name = "Need for Speed: Carbon" # NFS
 title_id = "454107EC"
 hash = "94FCEACB4C5CEC78"
+#media_id = ""
 
 [[patch]]
     name = "Skip audio loop stuck code"

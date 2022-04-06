@@ -3,6 +3,7 @@ title_id = "535107E4"
 #hash = "A5D9F59CD318B594" # Disc 1
 #hash = "2B1B2B51196532D3" # Disc 2
 #hash = "67AE4C02CC7E8FD4" # Disc 3
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

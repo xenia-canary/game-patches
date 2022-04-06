@@ -1,6 +1,7 @@
 title_name = "Batman: Arkham City" # TU6
 title_id = "57520802"
 #hash = ""
+#media_id = ""
 
 [[patch]]
     name = "Debug Menu"

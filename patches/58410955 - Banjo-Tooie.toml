@@ -1,6 +1,7 @@
 title_name = "Banjo-Tooie"
 title_id = "58410955"
 hash = "7C090DA75AB4E883"
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

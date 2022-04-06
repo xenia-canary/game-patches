@@ -1,7 +1,7 @@
 title_name = "The Darkness"
 title_id = "545407EE"
 hash = "EDFC6F53793A6EBB"
-# Credit to patcher Bader for FOV patch, taken from https://www.reddit.com/r/ps4homebrew/comments/o2xe6u/60fps_patch_for_ghost_of_tsushima_ps4_pro_only/h35tfuy
+#media_id = "0F213645"
 
 [[patch]]
     name = "Bright Lighting Fix"
@@ -16,6 +16,7 @@ hash = "EDFC6F53793A6EBB"
         address = 0x822745E0
         value = 0xC00BC06C
 
+# Credit to patcher Bader for FOV patch, taken from https://www.reddit.com/r/ps4homebrew/comments/o2xe6u/60fps_patch_for_ghost_of_tsushima_ps4_pro_only/h35tfuy
 [[patch]]
     name = "Extended FOV"
     desc = "Increases 16:9 horizontal FOV from 90 degrees to 105 degress."

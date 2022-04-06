@@ -1,6 +1,7 @@
 title_name = "NINJA GAIDEN 2" # TU3
 title_id = "544307D5"
 hash = "63149B7ACB1CB470"
+#media_id = ""
 
 [[patch]]
     name = "1280x720 Resolution"

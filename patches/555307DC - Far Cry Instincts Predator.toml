@@ -1,6 +1,7 @@
 title_name = "Far Cry Instincts: Predator" # FC
 title_id = "555307DC"
 hash = "E37894C548DEFFD6"
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

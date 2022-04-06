@@ -1,6 +1,7 @@
 title_name = "Banjo-Kazooie: Nuts & Bolts" # And, N&B
 title_id = "4D5307ED"
 hash = "DF7BB7E5C2BE89B1"
+#media_id = "3E567DFF"
 
 [[patch]]
     name = "60 FPS"

@@ -1,6 +1,7 @@
 title_name = "Final Fantasy XIII-2" # 13
 title_id = "53510806"
 hash = "D5249A7F8EECF9FC"
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

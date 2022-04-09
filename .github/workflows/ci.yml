@@ -19,7 +19,7 @@ jobs:
       - name: Lint
         run: |
           npx eslint patches/*.toml
-          function patches_invalidate() {
+          patches_invalidate() {
             patches_invalid_reasons+=$'\n'"$1"$'\n'
           }
           for file in patches/*; do
@@ -32,7 +32,7 @@ jobs:
               patches_is_enabled+=$'\n'" $file_name"
             fi
             # Desc is optional
-            patch_required_info=({title_name,title_id,hash}\ =\ \" "[[patch]]" \ \ \ \ {{name,author}\ =\ \",is_enabled\ =\ ,\ \ \ \ {address,value}\ =\ })
+            patch_required_info=({title_name,{title,media}_id,hash}\ =\ \" "[[patch]]" \ \ \ \ {{name,author}\ =\ \",is_enabled\ =\ ,\ \ \ \ {address,value}\ =\ })
             for field in "${patch_required_info[@]}"; do
               if [[ ! "$file_content" =~ "$field" ]]; then
                 if [[ ! "$patches_fields_missing" =~ $file_name ]]; then

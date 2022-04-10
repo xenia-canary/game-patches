@@ -1,6 +1,6 @@
 title_name = "Rock Band 3"
-title_id = "45410914"
-hash = "A6CD6E2BDF0A7007"
+title_id = "45410914" # EA-2324
+hash = "A6CD6E2BDF0A7007" # TODO: Add module filename
 #media_id = ""
 
 [[patch]]

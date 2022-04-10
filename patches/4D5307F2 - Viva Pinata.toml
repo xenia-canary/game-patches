@@ -1,7 +1,7 @@
 title_name = "Viva Piñata"
-title_id = "4D5307F2"
-hash = "B5434A4059519980"
-#media_id = ""
+title_id = "4D5307F2" # MS-2034
+hash = "B5434A4059519980" # default.xex
+#media_id = "690B3287" http://redump.org/disc/11854
 
 [[patch]]
     name = "60 FPS"

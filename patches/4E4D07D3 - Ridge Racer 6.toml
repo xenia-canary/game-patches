@@ -1,7 +1,7 @@
 title_name = "Ridge Racer 6"
-title_id = "4E4D07D3"
-hash = "7F87B6C814A99806"
-#media_id = ""
+title_id = "4E4D07D3" # NM-2003
+hash = "7F87B6C814A99806" # default.xex
+#media_id = "03F77EEF" http://redump.org/disc/57116
 
 [[patch]]
     name = "1280x720 Resolution"

@@ -1,7 +1,7 @@
 title_name = "Banjo-Kazooie"
-title_id = "58410954"
-hash = "9106B5AE9EF7A44A"
-#media_id = ""
+title_id = "58410954" # XA-2388
+hash = "9106B5AE9EF7A44A" # default.xex
+#media_id = "69C685B7"
 
 [[patch]]
     name = "60 FPS"

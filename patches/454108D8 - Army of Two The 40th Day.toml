@@ -1,7 +1,7 @@
 title_name = "Army of Two: The 40th Day"
-title_id = "454108D8"
+title_id = "454108D8" # EA-2264
 hash = "51247CE8E5B60296"
-#media_id = "44388CF4"
+#media_id = "44388CF4" http://redump.org/disc/13279
 
 [[patch]]
     name = "60 FPS"

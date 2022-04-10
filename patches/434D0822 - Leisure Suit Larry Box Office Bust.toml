@@ -1,7 +1,7 @@
 title_name = "Leisure Suit Larry: Box Office Bust"
-title_id = "434D0822"
-hash = "2FCBAB95F13C4FEC"
-#media_id = "536000E3"
+title_id = "434D0822" # CM-2082
+hash = "2FCBAB95F13C4FEC" # default.xex
+#media_id = "536000E3" http://redump.org/disc/14255
 
 [[patch]]
     name = "Unlock FPS"

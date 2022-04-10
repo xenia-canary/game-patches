@@ -1,7 +1,7 @@
 title_name = "El Shaddai"
-title_id = "494F07D1"
-hash = "291BA41B6836FC74"
-#media_id = ""
+title_id = "494F07D1" # IO-2001
+hash = "291BA41B6836FC74" # DEFAULT.XEX
+#media_id = "640B378B" http://redump.org/disc/42246
 
 [[patch]]
     name = "1280x720 Resolution"

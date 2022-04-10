@@ -1,7 +1,7 @@
 title_name = "Asura's Wrath"
-title_id = "43430817"
-hash = "F3AA3A3085A3A3B9"
-#media_id = "11DFADD6"
+title_id = "43430817" # CC-2071
+hash = "F3AA3A3085A3A3B9" # default.xex
+#media_id = "11DFADD6" http://redump.org/disc/38905
 
 [[patch]]
     name = "Unlock FPS"

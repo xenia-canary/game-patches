@@ -1,6 +1,6 @@
 title_name = "Doritos Crash Course 2"
-title_id = "5841124F"
-hash = "AE4222C940E0B2C8"
+title_id = "5841124F" # XA-4687
+hash = "AE4222C940E0B2C8" # default.xex
 #media_id = ""
 
 [[patch]]

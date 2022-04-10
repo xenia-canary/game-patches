@@ -1,7 +1,7 @@
 title_name = "The Elder Scrolls IV: Oblivion (GOTY)" # Game Of The Year, 4
-title_id = "425307D1"
-hash = "EDCE0AC85A1AFA86"
-#media_id = ""
+title_id = "425307D1" # BS-2001
+hash = "EDCE0AC85A1AFA86" # default.xex
+#media_id = "013FE217"
 
 [[patch]]
     name = "60 FPS"

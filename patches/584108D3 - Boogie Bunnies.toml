@@ -1,10 +1,11 @@
 title_name = "Boogie Bunnies"
-title_id = "584108D3"
-hash = "494C81FD1D6D1E5C"
-#media_id = ""
+title_id = "584108D3" # XA-2259
+hash = "494C81FD1D6D1E5C" # default.xex
+#media_id = "6AA3404F"
 
 [[patch]]
     name = "Disable MSAA (Multi-Sample Anti-Aliasing)"
+    desc = "Greatly improves performance when used in conjunction with 720p patch."
     author = "Margen67"
     is_enabled = false
 

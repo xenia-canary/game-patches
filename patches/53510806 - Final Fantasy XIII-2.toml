@@ -1,6 +1,6 @@
 title_name = "Final Fantasy XIII-2" # 13
-title_id = "53510806"
-hash = "D5249A7F8EECF9FC"
+title_id = "53510806" # SQ-2054
+hash = "D5249A7F8EECF9FC" # default.xex(?)
 #media_id = ""
 
 [[patch]]

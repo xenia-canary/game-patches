@@ -1,7 +1,7 @@
 title_name = "Gears Of War"
-title_id = "4D5307D5"
-hash = "B65283762F29121E"
-#media_id = "76E9DF5B"
+title_id = "4D5307D5" # MS-2005
+hash = "B65283762F29121E" # TODO: Add module filename
+#media_id = "76E9DF5B" http://redump.org/disc/7745
 
 [[patch]]
     name = "60 FPS"

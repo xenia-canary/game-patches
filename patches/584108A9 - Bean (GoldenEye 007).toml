@@ -1,10 +1,10 @@
 title_name = "Bean (GoldenEye 007)"
-title_id = "584108A9"
+title_id = "584108A9" # XA-2217
 #hash = "33740A3A613F0A36" # default.xex (modified)
 #hash = "A74F02B720F8B5AD" # Bean.xex (unmodified)
 #hash = "C1E9C427B84FE4BD" # Bean_debug.xex
 #hash = "E62BF80121496796" # Bean_team.xex
-#media_id = ""
+#media_id = "00000000"
 
 [[patch]]
     name = "Remove Blur in Classic Graphics"

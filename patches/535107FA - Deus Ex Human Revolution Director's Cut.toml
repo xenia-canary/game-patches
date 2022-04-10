@@ -1,0 +1,15 @@
+title_name = "Deus Ex: Human Revolution: Director's Cut"
+title_id = "535107FA" # SQ-2042
+#hash = "B9A1646F4B3D560E" # Disc 1, default.xex
+#hash = "82757F1D49E5724E" # Disc 2, default.xex
+#media_id = "7BBEB936" Disc 1, http://redump.org/disc/50503
+#media_id = "7C4137BE" Disc 2, http://redump.org/disc/50504
+
+[[patch]]
+    name = "Disable Looping Audio Code"
+    author = "Gliniak"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822B14BC
+        value = 0x3B800000

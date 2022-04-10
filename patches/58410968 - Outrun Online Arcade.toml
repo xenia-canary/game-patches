@@ -1,7 +1,7 @@
 title_name = "Outrun™ Online Arcade"
-title_id = "58410968"
-hash = "8C9CC78F50365E60"
-#media_id = ""
+title_id = "58410968" # XA-2408
+hash = "8C9CC78F50365E60" # default.xex
+#media_id = "3CB8E563"
 
 [[patch]]
     name = "Aspect Ratio"

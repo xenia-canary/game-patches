@@ -1,7 +1,7 @@
 title_name = "Viva Piñata: Trouble in Paradise" # TIP
-title_id = "4D53085F"
-hash = "167B2E6730CC5BD7"
-#media_id = ""
+title_id = "4D53085F" # MS-2143
+hash = "167B2E6730CC5BD7" # default.xex
+#media_id = "76A44A5D" http://redump.org/disc/67404
 
 [[patch]]
     name = "60 FPS"

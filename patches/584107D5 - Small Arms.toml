@@ -1,7 +1,7 @@
 title_name = "Small Arms"
-title_id = "584107D5"
-hash = "89FF04F58E605CDC"
-#media_id = ""
+title_id = "584107D5" # XA-2005
+hash = "89FF04F58E605CDC" # default.xex
+#media_id = "5C6ABFE7"
 
 [[patch]]
     name = "1280x720 Resolution"

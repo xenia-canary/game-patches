@@ -1,7 +1,7 @@
 title_name = "SONIC UNLEASHED" # TU2
-title_id = "53450812"
-hash = "C33BC63868F5361"
-#media_id = "4BED0DDE"
+title_id = "53450812" # SE-2066
+hash = "C33BC63868F5361" # TODO: Add module filename ## TODO: This hash is bad
+#media_id = "4BED0DDE" http://redump.org/disc/14043
 
 [[patch]]
     name = "60 FPS"

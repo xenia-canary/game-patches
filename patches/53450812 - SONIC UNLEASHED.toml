@@ -1,6 +1,6 @@
 title_name = "SONIC UNLEASHED"
-title_id = "53450812"
-hash = "C031CE0A3D7B711F"
+title_id = "53450812" # SE-2066
+hash = "C031CE0A3D7B711F" # TODO: Add module filename
 #media_id = ""
 
 [[patch]]

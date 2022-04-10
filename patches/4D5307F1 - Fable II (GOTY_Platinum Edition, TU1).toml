@@ -1,7 +1,7 @@
 title_name = "Fable II" # Fable 2 GOTY (Game Of The Year)/Platinum Edition, TU1
-title_id = "4D5307F1"
-hash = "E2F4CAA0C6DEB217" # TODO: Hashes for TUs aren't correct
-#media_id = "716F0A0D"
+title_id = "4D5307F1" # MS-2033
+hash = "E2F4CAA0C6DEB217" # default.xex # TODO: Hashes for TUs aren't correct
+#media_id = "716F0A0D" http://redump.org/disc/20202
 
 [[patch]]
     name = "60 FPS"

@@ -1,7 +1,7 @@
 title_name = "Lollipop Chainsaw"
-title_id = "565707D0"
+title_id = "565707D0" # VW-2000
 hash = "993C7315D439C7CD"
-#media_id = "31BE13D9"
+#media_id = "31BE13D9" http://redump.org/disc/35948
 
 [[patch]]
     name = "Unlock FPS"

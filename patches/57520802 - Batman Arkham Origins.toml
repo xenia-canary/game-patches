@@ -1,6 +1,6 @@
 title_name = "Batman: Arkham Origins"
-title_id = "57520828"
-hash = "BCEC4C4143B6BF5F"
+title_id = "57520828" # WR-2088
+#hash = "" # TODO: Add module filename
 #media_id = ""
 
 [[patch]]

@@ -1,10 +1,13 @@
 title_name = "Lost Odyssey"
-title_id = "4D5307FA"
-#hash = "99CA6ACD4BA96084" # Disc 1
-#hash = "B24E02CFFC2FDE56" # Disc 2
-#hash = "B3E2B9D199685FF8" # Disc 3
-#hash = "E9B7CF54159C687A" # Disc 4
-#media_id = "368DE6DD"
+title_id = "4D5307FA" # MS-2042
+#hash = "99CA6ACD4BA96084" # Disc 1, default.xex
+#hash = "B24E02CFFC2FDE56" # Disc 2, default.xex
+#hash = "B3E2B9D199685FF8" # Disc 3, default.xex
+#hash = "E9B7CF54159C687A" # Disc 4, default.xex
+#media_id = "368DE6DD" Disc 1, http://redump.org/disc/11817
+#media_id = "1888BE4E" Disc 2, http://redump.org/disc/11818
+#media_id = "6DD59D08" Disc 3, http://redump.org/disc/11819
+#media_id = "0C0E80B5" Disc 4, http://redump.org/disc/11820
 
 [[patch]]
     name = "60 FPS"

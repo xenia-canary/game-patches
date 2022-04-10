@@ -1,7 +1,7 @@
 title_name = "LEGO Star Wars: The Complete Saga"
-title_id = "4C4107D7"
-hash = "9FADAA64467DF6"
-#media_id = ""
+title_id = "4C4107D7" # LA-2007
+hash = "9FADAA64467DF6" # Default.xex ## TODO: This hash is bad
+#media_id = "5E486FF7" http://redump.org/disc/38504
 
 [[patch]]
     name = "Allow Swears"
@@ -9,5 +9,5 @@ hash = "9FADAA64467DF6"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8200F241
-        value = 0x34
+        address = 0x8200F241 # badwords.txt
+        value = 0x34         # First char

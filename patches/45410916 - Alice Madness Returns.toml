@@ -1,7 +1,7 @@
 title_name = "Alice: Madness Returns"
-title_id = "45410916"
-hash = "EC884B235D7F930C"
-#media_id = "31C4B45C"
+title_id = "45410916" # EA-2326
+hash = "EC884B235D7F930C" # TODO: Add module filename
+#media_id = "31C4B45C" http://redump.org/disc/38414
 
 [[patch]]
     name = "Disable Lens Flares"

@@ -1,7 +1,7 @@
 title_name = "Halo 3"
-title_id = "4D5307E6"
-hash = "C1AE7398CAEB21BF"
-#media_id = ""
+title_id = "4D5307E6" # MS-2022
+hash = "C1AE7398CAEB21BF" # default.xex
+#media_id = "699E0227" http://redump.org/disc/7749
 
 [[patch]]
     name = "Aspect Ratio"

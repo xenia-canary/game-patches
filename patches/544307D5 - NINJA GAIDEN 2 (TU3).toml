@@ -1,6 +1,6 @@
 title_name = "NINJA GAIDEN 2" # TU3
-title_id = "544307D5"
-hash = "63149B7ACB1CB470"
+title_id = "544307D5" # TC-2005
+hash = "63149B7ACB1CB470" # default.xex
 #media_id = ""
 
 [[patch]]

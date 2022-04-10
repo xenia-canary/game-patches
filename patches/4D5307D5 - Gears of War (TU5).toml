@@ -1,6 +1,6 @@
 title_name = "Gears Of War" # TU5
-title_id = "4D5307D5"
-hash = "FD3300E440A69EE9"
+title_id = "4D5307D5" # MS-2005
+hash = "FD3300E440A69EE9" # TODO: Add module filename
 #media_id = ""
 
 [[patch]]

@@ -1,6 +1,6 @@
 title_name = "Peggle"
-title_id = "58410889"
-hash = "83A690E6E0DA84F6"
+title_id = "58410889" # XA-2185
+hash = "83A690E6E0DA84F6" # default.xex
 #media_id = "111272B2"
 
 [[patch]]

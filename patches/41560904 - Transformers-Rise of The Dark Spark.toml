@@ -1,7 +1,7 @@
 title_name = "Transformers: Rise of The Dark Spark"
-title_id = "41560904"
-hash = "3D80DDB6879F0E01"
-#media_id = "50D83F2D"
+title_id = "41560904" # AV-2308
+hash = "3D80DDB6879F0E01" # TODO: Add module filename
+#media_id = "50D83F2D" http://redump.org/disc/41959
 
 [[patch]]
     name = "Disable Lens Flares"

@@ -1,7 +1,7 @@
 title_name = "Doritos Dash of Destruction"
-title_id = "5841090B"
-hash = "F54D95A83765205C"
-#media_id = ""
+title_id = "5841090B" # XA-2315
+hash = "F54D95A83765205C" # default.xex
+#media_id = "4ED33D78"
 
 [[patch]]
     name = "Unlock FPS"

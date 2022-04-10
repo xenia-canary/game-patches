@@ -1,7 +1,7 @@
 title_name = "Forza Horizon"
-title_id = "4D5309C9"
-hash = "D73ECF24F40B58D7"
-#media_id = ""
+title_id = "4D5309C9" # MS-2505
+hash = "D73ECF24F40B58D7" # default.xex
+#media_id = "2B7A1346" http://redump.org/disc/84331
 
 [[patch]]
     name = "Disable Motion Blur"

@@ -114,8 +114,9 @@ check_multiple_choice 'title name' new_patch_title_names new_patch_title_name
 new_patch_title_name=$(tr -d '"\\' <<<$new_patch_title_name) # " and \ are unsafe even for TOML
 check_multiple_choice hash new_patch_hashes new_patch_hash new_patch_hashes_modules new_patch_hash_module
 if [[ -n "$new_patch_media_id" && -n "$new_patch_title_id" && -n "$new_patch_title_name" && -n "$new_patch_hash" && -n "$new_patch_hash_module" ]]; then
+    new_patch_serial="$(xxd -p -r <<<${new_patch_title_id::4})-$((16#${new_patch_title_id:4}))"
     new_patch_filename="$new_patch_title_id - $(tr -d '/:*?<>|™©' <<<${new_patch_title_name}.toml)"
-    echo -e "\n\nPatch filename: $new_patch_filename\nPatch hash:     $new_patch_hash\n"
+    echo -e "\n\nPatch filename: ${new_patch_filename}\nPatch serial:   ${new_patch_serial}\nPatch hash:     ${new_patch_hash}\n"
 else
     prompt_error 'Media ID, title ID, title name, and/or hash are missing from the log.'$'\nMake sure log_level is set to 2 in the Xenia config.'
 fi
@@ -242,7 +243,7 @@ fi
 
 new_patch_path="patches/$new_patch_filename"
 new_patch_contents="title_name = \"${new_patch_title_name}\"
-title_id = \"${new_patch_title_id}\"
+title_id = \"${new_patch_title_id}\" # $new_patch_serial
 hash = \"${new_patch_hash}\" # $new_patch_hash_module
 #media_id = \"${new_patch_media_id}\"
 

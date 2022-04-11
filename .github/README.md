@@ -5,8 +5,8 @@ This repository contains game patches for Xenia.
 
 ## Installing
 Game patches are now included with Xenia Canary.
+  * Xenia Canary must be set to portable. *(see below)*
 
-## Updating
 ### All patches
 1. Download the [zip](../../../archive/main.zip) file.
 2. Extract the patches folder to the proper location:

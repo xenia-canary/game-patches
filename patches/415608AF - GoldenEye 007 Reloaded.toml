@@ -1,6 +1,6 @@
 title_name = "GoldenEye 007: Reloaded" # GE
 title_id = "415608AF" # AV-2223
-hash = "7FFAE33DD2045CE7"
+hash = "7FFAE33DD2045CE7" # TODO: Add module filename
 #media_id = "40583A82" http://redump.org/disc/38456
 
 [[patch]]

@@ -1,6 +1,6 @@
 title_name = "WET"
 title_id = "425307DB" # BS-2011
-hash = "A4E446BB9A0C048F"
+hash = "A4E446BB9A0C048F" # TODO: Add module filename
 #media_id = "666E3BB8" http://redump.org/disc/12513
 
 [[patch]]

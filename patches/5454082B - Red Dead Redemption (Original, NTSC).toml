@@ -1,7 +1,23 @@
 title_name = "Red Dead Redemption" # Original, NTSC
 title_id = "5454082B" # TT-2091
-hash = "82CDA3C91B57C170" # default.xex
+hash = "35C0B09A55F8B60" # default.xex
 #media_id = "2AAB34E2" http://redump.org/disc/13298
+
+[[patch]]
+    name = "Skip Intro"
+    desc = "Skips legal and intro videos."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82770958
+        value = 0x480001a0 # b 0x82770af8
+    [[patch.be32]]
+        address = 0x82770af8
+        value = 0x3b600001 # li r27,0x1
+    [[patch.be32]]
+        address = 0x82770afc
+        value = 0x9b7f000d # stb r27,0xd(r31)
 
 [[patch]]
     name = "Unlock FPS"

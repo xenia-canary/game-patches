@@ -6,7 +6,7 @@ hash = "78C76D726330F924"
 [[patch]]
     name = "Enable Developer Menu"
     author = "illusion, dron_3"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8336e2cc

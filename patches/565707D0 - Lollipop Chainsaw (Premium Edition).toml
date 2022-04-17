@@ -1,6 +1,6 @@
 title_name = "Lollipop Chainsaw" # Premium Edition
 title_id = "565707D0" # VW-2000
-hash = "52E2D6F8696B8028" # TODO: Add module filename
+hash = "52E2D6F8696B8028" # default.xex
 #media_id = "3759EFF2" http://redump.org/disc/65899
 
 [[patch]]

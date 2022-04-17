@@ -1,6 +1,6 @@
 title_name = "Bulletstorm"
 title_id = "454108EF" # EA-2287
-hash = "1338446D7E81F1F6" # TODO: Add module filename
+hash = "1338446D7E81F1F6" # default.xex
 #media_id = "1D93E609" http://redump.org/disc/21494
 
 [[patch]]

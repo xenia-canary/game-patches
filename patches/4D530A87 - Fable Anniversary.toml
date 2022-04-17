@@ -1,6 +1,6 @@
 title_name = "Fable Anniversary"
 title_id = "4D530A87" # MS-2695
-hash = "9458F4EC8F0E4AC2" # TODO: Add module filename
+hash = "9458F4EC8F0E4AC2" # default.xex
 #media_id = "5AA7D606"
 
 [[patch]]

@@ -1,6 +1,6 @@
 title_name = "Red Dead Redemption" # GOTY/Game Of The Year, Disc 2
 title_id = "5454082B" # TT-2091
-hash = "C267D3CAF98E4368" # TODO: Add module filename
+hash = "C267D3CAF98E4368" # default.xex
 #media_id = "3EE87B76" http://redump.org/disc/58711
 
 [[patch]]

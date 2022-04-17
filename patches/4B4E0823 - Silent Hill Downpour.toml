@@ -1,6 +1,6 @@
 title_name = "Silent Hill: Downpour"
 title_id = "4B4E0823" # KN-2083
-hash = "BEE670772E454B1F" # TODO: Add module filename
+hash = "BEE670772E454B1F" # default.xex
 #media_id = "7D387D17" http://redump.org/disc/58138
 
 [[patch]]

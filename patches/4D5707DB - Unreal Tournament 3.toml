@@ -1,6 +1,6 @@
 title_name = "Unreal Tournament 3"
 title_id = "4D5707DB" # MW-2011
-hash = "EB8A18FE5D59FCFD" # TODO: Add module filename
+hash = "EB8A18FE5D59FCFD" # default.xex
 #media_id = "72123E1F" http://redump.org/disc/12512
 
 [[patch]]

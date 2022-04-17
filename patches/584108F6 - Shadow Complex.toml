@@ -1,6 +1,6 @@
 title_name = "Shadow Complex"
 title_id = "584108F6" # XA-2294
-hash = "232A5BCC3F647153" # TODO: Add module filename
+hash = "232A5BCC3F647153" # default.xex
 #media_id = "1E824B42"
 
 [[patch]]

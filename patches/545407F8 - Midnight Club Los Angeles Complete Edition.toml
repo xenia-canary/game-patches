@@ -1,7 +1,7 @@
 title_name = "Midnight Club: Los Angeles" # MCLA, Complete Edition
 title_id = "545407F8" # TT-2040
 hash = "D651A6BB8C7486C8" # default.xex
-#media_id = "5940C9DB"
+#media_id = "5940C9DB" http://redump.org/disc/64472/
 
 [[patch]]
     name = "Enable Deltatime"

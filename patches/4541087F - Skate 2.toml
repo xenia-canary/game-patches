@@ -1,6 +1,6 @@
 title_name = "Skate 2"
 title_id = "4541087F" # EA-2175
-hash = "E6661629EEB2ADD4" # default.xex(?)
+hash = "E6661629EEB2ADD4" # default.xex
 #media_id = ""
 
 [[patch]]

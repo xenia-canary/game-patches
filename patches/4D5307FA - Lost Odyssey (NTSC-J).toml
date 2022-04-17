@@ -1,9 +1,9 @@
 title_name = "Lost Odyssey"
 title_id = "4D5307FA" # MS-2042
-#hash = "4FA944560B7A49F7" # Disc 1, default.xex(?)
-#hash = "D3811D4222F38F9D" # Disc 2, default.xex(?)
-#hash = "61FA38436DB33BCE" # Disc 3, default.xex(?)
-#hash = "FA5C9CBE5DED16BA" # Disc 4, default.xex(?)
+#hash = "4FA944560B7A49F7" # Disc 1, default.xex
+#hash = "D3811D4222F38F9D" # Disc 2, default.xex
+#hash = "61FA38436DB33BCE" # Disc 3, default.xex
+#hash = "FA5C9CBE5DED16BA" # Disc 4, default.xex
 #media_id = "612E5362"(?) Disc 1, http://redump.org/disc/27092
 #media_id = "1FCD93AF"(?) Disc 2, http://redump.org/disc/27093
 #media_id = "5F6C75EB"(?) Disc 3, http://redump.org/disc/27094

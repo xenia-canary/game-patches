@@ -1,6 +1,6 @@
 title_name = "Batman: Arkham City"
 title_id = "57520802" # WR-2050
-hash = "CC92C76573FD61BF" # TODO: Add module filename
+hash = "CC92C76573FD61BF" # default.xex
 #media_id = ""
 
 [[patch]]

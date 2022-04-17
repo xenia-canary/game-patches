@@ -1,6 +1,6 @@
 title_name = "Bioshock Infinite"
 title_id = "5454085D" # TT-2141
-hash = "1189C9EC9A36D5E2" # TODO: Add module filename
+hash = "1189C9EC9A36D5E2" # default.xex
 #media_id = "7F5C4901"
 
 [[patch]]

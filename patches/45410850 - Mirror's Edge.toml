@@ -1,6 +1,6 @@
 title_name = "Mirror's Edge"
 title_id = "45410850" # EA-2128
-hash = "B1DFF4F33956DE2B" # TODO: Add module filename
+hash = "B1DFF4F33956DE2B" # default.xex
 #media_id = "426CA5A2" http://redump.org/disc/11415
 
 [[patch]]

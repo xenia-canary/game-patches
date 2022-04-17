@@ -1,6 +1,6 @@
 title_name = "Army of Two: The 40th Day"
 title_id = "454108D8" # EA-2264
-hash = "51247CE8E5B60296" # TODO: Add module filename
+hash = "51247CE8E5B60296" # default.xex
 #media_id = "44388CF4" http://redump.org/disc/13279
 
 [[patch]]

@@ -1,6 +1,6 @@
 title_name = "Gears of War 3" # TU6
 title_id = "4D5308AB" # MS-2219
-hash = "4E1A34D8073D1390" # TODO: Add module filename
+hash = "4E1A34D8073D1390" # default.xex
 #media_id = "4C93A17D"
 
 [[patch]]

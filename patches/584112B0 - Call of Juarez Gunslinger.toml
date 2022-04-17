@@ -1,6 +1,6 @@
 title_name = "Call of Juarez: Gunslinger"
-title_id = "584112B0"
-hash = "78C76D726330F924"
+title_id = "584112B0" # XA-4784
+hash = "78C76D726330F924" # TODO: Add module filename
 #media_id = "7FDF8AC7"
 
 [[patch]]
@@ -9,14 +9,14 @@ hash = "78C76D726330F924"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8336e2cc
+        address = 0x8336E2CC
         value = 0x39400001 # li r10,0x1
     [[patch.be32]]
-        address = 0x8336e2d0
+        address = 0x8336E2D0
         value = 0x60000000 # ori r0,r0,0x0
     [[patch.be32]]
-        address = 0x8336e2d4
-        value = 0x3d608377 # lis r11,-0x7c89
+        address = 0x8336E2D4
+        value = 0x3D608377 # lis r11,-0x7c89
     [[patch.be32]]
-        address = 0x8336e2d8
-        value = 0x994b9dd3 # stb r10,-0x622d(r11)
+        address = 0x8336E2D8
+        value = 0x994B9DD3 # stb r10,-0x622d(r11)

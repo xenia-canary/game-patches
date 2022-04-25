@@ -1,0 +1,13 @@
+title_name = "Gun"
+title_id = "415607D3" # AV-2003
+hash = "B9CFB8B02628EF21" # default.xex
+#media_id = "00000000"
+
+[[patch]]
+    name = "Enable Cheats Menu"
+    author = "Zeddikins"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821e04fb
+        value = 0x0

@@ -10,8 +10,20 @@ hash = "D651A6BB8C7486C8" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x821BDB08
-        value = 0x4800012C
+        address = 0x821bdb08
+        value = 0x4800012c # b 0x821bdc34
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8260d0b8
+        value = 0x38600000 # li r3,0x0
+    [[patch.be32]]
+        address = 0x8260d0d4
+        value = 0x38600000 # li r3,0x0
 
 [[patch]]
     name = "60 FPS"
@@ -20,7 +32,7 @@ hash = "D651A6BB8C7486C8" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82419AA3
+        address = 0x82419aa3
         value = 0x01
 
 [[patch]]
@@ -30,7 +42,7 @@ hash = "D651A6BB8C7486C8" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8230C87C
+        address = 0x8230c87c
         value = 0x4800
 
 [[patch]]
@@ -39,5 +51,5 @@ hash = "D651A6BB8C7486C8" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822E4B80
+        address = 0x822e4b80
         value = 0x39600001

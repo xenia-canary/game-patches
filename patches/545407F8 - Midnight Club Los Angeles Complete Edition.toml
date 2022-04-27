@@ -4,6 +4,15 @@ hash = "D651A6BB8C7486C8" # default.xex
 #media_id = "5940C9DB" http://redump.org/disc/64472/
 
 [[patch]]
+    name = "Skip Intro"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821f7f64
+        value = 0x48000048 # b 0x821f7fac
+
+[[patch]]
     name = "Enable Deltatime"
     desc = "Runs at any FPS with proper game speed. Can be used in conjunction with the 60 FPS patch."
     author = "illusion"

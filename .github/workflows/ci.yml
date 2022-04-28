@@ -58,10 +58,20 @@ jobs:
             echo "${patches_invalid_reasons/%$'\n'}"
             exit 1
           fi
+  workflow_dispatch:
+    if: |
+      github.event_name  == 'push' &&
+      github.repository == 'xenia-canary/game-patches'
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: xenia-canary/xenia-canary.github.io
       - name: Workflow dispatch
         if: |
           github.event_name  == 'push' &&
           github.repository == 'xenia-canary/game-patches'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run jekyll.yml -R xenia-canary/xenia-canary.github.io
+        run: gh workflow run jekyll.yml

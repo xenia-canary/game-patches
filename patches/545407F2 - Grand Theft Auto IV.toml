@@ -1,0 +1,13 @@
+title_name = "Grand Theft Auto IV"
+title_id = "545407F2" # TT-2034
+hash = "2730AD3C78F6A492" # default.xex
+#media_id = "6AC07221"
+
+[[patch]]
+    name = "Skip Legal Screens"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82123fbc
+        value = 0x39600001

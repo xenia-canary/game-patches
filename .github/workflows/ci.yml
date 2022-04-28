@@ -62,6 +62,6 @@ jobs:
         if: |
           github.event_name  == 'push' &&
           github.repository == 'xenia-canary/game-patches'
-      #  env:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run jekyll.yml -R xenia-canary/xenia-canary.github.io

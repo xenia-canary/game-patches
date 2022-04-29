@@ -11,3 +11,15 @@ hash = "2730AD3C78F6A492" # default.xex
     [[patch.be32]]
         address = 0x82123fbc
         value = 0x39600001
+
+[[patch]]
+    name = "Disable blur filter"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822f8a08
+        value = 0x908be904 # stw r4,-0x16fc(r11)
+    [[patch.be32]]
+        address = 0x822f8a4c
+        value = 0x908be904 # stw r4,-0x16fc(r11)

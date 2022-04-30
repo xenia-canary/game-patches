@@ -1,6 +1,6 @@
 title_name = "Family Guy: Back to the Multiverse" # BTTM
 title_id = "415608C5" # AV-2245
-hash = "F3CB75CAEB34325C" # DEFAULT.XEX
+#hash = "" # DEFAULT.XEX
 #media_id = "55DA4FA1" http://redump.org/disc/55407
 
 [[patch]]

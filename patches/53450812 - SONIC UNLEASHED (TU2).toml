@@ -1,6 +1,6 @@
 title_name = "SONIC UNLEASHED" # TU2
 title_id = "53450812" # SE-2066
-hash = "C33BC63868F5361" # default.xex ## TODO: This hash is bad
+#hash = "" # default.xex ## TODO: This hash is bad
 #media_id = "4BED0DDE" http://redump.org/disc/14043
 
 [[patch]]

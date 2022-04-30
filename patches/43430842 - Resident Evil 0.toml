@@ -1,6 +1,6 @@
 title_name = "Resident Evil 0" # Zero
 title_id = "43430842" # CC-2114
-hash = "13C8BCDF2EFCEE62" # TODO: Add module filename
+#hash = "" # TODO: Add module filename
 #media_id = "2A9EF17A"
 
 [[patch]]

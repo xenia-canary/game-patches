@@ -1,6 +1,6 @@
 title_name = "The Elder Scrolls V: Skyrim" # 5
 title_id = "425307E6" # BS-2022
-hash = "7F1771905580DCF5" # default.xex
+#hash = "" # default.xex
 #media_id = "34F5B6C3" http://redump.org/disc/37091
 
 [[patch]]

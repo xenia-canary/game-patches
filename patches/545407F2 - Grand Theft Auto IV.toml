@@ -1,6 +1,6 @@
 title_name = "Grand Theft Auto IV"
 title_id = "545407F2" # TT-2034
-hash = "2730AD3C78F6A492" # default.xex
+#hash = "" # default.xex
 #media_id = "6AC07221"
 
 [[patch]]

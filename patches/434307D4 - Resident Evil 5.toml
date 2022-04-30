@@ -1,6 +1,6 @@
 title_name = "Resident Evil 5"
 title_id = "434307D4" # CC-2004
-hash = "9E761F58D8ADFBC4" # TODO: Add module filename
+#hash = "" # TODO: Add module filename
 #media_id = "5B2A79D5" http://redump.org/disc/9689
 
 [[patch]]

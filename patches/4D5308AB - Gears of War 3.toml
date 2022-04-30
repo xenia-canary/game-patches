@@ -1,6 +1,6 @@
 title_name = "Gears of War 3"
 title_id = "4D5308AB" # MS-2219
-hash = "3B01998F8516817A" # default.xex
+#hash = "" # default.xex
 #media_id = "4C93A17D"
 
 [[patch]]

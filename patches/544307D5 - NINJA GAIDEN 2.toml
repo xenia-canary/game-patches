@@ -1,6 +1,6 @@
 title_name = "NINJA GAIDEN 2"
 title_id = "544307D5" # TC-2005
-hash = "1E47A98E68A076A1" # default.xex
+#hash = "" # default.xex
 #media_id = "69F555CB" http://redump.org/disc/13299
 
 [[patch]]

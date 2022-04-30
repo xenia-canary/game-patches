@@ -1,6 +1,6 @@
 title_name = "Plants vs. Zombies"
 title_id = "584109FF" # XA-2559
-hash = "637FE58E99423985" # TODO: Add module filename
+#hash = "" # TODO: Add module filename
 #media_id = "528550BC"
 
 [[patch]]

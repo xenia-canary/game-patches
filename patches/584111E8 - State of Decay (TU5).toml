@@ -1,6 +1,6 @@
 title_name = "State of Decay" # TU5
 title_id = "584111E8" # XA-4584
-hash = "513745B21E19ABD4" # default.xex(?) ## TODO: Hashes for TUs aren't correct
+#hash = "" # default.xex(?) ## TODO: Hashes for TUs aren't correct
 #media_id = "6F32E742"
 
 [[patch]]

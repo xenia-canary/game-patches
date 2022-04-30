@@ -1,6 +1,6 @@
 title_name = "Red Dead Redemption" # GOTY/Game Of The Year, Disc 1
 title_id = "5454082B" # TT-2091
-hash = "F8F5F22E950BE693" # default.xex
+#hash = "" # default.xex
 #media_id = "3EE87B76" http://redump.org/disc/58711
 
 [[patch]]

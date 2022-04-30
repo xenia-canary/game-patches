@@ -1,10 +1,10 @@
 title_name = "Batman: Arkham Origins" # TU3
 title_id = "57520828" # WR-2088
-#hash = "F1D41FE6B8C7DCD5" # Disc 1, default.xex
-#hash = "C997B71696942C79" # Disc 1, SP.xex
-#hash = "D1113F8666E72E6D" # Disc 2, default.xex
-#hash = "88408BE9B78AA995" # Disc 2, ExpansionInstaller.xex
-#hash = "501FEA1A782E8EC1" # Disc 2, MP.xex
+#hash = "" # Disc 1, default.xex
+#hash = "" # Disc 1, SP.xex
+#hash = "" # Disc 2, default.xex
+#hash = "" # Disc 2, ExpansionInstaller.xex
+#hash = "" # Disc 2, MP.xex
 #media_id = ""
 
 [[patch]]

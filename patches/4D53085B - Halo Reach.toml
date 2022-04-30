@@ -1,6 +1,6 @@
 title_name = "Halo: Reach"
 title_id = "4D53085B" # MS-2139
-hash = "DC167618365E3A8C" # default.xex
+#hash = "" # default.xex
 #media_id = "566C10D3" http://redump.org/disc/16109
 
 [[patch]]

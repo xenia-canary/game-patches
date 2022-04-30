@@ -1,6 +1,6 @@
 title_name = "Gun"
 title_id = "415607D3" # AV-2003
-hash = "B9CFB8B02628EF21" # default.xex
+#hash = "" # default.xex
 #media_id = "00000000"
 
 [[patch]]

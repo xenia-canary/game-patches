@@ -1,6 +1,6 @@
 title_name = "Skate 3"
 title_id = "454108E6" # EA-2278
-hash = "ACE81FE461A4BC8F" # default.xex
+#hash = "" # default.xex
 #media_id = "5C087C2C" http://redump.org/disc/13321
 
 [[patch]]

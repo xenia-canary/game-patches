@@ -1,6 +1,6 @@
 title_name = "NIER"
 title_id = "535107E8" # SQ-2024
-hash = "B98F120F0DAAF44C" # default.xex
+#hash = "" # default.xex
 #media_id = "507D2720" http://redump.org/disc/13314
 
 [[patch]]

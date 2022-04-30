@@ -1,8 +1,8 @@
 title_name = "Final Fantasy XIII" # 13
 title_id = "535107E4" # SQ-2020
-#hash = "A5D9F59CD318B594" # Disc 1, default.xex
-#hash = "2B1B2B51196532D3" # Disc 2, default.xex
-#hash = "67AE4C02CC7E8FD4" # Disc 3, default.xex
+#hash = "" # Disc 1, default.xex
+#hash = "" # Disc 2, default.xex
+#hash = "" # Disc 3, default.xex
 #media_id = "602A3E5A" Disc 1, http://redump.org/disc/12485
 #media_id = "40E764B6" Disc 2, http://redump.org/disc/12486
 #media_id = "0FE8E2F9" Disc 3, http://redump.org/disc/12487

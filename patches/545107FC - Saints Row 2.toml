@@ -1,6 +1,6 @@
 title_name = "Saints Row 2"
 title_id = "545107FC" # TQ-2044
-hash = "F33AAE3E07805694" # TODO: Add module filename
+#hash = "" # TODO: Add module filename
 #media_id = "43400270"
 
 [[patch]]

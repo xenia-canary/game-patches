@@ -1,6 +1,6 @@
 title_name = "Armored Core 4"
 title_id = "465307D6" # FS-2006
-hash = "68FB6D400D6A766C" # TODO: Add module filename
+#hash = "" # TODO: Add module filename
 #media_id = ""
 
 [[patch]]

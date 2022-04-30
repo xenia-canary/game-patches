@@ -1,6 +1,6 @@
 title_name = "Burnout Paradise" # 1.00
 title_id = "45410806" # EA-2054
-hash = "13C8BCDF2EFCEE62" # TODO: Add module filename
+#hash = "" # TODO: Add module filename
 #media_id = ""
 
 [[patch]]

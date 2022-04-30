@@ -1,6 +1,6 @@
 title_name = "Far Cry 3"
 title_id = "5553088C" # US-2188
-hash = "D868DF28844095D" # TODO: Add module filename ## TODO: This hash is bad
+#hash = "" # TODO: Add module filename ## TODO: This hash is bad
 #media_id = "6F6EAD36" http://redump.org/disc/54368
 
 [[patch]]

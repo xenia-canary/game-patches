@@ -1,6 +1,6 @@
 title_name = "DEADRISING 2 CASE WEST"
 title_id = "58410B00" # XA-2816
-hash = "AB92C9FE8959D527" # TODO: Add module filename
+#hash = "" # TODO: Add module filename
 #media_id = "198BA306"
 
 [[patch]]

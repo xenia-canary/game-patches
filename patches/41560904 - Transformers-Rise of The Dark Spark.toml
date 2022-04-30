@@ -1,6 +1,6 @@
 title_name = "Transformers: Rise of The Dark Spark"
 title_id = "41560904" # AV-2308
-hash = "3D80DDB6879F0E01" # TODO: Add module filename
+#hash = "" # TODO: Add module filename
 #media_id = "50D83F2D" http://redump.org/disc/41959
 
 [[patch]]

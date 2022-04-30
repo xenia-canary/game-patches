@@ -1,6 +1,6 @@
 title_name = "Alice: Madness Returns"
 title_id = "45410916" # EA-2326
-hash = "EC884B235D7F930C" # default.xex
+#hash = "" # default.xex
 #media_id = "31C4B45C" http://redump.org/disc/38414
 
 [[patch]]

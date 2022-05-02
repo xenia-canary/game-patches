@@ -40,7 +40,8 @@
     }
   },
   "eslintIgnore": [
-    "/*.toml"
+    "/*.toml",
+    "**/*.config.toml"
   ],
   "devDependencies": {
     "eslint": "^8.10.0",

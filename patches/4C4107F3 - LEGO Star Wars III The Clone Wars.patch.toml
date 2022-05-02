@@ -1,6 +1,6 @@
 title_name = "LEGO Star Wars III: The Clone Wars" # 3
 title_id = "4C4107F3" # LA-2035
-#hash = "" # Default.xex ## TODO: This hash is bad
+#hash = "" # Default.xex
 #media_id = "563D3E40" http://redump.org/disc/38506
 
 [[patch]]

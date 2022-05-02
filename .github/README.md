@@ -25,7 +25,7 @@ Game patches are now included with Xenia Canary.
 #### Enabling patches
 **`apply_patches` must be set to `true` in the Xenia config!**
 
-To enable patches, open the .toml file that corresponds to your game in a text editor (Notepad, [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [Notepad++](https://notepad-plus-plus.org/), etc.), and change `is_enabled` from `false` to `true`.
+To enable patches, open the .patch.toml file that corresponds to your game in a text editor (Notepad, [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [Notepad++](https://notepad-plus-plus.org/), etc.), and change `is_enabled` from `false` to `true`.
 
 #
 #### Note about aspect ratio patches
@@ -41,12 +41,12 @@ While most aspect ratio patches are 21:9 (3440/1440), they can be changed to oth
 
 ## Contributing
  * When submitting a patch, create a Pull Request for a file to be added to `/patches`.
- * New file must be named `Title ID - Game Title.toml`
-  <br>For example, a patch file for Blue Dragon must be called `4D5307DF - Blue Dragon.toml`.
+ * New file must be named `Title ID - Game Title.patch.toml`
+  <br>For example, a patch file for Blue Dragon must be called `4D5307DF - Blue Dragon.patch.toml`.
  * If the game you are submitting a patch for already has a file, then add to that file.
  * New file must contain the module hash, which can be [automatically or manually](#creating-patch-file) obtained.
     * For games with multiple executables or discs, it can have multiple hashes, but they must be commented out like so:
-      https://github.com/xenia-canary/game-patches/blob/11cc67c9c62e3ea18927f6e57bcd29b8839a7336/patches/4D5307DF%20-%20Blue%20Dragon.toml#L1-L5
+      https://github.com/xenia-canary/game-patches/blob/11cc67c9c62e3ea18927f6e57bcd29b8839a7336/patches/4D5307DF%20-%20Blue%20Dragon.patch.toml#L1-L5
  * File must contain an empty line at the end.
 
 ### Prerequisites

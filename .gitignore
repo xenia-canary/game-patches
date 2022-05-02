@@ -6,4 +6,4 @@
 !/create_patch.sh
 !/.github/**/*
 !/package.json
-!/patches/*.toml
+!/patches/*.patch.toml

@@ -115,7 +115,7 @@ new_patch_title_name=$(tr -d '"\\' <<<$new_patch_title_name) # " and \ are unsaf
 check_multiple_choice hash new_patch_hashes new_patch_hash new_patch_hashes_modules new_patch_hash_module
 if [[ -n "$new_patch_media_id" && -n "$new_patch_title_id" && -n "$new_patch_title_name" && -n "$new_patch_hash" && -n "$new_patch_hash_module" ]]; then
     new_patch_serial="$(xxd -p -r <<<${new_patch_title_id::4})-$((16#${new_patch_title_id:4}))"
-    new_patch_filename="$new_patch_title_id - $(tr -d '/:*?<>|™©' <<<${new_patch_title_name}.toml)"
+    new_patch_filename="$new_patch_title_id - $(tr -d '/:*?<>|™©' <<<"${new_patch_title_name}.patch.toml")"
     echo -e "\n\nPatch filename: ${new_patch_filename}\nPatch serial:   ${new_patch_serial}\nPatch hash:     ${new_patch_hash}\n"
 else
     prompt_error 'Media ID, title ID, title name, and/or hash are missing from the log.'$'\nMake sure log_level is set to 2 in the Xenia config.'
@@ -232,9 +232,6 @@ if [ -z $new_patch_type ]; then
                 new_patch_type=${valid_patch_types[5]}
             fi;;
     esac
-    #if [ -z $new_patch_type ]; then
-    #    prompt_error "No patch type! This should never happen..."
-    #fi
 fi
 unset valid_input_length_maximum
 if [[ $new_patch_type != ${valid_patch_types[4]} && $new_patch_type != ${valid_patch_types[5]} ]]; then

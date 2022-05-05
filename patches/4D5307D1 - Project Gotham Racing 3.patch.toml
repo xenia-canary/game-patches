@@ -19,12 +19,9 @@ title_id = "4D5307D1" # MS-2001
     author = "Margen67"
     is_enabled = false
 
-    [[patch.be16]]
-        address = 0x8217229E
-        value = 0x02D0
-    [[patch.be16]]
-        address = 0x821722A2
-        value = 0x0500
+    [[patch.be32]]
+        address = 0x82172284
+        value = 0x60000000
 
 [[patch]]
     name = "Disable Motion Blur"

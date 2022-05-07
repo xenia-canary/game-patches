@@ -10,11 +10,21 @@ title_id = "584107D5" # XA-2005
     is_enabled = false
 
     [[patch.be16]]
+        address = 0x8219D61C
+        value = 0x4280
+
+[[patch]]
+    name = "960x540 Resolution"
+    desc = "Original resolution is 1000x562."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
         address = 0x8219D62A
-        value = 0x0500
+        value = 0x03C0
     [[patch.be16]]
         address = 0x8219D62E
-        value = 0x02D0
+        value = 0x021C
 
 [[patch]]
     name = "Aspect Ratio"

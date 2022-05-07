@@ -24,3 +24,25 @@ title_id = "425307D1" # BS-2001
     [[patch.be16]]
         address = 0x821C95BE
         value = 0x0500
+
+[[patch]]
+    name = "960x540 Resolution"
+    desc = "Original resolution is 1024x600."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x821C95AE
+        value = 0x021C
+    [[patch.be16]]
+        address = 0x821C95BE
+        value = 0x03C0
+
+[[patch]]
+    name = "Disable MSAA (Multi-Sample Anti-Aliasing)"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821C966F
+        value = 0x00

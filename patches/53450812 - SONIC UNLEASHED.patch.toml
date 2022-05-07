@@ -19,9 +19,9 @@ title_id = "53450812" # SE-2066
     author = "slashiee, ICUP321"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x82BA9028
-        value = 0x38800500
+    [[patch.be16]]
+        address = 0x82BA902A
+        value = 0x0500
     [[patch.be32]]
         address = 0x8327B450
         value = 0x3F800000

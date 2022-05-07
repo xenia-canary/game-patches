@@ -24,6 +24,19 @@ title_id = "4D5307D1" # MS-2001
         value = 0x60000000
 
 [[patch]]
+    name = "960x540 Resolution"
+    desc = "Original resolution is 1024x600. Must be used in conjunction with 1280x720 patch."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82172292
+        value = 0x021C
+    [[patch.be16]]
+        address = 0x82172296
+        value = 0x03C0
+
+[[patch]]
     name = "Disable Motion Blur"
     author = "illusion"
     is_enabled = false

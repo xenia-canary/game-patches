@@ -18,9 +18,9 @@ title_id = "415607DD" # AV-2013
     [[patch.be16]]
         address = 0x82019126
         value = 0x0500
-    [[patch.be16]]
-        address = 0x8213DAC2
-        value = 0x0500
+    #[[patch.be16]]
+    #    address = 0x8213DAC2
+    #    value = 0x0500
     [[patch.be16]]
         address = 0x82019022
         value = 0x02D0
@@ -30,6 +30,31 @@ title_id = "415607DD" # AV-2013
     [[patch.be16]]
         address = 0x8201912A
         value = 0x02D0
+    #[[patch.be16]]
+    #    address = 0x8213DAA6
+    #    value = 0x02D0
+
+[[patch]]
+    name = "960x540 Resolution"
+    desc = "Original resolution is 1040x584. Displaces some menu elements."
+    author = "Margen67"
+    is_enabled = false
+
     [[patch.be16]]
-        address = 0x8213DAA6
-        value = 0x02D0
+        address = 0x8201901E
+        value = 0x03C0
+    [[patch.be16]]
+        address = 0x82019036
+        value = 0x03C0
+    [[patch.be16]]
+        address = 0x82019126
+        value = 0x03C0
+    [[patch.be16]]
+        address = 0x82019022
+        value = 0x021C
+    [[patch.be16]]
+        address = 0x8201903A
+        value = 0x021C
+    [[patch.be16]]
+        address = 0x8201912A
+        value = 0x021C

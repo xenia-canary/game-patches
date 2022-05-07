@@ -14,7 +14,7 @@ title_id = "4D5307F1" # MS-2033
 
 [[patch]]
     name = "1280x720 Resolution"
-    desc = "Original resolution is 1120x720. Breaks idle videos in main menu."
+    desc = "Original resolution is 1120x720."
     author = "Margen67"
     is_enabled = false
 

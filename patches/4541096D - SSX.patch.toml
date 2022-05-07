@@ -18,9 +18,19 @@ title_id = "4541096D" # EA-2413
     author = "Margen67"
     is_enabled = false
 
+    [[patch.be8]]
+        address = 0x82FB613F
+        value = 0x14
+
+[[patch]]
+    name = "960x540 Resolution"
+    desc = "Original resolution is 1120x584."
+    author = "Margen67"
+    is_enabled = false
+
     [[patch.be16]]
         address = 0x82FB618E
-        value = 0x0500
+        value = 0x03C0
     [[patch.be16]]
         address = 0x82FB6192
-        value = 0x02D0
+        value = 0x021C

@@ -18,9 +18,6 @@ title_id = "584108D3" # XA-2259
     desc = "Original resolution is 1920x1080."
     is_enabled = false
 
-    [[patch.be16]]
-        address = 0x821E608E
-        value = 0x0500
-    [[patch.be16]]
-        address = 0x821E6092
-        value = 0x02D0
+    [[patch.be8]]
+        address = 0x821E607F
+        value = 0x1C

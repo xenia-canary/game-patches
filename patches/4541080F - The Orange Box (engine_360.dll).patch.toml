@@ -1,0 +1,37 @@
+title_name = "The Orange Box"
+title_id = "4541080F" # (EA-2063)
+#media_id = "651A85DA"
+hash = "B433D6E33726406B" # engine_360.dll
+
+[[patch]]
+    name = "Bypass internet requirement"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x86114590
+        value = 0x39600000 # li r11,0x0
+
+[[patch]]
+    name = "Unlock FPS"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8614ab08
+        value = 0x60000000 # ori r0,r0,0x0
+    [[patch.be32]]
+        address = 0x8614ab0c
+        value = 0x39600001 # li r11,0x1
+
+[[patch]]
+    name = "Debug Log"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8636a664
+        value = 0x48000a00 # b DbgPrint
+    [[patch.be32]]
+        address = 0x8636a684
+        value = 0x480009e0 # b DbgPrint

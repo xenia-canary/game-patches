@@ -1,7 +1,7 @@
 title_name = "The Orange Box"
 title_id = "4541080F" # (EA-2063)
 #media_id = "651A85DA"
-#hash = "" # engine.dll
+hash = "B433D6E33726406B" # engine_360.dll
 
 [[patch]]
     name = "Bypass internet requirement"

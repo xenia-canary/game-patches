@@ -5,7 +5,7 @@ hash = "B433D6E33726406B" # engine_360.dll
 
 [[patch]]
     name = "Bypass internet requirement"
-    author = "illusion"
+    author = "illusion, Margen67"
     is_enabled = false
 
     [[patch.be32]]

@@ -12,3 +12,12 @@ hash = "E6114E3EE17EF575" # tf/bin/Client_360.dll
     [[patch.be16]] # cc_captiontrace 0
         address = 0x875d5d2e
         value = 0xd0b3
+
+[[patch]]
+    name = "Disable Bloom"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x875df486
+        value = 0x37b4

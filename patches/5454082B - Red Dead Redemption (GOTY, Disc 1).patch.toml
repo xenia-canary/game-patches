@@ -4,6 +4,19 @@ title_id = "5454082B" # TT-2091
 #media_id = "3EE87B76" http://redump.org/disc/58711
 
 [[patch]]
+    name = "Skip Intro"
+    desc = "Skips legal and intro videos."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8278F6B0
+        value = 0x480001A0 # b 0x8278F850
+    [[patch.be32]]
+        address = 0x8278F850
+        value = 0x3B600001 # li r27,0x1
+
+[[patch]]
     name = "Unlock FPS"
     desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
     author = "boma"

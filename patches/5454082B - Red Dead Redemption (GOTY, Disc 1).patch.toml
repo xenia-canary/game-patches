@@ -190,3 +190,13 @@ title_id = "5454082B" # TT-2091
     [[patch.be32]]
         address = 0x825B9DD8
         value = 0x900A0000
+
+[[patch]]
+    name = "Disable Sun Flare"
+    desc = "Sun flare effect can clip through buildings when playing with increased resolutions, this prevents the effect from rendering"
+    author = "emoose"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x827833B4
+        value = 0x4800

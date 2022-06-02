@@ -33,15 +33,13 @@ title_id = "545107D1" # TQ-2001
         value = 0x0001
     [[patch.be8]]
         address = 0x827F7A5C
-        value = 0x0
+        value = 0x00
     [[patch.be8]]
         address = 0x827F7A5D
-        value = 0x0
+        value = 0x00
     [[patch.be8]]
         address = 0x827F7A5E
-        value = 0x0
+        value = 0x00
     [[patch.be8]]
         address = 0x827F7A5F
-        value = 0x0
-
-		
+        value = 0x00

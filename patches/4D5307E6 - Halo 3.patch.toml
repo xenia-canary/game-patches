@@ -1,6 +1,6 @@
 title_name = "Halo 3"
 title_id = "4D5307E6" # MS-2022
-#hash = "" # default.xex
+hash = "F60C9314EB13F79F" # default.xex
 #media_id = "699E0227" http://redump.org/disc/7749
 
 [[patch]]

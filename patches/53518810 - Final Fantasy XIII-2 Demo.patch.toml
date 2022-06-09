@@ -1,6 +1,6 @@
 title_name = "Final Fantasy XIII-2 Demo" # 13
 title_id = "53518810" # SQ-34832
-#hash = "" # default.xex
+hash = "DAE1E6C320020E2B" # default.xex
 #media_id = "4835CB45"
 
 [[patch]]

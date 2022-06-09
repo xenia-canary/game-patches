@@ -1,9 +1,9 @@
 title_name = "Bean (GoldenEye 007)"
 title_id = "584108A9" # XA-2217
-#hash = "" # default.xex (modified)
-#hash = "" # Bean.xex (unmodified)
-#hash = "" # Bean_debug.xex
-#hash = "" # Bean_team.xex
+hash = "DF251CA57C1B6E94" # default.xex (modified)
+#hash = "7B1AA31EA7ADF975" # Bean.xex (unmodified)
+#hash = "55CB99E83BC1FF2E" # Bean_debug.xex
+#hash = "82081F8E1AEE2D0E" # Bean_team.xex
 #media_id = "00000000"
 
 [[patch]]

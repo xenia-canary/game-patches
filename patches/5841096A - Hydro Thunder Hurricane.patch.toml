@@ -1,6 +1,6 @@
 title_name = "Hydro Thunder Hurricane"
 title_id = "5841096A" # XA-2410
-#hash = "" # default.xex
+hash = "615B4AA49E75CD5F" # default.xex
 #media_id = "1F4C5091"
 
 [[patch]]

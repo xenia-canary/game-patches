@@ -1,6 +1,6 @@
 title_name = "LEGO Star Wars: The Complete Saga"
 title_id = "4C4107D7" # LA-2007
-#hash = "" # Default.xex
+hash = "6BE34440FDFD3BFD" # Default.xex
 #media_id = "5E486FF7" http://redump.org/disc/38504
 
 [[patch]]

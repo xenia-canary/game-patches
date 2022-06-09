@@ -1,6 +1,6 @@
 title_name = "The Orange Box"
 title_id = "4541080F" # EA-2063
-hash = "B433D6E33726406B" # engine_360.dll
+hash = "0781DC9FEF7F4812" # engine_360.dll
 #media_id = "651A85DA" http://redump.org/disc/11838
 
 [[patch]]

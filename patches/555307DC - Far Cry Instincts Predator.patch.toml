@@ -1,6 +1,6 @@
 title_name = "Far Cry Instincts: Predator" # FC
 title_id = "555307DC" # US-2012
-#hash = "" # default.xex
+hash = "3545B0D18EA51BC1" # default.xex
 #media_id = "4971ECEF" http://redump.org/disc/16404
 
 [[patch]]

@@ -1,6 +1,6 @@
 title_name = "Red Dead Redemption" # Original, NTSC
 title_id = "5454082B" # TT-2091
-#hash = "" # default.xex, disc
+hash = "33C4335190AD0715" # default.xex, disc
 #hash = "" # default.xex, digital
 #media_id = "2AAB34E2" http://redump.org/disc/13298
 

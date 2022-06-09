@@ -1,6 +1,6 @@
 title_name = "Kinect Star Wars"
 title_id = "4D53090E" # MS-2318
-#hash = "" # default.xex
+hash = "1DA5376FD736C512" # default.xex
 #media_id = "0967FCD4"
 
 [[patch]]

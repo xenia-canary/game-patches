@@ -1,6 +1,6 @@
 title_name = "Outrun™ Online Arcade"
 title_id = "58410968" # XA-2408
-#hash = "" # default.xex
+hash = "F16C96458B72705B" # default.xex
 #media_id = "3CB8E563"
 
 [[patch]]

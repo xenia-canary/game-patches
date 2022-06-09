@@ -1,6 +1,6 @@
 title_name = "Halo 3: ODST"
 title_id = "4D530877" # MS-2167
-#hash = "" # default.xex
+hash = "D268A257B417331D" # default.xex
 #media_id = "2299898F" http://redump.org/disc/12515
 
 [[patch]]

@@ -2,6 +2,7 @@ name: CI
 
 on:
   push:
+    branches-ignore: wip
     paths:
       - '.github/workflows/ci.yml'
       - 'package.json'

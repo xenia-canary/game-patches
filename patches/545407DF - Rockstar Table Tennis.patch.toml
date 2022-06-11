@@ -1,6 +1,6 @@
 title_name = "Rockstar Table Tennis"
 title_id = "545407DF" # TT-2015
-#hash = "" # TODO: Add module filename
+#hash = "" # default.xex
 #media_id = ""
 
 [[patch]]

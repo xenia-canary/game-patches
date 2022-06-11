@@ -1,6 +1,6 @@
 title_name = "Armored Core 4"
 title_id = "465307D6" # FS-2006
-#hash = "" # TODO: Add module filename
+#hash = "" # default.xex
 #media_id = ""
 
 [[patch]]

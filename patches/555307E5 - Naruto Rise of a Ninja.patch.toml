@@ -1,0 +1,13 @@
+title_name = "Naruto: Rise of a Ninja"
+title_id = "555307E5" # US-2021
+hash = "F5B9F4F7D7895C7A" # default.xex
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Speeds up the game."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821385E7
+        value = 0x01

@@ -11,3 +11,15 @@ title_id = "4D530910" # MS-2320
     [[patch.be8]]
         address = 0x828DF12B
         value = 0x01
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x822B2F4F
+        value = 0x01
+    [[patch.be8]]
+        address = 0x822B2F63
+        value = 0x01

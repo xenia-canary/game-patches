@@ -38,3 +38,15 @@ hash = "F68A4156E4D07529" # default.xex
     [[patch.be32]]
         address = 0x82442478
         value = 0x39600000
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829EF74F
+        value = 0x01
+    [[patch.be8]]
+        address = 0x829EF763
+        value = 0x01

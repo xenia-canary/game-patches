@@ -34,3 +34,239 @@ hash = "1A03CDC040BC167C" # default.xex
     [[patch.be16]]
         address = 0x8220D138
         value = 0x4800
+
+[[patch]]
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 1216x640."
+    author = "Margen67"
+    is_enabled = true
+
+    [[patch.be16]] # Does nothing(?)
+        address = 0x825faafa
+        value = 0x02d0
+    [[patch.be16]] # Does nothing(?)
+        address = 0x825fadf6
+        value = 0x0500
+    [[patch.be16]] # Does nothing(?)
+        address = 0x8260e9aa
+        value = 0x0500
+    [[patch.be16]] # Does nothing(?)
+        address = 0x8260e9b2
+        value = 0x02d0
+    [[patch.be16]] # Width (native 1216, 0x04c0)
+        address = 0x8260e9c6
+        value = 0x0500
+    [[patch.be16]] # Height, crashes at 720
+        address = 0x8260e9ce
+        value = 0x02d0
+## Width start
+    [[patch.be16]] # Does nothing(?)
+        address = 0x829eb142
+        value = 0x02d0
+#    [[patch.be8]] # 825f8bbc
+#        address = 0x825e8b7b
+#        value = 0x02 #82
+#    [[patch.be16]]
+#        address = 0x825e8b7e
+#        value = 0xf06b
+#    [[patch.be32]] # lwa
+#        address = 0x825ea608
+#        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x8260eb88
+#        value = 0x38600500 # li r3,0x500 (1280)
+#    [[patch.be32]]
+#        address = 0x826114e8
+#        value = 0x39400500
+#    [[patch.be32]] # Causes black on bottom of screen
+#        address = 0x826118bc
+#        value = 0x39400500
+##    [[patch.be32]]
+##        address = 0x825eb560
+##        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x8260eb08
+#        value = 0x38600500 # li r3,0x500 (1280)
+##    [[patch.be32]]
+##        address = 0x825e8b74
+##        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x8260ea20
+#        value = 0x38600500
+#    [[patch.be32]]
+#        address = 0x8260ea8c
+#        value = 0x38600500
+#    [[patch.be32]] # Breaks z-order(?)
+#        address = 0x8260f124
+#        value = 0x38600500
+###    [[patch.be32]] # Breaks rendering
+###        address = 0x825ec798
+###        value = 0x60000000
+###    [[patch.be8]] # Breaks rendering
+###        address = 0x825ec793
+###        value = 0x04 # 82
+###    [[patch.be16]] # Breaks rendering
+###        address = 0x825ec79a
+###        value = 0x3833
+#    [[patch.be32]] # Breaks post-processing/depth(?)
+#        address = 0x825ef258
+#        value = 0x39400500
+###    [[patch.be32]] # Black screen
+###        address = 0x8260f708
+###        value = 0x60000000
+##    [[patch.be32]]
+##        address = 0x8260f060
+##        value = 0x60000000
+#    [[patch.be32]] # Guest crash
+#        address = 0x8260f060
+#        value = 0x396004c0 # Patch this to 04c0
+#    [[patch.be32]]
+#        address = 0x8260f16c
+#        value = 0x38600500
+##    [[patch.be32]]
+##        address = 0x825ed5d4
+##        value = 0x60000000
+##    [[patch.be32]] # Guest crash
+##        address = 0x825f1d90
+##        value = 0x38600500
+#    [[patch.be32]] # Black screen
+#        address = 0x8260f084
+#        value = 0x39600500
+#    [[patch.be32]]
+#        address = 0x8260ece0
+#        value = 0x38600500
+#    [[patch.be32]] # Causes graphical glitches
+#        address = 0x8260f024
+#        value = 0x38600500
+###    [[patch.be32]] # Stretched screen
+###        address = 0x8260f870
+###        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x8260ef24
+#        value = 0x3ac00500
+#    [[patch.be32]] # Causes graphical glitches
+#        address = 0x8260efa8
+#        value = 0x38600500
+#    [[patch.be32]]
+#        address = 0x8260ec6c
+#        value = 0x38600500
+#    [[patch.be32]] # Black screen
+#        address = 0x825f1ef8
+#        value = 0x38600500
+##    [[patch.be32]]
+##        address = 0x825f1d1c
+##        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x825eb0b4
+#        value = 0x60000000
+##    [[patch.be32]]
+##        address = 0x8260ed58
+##        value = 0x60000000
+##    [[patch.be32]] # Breaks post-processing
+##        address = 0x825ee0ec
+##        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x8260ee04
+#        value = 0x60000000
+##    [[patch.be32]] # Breaks lighting
+##        address = 0x82614118
+##        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x825eccfc
+#        value = 0x60000000
+##    [[patch.be32]] # Breaks post-processing+lighting
+##        address = 0x825f4e10
+##        value = 0x60000000
+## Width end
+## Height start
+#    [[patch.be32]]
+#        address = 0x825e8bac
+#        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x825eb090
+#        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x825eb57c
+#        value = 0x60000000
+##    [[patch.be32]] # Corrupt graphics
+##        address = 0x825ec78c
+##        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x825ecd18
+#        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x825ed5e0
+#        value = 0x60000000
+#    [[patch.be32]] # Breaks post-processing+lighting
+#        address = 0x825ee10c
+#        value = 0x3b800280
+#    [[patch.be32]] # Breaks bloom
+#        address = 0x825ef260
+#        value = 0x39200280
+#    [[patch.be32]] # Guest crash
+#        address = 0x825f1d14
+#        value = 0x38800280
+#    [[patch.be32]]
+#        address = 0x825f1d88
+#        value = 0x38800280
+#    [[patch.be32]] # Breaks rendering
+#        address = 0x825f1ed8
+#        value = 0x38800280
+##    [[patch.be32]] # Scanlines, trippy
+##        address = 0x825f4e7c
+##        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x825f8bfc
+#        value = 0x60000000
+#    [[patch.be32]] # Does nothing(?)
+#        address = 0x8260ea04
+#        value = 0x388002d0
+    [[patch.be32]] # Guest crash
+        address = 0x8260ea84
+        value = 0x38800280
+    [[patch.be32]] # Guest crash
+        address = 0x8260eb00
+        value = 0x38800280
+    [[patch.be32]] # Guest crash
+        address = 0x8260eb80
+        value = 0x38800280
+    [[patch.be32]]
+        address = 0x8260ec30
+        value = 0x38800280
+    [[patch.be32]] # Guest crash
+        address = 0x8260ecd8
+        value = 0x38800280
+    [[patch.be32]] # Guest crash
+        address = 0x8260ed50
+        value = 0x38800280
+#    [[patch.be32]]
+#        address = 0x8260ee00
+#        value = 0x38800280
+#    [[patch.be32]]
+#        address = 0x8260ef40
+#        value = 0x3b000280
+#    [[patch.be32]]
+#        address = 0x8260ef7c
+#        value = 0x38800280
+#    [[patch.be32]] # Corrupt graphics
+#        address = 0x8260f01c
+#        value = 0x38800280
+#    [[patch.be32]] # Black screen
+#        address = 0x8260f098
+#        value = 0x38800280
+#    [[patch.be32]]
+#        address = 0x8260f11c
+#        value = 0x38800280
+#    [[patch.be32]]
+#        address = 0x8260f164
+#        value = 0x38800280
+##    [[patch.be32]] # Black screen
+##        address = 0x8260f704
+##        value = 0x60000000
+#    [[patch.be32]]
+#        address = 0x8260f8cc
+#        value = 0x60000000
+##    [[patch.be32]] # Scanlines, trippy
+##        address = 0x826141c4
+##        value = 0x60000000
+## Height end

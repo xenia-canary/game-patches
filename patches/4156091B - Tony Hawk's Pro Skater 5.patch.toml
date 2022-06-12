@@ -1,0 +1,12 @@
+title_name = "Tony Hawk Pro Skater 5"
+title_id = "4156091B" # AV-2331
+hash = "ED8C07C8D3E9FB2B" # Default.xex
+
+[[patch]]
+    name = "60 FPS"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82
+        value = 0x01

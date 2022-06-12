@@ -3,6 +3,6 @@
 !.gitattributes
 !.gitignore
 
-!/.github/**/*
+!/.github/README.md
 !/package.json
 !/patches/*.patch.toml

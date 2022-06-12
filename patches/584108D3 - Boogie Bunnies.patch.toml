@@ -21,3 +21,12 @@ hash = "8E476ED3391F2B32" # default.xex
     [[patch.be8]]
         address = 0x821E607F
         value = 0x1C
+
+[[patch]]
+    name = "Disable Blur"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8232C2F8
+        value = 0x41

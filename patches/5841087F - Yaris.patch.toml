@@ -1,0 +1,36 @@
+title_name = "Yaris"
+title_id = "5841087F" # XA-2175
+hash = "51D7BDA3A0593E95" # default.xex
+
+[[patch]]
+    name = "Disable Blur"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82130020
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x82130024
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x82130028
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x8213002C
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x82130030
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x82130034
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x82130038
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x8213003C
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x82130040
+        value = 0x00000000

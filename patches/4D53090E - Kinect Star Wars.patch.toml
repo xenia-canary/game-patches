@@ -11,3 +11,66 @@ hash = "1DA5376FD736C512" # default.xex
     [[patch.be8]]
         address = 0x82454BBB
         value = 0x01
+
+[[patch]]
+    name = "1280x720 Resolution"
+    author = "Margen67"
+    is_enabled = true
+
+#    [[patch.be16]]
+#        address = 0x822583DE
+#        value = 0x0500
+#    [[patch.be16]]
+#        address = 0x822583E2
+#        value = 0x02D0
+    [[patch.be16]] # Breaks rendering
+        address = 0x822583FA # Breaks rendering
+        value = 0x0500 # Breaks rendering
+    [[patch.be16]] # Breaks rendering
+        address = 0x822583FE # Breaks rendering
+        value = 0x02D0 # Breaks rendering
+#    [[patch.be16]]
+#        address = 0x8231747B
+#        value = 0x02D0
+#    [[patch.be16]]
+#        address = 0x823174BB
+#        value = 0x0500
+#    [[patch.be16]]
+#        address = 0x8232EC40
+#        value = 0x02D0
+#    [[patch.be16]]
+#        address = 0x8232EC98
+#        value = 0x0500
+#    [[patch.be16]]
+#        address = 0x8281D40A
+#        value = 0x02D0
+#    [[patch.be16]]
+#        address = 0x8281D42E
+#        value = 0x02D0
+#    [[patch.be16]]
+#        address = 0x8281D45A
+#        value = 0x0500
+#    [[patch.be16]]
+#        address = 0x828B79A2
+#        value = 0x02D0
+#    [[patch.be16]]
+#        address = 0x828B79AA
+#        value = 0x0500
+#    [[patch.be16]]
+#        address = 0x829FF37A
+#        value = 0x0500
+#    [[patch.be16]]
+#        address = 0x829FF3D6
+#        value = 0x02D0
+    [[patch.be16]] # Real
+        address = 0x82A5929A # Real
+        value = 0x0500 # Real
+    [[patch.be16]] # Real
+        address = 0x82A5929E # Real
+        value = 0x02D0 # Real
+#    [[patch.be16]]
+#        address = 0x82B30D81
+#        value = 0x0500
+#    [[patch.be16]]
+#        address = 0x82B30DCE
+#        value = 0x02D0

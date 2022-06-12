@@ -15,7 +15,7 @@ title_id = "4541087F" # EA-2175
 
 [[patch]]
     name = "21:9 Aspect Ratio"
-    desc = "Users need to disable the present_letterbox option in config for this patch to work"
+    desc = "Requires present_letterbox to be changed from true to false in the Xenia config."
     author = "tuukkas"
     is_enabled = false
 

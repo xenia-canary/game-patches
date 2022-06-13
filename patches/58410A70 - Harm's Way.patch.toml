@@ -1,6 +1,6 @@
 title_name = "Harm's Way"
 title_id = "58410A70" # XA-2672
-hash = "E65B0F80FF844C49" # default.xex
+#hash = "" # default.xex
 #media_id = "336F22CD"
 
 [[patch]]

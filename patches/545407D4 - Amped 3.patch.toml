@@ -1,6 +1,6 @@
 title_name = "Amped 3"
 title_id = "545407D4" # TT-2004
-hash = "B5ED27842F167674" # default.xex
+#hash = "" # default.xex
 #media_id = "2DFD68C2" http://redump.org/disc/7747
 
 [[patch]]

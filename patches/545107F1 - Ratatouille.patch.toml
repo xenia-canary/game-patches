@@ -1,6 +1,6 @@
 title_name = "Ratatouille"
 title_id = "545107F1" # TQ-2033
-hash = "529918FCA5600997" # DEFAULT.XEX
+#hash = "" # default.xex
 #media_id = "5F7B08F3"
 
 [[patch]]

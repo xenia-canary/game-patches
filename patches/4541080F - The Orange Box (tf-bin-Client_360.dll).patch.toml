@@ -1,6 +1,6 @@
 title_name = "The Orange Box" # Team Fortress 2
 title_id = "4541080F" # EA-2063
-hash = "946F93B576F9CF9D" # tf/bin/Client_360.dll
+#hash = "" # tf/bin/Client_360.dll
 #media_id = "651A85DA" http://redump.org/disc/11838
 
 [[patch]]

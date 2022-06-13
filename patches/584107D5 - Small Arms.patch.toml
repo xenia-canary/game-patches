@@ -1,6 +1,6 @@
 title_name = "Small Arms"
 title_id = "584107D5" # XA-2005
-hash = "90C49E2E1336127C" # default.xex
+#hash = "" # default.xex
 #media_id = "5C6ABFE7"
 
 [[patch]]

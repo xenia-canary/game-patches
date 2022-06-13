@@ -1,6 +1,6 @@
 title_name = "El Shaddai"
 title_id = "494F07D1" # IO-2001
-hash = "34A73675FE9488AB" # DEFAULT.XEX
+#hash = "" # default.xex
 #media_id = "640B378B" http://redump.org/disc/42246
 
 [[patch]]

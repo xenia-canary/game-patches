@@ -1,6 +1,6 @@
 title_name = "Midnight Club: Los Angeles" # MCLA, Complete Edition
 title_id = "545407F8" # TT-2040
-hash = "F6A6573D3F63A1C5" # default.xex
+#hash = "" # default.xex
 #media_id = "5940C9DB" http://redump.org/disc/64472/
 
 [[patch]]

@@ -1,6 +1,6 @@
 title_name = "Bionicle Heroes"
 title_id = "534307E2" # SC-2018
-hash = "AB3306CA1BD3A605" # default.xex
+#hash = "" # default.xex
 #media_id = "39D1B5B2" http://redump.org/disc/16209
 
 [[patch]]

@@ -1,6 +1,7 @@
 title_name = "Naruto: Rise of a Ninja"
 title_id = "555307E5" # US-2021
-hash = "F5B9F4F7D7895C7A" # default.xex
+#hash = "" # default.xex
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

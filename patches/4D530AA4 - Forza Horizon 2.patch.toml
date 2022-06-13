@@ -1,6 +1,6 @@
 title_name = "Forza Horizon 2"
 title_id = "4D530AA4" # MS-2724
-hash = "FF8F4005988C9FEF" # default.xex
+#hash = "" # default.xex
 
 [[patch]]
     name = "60 FPS"

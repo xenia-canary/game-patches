@@ -1,7 +1,7 @@
 title_name = "Man vs. Wild"
 title_id = "435607D9" # CV-2009
 #hash = "" # default.xex
-#media_id = ""
+#media_id = "30B5141E"
 
 [[patch]]
     name = "60 FPS"

@@ -1,7 +1,7 @@
 title_name = "Naruto: Rise of a Ninja"
 title_id = "555307E5" # US-2021
 #hash = "" # default.xex
-#media_id = ""
+#media_id = "12DF7A0D" http://redump.org/disc/69916/
 
 [[patch]]
     name = "60 FPS"

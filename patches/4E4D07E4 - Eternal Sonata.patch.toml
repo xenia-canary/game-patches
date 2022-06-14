@@ -1,7 +1,7 @@
 title_name = "Eternal Sonata"
 title_id = "4E4D07E4" # NM-2020
 #hash = "" # default.xex
-#media_id = ""
+#media_id = "6DEF2F38"
 
 [[patch]]
     name = "60 FPS"

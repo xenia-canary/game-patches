@@ -1,6 +1,6 @@
 title_name = "Yaris"
 title_id = "5841087F" # XA-2175
-#hash = "" # default.xex
+hash = "51D7BDA3A0593E95" # default.xex
 #media_id = "6E811938"
 
 [[patch]]
@@ -18,7 +18,7 @@ title_id = "5841087F" # XA-2175
         address = 0x82130028
         value = 0x00000000
     [[patch.be32]]
-        address = 0x8213002C
+        address = 0x8213002c
         value = 0x00000000
     [[patch.be32]]
         address = 0x82130030
@@ -30,7 +30,7 @@ title_id = "5841087F" # XA-2175
         address = 0x82130038
         value = 0x00000000
     [[patch.be32]]
-        address = 0x8213003C
+        address = 0x8213003c
         value = 0x00000000
     [[patch.be32]]
         address = 0x82130040

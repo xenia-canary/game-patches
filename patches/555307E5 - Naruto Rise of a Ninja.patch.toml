@@ -1,6 +1,6 @@
 title_name = "Naruto: Rise of a Ninja"
 title_id = "555307E5" # US-2021
-#hash = "" # default.xex
+hash = "F5B9F4F7D7895C7A" # default.xex
 #media_id = "12DF7A0D" http://redump.org/disc/69916/
 
 [[patch]]
@@ -10,5 +10,5 @@ title_id = "555307E5" # US-2021
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x821385E7
+        address = 0x821385e7
         value = 0x01

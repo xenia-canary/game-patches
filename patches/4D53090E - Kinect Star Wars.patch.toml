@@ -1,6 +1,6 @@
 title_name = "Kinect Star Wars"
 title_id = "4D53090E" # MS-2318
-#hash = "" # default.xex
+hash = "1DA5376FD736C512" # default.xex
 #media_id = "0967FCD4"
 
 [[patch]]
@@ -9,68 +9,68 @@ title_id = "4D53090E" # MS-2318
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82454BBB
+        address = 0x82454bbb
         value = 0x01
 
 [[patch]]
     name = "1280x720 Resolution"
     author = "Margen67"
-    is_enabled = true
+    is_enabled = false
 
 #    [[patch.be16]]
-#        address = 0x822583DE
+#        address = 0x822583de
 #        value = 0x0500
 #    [[patch.be16]]
-#        address = 0x822583E2
-#        value = 0x02D0
+#        address = 0x822583e2
+#        value = 0x02d0
     [[patch.be16]] # Breaks rendering
-        address = 0x822583FA # Breaks rendering
+        address = 0x822583fa # Breaks rendering
         value = 0x0500 # Breaks rendering
     [[patch.be16]] # Breaks rendering
-        address = 0x822583FE # Breaks rendering
-        value = 0x02D0 # Breaks rendering
+        address = 0x822583fe # Breaks rendering
+        value = 0x02d0 # Breaks rendering
 #    [[patch.be16]]
-#        address = 0x8231747B
-#        value = 0x02D0
+#        address = 0x8231747b
+#        value = 0x02d0
 #    [[patch.be16]]
-#        address = 0x823174BB
+#        address = 0x823174bb
 #        value = 0x0500
 #    [[patch.be16]]
-#        address = 0x8232EC40
-#        value = 0x02D0
+#        address = 0x8232ec40
+#        value = 0x02d0
 #    [[patch.be16]]
-#        address = 0x8232EC98
+#        address = 0x8232ec98
 #        value = 0x0500
 #    [[patch.be16]]
-#        address = 0x8281D40A
-#        value = 0x02D0
+#        address = 0x8281d40a
+#        value = 0x02d0
 #    [[patch.be16]]
-#        address = 0x8281D42E
-#        value = 0x02D0
+#        address = 0x8281d42e
+#        value = 0x02d0
 #    [[patch.be16]]
-#        address = 0x8281D45A
+#        address = 0x8281d45a
 #        value = 0x0500
 #    [[patch.be16]]
-#        address = 0x828B79A2
-#        value = 0x02D0
+#        address = 0x828b79a2
+#        value = 0x02d0
 #    [[patch.be16]]
-#        address = 0x828B79AA
+#        address = 0x828b79aa
 #        value = 0x0500
 #    [[patch.be16]]
-#        address = 0x829FF37A
+#        address = 0x829ff37a
 #        value = 0x0500
 #    [[patch.be16]]
-#        address = 0x829FF3D6
-#        value = 0x02D0
+#        address = 0x829ff3d6
+#        value = 0x02d0
     [[patch.be16]] # Real
-        address = 0x82A5929A # Real
+        address = 0x82a5929a # Real
         value = 0x0500 # Real
     [[patch.be16]] # Real
-        address = 0x82A5929E # Real
-        value = 0x02D0 # Real
+        address = 0x82a5929e # Real
+        value = 0x02d0 # Real
 #    [[patch.be16]]
-#        address = 0x82B30D81
+#        address = 0x82b30d81
 #        value = 0x0500
 #    [[patch.be16]]
-#        address = 0x82B30DCE
-#        value = 0x02D0
+#        address = 0x82b30dce
+#        value = 0x02d0

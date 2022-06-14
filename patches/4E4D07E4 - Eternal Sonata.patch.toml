@@ -1,6 +1,6 @@
 title_name = "Eternal Sonata"
 title_id = "4E4D07E4" # NM-2020
-#hash = "" # default.xex
+hash = "59C8684FEC416474" # default.xex
 #media_id = "6DEF2F38"
 
 [[patch]]
@@ -10,5 +10,5 @@ title_id = "4E4D07E4" # NM-2020
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8220871F
+        address = 0x8220871f
         value = 0x01

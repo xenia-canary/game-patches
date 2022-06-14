@@ -1,6 +1,6 @@
 title_name = "Forza Horizon"
 title_id = "4D5309C9" # MS-2505
-#hash = "" # default.xex
+#hash = "F68A4156E4D07529" # default.xex
 #media_id = "2B7A1346" http://redump.org/disc/84331
 
 [[patch]]
@@ -9,7 +9,7 @@ title_id = "4D5309C9" # MS-2505
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82D7894C
+        address = 0x82d7894c
         value = 0x60000000
 
 [[patch]]
@@ -18,13 +18,13 @@ title_id = "4D5309C9" # MS-2505
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8245B494
+        address = 0x8245b494
         value = 0x39600000
     [[patch.be32]]
-        address = 0x8245846C
+        address = 0x8245846c
         value = 0x39600000
     [[patch.be32]]
-        address = 0x8245849C
+        address = 0x8245849c
         value = 0x39600000
 
 [[patch]]
@@ -33,7 +33,7 @@ title_id = "4D5309C9" # MS-2505
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824408B0
+        address = 0x824408b0
         value = 0x39600000
     [[patch.be32]]
         address = 0x82442478
@@ -45,8 +45,8 @@ title_id = "4D5309C9" # MS-2505
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x829EF74F
+        address = 0x829ef74f
         value = 0x01
     [[patch.be8]]
-        address = 0x829EF763
+        address = 0x829ef763
         value = 0x01

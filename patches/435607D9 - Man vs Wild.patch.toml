@@ -1,16 +1,16 @@
 title_name = "Man vs. Wild"
 title_id = "435607D9" # CV-2009
-#hash = "" # default.xex
+#hash = "324FCEDFC383874D" # default.xex
 #media_id = "30B5141E"
 
 [[patch]]
     name = "60 FPS"
     author = "Margen67"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be8]]
-        address = 0x822BE743
+        address = 0x822be743
         value = 0x01
     [[patch.be8]]
-        address = 0x822BE757
+        address = 0x822be757
         value = 0x01

@@ -1,6 +1,6 @@
 title_name = "Forza Motorsport 4"
 title_id = "4D530910" # MS-2320
-#hash = "" # default.xex
+hash = "F65B49D981AF61A3" # default.xex
 #media_id = "33E7B39F"
 
 [[patch]]
@@ -9,7 +9,7 @@ title_id = "4D530910" # MS-2320
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x828DF12B
+        address = 0x828df12b
         value = 0x01
 
 [[patch]]
@@ -18,8 +18,8 @@ title_id = "4D530910" # MS-2320
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x822B2F4F
+        address = 0x822b2f4f
         value = 0x01
     [[patch.be8]]
-        address = 0x822B2F63
+        address = 0x822b2f63
         value = 0x01

@@ -1,6 +1,6 @@
 title_name = "Forza Horizon 2"
 title_id = "4D530AA4" # MS-2724
-#hash = "" # default.xex
+hash = "FF8F4005988C9FEF" # default.xex
 #media_id = "7C7779D1" http://redump.org/disc/60608/
 
 [[patch]]
@@ -9,8 +9,8 @@ title_id = "4D530AA4" # MS-2724
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82B71D4B
+        address = 0x82b71d4b
         value = 0x00
     [[patch.be8]]
-        address = 0x82B71D37
+        address = 0x82b71d37
         value = 0x00

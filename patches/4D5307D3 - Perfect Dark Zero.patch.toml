@@ -1,6 +1,6 @@
 title_name = "Perfect Dark: Zero"
 title_id = "4D5307D3" # MS-2003
-#hash = "" # default.xex
+#hash = "1A03CDC040BC167C" # default.xex
 #media_id = "41EEAFCB" http://redump.org/disc/11810
 
 [[patch]]
@@ -10,7 +10,7 @@ title_id = "4D5307D3" # MS-2003
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x826CFB75
+        address = 0x826cfb75
         value = 0x00
 
 [[patch]]
@@ -20,8 +20,8 @@ title_id = "4D5307D3" # MS-2003
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820EC158
-        value = 0x4018E38E
+        address = 0x820ec158
+        value = 0x4018e38e
 
 [[patch]] # TODO(illusion): Need to test with picked up weapons.
     name = "Bottomless Clip"
@@ -29,17 +29,17 @@ title_id = "4D5307D3" # MS-2003
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825744A8
-        value = 0x4E800020
+        address = 0x825744a8
+        value = 0x4e800020
     [[patch.be16]]
-        address = 0x8220D138
+        address = 0x8220d138
         value = 0x4800
 
 [[patch]]
     name = "1280x720 Resolution"
     desc = "Original resolution is 1216x640."
     author = "Margen67"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be16]] # Does nothing(?)
         address = 0x825faafa

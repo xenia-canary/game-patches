@@ -28,9 +28,9 @@ title_id = "545107D1" # TQ-2001
     author = "Hasster"
     is_enabled = false
 
-    [[patch.be16]]
-        address = 0x835F2163
-        value = 0x0001
+    [[patch.be8]]
+        address = 0x835F2164
+        value = 0x01
     [[patch.be32]]
         address = 0x827F7A5C
         value = 0x00000000

@@ -19,6 +19,6 @@ title_id = "4D53085B" # MS-2139
     author = "Serenity"
     is_enabled = false
 
-    [[patch.be32]]
+    [[patch.be8]]
         address = 0x8213d85f
         value = 0x20

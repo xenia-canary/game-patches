@@ -12,3 +12,13 @@ title_id = "4D53085B" # MS-2139
     [[patch.be32]]
         address = 0x82047C38
         value = 0x4018E38E
+        
+[[patch]]
+    name = "Super Speed"
+    desc = "Makes Player Run Super Fast."
+    author = "Serenity"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8213d85f
+        value = 0x20

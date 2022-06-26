@@ -1,6 +1,6 @@
 title_name = "Banjo-Kazooie"
 title_id = "58410954" # XA-2388
-#hash = "" # default.xex
+hash = "700FE3401F23C364" # default.xex
 #media_id = "69C685B7"
 
 [[patch]]

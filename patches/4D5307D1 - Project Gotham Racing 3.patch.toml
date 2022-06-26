@@ -1,6 +1,6 @@
 title_name = "Project Gotham Racing 3" # PGR
 title_id = "4D5307D1" # MS-2001
-#hash = "" # default.xex
+hash = "CCDD4477E074DBBC" # default.xex
 #media_id = ""
 
 [[patch]]

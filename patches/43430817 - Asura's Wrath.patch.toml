@@ -1,6 +1,6 @@
 title_name = "Asura's Wrath"
 title_id = "43430817" # CC-2071
-#hash = "" # default.xex
+hash = "904B784109438B34" # default.xex
 #media_id = "11DFADD6" http://redump.org/disc/38905
 
 [[patch]]

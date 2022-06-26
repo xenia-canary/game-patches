@@ -1,6 +1,6 @@
 title_name = "Halo: Combat Evolved Anniversary" # CE
 title_id = "4D5309B1" # MS-2481
-#hash = "" # default.xex
+hash = "0090413901D1E609" # default.xex
 #media_id = "00394009" http://redump.org/disc/37086
 
 [[patch]]

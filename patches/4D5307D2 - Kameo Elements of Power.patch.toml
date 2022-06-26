@@ -1,6 +1,6 @@
 title_name = "Kameo: Elements of Power"
 title_id = "4D5307D2" # MS-2002
-#hash = "" # default.xex
+hash = "1A83A0AF5C0EDFE8" # default.xex
 #media_id = ""
 
 [[patch]]

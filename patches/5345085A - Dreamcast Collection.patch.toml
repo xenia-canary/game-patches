@@ -1,6 +1,6 @@
 title_name = "Dreamcast Collection"
 title_id = "5345085A" # SE-2138
-#hash = "" # default.xex
+hash = "36A10BDBC2A9CBBD" # default.xex
 #media_id = "6876EE29" http://redump.org/disc/65367
 
 [[patch]]

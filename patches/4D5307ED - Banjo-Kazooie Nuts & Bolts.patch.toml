@@ -1,6 +1,6 @@
 title_name = "Banjo-Kazooie: Nuts & Bolts" # And, N&B
 title_id = "4D5307ED" # MS-2029
-#hash = "" # default.xex
+hash = "C03916823ADAC91B" # default.xex
 #media_id = "3E567DFF" http://redump.org/disc/11831
 
 [[patch]]

@@ -1,6 +1,6 @@
 title_name = "Shadows of the Damned"
 title_id = "4541092A" # EA-2346
-#hash = "" # default.xex
+hash = "66A1B4C48BA3D9D6" # default.xex
 #media_id = "64D9671A" http://redump.org/disc/58068
 
 [[patch]]

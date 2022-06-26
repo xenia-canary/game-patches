@@ -1,6 +1,6 @@
 title_name = "Dead or Alive 5 Ultimate" # DOA
 title_id = "4B5607E8" # KV-2024
-#hash = "" # default.xex
+hash = "39AC4DD4A180524A" # default.xex
 #media_id = "4C6BA48E" http://redump.org/disc/72662
 
 [[patch]]

@@ -1,6 +1,6 @@
 title_name = "Sonic Unleashed"
 title_id = "53450812" # SE-2066
-#hash = "" # default.xex
+hash = "D26ABDDDED840999" # default.xex
 #media_id = ""
 
 [[patch]]

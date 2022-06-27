@@ -1,7 +1,13 @@
 title_name = "Gears of War: Judgment"
 title_id = "4D530A26" # MS-2598
-#hash = "" # default.xex
-#media_id = "6DCAF3C2"
+hash = "8429D0AE190C10DB" # default.xex
+#media_id = "3528321A" # Disc (US EU) http://redump.org/disc/57311
+#media_id = "250B2C78" # Disc (EU)    http://redump.org/disc/65904
+#media_id = "6DCAF3C2" # XBLA (87daed863476d86f36a9c740aa6514cfd19d4e9d, da-DK en-AU en-CA en-HK en-IN en-NZ en-SG en-US en-ZA es-AR es-CL es-CO es-MX fi-FI fr-BE fr-CA ko-KR nb-NO nl-BE nl-NL pl-PL pt-PT)
+#media_id = "52ABEBAF" # XBLA (38c1bdea0e6237ac9afbc91e184d09bb280a65ca, de-AT de-CH de-DE fr-CH fr-FR)
+#media_id = "0308370F" # XBLA (74581ca18a3167fccf2210e120d69c73d2562442, ja-JP pt-BR)
+#media_id = "40589F37" # XBLA (78255903a89666c9d40deb8568cb32c2d84b39fb, en-GB en-IE ru-RU)
+#media_id = "72681C24" # XBLA (78762109ce79f9a34d32b3a6ec6c2cf581da2596, es-ES it-IT)
 
 [[patch]]
     name = "Unlock FPS"

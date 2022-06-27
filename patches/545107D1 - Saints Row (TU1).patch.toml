@@ -24,13 +24,13 @@ title_id = "545107D1" # TQ-2001
 
 [[patch]]
     name = "Enable r_ugly_mode"
-    desc = "Enables r_ugly_mode - more fps but worse graphics. might be unstable."
+    desc = "Higher FPS but worse graphics. Might be unstable."
     author = "Hasster"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x835F2164
+        address = 0x835f2164
         value = 0x01
     [[patch.be32]]
-        address = 0x827F7A5C
+        address = 0x827f7a5c
         value = 0x00000000

@@ -13,8 +13,8 @@ hash = "0090413901D1E609" # default.xex
         address = 0x82499306
         value = 0x0500
     [[patch.be16]]
-        address = 0x8249930A
-        value = 0x02D0
+        address = 0x8249930a
+        value = 0x02d0
 
 [[patch]]
     name = "960x540 Resolution"
@@ -24,7 +24,7 @@ hash = "0090413901D1E609" # default.xex
 
     [[patch.be16]]
         address = 0x82499306
-        value = 0x03C0
+        value = 0x03c0
     [[patch.be16]]
-        address = 0x8249930A
-        value = 0x021C
+        address = 0x8249930a
+        value = 0x021c

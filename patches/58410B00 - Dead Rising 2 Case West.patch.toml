@@ -9,5 +9,5 @@ title_id = "58410B00" # XA-2816
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823D2F9C
+        address = 0x823d2f9c
         value = 0x60000000

@@ -10,8 +10,8 @@ hash = "17887E84979FCCC7" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82047C38
-        value = 0x4018E38E
+        address = 0x82047c38
+        value = 0x4018e38e
 
 [[patch]]
     name = "Super Speed"

@@ -9,5 +9,5 @@ hash = "289C71F6DFBD17EA" # demos/Kameo/default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x820F09BF
+        address = 0x820f09bf
         value = 0x01

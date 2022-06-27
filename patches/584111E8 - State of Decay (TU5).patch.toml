@@ -9,11 +9,11 @@ title_id = "584111E8" # XA-4584
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8313A1BC
+        address = 0x8313a1bc
         value = 0x39600000
     [[patch.be32]]
-        address = 0x83139C24
+        address = 0x83139c24
         value = 0x39600000
     [[patch.be32]]
-        address = 0x831394CC
+        address = 0x831394cc
         value = 0x39200000

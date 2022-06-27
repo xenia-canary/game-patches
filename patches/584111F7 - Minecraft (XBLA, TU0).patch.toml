@@ -10,14 +10,14 @@ hash = "5FA6BE391D4387F1" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8298EE94 # xuiscene_credits
-        value = 0x82105EBC   # xuiscene_debug
+        address = 0x8298ee94 # xuiscene_credits
+        value = 0x82105ebc   # xuiscene_debug
     [[patch.be32]]
-        address = 0x8298EE80 # xuiscene_howtoplay_menu
-        value = 0x82106E64   # xuiscene_debugoverlay
+        address = 0x8298ee80 # xuiscene_howtoplay_menu
+        value = 0x82106e64   # xuiscene_debugoverlay
     [[patch.be32]]
-        address = 0x82106E8F
+        address = 0x82106e8f
         value = 0x00000000   # null .x
     [[patch.be32]]
-        address = 0x82106E94
+        address = 0x82106e94
         value = 0x00000000   # null ur

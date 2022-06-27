@@ -9,5 +9,5 @@ title_id = "534307E2" # SC-2018
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8228D763
+        address = 0x8228d763
         value = 0x01

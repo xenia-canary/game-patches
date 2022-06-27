@@ -10,7 +10,7 @@ hash = "28F00F6E583196E6" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8219D61C
+        address = 0x8219d61c
         value = 0x4280
 
 [[patch]]
@@ -20,11 +20,11 @@ hash = "28F00F6E583196E6" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8219D62A
-        value = 0x03C0
+        address = 0x8219d62a
+        value = 0x03c0
     [[patch.be16]]
-        address = 0x8219D62E
-        value = 0x021C
+        address = 0x8219d62e
+        value = 0x021c
 
 [[patch]]
     name = "Aspect Ratio"
@@ -33,5 +33,5 @@ hash = "28F00F6E583196E6" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8201FB54
-        value = 0x4018E38E
+        address = 0x8201fb54
+        value = 0x4018e38e

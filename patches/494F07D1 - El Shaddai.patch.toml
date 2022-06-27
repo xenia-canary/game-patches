@@ -10,7 +10,7 @@ hash = "55D3267BD0DB6BDE" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82220B20
+        address = 0x82220b20
         value = 0x60000000
 
 [[patch]]
@@ -20,10 +20,10 @@ hash = "55D3267BD0DB6BDE" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82220B36
-        value = 0x02D0
+        address = 0x82220b36
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x82220B32
+        address = 0x82220b32
         value = 0x0500
 
 [[patch]]
@@ -33,8 +33,8 @@ hash = "55D3267BD0DB6BDE" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82220B36
-        value = 0x021C
+        address = 0x82220b36
+        value = 0x021c
     [[patch.be16]]
-        address = 0x82220B32
-        value = 0x03C0
+        address = 0x82220b32
+        value = 0x03c0

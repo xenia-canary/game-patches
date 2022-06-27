@@ -9,5 +9,5 @@ title_id = "45410914" # EA-2324
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8226045C
-        value = 0x485B5DDC
+        address = 0x8226045c
+        value = 0x485b5ddc

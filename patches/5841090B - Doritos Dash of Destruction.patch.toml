@@ -10,5 +10,5 @@ hash = "92928DF65627C7DC" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x820C483F
+        address = 0x820c483f
         value = 0x00

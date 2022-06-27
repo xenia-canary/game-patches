@@ -9,7 +9,7 @@ title_id = "445007EA" # DP-2026
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x821FBA64
+        address = 0x821fba64
         value = 0x60000000
 
 [[patch]]
@@ -18,7 +18,7 @@ title_id = "445007EA" # DP-2026
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822E5868
+        address = 0x822e5868
         value = 0x60000000
 
 [[patch]]
@@ -27,5 +27,5 @@ title_id = "445007EA" # DP-2026
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82328AB4
+        address = 0x82328ab4
         value = 0x60000000

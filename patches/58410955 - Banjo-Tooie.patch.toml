@@ -11,131 +11,131 @@ hash = "CFE7D4B66FAC7096" # default.xex
 
     # These patches require break_on_debugbreak to be changed from true to false in the Xenia config.
     [[patch.be32]]
-        address = 0x825F4000
-        value = 0x3D208267
+        address = 0x825f4000
+        value = 0x3d208267
     [[patch.be32]]
-        address = 0x825F4004
-        value = 0x8929EF30
+        address = 0x825f4004
+        value = 0x8929ef30
     [[patch.be32]]
-        address = 0x825F4008
-        value = 0x814B0000
+        address = 0x825f4008
+        value = 0x814b0000
     [[patch.be32]]
-        address = 0x825F400C
-        value = 0x2C090000
+        address = 0x825f400c
+        value = 0x2c090000
     [[patch.be32]]
-        address = 0x825F4010
-        value = 0x4182000C
+        address = 0x825f4010
+        value = 0x4182000c
     [[patch.be32]]
-        address = 0x825F4014
+        address = 0x825f4014
         value = 0x39200002
     [[patch.be32]]
-        address = 0x825F4018
-        value = 0x4BC82E20
+        address = 0x825f4018
+        value = 0x4bc82e20
     [[patch.be32]]
-        address = 0x825F401C
+        address = 0x825f401c
         value = 0x39200001
     [[patch.be32]]
-        address = 0x825F4020
-        value = 0x4BC82E18
+        address = 0x825f4020
+        value = 0x4bc82e18
     [[patch.be32]]
-        address = 0x825F4024
+        address = 0x825f4024
         value = 0x60000000
     [[patch.be32]]
-        address = 0x825F4028
-        value = 0x3D608267
+        address = 0x825f4028
+        value = 0x3d608267
     [[patch.be32]]
-        address = 0x825F402C
-        value = 0x896BEF30
+        address = 0x825f402c
+        value = 0x896bef30
     [[patch.be32]]
-        address = 0x825F4030
-        value = 0x94C30004
+        address = 0x825f4030
+        value = 0x94c30004
     [[patch.be32]]
-        address = 0x825F4034
-        value = 0x907F0030
+        address = 0x825f4034
+        value = 0x907f0030
     [[patch.be32]]
-        address = 0x825F4038
-        value = 0x2C0B0000
+        address = 0x825f4038
+        value = 0x2c0b0000
     [[patch.be32]]
-        address = 0x825F403C
-        value = 0x4182000C
+        address = 0x825f403c
+        value = 0x4182000c
     [[patch.be32]]
-        address = 0x825F4040
+        address = 0x825f4040
         value = 0x39600002
     [[patch.be32]]
-        address = 0x825F4044
-        value = 0x4BD05ED4
+        address = 0x825f4044
+        value = 0x4bd05ed4
     [[patch.be32]]
-        address = 0x825F4048
+        address = 0x825f4048
         value = 0x39600001
     [[patch.be32]]
-        address = 0x825F404C
-        value = 0x4BD05ECC
+        address = 0x825f404c
+        value = 0x4bd05ecc
     [[patch.be32]]
-        address = 0x825F4050
+        address = 0x825f4050
         value = 0x60000000
     [[patch.be16]]
-        address = 0x822C8932
-        value = 0x073C
+        address = 0x822c8932
+        value = 0x073c
     [[patch.be32]]
-        address = 0x82276E34
-        value = 0x4837D1CC
+        address = 0x82276e34
+        value = 0x4837d1cc
     [[patch.be32]]
-        address = 0x822F9F10
-        value = 0x482FA118
+        address = 0x822f9f10
+        value = 0x482fa118
     [[patch.be32]]
-        address = 0x822F9F14
+        address = 0x822f9f14
         value = 0x60000000
     [[patch.be32]]
-        address = 0x822F9F18
+        address = 0x822f9f18
         value = 0x60000000
     [[patch.be16]]
-        address = 0x821A22E6
-        value = 0x1EDC
+        address = 0x821a22e6
+        value = 0x1edc
     [[patch.be16]]
-        address = 0x821A22EA
+        address = 0x821a22ea
         value = 0x4238
     [[patch.be16]]
-        address = 0x821A22EE
-        value = 0x0B20
+        address = 0x821a22ee
+        value = 0x0b20
     [[patch.be16]]
-        address = 0x821A2326
-        value = 0x1EDC
+        address = 0x821a2326
+        value = 0x1edc
     [[patch.be16]]
-        address = 0x821A232A
-        value = 0x0B30
+        address = 0x821a232a
+        value = 0x0b30
     [[patch.be16]]
-        address = 0x821A232E
+        address = 0x821a232e
         value = 0x0800
     [[patch.be16]]
-        address = 0x821A235A
+        address = 0x821a235a
         value = 0x0774
     [[patch.be16]]
-        address = 0x8213E2EE
+        address = 0x8213e2ee
         value = 0x2060
     [[patch.be16]]
-        address = 0x8213E2F2
+        address = 0x8213e2f2
         value = 0x4238
     [[patch.be16]]
-        address = 0x8213E2F6
-        value = 0x28F0
+        address = 0x8213e2f6
+        value = 0x28f0
     [[patch.be16]]
-        address = 0x8213E32E
+        address = 0x8213e32e
         value = 0x2060
     [[patch.be16]]
-        address = 0x8213E332
-        value = 0x0B30
+        address = 0x8213e332
+        value = 0x0b30
     [[patch.be16]]
-        address = 0x8213E336
-        value = 0x13F4
+        address = 0x8213e336
+        value = 0x13f4
     [[patch.be16]]
-        address = 0x8213E342
+        address = 0x8213e342
         value = 0x4238
     [[patch.be16]]
-        address = 0x8213E362
-        value = 0x0B0C
+        address = 0x8213e362
+        value = 0x0b0c
     [[patch.be16]]
-        address = 0x821129BA
-        value = 0x1EF8
+        address = 0x821129ba
+        value = 0x1ef8
 
 [[patch]]
     name = "HD Shadows"
@@ -144,29 +144,29 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82601ECE
-        value = 0x062A
+        address = 0x82601ece
+        value = 0x062a
     [[patch.be16]]
-        address = 0x82601EE2
+        address = 0x82601ee2
         value = 0x0613
     [[patch.be16]]
-        address = 0x82601EE6
-        value = 0x060C
+        address = 0x82601ee6
+        value = 0x060c
     [[patch.be16]]
-        address = 0x82601EF2
-        value = 0x062A
+        address = 0x82601ef2
+        value = 0x062a
     [[patch.be16]]
-        address = 0x82601EF6
-        value = 0x061C
+        address = 0x82601ef6
+        value = 0x061c
     [[patch.be16]]
-        address = 0x82601EFE
+        address = 0x82601efe
         value = 0x0665
     [[patch.be16]]
-        address = 0x82601F0A
+        address = 0x82601f0a
         value = 0x0624
     [[patch.be16]]
-        address = 0x82601F0E
-        value = 0x060E
+        address = 0x82601f0e
+        value = 0x060e
 
 [[patch]]
     name = "Nests And Stairs LOD Hack"
@@ -175,7 +175,7 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82261FDC
+        address = 0x82261fdc
         value = 0x60000000
     [[patch.be32]]
         address = 0x82262074
@@ -184,56 +184,56 @@ hash = "CFE7D4B66FAC7096" # default.xex
         address = 0x82263004
         value = 0x48391050
     [[patch.be32]]
-        address = 0x825F4054
-        value = 0x817C0004
+        address = 0x825f4054
+        value = 0x817c0004
     [[patch.be32]]
-        address = 0x825F4058
-        value = 0x2C0B07A8
+        address = 0x825f4058
+        value = 0x2c0b07a8
     [[patch.be32]]
-        address = 0x825F405C
+        address = 0x825f405c
         value = 0x40820010
     [[patch.be32]]
-        address = 0x825F4060
-        value = 0x3D604F80
+        address = 0x825f4060
+        value = 0x3d604f80
     [[patch.be32]]
-        address = 0x825F4064
-        value = 0x917C07E0
+        address = 0x825f4064
+        value = 0x917c07e0
     [[patch.be32]]
-        address = 0x825F4068
-        value = 0x917C07E4
+        address = 0x825f4068
+        value = 0x917c07e4
     [[patch.be32]]
-        address = 0x825F406C
+        address = 0x825f406c
         value = 0x81784670
     [[patch.be32]]
-        address = 0x825F4070
-        value = 0x4BC6EF98
+        address = 0x825f4070
+        value = 0x4bc6ef98
     [[patch.be32]]
         address = 0x82262088
-        value = 0x48391FEC
+        value = 0x48391fec
     [[patch.be32]]
-        address = 0x825F4074
-        value = 0x819F0004
+        address = 0x825f4074
+        value = 0x819f0004
     [[patch.be32]]
-        address = 0x825F4078
-        value = 0x2C0C0188
+        address = 0x825f4078
+        value = 0x2c0c0188
     [[patch.be32]]
-        address = 0x825F407C
+        address = 0x825f407c
         value = 0x40820010
     [[patch.be32]]
-        address = 0x825F4080
-        value = 0x3D804F80
+        address = 0x825f4080
+        value = 0x3d804f80
     [[patch.be32]]
-        address = 0x825F4084
-        value = 0x919F0190
+        address = 0x825f4084
+        value = 0x919f0190
     [[patch.be32]]
-        address = 0x825F4088
-        value = 0x919F0194
+        address = 0x825f4088
+        value = 0x919f0194
     [[patch.be32]]
-        address = 0x825F408C
+        address = 0x825f408c
         value = 0x38210070
     [[patch.be32]]
-        address = 0x825F4090
-        value = 0x4BC6DFFC
+        address = 0x825f4090
+        value = 0x4bc6dffc
 
 [[patch]]
     name = "Banjo Kazooie Fire Breath"
@@ -242,8 +242,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826024E0
-        value = 0x820D5388
+        address = 0x826024e0
+        value = 0x820d5388
 
 [[patch]]
     name = "Solo Kazooie Fire Breath"
@@ -252,8 +252,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82602DB0
-        value = 0x820EE1B8
+        address = 0x82602db0
+        value = 0x820ee1b8
 
 [[patch]]
     name = "Infinite Blue Eggs"
@@ -262,8 +262,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E772
-        value = 0xFFFE
+        address = 0x8262e772
+        value = 0xfffe
 
 [[patch]]
     name = "Infinite Fire Eggs"
@@ -271,8 +271,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E776
-        value = 0xFFFE
+        address = 0x8262e776
+        value = 0xfffe
 
 [[patch]]
     name = "Infinite Ice Eggs"
@@ -280,8 +280,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E77A
-        value = 0xFFFE
+        address = 0x8262e77a
+        value = 0xfffe
 
 [[patch]]
     name = "Infinite Grenade Eggs"
@@ -289,8 +289,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E77E
-        value = 0xFFFE
+        address = 0x8262e77e
+        value = 0xfffe
 
 [[patch]]
     name = "Infinite Clockwork Eggs"
@@ -298,8 +298,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E782
-        value = 0xFFFE
+        address = 0x8262e782
+        value = 0xfffe
 
 [[patch]]
     name = "Infinite Red Feathers"
@@ -307,8 +307,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E78A
-        value = 0xFFFE
+        address = 0x8262e78a
+        value = 0xfffe
 
 [[patch]]
     name = "Infinite Gold Feathers"
@@ -316,8 +316,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E78E
-        value = 0xFFFE
+        address = 0x8262e78e
+        value = 0xfffe
 
 [[patch]]
     name = "Infinite Glowbos"
@@ -325,8 +325,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E792
-        value = 0xFFFE
+        address = 0x8262e792
+        value = 0xfffe
 
 [[patch]]
     name = "Replace Blue Eggs With Gold Eggs"
@@ -335,7 +335,7 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A3C
+        address = 0x82601a3c
         value = 0x07
 
 [[patch]]
@@ -345,11 +345,11 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A41
+        address = 0x82601a41
         value = 0x06
     [[patch.be16]]
-        address = 0x8262E786
-        value = 0xFFFE
+        address = 0x8262e786
+        value = 0xfffe
 
 [[patch]]
     name = "Uncapped Blue Egg Shots"
@@ -358,8 +358,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A5A
-        value = 0xFF
+        address = 0x82601a5a
+        value = 0xff
 
 [[patch]]
     name = "Uncapped Fire Egg Shots"
@@ -367,8 +367,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A5C
-        value = 0xFF
+        address = 0x82601a5c
+        value = 0xff
 
 [[patch]]
     name = "Uncapped Ice Egg Shots"
@@ -376,8 +376,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A5E
-        value = 0xFF
+        address = 0x82601a5e
+        value = 0xff
 
 [[patch]]
     name = "Uncapped Grenade Egg Shots"
@@ -386,8 +386,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A60
-        value = 0xFF
+        address = 0x82601a60
+        value = 0xff
 
 [[patch]]
     name = "Pointless Uncapped Clockwork Egg Shots"
@@ -396,8 +396,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A62
-        value = 0xFF
+        address = 0x82601a62
+        value = 0xff
 
 [[patch]]
     name = "Uncapped Mine Egg Shots"
@@ -406,8 +406,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A64
-        value = 0xFF
+        address = 0x82601a64
+        value = 0xff
 
 [[patch]]
     name = "Uncapped Gold Egg Shots"
@@ -416,8 +416,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82601A66
-        value = 0xFF
+        address = 0x82601a66
+        value = 0xff
 
 [[patch]]
     name = "Infinite Ice Keys"
@@ -426,8 +426,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8262E7BE
-        value = 0xFFFE
+        address = 0x8262e7be
+        value = 0xfffe
 
 [[patch]]
     name = "Classic Jump Sounds"
@@ -436,8 +436,8 @@ hash = "CFE7D4B66FAC7096" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8260209C
-        value = 0x043B043C
+        address = 0x8260209c
+        value = 0x043b043c
     [[patch.be16]]
-        address = 0x826020A0
-        value = 0x043D
+        address = 0x826020a0
+        value = 0x043d

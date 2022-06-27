@@ -9,8 +9,8 @@ title_id = "465307D6" # FS-2006
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x821EF78C
-        value = 0x7C000215
+        address = 0x821ef78c
+        value = 0x7c000215
 
 [[patch]]
     name = "Infinite Ammo"
@@ -18,5 +18,5 @@ title_id = "465307D6" # FS-2006
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822B1A8C
+        address = 0x822b1a8c
         value = 0x60000000

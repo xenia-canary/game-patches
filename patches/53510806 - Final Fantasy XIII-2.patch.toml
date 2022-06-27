@@ -12,7 +12,7 @@ title_id = "53510806" # SQ-2054
         address = 0x82855494
         value = 0x39600001
     [[patch.be32]]
-        address = 0x828554C8
+        address = 0x828554c8
         value = 0x39400001
 
 [[patch]]
@@ -22,10 +22,10 @@ title_id = "53510806" # SQ-2054
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8225205C
+        address = 0x8225205c
         value = 0x40
     [[patch.be8]]
-        address = 0x82251D6C
+        address = 0x82251d6c
         value = 0x40
         # Font goes into path below:
         # 82247cf0 addi param_1=>s_sys/debug/...   = "sys/debug/DebugFontTextureDDS"

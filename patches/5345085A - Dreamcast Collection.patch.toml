@@ -10,8 +10,8 @@ hash = "36A10BDBC2A9CBBD" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x820887D6
-        value = 0x02D0
+        address = 0x820887d6
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x820887DA
+        address = 0x820887da
         value = 0x0410

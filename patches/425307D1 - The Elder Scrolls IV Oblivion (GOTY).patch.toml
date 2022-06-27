@@ -9,7 +9,7 @@ hash = "40AFA2A39DE3C37D" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8255F547
+        address = 0x8255f547
         value = 0x01
 
 [[patch]]
@@ -19,10 +19,10 @@ hash = "40AFA2A39DE3C37D" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x821C95AE
-        value = 0x02D0
+        address = 0x821c95ae
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x821C95BE
+        address = 0x821c95be
         value = 0x0500
 
 [[patch]]
@@ -32,11 +32,11 @@ hash = "40AFA2A39DE3C37D" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x821C95AE
-        value = 0x021C
+        address = 0x821c95ae
+        value = 0x021c
     [[patch.be16]]
-        address = 0x821C95BE
-        value = 0x03C0
+        address = 0x821c95be
+        value = 0x03c0
 
 [[patch]]
     name = "Disable MSAA (Multi-Sample Anti-Aliasing)"
@@ -44,5 +44,5 @@ hash = "40AFA2A39DE3C37D" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x821C966F
+        address = 0x821c966f
         value = 0x00

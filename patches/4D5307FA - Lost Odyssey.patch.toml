@@ -13,7 +13,7 @@ title_id = "4D5307FA" # MS-2042
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x827B4A0F
+        address = 0x827b4a0f
         value = 0x01
 
 [[patch]]
@@ -22,7 +22,7 @@ title_id = "4D5307FA" # MS-2042
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82305D74
+        address = 0x82305d74
         value = 0x40
 
 [[patch]]
@@ -31,7 +31,7 @@ title_id = "4D5307FA" # MS-2042
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x826E1884
+        address = 0x826e1884
         value = 0x40
 
 [[patch]]
@@ -40,7 +40,7 @@ title_id = "4D5307FA" # MS-2042
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x823B93CF
+        address = 0x823b93cf
         value = 0x10
 
 [[patch]]
@@ -50,11 +50,11 @@ title_id = "4D5307FA" # MS-2042
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x823D5FCC
+        address = 0x823d5fcc
         value = 0x4800
     [[patch.be16]]
-        address = 0x823D5A98
+        address = 0x823d5a98
         value = 0x4800
     [[patch.be32]]
-        address = 0x823DE090
+        address = 0x823de090
         value = 0x60000000

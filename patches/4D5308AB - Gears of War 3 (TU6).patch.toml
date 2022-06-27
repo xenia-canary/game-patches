@@ -10,10 +10,10 @@ title_id = "4D5308AB" # MS-2219
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8254E4A8
+        address = 0x8254e4a8
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82B09E5F
+        address = 0x82b09e5f
         value = 0x01
 
 [[patch]]
@@ -23,7 +23,7 @@ title_id = "4D5308AB" # MS-2219
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82873D28
+        address = 0x82873d28
         value = 0x39400000
 
 [[patch]]
@@ -43,13 +43,13 @@ title_id = "4D5308AB" # MS-2219
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8237271C
+        address = 0x8237271c
         value = 0x39600000
     [[patch.be32]]
         address = 0x82774444
         value = 0x39600000
     [[patch.be32]]
-        address = 0x827DB8B8
+        address = 0x827db8b8
         value = 0x39600000
 
 [[patch]]
@@ -58,8 +58,8 @@ title_id = "4D5308AB" # MS-2219
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8297A65C
-        value = 0x38A00010
+        address = 0x8297a65c
+        value = 0x38a00010
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
@@ -68,13 +68,13 @@ title_id = "4D5308AB" # MS-2219
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827CAB9C
-        value = 0x38A00001
+        address = 0x827cab9c
+        value = 0x38a00001
     [[patch.be32]]
-        address = 0x827CACF8
-        value = 0x38A00000
+        address = 0x827cacf8
+        value = 0x38a00000
     [[patch.be32]]
-        address = 0x827CAFE0
+        address = 0x827cafe0
         value = 0x38800004
 
 [[patch]]
@@ -83,8 +83,8 @@ title_id = "4D5308AB" # MS-2219
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82440F60
+        address = 0x82440f60
         value = 0x39600000
     [[patch.be32]]
-        address = 0x827B4C9C
+        address = 0x827b4c9c
         value = 0x39600000

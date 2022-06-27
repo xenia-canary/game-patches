@@ -10,7 +10,7 @@ title_id = "4541087F" # EA-2175
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8232D4E8
+        address = 0x8232d4e8
         value = 0x39600001
 
 [[patch]]
@@ -20,5 +20,5 @@ title_id = "4541087F" # EA-2175
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82000BF0
-        value = 0x4002F1BD
+        address = 0x82000bf0
+        value = 0x4002f1bd

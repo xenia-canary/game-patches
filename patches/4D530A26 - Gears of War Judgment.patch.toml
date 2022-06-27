@@ -16,10 +16,10 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8255DE08
+        address = 0x8255de08
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82BDC65B
+        address = 0x82bdc65b
         value = 0x01
 
 [[patch]]
@@ -29,7 +29,7 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8288E120
+        address = 0x8288e120
         value = 0x39400000
 
 [[patch]]
@@ -39,7 +39,7 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8234C778
+        address = 0x8234c778
         value = 0x39600000
 
 [[patch]]
@@ -49,7 +49,7 @@ hash = "8429D0AE190C10DB" # default.xex
 
     [[patch.be32]]
         address = 0x82999954
-        value = 0x38A00010
+        value = 0x38a00010
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
@@ -58,16 +58,16 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827E363C
-        value = 0x38A00000
+        address = 0x827e363c
+        value = 0x38a00000
     [[patch.be32]]
-        address = 0x827E3810
-        value = 0x38A00000
+        address = 0x827e3810
+        value = 0x38a00000
     [[patch.be32]]
-        address = 0x827E3970
+        address = 0x827e3970
         value = 0x38800004
     [[patch.be32]] # nop finishing render pass from branching to temporal AA resolve
-        address = 0x827E392C
+        address = 0x827e392c
         value = 0x60000000
 
 [[patch]]
@@ -77,10 +77,10 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824297FC
+        address = 0x824297fc
         value = 0x39400000
     [[patch.be32]]
-        address = 0x8242B598
+        address = 0x8242b598
         value = 0x39400000
 
 [[patch]]
@@ -89,8 +89,8 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824427A8
+        address = 0x824427a8
         value = 0x39600000
     [[patch.be32]]
-        address = 0x827CBD8C
+        address = 0x827cbd8c
         value = 0x39600000

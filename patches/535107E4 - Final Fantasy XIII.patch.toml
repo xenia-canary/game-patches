@@ -11,8 +11,8 @@ title_id = "535107E4" # SQ-2020
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827B6B48
+        address = 0x827b6b48
         value = 0x39600001
     [[patch.be32]]
-        address = 0x827B6B7C
+        address = 0x827b6b7c
         value = 0x39400001

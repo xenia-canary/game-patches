@@ -10,5 +10,5 @@ title_id = "415608AF" # AV-2223
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8248CB40
-        value = 0x48000DB8
+        address = 0x8248cb40
+        value = 0x48000db8

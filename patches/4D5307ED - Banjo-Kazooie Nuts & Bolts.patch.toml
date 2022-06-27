@@ -9,7 +9,7 @@ hash = "C03916823ADAC91B" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8228A83B
+        address = 0x8228a83b
         value = 0x01
 
 [[patch]]
@@ -18,20 +18,20 @@ hash = "C03916823ADAC91B" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82B96D7C
-        value = 0x38A00010
+        address = 0x82b96d7c
+        value = 0x38a00010
     [[patch.be32]]
-        address = 0x82B96E10
-        value = 0x38A00010
+        address = 0x82b96e10
+        value = 0x38a00010
     [[patch.be32]]
-        address = 0x82B96E10
-        value = 0x38A00010
+        address = 0x82b96e10
+        value = 0x38a00010
     [[patch.be32]]
-        address = 0x82B96B98
-        value = 0x38A00010
+        address = 0x82b96b98
+        value = 0x38a00010
     [[patch.be32]]
-        address = 0x823A8308
-        value = 0x38A00010
+        address = 0x823a8308
+        value = 0x38a00010
 
 [[patch]]
     name = "Disable Motion Blur"
@@ -39,7 +39,7 @@ hash = "C03916823ADAC91B" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8229F480
+        address = 0x8229f480
         value = 0x4800
 
 [[patch]]
@@ -48,7 +48,7 @@ hash = "C03916823ADAC91B" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8235F350
+        address = 0x8235f350
         value = 0x4800
 
 [[patch]]
@@ -57,7 +57,7 @@ hash = "C03916823ADAC91B" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8250C3B0
+        address = 0x8250c3b0
         value = 0x60000000
 
 [[patch]]
@@ -66,5 +66,5 @@ hash = "C03916823ADAC91B" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x829DD0D4
+        address = 0x829dd0d4
         value = 0x60000000

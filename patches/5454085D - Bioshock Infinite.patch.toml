@@ -10,10 +10,10 @@ title_id = "5454085D" # TT-2141
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8253D9B0
+        address = 0x8253d9b0
         value = 0x60000000
     [[patch.be8]]
-        address = 0x8227FE7F
+        address = 0x8227fe7f
         value = 0x01
 
 [[patch]]
@@ -23,7 +23,7 @@ title_id = "5454085D" # TT-2141
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825E6370
+        address = 0x825e6370
         value = 0x39400000
 
 [[patch]]
@@ -32,5 +32,5 @@ title_id = "5454085D" # TT-2141
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826D7984
-        value = 0x38A00010
+        address = 0x826d7984
+        value = 0x38a00010

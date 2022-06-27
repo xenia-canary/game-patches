@@ -9,5 +9,5 @@ title_id = "475007D2" # GP-2002
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8268F517
+        address = 0x8268f517
         value = 0x01

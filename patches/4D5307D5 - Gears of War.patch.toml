@@ -10,7 +10,7 @@ title_id = "4D5307D5" # MS-2005
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8223E7BB
+        address = 0x8223e7bb
         value = 0x01
 
 [[patch]]
@@ -19,7 +19,7 @@ title_id = "4D5307D5" # MS-2005
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8228FA40
+        address = 0x8228fa40
         value = 0x4800
 
 [[patch]]
@@ -28,10 +28,10 @@ title_id = "4D5307D5" # MS-2005
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82289DC0
+        address = 0x82289dc0
         value = 0x4800
     [[patch.be32]]
-        address = 0x8227E660
+        address = 0x8227e660
         value = 0x48000008
 
 [[patch]]
@@ -42,4 +42,4 @@ title_id = "4D5307D5" # MS-2005
 
     [[patch.be32]]
         address = 0x82487484
-        value = 0x38A00008
+        value = 0x38a00008

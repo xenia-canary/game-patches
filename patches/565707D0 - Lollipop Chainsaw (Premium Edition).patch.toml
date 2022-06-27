@@ -10,10 +10,10 @@ title_id = "565707D0" # VW-2000
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8253BC58
+        address = 0x8253bc58
         value = 0x60000000
     [[patch.be8]]
-        address = 0x829EB10B
+        address = 0x829eb10b
         value = 0x01
 
 [[patch]]
@@ -33,7 +33,7 @@ title_id = "565707D0" # VW-2000
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822EE938
+        address = 0x822ee938
         value = 0x39600000
 
 [[patch]]
@@ -43,7 +43,7 @@ title_id = "565707D0" # VW-2000
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x827E1650
+        address = 0x827e1650
         value = 0x4800
 
 [[patch]]
@@ -52,5 +52,5 @@ title_id = "565707D0" # VW-2000
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x829887AC
-        value = 0x38A00010
+        address = 0x829887ac
+        value = 0x38a00010

@@ -9,7 +9,7 @@ title_id = "584109FF" # XA-2559
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82137BF0
+        address = 0x82137bf0
         value = 0x60000000
 
 [[patch]]
@@ -18,5 +18,5 @@ title_id = "584109FF" # XA-2559
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8218B464
+        address = 0x8218b464
         value = 0x60000000

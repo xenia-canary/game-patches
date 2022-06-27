@@ -13,5 +13,5 @@ title_id = "57520828" # WR-2088
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8242C407
+        address = 0x8242c407
         value = 0x00

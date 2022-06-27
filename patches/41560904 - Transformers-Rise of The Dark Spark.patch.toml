@@ -10,7 +10,7 @@ title_id = "41560904" # AV-2308
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82808CAC
+        address = 0x82808cac
         value = 0x39400000
 
 [[patch]]
@@ -19,5 +19,5 @@ title_id = "41560904" # AV-2308
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82B5CE6C
-        value = 0x38A00010
+        address = 0x82b5ce6c
+        value = 0x38a00010

@@ -9,5 +9,5 @@ hash = "4014B7CD7653DC2C" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82454BBB
+        address = 0x82454bbb
         value = 0x01

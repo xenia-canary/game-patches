@@ -10,5 +10,5 @@ title_id = "45410806" # EA-2054
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825CFF74
+        address = 0x825cff74
         value = 0x39400001

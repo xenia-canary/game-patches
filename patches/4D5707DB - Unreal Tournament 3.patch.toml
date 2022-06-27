@@ -10,10 +10,10 @@ title_id = "4D5707DB" # MW-2011
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823FFCBC
+        address = 0x823ffcbc
         value = 0x60000000
     [[patch.be8]]
-        address = 0x826E7053
+        address = 0x826e7053
         value = 0x01
 
 [[patch]]
@@ -22,8 +22,8 @@ title_id = "4D5707DB" # MW-2011
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823F4E9C
-        value = 0x38A00010
+        address = 0x823f4e9c
+        value = 0x38a00010
 
 [[patch]]
     name = "Disable Most Post-Processing"

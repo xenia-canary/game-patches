@@ -10,10 +10,10 @@ title_id = "4B4E0823" # KN-2083
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825C72E8
+        address = 0x825c72e8
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82D21EB3
+        address = 0x82d21eb3
         value = 0x01
 
 [[patch]]
@@ -22,7 +22,7 @@ title_id = "4B4E0823" # KN-2083
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82A119D4
+        address = 0x82a119d4
         value = 0x39600000
 
 [[patch]]
@@ -31,5 +31,5 @@ title_id = "4B4E0823" # KN-2083
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x829D43B4
-        value = 0x38A00010
+        address = 0x829d43b4
+        value = 0x38a00010

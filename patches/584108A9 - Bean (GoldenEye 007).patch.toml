@@ -13,7 +13,7 @@ title_id = "584108A9" # XA-2217
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82188E70
+        address = 0x82188e70
         value = 0x60000000
 
 [[patch]]
@@ -25,14 +25,14 @@ title_id = "584108A9" # XA-2217
         address = 0x82426063
         value = 0x10
     [[patch.be32]]
-        address = 0x8238F7FC
-        value = 0x38A00010
+        address = 0x8238f7fc
+        value = 0x38a00010
     [[patch.be32]]
-        address = 0x823A5188
-        value = 0x38A00010
+        address = 0x823a5188
+        value = 0x38a00010
     [[patch.be32]]
-        address = 0x823A59E8
-        value = 0x38A00010
+        address = 0x823a59e8
+        value = 0x38a00010
 
 [[patch]]
     name = "Debug Menu"
@@ -41,7 +41,7 @@ title_id = "584108A9" # XA-2217
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82189F2B
+        address = 0x82189f2b
         value = 0x00
 
 [[patch]]
@@ -50,11 +50,11 @@ title_id = "584108A9" # XA-2217
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820AB8CC
+        address = 0x820ab8cc
         value = 0x60000000
     [[patch.be8]] # Startup
         address = 0x83063323
         value = 0x01
     [[patch.be8]] # Level start
-        address = 0x821379D7
+        address = 0x821379d7
         value = 0x01

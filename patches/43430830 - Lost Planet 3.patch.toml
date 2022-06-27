@@ -10,7 +10,7 @@ title_id = "43430830" # CC-2096
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82B08160
+        address = 0x82b08160
         value = 0x39600000
 
 [[patch]]
@@ -20,7 +20,7 @@ title_id = "43430830" # CC-2096
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822EE938
+        address = 0x822ee938
         value = 0x39600000
 
 [[patch]]
@@ -29,5 +29,5 @@ title_id = "43430830" # CC-2096
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x829887AC
-        value = 0x38A00010
+        address = 0x829887ac
+        value = 0x38a00010

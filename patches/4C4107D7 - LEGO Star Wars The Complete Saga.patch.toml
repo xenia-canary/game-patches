@@ -9,5 +9,5 @@ hash = "F625E735F4C9493F" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8200F241 # badwords.txt
+        address = 0x8200f241 # badwords.txt
         value = 0x34         # First char

@@ -10,7 +10,7 @@ title_id = "534507D6" # SE-2006
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82607B94
+        address = 0x82607b94
         value = 0x38800000
 
 [[patch]]
@@ -20,7 +20,7 @@ title_id = "534507D6" # SE-2006
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82607BB8
+        address = 0x82607bb8
         value = 0x38800000
 
 [[patch]]
@@ -30,7 +30,7 @@ title_id = "534507D6" # SE-2006
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8260A448
+        address = 0x8260a448
         value = 0x48000094
 
 [[patch]]
@@ -40,8 +40,8 @@ title_id = "534507D6" # SE-2006
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8204C584
-        value = 0x8260A5B0
+        address = 0x8204c584
+        value = 0x8260a5b0
 
 [[patch]]
     name = "Disable Shadows"
@@ -50,5 +50,5 @@ title_id = "534507D6" # SE-2006
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8260CE40
+        address = 0x8260ce40
         value = 0x48000204

@@ -10,7 +10,7 @@ title_id = "454108D8" # EA-2264
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82EB05D7
+        address = 0x82eb05d7
         value = 0x01
 
 [[patch]]
@@ -20,7 +20,7 @@ title_id = "454108D8" # EA-2264
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8292B858
+        address = 0x8292b858
         value = 0x48000020
 
 [[patch]]
@@ -29,7 +29,7 @@ title_id = "454108D8" # EA-2264
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82CFF13F
+        address = 0x82cff13f
         value = 0x10
 
 [[patch]]
@@ -38,8 +38,8 @@ title_id = "454108D8" # EA-2264
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82C9E2A8
-        value = 0x480001C4
+        address = 0x82c9e2a8
+        value = 0x480001c4
 
 [[patch]]
     name = "Disable FSAA (Full-Screen Anti-Aliasing)"
@@ -48,5 +48,5 @@ title_id = "454108D8" # EA-2264
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8371360B
+        address = 0x8371360b
         value = 0x00

@@ -10,7 +10,7 @@ hash = "D7DD6A7F3F3FC1D9" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8201901E
+        address = 0x8201901e
         value = 0x0500
     [[patch.be16]]
         address = 0x82019036
@@ -19,20 +19,20 @@ hash = "D7DD6A7F3F3FC1D9" # default.xex
         address = 0x82019126
         value = 0x0500
     #[[patch.be16]]
-    #    address = 0x8213DAC2
+    #    address = 0x8213dac2
     #    value = 0x0500
     [[patch.be16]]
         address = 0x82019022
-        value = 0x02D0
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8201903A
-        value = 0x02D0
+        address = 0x8201903a
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8201912A
-        value = 0x02D0
+        address = 0x8201912a
+        value = 0x02d0
     #[[patch.be16]]
-    #    address = 0x8213DAA6
-    #    value = 0x02D0
+    #    address = 0x8213daa6
+    #    value = 0x02d0
 
 [[patch]]
     name = "960x540 Resolution"
@@ -41,20 +41,20 @@ hash = "D7DD6A7F3F3FC1D9" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8201901E
-        value = 0x03C0
+        address = 0x8201901e
+        value = 0x03c0
     [[patch.be16]]
         address = 0x82019036
-        value = 0x03C0
+        value = 0x03c0
     [[patch.be16]]
         address = 0x82019126
-        value = 0x03C0
+        value = 0x03c0
     [[patch.be16]]
         address = 0x82019022
-        value = 0x021C
+        value = 0x021c
     [[patch.be16]]
-        address = 0x8201903A
-        value = 0x021C
+        address = 0x8201903a
+        value = 0x021c
     [[patch.be16]]
-        address = 0x8201912A
-        value = 0x021C
+        address = 0x8201912a
+        value = 0x021c

@@ -10,5 +10,5 @@ title_id = "535107FA" # SQ-2042
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822B14BC
-        value = 0x3B800000
+        address = 0x822b14bc
+        value = 0x3b800000

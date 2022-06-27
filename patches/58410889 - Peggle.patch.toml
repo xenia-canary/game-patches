@@ -9,5 +9,5 @@ title_id = "58410889" # XA-2185
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8227DA20
+        address = 0x8227da20
         value = 0x60000000

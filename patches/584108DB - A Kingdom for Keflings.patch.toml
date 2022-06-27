@@ -10,5 +10,5 @@ title_id = "584108DB" # XA-2267
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8214E930
+        address = 0x8214e930
         value = 0x60000000

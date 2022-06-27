@@ -9,5 +9,5 @@ title_id = "454107EC" # EA-2028
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826B4D38
-        value = 0x38A00000
+        address = 0x826b4d38
+        value = 0x38a00000

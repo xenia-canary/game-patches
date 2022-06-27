@@ -9,8 +9,8 @@ title_id = "545107FC" # TQ-2044
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82647EAC
-        value = 0x7C000215
+        address = 0x82647eac
+        value = 0x7c000215
 
 [[patch]]
     name = "Infinite Money"
@@ -18,20 +18,20 @@ title_id = "545107FC" # TQ-2044
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82644BD4
+        address = 0x82644bd4
         value = 0x48000008
     [[patch.be32]]
-        address = 0x82644BE4
+        address = 0x82644be4
         value = 0x38600000
     [[patch.be32]]
-        address = 0x82644BE8
-        value = 0x806B00AC
+        address = 0x82644be8
+        value = 0x806b00ac
     [[patch.be32]]
-        address = 0x82644BEC
-        value = 0x806B00AC
+        address = 0x82644bec
+        value = 0x806b00ac
     [[patch.be32]]
-        address = 0x82644BF0
+        address = 0x82644bf0
         value = 0x60000000
     [[patch.be32]]
-        address = 0x82644C04
-        value = 0x409A0015
+        address = 0x82644c04
+        value = 0x409a0015

@@ -10,10 +10,10 @@ title_id = "4D53082D" # MS-2093
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824A2E94
+        address = 0x824a2e94
         value = 0x60000000
     [[patch.be8]]
-        address = 0x8298CFB3
+        address = 0x8298cfb3
         value = 0x01
 
 [[patch]]
@@ -23,7 +23,7 @@ title_id = "4D53082D" # MS-2093
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822D86C0
+        address = 0x822d86c0
         value = 0x39600000
 
 [[patch]]
@@ -33,7 +33,7 @@ title_id = "4D53082D" # MS-2093
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822C5C94
+        address = 0x822c5c94
         value = 0x39600000
 
 [[patch]]
@@ -43,7 +43,7 @@ title_id = "4D53082D" # MS-2093
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826F9D18
+        address = 0x826f9d18
         value = 0x39600000
 
 [[patch]]
@@ -52,7 +52,7 @@ title_id = "4D53082D" # MS-2093
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8236004C
+        address = 0x8236004c
         value = 0x39600000
 
 [[patch]]
@@ -61,5 +61,5 @@ title_id = "4D53082D" # MS-2093
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8280E7FC
-        value = 0x38A00010
+        address = 0x8280e7fc
+        value = 0x38a00010

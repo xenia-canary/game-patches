@@ -10,7 +10,7 @@ hash = "CCDD4477E074DBBC" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82371FA4
+        address = 0x82371fa4
         value = 0x39400001
 
 [[patch]]
@@ -31,10 +31,10 @@ hash = "CCDD4477E074DBBC" # default.xex
 
     [[patch.be16]]
         address = 0x82172292
-        value = 0x021C
+        value = 0x021c
     [[patch.be16]]
         address = 0x82172296
-        value = 0x03C0
+        value = 0x03c0
 
 [[patch]]
     name = "Disable Motion Blur"
@@ -42,7 +42,7 @@ hash = "CCDD4477E074DBBC" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x824725DB
+        address = 0x824725db
         value = 0x00
 
 [[patch]]
@@ -52,8 +52,8 @@ hash = "CCDD4477E074DBBC" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8200E2C0
+        address = 0x8200e2c0
         value = 0x4000
     [[patch.be32]]
-        address = 0x820010B0
-        value = 0x40182D83
+        address = 0x820010b0
+        value = 0x40182d83

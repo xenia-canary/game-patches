@@ -10,73 +10,73 @@ hash = "98901469675D7641" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x821466E6
-        value = 0x02D0
+        address = 0x821466e6
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x821466EA
+        address = 0x821466ea
         value = 0x0500
     [[patch.be16]]
         address = 0x82149102
         value = 0x0500
     [[patch.be16]]
         address = 0x82149106
-        value = 0x02D0
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8217F00E
-        value = 0x02D0
+        address = 0x8217f00e
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8217F012
+        address = 0x8217f012
         value = 0x0500
     [[patch.be16]]
-        address = 0x8217F046
-        value = 0x02D0
+        address = 0x8217f046
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8217F04E
-        value = 0x02D0
+        address = 0x8217f04e
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8217F05A
-        value = 0x02D0
+        address = 0x8217f05a
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8217F05E
+        address = 0x8217f05e
         value = 0x0500
     [[patch.be16]]
-        address = 0x8217F06E
-        value = 0x02D0
+        address = 0x8217f06e
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8217F072
+        address = 0x8217f072
         value = 0x0500
     [[patch.be16]]
         address = 0x82224042
         value = 0x0500
     [[patch.be16]]
         address = 0x82224062
-        value = 0x02D0
+        value = 0x02d0
     [[patch.be16]]
         address = 0x82224066
         value = 0x0500
     [[patch.be16]]
-        address = 0x8222415A
+        address = 0x8222415a
         value = 0x0500
     [[patch.be16]]
-        address = 0x8222415E
-        value = 0x02D0
+        address = 0x8222415e
+        value = 0x02d0
     [[patch.be16]]
         address = 0x82224576
-        value = 0x02D0
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8222457A
+        address = 0x8222457a
         value = 0x0500
     [[patch.be16]]
-        address = 0x8222A326
-        value = 0x02D0
+        address = 0x8222a326
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8222A32A
+        address = 0x8222a32a
         value = 0x0500
     [[patch.be16]]
-        address = 0x8222ADE6
-        value = 0x02D0
+        address = 0x8222ade6
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x8222ADEE
+        address = 0x8222adee
         value = 0x0500
 
 [[patch]]
@@ -86,5 +86,5 @@ hash = "98901469675D7641" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82001C54
-        value = 0x4018E38E
+        address = 0x82001c54
+        value = 0x4018e38e

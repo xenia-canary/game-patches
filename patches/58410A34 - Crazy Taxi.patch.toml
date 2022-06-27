@@ -12,8 +12,8 @@ title_id = "58410A34" # XA-2612
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82208A46
-        value = 0x02D0
+        address = 0x82208a46
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x82208A4E
+        address = 0x82208a4e
         value = 0x0410

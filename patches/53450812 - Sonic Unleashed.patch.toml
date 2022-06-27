@@ -10,7 +10,7 @@ hash = "D26ABDDDED840999" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82BD24A3
+        address = 0x82bd24a3
         value = 0x01
 
 [[patch]]
@@ -20,17 +20,17 @@ hash = "D26ABDDDED840999" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82BA902A
+        address = 0x82ba902a
         value = 0x0500
     [[patch.be32]]
-        address = 0x8327B450
-        value = 0x3F800000
+        address = 0x8327b450
+        value = 0x3f800000
     [[patch.be32]]
-        address = 0x8327B454
-        value = 0x3F800000
+        address = 0x8327b454
+        value = 0x3f800000
     [[patch.be32]]
-        address = 0x8327B458
-        value = 0x3F800000
+        address = 0x8327b458
+        value = 0x3f800000
 
 [[patch]]
     name = "Disable Shadow Maps"
@@ -39,7 +39,7 @@ hash = "D26ABDDDED840999" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82BA6810
+        address = 0x82ba6810
         value = 0x39600000
 
 [[patch]]
@@ -48,10 +48,10 @@ hash = "D26ABDDDED840999" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82BAB224
+        address = 0x82bab224
         value = 0x60000000
     [[patch.be32]]
-        address = 0x82BAB178
+        address = 0x82bab178
         value = 0x39600000
 
 [[patch]]
@@ -61,7 +61,7 @@ hash = "D26ABDDDED840999" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82FB9BE0
+        address = 0x82fb9be0
         value = 0x60000000
 
 [[patch]]
@@ -71,5 +71,5 @@ hash = "D26ABDDDED840999" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820285B8
-        value = 0x4018E38E
+        address = 0x820285b8
+        value = 0x4018e38e

@@ -9,7 +9,7 @@ title_id = "425307DB" # BS-2011
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x83066E67
+        address = 0x83066e67
         value = 0x01
 
 [[patch]]
@@ -18,5 +18,5 @@ title_id = "425307DB" # BS-2011
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82CB09B8
-        value = 0xC3E92AA0
+        address = 0x82cb09b8
+        value = 0xc3e92aa0

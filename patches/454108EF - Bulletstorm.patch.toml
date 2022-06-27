@@ -10,10 +10,10 @@ title_id = "454108EF" # EA-2287
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82591DE8
+        address = 0x82591de8
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82C7BB5F
+        address = 0x82c7bb5f
         value = 0x01
 
 [[patch]]
@@ -23,7 +23,7 @@ title_id = "454108EF" # EA-2287
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8293C978
+        address = 0x8293c978
         value = 0x39400000
 
 [[patch]]
@@ -33,7 +33,7 @@ title_id = "454108EF" # EA-2287
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8232E680
+        address = 0x8232e680
         value = 0x39200000
 
 [[patch]]
@@ -42,8 +42,8 @@ title_id = "454108EF" # EA-2287
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82A514CC
-        value = 0x38A00010
+        address = 0x82a514cc
+        value = 0x38a00010
 
 [[patch]]
     name = "Disable Motion Blur"
@@ -52,11 +52,11 @@ title_id = "454108EF" # EA-2287
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825E6870
+        address = 0x825e6870
         value = 0x39600000
     [[patch.be32]]
         address = 0x82422708
         value = 0x39600000
     [[patch.be32]]
-        address = 0x8266B920
+        address = 0x8266b920
         value = 0x39600000

@@ -12,7 +12,7 @@ title_id = "454107D9" # EA-2009
         address = 0x82224710
         value = 0x39400000
     [[patch.be32]]
-        address = 0x8222442C
+        address = 0x8222442c
         value = 0x39200000
 
 [[patch]]
@@ -21,8 +21,8 @@ title_id = "454107D9" # EA-2009
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825E1D3C
-        value = 0x2F050001
+        address = 0x825e1d3c
+        value = 0x2f050001
     [[patch.be32]]
-        address = 0x825E1D40
-        value = 0x419A0010
+        address = 0x825e1d40
+        value = 0x419a0010

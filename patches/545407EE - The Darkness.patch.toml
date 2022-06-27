@@ -10,11 +10,11 @@ hash = "29362A3C8309E1AC" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822745D0
-        value = 0x3D608206
+        address = 0x822745d0
+        value = 0x3d608206
     [[patch.be32]]
-        address = 0x822745E0
-        value = 0xC00BC06C
+        address = 0x822745e0
+        value = 0xc00bc06c
 
 # Credit to patcher Bader for FOV patch, taken from https://www.reddit.com/r/ps4homebrew/comments/o2xe6u/60fps_patch_for_ghost_of_tsushima_ps4_pro_only/h35tfuy
 [[patch]]
@@ -24,5 +24,5 @@ hash = "29362A3C8309E1AC" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8209DFF4
-        value = 0x42B40000
+        address = 0x8209dff4
+        value = 0x42b40000

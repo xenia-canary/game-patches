@@ -10,5 +10,5 @@ title_id = "535107E8" # SQ-2024
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8256BB90
+        address = 0x8256bb90
         value = 0x60000000

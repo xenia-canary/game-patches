@@ -9,7 +9,7 @@ title_id = "434307D4" # CC-2004
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8250A69C
+        address = 0x8250a69c
         value = 0x60000000
 
 [[patch]]
@@ -18,7 +18,7 @@ title_id = "434307D4" # CC-2004
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x821BC1A4
+        address = 0x821bc1a4
         value = 0x60000000
 
 [[patch]]
@@ -38,7 +38,7 @@ title_id = "434307D4" # CC-2004
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827597D0
+        address = 0x827597d0
         value = 0x60000000
 
 [[patch]]
@@ -48,5 +48,5 @@ title_id = "434307D4" # CC-2004
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8264337C
+        address = 0x8264337c
         value = 0x60000000

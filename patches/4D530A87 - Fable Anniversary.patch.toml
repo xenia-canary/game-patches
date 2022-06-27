@@ -10,7 +10,7 @@ title_id = "4D530A87" # MS-2695
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826F348C
+        address = 0x826f348c
         value = 0x60000000
 
 [[patch]]
@@ -19,5 +19,5 @@ title_id = "4D530A87" # MS-2695
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82BBE34C
-        value = 0x38A00010
+        address = 0x82bbe34c
+        value = 0x38a00010

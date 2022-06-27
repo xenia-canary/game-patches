@@ -10,14 +10,14 @@ title_id = "544307D5" # TC-2005
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x83648AEE
-        value = 0x02D0
+        address = 0x83648aee
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x837EBA46
-        value = 0x02D0
+        address = 0x837eba46
+        value = 0x02d0
     [[patch.be16]]
-        address = 0x83648AF2
+        address = 0x83648af2
         value = 0x0500
     [[patch.be16]]
-        address = 0x837EBA42
+        address = 0x837eba42
         value = 0x0500

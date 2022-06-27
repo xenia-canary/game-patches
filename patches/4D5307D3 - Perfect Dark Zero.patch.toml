@@ -10,7 +10,7 @@ hash = "C1572363239DB6CE" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x826CFB75
+        address = 0x826cfb75
         value = 0x00
 
 [[patch]]
@@ -20,8 +20,8 @@ hash = "C1572363239DB6CE" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820EC158
-        value = 0x4018E38E
+        address = 0x820ec158
+        value = 0x4018e38e
 
 [[patch]] # TODO(illusion): Need to test with picked up weapons.
     name = "Bottomless Clip"
@@ -29,8 +29,8 @@ hash = "C1572363239DB6CE" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825744A8
-        value = 0x4E800020
+        address = 0x825744a8
+        value = 0x4e800020
     [[patch.be16]]
-        address = 0x8220D138
+        address = 0x8220d138
         value = 0x4800

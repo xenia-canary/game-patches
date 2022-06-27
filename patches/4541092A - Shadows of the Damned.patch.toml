@@ -10,10 +10,10 @@ hash = "66A1B4C48BA3D9D6" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82567FD0
+        address = 0x82567fd0
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82A9F7C7
+        address = 0x82a9f7c7
         value = 0x01
 
 [[patch]]
@@ -23,7 +23,7 @@ hash = "66A1B4C48BA3D9D6" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8230E780
+        address = 0x8230e780
         value = 0x39600000
 
 [[patch]]
@@ -42,5 +42,5 @@ hash = "66A1B4C48BA3D9D6" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x829EE4F4
-        value = 0x38A00010
+        address = 0x829ee4f4
+        value = 0x38a00010

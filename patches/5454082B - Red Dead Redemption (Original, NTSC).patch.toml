@@ -12,13 +12,13 @@ title_id = "5454082B" # TT-2091
 
     [[patch.be32]]
         address = 0x82770958
-        value = 0x480001A0 # b 0x82770af8
+        value = 0x480001a0 # b 0x82770af8
     [[patch.be32]]
-        address = 0x82770AF8
-        value = 0x3B600001 # li r27,0x1
+        address = 0x82770af8
+        value = 0x3b600001 # li r27,0x1
     [[patch.be32]]
-        address = 0x82770AFC
-        value = 0x9B7F000D # stb r27,0xd(r31)
+        address = 0x82770afc
+        value = 0x9b7f000d # stb r27,0xd(r31)
 
 [[patch]]
     name = "Unlock FPS"
@@ -27,10 +27,10 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823C53F4
+        address = 0x823c53f4
         value = 0x48000048
     [[patch.be8]]
-        address = 0x82C23347
+        address = 0x82c23347
         value = 0x01
 
 [[patch]]
@@ -39,7 +39,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x827C697C
+        address = 0x827c697c
         value = 0x4800
 
 [[patch]]
@@ -48,8 +48,8 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822B4B30
-        value = 0x38A00010
+        address = 0x822b4b30
+        value = 0x38a00010
 
 [[patch]]
     name = "360p Mode"
@@ -58,7 +58,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82754BC4
+        address = 0x82754bc4
         value = 0x39600001
 
 [[patch]]
@@ -68,7 +68,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82754B10
+        address = 0x82754b10
         value = 0x39400001
 
 [[patch]]
@@ -78,8 +78,8 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82754B48
-        value = 0x38E00001
+        address = 0x82754b48
+        value = 0x38e00001
 
 [[patch]]
     name = "No Trees - Performance Mode"
@@ -88,7 +88,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82750D18
+        address = 0x82750d18
         value = 0x39600001
 
 [[patch]]
@@ -98,7 +98,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x822ECC9C
+        address = 0x822ecc9c
         value = 0x4800
 
 [[patch]]
@@ -116,7 +116,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827B63FC
+        address = 0x827b63fc
         value = 0x39600001
 
 [[patch]]
@@ -126,7 +126,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822FAFE8
+        address = 0x822fafe8
         value = 0x48000114
 
 [[patch]]
@@ -145,10 +145,10 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822FEF88
+        address = 0x822fef88
         value = 0x39600001
     [[patch.be32]]
-        address = 0x8241A53C
+        address = 0x8241a53c
         value = 0x39600001
 
 [[patch]]
@@ -158,7 +158,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823DF854
+        address = 0x823df854
         value = 0x39600001
 
 [[patch]]
@@ -168,8 +168,8 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82000D70
-        value = 0x4018E38E
+        address = 0x82000d70
+        value = 0x4018e38e
 
 [[patch]]
     name = "Use Cheats Without Losing Autosave"
@@ -178,7 +178,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82419ED8
+        address = 0x82419ed8
         value = 0x60000000
 
 [[patch]]
@@ -187,11 +187,11 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82C4C430
-        value = 0x3C003F80
+        address = 0x82c4c430
+        value = 0x3c003f80
     [[patch.be32]]
-        address = 0x82C4C434
-        value = 0x9007000C
+        address = 0x82c4c434
+        value = 0x9007000c
 
 [[patch]]
     name = "Bottomless Clip / Infinite Gun Magazine Size"
@@ -199,10 +199,10 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825A7F1C
+        address = 0x825a7f1c
         value = 0x48000008 # Skip fsub
     [[patch.be32]]
-        address = 0x825A4AF4
+        address = 0x825a4af4
         value = 0x48000018 # Skip ammo manipulation check
 
 [[patch]]
@@ -212,8 +212,8 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825AB37C
-        value = 0x3C0042C8 # Ammo amount in 2 bytes float. Default is 100. It will reset to 100 after some idle time.
+        address = 0x825ab37c
+        value = 0x3c0042c8 # Ammo amount in 2 bytes float. Default is 100. It will reset to 100 after some idle time.
     [[patch.be32]]
-        address = 0x825AB380
-        value = 0x900A0000
+        address = 0x825ab380
+        value = 0x900a0000

@@ -10,10 +10,10 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823C5784
+        address = 0x823c5784
         value = 0x48000048
     [[patch.be8]]
-        address = 0x82C1F5BF
+        address = 0x82c1f5bf
         value = 0x01
 
 [[patch]]
@@ -22,7 +22,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x827BA164
+        address = 0x827ba164
         value = 0x4800
 
 [[patch]]
@@ -31,8 +31,8 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822B55F8
-        value = 0x38A00010
+        address = 0x822b55f8
+        value = 0x38a00010
 
 [[patch]]
     name = "360p Mode"
@@ -41,7 +41,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8274267C
+        address = 0x8274267c
         value = 0x39600001
 
 [[patch]]
@@ -51,7 +51,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827425C8
+        address = 0x827425c8
         value = 0x39400001
 
 [[patch]]
@@ -62,7 +62,7 @@ title_id = "5454082B" # TT-2091
 
     [[patch.be32]]
         address = 0x82742600
-        value = 0x38E00001
+        value = 0x38e00001
 
 [[patch]]
     name = "No Trees - Performance Mode"
@@ -71,7 +71,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8273E758
+        address = 0x8273e758
         value = 0x39600001
 
 [[patch]]
@@ -81,7 +81,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x822EDE84
+        address = 0x822ede84
         value = 0x4800
 
 [[patch]]
@@ -90,7 +90,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x828F9220
+        address = 0x828f9220
         value = 0x60000000
 
 [[patch]]
@@ -99,7 +99,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827A93BC
+        address = 0x827a93bc
         value = 0x39600001
 
 [[patch]]
@@ -109,7 +109,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822FC4A8
+        address = 0x822fc4a8
         value = 0x48000114
 
 [[patch]]
@@ -118,7 +118,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82760ADC
+        address = 0x82760adc
         value = 0x41
 
 [[patch]]
@@ -131,7 +131,7 @@ title_id = "5454082B" # TT-2091
         address = 0x82300438
         value = 0x39600001
     [[patch.be32]]
-        address = 0x8241F0E0
+        address = 0x8241f0e0
         value = 0x39600001
 
 [[patch]]
@@ -141,7 +141,7 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823DE36C
+        address = 0x823de36c
         value = 0x39600001
 
 [[patch]]
@@ -151,8 +151,8 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82000D90
-        value = 0x4018E38E
+        address = 0x82000d90
+        value = 0x4018e38e
 
 [[patch]]
     name = "Infinite Horse Stamina"
@@ -160,11 +160,11 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82C48710
-        value = 0x3C003F80
+        address = 0x82c48710
+        value = 0x3c003f80
     [[patch.be32]]
-        address = 0x82C48714
-        value = 0x9007000C
+        address = 0x82c48714
+        value = 0x9007000c
 
 [[patch]]
     name = "Bottomless Clip / Infinite Gun Magazine Size"
@@ -172,10 +172,10 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825B5AA4
+        address = 0x825b5aa4
         value = 0x48000008 # Skip fsub
     [[patch.be32]]
-        address = 0x825B2594
+        address = 0x825b2594
         value = 0x48000018 # Skip ammo manipulation check
 
 [[patch]]
@@ -185,8 +185,8 @@ title_id = "5454082B" # TT-2091
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825B7334
-        value = 0x3C0042C8 # Ammo amount in 2 bytes float. Default is 100. It will reset to 100 after some idle time.
+        address = 0x825b7334
+        value = 0x3c0042c8 # Ammo amount in 2 bytes float. Default is 100. It will reset to 100 after some idle time.
     [[patch.be32]]
-        address = 0x825B7338
-        value = 0x900A0000
+        address = 0x825b7338
+        value = 0x900a0000

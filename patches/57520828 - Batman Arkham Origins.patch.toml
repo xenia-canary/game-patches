@@ -10,7 +10,7 @@ title_id = "57520828" # WR-2088
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826AFF18
+        address = 0x826aff18
         value = 0x39400000
 
 [[patch]]
@@ -19,5 +19,5 @@ title_id = "57520828" # WR-2088
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8236EC6A
+        address = 0x8236ec6a
         value = 0x0000

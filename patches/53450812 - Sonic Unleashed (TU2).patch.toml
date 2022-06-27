@@ -10,7 +10,7 @@ title_id = "53450812" # SE-2066
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82BD9EB3
+        address = 0x82bd9eb3
         value = 0x01
 
 [[patch]]
@@ -20,17 +20,17 @@ title_id = "53450812" # SE-2066
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82BAFFA4
+        address = 0x82baffa4
         value = 0x38800500
     [[patch.be32]]
-        address = 0x8328BB40
-        value = 0x3F800000
+        address = 0x8328bb40
+        value = 0x3f800000
     [[patch.be32]]
-        address = 0x8328BB44
-        value = 0x3F800000
+        address = 0x8328bb44
+        value = 0x3f800000
     [[patch.be32]]
-        address = 0x8328BB48
-        value = 0x3F800000
+        address = 0x8328bb48
+        value = 0x3f800000
 
 [[patch]]
     name = "Disable Shadow Maps"
@@ -39,7 +39,7 @@ title_id = "53450812" # SE-2066
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82BAD958
+        address = 0x82bad958
         value = 0x39600000
 
 [[patch]]
@@ -48,10 +48,10 @@ title_id = "53450812" # SE-2066
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82BB21A4
+        address = 0x82bb21a4
         value = 0x60000000
     [[patch.be32]]
-        address = 0x82BB20F8
+        address = 0x82bb20f8
         value = 0x39600000
 
 [[patch]]
@@ -61,7 +61,7 @@ title_id = "53450812" # SE-2066
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82FC1F28
+        address = 0x82fc1f28
         value = 0x60000000
 
 [[patch]]
@@ -71,5 +71,5 @@ title_id = "53450812" # SE-2066
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820290E8
-        value = 0x4018E388
+        address = 0x820290e8
+        value = 0x4018e388

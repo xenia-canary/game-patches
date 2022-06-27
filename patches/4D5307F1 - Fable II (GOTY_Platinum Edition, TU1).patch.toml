@@ -9,5 +9,5 @@ title_id = "4D5307F1" # MS-2033
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82BA3018
+        address = 0x82ba3018
         value = 0x39600001

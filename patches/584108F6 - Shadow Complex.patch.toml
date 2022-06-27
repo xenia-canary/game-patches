@@ -10,10 +10,10 @@ title_id = "584108F6" # XA-2294
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824913D8
+        address = 0x824913d8
         value = 0x60000000
     [[patch.be8]]
-        address = 0x828F01E7
+        address = 0x828f01e7
         value = 0x01
 
 [[patch]]
@@ -23,7 +23,7 @@ title_id = "584108F6" # XA-2294
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822C865C
+        address = 0x822c865c
         value = 0x39600000
 
 [[patch]]
@@ -32,7 +32,7 @@ title_id = "584108F6" # XA-2294
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8235423C
+        address = 0x8235423c
         value = 0x39600000
 
 [[patch]]
@@ -41,5 +41,5 @@ title_id = "584108F6" # XA-2294
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8283F4F4
-        value = 0x38A00010
+        address = 0x8283f4f4
+        value = 0x38a00010

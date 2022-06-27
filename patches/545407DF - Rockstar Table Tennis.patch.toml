@@ -9,5 +9,5 @@ title_id = "545407DF" # TT-2015
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8237A3DB
+        address = 0x8237a3db
         value = 0x05

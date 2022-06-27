@@ -10,5 +10,5 @@ hash = "304700FE68719E8C" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8209F18C
-        value = 0x4018E388
+        address = 0x8209f18c
+        value = 0x4018e388

@@ -33,6 +33,8 @@ To enable patches, open the .patch.toml file that corresponds to your game in a 
 
 #
 #### Note about aspect ratio patches
+**`present_letterbox` must be changed from `true` to `false`!**
+
 These patches **do not** increase resolution!
 
 While most aspect ratio patches are 21:9 (3440/1440), they can be changed to other aspect ratios as well;
@@ -54,7 +56,6 @@ If the above sections didn't help, you can try the following:
     ```
     **This isn't guaranteed to work, and may cause crashes.**
     <br>Hashes are used to verify the correct version of a game is being patched, and this bypasses it.
-    <br>However, superficial differences (title/media ID, etc) can generate a different hash, even if the underlying code is the same.
 
 ---
 
@@ -65,7 +66,7 @@ If the above sections didn't help, you can try the following:
  * If the game you are submitting a patch for already has a file, then add to that file.
  * New file must contain the module hash, which can be [automatically or manually](#Creating-patch) obtained.
     * For games with multiple executables or discs, it can have multiple hashes, but they must be commented out like so:
-      https://github.com/xenia-canary/game-patches/blob/0ddf1f67d8843f30162a695c66084f6d8485397a/patches/4D5307DF%20-%20Blue%20Dragon.patch.toml#L1-L5
+      https://github.com/xenia-canary/game-patches/blob/d141af5b71c42781b71a3de6adbdb86d82ccea8e/patches/4D5307DF%20-%20Blue%20Dragon.patch.toml#L1-L5
  * File must contain an empty line at the end.
 
 ### Prerequisites

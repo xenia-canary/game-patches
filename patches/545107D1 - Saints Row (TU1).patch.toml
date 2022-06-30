@@ -5,21 +5,21 @@ title_id = "545107D1" # TQ-2001
 
 [[patch]]
     name = "Enable Debug Console"
-    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia config."
+    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia config (Requires xenia canary version 271befc from January 25th or older)."
     author = "emoose"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8265F694
-        value = 0x48000AA4
+        address = 0x8265f694
+        value = 0x48000aa4
     [[patch.be32]]
         address = 0x82660134
-        value = 0x480B8EF9
+        value = 0x480b8ef9
     [[patch.be32]]
         address = 0x82660268
-        value = 0x480B8E14
+        value = 0x480b8e14
     [[patch.be8]]
-        address = 0x835F4C3E
+        address = 0x835f4c3e
         value = 0x01
 
 [[patch]]

@@ -24,7 +24,7 @@ title_id = "545107D1" # TQ-2001
 
 [[patch]]
     name = "Enable r_ugly_mode"
-    desc = "Higher FPS but worse graphics. Might be unstable."
+    desc = "Higher FPS but worse graphics. Might crash when starting a game."
     author = "Hasster"
     is_enabled = false
 

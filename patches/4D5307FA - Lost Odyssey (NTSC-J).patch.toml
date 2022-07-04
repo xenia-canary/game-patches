@@ -4,10 +4,7 @@ title_id = "4D5307FA" # MS-2042
 #hash = "" # Disc 2, default.xex
 #hash = "" # Disc 3, default.xex
 #hash = "" # Disc 4, default.xex
-#media_id = "612E5362"(?) Disc 1, http://redump.org/disc/27092
-#media_id = "1FCD93AF"(?) Disc 2, http://redump.org/disc/27093
-#media_id = "5F6C75EB"(?) Disc 3, http://redump.org/disc/27094
-#media_id = "1C347005"(?) Disc 4, http://redump.org/disc/27095
+#media_id = ""
 
 [[patch]]
     name = "60 FPS"

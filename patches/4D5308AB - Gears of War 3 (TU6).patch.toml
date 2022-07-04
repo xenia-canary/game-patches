@@ -1,9 +1,11 @@
 title_name = "Gears of War 3" # TU6
 title_id = "4D5308AB" # MS-2219
 hash = "7775898137CE1CE3" # default.xex
-#media_id = "02EEE060"
-#media_id = "6EF14DF9"
-#media_id = "58122AD6"
+#media_id = [
+#    "02EEE060",
+#    "6EF14DF9",
+#    "58122AD6",
+#]
 
 [[patch]]
     name = "Unlock FPS"

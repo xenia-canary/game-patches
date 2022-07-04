@@ -1,8 +1,10 @@
 title_name = "Deus Ex: Human Revolution: Director's Cut"
 title_id = "535107FA" # SQ-2042
 #hash = "" # Disc 1/2, default.xex
-#media_id = "7BBEB936" Disc 1, http://redump.org/disc/50503
-#media_id = "7C4137BE" Disc 2, http://redump.org/disc/50504
+#media_id = [
+#    "7BBEB936", # Disc 1, http://redump.org/disc/50503
+#    "7C4137BE", # Disc 2, http://redump.org/disc/50504
+#]
 
 [[patch]]
     name = "Disable Looping Audio Code"

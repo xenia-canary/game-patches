@@ -48,7 +48,7 @@ hash = "62547A005C0420D2" # default.xex
 
 [[patch]]
     name = "Disable Motion Blur"
-	desc = "Solves most ghosting and artifacting caused by quickly panning cameras."
+    desc = "Solves most ghosting and artifacting caused by quickly panning cameras."
     author = "illusion, boma"
     is_enabled = false
 

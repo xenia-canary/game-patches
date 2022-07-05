@@ -1,7 +1,8 @@
 title_name = "Mirror's Edge"
 title_id = "45410850" # EA-2128
-#hash = "" # default.xex
+hash = "25AA0820DF95AA47" # default.xex
 #media_id = "426CA5A2" http://redump.org/disc/11415
+#media_id = "214A9845"
 
 [[patch]]
     name = "Unlock FPS"

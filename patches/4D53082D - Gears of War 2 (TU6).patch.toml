@@ -1,7 +1,7 @@
 title_name = "Gears of War 2" # TU6
 title_id = "4D53082D" # MS-2093
-#hash = "" # default.xex
-#media_id = "22AB4F7C"
+hash = "62547A005C0420D2" # default.xex
+#media_id = "33FCE762"
 
 [[patch]]
     name = "Unlock FPS"
@@ -48,6 +48,7 @@ title_id = "4D53082D" # MS-2093
 
 [[patch]]
     name = "Disable Motion Blur"
+	desc = "Solves most ghosting and artifacting caused by quickly panning cameras."
     author = "illusion, boma"
     is_enabled = false
 
@@ -63,3 +64,46 @@ title_id = "4D53082D" # MS-2093
     [[patch.be32]]
         address = 0x8281e3b4
         value = 0x38a00010
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827be894
+        value = 0x39400000
+
+[[patch]]
+    name = "Disable Depth of Field"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822e3910
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x82422768
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x824f2234
+        value = 0x39200000
+    [[patch.be32]]
+        address = 0x824f2374
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Bloom"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822e3904
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x824f2240
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x824f2380
+        value = 0x39600000

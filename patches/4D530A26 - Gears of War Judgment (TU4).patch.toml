@@ -1,6 +1,6 @@
 title_name = "Gears of War: Judgment"
 title_id = "4D530A26" # MS-2598
-hash = "8429D0AE190C10DB" # default.xex
+hash = "013148141A27D4C7" # default.xex
 #media_id = "3528321A" # Disc (US EU) http://redump.org/disc/57311
 #media_id = "250B2C78" # Disc (EU)    http://redump.org/disc/65904
 #media_id = "6DCAF3C2" # XBLA (87daed863476d86f36a9c740aa6514cfd19d4e9d, da-DK en-AU en-CA en-HK en-IN en-NZ en-SG en-US en-ZA es-AR es-CL es-CO es-MX fi-FI fr-BE fr-CA ko-KR nb-NO nl-BE nl-NL pl-PL pt-PT)
@@ -16,20 +16,20 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8255de08
+        address = 0x8255e220
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82bdc65b
+        address = 0x82bdf113
         value = 0x01
 
 [[patch]]
     name = "Disable Lens Flares"
     desc = "Fixes unoccluded bright lights on-screen."
-    author = "illusion"
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8288e120
+        address = 0x8288eb50
         value = 0x39400000
 
 [[patch]]
@@ -39,8 +39,8 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8234c778
-        value = 0x39600000
+        address = 0x8234c670
+        value = 0x39200000
 
 [[patch]]
     name = "16x Anisotropic Filtering"
@@ -48,26 +48,20 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82999954
+        address = 0x8299b564
         value = 0x38a00010
 
 [[patch]]
     name = "Resolution Scaling Fix / Disable All Post-Processing"
-    desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
+    desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing when upscaling."
     author = "boma"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x827e363c
-        value = 0x38a00000
-    [[patch.be32]]
-        address = 0x827e3810
-        value = 0x38a00000
-    [[patch.be32]]
-        address = 0x827e3970
-        value = 0x38800004
+    [[patch.be16]]
+        address = 0x827e50ec
+        value = 0x4800
     [[patch.be32]] # nop finishing render pass from branching to temporal AA resolve
-        address = 0x827e392c
+        address = 0x827e42a4
         value = 0x60000000
 
 [[patch]]
@@ -77,10 +71,10 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824297fc
+        address = 0x82428e94
         value = 0x39400000
     [[patch.be32]]
-        address = 0x8242b598
+        address = 0x8242ac30
         value = 0x39400000
 
 [[patch]]
@@ -89,10 +83,10 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824427a8
+        address = 0x82441eb0
         value = 0x39600000
     [[patch.be32]]
-        address = 0x827cbd8c
+        address = 0x827ccc84
         value = 0x39600000
 
 [[patch]]
@@ -101,10 +95,10 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824d79a8
+        address = 0x824d7c58
         value = 0x39600000
     [[patch.be32]]
-        address = 0x825b70dc
+        address = 0x825b747c
         value = 0x39600000
 
 [[patch]]
@@ -113,5 +107,5 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825b70d8
+        address = 0x825b7478
         value = 0x39400000

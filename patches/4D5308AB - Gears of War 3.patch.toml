@@ -1,7 +1,10 @@
 title_name = "Gears of War 3"
 title_id = "4D5308AB" # MS-2219
-#hash = "" # default.xex
+hash = "EF4AD5E9DD1982ED" # default.xex
 #media_id = "4C93A17D"
+#media_id = "02EEE060"
+#media_id = "6EF14DF9"
+#media_id = "58122AD6"
 
 [[patch]]
     name = "Unlock FPS"
@@ -53,6 +56,19 @@ title_id = "4D5308AB" # MS-2219
         value = 0x39600000
 
 [[patch]]
+    name = "Disable Motion Blur"
+	desc = "Solves most ghosting and artifacting caused by quickly panning cameras."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82430640
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x827a2bcc
+        value = 0x39600000
+
+[[patch]]
     name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
@@ -78,13 +94,22 @@ title_id = "4D5308AB" # MS-2219
         value = 0x38800004
 
 [[patch]]
-    name = "Disable Motion Blur"
+    name = "Disable Depth of Field"
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82430640
+        address = 0x824baa50
         value = 0x39600000
     [[patch.be32]]
-        address = 0x827a2bcc
+        address = 0x82593dc4
         value = 0x39600000
+
+[[patch]]
+    name = "Disable Bloom"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82593dc0
+        value = 0x39400000

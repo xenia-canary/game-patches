@@ -1,11 +1,11 @@
 title_name = "Red Dead Redemption" # GOTY/Game Of The Year, Disc 2
 title_id = "5454082B" # TT-2091
-#hash = "" # default.xex
-#media_id = "3EE87B76" http://redump.org/disc/58711
+hash = "EAE1A29200C7C15C" # default.xex
+#media_id = "26302E11" http://redump.org/disc/58711
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config."
+    desc = "Increases vsync target to 60 FPS. Additionally, framerates higher than the 64 FPS cap are unlocked but vsync must be set to false in the Xenia config. Be advised, due to aggressive double buffering, keeping vsync enabled will result in common drops to 30 FPS whenever there are performance dips."
     author = "boma"
     is_enabled = false
 
@@ -65,6 +65,16 @@ title_id = "5454082B" # TT-2091
         value = 0x38e00001
 
 [[patch]]
+    name = "Disable Sun Flare"
+    desc = "This prevents the sun flare effect, which clips through buildings and props, from rendering. May also partially remedy flashing and image exposure issues that arise when upscaling."
+    author = "emoose, boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82782b4c
+        value = 0x4800
+
+[[patch]]
     name = "No Trees - Performance Mode"
     desc = "Prevents trees and all other foliage from rendering. Provides a substantial performance boost."
     author = "boma"
@@ -103,23 +113,17 @@ title_id = "5454082B" # TT-2091
         value = 0x39600001
 
 [[patch]]
-    name = "Disable SSAO"
-    desc = "Probably won't improve overall performance but may help with graphical artifacts when upscaling."
-    author = "boma"
+    name = "Skip Intro"
+    desc = "Skips legal and intro videos."
+    author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822fcc40
-        value = 0x48000114
-
-[[patch]]
-    name = "Skip Intro Rockstar Movie"
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x8278ede4
-        value = 0x41
+        address = 0x8278ef28
+        value = 0x480001a0 # b 0x8278f0c8
+    [[patch.be32]]
+        address = 0x8278f0c8
+        value = 0x3b600001 # li r27,0x1
 
 [[patch]]
     name = "Alternative Script Timing & Asset Garbage Collection"

@@ -1,6 +1,6 @@
 title_name = "Bulletstorm"
 title_id = "454108EF" # EA-2287
-#hash = "" # default.xex
+hash = "D61EAED8BB6A1365" # default.xex
 #media_id = "1D93E609" http://redump.org/disc/21494
 
 [[patch]]

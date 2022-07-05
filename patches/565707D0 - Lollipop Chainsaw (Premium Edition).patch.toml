@@ -1,6 +1,6 @@
 title_name = "Lollipop Chainsaw" # Premium Edition
 title_id = "565707D0" # VW-2000
-#hash = "" # default.xex
+hash = "788B0C3E7B074F18" # default.xex
 #media_id = "3759EFF2" http://redump.org/disc/65899
 
 [[patch]]

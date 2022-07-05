@@ -1,6 +1,6 @@
 title_name = "Lost Planet 3"
 title_id = "43430830" # CC-2096
-#hash = "" # default.xex
+hash = "3F74E86B6D9AC1C8" # default.xex
 #media_id = "09C0B498" http://redump.org/disc/40497
 
 [[patch]]

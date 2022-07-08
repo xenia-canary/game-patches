@@ -1,7 +1,7 @@
 title_name = "Project Gotham Racing 4" # PGR
 title_id = "4D5307F9" # MS-2041
 hash = "C68266E1F9C7F634" # default.xex
-#media_id = "5A381A4E" http://redump.org/disc/11813
+#media_id = "5A381A4E" # Disc (USA, Europe): http://redump.org/disc/11813
 
 [[patch]]
     name = "60 FPS"

@@ -1,7 +1,7 @@
 title_name = "The Orange Box" # Team Fortress 2
 title_id = "4541080F" # EA-2063
 #hash = "" # tf/bin/Client_360.dll
-#media_id = "651A85DA" http://redump.org/disc/11838
+#media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
 
 [[patch]]
     name = "Performance Enhancements"

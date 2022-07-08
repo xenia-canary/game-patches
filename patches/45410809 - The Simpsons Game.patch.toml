@@ -1,7 +1,7 @@
 title_name = "The Simpsons Game"
 title_id = "45410809" # EA-2057
 hash = "AC429E9FFB91904C" # default.xex
-#media_id = "05631042" http://redump.org/disc/12510
+#media_id = "05631042" # Disc (USA): http://redump.org/disc/12510
 
 [[patch]]
     name = "60 FPS"

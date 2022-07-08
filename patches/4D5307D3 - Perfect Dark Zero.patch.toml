@@ -1,7 +1,7 @@
 title_name = "Perfect Dark: Zero"
 title_id = "4D5307D3" # MS-2003
 hash = "C1572363239DB6CE" # default.xex
-#media_id = "41EEAFCB" http://redump.org/disc/11810
+#media_id = "41EEAFCB" # Disc (USA): http://redump.org/disc/11810
 
 [[patch]]
     name = "Unlock FPS"

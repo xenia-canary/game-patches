@@ -1,7 +1,7 @@
 title_name = "Red Dead Redemption" # Original, NTSC, TU9
 title_id = "5454082B" # TT-2091
 hash = "1A284CDE0A9F0CF8" # default.xex
-#media_id = "2AAB34E2" http://redump.org/disc/13298
+#media_id = "2AAB34E2" # Disc (World): http://redump.org/disc/13298
 
 [[patch]]
     name = "Unlock FPS"

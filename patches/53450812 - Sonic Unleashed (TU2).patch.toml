@@ -1,7 +1,7 @@
 title_name = "Sonic Unleashed" # TU2
 title_id = "53450812" # SE-2066
 #hash = "" # default.xex
-#media_id = "4BED0DDE" http://redump.org/disc/14043
+#media_id = "4BED0DDE" # Disc (USA): http://redump.org/disc/14043
 
 [[patch]]
     name = "60 FPS"

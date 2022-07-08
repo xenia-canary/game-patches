@@ -1,7 +1,7 @@
 title_name = "SpongeBob: Truth or Square" # Truth-Sq.
 title_id = "54510850" # TQ-2128
 hash = "5B8298726E0B36A7" # default.xex
-#media_id = "675568DB" http://redump.org/disc/14706
+#media_id = "675568DB" # Disc (USA): http://redump.org/disc/14706
 
 [[patch]]
     name = "Fix hang on BINK videos"

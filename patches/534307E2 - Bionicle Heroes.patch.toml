@@ -1,7 +1,7 @@
 title_name = "Bionicle Heroes"
 title_id = "534307E2" # SC-2018
 #hash = "" # default.xex
-#media_id = "39D1B5B2" http://redump.org/disc/16209
+#media_id = "39D1B5B2" # Disc (USA): http://redump.org/disc/16209
 
 [[patch]]
     name = "60 FPS"

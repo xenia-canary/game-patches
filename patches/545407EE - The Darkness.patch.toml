@@ -1,7 +1,7 @@
 title_name = "The Darkness"
 title_id = "545407EE" # TT-2030
 hash = "29362A3C8309E1AC" # default.xex
-#media_id = "0F213645" http://redump.org/disc/11406
+#media_id = "0F213645" # Disc (USA, Europe): http://redump.org/disc/11406
 
 [[patch]]
     name = "Bright Lighting Fix"

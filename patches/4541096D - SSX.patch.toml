@@ -1,7 +1,7 @@
 title_name = "SSX™"
 title_id = "4541096D" # EA-2413
 hash = "69DA3638DBB4B67A" # default.xex
-#media_id = "55ABAB6C" http://redump.org/disc/38999
+#media_id = "55ABAB6C" # Disc (USA): http://redump.org/disc/38999
 
 [[patch]]
     name = "60 FPS"

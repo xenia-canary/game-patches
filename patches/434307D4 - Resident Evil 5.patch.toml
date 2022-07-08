@@ -1,7 +1,7 @@
 title_name = "Resident Evil 5"
 title_id = "434307D4" # CC-2004
 #hash = "" # TODO: Add module filename
-#media_id = "5B2A79D5" http://redump.org/disc/9689
+#media_id = "5B2A79D5" # Disc (World): http://redump.org/disc/9689
 
 [[patch]]
     name = "Remove All Your Money"

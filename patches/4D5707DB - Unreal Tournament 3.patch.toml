@@ -1,7 +1,7 @@
 title_name = "Unreal Tournament 3"
 title_id = "4D5707DB" # MW-2011
 #hash = "" # default.xex
-#media_id = "72123E1F" http://redump.org/disc/12512
+#media_id = "72123E1F" # Disc (USA, Europe): http://redump.org/disc/12512
 
 [[patch]]
     name = "Unlock FPS"

@@ -1,7 +1,7 @@
 title_name = "Transformers: Rise of The Dark Spark"
 title_id = "41560904" # AV-2308
 hash = "5821E90CE3C7FBB3" # default.xex
-#media_id = "50D83F2D" http://redump.org/disc/41959
+#media_id = "50D83F2D" # Disc (USA): http://redump.org/disc/41959
 
 [[patch]]
     name = "Disable Lens Flares"

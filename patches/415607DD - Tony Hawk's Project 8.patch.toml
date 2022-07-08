@@ -1,7 +1,7 @@
 title_name = "Tony Hawk's Project 8"
 title_id = "415607DD" # AV-2013
 hash = "D7DD6A7F3F3FC1D9" # default.xex
-#media_id = "2CB96AE4" http://redump.org/disc/57372
+#media_id = "2CB96AE4" # Disc (Europe): http://redump.org/disc/57372
 
 [[patch]]
     name = "1280x720 Resolution"

@@ -1,7 +1,7 @@
 title_name = "Alice: Madness Returns"
 title_id = "45410916" # EA-2326
 hash = "2FD7D2F9D7F51AEA" # default.xex
-#media_id = "31C4B45C" http://redump.org/disc/38414
+#media_id = "31C4B45C" # Disc (USa, Europe): http://redump.org/disc/38414
 
 [[patch]]
     name = "Disable Lens Flares"

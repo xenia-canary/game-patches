@@ -3,8 +3,8 @@ title_id = "4D5308AB" # MS-2219
 hash = "7775898137CE1CE3" # default.xex
 #media_id = [
 #    "02EEE060",
-#    "6EF14DF9",
-#    "58122AD6",
+#    "6EF14DF9", # Disc (Spain): http://redump.org/disc/72050
+#    "58122AD6", # Disc (World): http://redump.org/disc/55016
 #]
 
 [[patch]]

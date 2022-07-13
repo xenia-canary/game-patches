@@ -1,7 +1,7 @@
 title_name = "Saints Row"
 title_id = "545107D1" # TQ-2001
 hash = "437A5F51A72C9C6A" # default.xex
-#media_id = "24367742"
+#media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
 
 [[patch]]
     name = "Enable r_ugly_mode"

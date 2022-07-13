@@ -2,9 +2,9 @@ title_name = "Blue Dragon"
 title_id = "4D5307DF" # MS-2015
 hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
 #media_id = [
-#    "3A702998", # Disc 1 (UE): http://redump.org/disc/11826
-#    "1D8CBD9D", # Disc 2 (UE): http://redump.org/disc/11825
-#    "05C08AC4", # Disc 3 (UE): http://redump.org/disc/11824
+#    "3A702998", # Disc 1 (USA, Europe): http://redump.org/disc/11826
+#    "1D8CBD9D", # Disc 2 (USA, Europe): http://redump.org/disc/11825
+#    "05C08AC4", # Disc 3 (USA, Europe): http://redump.org/disc/11824
 #]
 
 [[patch]]

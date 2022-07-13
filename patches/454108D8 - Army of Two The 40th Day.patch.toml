@@ -1,6 +1,9 @@
-title_name = "Army of Two: The 40th Day"
+title_name = "Army of Two: The 40th Day" # TFD
 title_id = "454108D8" # EA-2264
-#hash = "" # default.xex
+hash = [
+    "7C5F016EA6A81E95" # default.xex
+#    "2330F2A205951B81" # AO3MPGame-XeReleaseLTCG.xex
+]
 #media_id = "44388CF4" # Disc (USA, Australia): http://redump.org/disc/13279
 
 [[patch]]

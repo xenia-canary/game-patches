@@ -1,7 +1,7 @@
-title_name = "Onechanbara"
+title_name = "Onechanbara: Bikini Samurai Squad"
 title_id = "445007EA" # DP-2026
-#hash = "" # default.xex
-#media_id = ""
+hash = "385F9D27450E183A" # default.xex
+#media_id = "31A55A84" # Disc (USA): http://redump.org/disc/60676
 
 [[patch]]
     name = "Invincibility"

@@ -1,6 +1,6 @@
 title_name = "Sonic the Hedgehog" # 2006
 title_id = "534507D6" # SE-2006
-#hash = "" # default.xex
+hash = "2A2BDBF9A1219E79" # default.xex
 #media_id = "7709C3E8" # Disc (USA): http://redump.org/disc/14270
 
 [[patch]]

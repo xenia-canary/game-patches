@@ -1,9 +1,6 @@
 title_name = "Lost Odyssey"
 title_id = "4D5307FA" # MS-2042
-#hash = "" # Disc 1, default.xex
-#hash = "" # Disc 2, default.xex
-#hash = "" # Disc 3, default.xex
-#hash = "" # Disc 4, default.xex
+#hash = "" # Disc 1/2/3/4, default.xex
 #media_id = ""
 
 [[patch]]

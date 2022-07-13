@@ -1,7 +1,9 @@
 title_name = "Crazy Taxi"
 title_id = "58410A34" # XA-2612
-#hash = "" # Content/0000000000000000/58410A34/000D0000/8CCAFCF0BCA37A5854932556831B08F3542CC94358/default.xex
-#hash = "" # default.xex
+hash = [
+    "20347B2499375277" # Content/0000000000000000/58410A34/000D0000/8CCAFCF0BCA37A5854932556831B08F3542CC94358/default.xex
+    #"36A10BDBC2A9CBBD" # default.xex
+]
 #media_id = [
 #    "26CE73AF", # Crazy Taxi
 #    "6876EE29", # Disc (Europe), Dreamcast Collection: http://redump.org/disc/65367

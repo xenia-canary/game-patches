@@ -1,6 +1,6 @@
 title_name = "Need for Speed: Carbon" # NFS
 title_id = "454107EC" # EA-2028
-#hash = "" # TODO: Add module filename
+#hash = "" # default.xex
 #media_id = ""
 
 [[patch]]

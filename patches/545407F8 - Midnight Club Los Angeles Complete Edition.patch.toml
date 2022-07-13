@@ -1,7 +1,7 @@
 title_name = "Midnight Club: Los Angeles Complete Edition" # MCLA
 title_id = "545407F8" # TT-2040
 hash = "1984A3354B78CE19" # default.xex
-#media_id = "5940C9DB" # Disc (USA, Europe): http://redump.org/disc/64472/
+#media_id = "5940C9DB" # Disc (USA, Europe): http://redump.org/disc/64472
 
 [[patch]]
     name = "Skip Intro"

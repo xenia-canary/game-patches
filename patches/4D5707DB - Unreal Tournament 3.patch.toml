@@ -1,6 +1,6 @@
 title_name = "Unreal Tournament 3"
 title_id = "4D5707DB" # MW-2011
-#hash = "" # default.xex
+hash = "5E6434A23E7BA4AE" # default.xex
 #media_id = "72123E1F" # Disc (USA, Europe): http://redump.org/disc/12512
 
 [[patch]]

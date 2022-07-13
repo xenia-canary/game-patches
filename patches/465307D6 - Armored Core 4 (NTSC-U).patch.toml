@@ -1,11 +1,11 @@
 title_name = "Armored Core 4"
 title_id = "465307D6" # FS-2006
-#hash = "" # default.xex
-#media_id = ""
+#hash = "AABA911BC75B230A" # default.xex
+#media_id = "63C015CC" # Disc (USA): http://redump.org/disc/13276
 
 [[patch]]
     name = "infinite Money"
-    author = "Raven & Serenity"
+    author = "Raven, Serenity"
     is_enabled = false
 
     [[patch.be32]]
@@ -14,7 +14,7 @@ title_id = "465307D6" # FS-2006
 
 [[patch]]
     name = "Infinite Ammo"
-    author = "Raven and Serenity"
+    author = "Raven, Serenity"
     is_enabled = false
 
     [[patch.be32]]

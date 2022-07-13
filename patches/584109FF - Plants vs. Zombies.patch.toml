@@ -1,7 +1,7 @@
 title_name = "Plants vs. Zombies"
 title_id = "584109FF" # XA-2559
-#hash = "" # TODO: Add module filename
-#media_id = "528550BC"
+hash = "1104C0A0690CD8EE" # default.xex
+#media_id = "528550BC" # XBLA, 281104A67F7C961E2736A5F6F524D43FC81EB79158
 
 [[patch]]
     name = "More Sunlight Please!"

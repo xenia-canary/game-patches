@@ -1,6 +1,6 @@
 title_name = "Hail to the Chimp"
 title_id = "475007D2" # GP-2002
-#hash = "" # default.xex
+hash = "7F1716671834E201" # default.xex
 #media_id = "773093A4"
 
 [[patch]]

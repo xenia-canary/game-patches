@@ -1,6 +1,6 @@
 title_name = "Leisure Suit Larry: Box Office Bust"
 title_id = "434D0822" # CM-2082
-#hash = "" # default.xex
+hash = "4D8B43915E41A1EA" # default.xex
 #media_id = "536000E3" # Disc (USA, Europe): http://redump.org/disc/14255
 
 [[patch]]

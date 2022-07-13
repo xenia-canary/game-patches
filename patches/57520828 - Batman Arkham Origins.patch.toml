@@ -1,6 +1,12 @@
 title_name = "Batman: Arkham Origins"
 title_id = "57520828" # WR-2088
-#hash = "" # TODO: Add module filename
+#hash = [
+#    "" # Disc 1, default.xex
+#    "" # Disc 1, SP.xex
+#    "" # Disc 2, default.xex
+#    "" # Disc 2, ExpansionInstaller.xex
+#    "" # Disc 2, MP.xex
+#]
 #media_id = ""
 
 [[patch]]

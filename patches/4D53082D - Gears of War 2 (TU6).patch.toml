@@ -23,10 +23,10 @@ hash = "62547A005C0420D2" # default.xex
     is_enabled = false
 
     [[patch.be32]] # Force 2x MSAA without tiling
-        address = 0x8280fb74
+        address = 0x828165fc
         value = 0x39600000 # li r11, 0
     [[patch.be32]] # GMaxShadowDepthBufferSize, increased from default 0x320
-        address = 0x8280fb94
+        address = 0x8281661c
         value = 0x39400c80 # li r10, 0xc80
 
 [[patch]]

@@ -1,7 +1,7 @@
 title_name = "Gears of War 2"
 title_id = "4D53082D" # MS-2093
 hash = "BDB97753374D520A" # default.xex
-#media_id = "33FCE762"
+#media_id = "33FCE762" # Disc (Europe): http://redump.org/disc/19951
 
 [[patch]]
     name = "Unlock FPS"

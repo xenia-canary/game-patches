@@ -17,52 +17,7 @@ jobs:
       - name: Setup
         run: npm i -D --no-fund
       - name: Lint
-        run: |
-          npx eslint patches/*.patch.toml
-          patches_invalidate() {
-            patches_invalid_reasons+=$'\n'"$1"$'\n'
-          }
-          for file in patches/*; do
-            file_name="${file//patches\/}"
-            if ! grep -oP '^[0-9A-F]{8} - .+\.patch\.toml$' <<<"$file_name" 1>/dev/null; then
-              patches_invalid_filename+=$'\n'" $file_name"
-            fi
-            if grep -oP 'is_enabled = true' "$file" 1>/dev/null; then
-              patches_is_enabled+=$'\n'" $file_name"
-            fi
-            # Desc is optional
-            patch_required_info=({title_name,title_id,hash}\ =\ \" "[[patch]]" \ \ \ \ {{name,author}\ =\ \",is_enabled\ =\ ,\ \ \ \ {address,value}\ =\ })
-            for field in "${patch_required_info[@]}"; do
-              if ! grep -oP "$field" "$file" 1>/dev/null; then
-                if [[ ! "$patches_fields_missing" =~ $file_name ]]; then
-                  patches_fields_missing+=$'\n'" ${file_name}:"
-                fi
-                patches_fields_missing+=$'\n'"  $field"
-              fi
-            done
-            if grep -oP '#media_id = ("|\[)' "$file" 1>/dev/null; then
-              media_id_detected=1
-            fi
-            if [ -z $media_id_detected ]; then
-              patches_fields_missing+=$'\n'" ${file_name}:"$'\n  media_id = '
-            fi
-          done
-          if [ -n "$patches_invalid_filename" ]; then
-            patches_invalidate "These patch filename(s) are invalid;$patches_invalid_filename"
-          fi
-          if [ -n "$patches_is_enabled" ]; then
-            patches_invalidate "These patches are enabled;$patches_is_enabled"
-          fi
-          if [ -n "$patches_fields_missing" ]; then
-            patches_invalidate "These patches are missing required info;$patches_fields_missing"
-          fi
-          if [ -z "$patches_invalid_reasons" ]; then
-            echo 'Lint succeeded!'
-          else
-            patches_invalid_reasons="${patches_invalid_reasons/#$'\n'}"
-            echo "${patches_invalid_reasons/%$'\n'}"
-            exit 1
-          fi
+        run: npx eslint patches/*.patch.toml
   workflow_dispatch:
     if: |
       github.event_name  == 'push' &&

@@ -11,13 +11,65 @@ on:
 
 jobs:
   lint:
+    strategy:
+      fail-fast: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup
         run: npm i -D --no-fund
       - name: Lint
-        run: npx eslint patches/*.patch.toml
+        run: |
+          npx eslint patches/*.patch.toml
+          patch_check_invalid() {
+            if [ "$3" = text ]; then
+              grep -oP "$1" <<<"$patch" 1>/dev/null || local patch_invalid=1
+            else
+              grep -zoP "$1" "$patch" 1>/dev/null || local patch_invalid=1
+            fi
+            if [ -n "$patch_invalid" ]; then
+              echo "::error file=${patch}::$2"
+              if [[ ! "$patches_invalid" =~ "$patch" ]]; then
+                patches_invalid+=$'\n'"$patch"$'\n'
+              fi
+              patches_invalid+="  $2"$'\n'
+            fi
+          }
+          patch_check_warning() {
+            if grep -zoP "$1" "$patch" 1>/dev/null; then
+              echo "::warning file=${patch}::$2"
+              if [[ ! "$patches_warning" =~ "$patch" ]]; then
+                patches_warning+=$'\n'"$patch"$'\n'
+              fi
+              patches_warning+="  $2"$'\n'
+            fi
+          }
+          for patch in patches/*; do
+            patch_check_invalid 'patches\/[0-9A-F]{8} - .+\.patch\.toml'                             'Filename is invalid!'              text
+            patch_check_invalid 'title_name = ".+"'                                                  'title_name is invalid or missing!'
+            patch_check_invalid 'title_id = \"[0-9A-F]{8}\" # [A-Z]{2}-[0-9]{4,5}'                   'title_id is invalid or missing!'
+            patch_check_invalid 'hash = ("([0-9A-F]{16})?" # |\[[\S\s]*\]\n(?=#))'                   'hash is invalid or missing!'
+            # This should be an error, but not all patches have this
+            patch_check_warning '#hash = ""'                                                         'hash is empty.'
+            patch_check_warning ' # TODO: Add module filename'                                       'hash module filename is missing.'
+            patch_check_invalid '#media_id = ("([0-9A-F]{8})?"|\[\n# {4}\"[0-9A-F]{8}\"[\S\s]*#]\n)' 'media_id is invalid or missing!'
+            # This should be an error, but not all patches have this
+            patch_check_warning '#media_id = ""'                                                     'media_id is empty.'
+          done
+          if [ -n "$patches_warning" ]; then
+            echo "$patches_warning"
+            if [ -z "$patches_invalid" ]; then
+              echo $'\n''Linting completed with warnings.'
+            fi
+          fi
+          if [ -n "$patches_invalid" ]; then
+            echo -n "$patches_invalid"
+            exit 1
+          fi
+          if [[ -z "$patches_warning" && -z "$patches_invalid" ]]; then
+            echo 'Linting completed successfully!'
+          fi
+
   workflow_dispatch:
     if: |
       github.event_name  == 'push' &&

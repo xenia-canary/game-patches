@@ -4,6 +4,7 @@ hash = "B4CC5A66F752EBC3" # default.xex
 #media_id = [
 #    "60DA537D", # Disc 1 (USA, Europe): http://redump.org/disc/13307
 #    "5DB3BBBC", # Disc 2 (USA, Europe): http://redump.org/disc/13308
+#]
 
 [[patch]]
     name = "60 FPS"

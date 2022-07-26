@@ -1,7 +1,7 @@
 title_name = "Blacksite Area 51"
-title_id = "4D5707D7" # MS-2005
+title_id = "4D5707D7" # MW-2007
 hash = "2DB7B2CDD4107BDC" # default.xex
-#media_id = "76E9DF5B" # Disc (USA, Europe): http://redump.org/disc/7745
+#media_id = "686320E3" # Disc (USA, Europe): http://redump.org/disc/12355
 
 [[patch]]
     name = "Dynamic Lighting & Shadows Shading Fix"

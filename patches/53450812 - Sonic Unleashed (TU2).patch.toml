@@ -1,6 +1,6 @@
 title_name = "Sonic Unleashed" # TU2
 title_id = "53450812" # SE-2066
-#hash = "" # default.xex
+hash = "98CA1A0A3A492388" # default.xex
 #media_id = "4BED0DDE" # Disc (USA): http://redump.org/disc/14043
 
 [[patch]]
@@ -20,7 +20,7 @@ title_id = "53450812" # SE-2066
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82baffa4
+        address = 0x82baffa8
         value = 0x38800500
     [[patch.be32]]
         address = 0x8328bb40

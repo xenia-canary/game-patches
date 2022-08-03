@@ -20,6 +20,19 @@ hash = "25AA0820DF95AA47" # default.xex
         value = 0x01
 
 [[patch]]
+    name = "Dynamic Lighting & Shadows Shading Fix"
+    desc = "Solves most dynamic lighting artifacts, like splotchy skin complexion & invisible hands and feet, caused by an issue with MSAA tiling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823aa2e0
+        value = 0x39200000
+    [[patch.be32]]
+        address = 0x823aa350
+        value = 0x39200000
+
+[[patch]]
     name = "Disable Lens Flares"
     desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"

@@ -1,7 +1,7 @@
 title_name = "Shadow Complex"
 title_id = "584108F6" # XA-2294
 hash = "8D5966AB37B61B56" # default.xex
-#media_id = "1E824B42"
+#media_id = "1E824B42" # XBLA: 5F875C082685D06527560E032F8F8167D90BD15D58
 
 [[patch]]
     name = "Unlock FPS"

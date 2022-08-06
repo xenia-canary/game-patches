@@ -1,7 +1,10 @@
 title_name = "Saints Row 2"
 title_id = "545107FC" # TQ-2044
-#hash = "" # TODO: Add module filename
-#media_id = "43400270"
+hash = "581D207BBF22F59E" # default.xex
+#media_id = [
+#    "43400270",
+#    "4E854E4B", Disc (USA, Europe): http://redump.org/disc/14038
+#]
 
 [[patch]]
     name = "Nobody Can Die"

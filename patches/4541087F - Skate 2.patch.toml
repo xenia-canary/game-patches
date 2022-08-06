@@ -1,7 +1,10 @@
 title_name = "Skate 2"
 title_id = "4541087F" # EA-2175
-#hash = "" # default.xex
-#media_id = ""
+hash = "E37B93112490ED35" # default.xex
+#media_id = [
+#    "151D8210",
+#    "6ADB5821", # Disc (Europe): http://redump.org/disc/74675
+#]
 
 [[patch]]
     name = "60 FPS"

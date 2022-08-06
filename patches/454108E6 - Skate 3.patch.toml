@@ -1,6 +1,6 @@
 title_name = "Skate 3"
 title_id = "454108E6" # EA-2278
-#hash = "" # default.xex
+hash = "5E967D21BA33F7F5" # default.xex
 #media_id = "5C087C2C" # Disc (USA, Europe): http://redump.org/disc/13321
 
 [[patch]]

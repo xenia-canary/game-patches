@@ -1,7 +1,10 @@
 title_name = "A Kingdom for Keflings"
 title_id = "584108DB" # XA-2267
-#hash = "" # TODO: Add module filename
-#media_id = "6E19A707"
+hash = "E5A6B485CD297D3A" # default.xex
+#media_id = [
+#    "5944FF33", # XBLA: 80EB522173928C49E4E32A567E408CC07301A91658
+#    "6E19A707",
+#]
 
 [[patch]]
     name = "Unlimited Resources"

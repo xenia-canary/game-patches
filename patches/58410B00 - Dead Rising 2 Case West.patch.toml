@@ -1,7 +1,7 @@
 title_name = "Dead Rising 2: Case West"
 title_id = "58410B00" # XA-2816
-#hash = "" # default.xex
-#media_id = "198BA306"
+hash = "049D0865F8D83AF3" # default.xex
+#media_id = "198BA306" # XBLA: D01128ABB9C7F9694DAE26AC591A269F8480E85A58
 
 [[patch]]
     name = "God Mode"

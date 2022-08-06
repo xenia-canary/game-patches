@@ -1,6 +1,6 @@
 title_name = "Wet"
 title_id = "425307DB" # BS-2011
-#hash = "" # default.xex
+hash = "9A084828F85F951B" # default.xex
 #media_id = "666E3BB8" # Disc (USA, Europe): http://redump.org/disc/12513
 
 [[patch]]

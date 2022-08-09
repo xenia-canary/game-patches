@@ -7,7 +7,7 @@ hash = "C84FA013769BF3A4" # default.xex
     name = "Unlock FPS"
     desc = "Increases vsync target to 60 FPS and removes 30 FPS engine hard cap. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config, which is not recommended."
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x835fc774
@@ -22,7 +22,7 @@ hash = "C84FA013769BF3A4" # default.xex
 [[patch]]
     name = "Disable Motion Blur"
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x8276d0e0
@@ -31,7 +31,7 @@ hash = "C84FA013769BF3A4" # default.xex
 [[patch]]
     name = "Disable Depth of Field"
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x825fe570
@@ -43,7 +43,7 @@ hash = "C84FA013769BF3A4" # default.xex
 [[patch]]
     name = "Disable Bloom"
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x827e6b04
@@ -55,7 +55,7 @@ hash = "C84FA013769BF3A4" # default.xex
 [[patch]]
     name = "16x Anisotropic Filtering"
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be8]]
         address = 0x823bcda7

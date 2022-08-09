@@ -33,7 +33,7 @@ hash = "8D5966AB37B61B56" # default.xex
     name = "Disable Depth of Field"
     desc = "Fixes blurry image when upscaling."
     author = "boma"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x823c60b8

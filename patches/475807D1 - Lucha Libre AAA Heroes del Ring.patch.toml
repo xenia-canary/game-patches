@@ -1,7 +1,7 @@
-title_name = "Shadow Complex"
-title_id = "584108F6" # XA-2294
-hash = "8D5966AB37B61B56" # default.xex
-#media_id = "1E824B42"
+title_name = "Lucha Libre AAA: Heroes del Ring"
+title_id = "475807D1"
+hash = "2A412C79F6E775B1" # default.xex
+#media_id = "62755835"
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,10 +10,10 @@ hash = "8D5966AB37B61B56" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824913d8
+        address = 0x82538198 # SmoothedFrameRate = FALSE
         value = 0x60000000
     [[patch.be8]]
-        address = 0x828f01e7
+        address = 0x8292bdc7 # D3DPRESENT_INTERVAL_ONE
         value = 0x01
 
 [[patch]]
@@ -23,27 +23,8 @@ hash = "8D5966AB37B61B56" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82837f2c
+        address = 0x822bc88c # GUseTilingCode = FALSE
         value = 0x39600000
-    [[patch.be32]]
-        address = 0x8283802c
-        value = 0x3be00000
-
-[[patch]]
-    name = "Disable Depth of Field"
-    desc = "Fixes blurry image when upscaling."
-    author = "boma"
-    is_enabled = true
-
-    [[patch.be32]]
-        address = 0x823c60b8
-        value = 0x39600000
-    [[patch.be32]]
-        address = 0x824e87a0
-        value = 0x39600000
-    [[patch.be32]]
-        address = 0x824e8794
-        value = 0x39400000
 
 [[patch]]
     name = "Disable Motion Blur"
@@ -51,8 +32,18 @@ hash = "8D5966AB37B61B56" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8235423c
+        address = 0x82592ca8 # Motionblur = FALSE
         value = 0x39600000
+
+[[patch]]
+    name = "RTV - Flickering Decals Fix"
+    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82317f7c # StaticDecals = FALSE
+        value = 0x39200000
 
 [[patch]]
     name = "16x Anisotropic Filtering"
@@ -60,5 +51,5 @@ hash = "8D5966AB37B61B56" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8283f4f4
-        value = 0x38a00010
+        address = 0x822c555c
+        value = 0x38a00010 # li r5, 0x10

@@ -1,7 +1,12 @@
 title_name = "Lost Odyssey"
 title_id = "4D5307FA" # MS-2042
-#hash = "" # Disc 1/2/3/4, default.xex
-#media_id = ""
+hash = "1145F89D321D2AE0" # Disc 1/2/3/4, default.xex
+#media_id = [
+#    "612E5362", # Disc 1 (Japan): http://redump.org/disc/27092
+#    "1FCD93AF", # Disc 2 (Japan): http://redump.org/disc/27093
+#    "5F6C75EB", # Disc 3 (Japan): http://redump.org/disc/27094
+#    "1C347005", # Disc 4 (Japan): http://redump.org/disc/27095
+#]
 
 [[patch]]
     name = "60 FPS"

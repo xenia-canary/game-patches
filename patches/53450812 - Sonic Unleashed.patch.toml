@@ -3,7 +3,7 @@ title_id = "53450812" # SE-2066
 hash = "D26ABDDDED840999" # default.xex
 #media_id = [
 #    "77A0CF1B" # Disc (Europe): http://redump.org/disc/57315
-#    "4BED0DDE" # Disc (USA): http://redump.org/disc/14043
+#    "4BED0DDE" # Disc (USA):    http://redump.org/disc/14043
 #]
 
 [[patch]]

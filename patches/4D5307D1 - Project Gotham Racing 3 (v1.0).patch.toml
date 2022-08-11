@@ -1,7 +1,11 @@
 title_name = "Project Gotham Racing 3" # PGR
 title_id = "4D5307D1" # MS-2001
-hash = "CCDD4477E074DBBC" # default.xex
-#media_id = ""
+hash = "CCDD4477E074DBBC" # default.xex, v1.0
+#media_id = [
+#    "21906FBC", # Disc (USA): http://redump.org/disc/72289
+#    "21B61CF8", # Disc (Europe): http://redump.org/disc/9766
+#    "6D336DFF", # Disc (Europe): http://redump.org/disc/20580
+#]
 
 [[patch]]
     name = "60 FPS"

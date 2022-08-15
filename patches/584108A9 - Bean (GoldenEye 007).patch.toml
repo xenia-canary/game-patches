@@ -2,9 +2,9 @@ title_name = "Bean (GoldenEye 007)"
 title_id = "584108A9" # XA-2217
 hash = [
     "282F7B8D1572ECF0" # default.xex (modified)
-    #"90A47C71AD78F7BC", # Bean.xex (unmodified)
-    #"6DC5B822745188B3", # Bean_debug.xex
-    #"7B03AA7BFD4DCFCF", # Bean_team.xex
+#    "90A47C71AD78F7BC", # Bean.xex (unmodified)
+#    "6DC5B822745188B3", # Bean_debug.xex
+#    "7B03AA7BFD4DCFCF", # Bean_team.xex
 ]
 #media_id = "00000000"
 

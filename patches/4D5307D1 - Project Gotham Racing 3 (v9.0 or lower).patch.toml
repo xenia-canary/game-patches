@@ -1,8 +1,8 @@
 title_name = "Project Gotham Racing 3" # PGR
 title_id = "4D5307D1" # MS-2001
-hash = "CCDD4477E074DBBC" # default.xex, v1.0
+hash = "CCDD4477E074DBBC" # default.xex, v9.0 or lower
 #media_id = [
-#    "21906FBC", # Disc (USA): http://redump.org/disc/72289
+#    "21906FBC", # Disc (USA):    http://redump.org/disc/72289
 #    "21B61CF8", # Disc (Europe): http://redump.org/disc/9766
 #    "6D336DFF", # Disc (Europe): http://redump.org/disc/20580
 #]
@@ -26,19 +26,6 @@ hash = "CCDD4477E074DBBC" # default.xex, v1.0
     [[patch.be32]]
         address = 0x82172284
         value = 0x60000000
-
-[[patch]]
-    name = "960x540 Resolution"
-    desc = "Original resolution is 1024x600. Must be used in conjunction with 1280x720 patch."
-    author = "Margen67"
-    is_enabled = false
-
-    [[patch.be16]]
-        address = 0x82172292
-        value = 0x021c
-    [[patch.be16]]
-        address = 0x82172296
-        value = 0x03c0
 
 [[patch]]
     name = "Disable Motion Blur"

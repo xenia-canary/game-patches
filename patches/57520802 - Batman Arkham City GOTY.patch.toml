@@ -1,7 +1,7 @@
-title_name = "Batman: Arkham City"
+title_name = "Batman: Arkham City: Game of the Year Edition"
 title_id = "57520802" # WR-2050
-#hash = "" # default.xex
-#media_id = ""
+hash = "BD0E0E99E84F554B" # default.xex
+#media_id = "5D278B66" # Disc (USA, Europe): http://redump.org/disc/50850
 
 [[patch]]
     name = "Disable Lens Flares"

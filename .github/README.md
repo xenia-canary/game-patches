@@ -7,14 +7,13 @@ This repository contains game patches for Xenia Canary.
 
 ### All patches
 1. Delete `patches` folder if present.
-2. Continue to [Installing all patches](#All-patches).
-3. Download the [zip](../../../archive/main.zip) file.
-4. Extract the patches folder to the proper location:
+2. Download the [zip](../../../archive/main.zip) file.
+3. Extract the patches folder to the proper location:
     |                            | Location
     --                           | --------
     Default                      | `Documents\xenia`
     portable.txt (Portable mode) | Same directory as `xenia.exe`
-5. Continue to [enabling patches](#Enabling-patches).
+4. Continue to [enabling patches](#Enabling-patches).
 
 ### Individual patch(es)
 1. Open the patch file on GitHub.
@@ -62,7 +61,7 @@ If the above sections didn't help, you can try the following:
  * If the game you are submitting a patch for already has a file, then add to that file.
  * New file must contain the module hash, which can be [automatically or manually](#Creating-patch) obtained.
     * For games with multiple executables or discs, it can have multiple hashes, but they must be commented out like so:
-      https://github.com/xenia-canary/game-patches/blob/d141af5b71c42781b71a3de6adbdb86d82ccea8e/patches/4D5307DF%20-%20Blue%20Dragon.patch.toml#L1-L5
+      https://github.com/xenia-canary/game-patches/blob/95f51801048dc6e95675581e3fcf8fcdfc3e5544/patches/454108D8%20-%20Army%20of%20Two%20The%2040th%20Day.patch.toml#L3-L6
  * File must contain an empty line at the end.
 
 ### Prerequisites

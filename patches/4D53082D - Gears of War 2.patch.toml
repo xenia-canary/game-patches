@@ -27,7 +27,7 @@ hash = "BDB97753374D520A" # default.xex
         value = 0x39600000 # li r11, 0
     [[patch.be32]] # GMaxShadowDepthBufferSize, increased from default 0x320
         address = 0x82806a64
-        value = 0x39400C80 # li r10, 0xc80
+        value = 0x39400c80 # li r10, 0xc80
 
 [[patch]]
     name = "RTV - Flickering Decals Fix"

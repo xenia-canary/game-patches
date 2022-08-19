@@ -3,22 +3,18 @@ This repository contains game patches for Xenia Canary.
 
 [![Game Patches Discord](https://img.shields.io/discord/930763773109735484?color=5865F2&label=Game%20Patches%20Discord&logo=discord&logoColor=white)](https://discord.gg/fyRWq3xYNz)
 
-## Installing
-Game patches are now included with Xenia Canary.
-  * Xenia Canary must be set to portable. See [all patches](#All-patches)
-
-### Updating
-1. Delete `patches` folder.
-2. Continue to [Installing all patches](#All-patches).
+## Installing/Updating
 
 ### All patches
-1. Download the [zip](../../../archive/main.zip) file.
-2. Extract the patches folder to the proper location:
+1. Delete `patches` folder if present.
+2. Continue to [Installing all patches](#All-patches).
+3. Download the [zip](../../../archive/main.zip) file.
+4. Extract the patches folder to the proper location:
     |                            | Location
     --                           | --------
     Default                      | `Documents\xenia`
     portable.txt (Portable mode) | Same directory as `xenia.exe`
-3. Continue to [enabling patches](#Enabling-patches).
+5. Continue to [enabling patches](#Enabling-patches).
 
 ### Individual patch(es)
 1. Open the patch file on GitHub.

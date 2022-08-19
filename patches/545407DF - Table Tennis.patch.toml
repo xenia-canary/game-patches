@@ -7,10 +7,20 @@ hash = "5FDE016D496FD6C1" # default.xex
 #]
 
 [[patch]]
-    name = "Crash Skip"
-    author = "Gliniak"
+    name = "Crash Fix"
+    desc = "Bypasses guest crash error during boot. Disables light shafts which require access to 0xCDCDCDCD memory range, resulting in visual quality that's slightly different to native console."
+    author = "Gliniak, boma"
     is_enabled = false
 
-    [[patch.be8]]
-        address = 0x8237a3db
-        value = 0x05
+    [[patch.be16]]
+        address = 0x8237a3c4
+        value = 0x4800
+    [[patch.be16]]
+        address = 0x8237992c
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x82307db8
+        value = 0x39600000
+    [[patch.be32]]
+        address = 0x82308270
+        value = 0x38600000

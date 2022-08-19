@@ -1,6 +1,6 @@
 title_name = "Grand Theft Auto IV" # Four, 4
 title_id = "545407F2" # TT-2034
-#hash = "4CBE7EEB2455A159" # default.xex
+hash = "4CBE7EEB2455A159" # default.xex
 #media_id = "6AC07221" # Disc (USA): http://redump.org/disc/12492
 
 [[patch]]

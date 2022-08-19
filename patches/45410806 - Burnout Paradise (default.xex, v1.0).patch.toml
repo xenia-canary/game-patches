@@ -1,6 +1,6 @@
-title_name = "Burnout Paradise" # 1.00
+title_name = "Burnout Paradise"
 title_id = "45410806" # EA-2054
-#hash = "" # default.xex
+#hash = "" # default.xex, v1.0
 #media_id = ""
 
 [[patch]]

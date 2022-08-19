@@ -1,0 +1,55 @@
+title_name = "Midnight Club: Los Angeles" # MCLA
+title_id = "545407F8" # TT-2040
+hash = "B9BE89200A856E37" # default.xex
+#media_id = "11CCEA2A" # Disc (USA): http://redump.org/disc/13311
+
+[[patch]]
+    name = "Enable Deltatime"
+    desc = "Runs at any FPS with proper game speed. Can be used in conjunction with the 60 FPS patch."
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821bf2C8
+        value = 0x4800012c # b 0x821bdc34
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826cd258
+        value = 0x38600000 # li r3,0x0
+    [[patch.be32]]
+        address = 0x826cd274
+        value = 0x38600000 # li r3,0x0
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Framerates higher than 60 FPS requires vsync to be changed from true to false in the Xenia config."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x824d78cb
+        value = 0x01
+
+[[patch]]
+    name = "Disable Imposter Shadows - Performance Mode"
+    desc = "Trees and other foliage won't cast shadows, resulting in a moderate performance boost."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x823ccffc
+        value = 0x4800
+
+[[patch]]
+    name = "Disable MSAA"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823a6758
+        value = 0x39600001

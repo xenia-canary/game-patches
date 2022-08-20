@@ -1,6 +1,6 @@
 title_name = "State of Decay" # TU5
 title_id = "584111E8" # XA-4584
-#hash = "" # TODO: Add module filename
+hash = "EE3D121EE9877C9E" # default.xex
 #media_id = "6F32E742"
 
 [[patch]]

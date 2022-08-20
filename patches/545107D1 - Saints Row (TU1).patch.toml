@@ -1,11 +1,24 @@
 title_name = "Saints Row" # TU1
 title_id = "545107D1" # TQ-2001
-#hash = "" # default.xex
-#media_id = "24367742"
+hash = "2537D5F11410BE0A" # default.xex
+#media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
+
+[[patch]]
+    name = "Enable r_ugly_mode"
+    desc = "Higher FPS but worse graphics. Might crash when starting a game."
+    author = "Hasster"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x835f2164
+        value = 0x01
+    [[patch.be32]]
+        address = 0x827f7a5c
+        value = 0x00000000
 
 [[patch]]
     name = "Enable Debug Console"
-    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia config (Requires xenia canary version 271befc from January 25th or older)."
+    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia Canary config; Requires xenia canary version 271befc from January 25th or older."
     author = "emoose"
     is_enabled = false
 
@@ -21,16 +34,3 @@ title_id = "545107D1" # TQ-2001
     [[patch.be8]]
         address = 0x835f4c3e
         value = 0x01
-
-[[patch]]
-    name = "Enable r_ugly_mode"
-    desc = "Higher FPS but worse graphics. Might crash when starting a game."
-    author = "Hasster"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x835f2164
-        value = 0x01
-    [[patch.be32]]
-        address = 0x827f7a5c
-        value = 0x00000000

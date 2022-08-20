@@ -1,6 +1,6 @@
 title_name = "Silent Hill: Downpour" # TU1
 title_id = "4B4E0823" # KN-2083
-#hash = "" # default.xex
+hash = "447C77B772CDEC47" # default.xex
 #media_id = "7D387D17" # Disc (USA, Europe): http://redump.org/disc/58138
 
 [[patch]]

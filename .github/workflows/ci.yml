@@ -22,7 +22,7 @@ jobs:
         run: |
           npx eslint patches/*.patch.toml || patch_errored_fatal=1
           patch_check() {
-            local grep_result=$(pcregrep -Mn "$1" <<<"$2")
+            local grep_result=$(pcregrep -Mno "$1" <<<"$2")
             if [[ ( -z "$grep_result" && $4 = nomatch ) || ( -n "$grep_result" && $4 = match ) ]]; then
               local patch_errored=1
               if [[ $3 = error && -z $patch_errored_fatal ]]; then
@@ -46,32 +46,34 @@ jobs:
           }
           for patch in patches/*.patch.toml; do
             patch_content="$(cat "$patch")"
-            patch_check 'patches\/[0-9A-F]{8} - .+\.patch\.toml'                                                                             "$patch"         error   nomatch 'Filename is invalid!'
-            patch_check 'title_name = ".+"'                                                                                                  "$patch_content" error   nomatch 'title_name is invalid or missing!'
-            patch_check 'title_id = "[0-9A-F]{8}" # [A-Z]{2}-[0-9]{4,5}'                                                                     "$patch_content" error   nomatch 'title_id is invalid or missing!'
-            patch_check 'hash = ("[0-9A-F]{16}"|\[.*\n {4}"[0-9A-F]{16}".*(\n#? {4}"[0-9A-F]{16}".*)*\n])|#hash = (""|\[(\n# {4}"".*)+\n#])' "$patch_content" error   nomatch 'hash is invalid or missing!'
+            patch_check 'patches\/[0-9A-F]{8} - .+\.patch\.toml'                                                                             "$patch"         error   nomatch "Filename is invalid!"
+            patch_check 'title_name = ".+"'                                                                                                  "$patch_content" error   nomatch "title_name is invalid or missing!"
+            patch_check 'title_id = "[0-9A-F]{8}" # [A-Z]{2}-[0-9]{4,5}'                                                                     "$patch_content" error   nomatch "title_id is invalid or missing!"
+            patch_check 'hash = ("[0-9A-F]{16}"|\[.*\n {4}"[0-9A-F]{16}".*(\n#? {4}"[0-9A-F]{16}".*)*\n])|#hash = (""|\[(\n# {4}"".*)+\n#])' "$patch_content" error   nomatch "hash is invalid or missing!"
             # This should be an error, but not all patches have this yet.
-            patch_check '#hash = ""'                                                                                                         "$patch_content" warning match   'hash is empty.'
+            patch_check '#hash = (""|\[\n# {4}"").*'                                                                                         "$patch_content" warning match   "hash is empty."
             # This should be an error, but not all patches have this yet.
-            patch_check ' # TODO: Add module filename'                                                                                       "$patch_content" warning match   'hash module filename is missing.'
-            patch_check '#media_id = ("[0-9A-F]{8}".*|\[( # .+)?\n# {4}"[0-9A-F]{8}".*(\n# {4}"[0-9A-F]{8}".*)*\n#])|#media_id = ""'         "$patch_content" error   nomatch 'media_id is invalid or missing!'
+            patch_check ' # TODO: Add module filename'                                                                                       "$patch_content" warning match   "hash module filename is missing."
+            patch_check '#media_id = ("[0-9A-F]{8}".*|\[( # .+)?\n# {4}"[0-9A-F]{8}".*(\n# {4}"[0-9A-F]{8}".*)*\n#])|#media_id = ""'         "$patch_content" error   nomatch "media_id is invalid or missing!"
             # This should be an error, but not all patches have this yet.
-            patch_check '#media_id = ""'                                                                                                     "$patch_content" warning match   'media_id is empty.'
-            patch_check '\[\[patch]]'                                                                                                        "$patch_content" error   nomatch '[[patch]] is missing!'
-            patch_check ' {4}name = ".+"'                                                                                                    "$patch_content" error   nomatch 'name is invalid or missing!'
-            patch_check ' {4}desc = ""'                                                                                                      "$patch_content" error   match   'Unneeded empty description!'
-            patch_check ' {4}author = ".+"'                                                                                                  "$patch_content" error   nomatch 'author is invalid or missing!'
-            patch_check ' {4}is_enabled = '                                                                                                  "$patch_content" error   nomatch 'is_enabled is missing!'
-            patch_check ' {4}is_enabled = true'                                                                                              "$patch_content" error   match   'Patch is enabled!'
-            patch_check ' {8}address = 0x[0-9a-f]{8}'                                                                                        "$patch_content" error   nomatch 'address is invalid or missing!'
-            patch_check ' {8}value = '                                                                                                       "$patch_content" error   nomatch 'value is invalid or missing!'
-            patch_check ' {4}\[\[patch\.be8]]\n {8}address = 0x[0-9a-f]{8}\n {8}value = 0x([0-9a-f]?$|[0-9a-f]{3,})'                         "$patch_content" error   match   'value length is wrong! be8 is supposed to be 1 byte.'   2
-            patch_check ' {4}\[\[patch\.be16]]\n {8}address = 0x[0-9a-f]{8}\n {8}value = 0x([0-9a-f]{0,3}$|[0-9a-f]{5,})'                    "$patch_content" error   match   'value length is wrong! be16 is supposed to be 2 bytes.' 2
-            patch_check ' {4}\[\[patch\.be32]]\n {8}address = 0x[0-9a-f]{8}\n {8}value = 0x([0-9a-f]{0,7}$|[0-9a-f]{9,})'                    "$patch_content" error   match   'value length is wrong! be32 is supposed to be 4 bytes.' 2
-            patch_check ' {4}\[\[patch\.be64]]\n {8}address = 0x[0-9a-f]{8}\n {8}value = 0x([0-9a-f]{0,15}$|[0-9a-f]{17,})'                  "$patch_content" error   match   'value length is wrong! be64 is supposed to be 8 bytes.' 2
+            patch_check '#media_id = ""'                                                                                                     "$patch_content" warning match   "media_id is empty."
+            patch_check '\[\[patch]]'                                                                                                        "$patch_content" error   nomatch "[[patch]] is missing!"
+            patch_check ' {4}name = ".+"'                                                                                                    "$patch_content" error   nomatch "name is invalid or missing!"
+            patch_check ' {4}desc = ""'                                                                                                      "$patch_content" error   match   "Unneeded empty description!"
+            patch_check ' {4}author = ".+"'                                                                                                  "$patch_content" error   nomatch "author is invalid or missing!"
+            patch_check ' {4}is_enabled = '                                                                                                  "$patch_content" error   nomatch "is_enabled is missing!"
+            patch_check ' {4}is_enabled = true'                                                                                              "$patch_content" error   match   "Patch is enabled!"
+            patch_check ' {8}address = 0x[0-9a-f]{8}'                                                                                        "$patch_content" error   nomatch "address is invalid or missing!"
+            patch_check ' {8}value = '                                                                                                       "$patch_content" error   nomatch "value is invalid or missing!"
+            patch_check ' {8}address = 0x[0-9a-f]{1,15}[A-F]+'                                                                               "$patch_content" error   match   "Hex can't be uppercase!"
+            patch_check ' {8}value = 0x[0-9a-f]{1,15}[A-F]+'                                                                                 "$patch_content" error   match   "Hex can't be uppercase!"
+            patch_check ' {4}\[\[patch\.be8]]\n {8}address = 0x[0-9a-f]{8}\n {8}value = 0x([0-9a-f]?$|[0-9a-f]{3,})'                         "$patch_content" error   match   "value length is wrong! be8 is supposed to be 1 byte."   2
+            patch_check ' {4}\[\[patch\.be16]]\n {8}address = 0x[0-9a-f]{8}\n {8}value = 0x([0-9a-f]{0,3}$|[0-9a-f]{5,})'                    "$patch_content" error   match   "value length is wrong! be16 is supposed to be 2 bytes." 2
+            patch_check ' {4}\[\[patch\.be32]]\n {8}address = 0x[0-9a-f]{8}\n {8}value = 0x([0-9a-f]{0,7}$|[0-9a-f]{9,})'                    "$patch_content" error   match   "value length is wrong! be32 is supposed to be 4 bytes." 2
+            patch_check ' {4}\[\[patch\.be64]]\n {8}address = 0x[0-9a-f]{8}\n {8}value = 0x([0-9a-f]{0,15}$|[0-9a-f]{17,})'                  "$patch_content" error   match   "value length is wrong! be64 is supposed to be 8 bytes." 2
           done
           if [ -n "$patch_errored_fatal" ]; then
-            echo 'Linting completed with errors!'
+            echo "Linting completed with errors!"
             exit 1
           fi
 

@@ -22,6 +22,13 @@ hash = "98CA1A0A3A492388" # default.xex
     [[patch.be32]]
         address = 0x82baffa8
         value = 0x38800500
+
+[[patch]]
+    name = "Disable Color Adjustment"
+    desc = "Disables the yellowish color adjustment that's applied to the game screen."
+    author = "slashiee, ICUP321, boma"
+    is_enabled = false
+
     [[patch.be32]]
         address = 0x8328bb40
         value = 0x3f800000

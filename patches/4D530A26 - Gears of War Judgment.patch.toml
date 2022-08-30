@@ -35,16 +35,6 @@ hash = "8429D0AE190C10DB" # default.xex
         value = 0x39400000
 
 [[patch]]
-    name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8234c778
-        value = 0x39600000
-
-[[patch]]
     name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false

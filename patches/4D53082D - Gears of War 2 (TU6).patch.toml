@@ -30,16 +30,6 @@ hash = "62547A005C0420D2" # default.xex
         value = 0x39400c80 # li r10, 0xc80
 
 [[patch]]
-    name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x822d6f04
-        value = 0x39200000
-
-[[patch]]
     name = "Disable Ambient Occlusion"
     desc = "Fixes various artifacts when using upscaling."
     author = "illusion, boma"

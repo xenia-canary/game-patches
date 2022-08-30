@@ -17,16 +17,6 @@ hash = "66A1B4C48BA3D9D6" # default.xex
         value = 0x01
 
 [[patch]]
-    name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8230e780
-        value = 0x39600000
-
-[[patch]]
     name = "Disable All Post-Processing"
     desc = "Removes tonemapping, image grain, motion blur, rim shading and depth of field."
     author = "boma"

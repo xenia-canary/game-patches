@@ -4,16 +4,33 @@ hash = "4E2AC80A4D9E15AE" # engine_360.dll
 #media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
 
 [[patch]]
-    name = "Bypass internet requirement for Team Fortress 2"
+    name = "Team Fortress 2: Bypass internet requirement" # TF2
     author = "illusion, Margen67"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x86114590
-        value = 0x39600000 # li r11,0x0
+    [[patch.be8]]    # -xnet_bypass_security
+        address = 0x8610c628
+        value = 0x40 # 0x41
+    [[patch.be8]]    # -nodns
+        address = 0x861164e4
+        value = 0x40 # 0x41
+    [[patch.be8]]    # -noip
+        address = 0x861165a4
+        value = 0x40 # 0x41
+
+[[patch]]
+    name = "No sound"
+    desc = "Improves stability by disabling sound."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be8]]    # -nosound
+        address = 0x8621f7b4
+        value = 0x40 # 0x41
 
 [[patch]]
     name = "Unlock FPS"
+    desc = "This patch must also be enabled for shaderapidx9_360.dll."
     author = "illusion, Margen67"
     is_enabled = false
 
@@ -32,7 +49,7 @@ hash = "4E2AC80A4D9E15AE" # engine_360.dll
 
 [[patch]]
     name = "Performance Enhancements"
-    desc = "These may or may not improve performance."
+    desc = "These may or may not improve performance. Also see patches for tf/bin/Client_360.dll."
     author = "Margen67"
     is_enabled = false
 
@@ -42,9 +59,9 @@ hash = "4E2AC80A4D9E15AE" # engine_360.dll
     [[patch.be8]]  # Redirect snd_refdb value to different unicode 60
         address = 0x86356e27
         value = 0x5a
-    [[patch.be8]]  # r_fastzreject 1
-        address = 0x8635b64f
-        value = 0xfc
+#    [[patch.be8]]  # r_fastzreject 1
+#        address = 0x8635b64f
+#        value = 0xfc
     [[patch.be8]]  # r_fastzrejectdisp 1
         address = 0x8635b69f
         value = 0xfc

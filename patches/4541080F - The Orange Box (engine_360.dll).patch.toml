@@ -34,6 +34,12 @@ hash = "4E2AC80A4D9E15AE" # engine_360.dll
     author = "illusion, Margen67"
     is_enabled = false
 
+    [[patch.be32]]
+        address = 0x8614ab08
+        value = 0x60000000 # ori r0,r0,0x0
+    [[patch.be32]]
+        address = 0x8614ab0c
+        value = 0x39600001 # li r11,0x1
     [[patch.be16]]
         address = 0x8625480a
         value = 0x3630

@@ -1,0 +1,13 @@
+title_name = "The Orange Box"
+title_id = "4541080F" # EA-2063
+hash = "B3D3A97499F8785B" # default.xex
+#media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
+
+[[patch]]
+    name = "-dvd"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82010968
+        value = 0x60000000 # 0x419a002c

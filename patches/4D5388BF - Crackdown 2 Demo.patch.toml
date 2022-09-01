@@ -6,7 +6,7 @@ hash = "54F6EF3FCB37D4C2" # default.xex
 [[patch]]
     name = "Remove Demo Countdown"
     author = "Serenity"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x82815380

@@ -17,7 +17,29 @@ hash = "0DAAEDF276921971" # default.xex
 
 [[patch]]
     name = "Debug Mode"
-    desc = "Use controller 2 to open and navigate menus. Fonts will be black. Requires custom font built for the xenon version."
+    desc = '''
+        Use controller 2 to open and navigate menus. Fonts will be black. Requires custom font built for the xenon version.
+        Font goes into path below:
+        82247cf0 addi param_1=>s_sys/debug/...   = "sys/debug/DebugFontTextureDDS"
+        https://cdn.discordapp.com/attachments/650395105479360514/846842483849691186/DDS.7z
+        From fdsa, has font build scripts but I couldn't get them working in the xenon version.
+        TODO(illusion): Find a place to make cave to write custom playmode from stw at 82251fa4
+        I think only the first line is needed.
+        bne on 8225205c allows the menu to be opened.
+        nop should boot into debug playmode.
+        lVar5 = FUN_82253798(lVar5,"alpha");
+        (iVar1 + 0x2e4) = 2;
+        lVar5 = FUN_82253798(lVar5,"beta");
+        (iVar1 + 0x2e4) = 3;
+        lVar5 = FUN_82253798(lVar5,"tgs");
+        (iVar1 + 0x2e4) = 4;
+        lVar5 = FUN_82253798(lVar5,"e3");
+        (iVar1 + 0x2e4) = 5;
+        lVar5 = FUN_82253798(lVar5,"debug");
+        (iVar1 + 0x2e4) = 0;
+        lVar5 = FUN_82253798(lVar5,"release");
+        (iVar1 + 0x2e4) = 1; // default
+    '''
     author = "fdsa, illusion"
     is_enabled = false
 
@@ -27,23 +49,3 @@ hash = "0DAAEDF276921971" # default.xex
     [[patch.be8]]
         address = 0x82251d6c
         value = 0x40
-#         Font goes into path below:
-#         82247cf0 addi param_1=>s_sys/debug/...   = "sys/debug/DebugFontTextureDDS"
-#         https://cdn.discordapp.com/attachments/650395105479360514/846842483849691186/DDS.7z
-#         From fdsa, has font build scripts but I couldn't get them working in the xenon version.
-#         TODO(illusion): Find a place to make cave to write custom playmode from stw at 82251fa4
-#         I think only the first line is needed.
-#         bne on 8225205c allows the menu to be opened.
-#         nop should boot into debug playmode.
-#         lVar5 = FUN_82253798(lVar5,"alpha");
-#         (iVar1 + 0x2e4) = 2;
-#         lVar5 = FUN_82253798(lVar5,"beta");
-#         (iVar1 + 0x2e4) = 3;
-#         lVar5 = FUN_82253798(lVar5,"tgs");
-#         (iVar1 + 0x2e4) = 4;
-#         lVar5 = FUN_82253798(lVar5,"e3");
-#         (iVar1 + 0x2e4) = 5;
-#         lVar5 = FUN_82253798(lVar5,"debug");
-#         (iVar1 + 0x2e4) = 0;
-#         lVar5 = FUN_82253798(lVar5,"release");
-#         (iVar1 + 0x2e4) = 1; // default

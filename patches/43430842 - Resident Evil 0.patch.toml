@@ -5,17 +5,19 @@ hash = "7668D690747DF5AF" # default.xex
 
 [[patch]]
     name = "60 FPS"
-    desc = "Proper game speed at up to 60 FPS."
+    desc = '''
+        Proper game speed at up to 60 FPS.
+        First array is game tick.
+        Second array is simulated tick (what we are patching.)
+        Setting both bits to 60.0f will result in double speed.
+        However, setting only the second bit to 60.0f results in 60 FPS and no speedup.
+        cc implemented game speed/frametime calc based on tickrate (absolute hacks :p) for win32.
+        Perhaps patch stfs instead?
+        Array stfs loads from 82009988
+        There's like 4 stfs, one for movie, and a couple at startup and another for gameplay,
+        didn't bother to trace.
+    '''
     author = "illusion"
-#     First array is game tick.
-#     Second array is simulated tick (what we are patching.)
-#     Setting both bits to 60.0f will result in double speed.
-#     However, setting only the second bit to 60.0f results in 60 FPS and no speedup.
-#     cc implemented game speed/frametime calc based on tickrate (absolute hacks :p) for win32.
-#     Perhaps patch stfs instead?
-#     Array stfs loads from 82009988
-#     There's like 4 stfs, one for movie, and a couple at startup and another for gameplay,
-#     didn't bother to trace.
     is_enabled = false
 
     [[patch.be32]]

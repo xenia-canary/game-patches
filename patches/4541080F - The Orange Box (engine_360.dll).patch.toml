@@ -34,12 +34,6 @@ hash = "4E2AC80A4D9E15AE" # engine_360.dll
     author = "illusion, Margen67"
     is_enabled = false
 
-#    [[patch.be32]]
-#        address = 0x8614ab08
-#        value = 0x60000000 # ori r0,r0,0x0
-#    [[patch.be32]]
-#        address = 0x8614ab0c
-#        value = 0x39600001 # li r11,0x1
     [[patch.be16]]
         address = 0x8625480a
         value = 0x3630
@@ -59,9 +53,9 @@ hash = "4E2AC80A4D9E15AE" # engine_360.dll
     [[patch.be8]]  # Redirect snd_refdb value to different unicode 60
         address = 0x86356e27
         value = 0x5a
-#    [[patch.be8]]  # r_fastzreject 1
-#        address = 0x8635b64f
-#        value = 0xfc
+    #[[patch.be8]]  # r_fastzreject 1
+    #    address = 0x8635b64f
+    #    value = 0xfc
     [[patch.be8]]  # r_fastzrejectdisp 1
         address = 0x8635b69f
         value = 0xfc

@@ -4,7 +4,7 @@ hash = "54F6EF3FCB37D4C2" # default.xex
 #media_id = "22AFC3C2"
 
 [[patch]]
-    name = "End Demo Remover"
+    name = "Remove Demo Countdown"
     author = "Serenity"
     is_enabled = true
 

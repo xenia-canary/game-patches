@@ -5,7 +5,7 @@ hash = "C84FA013769BF3A4" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Increases vsync target to 60 FPS and removes 30 FPS engine hard cap. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config, which is not recommended."
+    desc = "Increases vsync target to 60 FPS and removes 30 FPS engine hard cap. See note about framerate patches in the README. Disabling vsync isn't recommended."
     author = "boma"
     is_enabled = false
 

@@ -5,7 +5,7 @@ hash = "1984A3354B78CE19" # default.xex
 
 [[patch]]
     name = "60 FPS - Game Speed Fix"
-    desc = "Increases vsync target to 60 FPS and enables deltatime, preventing game speed fluctuations based on frame rate. Framerates higher than 60 FPS require vsync set to false in the Xenia config. Be advised that due to aggressive double buffering, keeping vsync enabled will result in common drops to 30 FPS whenever there are performance dips."
+    desc = "Increases vsync target to 60 FPS and enables deltatime, preventing game speed fluctuations based on frame rate. See note about framerate patches in the README. Due to aggressive double buffering, keeping vsync enabled will result in common drops to 30 FPS whenever there are performance dips."
     author = "illusion, boma"
     is_enabled = false
 

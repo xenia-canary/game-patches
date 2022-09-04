@@ -5,7 +5,7 @@ hash = "C1572363239DB6CE" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Requires vsync to be changed from true to false in the Xenia config to go above 60 FPS."
+    desc = "See note about framerate patches in the README."
     author = "Margen67"
     is_enabled = false
 
@@ -15,7 +15,7 @@ hash = "C1572363239DB6CE" # default.xex
 
 [[patch]]
     name = "Aspect Ratio"
-    desc = "See note about aspect ratio patches in README."
+    desc = "See note about aspect ratio patches in the README."
     author = "Margen67"
     is_enabled = false
 

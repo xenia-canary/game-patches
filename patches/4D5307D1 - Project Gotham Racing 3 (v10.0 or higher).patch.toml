@@ -37,7 +37,7 @@ hash = "1DBBA44F305E61A9" # default.xex, v10.0 or higher
 
 [[patch]]
     name = "21:9 Aspect Ratio"
-    desc = "Requires present_letterbox to be changed from true to false in the Xenia config."
+    desc = "See note about aspect ratio patches in the README; Aspect ratio value can't be calculated like most patches, and shouldn't be changed."
     author = "Esppiral"
     is_enabled = false
 

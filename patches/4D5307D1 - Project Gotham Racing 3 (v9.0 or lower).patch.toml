@@ -9,7 +9,7 @@ hash = "CCDD4477E074DBBC" # default.xex, v9.0 or lower
 
 [[patch]]
     name = "60 FPS"
-    desc = "Some video playback may run at double speed."
+    desc = "See note about framerate patches in the README. Some video playback may run at double speed."
     author = "illusion"
     is_enabled = false
 
@@ -38,7 +38,7 @@ hash = "CCDD4477E074DBBC" # default.xex, v9.0 or lower
 
 [[patch]]
     name = "21:9 Aspect Ratio"
-    desc = "Requires present_letterbox to be changed from true to false in the Xenia config."
+    desc = "See note about aspect ratio patches in the README; Aspect ratio value can't be calculated like most patches, and shouldn't be changed."
     author = "Esppiral"
     is_enabled = false
 

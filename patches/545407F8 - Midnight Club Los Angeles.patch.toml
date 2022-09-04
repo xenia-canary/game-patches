@@ -5,7 +5,7 @@ hash = "B9BE89200A856E37" # default.xex
 
 [[patch]]
     name = "Game Speed Fix"
-    desc = "Enables deltatime, preventing game speed fluctuations based on frame rate. Framerates higher than 30 FPS require vsync set to false in the Xenia config."
+    desc = "Enables deltatime, preventing game speed fluctuations based on frame rate. See note about framerate patches in the README."
     author = "illusion, boma"
     is_enabled = false
 

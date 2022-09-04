@@ -10,7 +10,7 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
 
 [[patch]]
     name = "60 FPS"
-    desc = "Disabling vsync in Xenia config for over 60 FPS is not recommended as it causes numerous gameplay issues."
+    desc = "Disabling vsync in Xenia Canary config for over 60 FPS isn't recommended as it causes numerous gameplay issues."
     author = "boma"
     is_enabled = false
 

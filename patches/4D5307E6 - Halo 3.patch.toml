@@ -5,7 +5,7 @@ hash = "19EB90F06A070ED6" # default.xex
 
 [[patch]]
     name = "Aspect Ratio"
-    desc = "Makes FMVs stretch vertically. See note about aspect ratio patches in README."
+    desc = "Makes FMVs stretch vertically. See note about aspect ratio patches in the README."
     author = "Margen67"
     is_enabled = false
 

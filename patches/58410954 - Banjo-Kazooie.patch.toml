@@ -9,7 +9,7 @@ hash = "700FE3401F23C364" # default.xex
     author = "illusion, retroben"
     is_enabled = false
 
-    # These patches require break_on_debugbreak to be changed from true to false in the Xenia config.
+    # These patches require break_on_debugbreak to be changed from true to false in the Xenia Canary config.
     # Fixme: Missing parts for unfair snowman, and high jumping clam fixes.
     [[patch.be32]]
         address = 0x82110b64

@@ -5,7 +5,7 @@ hash = "1A284CDE0A9F0CF8" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Increases vsync target to 60 FPS. Additionally, framerates higher than the 64 FPS cap are unlocked but vsync must be set to false in the Xenia config. Be advised, due to aggressive double buffering, keeping vsync enabled will result in common drops to 30 FPS whenever there are performance dips."
+    desc = "Increases vsync target to 60 FPS. Framerates higher than 64 FPS are unlocked. See note about framerate patches in the README. Due to aggressive double buffering, keeping vsync enabled will result in common drops to 30 FPS whenever there are performance dips."
     author = "boma"
     is_enabled = false
 
@@ -150,7 +150,7 @@ hash = "1A284CDE0A9F0CF8" # default.xex
 
 [[patch]]
     name = "Aspect Ratio"
-    desc = "See note about aspect ratio patches in README."
+    desc = "See note about aspect ratio patches in the README."
     author = "boma"
     is_enabled = false
 

@@ -1,6 +1,6 @@
 title_name = "Far Cry 3"
 title_id = "5553088C" # US-2188
-#hash = "" # default.xex
+hash = "D6136C56138949B2" # default.xex
 #media_id = "6F6EAD36" # Disc (USA, Europe): http://redump.org/disc/54368
 
 [[patch]]

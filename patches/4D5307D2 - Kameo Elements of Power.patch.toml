@@ -14,7 +14,7 @@ hash = "1A83A0AF5C0EDFE8" # default.xex
 
 [[patch]]
     name = "Aspect Ratio"
-    desc = "See note about aspect ratio patches in README."
+    desc = "See note about aspect ratio patches in the README."
     author = "Margen67"
     is_enabled = false
 

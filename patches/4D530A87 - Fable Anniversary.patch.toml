@@ -10,7 +10,7 @@ hash = "6E1372DAA51E685F" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Requires vsync to be changed from true to false in the Xenia config."
+    desc = "See note about framerate patches in the README."
     author = "illusion"
     is_enabled = false
 

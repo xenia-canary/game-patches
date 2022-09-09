@@ -5,7 +5,7 @@ hash = "34849A59634915F6" # default.xex
 
 [[patch]]
     name = "60 FPS"
-    desc = "Increases the default vsync target to 60 FPS. Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config, however that can potentially case timing-related physics and audio issues above 100 FPS."
+    desc = "Increases the default vsync target to 60 FPS. See note about framerate patches in the README. Above 100 FPS there can be timing-related physics and audio issues."
     author = "boma"
     is_enabled = false
 

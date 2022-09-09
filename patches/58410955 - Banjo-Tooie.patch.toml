@@ -9,7 +9,7 @@ hash = "CFE7D4B66FAC7096" # default.xex
     author = "illusion, retroben, wedarobi"
     is_enabled = false
 
-    # These patches require break_on_debugbreak to be changed from true to false in the Xenia config.
+    # These patches require break_on_debugbreak to be changed from true to false in the Xenia Canary config.
     [[patch.be32]]
         address = 0x825f4000
         value = 0x3d208267

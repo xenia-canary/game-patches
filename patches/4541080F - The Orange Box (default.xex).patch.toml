@@ -5,6 +5,7 @@ hash = "B3D3A97499F8785B" # default.xex
 
 [[patch]]
     name = "-dvd"
+    desc = "Same as adding -dvd to cl in the Xenia Canary config. Prevents crashing, but you still need to pass '-game hl2/episodic/ep2/portal/tf'"
     author = "Margen67"
     is_enabled = false
 

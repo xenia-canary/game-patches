@@ -5,7 +5,7 @@ hash = "5E6434A23E7BA4AE" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia config. Disabling vsync may increase camera sensitivity."
+    desc = "See note about framerate patches in the README. Disabling vsync may increase camera sensitivity."
     author = "boma"
     is_enabled = false
 

@@ -20,6 +20,7 @@ jobs:
           npm i -D --no-fund
           sudo apt -y install pcregrep
       - name: Lint
+        id: lint
         run: |
           npx eslint patches/*.patch.toml || patch_errored_fatal=1
           patch_check() {
@@ -75,19 +76,36 @@ jobs:
             echo "Linting completed with errors!"
             exit 1
           fi
+      - name: Release
+        if: |
+          steps.lint.conclusion == 'success' &&
+          github.event_name  == 'push'       &&
+          github.ref == 'refs/heads/main'    &&
+          github.repository == 'xenia-canary/game-patches'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p assets
+          echo -n $GITHUB_SHA > assets/version.txt
+          7z a assets/patches.zip patches
+          tag=latest
+          git tag -d $tag || true
+          git push --delete origin $tag || true
+          gh release delete $tag || true
+          gh release create $tag assets/* --target $GITHUB_SHA -t $tag
 
-  #workflow_dispatch:
-  #  if: |
-  #    github.event_name  == 'push' &&
-  #    github.ref == 'refs/heads/main' &&
-  #    github.repository == 'xenia-canary/game-patches'
-  #  needs: lint
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - uses: actions/checkout@v3
-  #      with:
-  #        repository: xenia-canary/xenia-canary.github.io
-  #    - name: Workflow dispatch
-  #      env:
-  #        GITHUB_TOKEN: ${{ secrets.WORKFLOW }}
-  #      run: gh workflow run jekyll.yml
+#  workflow_dispatch:
+#    if: |
+#      github.event_name  == 'push' &&
+#      github.ref == 'refs/heads/main' &&
+#      github.repository == 'xenia-canary/game-patches'
+#    needs: lint
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#        with:
+#          repository: xenia-canary/xenia-canary.github.io
+#      - name: Workflow dispatch
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.WORKFLOW }}
+#        run: gh workflow run jekyll.yml

@@ -5,7 +5,7 @@ hash = "447C77B772CDEC47" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "Camera movement slows down over 60 FPS. Framerates above 60 FPS require vsync to be changed from true to false in the Xenia config."
+    desc = "See note about framerate patches in the README. Camera movement slows down over 60 FPS."
     author = "illusion, Aphelion, boma"
     is_enabled = false
 

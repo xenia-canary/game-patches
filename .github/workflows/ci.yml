@@ -87,7 +87,7 @@ jobs:
         run: |
           mkdir -p assets
           echo -n $GITHUB_SHA > assets/version.txt
-          7z a assets/patches.zip patches
+          7z a assets/game-patches.zip patches
           tag=latest
           git tag -d $tag || true
           git push --delete origin $tag || true

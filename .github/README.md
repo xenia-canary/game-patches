@@ -9,7 +9,7 @@ This repository contains game patches for Xenia Canary.
 3. Click `Open` > `Show content directory...`
 4. Go up one folder.
 5. Delete `patches` folder if present.
-6. Open `game-patches-main.zip`, navigate to `/game-patches-main` and extract `patches` to the directory that contains `content`.
+6. Open `game-patches.zip` and extract `patches` to the directory that contains `content`.
 7. Continue to [enabling patches](#Enabling-patches).
 
 ### Enabling patches

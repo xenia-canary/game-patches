@@ -1,11 +1,10 @@
-title_name = "Fable II" # 2, GOTY (Game Of The Year)/Platinum Edition
+title_name = "Fable II" # 2
 title_id = "4D5307F1" # MS-2033
-hash = "4145F96D2DEE2AB5" # default.xex
+hash = "43FFE5AFC5042DD2" # default.xex
 #media_id = [
-#    "1D1F480C", # Disc (Germany):     http://redump.org/disc/61715
-#    "51F48E54", # Disc (Italy):       http://redump.org/disc/62006
-#    "716F0A0D", # Disc (USA, Europe): http://redump.org/disc/20202
-#    "772E8EE8", # Disc (Spain):       http://redump.org/disc/20232
+#    "0962B000", # Disc (USA, Europe) (Rev 1): http://redump.org/disc/42254
+#    "768FC8D1", # Disc (Russia) (Rev 1):      http://redump.org/disc/90843
+#    "6306C101", # Disc (Germany):             http://redump.org/disc/46610
 #]
 
 [[patch]]
@@ -14,7 +13,7 @@ hash = "4145F96D2DEE2AB5" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82b9c8eb
+        address = 0x82b9c69b
         value = 0x01
 
 [[patch]]
@@ -24,7 +23,7 @@ hash = "4145F96D2DEE2AB5" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8238df5a
+        address = 0x8238f3da
         value = 0x0500
 
 [[patch]]
@@ -33,5 +32,5 @@ hash = "4145F96D2DEE2AB5" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8238df3f
+        address = 0x8238f3bf
         value = 0x01

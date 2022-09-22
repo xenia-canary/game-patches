@@ -17,13 +17,20 @@ hash = "7A3D5809776EE6AB" # default.xex
         value = 0x01
 
 [[patch]]
-    name = "Disable FXAA"
+    name = "Disable FXAA & MLAA"
+    desc = "Post-process anti-aliasing can significantly impact image sharpness and definition. This patch is particularly useful when using resolution upscaling or FSR."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82a1097c
-        value = 0x39600000
+        address = 0x82a04ba0 # SHGame.MLAAPostProcess
+        value = 0x38600000 # li r3, 0x0
+    [[patch.be16]]
+        address = 0x82a1095f
+        value = 0x6441 # cmpwi r8 0x64; beq 82a10970
+    [[patch.be32]]
+        address = 0x82a10964 # Engine.GlobalPostProcessSettings.ForceFXAA
+        value = 0x39600000 # li r11, 0x0
 
 [[patch]]
     name = "16x Anisotropic Filtering"

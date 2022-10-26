@@ -1,6 +1,7 @@
-title_name = "Forza Horizon (E3 Demo)"
+title_name = "Forza Horizon (E3 Demo 2012-06-01)"
 title_id = "4D5309C9" # MS-2505
 hash = "3F31395956B42BCD" # default.xex
+#media_id = "00000000"
 
 [[patch]]
     name = "Disable Demo Boundaries"

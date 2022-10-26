@@ -4,7 +4,8 @@ hash = "3F31395956B42BCD" # default.xex
 #media_id = "00000000"
 
 [[patch]]
-    name = "Disable Demo Boundaries"
+    name = "Disable Demo Boundaries" # File edit from chr0m3x, thanks to him
+    desc = "Removes roadbloacks and fadeout when crossing barriers."
     author = "illusion"
     is_enabled = false
 

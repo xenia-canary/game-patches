@@ -236,6 +236,22 @@ hash = "CFE7D4B66FAC7096" # default.xex
         value = 0x4bc6dffc
 
 [[patch]]
+    name = "Draw Distance Hack"
+    desc = "Uncapped actor spawn ranges and draw distances."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82240df8
+        value = 0x38606400
+    [[patch.be32]]
+        address = 0x8223f714
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x822a9f84
+        value = 0x60000000
+
+[[patch]]
     name = "Banjo Kazooie Fire Breath"
     desc = "Swaps normal idle attack with dragon Kazooie fire breath."
     author = "retroben"

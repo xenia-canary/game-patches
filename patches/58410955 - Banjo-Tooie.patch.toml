@@ -243,12 +243,69 @@ hash = "CFE7D4B66FAC7096" # default.xex
 
     [[patch.be32]]
         address = 0x82240df8
-        value = 0x38606400
+        value = 0x483b3308
     [[patch.be32]]
         address = 0x8223f714
         value = 0x60000000
     [[patch.be32]]
         address = 0x822a9f84
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x825f4100
+        value = 0x3c608267
+    [[patch.be32]]
+        address = 0x825f4104
+        value = 0xa0633720
+    [[patch.be32]]
+        address = 0x825f4108
+        value = 0x2c030112
+    [[patch.be32]]
+        address = 0x825f410c
+        value = 0x4182000c
+    [[patch.be32]]
+        address = 0x825f4110
+        value = 0x2c030128
+    [[patch.be32]]
+        address = 0x825f4114
+        value = 0x4082000c
+    [[patch.be32]]
+        address = 0x825f4118
+        value = 0x386028a0
+    [[patch.be32]]
+        address = 0x825f411c
+        value = 0x4bc4cce0
+    [[patch.be32]]
+        address = 0x825f4120
+        value = 0x2c030127
+    [[patch.be32]]
+        address = 0x825f4124
+        value = 0x4082000c
+    [[patch.be32]]
+        address = 0x825f4128
+        value = 0x38603200
+    [[patch.be32]]
+        address = 0x825f412c
+        value = 0x4bc4ccd0
+    [[patch.be32]]
+        address = 0x825f4130
+        value = 0x2c030136
+    [[patch.be32]]
+        address = 0x825f4134
+        value = 0x4082000c
+    [[patch.be32]]
+        address = 0x825f4138
+        value = 0x38605400
+    [[patch.be32]]
+        address = 0x825f413c
+        value = 0x4bc4ccc0
+    [[patch.be32]]
+        address = 0x825f4140
+        value = 0x38606400
+    [[patch.be32]]
+        address = 0x825f4144
+        value = 0x4bc4ccb8
+    [[patch.be32]]
+        address = 0x825f4148
         value = 0x60000000
 
 [[patch]]

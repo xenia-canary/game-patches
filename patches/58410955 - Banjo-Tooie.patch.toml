@@ -309,6 +309,16 @@ hash = "CFE7D4B66FAC7096" # default.xex
         value = 0x60000000
 
 [[patch]]
+    name = "Access Breegull Bash"
+    desc = "Allows you to use Breegull Bash without actually having it."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820de0c8
+        value = 0x60000000
+
+[[patch]]
     name = "Banjo Kazooie Fire Breath"
     desc = "Swaps normal idle attack with dragon Kazooie fire breath."
     author = "retroben"

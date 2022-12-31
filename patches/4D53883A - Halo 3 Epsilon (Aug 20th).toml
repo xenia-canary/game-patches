@@ -5,7 +5,7 @@ title_id = "4D53883A"
     name = "Enable Debug Logs"
     desc = "This halo build contains some logging functionality, when enabled the game will write logs to cache1\reports."
     author = "craftycodie"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x82236154

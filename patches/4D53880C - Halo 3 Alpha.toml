@@ -1,5 +1,6 @@
 title_name = "Halo 3 Alpha"
 title_id = "4D53880C"
+hash = "F5941007A1086441"
 
 [[patch]]
     name = "More Debug Logs"

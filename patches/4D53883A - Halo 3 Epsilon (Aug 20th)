@@ -1,0 +1,12 @@
+title_name = "Halo 3 Epsilon (Aug 20th)"
+title_id = "4D53883A"
+
+[[patch]]
+    name = "Enable Debug Logs"
+    desc = "This halo build contains some logging functionality, when enabled the game will write logs to cache1\reports."
+    author = "craftycodie"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x82236154
+        value = 0x60000000

@@ -9,5 +9,5 @@ hash = "F5941007A1086441"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823B23D0
+        address = 0x823b23d0
         value = 0x60000000

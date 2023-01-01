@@ -1,6 +1,7 @@
 title_name = "Halo 3 Alpha"
-title_id = "4D53880C"
-hash = "F5941007A1086441"
+title_id = "4D53880C" # MS-34828
+hash = "F5941007A1086441" # default.xex
+#media_id = "00000000"
 
 [[patch]]
     name = "More Debug Logs"
@@ -9,5 +10,5 @@ hash = "F5941007A1086441"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823B23D0
+        address = 0x823b23d0
         value = 0x60000000

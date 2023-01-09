@@ -61,6 +61,24 @@ hash = "C03916823ADAC91B" # default.xex
         value = 0x60000000
 
 [[patch]]
+    name = "Fuel and Ammo Never Decrease"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822784e8
+        value = 0x60000000
+
+[[patch]]
+    name = "Max Acquired Parts Access"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8255ed1c
+        value = 0x392000ff
+
+[[patch]]
     name = "Screen Always Bright"
     author = "Serenity"
     is_enabled = false

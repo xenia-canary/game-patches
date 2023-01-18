@@ -55,7 +55,6 @@ hash = "4145F96D2DEE2AB5" # default.xex
     [[patch.be32]]
        address = 0x8233aeb4
        value = 0x60000000
-
     [[patch.be8]]
         address = 0x83319511
         value = 0x3E
@@ -69,7 +68,6 @@ hash = "4145F96D2DEE2AB5" # default.xex
     [[patch.be8]]
         address = 0x8256e4e3
         value = 0x01
-    
     [[patch.be32]]
         address = 0x8256e4b8
         value = 0x42800028

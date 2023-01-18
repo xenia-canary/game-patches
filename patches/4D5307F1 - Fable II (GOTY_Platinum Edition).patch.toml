@@ -43,7 +43,7 @@ hash = "4145F96D2DEE2AB5" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8220EF10
+        address = 0x8220ef10
         value = 0x4280
 
 [[patch]]
@@ -57,7 +57,7 @@ hash = "4145F96D2DEE2AB5" # default.xex
        value = 0x60000000
     [[patch.be8]]
         address = 0x83319511
-        value = 0x3E
+        value = 0x3e
 
 [[patch]]
     name = "Unlock Website Items"
@@ -79,5 +79,5 @@ hash = "4145F96D2DEE2AB5" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824B366C
+        address = 0x824b366c
         value = 0x39200001

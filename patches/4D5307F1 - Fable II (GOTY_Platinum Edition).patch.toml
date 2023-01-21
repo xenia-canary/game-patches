@@ -35,3 +35,49 @@ hash = "4145F96D2DEE2AB5" # default.xex
     [[patch.be8]]
         address = 0x8238df3f
         value = 0x01
+
+[[patch]]
+    name = "Disable Texture Morphing"
+    desc = "Workaround for the dog's & the hero's broken textures. Makeup is still bugged. Can make morphs look strange."
+    author = "Guy"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8220ef10
+        value = 0x4280
+
+[[patch]]
+    name = "High Tick Rate"
+    desc = "Doubles tickrate to 30hz. Vastly improves in-game UI framerate. Improves input delay. Minor side effects."
+    author = "Guy"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8233aeb4
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x83319511
+        value = 0x3e
+
+[[patch]]
+    name = "Unlock Website Items"
+    desc = "Unlocks the Guild chest containing the items that were obtainable from the Fable 2 website."
+    author = "Guy"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8256e4e3
+        value = 0x01
+    [[patch.be32]]
+        address = 0x8256e4b8
+        value = 0x42800028
+
+[[patch]]
+    name = "Unlock Collectors Edition Content"
+    desc = "Unlocks Hal's items in the Guild chest, and enables the Hall of the Dead dungeon."
+    author = "Guy"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824b366c
+        value = 0x39200001

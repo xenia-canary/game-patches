@@ -1,16 +1,29 @@
 # Xenia Canary Game Patches
-This repository contains game patches for Xenia Canary.
+This repository contains game patches for [Xenia Canary](../../../../xenia-canary).
 
 [![Game Patches Discord](https://img.shields.io/discord/930763773109735484?color=5865F2&label=Game%20Patches%20Discord&logo=discord&logoColor=white)](https://discord.gg/fyRWq3xYNz)
 
 ## Installing/Updating
-1. Download the [zip](../../../releases/latest/download/game-patches.zip) file.
-2. Open Xenia Canary.
-3. Click `Open` > `Show content directory...`
-4. Go up one folder.
-5. Delete `patches` folder if present.
-6. Open `game-patches.zip` and extract `patches` to the directory that contains `content`.
-7. Continue to [enabling patches](#Enabling-patches).
+1. Download [this zip](../../../releases/latest/download/game-patches.zip).
+2. Go to where `xenia-canary.exe` is:
+<br>![](https://github.com/xenia-canary/game-patches/raw/pr/.github/README/patch_location.png)
+3. Delete `patches` folder if present.
+4. Open `game-patches.zip` and extract `patches` to the directory that contains `xenia_canary.exe`.
+    The folder structure should look like this:
+    ```
+    .\ # Xenia Canary directory
+      xenia_canary.exe
+      patches\*.patch.toml
+      # These may or may not exist
+      content\
+      cache\
+      recent.toml
+      xenia-canary.config.toml
+      xenia.log
+    ...
+    ```
+  * The `patches` folder **DOES NOT GO IN CONTENT!**
+5. Continue to [enabling patches](#Enabling-patches).
 
 ### Enabling patches
 `apply_patches` must be set to `true` in the Xenia Canary config!
@@ -33,11 +46,13 @@ Framerates higher than 60 FPS require vsync to be changed from true to false in 
 
 ## Troubleshooting
 If the above sections didn't help, you can try the following:
-1. Make sure you followed [Enabling patches](#Enabling-patches).
-2. Make sure you have the right version of the game.
-3. Make sure you have the latest version of Xenia Canary experimental.
-4. Try deleting all of your patches and [updating them](#Installing/Updating).
-5. Try commenting out the `hash` of the patch like so:
+1. Make sure there is `[Patched Applied]` in the title bar.
+2. Make sure you followed [Enabling patches](#Enabling-patches).
+3. Make sure you have the right version of the game.
+4. Make sure you have the latest version of Xenia Canary experimental.
+    * Patches aren't supported on master.
+5. Try deleting all of your patches and [updating them](#Installing/Updating).
+6. Try commenting out the `hash` of the patch like so:
     ```toml
     # Add # before hash
     hash = "################"

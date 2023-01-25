@@ -34,8 +34,10 @@ Framerates higher than 60 FPS require vsync to be changed from true to false in 
 ## Troubleshooting
 If the above sections didn't help, you can try the following:
 1. Make sure you followed [Enabling patches](#Enabling-patches).
-2. Try deleting all of your patches and [updating them](#Installing/Updating).
-3. Try commenting out the `hash` of the patch like so:
+2. Make sure you have the right version of the game.
+3. Make sure you have the latest version of Xenia Canary experimental.
+4. Try deleting all of your patches and [updating them](#Installing/Updating).
+5. Try commenting out the `hash` of the patch like so:
     ```toml
     # Add # before hash
     hash = "################"
@@ -44,8 +46,7 @@ If the above sections didn't help, you can try the following:
     ```
     **This isn't guaranteed to work, and may cause crashes.**
     <br>Hashes are used to verify the correct version of a game is being patched, and this bypasses it.
-
-    If the game has multiple modules you will need to [get the hash(es)](#How-to-get-the-module-hash-and-filename)
+    <br><br>If the game has multiple modules you will need to [get the hash(es)](#How-to-get-the-module-hash-and-filename)
 
 ---
 

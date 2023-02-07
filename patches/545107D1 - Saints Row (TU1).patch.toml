@@ -4,6 +4,33 @@ hash = "2537D5F11410BE0A" # default.xex
 #media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
 
 [[patch]]
+    name = "Unlock FPS"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82211eec
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82211ef0
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x82211ef4
+        value = 0x906bfffc
+
+[[patch]]
+    name = "Skip Logos"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82293344
+        value = 0x3ba00003
+    [[patch.be32]]
+        address = 0x82219d44
+        value = 0x60000000
+
+[[patch]]
     name = "Enable r_ugly_mode"
     desc = "Higher FPS but worse graphics. Might crash when starting a game."
     author = "Hasster"

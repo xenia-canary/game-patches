@@ -4,6 +4,15 @@ hash = "2537D5F11410BE0A" # default.xex
 #media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
 
 [[patch]]
+    name = "Unlock FPS"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82219d84
+        value = 0x60000000
+
+[[patch]]
     name = "Enable r_ugly_mode"
     desc = "Higher FPS but worse graphics. Might crash when starting a game."
     author = "Hasster"

@@ -5,7 +5,7 @@ hash = "8149463D9BEE5FD0" # default.xex
 [[patch]]
  name = "Debug Menu"
  author = "Wylie"
- desc = "Enables the debug menu for JP Disc 1 on boot"
+ desc = "Enables the debug menu for JP on boot"
  is_enabled = false
 
  [[patch.be8]]

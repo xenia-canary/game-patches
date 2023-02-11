@@ -1,0 +1,27 @@
+title_name = "FABLE II"
+title_id = "4D5307F1"
+hash = "42FFBA85DA590339" # default.xex
+#media_id = "21DFA75E"
+
+[[patch]]
+name = "21:9 Widescreen"
+author = "Esppiral"
+is_enabled = true
+
+[[patch.be32]]
+    address = 0x8209C9AC
+    value = 0x3FE38E39
+[[patch.be32]]
+    address = 0x8209C9B0
+    value = 0x4017B426
+[[patch]]
+name = "32:9 Ultrawidescreen"
+author = "Esppiral"
+is_enabled = false
+
+[[patch.be32]]
+    address = 0x8209C9AC
+    value = 0x4017B426
+[[patch.be32]]
+    address = 0x8209C9B0
+    value = 0x40638E39

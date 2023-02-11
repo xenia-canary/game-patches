@@ -36,3 +36,27 @@ hash = "42FFBA85DA590339" # default.xex
     [[patch.be8]]
         address = 0x82311d7f
         value = 0x01
+
+[[patch]]
+    name = "21:9 Widescreen"
+    author = "Esppiral"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8209c9ac
+        value = 0x3fe38e39
+    [[patch.be32]]
+        address = 0x8209c9b0
+        value = 0x4017b426
+
+[[patch]]
+    name = "32:9 Ultrawidescreen"
+    author = "Esppiral"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8209c9ac
+        value = 0x4017b426
+    [[patch.be32]]
+        address = 0x8209c9b0
+        value = 0x40638e39

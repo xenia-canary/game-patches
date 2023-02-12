@@ -72,8 +72,12 @@ hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
   [[patch.be32]] # Debug Menu
     address = 0x820C0F80
     value = 0x60000000
+    
+  [[patch.be32]] # Main Content part 1
+    address = 0x820C1074
+    value = 0x60000000
 
-  [[patch.be32]] # Main Content
+  [[patch.be32]] # Main Content part 2
     address = 0x820C1094
     value = 0x60000000
 

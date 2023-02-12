@@ -22,3 +22,11 @@ hash = "8149463D9BEE5FD0" # default.xex
     [[patch.be8]]
         address = 0x820cd75f
         value = 0xff
+        
+    # Important Note: This patch in particular removes a part of wireframe mode.
+    # This is because it interferes with drawing outdoor areas.
+    # If you want to have full wireframe (Indoor only) then delete
+    # this patch. Just keep in mind outdoor areas won't work
+    [[patch.be32]] 
+        address = 0x820cd784
+        value = 0x60000000

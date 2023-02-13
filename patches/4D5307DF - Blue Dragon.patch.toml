@@ -58,15 +58,15 @@ hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
     is_enabled = false
 
     [[patch.be32]] # Labels
-        address = 0x820ce708 
+        address = 0x820ce708
         value = 0x39600001
 
     [[patch.be32]] # Debug Content Start
-        address = 0x820ce808 
+        address = 0x820ce808
         value = 0x396000ff
 
     [[patch.be32]] # Debug Content End
-        address = 0x820ce818 
+        address = 0x820ce818
         value = 0x39600000
 
     [[patch.be32]] # Debug Menu

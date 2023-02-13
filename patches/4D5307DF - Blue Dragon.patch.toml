@@ -52,35 +52,35 @@ hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
         value = 0x39400001
 
 [[patch]]
-  name = "Debug Menu"
-  author = "Wylie"
-  desc = "Enables Debug Menu with wireframes and labels"
-  is_enabled = false
+    name = "Debug Menu"
+    author = "Wylie"
+    desc = "Enables Debug Menu with wireframes and labels"
+    is_enabled = false
 
-  [[patch.be32]] # Labels
-    address = 0x820CE708 
-    value = 0x39600001
+    [[patch.be32]] # Labels
+        address = 0x820CE708 
+        value = 0x39600001
 
-  [[patch.be32]] # Debug Content Start
-    address = 0x820CE808 
-    value = 0x396000ff
+    [[patch.be32]] # Debug Content Start
+        address = 0x820CE808 
+        value = 0x396000ff
 
-  [[patch.be32]] # Debug Content End
-    address = 0x820CE818 
-    value = 0x39600000
+    [[patch.be32]] # Debug Content End
+        address = 0x820CE818 
+        value = 0x39600000
 
-  [[patch.be32]] # Debug Menu
-    address = 0x820C0F80
-    value = 0x60000000
+    [[patch.be32]] # Debug Menu
+        address = 0x820C0F80
+        value = 0x60000000
     
-  [[patch.be32]] # Main Content part 1
-    address = 0x820C1074
-    value = 0x60000000
+    [[patch.be32]] # Main Content part 1
+        address = 0x820C1074
+        value = 0x60000000
 
-  [[patch.be32]] # Main Content part 2
-    address = 0x820C1094
-    value = 0x60000000
+    [[patch.be32]] # Main Content part 2
+        address = 0x820C1094
+        value = 0x60000000
 
-  [[patch.be8]] # Add tools
-    address = 0x820ce7cb
-    value = 0xff
+    [[patch.be8]] # Add tools
+        address = 0x820ce7cb
+        value = 0xff

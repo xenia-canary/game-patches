@@ -114,7 +114,7 @@ If the above sections didn't help, you can try the following:
 `be16`        | Hex, 2 bytes   | `0x0000`
 `be32`        | Hex, 4 bytes   | `0x00000000`
 `be64`        | Hex, 8 bytes   | `0x0000000000000000`
-`array`       | Hex, any size  | `0x##*`
+`array`       | Hex, any size  | `"0x##*"`
 `f32`         | Float, single  | `1.0`
 `f64`         | Float, double  | `1.0`
 `string`      | String, UTF-8  | `"string"`

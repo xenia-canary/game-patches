@@ -5,22 +5,24 @@ This repository contains game patches for [Xenia Canary](../../../../xenia-canar
 
 ## Installing/Updating
 1. Download [this zip](../../../releases/latest/download/game-patches.zip).
-2. Go to where `xenia-canary.exe` is:
-<br>![](https://github.com/xenia-canary/game-patches/raw/pr/.github/README/patch_location.png)
-3. Delete `patches` folder if present.
-4. Open `game-patches.zip` and extract `patches` to the directory that contains `xenia_canary.exe`.
+2. Go to where `xenia_canary.exe` is:
+<br>![](./README/patch_location.png)
+3. Delete `patches` folder if present (backup if needed).
+4. Open `game-patches.zip` and extract `patches` in the same directory as `xenia_canary.exe`.
+    
     The folder structure should look like this:
     ```
-    .\ # Xenia Canary directory
-      xenia_canary.exe
-      patches\*.patch.toml
-      # These may or may not exist
-      content\
-      cache\
-      recent.toml
-      xenia-canary.config.toml
-      xenia.log
-    ...
+    └───Xenia
+        │   xenia-canary.config.toml
+        │   xenia_canary.exe
+        │
+        ├───cache
+        ├───content
+        └───patches
+                5454082B - Red Dead Redemption (GOTY, Disc 1).patch.toml
+                545408A7 - Grand Theft Auto V (TU26).patch.toml
+                584111F7 - Minecraft (XBLA, TU0).patch.toml
+                ...
     ```
   * The `patches` folder **DOES NOT GO IN CONTENT!**
 5. Continue to [enabling patches](#Enabling-patches).
@@ -48,8 +50,8 @@ Framerates higher than 60 FPS require vsync to be changed from true to false in 
 If the above sections didn't help, you can try the following:
 1. Make sure there is `[Patched Applied]` in the title bar.
 2. Make sure you followed [Enabling patches](#Enabling-patches).
-3. Make sure you have the right version of the game.
-4. Make sure you have the latest version of Xenia Canary experimental.
+3. Make sure you have the right version of the game e.g. Title Updates (TU).
+4. Make sure you have the latest version of Xenia Canary experimental from [here](https://github.com/xenia-canary/xenia-canary/releases/download/experimental/xenia_canary.zip "xenia_canary.zip").
     * Patches aren't supported on master.
 5. Try deleting all of your patches and [updating them](#Installing/Updating).
 6. Try commenting out the `hash` of the patch like so:

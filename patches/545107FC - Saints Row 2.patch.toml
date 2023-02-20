@@ -7,6 +7,30 @@ hash = "581D207BBF22F59E" # default.xex
 #]
 
 [[patch]]
+    name = "60 FPS"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82937960
+        value = 0x48096978
+    [[patch.be32]]
+        address = 0x829ce2d8
+        value = 0x39403c88
+    [[patch.be32]]
+        address = 0x829ce2dc
+        value = 0x614a8889
+    [[patch.be32]]
+        address = 0x829ce2e0
+        value = 0x91580004
+    [[patch.be32]]
+        address = 0x829ce2e4
+        value = 0xc1b80004
+    [[patch.be32]]
+        address = 0x829ce2e8
+        value = 0x4bf6967c
+
+[[patch]]
     name = "Nobody Can Die"
     author = "Serenity"
     is_enabled = false

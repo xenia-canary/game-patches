@@ -13,22 +13,22 @@ hash = "581D207BBF22F59E" # default.xex
 
     [[patch.be32]]
         address = 0x82937960
-        value = 0x48096978
+        value = 0x48103810
     [[patch.be32]]
-        address = 0x829ce2d8
+        address = 0x82a3b170
         value = 0x39403c88
     [[patch.be32]]
-        address = 0x829ce2dc
+        address = 0x82a3b174
         value = 0x614a8889
     [[patch.be32]]
-        address = 0x829ce2e0
+        address = 0x82a3b178
         value = 0x91580004
     [[patch.be32]]
-        address = 0x829ce2e4
+        address = 0x82a3b17c
         value = 0xc1b80004
     [[patch.be32]]
-        address = 0x829ce2e8
-        value = 0x4bf6967c
+        address = 0x82a3b180
+        value = 0x4befc7e4
 
 [[patch]]
     name = "Nobody Can Die"

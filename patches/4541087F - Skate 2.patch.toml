@@ -25,3 +25,21 @@ hash = "E37B93112490ED35" # default.xex
     [[patch.be32]]
         address = 0x82000bf0
         value = 0x4002f1bd
+
+[[patch]]
+    name = "No MSAA"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8234fa20
+        value = 0x38c00000
+
+[[patch]]
+    name = "No Bloom"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8234fd60
+        value = 0x60000000

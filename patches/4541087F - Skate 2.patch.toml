@@ -45,6 +45,15 @@ hash = "E37B93112490ED35" # default.xex
         value = 0x60000000
 
 [[patch]]
+    name = "No Fisheye"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8234fd70
+        value = 0x60000000
+
+[[patch]]
     name = "Skip Intro Logos"
     author = "illusion"
     is_enabled = false

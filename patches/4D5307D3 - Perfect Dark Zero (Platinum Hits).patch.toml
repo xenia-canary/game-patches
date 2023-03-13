@@ -1,7 +1,7 @@
-title_name = "Perfect Dark: Zero"
+title_name = "Perfect Dark: Zero (Platinum Hits)"
 title_id = "4D5307D3" # MS-2003
-hash = "C1572363239DB6CE" # default.xex
-#media_id = "41EEAFCB" # Disc (USA): http://redump.org/disc/11810
+hash = "C234707B99D5E62F" # default.xex
+#media_id = "40C97944" # Disc (USA): http://redump.org/disc/72218/
 
 [[patch]]
     name = "60 FPS"
@@ -10,27 +10,27 @@ hash = "C1572363239DB6CE" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x826cfb77
+        address = 0x826df8f7
         value = 0x01
 
 [[patch]]
     name = "Aspect Ratio"
     desc = "See note about aspect ratio patches in the README."
-    author = "Margen67"
+    author = "Margen67, ICUP321"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820ec158
+        address = 0x820eae50
         value = 0x4018e38e
 
 [[patch]] # TODO(illusion): Need to test with picked up weapons.
     name = "Bottomless Clip"
-    author = "illusion"
+    author = "illusion, ICUP321"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825744a8
+        address = 0x82583d68
         value = 0x4e800020
     [[patch.be16]]
-        address = 0x8220d138
+        address = 0x822143b8
         value = 0x4800

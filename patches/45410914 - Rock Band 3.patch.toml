@@ -22,7 +22,7 @@ hash = [
     name = "Load RB3Enhanced.dll"
     author = "InvoxiPlayGames"
     is_enabled = false
-    
+
     # Replaces a check in _start with a branch to LoadLibrary
     [[patch.be32]]
         address = 0x8283cd64

@@ -16,24 +16,23 @@ hash = [
         address = 0x8226045c
         value = 0x485b5ddc
 
-# This patch requires a build of Xenia Canary that supports writable_code_segments, and having it enabled in the config.
-# Commit 28f3eb6 or later of RB3Enhanced recommended, due to removing the DEMO check.
-
 [[patch]]
-	name = "Load RB3Enhanced.dll"
-	author = "InvoxiPlayGames"
-	is_enabled = true
-	
-	# Replaces a check in _start with a branch to LoadLibrary
-	[[patch.be32]]
-		address = 0x8283CD64
-		value = 0x3C6082C6 # lis r3, 0x82C64350@hi
-	[[patch.be32]]
-		address = 0x8283CD68
-		value = 0x60634350 # ori r3, r3, 0x82C64350@lo
-	[[patch.be32]]
-		address = 0x8283CD6C
-		value = 0x48007F0D # bl LoadLibrary
-	[[patch.string]]
-		address = 0x82C64350
-		value = "RB3Enhanced.dll"
+    # This patch requires a build of Xenia Canary that supports writable_code_segments, and having it enabled in the config.
+    # Commit 28f3eb6 or later of RB3Enhanced recommended, due to removing the DEMO check.
+    name = "Load RB3Enhanced.dll"
+    author = "InvoxiPlayGames"
+    is_enabled = false
+    
+    # Replaces a check in _start with a branch to LoadLibrary
+    [[patch.be32]]
+        address = 0x8283cd64
+        value = 0x3c6082c6 # lis r3, 0x82c64350@hi
+    [[patch.be32]]
+        address = 0x8283cd68
+        value = 0x60634350 # ori r3, r3, 0x82c64350@lo
+    [[patch.be32]]
+        address = 0x8283cd6c
+        value = 0x48007f0d # bl LoadLibrary
+    [[patch.string]]
+        address = 0x82c64350
+        value = "RB3Enhanced.dll"

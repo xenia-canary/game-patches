@@ -52,39 +52,39 @@ hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
         value = 0x39400001
 
 [[patch]]
-	name = "Debug Menu"
-	author = "Wylie"
-	desc = "Enables Debug Menu"
-	is_enabled = true
+    name = "Debug Menu"
+    author = "Wylie"
+    desc = "Enables Debug Menu"
+    is_enabled = true
 
-	[[patch.be32]] # Labels
-		address = 0x820CE708 
-		value = 0x39600001
+    [[patch.be32]] # Labels
+        address = 0x820CE708 
+        value = 0x39600001
 
-	[[patch.be32]] # Debug Content Start
-		address = 0x820CE808 
-		value = 0x396000ff
+    [[patch.be32]] # Debug Content Start
+        address = 0x820CE808 
+        value = 0x396000ff
 
-	[[patch.be32]] # Debug Content End
-		address = 0x820CE818 
-		value = 0x39600000
+    [[patch.be32]] # Debug Content End
+        address = 0x820CE818 
+        value = 0x39600000
 
-	[[patch.be32]] # Debug Menu
-		address = 0x820C0F80
-		value = 0x60000000
+    [[patch.be32]] # Debug Menu
+        address = 0x820C0F80
+        value = 0x60000000
 
-	[[patch.be32]] # Main Content
-		address = 0x820C1094
-		value = 0x60000000
+    [[patch.be32]] # Main Content
+        address = 0x820C1094
+        value = 0x60000000
 
-	[[patch.be32]] # Achievents To Tools
-		address = 0x820C0DBC
-		value = 0x60000000
+    [[patch.be32]] # Achievents To Tools
+        address = 0x820C0DBC
+        value = 0x60000000
 
-	[[patch.be32]] # Message Test 1 to Tools
-		address = 0x820C0DF8
-		value = 0x60000000
+    [[patch.be32]] # Message Test 1 to Tools
+        address = 0x820C0DF8
+        value = 0x60000000
 
-	[[patch.be32]] # Message Test 2 to Tools
-		address = 0x820C0E34
-		value = 0x60000000
+    [[patch.be32]] # Message Test 2 to Tools
+        address = 0x820C0E34
+        value = 0x60000000

@@ -72,7 +72,7 @@ hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
     [[patch.be32]] # Main Content
         address = 0x820c1094
         value = 0x60000000
-    [[patch.be32]] # Achievents To Tools
+    [[patch.be32]] # Achievements To Tools
         address = 0x820c0dbc
         value = 0x60000000
     [[patch.be32]] # Message Test 1 to Tools

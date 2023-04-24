@@ -12,4 +12,5 @@ hash = [
 
     [[patch.be32]]
         address = 0x8226045c
-        value = 0x485b5ddctitle_name = "Rock Band 3" # Three
+        value = 0x485b5ddc
+

@@ -21,7 +21,7 @@ hash = [
     # Commit 28f3eb6 or later of RB3Enhanced recommended, due to removing the DEMO check.
     name = "Load RB3Enhanced.dll"
     author = "InvoxiPlayGames"
-    is_enabled = true
+    is_enabled = false
 
     # Replaces a check in _start with a branch to LoadLibrary
     [[patch.be32]]

@@ -1,8 +1,6 @@
 title_name = "Rock Band 3" # Three
 title_id = "45410914" # EA-2324
-hash = [
-    "88E6DC86853C2522" # Vanilla 1.0 default.xex
-]
+hash = "88E6DC86853C2522" # default.xex
 #media_id = "4FC9256F" # Disc (USA, Europe): http://redump.org/disc/43236
 
 [[patch]]
@@ -13,4 +11,3 @@ hash = [
     [[patch.be32]]
         address = 0x8226045c
         value = 0x485b5ddc
-

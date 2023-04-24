@@ -1,7 +1,6 @@
 title_name = "Rock Band 3" # Three
 title_id = "45410914" # EA-2324
 hash = [
-    "88E6DC86853C2522", # Vanilla default.xex + TU5 applied
     "464451C1022FFF32", # EA disc default.xex + TU5 applied
     "51C7133FD9E500E8"  # RB3DX current xex modded pre-patched with fast start, no song blacklist, anti debugger check, ugc demo patch, and no checksum
 ]
@@ -40,7 +39,7 @@ hash = [
 title_name = "Rock Band 3" # Three
 title_id = "45410914" # EA-2324
 hash = [
-    "88E6DC86853C2522" # 1.0 default.xex
+    "88E6DC86853C2522" # Vanilla 1.0 default.xex
 ]
 #media_id = "4FC9256F" # Disc (USA, Europe): http://redump.org/disc/43236
 

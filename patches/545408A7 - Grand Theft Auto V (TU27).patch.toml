@@ -15,5 +15,5 @@ hash = "A5A9398D2D412519" # default.xex
         value = "game:\\545408A7.xex"
   
     [[patch.array]]
-        address = 0x8378D770
+        address = 0x8378d770
         value = "0x3D6082036163684448001FF9"  # LoadLibraryA("game:\\545408A7.xex");

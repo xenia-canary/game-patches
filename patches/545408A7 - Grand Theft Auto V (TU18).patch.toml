@@ -1,0 +1,16 @@
+title_name = "Grand Theft Auto V" # Five
+title_id = "545408A7" # TT-2215
+#hash = "" # default.xex
+#media_id = "79E465C5"
+
+[[patch]]
+    name = "Skip Intro"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822a63a4
+        value = 0x39600001
+    [[patch.be32]]
+        address = 0x822b971c
+        value = 0x39600000

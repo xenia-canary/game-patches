@@ -1,0 +1,13 @@
+title_name = "Forza Motorsport 4"
+title_id = "4D530910" # MS-2320
+#hash = "" # default.xex
+#media_id = ""
+
+[[patch]]
+    name = "Square Shadow Fix"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x828df12b
+        value = 0x01

@@ -1,0 +1,22 @@
+title_name = "Call of Juarez: Gunslinger"
+title_id = "584112B0" # XA-4784
+#hash = "" # default.xex
+#media_id = "7FDF8AC7"
+
+[[patch]]
+    name = "Enable Developer Menu"
+    author = "illusion, dron_3"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8336e2cc
+        value = 0x39400001 # li r10,0x1
+    [[patch.be32]]
+        address = 0x8336e2d0
+        value = 0x60000000 # ori r0,r0,0x0
+    [[patch.be32]]
+        address = 0x8336e2d4
+        value = 0x3d608377 # lis r11,-0x7c89
+    [[patch.be32]]
+        address = 0x8336e2d8
+        value = 0x994b9dd3 # stb r10,-0x622d(r11)

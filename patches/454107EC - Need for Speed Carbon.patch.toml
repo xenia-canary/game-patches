@@ -1,0 +1,13 @@
+title_name = "Need for Speed: Carbon" # NFS
+title_id = "454107EC" # EA-2028
+#hash = "" # default.xex
+#media_id = ""
+
+[[patch]]
+    name = "Skip audio loop stuck code"
+    author = "Gliniak"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826b4d38
+        value = 0x38a00000

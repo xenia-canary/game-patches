@@ -1,0 +1,14 @@
+title_name = "Burnout Paradise" # Screenshot
+title_id = "45410806" # EA-2054
+#hash = "" # Burnout_X360_ScreenShot.xex
+#media_id = ""
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Forces 60 FPS everywhere."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825cff74
+        value = 0x39400001

@@ -9,22 +9,18 @@ hash = "A3FFB7C11B688FE5" # default_mp.xex
     desc = "Enables GSC Mods"
     is_enabled = false
 
-    [[patch.be32]]
-        desc = "RSA Check 1"
+    [[patch.be32]] # RSA Check 1
         address = 0x821af694
         value = 0x60000000
 
-    [[patch.be32]]
-        desc = "RSA Check 2"
+    [[patch.be32]] # RSA Check 2
         address = 0x821af600
         value = 0x60000000
 
-    [[patch.be32]]
-        desc = "RSA Check 3"
+    [[patch.be32]] # RSA Check 3
         address = 0x821af7d4
         value = 0x60000000
 
-    [[patch.be32]]
-        desc = "RSA Check 4"
+    [[patch.be32]] # RSA Check 4
         address = 0x821af75c
         value = 0x60000000

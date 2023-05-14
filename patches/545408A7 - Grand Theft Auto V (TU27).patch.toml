@@ -17,3 +17,12 @@ hash = "A5A9398D2D412519" # default.xex
     [[patch.array]]
         address = 0x8378d770
         value = "0x3d6082036163684448001ff9"  # LoadLibraryA("game:\\545408A7.xex");
+
+[[patch]]
+    name = "Skip Intro Logos"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822f2d30
+        value = 0x38600000

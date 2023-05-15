@@ -1,0 +1,55 @@
+title_name = "Transformers War for Cybertron"
+title_id = "4156084C" # AV-2124
+hash = "******" # default.xex
+#media_id = [
+    #"02619995" # Disc (USA): http://redump.org/disc/14254/
+    #"3AFEC771" # Disc (Europe): http://redump.org/disc/67200/ 
+#]
+
+[[patch]]
+    name = "30 FPS patch"
+    author = "cochcoder"
+    desc = "See note about framerate patches in the README"
+    is_enabled = false
+
+    [[patch.be32]]
+    address = 0x*******
+    value = 0x01 
+
+[[patch]] (____________MAY NOT NEED___________________)
+    name = "16:9 Aspect Ratio"
+    author = "cochcoder"
+    desc = "See note about aspect ratios in the README"
+    is_enabled = false
+
+    [[patch.be32]]
+    address = 0x*******
+    value = 0x3fe38e39
+
+[[patch]] (____________MAY NOT NEED___________________)
+    name = "21:9 Aspect Ratio"
+    author = "cochcoder"
+    desc = "See note about aspect ratios in the README"
+    is_enabled = false
+
+    [[patch.be32]]
+    address = 0x*******
+    value = 0x4018e38e
+
+[[patch]]
+    name = "Unlimited Ammo"
+    author = "cochcoder"
+    is_enabled = false
+
+    [[patch.be32]]
+    address = 0x*******
+    value = 0x90
+
+[[patch]]
+    name = "Unlimited Health"
+    author = "cochcoder"
+    is_enabled = false
+
+    [[patch.be32]]
+    address = 0x*******
+    value = 0x90

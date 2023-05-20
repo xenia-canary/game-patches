@@ -22,8 +22,8 @@ hash = "0D6CA1E3F19F0087" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-    address = 0x7fc00000/A4AE09FC
-    value = 0x90
+    address = 0x8278669c
+    value = 0x60000000
 
 [[patch]]
     name = "Unlimited Health"
@@ -32,4 +32,4 @@ hash = "0D6CA1E3F19F0087" # default.xex
 
     [[patch.be32]]
     address = 0x7fc00000/A49997B9
-    value = 0x90
+    value = 0x60000000

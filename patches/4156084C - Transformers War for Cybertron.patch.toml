@@ -16,26 +16,6 @@ hash = "0D6CA1E3F19F0087" # default.xex
     address = 0x*******
     value = 0x01 
 
-[[patch]] (____________MAY NOT NEED___________________)
-    name = "16:9 Aspect Ratio"
-    author = "cochcoder"
-    desc = "See note about aspect ratios in the README"
-    is_enabled = false
-
-    [[patch.be32]]
-    address = 0x*******
-    value = 0x3fe38e39
-
-[[patch]] (____________MAY NOT NEED___________________)
-    name = "21:9 Aspect Ratio"
-    author = "cochcoder"
-    desc = "See note about aspect ratios in the README"
-    is_enabled = false
-
-    [[patch.be32]]
-    address = 0x*******
-    value = 0x4018e38e
-
 [[patch]]
     name = "Unlimited Ammo"
     author = "cochcoder"
@@ -51,5 +31,5 @@ hash = "0D6CA1E3F19F0087" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-    address = 0x*******
+    address = 0x7fc00000/A49997B9
     value = 0x90

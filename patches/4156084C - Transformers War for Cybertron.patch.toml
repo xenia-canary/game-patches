@@ -19,11 +19,11 @@ hash = "0D6CA1E3F19F0087" # default.xex
 [[patch]]
     name = "Unlimited Ammo"
     author = "cochcoder"
-    is_enabled = false
+    is_enabled = true
 
     [[patch.be32]]
-    address = 0x8278669c
-    value = 0x60000000
+    address = 0x830d54d8
+    value = 0x38600000
 
 [[patch]]
     name = "Unlimited Health"

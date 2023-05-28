@@ -1,7 +1,7 @@
 title_name = "Kung Fu Panda"
 title_id = "415607F2" # AV-2034
 hash = "CB186BE0234BCDAB" # default.xex
-#media_id = "524CA11E" # http://redump.org/disc/37079/
+#media_id = "524CA11E" # Disc (USA, Europe): http://redump.org/disc/37079
 
 [[patch]]
     name = "Gold Multiplier"

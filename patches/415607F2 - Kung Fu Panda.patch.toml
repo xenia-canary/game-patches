@@ -4,7 +4,7 @@ hash = "CB186BE0234BCDAB" # default.xex
 #media_id = "524CA11E" # http://redump.org/disc/37079/
 
 [[patch]]
-    name = "Gold Multiplyer"
+    name = "Gold Multiplier"
     author = "Adrian"
     is_enabled = false
 

@@ -1,7 +1,7 @@
 title_name = "Call of Duty: Modern Warfare 2"
 title_id = "41560817" # AV-2071
 hash = "A3FFB7C11B688FE5" # default_mp.xex
-#media_id = "2C8C0267" # http://redump.org/disc/11809
+#media_id = "2C8C0267" # Disc (USA, Europe): http://redump.org/disc/11809
 
 [[patch]]
     name = "Remove RSA Checks"

@@ -1,0 +1,13 @@
+title_name = "Kung Fu Panda"
+title_id = "415607F2" # AV-2034
+hash = "CB186BE0234BCDAB" # default.xex
+#media_id = "524CA11E" # Disc (USA, Europe): http://redump.org/disc/37079
+
+[[patch]]
+    name = "Gold Multiplier"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]] # x10 Gold
+        address = 0x8274ba57
+        value = 0x0a

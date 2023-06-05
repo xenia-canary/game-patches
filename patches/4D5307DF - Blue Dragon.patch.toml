@@ -54,7 +54,6 @@ hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
 [[patch]]
     name = "Debug Menu"
     author = "Wylie"
-    desc = "Enables Debug Menu"
     is_enabled = false
 
     [[patch.be32]] # Labels

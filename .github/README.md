@@ -3,6 +3,8 @@ This repository contains game patches for [Xenia Canary](../../../../xenia-canar
 
 [![Game Patches Discord](https://img.shields.io/discord/930763773109735484?color=5865F2&label=Game%20Patches%20Discord&logo=discord&logoColor=white)](https://discord.gg/fyRWq3xYNz)
 
+### These are NOT actual games or Title Updates!<br>Read Xenia's [Quickstart](https://github.com/xenia-canary/xenia-canary/wiki/Quickstart) to get games.
+
 ## Installing/Updating
 1. Download [this zip](../../../releases/latest/download/game-patches.zip).
 2. Go to where `xenia_canary.exe` is:

@@ -1,6 +1,6 @@
 title_name = "Minecraft" # XBLA, TU3
 title_id = "584111F7" # XA-4599
-hash = "2C4CBB384A927BE9" # TU 3 default.xex
+hash = "2C4CBB384A927BE9" # default.xex
 #media_id = "7CD33B56"
 
 [[patch]]

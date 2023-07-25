@@ -31,3 +31,47 @@ hash = "19EB90F06A070ED6" # default.xex
     [[patch.be32]]
         address = 0x82195fd8
         value = 0x38a00010
+
+# Netplay patches
+[[patch]]
+    name = "Allow public IP addresses"
+    desc = "Allows the game to connect to players who are not on the current network."
+    author = "craftycodie"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x823b6ff0
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x823b7468
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x823b6e10
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x823b6d80
+        value = 0x60000000
+
+# Temp fix for service tags
+[[patch]]
+    name = "Disable string validation"
+    desc = "Crude temporary solution."
+    author = "codie"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826d339c
+        value = 0x60000000
+
+[[patch]]
+    name = "Ignore session arbitration"
+    desc = "Crude temporary solution."
+    author = "codie"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82400c40
+        value = 0x4800
+    [[patch.be16]]
+        address = 0x82400c60
+        value = 0x4800

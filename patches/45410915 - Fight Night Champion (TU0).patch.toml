@@ -1,7 +1,7 @@
 title_name = "Fight Night Champion"
 title_id = "45410915" # EA-2325
 hash = "97B9D53B524CBC5C" # default.xex
-#media_id = "2DC50868"  # Disc (Europe): http://redump.org/disc/74672
+#media_id = "2DC50868" # Disc (Europe): http://redump.org/disc/74672
 
 [[patch]]
     name = "Debug Menu"
@@ -20,4 +20,4 @@ hash = "97B9D53B524CBC5C" # default.xex
 
     [[patch.f32]]
         address = 0x82008430
-        value = 1000.0
+        value = 1000

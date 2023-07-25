@@ -20,3 +20,12 @@ hash = "A36EB01EF1B08C86" # Frost.Game_Xenon_Retail.exe
     [[patch.be32]]
         address = 0x82b31f40
         value = 0xc1271ab4
+
+[[patch]]
+    name = "Dev Menu"
+    author = "Heico (BFBC2Toolkit), illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8201f8bc
+        value = 0x000000f1

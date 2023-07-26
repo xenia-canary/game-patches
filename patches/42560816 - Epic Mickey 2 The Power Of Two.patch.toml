@@ -4,7 +4,7 @@ hash = "AA83E4F9846B59B2" # default.xex
 #media_id = "4D05734B"
 
 [[patch]]
-    name = "ShowDevLevelLoad"# Adds New Option in Main Menu  
+    name = "ShowDevLevelLoad" # Adds New Option in Main Menu
     author = "Serenity"
     is_enabled = false
 

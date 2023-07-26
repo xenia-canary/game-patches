@@ -1,7 +1,7 @@
 title_name = "Epic Mickey 2 The Power Of Two"
 title_id = "42560816" #
 hash = "AA83E4F9846B59B2" # default.xex
-#media_id = "4D05734B"
+#media_id = "4D05734B" # Disc (USA, Europe): http://redump.org/disc/41296
 
 [[patch]]
     name = "ShowDevLevelLoad" # Adds New Option in Main Menu

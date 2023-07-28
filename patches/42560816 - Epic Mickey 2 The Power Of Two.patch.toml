@@ -20,7 +20,6 @@ hash = "AA83E4F9846B59B2" # default.xex
     [[patch.be32]]
         address = 0x827cef64
         value = 0x60000000
-		
 [[patch]]
     name = "Player Infinite Ammo"
     author = "Serenity"

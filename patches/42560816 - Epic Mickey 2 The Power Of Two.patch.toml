@@ -11,7 +11,6 @@ hash = "AA83E4F9846B59B2" # default.xex
     [[patch.be8]]
         address = 0x82b1b18c
         value = 0x31
-		
 [[patch]]
     name = "GodMode"
     author = "Serenity"

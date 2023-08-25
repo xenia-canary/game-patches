@@ -1,6 +1,8 @@
 # Xenia Canary Game Patches
 This repository contains game patches for [Xenia Canary](../../../../xenia-canary).
 
+**Non-patch questions belong on the [Xenia Discord server](https://discord.gg/Q9mxZf9).**
+
 [![Game Patches Discord](https://img.shields.io/discord/930763773109735484?color=5865F2&label=Game%20Patches%20Discord&logo=discord&logoColor=white)](https://discord.gg/fyRWq3xYNz)
 
 ### These are NOT actual games or Title Updates!<br>Read Xenia's [Quickstart](https://github.com/xenia-canary/xenia-canary/wiki/Quickstart) to get games.
@@ -50,6 +52,7 @@ This repository contains game patches for [Xenia Canary](../../../../xenia-canar
     ```toml
     [[patch]]
         name = "60 FPS"
+        desc = "Description"
         author = "Author"
         is_enabled = false
 
@@ -61,6 +64,7 @@ This repository contains game patches for [Xenia Canary](../../../../xenia-canar
     ```toml
     [[patch]]
         name = "60 FPS"
+        desc = "Description"
         author = "Author"
         is_enabled = true
 
@@ -70,6 +74,8 @@ This repository contains game patches for [Xenia Canary](../../../../xenia-canar
     ```
 
 If you see `[Patches Applied]` in the title bar then the patch(es) applied successfully.
+
+***Don't change the hash of existing patches. If your version of the game is different then the patch(es) need to be ported to that version.***
 
 #### Notes about aspect ratio patches
 * [**`present_letterbox` must be changed from `true` to `false`!**](https://github.com/xenia-canary/xenia-canary/wiki/Options#black-bars-letterboxingpillarboxing)
@@ -128,6 +134,7 @@ Framerates above 60 FPS require [vsync to be changed from true to false in the X
   * Lowercase hex for address/value hex, uppercase for title ID/hash/media ID.
 
 ### How to get the module hash and filename:
+0. ***Don't change the hash of existing patches. If your version of the game is different then the patch(es) need to be ported to that version.***
 1. Set [`log_level`](https://github.com/xenia-canary/xenia-canary/wiki/Options) to at least [`2` (default)](https://github.com/xenia-canary/xenia-canary/wiki/Options) in the Xenia Canary config; See [How to use](https://github.com/xenia-canary/xenia-canary/wiki/Options#how-to-use) for location.
 2. Run the game at least once.
 3. Close Xenia Canary.

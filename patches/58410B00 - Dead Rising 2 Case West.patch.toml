@@ -16,7 +16,7 @@ hash = "049D0865F8D83AF3" # default.xex
     name = "Unlock FPS"
     desc = "FPS is unlocked but maxed at 120 internally. Disable 'd3d12_allow_variable_refresh_rate_and_tearing' if FPS is stuttering."
     author = "UndeadFrankie"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be8]]
         address = 0x82a0122f
@@ -24,7 +24,7 @@ hash = "049D0865F8D83AF3" # default.xex
 
 [[patch]]
     name = "Enable Developer Settings"
-    desc = "Required for Debug Settings and Cheats. Allows User.ini / Master.ini. If unsure leave on true."
+    desc = "Required for Debug Settings and Cheats. Allows User.ini / Master.ini. If unsure set to true."
     author = "UndeadFrankie"
     is_enabled = true
 
@@ -36,7 +36,7 @@ hash = "049D0865F8D83AF3" # default.xex
     name = "Skip Intro Logos"
     desc = "Skips Capcom and BCG logos but ESRB still plays."
     author = "UndeadFrankie"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be16]]
         address = 0x824e1a9c

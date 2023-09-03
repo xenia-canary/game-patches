@@ -26,7 +26,7 @@ hash = "049D0865F8D83AF3" # default.xex
     name = "Enable Developer Settings"
     desc = "Required for Debug Settings and Cheats. Allows User.ini / Master.ini. If unsure set to true."
     author = "UndeadFrankie"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be8]]
         address = 0x82a02f0c

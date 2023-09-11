@@ -1,0 +1,33 @@
+title_name = "The Orange Box"
+title_id = "4541080F" # EA-2063
+hash = "DE3EA44FCC45B8D4" # GameUI_360.dll (TU5)
+#media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
+
+[[patch]]
+    name = "Fake XBL online connectivity for menu options" # TF2
+    desc = "Disables 'You need an Xbox LIVE Gold Membership...' error message when trying to view XBL Player Match, XBL Ranked Match, and Ranking menus"
+    author = "Luctaris"
+    is_enabled = false
+
+    [[patch.be8]] # bSignedIn (CMatchmakingBasePanel::ValidateSigninAndStorage)
+        address = 0x83a913c7
+        value = 0x01 # 0x00
+    [[patch.be8]] # bOnlineEnabled (CMatchmakingBasePanel::ValidateSigninAndStorage)
+        address = 0x83a913cb
+        value = 0x01 # 0x00
+    [[patch.be8]] # bOnlineSignedIn (CMatchmakingBasePanel::ValidateSigninAndStorage)
+        address = 0x83a913cf
+        value = 0x01 # 0x00
+    [[patch.be8]]
+        address = 0x83a91458
+        value = 0x40 # 0x41
+
+[[patch]]
+    name = "Dev Mode options"
+    desc = "Regardless of -dev, shows extra developer mode options in the Options menu."
+    author = "Luctaris"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83a83090
+        value = 0x41 # 0x40

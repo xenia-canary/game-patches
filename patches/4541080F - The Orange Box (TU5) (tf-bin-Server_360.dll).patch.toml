@@ -6,7 +6,7 @@ hash = "9E53F69A6E1EACF2" # TF2 Server_360.dll (TU5)
 [[patch]]
     name = "Developer Commentary Player Damage"
     desc = "Allows damaging other players in dev commentary mode"
-    author = "Luctaris"
+    author = "DrGgearz, CrackBomber, Luctaris"
     is_enabled = false
 
     [[patch.be32]]

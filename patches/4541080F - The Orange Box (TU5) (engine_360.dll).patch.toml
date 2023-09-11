@@ -39,7 +39,7 @@ hash = "60AAD59F84CCE211" # engine_360.dll (TU5)
 
 [[patch]]
     name = "Debug Log" # DbgPrint(): 0x863708F4
-    desc = "Logs most (not all) messages being printed to internal developer console as DbgPrint messages in Xenia log. Warning, lots of data!" 
+    desc = "Logs most (not all) messages being printed to internal developer console as DbgPrint messages in Xenia log. Warning, lots of data!"
     author = "illusion, Luctaris"
     is_enabled = false
 

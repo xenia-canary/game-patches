@@ -1,0 +1,34 @@
+title_name = "The Orange Box"
+title_id = "4541080F" # EA-2063
+hash = "9E53F69A6E1EACF2" # TF2 Server_360.dll (TU5)
+#media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
+
+[[patch]]
+    name = "Developer Commentary Player Damage"
+    desc = "Allows damaging other players in dev commentary mode"
+    author = "DrGgearz, CrackBomber, Luctaris"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8853143c
+        value = 0x38600000 # 0x886b0659
+
+[[patch]]
+    name = "mp_waitingforplayers_time 0"
+    desc = "Disables waiting for players on new map load"
+    author = "Luctaris"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x88817f2e
+        value = 0x07d0 # 0x03ec [int* 0x883403ec (15)]
+
+[[patch]]
+    name = "god"
+    desc = "Allows god mode command to work in TF2"
+    author = "Luctaris"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x88529293
+        value = 0x01 # 0x00

@@ -1,0 +1,23 @@
+title_name = "Fight Night Champion"
+title_id = "45410915" # EA-2325
+hash = "2F283ECC76483762" # default.xex
+#media_id = "2DC50868" # Disc (Europe): http://redump.org/disc/74672
+
+[[patch]]
+    name = "Debug Menu"
+    desc = "Hold left on left stick and click it to open the debug menu."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.string]]
+        address = 0x822186d4
+        value = "IsDebug"
+
+[[patch]]
+    name = "Unlock FPS"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82008574
+        value = 1000

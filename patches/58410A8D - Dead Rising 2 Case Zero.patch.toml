@@ -1,16 +1,7 @@
-title_name = "Dead Rising 2: Case West"
-title_id = "58410B00" # XA-2816
-hash = "049D0865F8D83AF3" # default.xex
-#media_id = "198BA306" # XBLA: D01128ABB9C7F9694DAE26AC591A269F8480E85A58
-
-[[patch]]
-    name = "God Mode"
-    author = "Serenity"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x823d2f9c
-        value = 0x60000000
+title_name = "Dead Rising 2: Case Zero"
+title_id = "58410A8D" # XA-2701
+hash = "7B6CE8A3267F3AA5" # default.xex
+#media_id = "00000000"
 
 [[patch]]
     name = "Unlock FPS"
@@ -19,7 +10,7 @@ hash = "049D0865F8D83AF3" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82a0122f
+        address = 0x829edcc6
         value = 0x00
 
 [[patch]]
@@ -29,7 +20,7 @@ hash = "049D0865F8D83AF3" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82a02f0c
+        address = 0x829ec974
         value = 0x00
 
 [[patch]]
@@ -39,5 +30,5 @@ hash = "049D0865F8D83AF3" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x824e1a9c
+        address = 0x824ffbb4
         value = 0x4800

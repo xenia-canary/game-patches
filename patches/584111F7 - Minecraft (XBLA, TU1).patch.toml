@@ -1,0 +1,26 @@
+title_name = "Minecraft" # XBLA, TU1
+title_id = "584111F7" # XA-4599
+hash = "4F7F02AE8F505AC8" # default.xex
+#media_id = "7CD33B56"
+
+[[patch]]
+    name = "Debug Menu"
+    desc = "Replaced Credits with DebugMenu. Replaced How To Play with Debug Overlay. Do not open on the main menu."
+    author = "Adrian, illusion, MinecraftDigger, Serenity"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8298f0a0 # xuiscene_credits
+        value = 0x821063cc   # xuiscene_debug
+
+    [[patch.be32]]
+        address = 0x8298f08c # xuiscene_howtoplay_menu
+        value = 0x82107374   # xuiscene_debugoverlay
+
+    [[patch.be32]]
+        address = 0x8210739f
+        value = 0x00000000   # null .x
+
+    [[patch.be32]]
+        address = 0x821073a4
+        value = 0x00000000   # null ur

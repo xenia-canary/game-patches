@@ -1,0 +1,31 @@
+title_name = "Battlefield: Bad Company"
+title_id = "454107F9" # EA-2041
+hash = "A36EB01EF1B08C86" # Frost.Game_Xenon_Retail.exe
+#media_id = "75F7BA6A"
+
+[[patch]]
+    name = "60 FPS"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8228ccf4
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x82343e44
+        value = 0x3be00000
+    [[patch.be32]]
+        address = 0x82001ab4
+        value = 0x42700000
+    [[patch.be32]]
+        address = 0x82b31f40
+        value = 0xc1271ab4
+
+[[patch]]
+    name = "Dev Menu"
+    author = "Heico (BFBC2Toolkit), illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8201f8bc
+        value = 0x000000f1

@@ -44,7 +44,7 @@
     "**/*.config.toml"
   ],
   "devDependencies": {
-    "eslint": "^8.17.0",
-    "eslint-plugin-toml": "^0.3.1"
+    "eslint": "^8.45.0",
+    "eslint-plugin-toml": "^0.5.0"
   }
 }

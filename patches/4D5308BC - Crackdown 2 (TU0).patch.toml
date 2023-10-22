@@ -31,7 +31,6 @@ hash = "398B324B93B0AE59" # default.xex
     [[patch.be32]] # Bottomless Clip
         address = 0x822056bc
         value = 0x60000000
-
     [[patch.be8]] # Ammo Display
         address = 0x82244810
         value = 0x41

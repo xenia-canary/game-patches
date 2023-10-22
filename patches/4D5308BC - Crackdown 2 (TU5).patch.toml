@@ -31,7 +31,6 @@ hash = "8309EB7166C1B9C3" # default.xex
     [[patch.be32]] # Bottomless Clip
         address = 0x82216c64
         value = 0x60000000
-
     [[patch.be8]] # Ammo Display
         address = 0x82256c28
         value = 0x41
@@ -44,7 +43,6 @@ hash = "8309EB7166C1B9C3" # default.xex
     [[patch.be32]]
         address = 0x82235d84
         value = 0x60000000
-
     [[patch.be32]]
         address = 0x82547ab8
         value = 0x60000000
@@ -57,15 +55,12 @@ hash = "8309EB7166C1B9C3" # default.xex
     [[patch.be8]] # Enable Display Render Info
         address = 0x83801b0c
         value = 0x01
-
     [[patch.be8]] # Disable Performance Graphs
         address = 0x83801a01
         value = 0x00
-
     [[patch.be8]] # Enable GPU Hz
         address = 0x83801a00
         value = 0x01
-
     [[patch.be8]] # Red Text
         address = 0x83800aef
         value = 0x01
@@ -79,15 +74,12 @@ hash = "8309EB7166C1B9C3" # default.xex
     [[patch.be8]] # Enable CPU/GPU Performance Graphs
         address = 0x83801a01
         value = 0x01
-
     [[patch.be8]] # Enable Display Render Info
         address = 0x83801b0c
         value = 0x01
-
     [[patch.be8]] # Enable GPU Hz
         address = 0x83801a00
         value = 0x01
-
     [[patch.be8]] # Red Text
         address = 0x83800aef
         value = 0x01
@@ -160,23 +152,18 @@ hash = "8309EB7166C1B9C3" # default.xex
     [[patch.be8]]   # Opaque Pass / Dark Mode
         address = 0x830a0542
         value = 0x00
-
     [[patch.be8]]   # Enable Outlines
         address = 0x830a0544
         value = 0x01
-
     [[patch.be32]]  # Enable Outline Mode - White Outline
         address = 0x83801164
         value = 0x00000002
-
     [[patch.be8]]   # Disable Alpha Render Pass
         address = 0x830a0543
         value = 0x00
-
     [[patch.be8]]   # Enable Particle Alpha
         address = 0x83801320
         value = 0x01
-
     [[patch.be8]]   # Disable Light Bloom for stronger white outline
         address = 0x830a054e
         value = 0x00

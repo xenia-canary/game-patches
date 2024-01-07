@@ -13,7 +13,7 @@ hash = "C1C7D3D68031690D" # default.xex
         address = 0x826de600
         value = 0x1 # FPS_CAP
 
-   [[patch.be32]]
+    [[patch.be32]]
         address = 0x821dceb0
         value = 0x60000000 # Alternative fix for pause
 
@@ -28,4 +28,3 @@ hash = "C1C7D3D68031690D" # default.xex
     [[patch.be32]]
         address = 0x822385d8
         value = 0x38600001 # RESET_CAP to 1
-

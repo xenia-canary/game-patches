@@ -1,7 +1,7 @@
 title_name = "Dragon Ball Z: Burst Limit" # DBZ Burst Limit (v2.0 EU)
 title_id = "424107DC" # BA-2012
 hash = "C1C7D3D68031690D" # default.xex
-#media_id = "6652B73F" # http://redump.org/disc/37057/
+#media_id = "6652B73F" # http://redump.org/disc/15956/
 
 [[patch]]
     name = "60 FPS"

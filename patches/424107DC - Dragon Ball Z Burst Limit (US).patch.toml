@@ -18,6 +18,10 @@ hash = "F15410E9BD16F02A" # default.xex
         value = 0x60000000 # Alternative fix for pause
 
     [[patch.be32]]
+        address = 0x821dbe10
+        value = 0x60000000 # Alternative fix for quitting the match
+
+    [[patch.be32]]
         address = 0x8221cfec
         value = 0x38600001 # RESET_CAP to 2
 

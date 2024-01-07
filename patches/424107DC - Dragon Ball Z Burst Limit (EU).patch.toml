@@ -18,6 +18,10 @@ hash = "C1C7D3D68031690D" # default.xex
         value = 0x60000000 # Alternative fix for pause
 
     [[patch.be32]]
+        address = 0x821dbe28
+        value = 0x60000000 # Alternative fix for quitting the match
+
+    [[patch.be32]]
         address = 0x8221d2f4
         value = 0x38600001 # RESET_CAP to 1
 

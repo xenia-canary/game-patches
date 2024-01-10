@@ -7,38 +7,10 @@ hash = "0D6CA1E3F19F0087" # default.xex
 #]
 
 [[patch]]
-    name = "30 FPS patch"
-    author = "cochcoder"
-    desc = "See note about framerate patches in the README"
-    is_enabled = false
-
-    [[patch.be32]]
-    address = 0x*******
-    value = 0x01 
-
-[[patch]]
     name = "Unlimited Ammo"
     author = "cochcoder"
     is_enabled = false
 
     [[patch.be32]]
     address = 0x830d54d8
-    value = 0x38600000
-
-[[patch]]
-    name = "Unlimited Health"
-    author = "cochcoder"
-    is_enabled = false
-
-    [[patch.be32]]
-    address = 0x7fc00000/A49997B9
-    value = 0x38600000
-
-[[patch]]
-    name = "Unlimited Enemy Health"
-    author = "cochcoder"
-    is_enabled = false
-
-    [[patch.be32]]
-    address = 0x********
     value = 0x38600000

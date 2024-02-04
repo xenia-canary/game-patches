@@ -1,0 +1,13 @@
+title_name = "首都高バトルＸ"
+title_id = "474507D1"
+hash = "6F28AFEC824C4213" # default.xex
+#media_id = ""
+
+[[patch]]
+    name = "Change required loading check cycles from 0x3C to 0x1A"
+    author = "Gliniak, JP version by Phafael"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8218C30C
+        value = 0x2B0B001A

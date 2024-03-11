@@ -1,0 +1,16 @@
+title_name = "Transformers War for Cybertron"
+title_id = "4156084C" # AV-2124
+hash = "0D6CA1E3F19F0087" # default.xex
+#media_id = [
+#    "02619995", # Disc (USA): http://redump.org/disc/14254/
+#    "3AFEC771" # Disc (Europe): http://redump.org/disc/67200/
+#]
+
+[[patch]]
+    name = "Unlimited Ammo"
+    author = "cochcoder"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x830d54d8
+        value = 0x38600000

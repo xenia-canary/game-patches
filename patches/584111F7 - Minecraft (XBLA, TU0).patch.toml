@@ -4,6 +4,25 @@ hash = "5FA6BE391D4387F1" # default.xex
 #media_id = "7CD33B56"
 
 [[patch]]
+    name = "90 FOV"
+    desc = "Default FOV is 70. Also affects the viewmodel. FOV is decreased underwater by default."
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x821b8726
+        value = 0x0334 # offset from 0x820fe130
+
+[[patch]]
+    name = "Don't decrease FOV underwater"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x821b9308
+        value = 0x4280 # b
+
+[[patch]]
     name = "Debug Menu"
     desc = "Replaced Credits with DebugMenu. Replaced How To Play with Debug Overlay. Do not open on the main menu."
     author = "illusion, MinecraftDigger, Serenity"

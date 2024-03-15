@@ -2,44 +2,42 @@ title_name = "DEAD OR ALIVE 4"
 title_id = "544307D1" # TC-2001
 hash = "7F840B8DEFDB5C5E" # default.xex
 #media_id = "2AD7FA3A"
-		
+
 [[patch]]
     name = "255-hit Combo Limit"
     desc = "Increases the combo limit from 30 to 255"
     author = "ryu_highabusa"
     is_enabled = false
-	
+
 	[[patch.be8]]
 		address = 0x82502197
 		value = 0xff
-		
+
 [[patch]]
 	name = "Increased Max Character Distance"
 	desc = "Increases the maximum distance between characters from 6.0 to 420.0"
 	author = "ryu_highabusa"
 	is_enabled = false
-	
+
 	[[patch.be32]]
 		address = 0x822a9df8
 		value = 0x43d20000
 
 [[patch]]
     name = "Replace Random-Select with Alpha-152"
-    desc = ""
     author = "ryu_highabusa"
     is_enabled = false
 
     [[patch.array]]
         address = 0x82f4b960
         value = "0x1001010100060012000600120006001200060012000600b9000600b9"
-		
+
 [[patch]]
     name = "Restore Extra (Currently) Useless Character Slot"
-    desc = ""
+    desc = "While it is possible to restore the 24th character select slot with this, the data to populate it ends abruptly after 23 spots, making this essentially useless for now."
     author = "ryu_highabusa"
     is_enabled = false
 
     [[patch.be8]]
         address = 0x821b52d3 
         value = 0x01
-		

@@ -28,14 +28,14 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.array]] #replace random-select with alpha-152 and appropriate icons and banners
+    [[patch.array]] #replace Random-Select with Alpha-152 and appropriate icons and banners
         address = 0x82f4b960
         value = "1001010100060018000600180006003200060032000600b9000600b9000600610006004900000000"
-    [[patch.be8]] #restore 24th slot
+    [[patch.be8]] #restore 24th character select slot
         address = 0x821b52d3
         value = 0x01
     [[patch.be32]] #place random-select on slot 24 and enable
-        address 0x82f4b988
+        address = 0x82f4b988
         value = 0xff010101
 
 [[patch]]
@@ -62,11 +62,3 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     [[patch.be8]] #unlock Spartan-458
         address = 0x82f4b93a
         value = 0x01
-
-[[patch]]
-    name = "Restore Extra Character Slot + Random"
-    desc = "(Not sure if Alpha-152 appears in random)"
-    author = "ryu_highabusa"
-    is_enabled = false
-
-

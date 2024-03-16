@@ -31,7 +31,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     [[patch.array]]
         address = 0x82f4b960
         value = "1001010100060018000600180006003200060032000600b9000600b9000600610006004900000000"
-        
+
 [[patch]]
     name = "All Characters Unlocked"
     desc = "Multiplayer Modes Only. Story Mode Unaffected."
@@ -64,5 +64,5 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x821b52d3 
+        address = 0x821b52d3
         value = 0x01

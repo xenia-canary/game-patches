@@ -24,13 +24,19 @@ hash = "7F840B8DEFDB5C5E" # default.xex
         value = 0x43d20000
 
 [[patch]]
-    name = "Replace Random-Select with Alpha-152"
+    name = "Alpha-152 can now be selected!"
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.array]]
+    [[patch.array]] #replace random-select with alpha-152 and appropriate icons and banners
         address = 0x82f4b960
         value = "1001010100060018000600180006003200060032000600b9000600b9000600610006004900000000"
+    [[patch.be8]] #restore 24th slot
+        address = 0x821b52d3
+        value = 0x01
+    [[patch.be32]] #place random-select on slot 24 and enable
+        address 0x82f4b988
+        value = 0xff010101
 
 [[patch]]
     name = "All Characters Unlocked"
@@ -58,11 +64,9 @@ hash = "7F840B8DEFDB5C5E" # default.xex
         value = 0x01
 
 [[patch]]
-    name = "Restore Extra (Currently) Useless Character Slot"
-    desc = "While it is possible to restore the 24th character select slot with this, the data to populate it ends abruptly after 23 spots, making this essentially useless for now."
+    name = "Restore Extra Character Slot + Random"
+    desc = "(Not sure if Alpha-152 appears in random)"
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.be8]]
-        address = 0x821b52d3
-        value = 0x01
+

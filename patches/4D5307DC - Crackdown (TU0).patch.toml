@@ -66,7 +66,7 @@ hash = "D086E9E42A44EB2C" # default.xex
 
 [[patch]]
     name = "Helicam / Fly around the map"
-    desc = "Teleport your character. Cheat engine address: 1836C615B."
+    desc = "Teleport your character. Cheat Engine address: 1836C615B."
     author = "Adrian"
     is_enabled = false
 

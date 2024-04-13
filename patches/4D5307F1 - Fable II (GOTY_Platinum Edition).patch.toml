@@ -81,3 +81,27 @@ hash = "4145F96D2DEE2AB5" # default.xex
     [[patch.be32]]
         address = 0x824b366c
         value = 0x39200001
+
+[[patch]]
+    name = "21:9 Widescreen"
+    author = "Pepper"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8209fdf4
+        value = 0x3fe38e39
+    [[patch.be32]]
+        address = 0x8209fe7c
+        value = 0x4017b426
+
+[[patch]]
+    name = "32:9 Ultrawidescreen"
+    author = "Pepper"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8209fdf4
+        value = 0x4017b426
+    [[patch.be32]]
+        address = 0x8209fe7c
+        value = 0x40638e39

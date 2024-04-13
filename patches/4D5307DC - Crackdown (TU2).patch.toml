@@ -5,7 +5,7 @@ hash = "2A9BE95315738F6D" # default.xex
 
 [[patch]]
     name = "Global Lights Rendering"
-    desc = "Disable rendering of lights to fix lights through walls. During reticle target collaboration red lights will not render."
+    desc = "Disable rendering of lights to fix lights through walls. During reticle target calibration red lights will not render."
     author = "Adrian"
     is_enabled = false
 

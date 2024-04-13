@@ -11,4 +11,4 @@ hash = "3B0B17028E4FA27B" # default.xex
 
     [[patch.be8]] # Break string
         address = 0x82135a10
-        value = 0x0
+        value = 0x00

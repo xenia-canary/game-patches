@@ -56,7 +56,7 @@ hash = "D086E9E42A44EB2C" # default.xex
 
 [[patch]]
     name = "Shadows"
-    desc = "May improve performance"
+    desc = "May improve performance."
     author = "Adrian"
     is_enabled = false
 

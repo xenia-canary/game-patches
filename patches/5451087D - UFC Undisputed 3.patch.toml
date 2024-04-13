@@ -1,0 +1,14 @@
+title_name = "UFC Undisputed 3"
+title_id = "5451087D" # TQ-2173
+hash = "3B0B17028E4FA27B" # default.xex
+#media_id = "3E0E52AB" # Disc (USA): http://redump.org/disc/42443
+
+[[patch]]
+    name = "Disable Gloves"
+    desc = "Referee in UFC mode will have missing hands (Pride Mode is fine)."
+    author = "Adrian, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]] # Break string
+        address = 0x82135a10
+        value = 0x00

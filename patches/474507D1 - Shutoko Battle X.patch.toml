@@ -1,0 +1,13 @@
+title_name = "Shutoko Battle X"
+title_id = "474507D1" # GE-2001
+hash = "6F28AFEC824C4213" # default.xex
+#media_id = "14DA48DA" # Disc (Japan, Asia) http://redump.org/disc/86493/
+
+[[patch]]
+    name = "Change required loading check cycles from 0x3C to 0x1A"
+    author = "Gliniak, JP version by Phafael"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8218c30c
+        value = 0x2b0b001a

@@ -1,0 +1,75 @@
+title_name = "Crackdown"
+title_id = "4D5307DC" # MS-2012
+hash = "D086E9E42A44EB2C" # default.xex
+#media_id = "596F9615" # Disc (World): http://redump.org/disc/11830
+
+[[patch]]
+    name = "Global Lights Rendering"
+    desc = "Disable rendering of lights to fix lights through walls. During reticle target calibration red lights will not render."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82baa3ad
+        value = 0x00
+
+[[patch]]
+    name = "On-screen FPS counter"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]] # Enable Display Render Info
+        address = 0x82de4f14
+        value = 0x01
+    [[patch.be8]] # Disable Performance Graphs
+        address = 0x82de4d1a
+        value = 0x00
+    [[patch.be8]] # Red Text
+        address = 0x82de25a9
+        value = 0x01
+
+[[patch]]
+    name = "Show CPU/GPU performance graphs"
+    desc = "This will show FPS and Performance Graphs."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]] # Enable CPU/GPU performance graphs
+        address = 0x82de4d1a
+        value = 0x01
+    [[patch.be8]] # Enable Display Render Info
+        address = 0x82de4f14
+        value = 0x01
+    [[patch.be8]] # Red Text
+        address = 0x82de25a9
+        value = 0x01
+
+[[patch]]
+    name = "Light Bloom"
+    desc = "Toggle fullbright, may improve performance."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82baa3aa
+        value = 0x01
+
+[[patch]]
+    name = "Shadows"
+    desc = "May improve performance."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82de25b3
+        value = 0x00
+
+[[patch]]
+    name = "Helicam / Fly around the map"
+    desc = "Teleport your character. Cheat Engine address: 1836C615B."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x836c615b
+        value = 0x01

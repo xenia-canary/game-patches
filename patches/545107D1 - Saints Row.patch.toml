@@ -24,13 +24,13 @@ hash = "437A5F51A72C9C6A" # default.xex
 
     [[patch.be32]]
         address = 0x82292004
-        value = 0x48000AA4
+        value = 0x48000aa4
     [[patch.be32]]
         address = 0x82649b7c
-        value = 0x480B8EF9
+        value = 0x480b8ef9
     [[patch.be32]]
         address = 0x82649cb0
-        value = 0x480B8E14
+        value = 0x480b8e14
     [[patch.be8]]
         address = 0x83710223
         value = 0x01	

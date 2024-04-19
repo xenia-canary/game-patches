@@ -33,7 +33,7 @@ hash = "437A5F51A72C9C6A" # default.xex
         value = 0x480b8e14
     [[patch.be8]]
         address = 0x83710223
-        value = 0x01	
+        value = 0x01
 
 [[patch]]
     name = "Unlock FPS"

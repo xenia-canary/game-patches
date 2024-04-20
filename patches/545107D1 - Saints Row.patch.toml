@@ -17,25 +17,6 @@ hash = "437A5F51A72C9C6A" # default.xex
         value = 0x00000000
 
 [[patch]]
-    name = "Enable Debug Console"
-    desc = "Enable byte 0x835F4C3E + keyboard_passthru in config"
-    author = "emoose, Tervel"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82292004
-        value = 0x48000aa4
-    [[patch.be32]]
-        address = 0x82649b7c
-        value = 0x480b8ef9
-    [[patch.be32]]
-        address = 0x82649cb0
-        value = 0x480b8e14
-    [[patch.be8]]
-        address = 0x83710223
-        value = 0x01
-
-[[patch]]
     name = "Unlock FPS"
     author = "illusion, Tervel"
     is_enabled = false

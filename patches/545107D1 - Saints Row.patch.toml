@@ -34,3 +34,22 @@ hash = "437A5F51A72C9C6A" # default.xex
     [[patch.be32]]
         address = 0x82370d44
         value = 0x906bfffc
+
+[[patch]]
+    name = "Enable Debug Console"
+    desc = "Enable byte 0x835F4C3E + keyboard_passthru in config"
+    author = "emoose, Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82649234
+        value = 0x4800094c
+    [[patch.be32]]
+        address = 0x82649b7c
+        value = 0x480b8d01
+    [[patch.be32]]
+        address = 0x82649cb0
+        value = 0x480b8c1c
+    [[patch.be8]]
+        address = 0x83710223
+        value = 0x01

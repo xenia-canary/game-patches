@@ -35,6 +35,18 @@ hash = "437A5F51A72C9C6A" # default.xex
         value = 0x906bfffc
 
 [[patch]]
+    name = "Skip Logos"
+    author = "illusion, Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8228271c
+        value = 0x3ba00003
+    [[patch.be32]]
+        address = 0x822095bc
+        value = 0x60000000
+
+[[patch]]
     name = "Enable Debug Console"
     desc = "Requires keyboard_passthru to be changed from false to true in the Xenia Canary config; Requires Xenia Canary version 271befc from January 25th or older."
     author = "emoose, Tervel"

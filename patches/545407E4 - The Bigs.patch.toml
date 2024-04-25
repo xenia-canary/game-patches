@@ -1,0 +1,24 @@
+title_name = "The Bigs"
+title_id = "545407E4" # TT-2020
+hash = "F347D32D582B488F" # default.xex
+#media_id = "00000000"
+
+[[patch]]
+    name = "Enable Debug Menu"
+    desc = "Required for Debug Settings and Cheats."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82563B6C
+        value = 0x00
+
+[[patch]]
+    name = "Skip Intro Logos"
+    desc = "Skips 2K and BCG logos."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8223BFA0
+        value = 0x4800

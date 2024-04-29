@@ -1,0 +1,13 @@
+title_name = "Tenchu Z"
+title_id = "465307D7" 
+hash = "408592AA61518C06" # default.xex
+#media_id = "7A0ADB06" 
+
+[[patch]]
+    name = "60 FPS"
+    author = "Bigorados"
+    is_enabled = true
+
+    [[patch.be32]]
+        address = 0x8241beb4
+        value = 0x39400000

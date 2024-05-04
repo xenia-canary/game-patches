@@ -1,6 +1,6 @@
-title_name = "Grand Theft Auto IV" # Four, 4
+title_name = "Grand Theft Auto IV (TU8)" # Four, 4
 title_id = "545407F2" # TT-2034
-hash = "4CBE7EEB2455A159" # default.xex
+hash = "797B4775D3BC9853" # default.xex
 #media_id = "6AC07221" # Disc (USA): http://redump.org/disc/12492
 
 [[patch]]
@@ -10,26 +10,26 @@ hash = "4CBE7EEB2455A159" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x829a963c
+        address = 0x82a1a21c
         value = 0x48000048
 
 [[patch]]
     name = "Skip Legal Screens"
-    author = "illusion"
+    author = "illusion, Tervel"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82123fbc
+        address = 0x821448a4
         value = 0x39600001
 
 [[patch]]
     name = "Disable blur filter"
-    author = "illusion"
+    author = "illusion, Tervel"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822f8a08
-        value = 0x908be904 # stw r4,-0x16fc(r11)
+        address = 0x822ce278
+        value = 0x908be904 # stw r4,-0x61cc(r11)
     [[patch.be32]]
-        address = 0x822f8a4c
-        value = 0x908be904 # stw r4,-0x16fc(r11)
+        address = 0x822ce2bc
+        value = 0x908be904 # stw r4,-0x61cc(r11)

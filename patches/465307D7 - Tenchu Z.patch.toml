@@ -1,0 +1,14 @@
+title_name = "Tenchu Z"
+title_id = "465307D7" # FS-2007
+hash = "408592AA61518C06" # default.xex
+#media_id = "7A0ADB06" Disc (USA, Europe): http://redump.org/disc/11829
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Cutscenes are 2x speed."
+    author = "Bigorados"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8241beb4
+        value = 0x39400000

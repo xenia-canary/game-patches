@@ -7,6 +7,19 @@ hash = "9B9E734BA6BDCCD9" # default.xex
 #]
 
 [[patch]]
+    name = "Force 720p"
+    desc = "Makes the game run at 720p instead of the default 640p."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8221ce3c
+        value = 0x38e00500
+    [[patch.be32]]
+        address = 0x8221cdc0
+        value = 0x3be002d0
+
+[[patch]]
     name = "60 FPS"
     author = "illusion"
     is_enabled = false

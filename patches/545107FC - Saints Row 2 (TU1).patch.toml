@@ -29,3 +29,21 @@ hash = "9B9E734BA6BDCCD9" # default.xex
     [[patch.be32]]
         address = 0x82a3cf80
         value = 0x4befb554
+[[patch]]
+    name = "Aspect Ratio"
+	desc = "See note about aspect ratio patches in the README; FOV Multiplier required otherwise Vert- default are for 21:9/43:18"
+    author = "Clippy95"
+    is_enabled = false
+
+	[[patch.be32]]
+        address = 0x8290af6c
+        value = 0x60000000
+	[[patch.be32]]
+        address = 0x8291fc84
+        value = 0x60000000
+	[[patch.be32]]
+        address = 0x837756b4 # 3D aspect ratio
+        value = 0x4018e393
+	[[patch.be32]]
+        address = 0x8377636c # Shadows & decals aspect ratio
+        value = 0x4018e393

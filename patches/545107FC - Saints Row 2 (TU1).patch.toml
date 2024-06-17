@@ -40,13 +40,10 @@ hash = "9B9E734BA6BDCCD9" # default.xex
         address = 0x8290af6c
         value = 0x60000000
     [[patch.be32]]
-        address = 0x8291fc84
-        value = 0x60000000
-    [[patch.be32]]
         address = 0x837756b4 # 3D aspect ratio
         value = 0x4018e393
     [[patch.be32]]
-        address = 0x8377636c # Shadows & decals aspect ratio
+        address = 0x820b80d0 # Shadows & decals aspect ratio
         value = 0x4018e393
 
 [[patch]]

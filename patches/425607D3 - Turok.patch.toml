@@ -1,0 +1,22 @@
+title_name = "Turok"
+title_id = "425607D3" # BV-2003
+hash = "C01C5BA21C8272D2" # default.xex
+#media_id = "3926BB9B" # Disc (USA, Europe): http://redump.org/disc/13439
+
+[[patch]]
+    name = "Show FPS"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x834893a4
+        value = 0x01
+
+[[patch]]
+    name = "Show Location"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x834893ac
+        value = 0x01

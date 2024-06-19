@@ -1,0 +1,13 @@
+title_name = "Perfect Dark (Dec 3, 2009 Prototype)"
+title_id = "584109C2" # XA-2498
+hash = "EC379B5CAE85D8B6" # default.xex
+#media_id = "00000000"
+
+[[patch]]
+    name = "Fix texture noise on NVIDIA GPUs"
+    author = "Adrian, The Devils Own"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x820146fb
+        value = 0x30

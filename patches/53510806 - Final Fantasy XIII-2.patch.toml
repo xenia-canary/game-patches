@@ -20,6 +20,7 @@ hash = "0DAAEDF276921971" # default.xex
     desc = '''
         Use controller 2 to open and navigate menus. Fonts will be black. Requires custom font built for the xenon version.
         Can be found in ../data/ffxiii-fonts
+        (https://github.com/xenia-canary/game-patches/blob/main/data/FFXIII-font/DDS.7z)
         Font goes into path below:
         82247cf0 addi param_1=>s_sys/debug/...   = "sys/debug/DebugFontTextureDDS"
         From fdsa, has font build scripts but I couldn't get them working in the xenon version.

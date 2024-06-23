@@ -21,3 +21,13 @@ hash = "8BC78D3019FD8760" # default.xex
     [[patch.be32]]
         address = 0x825947fc
         value = 0x38600000
+
+[[patch]]
+    name = "Enable Invincibility cheat"
+    note = "May also enable other cheats, saving still possible"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82594968
+        value = 0x39600001

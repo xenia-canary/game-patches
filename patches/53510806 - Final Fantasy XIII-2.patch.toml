@@ -19,9 +19,10 @@ hash = "0DAAEDF276921971" # default.xex
     name = "Debug Mode"
     desc = '''
         Use controller 2 to open and navigate menus. Fonts will be black. Requires custom font built for the xenon version.
+        Can be found in ../data/ffxiii-fonts
+        (https://github.com/xenia-canary/game-patches/tree/main/data/FFXIII-font/)
         Font goes into path below:
         82247cf0 addi param_1=>s_sys/debug/...   = "sys/debug/DebugFontTextureDDS"
-        https://web.archive.org/web/20231211235914/https://cdn.discordapp.com/attachments/650395105479360514/846842483849691186/DDS.7z
         From fdsa, has font build scripts but I couldn't get them working in the xenon version.
         TODO(illusion): Find a place to make cave to write custom playmode from stw at 82251fa4
         I think only the first line is needed.

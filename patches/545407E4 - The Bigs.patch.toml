@@ -1,0 +1,24 @@
+title_name = "The Bigs"
+title_id = "545407E4" # TT-2020
+hash = "F347D32D582B488F" # default.xex
+#media_id = "7FBA7EA5" # Disc (USA): http://redump.org/disc/113467/
+
+[[patch]]
+    name = "Enable Debug Menu"
+    desc = "Required for Debug Settings and Cheats."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82563b6c
+        value = 0x00
+
+[[patch]]
+    name = "Skip Intro Logos"
+    desc = "Skips 2K and BCG logos."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8223bfa0
+        value = 0x4800

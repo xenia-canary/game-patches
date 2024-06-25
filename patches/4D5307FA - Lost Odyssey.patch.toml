@@ -63,7 +63,7 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
 
 [[patch]]
     name = "Partial Debug Menu"
-    desc = "L2 + R2 to open"
+    desc = "LT + RT to open"
     author = "illusion"
     is_enabled = false
 

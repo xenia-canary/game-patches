@@ -60,3 +60,16 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
     [[patch.be32]]
         address = 0x823de090
         value = 0x60000000
+
+[[patch]]
+    name = "Partial Debug Menu"
+    desc = "LT + RT to open"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x831ead88
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x828f9ed4
+        value = 0x93df0054

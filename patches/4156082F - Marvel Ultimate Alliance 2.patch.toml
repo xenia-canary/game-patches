@@ -1,0 +1,33 @@
+title_name = "Marvel Ultimate Alliance 2"
+title_id = "4156082F" # AV-2095
+hash = "8BC78D3019FD8760" # default.xex
+#media_id = "39B3E2C9"
+
+[[patch]]
+    name = "Save always possible when cheats are active"
+    author = "illusion"
+    is_enabled = false
+    # they tryna make it difficult by oring it with 128
+    #  if (((iVar6 != 9) && (iVar6 != 10)) && (iVar6 != 0xb))
+    #  {
+    #    *(byte *)((int)param_1 + 0xb5) = *(byte *)((int)param_1 + 0xb5) | 0x80;
+    #  }
+    [[patch.be32]]
+        address = 0x82595060
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x825947ec
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x825947fc
+        value = 0x38600000
+
+[[patch]]
+    name = "Enable Invincibility cheat"
+    note = "May also enable other cheats, saving still possible"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82594968
+        value = 0x39600001

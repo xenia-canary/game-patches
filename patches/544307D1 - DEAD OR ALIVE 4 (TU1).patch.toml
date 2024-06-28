@@ -1,0 +1,64 @@
+title_name = "DEAD OR ALIVE 4 (TU1)"
+title_id = "544307D1" # TC-2001
+hash = "EBBE6FD79DF4133E" # default.xex
+#media_id = "2AD7FA3A"
+
+[[patch]]
+    name = "255-hit Combo Limit"
+    desc = "Increases the combo limit from 30 to 255"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82515617
+        value = 0xff
+
+[[patch]]
+    name = "Increased Max Character Distance"
+    desc = "Increases the maximum distance between characters from 6.0f to 420.0f"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822bc710
+        value = 0x43d20000
+
+[[patch]]
+    name = "Alpha-152 can now be selected!"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.array]] #replace random-select with alpha-152 and appropriate icons and banners
+        address = 0x82f5c9b0
+        value = "1001010100060018000600180006003200060032000600b9000600b9000600610006004900000000"
+    [[patch.be8]] #restore 24th slot
+        address = 0x821b52a7
+        value = 0x01
+    [[patch.array]] #replace random-select on slot 24
+        address = 0x82c346d0
+        value = "ff01010100060011000600110006001100060011000600b8000600b80006003e0006006e00000000"
+
+[[patch]]
+    name = "All Characters Unlocked"
+    desc = "Multiplayer Modes Only. Story Mode Unaffected."
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]] #unlock Helena
+        address = 0x82f5c8c2
+        value = 0x01
+    [[patch.be8]] #unlock Ein
+        address = 0x82f5c8ea
+        value = 0x01
+    [[patch.be8]] #unlock Genfu
+        address = 0x82f5c912
+        value = 0x01
+    [[patch.be8]] #unlock Leon
+        address = 0x82f5c93a
+        value = 0x01
+    [[patch.be8]] #unlock Tengu
+        address = 0x82f5c962
+        value = 0x01
+    [[patch.be8]] #unlock Spartan-458
+        address = 0x82f5c98a
+        value = 0x01

@@ -35,7 +35,7 @@ hash = "4CBE7EEB2455A159" # default.xex
         value = 0x908be904 # stw r4,-0x16fc(r11)
 
 [[patch]]
-    name = "Skip Legal Screens"
+    name = "Aspect Ratio"
     desc = "See note about aspect ratio patches in the README."
     author = "Clippy95"
     is_enabled = false

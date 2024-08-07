@@ -5,7 +5,6 @@ hash = "ED5C2458F214AB36" # default.xex
 
 [[patch]]
     name = "Unlock All Menus"
-    desc = ""
     author = "ryu_highabusa"
     is_enabled = false
 

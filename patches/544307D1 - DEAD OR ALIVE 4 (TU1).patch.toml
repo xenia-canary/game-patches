@@ -62,3 +62,42 @@ hash = "EBBE6FD79DF4133E" # default.xex
     [[patch.be8]] #unlock Spartan-458
         address = 0x82f5c98a
         value = 0x01
+
+[[patch]]
+    name = "21:9 Ultrawide Aspect Ratio"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822bd124
+        value = 0x3ed80000
+
+[[patch]]
+    name = "Unused Helena 'Opera' Costume on Slot 1"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82c34758
+        value = 0x03
+
+[[patch]]
+    name = "Unused Kokoro 'Kimono' Costumes on Slots 1 & 2"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]] #Pink Kimono on Kokoro Costume Slot 1
+        address = 0x82c34768
+        value = 0x08
+    [[patch.be8]] #Blue Kimono on Kokoro Costume Slot 2
+        address = 0x82c34769
+        value = 0x03
+
+[[patch]]
+    name = "Unused Christie Costume on Slot 1"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82c347f0
+        value = 0x05

@@ -15,7 +15,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
 
 [[patch]]
     name = "Increased Max Character Distance"
-    desc = "Increases the maximum distance between characters from 6.0f to 420.0f"
+    desc = "Increases the maximum distance between characters from 6.0f to 420.0f. Please note this breaks some animations."
     author = "ryu_highabusa"
     is_enabled = false
 
@@ -107,6 +107,9 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     author = "ryu_highabusa"
     is_enabled = false
 
+    [[patch.be8]] #Tritower Heliport
+        address = 0x82c22ac9
+        value = 0x01
     [[patch.be8]] #Kyoto in Bloom (Day)
         address = 0x82c22ad9
         value = 0x01
@@ -125,7 +128,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     [[patch.be8]] #Ninja Hideout
         address = 0x82c22b29
         value = 0x01
-    [[patch.be8]] #DWA COLISEUM
+    [[patch.be8]] #DWA Coliseum
         address = 0x82c22b39
         value = 0x01
     [[patch.be8]] #Crash Club

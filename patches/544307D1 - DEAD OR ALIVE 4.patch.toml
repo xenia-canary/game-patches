@@ -101,3 +101,60 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     [[patch.be8]]
         address = 0x82c247b8
         value = 0x05
+
+[[patch]]
+    name = "All Stages Available in Tag Mode"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]] #Kyoto in Bloom (Day)
+        address = 0x82c22ad9
+        value = 0x01
+    [[patch.be8]] #Kyoto in Bloom (Night)
+        address = 0x82c22ae9
+        value = 0x01
+    [[patch.be8]] #Nassau Station
+        address = 0x82c22af9
+        value = 0x01
+    [[patch.be8]] #Tatami
+        address = 0x82c22b09
+        value = 0x01
+    [[patch.be8]] #Seaside Market
+        address = 0x82c22b19
+        value = 0x01
+    [[patch.be8]] #Ninja Hideout
+        address = 0x82c22b29
+        value = 0x01
+    [[patch.be8]] #DWA COLISEUM
+        address = 0x82c22b39
+        value = 0x01
+    [[patch.be8]] #Crash Club
+        address = 0x82c22b49
+        value = 0x01
+    [[patch.be8]] #Savannah Safari
+        address = 0x82c22b59
+        value = 0x01
+    [[patch.be8]] #DOATEC Great Hall
+        address = 0x82c22b69
+        value = 0x01
+    [[patch.be8]] #Temple on the Mountain
+        address = 0x82c22b79
+        value = 0x01
+    [[patch.be8]] #Random
+        address = 0x82c22b89
+        value = 0x01
+    [[patch.be8]] #Biolab Core
+        address = 0x82c22b99
+        value = 0x01
+    [[patch.be8]] #Waterfall Valley
+        address = 0x82c22ba9
+        value = 0x01
+    [[patch.be8]] #Gamblers Paradise
+        address = 0x82c22bb9
+        value = 0x01
+    [[patch.be8]] #Experimental Playground
+        address = 0x82c22bc9
+        value = 0x01
+    [[patch.be8]] #Sets Default Cursor to Random
+        address = 0x82c22ac7
+        value = 0xFF

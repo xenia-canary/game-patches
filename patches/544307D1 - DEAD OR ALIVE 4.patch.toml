@@ -2,6 +2,7 @@ title_name = "DEAD OR ALIVE 4"
 title_id = "544307D1" # TC-2001
 hash = "7F840B8DEFDB5C5E" # default.xex
 #media_id = "2AD7FA3A"
+#media_id = "2A21D923"
 
 [[patch]]
     name = "255-hit Combo Limit"
@@ -15,13 +16,13 @@ hash = "7F840B8DEFDB5C5E" # default.xex
 
 [[patch]]
     name = "Increased Max Character Distance"
-    desc = "Increases the maximum distance between characters from 6.0f to 420.0f. Please note this breaks some animations."
+    desc = "Increases the maximum distance between characters from 6.0f to 12.0f. Please note this breaks some animations."
     author = "ryu_highabusa"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x822a9df8
-        value = 0x43d20000
+        value = 0x41400000
 
 [[patch]]
     name = "Alpha-152 can now be selected!"
@@ -107,55 +108,55 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.be8]] #Tritower Heliport
+    [[patch.be8]] #Tritower Heliport 0x25
         address = 0x82c22ac9
         value = 0x01
-    [[patch.be8]] #Kyoto in Bloom (Day)
+    [[patch.be8]] #Kyoto in Bloom (Day) 0x15
         address = 0x82c22ad9
         value = 0x01
-    [[patch.be8]] #Kyoto in Bloom (Night)
+    [[patch.be8]] #Kyoto in Bloom (Night) 0x1f
         address = 0x82c22ae9
         value = 0x01
-    [[patch.be8]] #Nassau Station
+    [[patch.be8]] #Nassau Station 0x13
         address = 0x82c22af9
         value = 0x01
-    [[patch.be8]] #Tatami
+    [[patch.be8]] #Tatami 0x17
         address = 0x82c22b09
         value = 0x01
-    [[patch.be8]] #Seaside Market
+    [[patch.be8]] #Seaside Market (Top) 0x0e
         address = 0x82c22b19
         value = 0x01
-    [[patch.be8]] #Ninja Hideout
+    [[patch.be8]] #Ninja Hideout (Top) 0x0f
         address = 0x82c22b29
         value = 0x01
-    [[patch.be8]] #DWA Coliseum
+    [[patch.be8]] #DWA COLISEUM 0x14
         address = 0x82c22b39
         value = 0x01
-    [[patch.be8]] #Crash Club
+    [[patch.be8]] #Crash Club 0x24
         address = 0x82c22b49
         value = 0x01
-    [[patch.be8]] #Savannah Safari
+    [[patch.be8]] #Savannah Safari 0x18
         address = 0x82c22b59
         value = 0x01
-    [[patch.be8]] #DOATEC Great Hall
+    [[patch.be8]] #DOATEC Great Hall 0x0d
         address = 0x82c22b69
         value = 0x01
-    [[patch.be8]] #Temple on the Mountain
+    [[patch.be8]] #Temple on the Mountain (Top) 0x10
         address = 0x82c22b79
         value = 0x01
-    [[patch.be8]] #Random
+    [[patch.be8]] #Random 0xff
         address = 0x82c22b89
         value = 0x01
-    [[patch.be8]] #Biolab Core
+    [[patch.be8]] #Biolab Core 0x0c
         address = 0x82c22b99
         value = 0x01
-    [[patch.be8]] #Waterfall Valley
+    [[patch.be8]] #Waterfall Valley 0x1a
         address = 0x82c22ba9
         value = 0x01
-    [[patch.be8]] #Gamblers Paradise
+    [[patch.be8]] #Gamblers Paradise 0x11
         address = 0x82c22bb9
         value = 0x01
-    [[patch.be8]] #Experimental Playground
+    [[patch.be8]] #Experimental Playground 0x0a
         address = 0x82c22bc9
         value = 0x01
     [[patch.be8]] #Sets Default Cursor to Random

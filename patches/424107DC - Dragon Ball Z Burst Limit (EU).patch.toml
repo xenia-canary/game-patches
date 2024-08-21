@@ -11,24 +11,19 @@ hash = "C1C7D3D68031690D" # default.xex
 
     [[patch.be32]]
         address = 0x826de600
-        value = 0x1 # FPS_CAP
-
+        value = 0x01 # FPS_CAP
     [[patch.be32]]
         address = 0x821dceb0
         value = 0x60000000 # Alternative fix for pause
-
     [[patch.be32]]
         address = 0x821dbe28
         value = 0x60000000 # Alternative fix for quitting the match
-
     [[patch.be32]]
         address = 0x8221d2f4
         value = 0x38600001 # RESET_CAP to 1
-
     [[patch.be32]]
         address = 0x82232e24
         value = 0x38600001 # RESET_CAP to 1
-
     [[patch.be32]]
         address = 0x822385d8
         value = 0x38600001 # RESET_CAP to 1

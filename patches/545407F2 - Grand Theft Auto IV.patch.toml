@@ -33,3 +33,13 @@ hash = "4CBE7EEB2455A159" # default.xex
     [[patch.be32]]
         address = 0x822f8a4c
         value = 0x908be904 # stw r4,-0x16fc(r11)
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "See note about aspect ratio patches in the README."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820ae698
+        value = 0x4018e393

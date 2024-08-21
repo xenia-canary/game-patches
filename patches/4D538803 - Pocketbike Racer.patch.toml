@@ -1,0 +1,22 @@
+title_name = "Pocketbike Racer" # Pocket Bike
+title_id = "4D538803" # MS-34819
+hash = "5E9EB194AF391903" # default.xex
+#media_id = "346E875D" # Disc (USA): http://redump.org/disc/48914
+
+[[patch]]
+    name = "Disable Glow/Bloom"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8218abe8
+        value = 0x4280
+
+[[patch]]
+    name = "Skip intros"
+    author = "Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x820c9944
+        value = 0x4280

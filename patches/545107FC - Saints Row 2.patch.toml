@@ -20,6 +20,97 @@ hash = "581D207BBF22F59E" # default.xex
         value = 0x3be002d0
 
 [[patch]]
+    name = "Disable HDR"
+    desc = "Turns HDR off and edits the brightness, saturation and contrast to make up for that."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8205366c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82219464
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x823e2988
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8221946c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x823e2994
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8221940c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x823e2990
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x821e1248
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82053ca4
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x83783454 # Brightness
+        value = 0.3
+    [[patch.f32]]
+        address = 0x82b76b30 # Contrast
+        value = 1.62
+    [[patch.f32]]
+        address = 0x82b76b34 # Saturation
+        value = 0.8
+
+[[patch]]
+    name = "Disable Bleach Filter"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820536d8
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Cutscene Letterbox"
+    author = "Tervel, jason098"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82464290
+        value = 0x4e800020
+
+[[patch]]
+    name = "Disable Vignette"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82078580
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Sharpening"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82b76f24
+        value = 0.0
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821d34b0
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x821d36a0
+        value = 0x4e800020
+
+[[patch]]
     name = "60 FPS"
     author = "illusion"
     is_enabled = false

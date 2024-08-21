@@ -1,0 +1,13 @@
+title_name = "DEAD OR ALIVE 4"
+title_id = "544307D1" # TC-2001
+hash = "ED5C2458F214AB36" # default.xex
+#media_id = "00000000"
+
+[[patch]]
+    name = "Unlock All Menus"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82414ff7
+        value = 0x03

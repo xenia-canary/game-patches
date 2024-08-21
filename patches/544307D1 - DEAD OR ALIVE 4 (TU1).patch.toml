@@ -1,8 +1,7 @@
-title_name = "DEAD OR ALIVE 4"
+title_name = "DEAD OR ALIVE 4 (TU1)"
 title_id = "544307D1" # TC-2001
-hash = "7F840B8DEFDB5C5E" # default.xex
+hash = "EBBE6FD79DF4133E" # disc default.xex + TU1
 #media_id = "2AD7FA3A"
-#media_id = "2A21D923"
 
 [[patch]]
     name = "255-hit Combo Limit"
@@ -11,7 +10,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82502197
+        address = 0x82515617
         value = 0xff
 
 [[patch]]
@@ -21,7 +20,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822a9df8
+        address = 0x822bc710
         value = 0x41400000
 
 [[patch]]
@@ -30,13 +29,13 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.array]] #replace random-select with alpha-152 and appropriate icons and banners
-        address = 0x82f4b960
+        address = 0x82f5c9b0
         value = "1001010100060018000600180006003200060032000600b9000600b9000600610006004900000000"
     [[patch.be8]] #restore 24th slot
-        address = 0x821b52d3
+        address = 0x821b52a7
         value = 0x01
     [[patch.array]] #replace random-select on slot 24
-        address = 0x82c24698
+        address = 0x82c346d0
         value = "ff01010100060011000600110006001100060011000600b8000600b80006003e0006006e00000000"
 
 [[patch]]
@@ -46,22 +45,22 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be8]] #unlock Helena
-        address = 0x82f4b872
+        address = 0x82f5c8c2
         value = 0x01
     [[patch.be8]] #unlock Ein
-        address = 0x82f4b89a
+        address = 0x82f5c8ea
         value = 0x01
     [[patch.be8]] #unlock Genfu
-        address = 0x82f4b8c2
+        address = 0x82f5c912
         value = 0x01
     [[patch.be8]] #unlock Leon
-        address = 0x82f4b8ea
+        address = 0x82f5c93a
         value = 0x01
     [[patch.be8]] #unlock Tengu
-        address = 0x82f4b912
+        address = 0x82f5c962
         value = 0x01
     [[patch.be8]] #unlock Spartan-458
-        address = 0x82f4b93a
+        address = 0x82f5c98a
         value = 0x01
 
 [[patch]]
@@ -70,7 +69,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822aa800
+        address = 0x822bd124
         value = 0x3ed80000
 
 [[patch]]
@@ -79,7 +78,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82c24720
+        address = 0x82c34758
         value = 0x03
 
 [[patch]]
@@ -88,10 +87,10 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be8]] #Pink Kimono on Kokoro Costume Slot 1
-        address = 0x82c24730
+        address = 0x82c34768
         value = 0x08
     [[patch.be8]] #Blue Kimono on Kokoro Costume Slot 2
-        address = 0x82c24731
+        address = 0x82c34769
         value = 0x03
 
 [[patch]]
@@ -100,7 +99,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82c247b8
+        address = 0x82c347f0
         value = 0x05
 
 [[patch]]
@@ -109,56 +108,56 @@ hash = "7F840B8DEFDB5C5E" # default.xex
     is_enabled = false
 
     [[patch.be8]] #Tritower Heliport 0x25
-        address = 0x82c22ac9
+        address = 0x82c32af9
         value = 0x01
     [[patch.be8]] #Kyoto in Bloom (Day) 0x15
-        address = 0x82c22ad9
+        address = 0x82c32b09
         value = 0x01
     [[patch.be8]] #Kyoto in Bloom (Night) 0x1f
-        address = 0x82c22ae9
+        address = 0x82c32b19
         value = 0x01
     [[patch.be8]] #Nassau Station 0x13
-        address = 0x82c22af9
+        address = 0x82c32b29
         value = 0x01
     [[patch.be8]] #Tatami 0x17
-        address = 0x82c22b09
+        address = 0x82c32b39
         value = 0x01
     [[patch.be8]] #Seaside Market (Top) 0x0e
-        address = 0x82c22b19
+        address = 0x82c32b49
         value = 0x01
     [[patch.be8]] #Ninja Hideout (Top) 0x0f
-        address = 0x82c22b29
+        address = 0x82c32b59
         value = 0x01
-    [[patch.be8]] #DWA COLISEUM 0x14
-        address = 0x82c22b39
+    [[patch.be8]] #DWA Coliseum 0x14
+        address = 0x82c32b69
         value = 0x01
     [[patch.be8]] #Crash Club 0x24
-        address = 0x82c22b49
+        address = 0x82c32b79
         value = 0x01
     [[patch.be8]] #Savannah Safari 0x18
-        address = 0x82c22b59
+        address = 0x82c32b89
         value = 0x01
     [[patch.be8]] #DOATEC Great Hall 0x0d
-        address = 0x82c22b69
+        address = 0x82c32b99
         value = 0x01
     [[patch.be8]] #Temple on the Mountain (Top) 0x10
-        address = 0x82c22b79
+        address = 0x82c32ba9
         value = 0x01
     [[patch.be8]] #Random 0xff
-        address = 0x82c22b89
+        address = 0x82c32bb9
         value = 0x01
     [[patch.be8]] #Biolab Core 0x0c
-        address = 0x82c22b99
+        address = 0x82c32bc9
         value = 0x01
     [[patch.be8]] #Waterfall Valley 0x1a
-        address = 0x82c22ba9
+        address = 0x82c32bd8
         value = 0x01
     [[patch.be8]] #Gamblers Paradise 0x11
-        address = 0x82c22bb9
+        address = 0x82c32be9
         value = 0x01
     [[patch.be8]] #Experimental Playground 0x0a
-        address = 0x82c22bc9
+        address = 0x82c32bf9
         value = 0x01
     [[patch.be8]] #Sets Default Cursor to Random
-        address = 0x82c22ac7
+        address = 0x82c32af7
         value = 0xFF

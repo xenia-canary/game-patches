@@ -5,7 +5,7 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
 
 [[patch]]
     name = "Remove Grass"
-	desc = "Fixes stretching grass artifact."
+    desc = "Fixes stretching grass artifact."
     author = "Clippy95"
     is_enabled = false
 
@@ -19,5 +19,5 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.f32]]
-        address = 0x8207bf4C
+        address = 0x8207bf4c
         value = 2.38888888889

@@ -5,7 +5,7 @@ hash = "D1CC65DC0F0C0CBB" # codmp_xenonf.xex
 
 [[patch]]
     name = "Remove Grass"
-	desc = "Fixes stretching grass artifact."
+    desc = "Fixes stretching grass artifact."
     author = "Clippy95"
     is_enabled = false
 

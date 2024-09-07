@@ -8,7 +8,7 @@ hash = [
 
 [[patch]]
     name = "Remove Grass"
-	desc = "Fixes stretching grass artifact."
+    desc = "Fixes stretching grass artifact."
     author = "Clippy95"
     is_enabled = false
 

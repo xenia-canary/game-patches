@@ -1,8 +1,8 @@
 title_name = "Call Of Duty 3" # SP
 title_id = "415607E1" #AV-2017
 hash = [
-    "B796871E700C5C6B" # default.xex
-#    "7CAEC18CD0C372B6" # default.xex # TU3
+    "B796871E700C5C6B", # default.xex # TU0
+    "7CAEC18CD0C372B6"  # default.xex # TU3
 ]
 #media_id = "2E07093A" # Disc (USA, Europe) http://redump.org/disc/12479/
 

@@ -19,5 +19,5 @@ hash = "D1CC65DC0F0C0CBB" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.f32]]
-        address = 0x8207ce40
+        address = 0x82085b6c
         value = 2.38888888889

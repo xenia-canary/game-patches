@@ -26,7 +26,7 @@ hash = "D1CC65DC0F0C0CBB" # codmp_xenonf.xex
         address = 0x824642b8 # Death screen
         value = 0x60000000
     [[patch.be32]]
-        address = 0x820d1470
+        address = 0x8257453c
         value = 0x60000000
     [[patch.f32]]
         address = 0x82c77e44

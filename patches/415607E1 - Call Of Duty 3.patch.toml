@@ -1,0 +1,26 @@
+title_name = "Call Of Duty 3" # SP
+title_id = "415607E1" #AV-2017
+hash = [
+    "B796871E700C5C6B" # default.xex
+#    "7CAEC18CD0C372B6" # default.xex # TU3
+]
+#media_id = "2E07093A" # Disc (USA, Europe) http://redump.org/disc/12479/
+
+[[patch]]
+    name = "Remove Grass"
+	desc = "Fixes stretching grass artifact."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823f7a60
+        value = 0x4e800020
+
+[[patch]]
+    name = "Aspect Ratio"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x8207ce40
+        value = 2.38888888889

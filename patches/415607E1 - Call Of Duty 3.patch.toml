@@ -26,9 +26,6 @@ hash = [
         address = 0x825523bc # ADS
         value = 0x60000000
     [[patch.be32]]
-        address = 0x824642b8
-        value = 0x60000000
-    [[patch.be32]]
         address = 0x820c1510
         value = 0x60000000
     [[patch.f32]]

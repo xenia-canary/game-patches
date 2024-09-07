@@ -20,16 +20,16 @@ hash = "D1CC65DC0F0C0CBB" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8257453C # ADS
+        address = 0x8257453c # ADS
         value = 0x60000000
     [[patch.be32]]
-        address = 0x824642B8 # Death screen
+        address = 0x824642b8 # Death screen
         value = 0x60000000
     [[patch.be32]]
-        address = 0x820D1470
+        address = 0x820d1470
         value = 0x60000000
     [[patch.f32]]
-        address = 0x82C77E44
+        address = 0x82c77e44
         value = 100000
 
 [[patch]]

@@ -1,5 +1,5 @@
 title_name = "Call Of Duty 3" # SP
-title_id = "415607E1" #AV-2017 
+title_id = "415607E1" #AV-2017
 hash = [
     "B796871E700C5C6B", # default.xex # TU0
     "7CAEC18CD0C372B6"  # default.xex # TU3
@@ -23,16 +23,16 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825523BC # ADS
+        address = 0x825523bc # ADS
         value = 0x60000000
     [[patch.be32]]
-        address = 0x824642B8
+        address = 0x824642b8
         value = 0x60000000
     [[patch.be32]]
-        address = 0x820C1510
+        address = 0x820c1510
         value = 0x60000000
     [[patch.f32]]
-        address = 0x82A96E94
+        address = 0x82a96e94
         value = 100000
 
 [[patch]]

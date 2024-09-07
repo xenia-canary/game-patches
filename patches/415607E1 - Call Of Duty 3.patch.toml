@@ -23,10 +23,7 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825523bc # ADS
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x820c1510
+        address = 0x82551dec
         value = 0x60000000
     [[patch.f32]]
         address = 0x82a96e94

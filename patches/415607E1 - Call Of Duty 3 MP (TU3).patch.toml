@@ -1,7 +1,7 @@
 title_name = "Call Of Duty 3" # MP TU3
 title_id = "415607E1" #AV-2017
 hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
-#media_id = "2E07093A" # Disc (USA, Europe) http://redump.org/disc/12479/
+#media_id = "2E07093A" # Disc (USA, Europe): http://redump.org/disc/12479/
 
 [[patch]]
     name = "Remove Grass"
@@ -12,6 +12,25 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
     [[patch.be32]]
         address = 0x823d6450
         value = 0x4e800020
+
+[[patch]]
+    name = "Disable Depth Of Field"
+    desc = "Fixes blurring entire screen when ADS"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82539BE4 # ADS
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82429888 # Death screen
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x820C1888
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x82C37D24
+        value = 100000
 
 [[patch]]
     name = "Aspect Ratio"

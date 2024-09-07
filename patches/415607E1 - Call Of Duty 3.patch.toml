@@ -1,10 +1,10 @@
 title_name = "Call Of Duty 3" # SP
-title_id = "415607E1" #AV-2017
+title_id = "415607E1" #AV-2017 
 hash = [
     "B796871E700C5C6B", # default.xex # TU0
     "7CAEC18CD0C372B6"  # default.xex # TU3
 ]
-#media_id = "2E07093A" # Disc (USA, Europe) http://redump.org/disc/12479/
+#media_id = "2E07093A" # Disc (USA, Europe): http://redump.org/disc/12479/
 
 [[patch]]
     name = "Remove Grass"
@@ -15,6 +15,25 @@ hash = [
     [[patch.be32]]
         address = 0x823f7a60
         value = 0x4e800020
+
+[[patch]]
+    name = "Disable Depth Of Field"
+    desc = "Fixes blurring entire screen when ADS"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825523BC # ADS
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x824642B8
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x820C1510
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x82A96E94
+        value = 100000
 
 [[patch]]
     name = "Aspect Ratio"

@@ -20,10 +20,10 @@ hash = "D1CC65DC0F0C0CBB" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8257453c
+        address = 0x825744EC
         value = 0x60000000
     [[patch.be32]]
-        address = 0x824642b8
+        address = 0x825744F4
         value = 0x60000000
     [[patch.f32]]
         address = 0x82c77e44
@@ -37,3 +37,12 @@ hash = "D1CC65DC0F0C0CBB" # codmp_xenonf.xex
     [[patch.f32]]
         address = 0x82085b6c
         value = 2.38888888889
+
+[[patch]]
+    name = "cg_fov"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.string]]
+        address = 0x82078610
+        value = "90"

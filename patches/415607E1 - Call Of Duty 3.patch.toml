@@ -37,3 +37,12 @@ hash = [
     [[patch.f32]]
         address = 0x8207ce40
         value = 2.38888888889
+
+[[patch]]
+    name = "cg_fov"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.string]]
+        address = 0x82078efc
+        value = "80"

@@ -32,7 +32,6 @@ hash = [
         address = 0x82a96e94
         value = 100000
 
-
 [[patch]]
     name = "Disable Lens Flares"
     desc = "Fixes unoccluded bright lights on-screen."

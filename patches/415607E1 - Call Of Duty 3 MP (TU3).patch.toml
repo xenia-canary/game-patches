@@ -30,6 +30,18 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
         value = 100000
 
 [[patch]]
+    name = "Unlimited Sprint"
+    author = "fragsareus, Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8245AFE4
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8245B364
+        value = 0x60000000
+
+[[patch]]
     name = "Aspect Ratio"
     author = "Clippy95"
     is_enabled = false

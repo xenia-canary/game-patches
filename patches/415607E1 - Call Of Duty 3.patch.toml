@@ -25,9 +25,23 @@ hash = [
     [[patch.be32]]
         address = 0x82551dec
         value = 0x60000000
+    [[patch.be32]]
+        address = 0x825523bc
+        value = 0x60000000
     [[patch.f32]]
         address = 0x82a96e94
         value = 100000
+
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Clippy95, fragsareus"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8245c208
+        value = 0x4e800020
 
 [[patch]]
     name = "Aspect Ratio"

@@ -30,15 +30,25 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
         value = 100000
 
 [[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Clippy95, fragsareus"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8243c604
+        value = 0x60000000
+
+[[patch]]
     name = "Unlimited Sprint"
     author = "fragsareus, Clippy95"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8245AFE4
+        address = 0x8245afe4
         value = 0x60000000
     [[patch.be32]]
-        address = 0x8245B364
+        address = 0x8245b364
         value = 0x60000000
 
 [[patch]]

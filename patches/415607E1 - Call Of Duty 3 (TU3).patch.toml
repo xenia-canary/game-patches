@@ -1,6 +1,6 @@
-title_name = "Call Of Duty 3" # MP TU3
+title_name = "Call Of Duty 3" # SP
 title_id = "415607E1" # AV-2017
-hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
+hash = "7CAEC18CD0C372B6" # default.xex # TU3
 #media_id = "2E07093A" # Disc (USA, Europe): http://redump.org/disc/12479/
 
 [[patch]]
@@ -10,7 +10,7 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x823d6450
+        address = 0x823f7a60
         value = 0x4e800020
 
 [[patch]]
@@ -20,13 +20,10 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82539be4
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x82426fc0
-        value = 0x60000000
+        address = 0x825517e8
+        value = 0x4e800020
     [[patch.f32]]
-        address = 0x82c37d24
+        address = 0x82a96e94
         value = 100000
 
 [[patch]]
@@ -36,20 +33,8 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8243c604
-        value = 0x60000000
-
-[[patch]]
-    name = "Unlimited Sprint"
-    author = "fragsareus, Clippy95"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8245afe4
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x8245b364
-        value = 0x60000000
+        address = 0x8245c1f8
+        value = 0x4e800020
 
 [[patch]]
     name = "Aspect Ratio"
@@ -58,10 +43,10 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.f32]]
-        address = 0x8207bf4c
+        address = 0x8207ce40
         value = 2.38888888889
     [[patch.f32]]
-        address = 0x82059488
+        address = 0x82064214
         value = 0.55813953488 # HUD Scale
 
 [[patch]]
@@ -70,5 +55,5 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
     is_enabled = false
 
     [[patch.string]]
-        address = 0x8206e990
-        value = "90"
+        address = 0x82078efc
+        value = "80"

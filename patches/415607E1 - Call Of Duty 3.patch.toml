@@ -1,9 +1,6 @@
 title_name = "Call Of Duty 3" # SP
 title_id = "415607E1" # AV-2017
-hash = [
-    "B796871E700C5C6B", # default.xex # TU0
-    "7CAEC18CD0C372B6"  # default.xex # TU3
-]
+hash = "B796871E700C5C6B" # default.xex # TU0
 #media_id = "2E07093A" # Disc (USA, Europe): http://redump.org/disc/12479/
 
 [[patch]]
@@ -23,11 +20,8 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82551dec
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x825523bc
-        value = 0x60000000
+        address = 0x82551db8
+        value = 0x4e800020
     [[patch.f32]]
         address = 0x82a96e94
         value = 100000
@@ -44,12 +38,16 @@ hash = [
 
 [[patch]]
     name = "Aspect Ratio"
+    desc = "HUD scale lowers resolution of HUD, it's calculated with (4/3) / (Width/Height)"
     author = "Clippy95"
     is_enabled = false
 
     [[patch.f32]]
         address = 0x8207ce40
         value = 2.38888888889
+    [[patch.f32]]
+        address = 0x82064214
+        value = 0.55813953488 # HUD scale
 
 [[patch]]
     name = "cg_fov"

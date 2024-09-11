@@ -41,12 +41,16 @@ hash = "D1CC65DC0F0C0CBB" # codmp_xenonf.xex
 
 [[patch]]
     name = "Aspect Ratio"
+    desc = "HUD scale lowers resolution of HUD, it's calculated with (4/3) / (Width/Height)"
     author = "Clippy95"
     is_enabled = false
 
     [[patch.f32]]
         address = 0x82085b6c
         value = 2.38888888889
+    [[patch.f32]]
+        address = 0x82063058
+        value = 2.38888888889 # HUD Scale
 
 [[patch]]
     name = "cg_fov"

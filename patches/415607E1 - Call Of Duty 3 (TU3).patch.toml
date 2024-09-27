@@ -20,8 +20,8 @@ hash = "7CAEC18CD0C372B6" # default.xex # TU3
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825517e8
-        value = 0x4e800020
+        address = 0x820c1510
+        value = 0x60000000
     [[patch.f32]]
         address = 0x82a96e94
         value = 100000

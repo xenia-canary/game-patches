@@ -20,7 +20,7 @@ hash = "B796871E700C5C6B" # default.xex # TU0
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820c1510
+        address = 0x825523bc
         value = 0x60000000
     [[patch.f32]]
         address = 0x82a96e94

@@ -1,0 +1,14 @@
+title_name = "Castlevania: Lords of Shadow - Mirror of Fate HD"
+title_id = "58411408" # XA-5174
+hash = "44349AB1073D5E1D" # default.xex
+#media_id = "67C0BA8C"
+
+[[patch]]
+    name = "1280x720 Resolution"
+    author = "Margen67"
+    desc = "Original resolution is 1200x720. Gets rid of black bars/letterboxing. Slightly decreased FOV. 2D elements are slightly stretched."
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82474de2
+        value = 0x0500

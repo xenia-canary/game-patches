@@ -43,3 +43,16 @@ hash = "B9BE89200A856E37" # default.xex
     [[patch.be32]]
         address = 0x823a6758
         value = 0x39600001
+
+[[patch]]
+    name = "Garage unlocker"
+    desc = "Allows purchasing any vehicle whether it is locked or not. This also applies to the vehicle parts, but does not unlock the body parts."
+    author = "LukeGoule"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826bcdc4
+        value = 0x38600001
+    [[patch.be32]]
+        address = 0x826b94f8
+        value = 0x39600001

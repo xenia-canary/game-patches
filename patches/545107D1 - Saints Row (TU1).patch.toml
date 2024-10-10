@@ -72,11 +72,11 @@ hash = "2537D5F11410BE0A" # default.xex
     author = "godzhand"
     is_enabled = false
     [[patch.be32]]
-        address = 0x821A5F64
-        value = 0x38A000ff
+        address = 0x821a5F64
+        value = 0x38a000ff
     [[patch.be32]]
-        address = 0x821A5F68
+        address = 0x821a5F68
         value = 0x38800000
     [[patch.be32]]
-        address = 0x821A5F6c
+        address = 0x821a5F6c
         value = 0x38600000

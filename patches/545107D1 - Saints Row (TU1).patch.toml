@@ -65,3 +65,18 @@ hash = "2537D5F11410BE0A" # default.xex
     [[patch.be8]]
         address = 0x835f4c3e
         value = 0x01
+
+[[patch]]
+    name = "invisible objects"
+    desc = "all objects such as weapons and vehicles do not load in until you exit territory"
+    author = "godzhand"
+    is_enabled = false
+    [[patch.be32]]
+        address = 0x821A5F64
+        value = 0x38A000ff
+    [[patch.be32]]
+        address = 0x821A5F68
+        value = 0x38800000
+    [[patch.be32]]
+        address = 0x821A5F6c
+        value = 0x38600000

@@ -1,5 +1,6 @@
 # Xenia Canary Game Patches
-This repository contains game patches for [Xenia Canary](../../../../xenia-canary).
+This repository contains game patches for [Xenia Canary](../../../../xenia-canary).\
+Plugin documentation can be found [here](Plugin-Docs.md).
 
 **Non-patch questions belong on the [Xenia Discord server](https://discord.gg/Q9mxZf9).**
 

@@ -75,10 +75,10 @@ hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
 
 [[patch]]
     name = "Fovscale"
-	desc = "Raises the scaling of FOV similar to cg_fovscale in IW 3.0+"
+    desc = "Raises the scaling of FOV similar to cg_fovscale in IW 3.0+"
     author = "Clippy95"
     is_enabled = false
 
     [[patch.f32]]
-        address = 0x8207BBEC
+        address = 0x8207bbec
         value = 167.479957692

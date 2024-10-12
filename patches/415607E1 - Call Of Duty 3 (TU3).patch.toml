@@ -60,10 +60,10 @@ hash = "7CAEC18CD0C372B6" # default.xex # TU3
 
 [[patch]]
     name = "Fovscale"
-	desc = "Raises the scaling of FOV similar to cg_fovscale in IW 3.0+"
+    desc = "Raises the scaling of FOV similar to cg_fovscale in IW 3.0+"
     author = "Clippy95"
     is_enabled = false
 
     [[patch.f32]]
-        address = 0x8207CB70
+        address = 0x8207cb70
         value = 167.479957692

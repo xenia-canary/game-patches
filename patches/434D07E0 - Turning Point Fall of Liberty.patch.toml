@@ -1,0 +1,14 @@
+title_name = "Turning Point: Fall of Liberty"
+title_id = "434D07E0" # CM-2016
+hash = "1F88F0617288EB51" # default.xex
+#media_id = "4477F0D6" # Disc (USA, Europe): http://redump.org/disc/14546
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA."
+    author = "Omegasis"
+    is_enabled = false
+
+    [[patch.be8]] # tilingcode
+        address = 0x82e2bd6b
+        value = 0x04

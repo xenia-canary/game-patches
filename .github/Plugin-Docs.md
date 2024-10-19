@@ -3,7 +3,7 @@ This page documents the usage of plugins for [Xenia Canary](../../../../xenia-ca
 
 ## Plugins
 
-Plugin are homebrew xex modules which can be used for making mods. This is an experimental feature since homebrew xex modules may use unimplemented low priority kernel functions. Plugins will often notify if they have been loaded.
+Plugins are homebrew xex modules which can be used for making mods. This is an experimental feature since homebrew xex modules may use unimplemented low priority kernel functions. Plugins will often notify if they have been loaded.
 
 Dual booting plugins is possible, however a lot of plugins are incompatible with each other and will often crash on start-up.
 

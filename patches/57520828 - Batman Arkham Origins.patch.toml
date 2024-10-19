@@ -1,0 +1,29 @@
+title_name = "Batman: Arkham Origins"
+title_id = "57520828" # WR-2088
+hash = [
+    "781A52190A894062" # Disc 1, SP.xex
+    #"2CF45F1F92753D3B", # Disc 1, default.xex
+    #"2CF45F1F92753D3B", # Disc 2, default.xex
+    #"E52F7825EF8C9EC9", # Disc 2, ExpansionInstaller.xex
+    #"BE71DCED57D96DCC", # Disc 2, MP.xex
+]
+#media_id = "1E1F12E7" # Disc (USA, Europe): http://redump.org/disc/50852/
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826aff18
+        value = 0x39400000
+
+[[patch]]
+    name = "Disable MLAA (Morphological Anti-Aliasing)"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8236ec6a
+        value = 0x0000

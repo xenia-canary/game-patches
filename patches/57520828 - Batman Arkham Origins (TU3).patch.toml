@@ -1,0 +1,19 @@
+title_name = "Batman: Arkham Origins" # TU3
+title_id = "57520828" # WR-2088
+hash = [
+    "5CB34559646397C5" # Disc 1, SP.xex
+#    "4EFF9937076EB088" # Disc 1, default.xex
+#    "4EFF9937076EB088" # Disc 2, default.xex
+#    "E52F7825EF8C9EC9" # Disc 2, ExpansionInstaller.xex
+#    "34A4384ADD8E670D" # Disc 2, MP.xex
+]
+#media_id = "1E1F12E7" # Disc (USA, Europe): http://redump.org/disc/50852
+
+[[patch]]
+    name = "Debug Menu"
+    author = "dron_3" # https://dron-3.blogspot.com/2020/11/batman-arkham-series-xbox-360-debug-menu.html
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8242c407
+        value = 0x00

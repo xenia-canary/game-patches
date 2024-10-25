@@ -1,7 +1,20 @@
 title_name = "Call of Duty: Modern Warfare 2"
 title_id = "41560817" # AV-2071
-hash = "A3FFB7C11B688FE5" # default_mp.xex
+hash = [
+    "A3FFB7C11B688FE5" # default_mp.xex
+    #"52276FB138B533AF" # default_mp.xex, RSA checks removed
+]
 #media_id = "2C8C0267" # Disc (USA, Europe): http://redump.org/disc/11809
+
+[[patch]]
+    name = "120 FPS"
+    desc = "Sets frame rate limit to 120 FPS. Anything higher may break some physics interactions."
+    author = "iTzZ Fenix"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82280588 # com_maxfps
+        value = 0x78
 
 [[patch]]
     name = "Remove RSA Checks"

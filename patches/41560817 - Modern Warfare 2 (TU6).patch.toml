@@ -13,7 +13,6 @@ hash = "A3FFB7C11B688FE5" # default_mp.xex TU6 not modded
     [[patch.be8]]
         address = 0x82280588 # com_maxfps
         value = 0x78
-		
 [[patch]]
     name = "Remove RSA Checks"
     author = "Adrian"

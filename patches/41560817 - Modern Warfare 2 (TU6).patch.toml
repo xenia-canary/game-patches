@@ -6,7 +6,7 @@ hash = "A3FFB7C11B688FE5" # default_mp.xex TU6 not modded
 
 [[patch]]
     name = "120 FPS"
-    desc = "Set Frame Rate Limit to 120 FPS"
+    desc = "Sets frame rate limit to 120 FPS. Anything higher may break some physics interactions."
     author = "iTzZ Fenix"
     is_enabled = false
 

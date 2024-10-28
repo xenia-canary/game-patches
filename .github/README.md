@@ -48,7 +48,7 @@ Plugin documentation can be found [here](Plugin-Docs.md).
             <br><br>If the game has multiple modules you will need to [get the hash(es)](#How-to-get-the-module-hash-and-filename)
     -->
     * `apply_patches` set to `true` (default) in the [Xenia Canary config](https://github.com/xenia-canary/xenia-canary/wiki/Options#canary).
-1. Open the .patch.toml file that corresponds to your game in a text editor (Notepad, [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [Notepad++](https://notepad-plus-plus.org/), etc.)
+1. Open the .patch.toml file that corresponds to your game in a text editor (Notepad, [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [Notepad++](https://notepad-plus-plus.org/), [CodeLobster](https://codelobster.com/), etc.)
 2. Change `is_enabled` from `false` to `true`. For example, to enable a 60 FPS patch:
     ```toml
     [[patch]]

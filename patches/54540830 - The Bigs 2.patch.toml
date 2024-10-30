@@ -5,7 +5,7 @@ hash = "5187638D00D4A75A" # default.xex
 
 [[patch]]
     name = "Enable Debug Menu"
-    desc = "Required for Debug Settings and Cheats."
+    desc = "Required for Debug Settings and Cheats. Hold Start+Select in the main menu."
     author = "UndeadFrankie"
     is_enabled = false
 

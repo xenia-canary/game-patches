@@ -23,7 +23,8 @@ hash = "C68266E1F9C7F634" # default.xex
         value = 0x00
 
 [[patch]]
-    name = "Disable HDR. Allows for upscaling without major flickering issues"
+    name = "Disable HDR"
+    desc = "Allows for upscaling without major flickering issues."
     author = "remco/SuperType1"
     is_enabled = false
 

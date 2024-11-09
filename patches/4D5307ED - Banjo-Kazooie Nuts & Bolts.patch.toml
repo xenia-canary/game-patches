@@ -72,8 +72,35 @@ hash = "C03916823ADAC91B" # default.xex
     is_enabled = false
 
     [[patch.be32]]
+        address = 0x8251d428
+        value = 0x38e000ff
+    [[patch.be32]]
+        address = 0x8251dccc
+        value = 0x394000ff
+    [[patch.be32]]
         address = 0x8255ed1c
         value = 0x392000ff
+
+[[patch]]
+    name = "Extended Build Range"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8264ac14
+        value = 0x2f09001f
+    [[patch.be32]]
+        address = 0x8264ac30
+        value = 0x2f09001f
+    [[patch.be32]]
+        address = 0x8264ac4c
+        value = 0x2f0b001f
+    [[patch.be32]]
+        address = 0x8264ad38
+        value = 0x21290020
+    [[patch.be32]]
+        address = 0x8264ada8
+        value = 0x216b0020
 
 [[patch]]
     name = "Screen Always Bright"

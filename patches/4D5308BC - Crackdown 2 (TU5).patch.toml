@@ -1,0 +1,169 @@
+title_name = "Crackdown 2"
+title_id = "4D5308BC" # MS-2236
+hash = "8309EB7166C1B9C3" # default.xex
+#media_id = "18B6CD67" # Disc (World): http://redump.org/disc/14538
+
+[[patch]]
+    name = "Disable Achievements"
+    desc = "Fixes achievement audio loop, note this will prevent the in-game achievement dialog. Improves audio log."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]] # Change bne to beq
+        address = 0x82956b6c
+        value = 0x41
+
+[[patch]]
+    name = "Global Lights Rendering"
+    desc = "Disable rendering of lights to fix lights through walls. During reticle target collaboration red lights will not render."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x830a0547
+        value = 0x00
+
+[[patch]]
+    name = "Infinite Ammo"
+    author = "Adrian, Crippy"
+    is_enabled = false
+
+    [[patch.be32]] # Bottomless Clip
+        address = 0x82216c64
+        value = 0x60000000
+    [[patch.be8]] # Ammo Display
+        address = 0x82256c28
+        value = 0x41
+
+[[patch]]
+    name = "God Mode"
+    author = "Adrian, Crippy"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82235d84
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82547ab8
+        value = 0x60000000
+
+[[patch]]
+    name = "On-screen FPS counter"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]] # Enable Display Render Info
+        address = 0x83801b0c
+        value = 0x01
+    [[patch.be8]] # Disable Performance Graphs
+        address = 0x83801a01
+        value = 0x00
+    [[patch.be8]] # Enable GPU Hz
+        address = 0x83801a00
+        value = 0x01
+    [[patch.be8]] # Red Text
+        address = 0x83800aef
+        value = 0x01
+
+[[patch]]
+    name = "Show CPU/GPU Performance Graphs"
+    desc = "This will show FPS and Performance Graphs."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]] # Enable CPU/GPU Performance Graphs
+        address = 0x83801a01
+        value = 0x01
+    [[patch.be8]] # Enable Display Render Info
+        address = 0x83801b0c
+        value = 0x01
+    [[patch.be8]] # Enable GPU Hz
+        address = 0x83801a00
+        value = 0x01
+    [[patch.be8]] # Red Text
+        address = 0x83800aef
+        value = 0x01
+
+[[patch]]
+    name = "Light Bloom"
+    desc = "Toggle fullbright, may improve performance."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x830a054e
+        value = 0x01
+
+[[patch]]
+    name = "Toggle Shadows"
+    desc = "May improve performance."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x830a054f
+        value = 0x00
+
+[[patch]]
+    name = "Helicam / Fly around the map"
+    desc = "Teleport your character. Cheat Engine address: 183800B00"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83800b00
+        value = 0x01
+
+[[patch]]
+    name = "Toggle Map Outlines"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x830a0544
+        value = 0x01
+
+[[patch]]
+    name = "Outline Mode"
+    desc = "Must have outlines enabled."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be32]] # White Outline
+        address = 0x83801164
+        value = 0x00000002
+
+[[patch]]
+    name = "Opaque Pass / Dark Mode"
+    desc = "Disable Rendering"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x830a0542
+        value = 0x00
+
+[[patch]]
+    name = "Dark Mode"
+    desc = "Map stencil with white outlines in dark mode."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]   # Opaque Pass / Dark Mode
+        address = 0x830a0542
+        value = 0x00
+    [[patch.be8]]   # Enable Outlines
+        address = 0x830a0544
+        value = 0x01
+    [[patch.be32]]  # Enable Outline Mode - White Outline
+        address = 0x83801164
+        value = 0x00000002
+    [[patch.be8]]   # Disable Alpha Render Pass
+        address = 0x830a0543
+        value = 0x00
+    [[patch.be8]]   # Enable Particle Alpha
+        address = 0x83801320
+        value = 0x01
+    [[patch.be8]]   # Disable Light Bloom for stronger white outline
+        address = 0x830a054e
+        value = 0x00

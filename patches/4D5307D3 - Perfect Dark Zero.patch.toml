@@ -4,14 +4,14 @@ hash = "C1572363239DB6CE" # default.xex
 #media_id = "41EEAFCB" # Disc (USA): http://redump.org/disc/11810
 
 [[patch]]
-    name = "Unlock FPS"
+    name = "60 FPS"
     desc = "See note about framerate patches in the README."
-    author = "Margen67"
+    author = "Margen67, ICUP321"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x826cfb75
-        value = 0x00
+        address = 0x826cfb77
+        value = 0x01
 
 [[patch]]
     name = "Aspect Ratio"

@@ -1,13 +1,13 @@
 title_name = "Batman: Arkham Origins"
 title_id = "57520828" # WR-2088
-#hash = [
-#    "" # Disc 1, default.xex
-#    "" # Disc 1, SP.xex
-#    "" # Disc 2, default.xex
-#    "" # Disc 2, ExpansionInstaller.xex
-#    "" # Disc 2, MP.xex
-#]
-#media_id = ""
+hash = [
+    "781A52190A894062" # Disc 1, SP.xex
+    #"2CF45F1F92753D3B", # Disc 1, default.xex
+    #"2CF45F1F92753D3B", # Disc 2, default.xex
+    #"E52F7825EF8C9EC9", # Disc 2, ExpansionInstaller.xex
+    #"BE71DCED57D96DCC", # Disc 2, MP.xex
+]
+#media_id = "1E1F12E7" # Disc (USA, Europe): http://redump.org/disc/50852/
 
 [[patch]]
     name = "Disable Lens Flares"

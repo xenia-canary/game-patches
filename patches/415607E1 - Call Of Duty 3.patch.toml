@@ -1,0 +1,69 @@
+title_name = "Call Of Duty 3" # SP
+title_id = "415607E1" # AV-2017
+hash = "B796871E700C5C6B" # default.xex # TU0
+#media_id = "2E07093A" # Disc (USA, Europe): http://redump.org/disc/12479/
+
+[[patch]]
+    name = "Remove Grass"
+    desc = "Fixes stretching grass artifact."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823f7a60
+        value = 0x4e800020
+
+[[patch]]
+    name = "Disable Depth Of Field"
+    desc = "Fixes blurring entire screen when ADS"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825523bc
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x82a96e94
+        value = 100000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Clippy95, fragsareus"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8245c208
+        value = 0x4e800020
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "HUD scale lowers resolution of HUD, it's calculated with (4/3) / (Width/Height)"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x8207ce40
+        value = 2.38888888889
+    [[patch.f32]]
+        address = 0x82064214
+        value = 0.55813953488 # HUD scale
+
+[[patch]]
+    name = "cg_fov"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.string]]
+        address = 0x82078efc
+        value = "80"
+
+[[patch]]
+    name = "Fovscale"
+    desc = "Raises the scaling of FOV similar to cg_fovscale in IW 3.0+"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x8207cb70
+        value = 167.479957692

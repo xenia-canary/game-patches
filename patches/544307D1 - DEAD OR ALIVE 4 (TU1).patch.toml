@@ -1,0 +1,163 @@
+title_name = "DEAD OR ALIVE 4 (TU1)"
+title_id = "544307D1" # TC-2001
+hash = "EBBE6FD79DF4133E" # disc default.xex + TU1
+#media_id = "2AD7FA3A"
+
+[[patch]]
+    name = "255-hit Combo Limit"
+    desc = "Increases the combo limit from 30 to 255"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82515617
+        value = 0xff
+
+[[patch]]
+    name = "Increased Max Character Distance"
+    desc = "Increases the maximum distance between characters from 6.0f to 12.0f. Please note this breaks some animations."
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822bc710
+        value = 0x41400000
+
+[[patch]]
+    name = "Alpha-152 can now be selected!"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.array]] #replace random-select with alpha-152 and appropriate icons and banners
+        address = 0x82f5c9b0
+        value = "1001010100060018000600180006003200060032000600b9000600b9000600610006004900000000"
+    [[patch.be8]] #restore 24th slot
+        address = 0x821b52a7
+        value = 0x01
+    [[patch.array]] #replace random-select on slot 24
+        address = 0x82c346d0
+        value = "ff01010100060011000600110006001100060011000600b8000600b80006003e0006006e00000000"
+
+[[patch]]
+    name = "All Characters Unlocked"
+    desc = "Multiplayer Modes Only. Story Mode Unaffected."
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]] #unlock Helena
+        address = 0x82f5c8c2
+        value = 0x01
+    [[patch.be8]] #unlock Ein
+        address = 0x82f5c8ea
+        value = 0x01
+    [[patch.be8]] #unlock Genfu
+        address = 0x82f5c912
+        value = 0x01
+    [[patch.be8]] #unlock Leon
+        address = 0x82f5c93a
+        value = 0x01
+    [[patch.be8]] #unlock Tengu
+        address = 0x82f5c962
+        value = 0x01
+    [[patch.be8]] #unlock Spartan-458
+        address = 0x82f5c98a
+        value = 0x01
+
+[[patch]]
+    name = "21:9 Ultrawide Aspect Ratio"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822bd124
+        value = 0x3ed80000
+
+[[patch]]
+    name = "Unused Helena 'Opera' Costume on Slot 1"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82c34758
+        value = 0x03
+
+[[patch]]
+    name = "Unused Kokoro 'Kimono' Costumes on Slots 1 & 2"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]] #Pink Kimono on Kokoro Costume Slot 1
+        address = 0x82c34768
+        value = 0x08
+    [[patch.be8]] #Blue Kimono on Kokoro Costume Slot 2
+        address = 0x82c34769
+        value = 0x03
+
+[[patch]]
+    name = "Unused Christie Costume on Slot 1"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82c347f0
+        value = 0x05
+
+[[patch]]
+    name = "All Stages Available in Tag Mode"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]] #Tritower Heliport 0x25
+        address = 0x82c32af9
+        value = 0x01
+    [[patch.be8]] #Kyoto in Bloom (Day) 0x15
+        address = 0x82c32b09
+        value = 0x01
+    [[patch.be8]] #Kyoto in Bloom (Night) 0x1f
+        address = 0x82c32b19
+        value = 0x01
+    [[patch.be8]] #Nassau Station 0x13
+        address = 0x82c32b29
+        value = 0x01
+    [[patch.be8]] #Tatami 0x17
+        address = 0x82c32b39
+        value = 0x01
+    [[patch.be8]] #Seaside Market (Top) 0x0e
+        address = 0x82c32b49
+        value = 0x01
+    [[patch.be8]] #Ninja Hideout (Top) 0x0f
+        address = 0x82c32b59
+        value = 0x01
+    [[patch.be8]] #DWA Coliseum 0x14
+        address = 0x82c32b69
+        value = 0x01
+    [[patch.be8]] #Crash Club 0x24
+        address = 0x82c32b79
+        value = 0x01
+    [[patch.be8]] #Savannah Safari 0x18
+        address = 0x82c32b89
+        value = 0x01
+    [[patch.be8]] #DOATEC Great Hall 0x0d
+        address = 0x82c32b99
+        value = 0x01
+    [[patch.be8]] #Temple on the Mountain (Top) 0x10
+        address = 0x82c32ba9
+        value = 0x01
+    [[patch.be8]] #Random 0xff
+        address = 0x82c32bb9
+        value = 0x01
+    [[patch.be8]] #Biolab Core 0x0c
+        address = 0x82c32bc9
+        value = 0x01
+    [[patch.be8]] #Waterfall Valley 0x1a
+        address = 0x82c32bd8
+        value = 0x01
+    [[patch.be8]] #Gamblers Paradise 0x11
+        address = 0x82c32be9
+        value = 0x01
+    [[patch.be8]] #Experimental Playground 0x0a
+        address = 0x82c32bf9
+        value = 0x01
+    [[patch.be8]] #Sets Default Cursor to Random
+        address = 0x82c32af7
+        value = 0xFF

@@ -1,51 +1,93 @@
 # Xenia Canary Game Patches
-This repository contains game patches for Xenia Canary.
+This repository contains game patches for [Xenia Canary](../../../../xenia-canary).\
+Plugin documentation can be found [here](Plugin-Docs.md).
+
+**Non-patch questions belong on the [Xenia Discord server](https://discord.gg/Q9mxZf9).**
 
 [![Game Patches Discord](https://img.shields.io/discord/930763773109735484?color=5865F2&label=Game%20Patches%20Discord&logo=discord&logoColor=white)](https://discord.gg/fyRWq3xYNz)
 
+### These are NOT actual games or Title Updates!<br>Read Xenia's [Quickstart](https://github.com/xenia-canary/xenia-canary/wiki/Quickstart) to get games.
+
 ## Installing/Updating
-1. Download the [zip](../../../releases/latest/download/game-patches.zip) file.
-2. Open Xenia Canary.
-3. Click `Open` > `Show content directory...`
-4. Go up one folder.
-5. Delete `patches` folder if present.
-6. Open `game-patches.zip` and extract `patches` to the directory that contains `content`.
-7. Continue to [enabling patches](#Enabling-patches).
+0. Prerequisites
+    * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary/releases/download/experimental/xenia_canary.zip).
+        * Patches aren't supported on master or outdated versions of Xenia Canary.
+1. Download [this zip](../../../releases/latest/download/game-patches.zip).
+2. Go to where `xenia_canary.exe` is.
+3. Delete `patches` folder if present (backup if needed).
+4. Open `game-patches.zip` and extract `patches` in the same directory as `xenia_canary.exe`.
+    The folder structure should look like this:
+<br>![](./README/patch_location.png)
+    ```
+    └─── Xenia Canary
+        |  ...
+        │  xenia_canary.exe
+        |  ...
+        └─── patches
+                ...
+                584111F7 - Minecraft (XBLA, TU0).patch.toml
+                ...
+    ```
+5. Continue to the section below.
 
-### Enabling patches
-`apply_patches` must be set to `true` in the Xenia Canary config!
+## How to use
+0. Prerequisites
+    * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary/releases/download/experimental/xenia_canary.zip)
+        * Patches aren't supported on master or outdated versions of Xenia Canary.
+    * The right version of the game e.g. Title Update (TU).
+    <!--
+        * Try commenting out the `hash` of the patch like so:
+            ```toml
+            # Add # before hash
+            hash = "################"
+            # like this
+            #hash = "################"
+            ```
+            **This isn't guaranteed to work, and may cause crashes.**
+            <br>Hashes are used to verify the correct version of a game is being patched, and this bypasses it.
+            <br><br>If the game has multiple modules you will need to [get the hash(es)](#How-to-get-the-module-hash-and-filename)
+    -->
+    * `apply_patches` set to `true` (default) in the [Xenia Canary config](https://github.com/xenia-canary/xenia-canary/wiki/Options#canary).
+1. Open the .patch.toml file that corresponds to your game in a text editor (Notepad, [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [Notepad++](https://notepad-plus-plus.org/), etc.)
+2. Change `is_enabled` from `false` to `true`. For example, to enable a 60 FPS patch:
+    ```toml
+    [[patch]]
+        name = "60 FPS"
+        desc = "Description"
+        author = "Author"
+        is_enabled = false
 
-To enable patches, open the .patch.toml file that corresponds to your game in a text editor (Notepad, [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [Notepad++](https://notepad-plus-plus.org/), etc.), and change `is_enabled` from `false` to `true`.
+        [[patch.be8]]
+            address = 0x########
+            value = 0x##
+    ```
+    becomes
+    ```toml
+    [[patch]]
+        name = "60 FPS"
+        desc = "Description"
+        author = "Author"
+        is_enabled = true
 
-#
-#### Note about aspect ratio patches
-**`present_letterbox` must be changed from `true` to `false`!**
+        [[patch.be8]]
+            address = 0x########
+            value = 0x##
+    ```
 
-These patches **do not** increase resolution!
+If you see `[Patches Applied]` in the title bar then the patch(es) applied successfully.
 
-While most aspect ratio patches are 21:9 (3440/1440), they can be changed to other aspect ratios as well;
-  1. Divide your monitor's resolution width by height (i.e. 3440/1440)
-  2. [Convert the result to hex](https://gregstoll.com/~gregstoll/floattohex).
-  3. Change the value to `0x########` replacing `########` with the hex value.
+***Don't change the hash of existing patches. If your version of the game is different then the patch(es) need to be ported to that version.***
+
+#### Notes about aspect ratio patches
+* [**`present_letterbox` must be changed from `true` to `false`!**](https://github.com/xenia-canary/xenia-canary/wiki/Options#black-bars-letterboxingpillarboxing)
+* Aspect ratio patches **do not** increase resolution!
+* While most aspect ratio patches are 21:9 (3440/1440), they can be changed to other aspect ratios as well unless not specified or specified otherwise;
+    1. Divide your monitor's resolution width by height (i.e. 3440/1440)
+    2. [Convert the result to hex](https://gregstoll.com/~gregstoll/floattohex).
+    3. Change the value to `0x########` replacing `########` with the hex value.
 
 #### Note about framerate patches
-Framerates higher than 60 FPS require vsync to be changed from true to false in the Xenia Canary config.
-
-## Troubleshooting
-If the above sections didn't help, you can try the following:
-1. Make sure you followed [Enabling patches](#Enabling-patches).
-2. Try deleting all of your patches and [updating them](#Installing/Updating).
-3. Try commenting out the `hash` of the patch like so:
-    ```toml
-    # Add # before hash
-    hash = "################"
-    # like this
-    #hash = "################"
-    ```
-    **This isn't guaranteed to work, and may cause crashes.**
-    <br>Hashes are used to verify the correct version of a game is being patched, and this bypasses it.
-
-    If the game has multiple modules you will need to [get the hash(es)](#How-to-get-the-module-hash-and-filename)
+Framerates above 60 FPS require [vsync to be changed from true to false in the Xenia Canary config](https://github.com/xenia-canary/xenia-canary/wiki/Options#user-content-Vsync).
 
 ---
 
@@ -93,6 +135,7 @@ If the above sections didn't help, you can try the following:
   * Lowercase hex for address/value hex, uppercase for title ID/hash/media ID.
 
 ### How to get the module hash and filename:
+0. ***Don't change the hash of existing patches. If your version of the game is different then the patch(es) need to be ported to that version.***
 1. Set [`log_level`](https://github.com/xenia-canary/xenia-canary/wiki/Options) to at least [`2` (default)](https://github.com/xenia-canary/xenia-canary/wiki/Options) in the Xenia Canary config; See [How to use](https://github.com/xenia-canary/xenia-canary/wiki/Options#how-to-use) for location.
 2. Run the game at least once.
 3. Close Xenia Canary.
@@ -113,7 +156,7 @@ If the above sections didn't help, you can try the following:
 `be16`        | Hex, 2 bytes   | `0x0000`
 `be32`        | Hex, 4 bytes   | `0x00000000`
 `be64`        | Hex, 8 bytes   | `0x0000000000000000`
-`array`       | Hex, any size  | `0x##*`
+`array`       | Hex, any size  | `"0x##*"`
 `f32`         | Float, single  | `1.0`
 `f64`         | Float, double  | `1.0`
 `string`      | String, UTF-8  | `"string"`

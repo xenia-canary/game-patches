@@ -1,0 +1,98 @@
+title_name = "The Orange Box"
+title_id = "4541080F" # EA-2063
+hash = "60AAD59F84CCE211" # engine_360.dll (TU5)
+#media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
+
+[[patch]]
+    name = "Team Fortress 2: Bypass internet requirement" # TF2
+    author = "illusion, Margen67, Luctaris"
+    is_enabled = false
+
+    [[patch.be8]] # -xnet_bypass_security
+        address = 0x8610e678
+        value = 0x40 # 0x41
+    [[patch.be8]] # -nodns
+        address = 0x861184a4
+        value = 0x40 # 0x41
+    [[patch.be8]] # -noip
+        address = 0x86118564
+        value = 0x40 # 0x41
+
+[[patch]]
+    name = "No sound" # -nosound
+    desc = "Disables all sound, improves stability"
+    author = "Margen67, Luctaris"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x862223bc
+        value = 0x40 # 0x41
+
+[[patch]]
+    name = "sv_cheats 1"
+    author = "Margen67, Luctaris"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x86365133
+        value = 0xfc # 0xf8
+
+[[patch]]
+    name = "Debug Log" # DbgPrint(): 0x863708F4
+    desc = "Logs most (not all) messages being printed to internal developer console as DbgPrint messages in Xenia log. Warning, lots of data!"
+    author = "illusion, Luctaris"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8636ff14 # Msg()
+        value = 0x480009e0 # b DbgPrint
+    [[patch.be32]]
+        address = 0x8636ff54 # Warning()
+        value = 0x480009a0
+    [[patch.be32]]
+        address = 0x86370374 # Log()
+        value = 0x48000580
+    [[patch.be32]]
+        address = 0x8636fee4 # Error()
+        value = 0x48000a10
+    [[patch.be32]]
+        address = 0x8636ff34 # DevMsg()
+        value = 0x480009c0
+    [[patch.be32]]
+        address = 0x86370044 # DevWarning()
+        value = 0x480008b0
+    [[patch.be32]]
+        address = 0x8636fef4 # ConMsg()
+        value = 0x48000a00
+    [[patch.be32]]
+        address = 0x86370004 # ConColorMsg()
+        value = 0x480008f0
+    [[patch.be32]]
+        address = 0x86370094 # ConDColorMsg()
+        value = 0x48000860
+    [[patch.be32]]
+        address = 0x8636ff44 # ConDMsg()
+        value = 0x480009b0
+    [[patch.be32]]
+        address = 0x8636ff24 # COM_TimestampedLog()
+        value = 0x480009d0
+
+[[patch]]
+    name = "-console"
+    desc = "Skips loading background maps on main menus, faster load times"
+    author = "Luctaris"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x86173b04
+        value = 0x41 # 0x40
+
+[[patch]]
+    name = "-dev"
+    desc = "Partially enables dev mode. Dev mode options will not appear without gameui_360.dll patch."
+    author = "Luctaris"
+    is_enabled = false
+
+    [[patch.be8]] # -dev
+        address = 0x86173b2c
+        value = 0x41 # 0x40

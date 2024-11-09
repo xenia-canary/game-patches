@@ -1,0 +1,31 @@
+title_name = "Epic Mickey 2 The Power Of Two"
+title_id = "42560816" # BV-2070
+hash = "AA83E4F9846B59B2" # default.xex
+#media_id = "4D05734B" # Disc (USA, Europe): http://redump.org/disc/41296
+
+[[patch]]
+    name = "ShowDevLevelLoad" # Adds New Option in Main Menu
+    author = "Serenity"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82b1b18c
+        value = 0x31
+
+[[patch]]
+    name = "GodMode"
+    author = "Serenity"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827cef64
+        value = 0x60000000
+
+[[patch]]
+    name = "Player Infinite Ammo"
+    author = "Serenity"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82779fc4
+        value = 0x60000000

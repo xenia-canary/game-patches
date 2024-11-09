@@ -1,0 +1,29 @@
+title_name = "Dragon Ball Z: Burst Limit" # DBZ Burst Limit (v3.0 US)
+title_id = "424107DC" # BA-2012
+hash = "F15410E9BD16F02A" # default.xex
+#media_id = "036A7E66" # http://redump.org/disc/105532/
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Port of the similar patch originally made for RPCS3. Uncaps the framerate to 60. Some cutscenes and animations may force FPS to 30 again while they are playing."
+    author = "illusion, ZEROx, Rei-san, Dunker961"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826de600
+        value = 0x1 # FPS_CAP
+    [[patch.be32]]
+        address = 0x821dce98
+        value = 0x60000000 # Alternative fix for pause
+    [[patch.be32]]
+        address = 0x821dbe10
+        value = 0x60000000 # Alternative fix for quitting the match
+    [[patch.be32]]
+        address = 0x8221cfec
+        value = 0x38600001 # RESET_CAP to 2
+    [[patch.be32]]
+        address = 0x82232aec
+        value = 0x38600001 # RESET_CAP to 2
+    [[patch.be32]]
+        address = 0x822382a0
+        value = 0x38600001 # RESET_CAP to 2

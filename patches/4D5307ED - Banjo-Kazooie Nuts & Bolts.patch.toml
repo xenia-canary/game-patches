@@ -24,9 +24,6 @@ hash = "C03916823ADAC91B" # default.xex
         address = 0x82b96e10
         value = 0x38a00010
     [[patch.be32]]
-        address = 0x82b96e10
-        value = 0x38a00010
-    [[patch.be32]]
         address = 0x82b96b98
         value = 0x38a00010
     [[patch.be32]]
@@ -59,6 +56,24 @@ hash = "C03916823ADAC91B" # default.xex
     [[patch.be32]]
         address = 0x8250c3b0
         value = 0x60000000
+
+[[patch]]
+    name = "Fuel and Ammo Never Decreases"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822784e8
+        value = 0x60000000
+
+[[patch]]
+    name = "Max Acquired Parts Access"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8255ed1c
+        value = 0x392000ff
 
 [[patch]]
     name = "Screen Always Bright"

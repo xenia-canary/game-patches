@@ -15,3 +15,52 @@ hash = "437A5F51A72C9C6A" # default.xex
     [[patch.be32]]
         address = 0x827d7838
         value = 0x00000000
+
+[[patch]]
+    name = "Unlock FPS"
+    author = "illusion, Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82201830
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x82201834
+        value = 0x906bfffc
+    [[patch.be32]]
+        address = 0x82370d40
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x82370d44
+        value = 0x906bfffc
+
+[[patch]]
+    name = "Skip Logos"
+    author = "illusion, Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8228271c
+        value = 0x3ba00003
+    [[patch.be32]]
+        address = 0x822095bc
+        value = 0x60000000
+
+[[patch]]
+    name = "Enable Debug Console"
+    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia Canary config; Requires Xenia Canary version 271befc from January 25th or older."
+    author = "emoose, Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82649234
+        value = 0x4800094c
+    [[patch.be32]]
+        address = 0x82649b7c
+        value = 0x480b8d01
+    [[patch.be32]]
+        address = 0x82649cb0
+        value = 0x480b8c1c
+    [[patch.be8]]
+        address = 0x83710223
+        value = 0x01

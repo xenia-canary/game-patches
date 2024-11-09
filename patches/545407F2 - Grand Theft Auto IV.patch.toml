@@ -4,6 +4,16 @@ hash = "4CBE7EEB2455A159" # default.xex
 #media_id = "6AC07221" # Disc (USA): http://redump.org/disc/12492
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "Allows the game to go above 67 FPS. (Disable V-Sync in the config)"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829a963c
+        value = 0x48000048
+
+[[patch]]
     name = "Skip Legal Screens"
     author = "illusion"
     is_enabled = false
@@ -23,3 +33,13 @@ hash = "4CBE7EEB2455A159" # default.xex
     [[patch.be32]]
         address = 0x822f8a4c
         value = 0x908be904 # stw r4,-0x16fc(r11)
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "See note about aspect ratio patches in the README."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820ae698
+        value = 0x4018e393

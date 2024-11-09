@@ -58,3 +58,22 @@ hash = "D7DD6A7F3F3FC1D9" # default.xex
     [[patch.be16]]
         address = 0x8201912a
         value = 0x021c
+
+[[patch]]
+    name = "Debug Menu"
+    author = "illusion"
+    is_enabled = false
+
+    # :copium: these were never released by the authors
+    [[patch.be32]]
+        address = 0x823a58a8
+        value = 0x480a7950
+    [[patch.be32]]
+        address = 0x8244d1f8
+        value = 0x993ffff1
+    [[patch.be32]]
+        address = 0x8244d1fc
+        value = 0x39400007
+    [[patch.be32]]
+        address = 0x8244d200
+        value = 0x4bf586ac

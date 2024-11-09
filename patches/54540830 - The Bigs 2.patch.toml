@@ -1,0 +1,24 @@
+title_name = "The Bigs 2"
+title_id = "54540830" # TT-2083
+hash = "5187638D00D4A75A" # default.xex
+#media_id = "05BC7804" Disc (USA): http://redump.org/disc/13316/
+
+[[patch]]
+    name = "Enable Debug Menu"
+    desc = "Required for Debug Settings and Cheats. Hold Start+Select in the main menu."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x825d4c98
+        value = 0x00
+
+[[patch]]
+    name = "Skip Intro Logos"
+    desc = "Skips 2K and BCG logos."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x822b8960
+        value = 0x4800

@@ -1,0 +1,34 @@
+title_name = "Dead Rising 2: Case Zero"
+title_id = "58410A8D" # XA-2701
+hash = "7B6CE8A3267F3AA5" # default.xex
+#media_id = "00000000"
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "FPS is unlocked but maxed at 120 internally. Disable 'd3d12_allow_variable_refresh_rate_and_tearing' if FPS is stuttering."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829edcc6
+        value = 0x00
+
+[[patch]]
+    name = "Enable Developer Settings"
+    desc = "Required for Debug Settings and Cheats. Allows User.ini / Master.ini. If unsure set to true."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829ec974
+        value = 0x00
+
+[[patch]]
+    name = "Skip Intro Logos"
+    desc = "Skips Capcom and BCG logos but ESRB still plays."
+    author = "UndeadFrankie"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x824ffbb4
+        value = 0x4800

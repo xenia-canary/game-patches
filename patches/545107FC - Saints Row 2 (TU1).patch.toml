@@ -1,0 +1,161 @@
+title_name = "Saints Row 2 (TU3)"
+title_id = "545107FC" # TQ-2044
+hash = "9B9E734BA6BDCCD9" # default.xex
+#media_id = [
+#    "43400270",
+#    "4E854E4B", Disc (USA, Europe): http://redump.org/disc/14038
+#]
+
+[[patch]]
+    name = "Force 720p"
+    desc = "Makes the game run at 720p instead of the default 640p."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8221ce3c
+        value = 0x38e00500
+    [[patch.be32]]
+        address = 0x8221cdc0
+        value = 0x3be002d0
+
+[[patch]]
+    name = "Disable HDR"
+    desc = "Turns HDR off and edits the brightness, saturation and contrast to make up for that."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8205393c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8221ac4c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x823df920
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8221abf4
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x823df928
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8221ac54
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x823df92c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x821e28c0
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82053f74
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x837dac74 # Brightness
+        value = 0.3
+    [[patch.f32]]
+        address = 0x82b76c7c # Contrast
+        value = 1.62
+    [[patch.f32]]
+        address = 0x82b76c80 # Saturation
+        value = 0.8
+
+[[patch]]
+    name = "Disable Bleach Filter"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820539a8
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Cutscene Letterbox"
+    author = "Tervel, jason098"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82461c90
+        value = 0x4e800020
+
+[[patch]]
+    name = "Disable Vignette"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8208027c
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Sharpening"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82b77070
+        value = 0.0
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821d4b10
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x821d4d00
+        value = 0x4e800020
+
+[[patch]]
+    name = "60 FPS"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829384d0
+        value = 0x48104aa0
+    [[patch.be32]]
+        address = 0x82a3cf70
+        value = 0x3d403c88
+    [[patch.be32]]
+        address = 0x82a3cf74
+        value = 0x614a8889
+    [[patch.be32]]
+        address = 0x82a3cf78
+        value = 0x91580004
+    [[patch.be32]]
+        address = 0x82a3cf7c
+        value = 0xc1b80004
+    [[patch.be32]]
+        address = 0x82a3cf80
+        value = 0x4befb554
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "See note about aspect ratio patches in the README. FOV Multiplier required otherwise Vert- default are for 21:9/43:18"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8290af6c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x837756b4 # 3D aspect ratio
+        value = 0x4018e393
+    [[patch.be32]]
+        address = 0x820b80d0 # Shadows & decals aspect ratio
+        value = 0x4018e393
+
+[[patch]]
+    name = "FOV Multiplier"
+    desc = "Multiplies FOV. Default is 1.33333."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82b68a4c
+        value = 1.82

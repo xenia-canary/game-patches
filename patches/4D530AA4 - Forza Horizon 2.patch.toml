@@ -1,0 +1,13 @@
+title_name = "Forza Horizon 2"
+title_id = "4D530AA4" # MS-2724
+#media_id = "7C7779D1" # Disc (USA): http://redump.org/disc/60608/
+hash = "64E28BBC49532373" # default.xex
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Mutantovich"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x92f04494
+        value = 0x60000000

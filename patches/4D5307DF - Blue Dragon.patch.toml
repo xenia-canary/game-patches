@@ -50,3 +50,33 @@ hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
     [[patch.be32]]
         address = 0x8246ab68 # Vsync flip rate
         value = 0x39400001
+
+[[patch]]
+    name = "Debug Menu"
+    author = "Wylie"
+    is_enabled = false
+
+    [[patch.be32]] # Labels
+        address = 0x820ce708
+        value = 0x39600001
+    [[patch.be32]] # Debug Content Start
+        address = 0x820ce808
+        value = 0x396000ff
+    [[patch.be32]] # Debug Content End
+        address = 0x820ce818
+        value = 0x39600000
+    [[patch.be32]] # Debug Menu
+        address = 0x820c0f80
+        value = 0x60000000
+    [[patch.be32]] # Main Content
+        address = 0x820c1094
+        value = 0x60000000
+    [[patch.be32]] # Achievements To Tools
+        address = 0x820c0dbc
+        value = 0x60000000
+    [[patch.be32]] # Message Test 1 to Tools
+        address = 0x820c0df8
+        value = 0x60000000
+    [[patch.be32]] # Message Test 2 to Tools
+        address = 0x820c0e34
+        value = 0x60000000

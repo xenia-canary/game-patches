@@ -1,0 +1,28 @@
+title_name = "Grand Theft Auto V" # Five
+title_id = "545408A7" # TT-2215
+hash = "A5A9398D2D412519" # default.xex
+#media_id = "79E465C5" # http://redump.org/disc/37057/
+
+[[patch]]
+    # This patch requires a build of Xenia Canary that supports writable_code_segments, and having it enabled in the config.
+    # Commit 4ecd1bf or later.
+    name = "Loads 545408A7.xex"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.string]]
+        address = 0x82036844
+        value = "game:\\545408A7.xex"
+
+    [[patch.array]]
+        address = 0x8378d770
+        value = "0x3d6082036163684448001ff9"  # LoadLibraryA("game:\\545408A7.xex");
+
+[[patch]]
+    name = "Skip Intro Logos"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822f2d30
+        value = 0x38600000

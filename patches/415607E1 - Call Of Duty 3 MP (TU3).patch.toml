@@ -1,0 +1,84 @@
+title_name = "Call Of Duty 3" # MP TU3
+title_id = "415607E1" # AV-2017
+hash = "C4EA5EACCA7CA7CD" # codmp_xenonf.xex
+#media_id = "2E07093A" # Disc (USA, Europe): http://redump.org/disc/12479/
+
+[[patch]]
+    name = "Remove Grass"
+    desc = "Fixes stretching grass artifact."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823d6450
+        value = 0x4e800020
+
+[[patch]]
+    name = "Disable Depth Of Field"
+    desc = "Fixes blurring entire screen when ADS"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82539be4
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82426fc0
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x82c37d24
+        value = 100000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Clippy95, fragsareus"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8243c604
+        value = 0x60000000
+
+[[patch]]
+    name = "Unlimited Sprint"
+    author = "fragsareus, Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8245afe4
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8245b364
+        value = 0x60000000
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "HUD scale lowers resolution of HUD, it's calculated with (4/3) / (Width/Height)"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x8207bf4c
+        value = 2.38888888889
+    [[patch.f32]]
+        address = 0x82059488
+        value = 0.55813953488 # HUD Scale
+
+[[patch]]
+    name = "cg_fov"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.string]]
+        address = 0x8206e990
+        value = "90"
+
+[[patch]]
+    name = "Fovscale"
+    desc = "Raises the scaling of FOV similar to cg_fovscale in IW 3.0+"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x8207bbec
+        value = 167.479957692

@@ -18,6 +18,7 @@ hash = "1984A3354B78CE19" # default.xex
 
 [[patch]]
     name = "Skip Intro"
+    desc = "Use ROV to prevent graphical issues."
     author = "illusion"
     is_enabled = false
 
@@ -55,3 +56,12 @@ hash = "1984A3354B78CE19" # default.xex
     [[patch.be32]]
         address = 0x822e4b80
         value = 0x39600001
+
+[[patch]]
+    name = "DbgPrint"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821bd618
+        value = 0x485ff8dc

@@ -21,3 +21,13 @@ hash = "C68266E1F9C7F634" # default.xex
     [[patch.be8]]
         address = 0x829a9a9f
         value = 0x00
+
+[[patch]]
+    name = "Disable HDR"
+    desc = "Allows for upscaling without major flickering issues."
+    author = "remco, SuperType1"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829a89ef
+        value = 0x00

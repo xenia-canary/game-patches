@@ -1,8 +1,6 @@
 title_name = "Tetris Grand Master: Ace"
 title_id = "434107D2"
-hash = [
-    "9F75DE962AF29E38" # default.xex
-]
+hash = "9F75DE962AF29E38" # default.xex
 #media_id = "00000000" # Digital Game
 
 [[patch]]
@@ -14,4 +12,3 @@ hash = [
     [[patch.array]]
         address = 0x8208cea0 
         value = "0x386000014e800020000000000000000000000000"
-	

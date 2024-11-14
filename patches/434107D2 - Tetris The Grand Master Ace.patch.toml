@@ -7,7 +7,7 @@ hash = "9F75DE962AF29E38" # default.xex
     name = "Force Unlock"
     desc = "Unlocks all of the Offline gamemodes."
     author = "Sakimotor"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.array]]
         address = 0x8208cea0 

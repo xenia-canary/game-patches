@@ -9,6 +9,18 @@ hash = "9F75DE962AF29E38" # default.xex
     author = "Sakimotor"
     is_enabled = false
 
-    [[patch.array]]
+    [[patch.be32]]
         address = 0x8208cea0
-        value = "0x386000014e800020000000000000000000000000"
+        value = 0x38600001
+    [[patch.be32]]
+        address = 0x8208cea4
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x8208cea8
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x8208ceac
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x8208ceb0
+        value = 0x00000000

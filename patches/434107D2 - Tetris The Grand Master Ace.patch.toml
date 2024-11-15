@@ -10,5 +10,5 @@ hash = "9F75DE962AF29E38" # default.xex
     is_enabled = false
 
     [[patch.array]]
-        address = 0x8208cea0 
+        address = 0x8208cea0
         value = "0x386000014e800020000000000000000000000000"

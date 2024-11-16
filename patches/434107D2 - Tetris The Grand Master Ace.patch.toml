@@ -1,0 +1,26 @@
+title_name = "Tetris Grand Master: Ace" # TGM ACE
+title_id = "434107D2" # CA-2002
+hash = "9F75DE962AF29E38" # default.xex
+#media_id = "00000000" # Digital Game
+
+[[patch]]
+    name = "Force Unlock"
+    desc = "Unlocks all of the Offline gamemodes."
+    author = "Sakimotor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8208cea0
+        value = 0x38600001
+    [[patch.be32]]
+        address = 0x8208cea4
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x8208cea8
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x8208ceac
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x8208ceb0
+        value = 0x00000000

@@ -23,8 +23,8 @@ hash = "4CC4201C0C4ED58B" # default.xex, Japan, TU3
         value = 0x02d0
 
 [[patch]] 
-    name = "Skip Chapter 12 crash TU3"
-    desc = "Causes issues outside of ch12, so is disabled by default, use it only to skip the crash in ch12."
+    name = "Chapter 12 Crash Workaround"
+    desc = "Causes issues outside of Ch12. Use it only to skip the crash in Ch12."
     author = "Gliniak"
     is_enabled = false
 

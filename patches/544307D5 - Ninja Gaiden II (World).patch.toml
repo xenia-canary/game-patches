@@ -10,7 +10,7 @@ hash = "AFF931BFF00F8A0A" # default.xex
     name = "1280x720 Resolution"
     desc = "Original resolution is 1120x584."
     author = "Margen67"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be16]]
         address = 0x836261e6

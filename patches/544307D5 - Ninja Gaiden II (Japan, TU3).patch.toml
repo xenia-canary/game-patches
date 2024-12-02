@@ -21,3 +21,16 @@ hash = "4CC4201C0C4ED58B" # default.xex, Japan, TU3
     [[patch.be16]]
         address = 0x837eb9f6
         value = 0x02d0
+
+[[patch]]
+    name = "Chapter 12 Crash Workaround"
+    desc = "Causes issues outside of Ch12. Use it only to skip the crash in Ch12."
+    author = "Gliniak"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8285a2e4
+        value = 0x3bc00000
+    [[patch.be32]]
+        address = 0x8285a24c
+        value = 0x3bc00000

@@ -7,7 +7,7 @@ hash = "4CC4201C0C4ED58B" # default.xex, Japan, TU3
     name = "1280x720 Resolution"
     desc = "Original resolution is 1120x584."
     author = "Margen67"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be16]]
         address = 0x83648a76

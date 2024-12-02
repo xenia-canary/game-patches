@@ -7,7 +7,7 @@ hash = "4CC4201C0C4ED58B" # default.xex, Japan, TU3
     name = "1280x720 Resolution"
     desc = "Original resolution is 1120x584."
     author = "Margen67"
-    is_enabled = false
+    is_enabled = true
 
     [[patch.be16]]
         address = 0x83648a76
@@ -21,3 +21,16 @@ hash = "4CC4201C0C4ED58B" # default.xex, Japan, TU3
     [[patch.be16]]
         address = 0x837eb9f6
         value = 0x02d0
+
+[[patch]] 
+    name = "Skip Chapter 12 crash TU3"
+    desc = "Causes issues outside of ch12, so is disabled by default, use it only to skip the crash in ch12."
+    author = "Gliniak"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8285a2e4
+        value = 0x3bc00000
+    [[patch.be32]]
+        address = 0x8285a24c
+        value = 0x3bc00000

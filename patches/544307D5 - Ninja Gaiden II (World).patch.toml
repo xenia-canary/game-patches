@@ -10,7 +10,7 @@ hash = "AFF931BFF00F8A0A" # default.xex
     name = "1280x720 Resolution"
     desc = "Original resolution is 1120x584."
     author = "Margen67"
-    is_enabled = false
+    is_enabled = true
 
     [[patch.be16]]
         address = 0x836261e6
@@ -24,3 +24,13 @@ hash = "AFF931BFF00F8A0A" # default.xex
     [[patch.be16]]
         address = 0x837c62fa
         value = 0x0500
+
+[[patch]] 
+    name = "Skip Chapter 12 crash Base version"
+    desc = "Causes issues outside of ch12, so is disabled by default, use it only to skip the crash in ch12."
+    author = "Gliniak"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82834c78
+        value = 0x3bc00000

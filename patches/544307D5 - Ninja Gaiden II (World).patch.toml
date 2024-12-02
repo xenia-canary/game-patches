@@ -25,7 +25,7 @@ hash = "AFF931BFF00F8A0A" # default.xex
         address = 0x837c62fa
         value = 0x0500
 
-[[patch]] 
+[[patch]]
     name = "Chapter 12 Crash Workaround"
     desc = "Causes issues outside of Ch12. Use it only to skip the crash in Ch12."
     author = "Gliniak"

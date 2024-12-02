@@ -47,6 +47,14 @@ hash = "C03916823ADAC91B" # default.xex
     [[patch.be16]]
         address = 0x8235f350
         value = 0x4800
+[[patch]]
+    name = "Disable LoD"
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82b680f8
+        value = 0x48000018
 
 [[patch]]
     name = "Notes Never Decrease"

@@ -1,6 +1,9 @@
 title_name = "Saints Row" # TU1
 title_id = "545107D1" # TQ-2001
-hash = "2537D5F11410BE0A" # default.xex
+hash = [
+    "B796871E700C5C6B", # default.xex
+    "7CAEC18CD0C372B6"  # PhantasyRow.xex
+]
 #media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
 
 [[patch]]
@@ -65,3 +68,116 @@ hash = "2537D5F11410BE0A" # default.xex
     [[patch.be8]]
         address = 0x835f4c3e
         value = 0x01
+
+[[patch]]
+    name = "Aspect Ratio"
+    desc = "To get proper Aspect Ratio FOV = Default * (Width/Height) / (16/9)"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x827fdd2c
+        value = 0x01
+    [[patch.f32]]
+        address = 0x8208c4b0
+        value = 2.38888888889
+    [[patch.f32]]
+        address = 0x8208b94c # Gameplay FOV Multiplier
+        value = 1.777741190  # Default: 1.3333334
+    [[patch.f32]]
+        address = 0x8208c818 # Cutscene FOV Multiplier
+        value = 75.200706 # Default: 57.295776
+    [[patch.be32]]
+        address = 0x8228ee8c # NOP to prevent game from writing to UI X position.
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x82ede18c # UI X positioning.
+        value = 0.761905
+
+[[patch]]
+    name = "Set Aspect Ratio to true 21:9"
+    desc = "Scales HUD correctly, Lowers resolution to 1280x540"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821952f4
+        value = 0x39000500
+    [[patch.be32]]
+        address = 0x821952f8
+        value = 0x3920021c
+    [[patch.be32]]
+        address = 0x8219360c
+        value = 0x60000000
+    [[patch.be16]]
+        address = 0x827f70ba
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x827f70ca
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x827f70da
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x827f70ea
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x827adb76
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x827f6f82
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x827f701e
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x827f702e
+        value = 0x021c
+    [[patch.f32]]
+        address = 0x8208b94b # General FOV Multiplier
+        value = 1.777741190
+    [[patch.f32]]
+        address = 0x8208c818 # Cutscene FOV Multiplier.
+        value = 75.200706
+    [[patch.be32]]
+        address = 0x8228ee8c # NOP to prevent game from writing to UI X position.
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x82ede18c # UI X positioning.
+        value = 0.761905
+
+[[patch]]
+    name = "Better Drive Cam"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8211d604
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8211d608
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8211d60c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8211d610
+        value = 0x60000000
+
+[[patch]]
+    name = "Raise vehicle camera rotation limit"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82772d90
+        value = 0xc108c88c
+    [[patch.be32]]
+        address = 0x8211fc8c
+        value = 0xc00bc88c
+    [[patch.be32]]
+        address = 0x82772db0
+        value = 0xc0c8b850
+    [[patch.f32]]
+        address = 0x8208c88c
+        value = -0.5

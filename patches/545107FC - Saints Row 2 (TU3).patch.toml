@@ -63,6 +63,15 @@ hash = "9B9E734BA6BDCCD9" # default.xex
         value = 0.8
 
 [[patch]]
+    name = "Disable Sky Reflections"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82230790
+        value = 0x4e800020
+
+[[patch]]
     name = "Disable Bleach Filter"
     author = "Tervel"
     is_enabled = false
@@ -136,6 +145,7 @@ hash = "9B9E734BA6BDCCD9" # default.xex
 
 [[patch]]
     name = "Aspect Ratio"
+    desc = "To get proper Aspect Ratio FOV = Default * (Width/Height) / (16/9)"
     author = "Tervel"
     is_enabled = false
 
@@ -146,8 +156,11 @@ hash = "9B9E734BA6BDCCD9" # default.xex
         address = 0x820b80d0
         value = 2.38888888889
     [[patch.f32]]
-        address = 0x82b68a4c # FOV Multiplier, crosshair will be misaligned unless changed manually.
-        value = 1.777741190
+        address = 0x82b68a4c # General FOV Multiplier
+        value = 1.777741190 # Default: 1.3333334
+    [[patch.f32]]
+        address = 0x820b80b4 # Cutscene FOV Multiplier.
+        value = 75.200706 # Default # 57.295776
 
 [[patch]]
     name = "FOV Multiplier"

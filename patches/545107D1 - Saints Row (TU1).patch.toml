@@ -70,6 +70,25 @@ hash = [
         value = 0x01
 
 [[patch]]
+    name = "Unlock All Cheats"
+    desc = "Replaces Chicken Ned phone number with 1337, and unlocks all cheats when calling him."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.array]]
+        address = 0x82063d70
+        value = "0x31333337000000" # 1337
+    [[patch.be32]]
+        address = 0x822e6ab0
+        value = 0x3c608204  # lis r3, 0x8204
+    [[patch.be32]]
+        address = 0x822e6ab4
+        value = 0x6063e528  # addi r3, r3, 0xE528 "cheats_unlock_all"
+    [[patch.be32]]
+        address = 0x822e6ab8
+        value = 0x48356058 # call console command
+
+[[patch]]
     name = "Aspect Ratio"
     desc = "To get proper Aspect Ratio FOV = Default * (Width/Height) / (16/9)"
     author = "Tervel"

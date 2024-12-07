@@ -63,6 +63,15 @@ hash = "9B9E734BA6BDCCD9" # default.xex
         value = 0.8
 
 [[patch]]
+    name = "Disable Sky Reflections"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82230790
+        value = 0x4e800020
+
+[[patch]]
     name = "Disable Bleach Filter"
     author = "Tervel"
     is_enabled = false
@@ -136,26 +145,121 @@ hash = "9B9E734BA6BDCCD9" # default.xex
 
 [[patch]]
     name = "Aspect Ratio"
-    desc = "See note about aspect ratio patches in the README. FOV Multiplier required otherwise Vert- default are for 21:9/43:18"
-    author = "Clippy95"
+    desc = "To get proper Aspect Ratio FOV = Default * (Width/Height) / (16/9)"
+    author = "Tervel"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x8290af6c
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x837756b4 # 3D aspect ratio
-        value = 0x4018e393
-    [[patch.be32]]
-        address = 0x820b80d0 # Shadows & decals aspect ratio
-        value = 0x4018e393
+    [[patch.be8]]
+        address = 0x82b7a01c
+        value = 0x01
+    [[patch.f32]]
+        address = 0x820b80d0
+        value = 2.38888888889
+    [[patch.f32]]
+        address = 0x82b68a4c # General FOV Multiplier
+        value = 1.777741190 # Default: 1.3333334
+    [[patch.f32]]
+        address = 0x820b80b4 # Cutscene FOV Multiplier.
+        value = 75.200706 # Default # 57.295776
 
 [[patch]]
     name = "FOV Multiplier"
-    desc = "Multiplies FOV. Default is 1.33333."
-    author = "Clippy95"
+    desc = "Multiplies FOV. Default is 1.33333, crosshair will be misaligned unless changed manually."
+    author = "Clippy95, Tervel"
     is_enabled = false
 
     [[patch.f32]]
-        address = 0x82b68a4c
-        value = 1.82
+        address = 0x82b68a4c # General FOV Multiplier
+        value = 1.777741190 # Default: 1.3333334
+    [[patch.f32]]
+        address = 0x820b80b4 # Cutscene FOV Multiplier.
+        value = 75.200706 # Default # 57.295776
+
+[[patch]]
+    name = "Skip Intros"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8244b7e0
+        value = 0x3bc00003
+    [[patch.be32]]
+        address = 0x82397ea0
+        value = 0x82398010
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Tervel, Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8290cfe0
+        value = 0x38a00010
+
+[[patch]]
+    name = "Better Drive By Cam"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821a1f74
+        value = 0x60000000
+
+[[patch]]
+    name = "Better Movement Behaviour"
+    desc = "Stops several animation events from running, closer to SR1's movement."
+    author = "Uzis, Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82086590 # jog 180
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x820865bc # stand 180
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x820865c8 # walk stop
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82086270 # run to stop
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8208627c # walk to stop
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82086240 # walk to stand
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82086260 # stand to run
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82086250 # stand to walk
+        value = 0x60000000
+
+[[patch]]
+    name = "Ugly Mode"
+    desc = "Huge performance boost at the cost of worse visuals."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x837dac89
+        value = 0x01
+    [[patch.be32]]
+        address = 0x82229a00
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82b62e3f # MSAA
+        value = 0x00
+    [[patch.f32]]
+        address = 0x82b76ca0
+        value = 400.0
+
+[[patch]]
+    name = "Disable Weapon Glow"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820a41c0
+        value = 0x60000000

@@ -70,6 +70,68 @@ hash = [
         value = 0x01
 
 [[patch]]
+    name = "Loose VPP Content loading" # loose->dlcs->vpps
+    desc = "Allows loading of loose files e.g xtbls, pegs, lua & more, just by dragging the files into the game directory without the need to pack them into VPPs, use Alternative Loose VPP Content loading only if this causes issues!"
+    author = "Clippy95, Scanti"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821954ef
+        value = 0x01
+    [[patch.be8]]
+        address = 0x821954f3
+        value = 0x00
+    [[patch.be8]]
+        address = 0x8264ec43
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8264ec3b
+        value = 0x01
+
+[[patch]]
+    name = "Alternative Loose VPP Content loading" # loose->vdir->dlcs->vpps
+    desc = "Use this if 'Loose VPP Content loading' causes issues, DO NOT USE both patches in conjunction!"
+    author = "Clippy95, Scanti, Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821954b0
+        value = 0x480121b4
+    [[patch.be32]]
+        address = 0x821a7660
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x821a7664
+        value = 0x38a00001
+    [[patch.be32]]
+        address = 0x821a7668
+        value = 0x38800000
+    [[patch.be32]]
+        address = 0x821a766c
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x821a7670
+        value = 0x484a7759
+    [[patch.be32]]
+        address = 0x821a7674
+        value = 0x38a00000
+    [[patch.be32]]
+        address = 0x821a7678
+        value = 0x38800000
+    [[patch.be32]]
+        address = 0x821a7680
+        value = 0x484a7749
+    [[patch.be32]]
+        address = 0x821a7688
+        value = 0x4bfede2c
+    [[patch.be8]]
+        address = 0x821954ef
+        value = 0x01
+    [[patch.be8]]
+        address = 0x821954f3
+        value = 0x00
+
+[[patch]]
     name = "Unlock All Cheats"
     desc = "Replaces Chicken Ned phone number with 1337, and unlocks all cheats when calling him."
     author = "Clippy95"

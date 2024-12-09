@@ -42,22 +42,58 @@ hash = [
         value = 0xd01aa69c # stfs f0,-0x5964(r26)
     [[patch.be32]]
         address = 0x821a7690
-        value = 0x3c608200 # lis r3,0x8200
+        value = 0x3c608209 # lis r3,-0x7df7
     [[patch.be32]]
         address = 0x821a7694
-        value = 0xc0430adc # lfs f2,0xadc(r3)
+        value = 0xc023b6dc # lfs f1,-0x4924(r3)
     [[patch.be32]]
         address = 0x821a7698
-        value = 0xec201024 # fdivs f1,f0,f2
+        value = 0xc043b6bc # lfs f2,-0x4944(r3)
     [[patch.be32]]
         address = 0x821a769c
-        value = 0x3c60835f # lis r3,0x835f
+        value = 0xc083b938 # lfs f4,-0x46c8(r3)
     [[patch.be32]]
         address = 0x821a76a0
-        value = 0xd0232684 # stfs f1,0x2684(r3)
+        value = 0x3c608200 # lis r3,0x820
     [[patch.be32]]
         address = 0x821a76a4
-        value = 0x4849eca4 # b 0x82646348 (back to main game loop)
+        value = 0xc0630adc # lfs f3,0xadc(r3)
+    [[patch.be32]]
+        address = 0x821a76a8
+        value = 0xfc000840 # fcmpo cr0,f0,f1
+    [[patch.be32]]
+        address = 0x821a76ac
+        value = 0x4080001c # bge 0x821a76c8
+    [[patch.be32]]
+        address = 0x821a76b0
+        value = 0xfc001040 # fcmpo cr0,f0,f2
+    [[patch.be32]]
+        address = 0x821a76b4
+        value = 0x40810014 # ble 0x821a76c8
+    [[patch.be32]]
+        address = 0x821a76b8
+        value = 0xeca01824 # fdivs f5,f0,f3
+    [[patch.be32]]
+        address = 0x821a76bc
+        value = 0x3c60835f # lis r3,0x835f
+    [[patch.be32]]
+        address = 0x821a76c0
+        value = 0xd0a32684 # stfs f5,0x2684(r3)
+    [[patch.be32]]
+        address = 0x821a76c4
+        value = 0x4849ec84 # b 0x82646348
+    [[patch.be32]]
+        address = 0x821a76c8
+        value = 0x3c60835f # lis r3,0x835f
+    [[patch.be32]]
+        address = 0x821a76cc
+        value = 0xd0832684 # stfs f4,0x2684(r3)
+    [[patch.be32]]
+        address = 0x821a76d0
+        value = 0x4849ec78 # b 0x82646348
+    [[patch.be32]]
+        address = 0x821a76d4
+        value = 0x4849ec74
     [[patch.be32]]
         address = 0x82195324
         value = 0x60000000

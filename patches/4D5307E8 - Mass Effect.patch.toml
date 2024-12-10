@@ -1,0 +1,24 @@
+title_name = "Mass Effect"
+title_id = "4D5307E8" # XA-5174
+hash = "8F4ECF10C53859FE" # default.xex
+#media_id = "572BA75D"
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be8]] # tilingcode
+        address = 0x82E5DCD7
+        value = 0x00
+
+[[patch]]
+    name = "Skip Intro Movies"
+    desc = "Self explanatory"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8223B1E8
+        value = 0x41

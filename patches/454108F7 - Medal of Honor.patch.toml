@@ -1,6 +1,6 @@
 title_name = "Medal of Honor"
-title_id = "454108F7"
-hash = "F8A84A92CAAB33AB"
+title_id = "454108F7" EA-2295
+hash = "F8A84A92CAAB33AB" # default.xex
 #media_id = "0911750E"
 
 [[patch]]
@@ -18,5 +18,5 @@ hash = "F8A84A92CAAB33AB"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82BF8C84
+        address = 0x82bf8c84
         value = 0x60000000

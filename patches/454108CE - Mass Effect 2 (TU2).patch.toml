@@ -43,10 +43,10 @@ hash = "3D790F44F99FCF0E" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82716CF8
+        address = 0x82716cf8
         value = 0x4800
     [[patch.be32]]
-        address = 0x82716D14
+        address = 0x82716d14
         value = 0xC01E0000
 
 [[patch]]
@@ -56,8 +56,8 @@ hash = "3D790F44F99FCF0E" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822EA624
+        address = 0x822ea624
         value = 0xC0050000
     [[patch.be32]]
-        address = 0x822EA830
+        address = 0x822ea830
         value = 0x39600003

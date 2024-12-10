@@ -1,7 +1,7 @@
 title_name = "Mass Effect"
 title_id = "4D5307E8" # XA-5174
 hash = "8F4ECF10C53859FE" # default.xex
-#media_id = "572BA75D"
+#media_id = "572BA75D" # http://redump.org/disc/38463/
 
 [[patch]]
     name = "Black Shading Fix"
@@ -10,7 +10,7 @@ hash = "8F4ECF10C53859FE" # default.xex
     is_enabled = false
 
     [[patch.be8]] # tilingcode
-        address = 0x82E5DCD7
+        address = 0x82e5dcd7
         value = 0x00
 
 [[patch]]
@@ -20,5 +20,5 @@ hash = "8F4ECF10C53859FE" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8223B1E8
+        address = 0x8223b1e8
         value = 0x41

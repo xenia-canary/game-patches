@@ -9,8 +9,8 @@ hash = "BDE547F889706D91" # default.xex
     is_enabled = false
     
     [[patch.be16]]
-        address = 0x828ECA42
-        value = 0x63B4 # offset from 0x820C0000
+        address = 0x820c63b4
+        value = 0x63b4 # offset from 0x820c0000
     [[patch.f32]]
-        address = 0x820C63B4
+        address = 0x820c63b4
         value = 90

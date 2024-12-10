@@ -47,7 +47,7 @@ hash = "3D790F44F99FCF0E" # default.xex
         value = 0x4800
     [[patch.be32]]
         address = 0x82716d14
-        value = 0xC01E0000
+        value = 0xc01e0000
 
 [[patch]]
     name = "hq post-processing"

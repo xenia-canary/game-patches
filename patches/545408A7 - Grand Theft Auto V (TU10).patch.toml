@@ -11,4 +11,3 @@ hash = "3707521B52D05952" # default.xex - TU10 Byrom Spoofed
     [[patch.be32]]
         address = 0x820917f0
         value = 0x3c000000
-        

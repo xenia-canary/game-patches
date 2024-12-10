@@ -14,4 +14,3 @@ hash = "3707521B52D05952" # default.xex
     [[patch.be32]]
         address = 0x822b971c
         value = 0x39600000
-        

@@ -144,6 +144,43 @@ hash = "9B9E734BA6BDCCD9" # default.xex
         value = 0x4befb554
 
 [[patch]]
+    name = "Havok physics FPS fix"
+    desc = "Fixes Cutscene Objects desyncing and doors teleporting on high fps, at the cost of framerates and worse bike physics."
+    author = "Clippy95" # Initially found by uzis for SR2 PC, SR2 X360 address provided by Tervel.
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8221ceac
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82938568
+        value = 0x48104a1c
+    [[patch.be32]]
+        address = 0x82a3cf84
+        value = 0xd017236c
+    [[patch.be32]]
+        address = 0x82a3cf88
+        value = 0x3c608200
+    [[patch.be32]]
+        address = 0x82a3cf8c
+        value = 0xc0c32388
+    [[patch.be32]]
+        address = 0x82a3cf90
+        value = 0xece03024
+    [[patch.be32]]
+        address = 0x82a3cf94
+        value = 0x3c60837e
+    [[patch.be32]]
+        address = 0x82a3cf98
+        value = 0x3b83c2e1
+    [[patch.be32]]
+        address = 0x82a3cf9c
+        value = 0xd0fcf33f
+    [[patch.be32]]
+        address = 0x82a3cfa0
+        value = 0x4befb5cc
+
+[[patch]]
     name = "Aspect Ratio"
     desc = "To get proper Aspect Ratio FOV = Default * (Width/Height) / (16/9)"
     author = "Tervel"

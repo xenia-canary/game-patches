@@ -26,6 +26,82 @@ hash = [
         value = 0x906bfffc
 
 [[patch]]
+    name = "Havok physics FPS fix"
+    desc = "Fixes Cutscene Objects desyncing and doors teleporting on high fps, at the cost of framerates."
+    author = "Clippy95" # Initially found by uzis for SR2 PC, SR1 X360 address provided by Tervel.
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82646344
+        value = 0x4bb61348 # b 0x821a768c
+    [[patch.be32]]
+        address = 0x821a7660
+        value = 0x4e800020 # blr
+    [[patch.be32]]
+        address = 0x821a768c
+        value = 0xd01aa69c # stfs f0,-0x5964(r26)
+    [[patch.be32]]
+        address = 0x821a7690
+        value = 0x3c608209 # lis r3,-0x7df7
+    [[patch.be32]]
+        address = 0x821a7694
+        value = 0xc023b6dc # lfs f1,-0x4924(r3)
+    [[patch.be32]]
+        address = 0x821a7698
+        value = 0xc043b6bc # lfs f2,-0x4944(r3)
+    [[patch.be32]]
+        address = 0x821a769c
+        value = 0xc083b938 # lfs f4,-0x46c8(r3)
+    [[patch.be32]]
+        address = 0x821a76a0
+        value = 0x3c608200 # lis r3,0x820
+    [[patch.be32]]
+        address = 0x821a76a4
+        value = 0xc0630adc # lfs f3,0xadc(r3)
+    [[patch.be32]]
+        address = 0x821a76a8
+        value = 0xfc000840 # fcmpo cr0,f0,f1
+    [[patch.be32]]
+        address = 0x821a76ac
+        value = 0x4080001c # bge 0x821a76c8
+    [[patch.be32]]
+        address = 0x821a76b0
+        value = 0xfc001040 # fcmpo cr0,f0,f2
+    [[patch.be32]]
+        address = 0x821a76b4
+        value = 0x40810014 # ble 0x821a76c8
+    [[patch.be32]]
+        address = 0x821a76b8
+        value = 0xeca01824 # fdivs f5,f0,f3
+    [[patch.be32]]
+        address = 0x821a76bc
+        value = 0x3c60835f # lis r3,0x835f
+    [[patch.be32]]
+        address = 0x821a76c0
+        value = 0xd0a32684 # stfs f5,0x2684(r3)
+    [[patch.be32]]
+        address = 0x821a76c4
+        value = 0x4849ec84 # b 0x82646348
+    [[patch.be32]]
+        address = 0x821a76c8
+        value = 0x3c60835f # lis r3,0x835f
+    [[patch.be32]]
+        address = 0x821a76cc
+        value = 0xd0832684 # stfs f4,0x2684(r3)
+    [[patch.be32]]
+        address = 0x821a76d0
+        value = 0x4849ec78 # b 0x82646348
+    [[patch.be32]]
+        address = 0x821a76d4
+        value = 0x4849ec74
+    [[patch.be32]]
+        address = 0x82195324
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8225bd8c
+        value = 0x60000000
+
+[[patch]]
     name = "Skip Logos"
     author = "illusion"
     is_enabled = false
@@ -68,6 +144,68 @@ hash = [
     [[patch.be8]]
         address = 0x835f4c3e
         value = 0x01
+
+[[patch]]
+    name = "Loose VPP Content loading" # loose->dlcs->vpps
+    desc = "Allows loading of loose files e.g xtbls, pegs, lua & more, just by dragging the files into the game directory without the need to pack them into VPPs, use Alternative Loose VPP Content loading only if this causes issues!"
+    author = "Clippy95, Scanti"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821954ef
+        value = 0x01
+    [[patch.be8]]
+        address = 0x821954f3
+        value = 0x00
+    [[patch.be8]]
+        address = 0x8264ec43
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8264ec3b
+        value = 0x01
+
+[[patch]]
+    name = "Alternative Loose VPP Content loading" # loose->vdir->dlcs->vpps
+    desc = "Use this if 'Loose VPP Content loading' causes issues, DO NOT USE both patches in conjunction!"
+    author = "Clippy95, Scanti, Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821954b0
+        value = 0x480121b4
+    [[patch.be32]]
+        address = 0x821a7660
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x821a7664
+        value = 0x38a00001
+    [[patch.be32]]
+        address = 0x821a7668
+        value = 0x38800000
+    [[patch.be32]]
+        address = 0x821a766c
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x821a7670
+        value = 0x484a7759
+    [[patch.be32]]
+        address = 0x821a7674
+        value = 0x38a00000
+    [[patch.be32]]
+        address = 0x821a7678
+        value = 0x38800000
+    [[patch.be32]]
+        address = 0x821a7680
+        value = 0x484a7749
+    [[patch.be32]]
+        address = 0x821a7688
+        value = 0x4bfede2c
+    [[patch.be8]]
+        address = 0x821954ef
+        value = 0x01
+    [[patch.be8]]
+        address = 0x821954f3
+        value = 0x00
 
 [[patch]]
     name = "Unlock All Cheats"

@@ -129,6 +129,7 @@ hash = "9B9E734BA6BDCCD9" # default.xex
         value = 0x48104aa0
     [[patch.be32]]
         address = 0x82a3cf70
+        # value = 0x39403c88 # to Unlock FPS
         value = 0x3d403c88
     [[patch.be32]]
         address = 0x82a3cf74

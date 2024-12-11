@@ -1,0 +1,13 @@
+title_name = "Grand Theft Auto V" # Five
+title_id = "545408A7" # TT-2215
+hash = "3707521B52D05952" # default.xex - TU10 Byrom Spoofed
+#media_id = "79E465C5" # http://redump.org/disc/37057/
+
+[[patch]]
+    name = "60 FPS"
+    author = "illusion (Backported to TU10 by Byrom)"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820917f0
+        value = 0x3c000000

@@ -1,0 +1,22 @@
+title_name = "Medal of Honor"
+title_id = "454108F7" # EA-2295
+hash = "F8A84A92CAAB33AB" # default.xex
+#media_id = "0911750E"
+
+[[patch]]
+    name = "Blown-out Bloom Fix"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83854097
+        value = 0x04
+
+[[patch]]
+    name = "Unlock FPS Above 62 FPS"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82bf8c84
+        value = 0x60000000

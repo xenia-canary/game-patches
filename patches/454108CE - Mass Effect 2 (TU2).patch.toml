@@ -1,0 +1,63 @@
+title_name = "Mass Effect 2" # TU2, v1.0.2
+title_id = "454108CE" # EA-2254
+hash = "3D790F44F99FCF0E" # Disc 1/2, default.xex
+#media_id = [
+#    "6EE5A52F", # Disc 1 (USA, Europe): http://redump.org/disc/12501
+#    "027D8AAF", # Disc 2 (USA, Europe): http://redump.org/disc/12502
+#]
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Solves most dynamic lighting artifacts caused by an issue with light environments and MSAA tiling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8337afbb # .data, GTilingMode = 0
+        value = 0x00
+    [[patch.be32]]
+        address = 0x827d9988 # XenonClient, GTilingMode = 0
+        value = 0x39600000 # li r11, 0
+    [[patch.be32]]
+        address = 0x827d98fc # XenonClient, GTilingMode = 0
+        value = 0x39600000 # li r11, 0
+    [[patch.be32]]
+        address = 0x827dde14 # InitD3D, GMaxShadowDepthBufferSize = 0x800
+        value = 0x39600800 # li r11, 0x800
+    [[patch.be32]]
+        address = 0x827dde34 # InitD3D, GUseTilingCode = 0
+        value = 0x93e70000 # stw r31, 0(r7)
+    [[patch.be32]]
+        address = 0x82862d70 # FEngineLoop, GUseTilingCode = 0
+        value = 0x93860000 # stw r28, 0(r6)
+    [[patch.be32]]
+        address = 0x8274afb8 # UmbraFrustumCulling, GUseTilingCode = 0
+        value = 0x3b400000 # li r26, 0
+    [[patch.be32]]
+        address = 0x8269de54 # RenderSceneCaptures, GUseTilingCode = 0
+        value = 0x3ae00000 # li r23, 0
+
+[[patch]]
+    name = "disable lens flares without breaking in-game assets"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82716cf8
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x82716d14
+        value = 0xc01e0000
+
+[[patch]]
+    name = "hq post-processing"
+    desc = "fixes pixelated Dof double-vision and forces bloom with higher sample count"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822ea624
+        value = 0xC0050000
+    [[patch.be32]]
+        address = 0x822ea830
+        value = 0x39600003

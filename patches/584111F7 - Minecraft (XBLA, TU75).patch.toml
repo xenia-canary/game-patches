@@ -1,0 +1,16 @@
+title_name = "Minecraft" # XBLA, TU75
+title_id = "584111F7" # XA-4599
+hash = "BDE547F889706D91" # default.xex
+#media_id = "7CD33B56"
+
+[[patch]]
+    name = "FOV"
+    author = "Clippy95, Margen67"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x820c63b4
+        value = 0x63b4 # offset from 0x820c0000
+    [[patch.f32]]
+        address = 0x820c63b4
+        value = 90

@@ -1,9 +1,9 @@
 title_name = "Mass Effect 2" # TU2, v1.0.2
 title_id = "454108CE" # EA-2254
-hash = "3D790F44F99FCF0E" # default.xex
+hash = "3D790F44F99FCF0E" # Disc 1/2, default.xex
 #media_id = [
-#    "6EE5A52F", Disc 1 (USA, Europe): # http://redump.org/disc/12501
-#    "027D8AAF", Disc 2 (USA, Europe): # http://redump.org/disc/12502
+#    "6EE5A52F", # Disc 1 (USA, Europe): http://redump.org/disc/12501
+#    "027D8AAF", # Disc 2 (USA, Europe): http://redump.org/disc/12502
 #]
 
 [[patch]]

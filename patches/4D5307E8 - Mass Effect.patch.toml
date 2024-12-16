@@ -1,11 +1,11 @@
 title_name = "Mass Effect"
 title_id = "4D5307E8" # XA-5174
 hash = "8F4ECF10C53859FE" # default.xex
-#media_id = "572BA75D" # http://redump.org/disc/38463/
+#media_id = "572BA75D" # Disc (USA): http://redump.org/disc/38463
 
 [[patch]]
     name = "Black Shading Fix"
-    desc = "Disables MSAA"
+    desc = "Disables MSAA."
     author = "HouseofTudor"
     is_enabled = false
 
@@ -15,7 +15,6 @@ hash = "8F4ECF10C53859FE" # default.xex
 
 [[patch]]
     name = "Skip Intro Movies"
-    desc = "Self explanatory"
     author = "HouseofTudor"
     is_enabled = false
 

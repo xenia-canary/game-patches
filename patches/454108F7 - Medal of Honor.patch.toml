@@ -1,7 +1,7 @@
 title_name = "Medal of Honor"
 title_id = "454108F7" # EA-2295
 hash = "F8A84A92CAAB33AB" # default.xex
-#media_id = "0911750E"
+#media_id = "0911750E" # Disc (USA): http://redump.org/disc/16281
 
 [[patch]]
     name = "Blown-out Bloom Fix"
@@ -13,7 +13,8 @@ hash = "F8A84A92CAAB33AB" # default.xex
         value = 0x04
 
 [[patch]]
-    name = "Unlock FPS Above 62 FPS"
+    name = "Unlock FPS"
+    desc = "FPS cap is normally 62."
     author = "HouseofTudor"
     is_enabled = false
 

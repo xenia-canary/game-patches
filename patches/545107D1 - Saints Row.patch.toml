@@ -48,7 +48,7 @@ hash = "437A5F51A72C9C6A" # default.xex
 
 [[patch]]
     name = "Enable Debug Console"
-    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia Canary config; Requires Xenia Canary version 271befc from January 25th or older."
+    desc = "Requires keyboard_mode to be changed from 0 to 2 in the Xenia Canary config"
     author = "emoose, Tervel"
     is_enabled = false
 

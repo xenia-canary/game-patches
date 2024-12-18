@@ -1,2 +1,2 @@
-patches/*.patch.toml text
+patches/*.patch.toml text eol=lf
 *.sh                 text eol=lf

@@ -318,7 +318,7 @@ hash = [
         address = 0x827f702e
         value = 0x021c
     [[patch.f32]]
-        address = 0x8208b94b # General FOV Multiplier
+        address = 0x8208b94c # General FOV Multiplier
         value = 1.777741190
     [[patch.f32]]
         address = 0x8208c818 # Cutscene FOV Multiplier.

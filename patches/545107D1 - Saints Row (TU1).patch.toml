@@ -365,3 +365,13 @@ hash = [
     [[patch.f32]]
         address = 0x8208c88c
         value = -0.5
+
+[[patch]]
+    name = "LUA debug_print to log"
+    desc = "Prints mostly unused debug_print to Xenia's log, mostly useful in mod making."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824f1164
+        value = 0x482ae6f9 # bl DbgPrint

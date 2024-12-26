@@ -289,34 +289,34 @@ hash = [
         value = 0x39000500
     [[patch.be32]]
         address = 0x821952f8
-        value = 0x3920021c
+        value = 0x39200224
     [[patch.be32]]
         address = 0x8219360c
         value = 0x60000000
     [[patch.be16]]
         address = 0x827f70ba
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f70ca
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f70da
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f70ea
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827adb76
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f6f82
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f701e
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f702e
-        value = 0x021c
+        value = 0x0224
     [[patch.f32]]
         address = 0x8208b94c # General FOV Multiplier
         value = 1.777741190

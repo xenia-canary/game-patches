@@ -1,0 +1,14 @@
+title_name = "Import Tuner Challange"
+title_id = "555307EE" # US-2030
+hash = "AAD3CAA44B5F7D92" # default.xex
+#media_id = "1E9F4315"
+
+[[patch]]
+    name = "Fix blackscreen after returning to menu"
+    desc = "Change required loading check cycles from 0x3C to 0x1A. For faster CPUs use lower value like 0x10."
+    author = "Gliniak"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8218e4ec
+        value = 0x2b0b001a

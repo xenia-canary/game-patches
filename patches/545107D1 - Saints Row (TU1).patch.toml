@@ -128,8 +128,8 @@ hash = [
 
 [[patch]]
     name = "Enable Debug Console"
-    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia Canary config; Requires Xenia Canary version 271befc from January 25th or older."
-    author = "emoose"
+    desc = "Requires keyboard_mode to be changed from 0 to 2 in the Xenia Canary config, press ~ to open and close the console."
+    author = "emoose, expanded by Clippy95"
     is_enabled = false
 
     [[patch.be32]]
@@ -141,9 +141,36 @@ hash = [
     [[patch.be32]]
         address = 0x82660268
         value = 0x480b8e14
-    [[patch.be8]]
-        address = 0x835f4c3e
-        value = 0x01
+    [[patch.be32]]
+        address = 0x8263e334
+        value = 0x4bb693b0 # b 821a76e4
+    [[patch.be32]]
+        address = 0x821a76e4
+        value = 0x8b1e000b # lbz r24,0xb(r30)
+    [[patch.be32]]
+        address = 0x821a76e8
+        value = 0x6b180001 # xori r24,r24,0x1 # originally set to 0 to close the console window, now just xor to open/close.
+    [[patch.be32]]
+        address = 0x821a76ec
+        value = 0x9b1e000b # stb r24,0xb(r30)
+    [[patch.be32]]
+        address = 0x821a76f0
+        value = 0x48496c48 # b 0x8263e338
+    [[patch.be32]]
+        address = 0x82198b58
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82198b5c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82198b5c
+        value = 0x42800008
+    [[patch.be32]]
+        address = 0x8263d150
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8263d228
+        value = 0x8263e330 # Allow to open/close console with ~ key
 
 [[patch]]
     name = "Loose VPP Content loading" # loose->dlcs->vpps
@@ -262,36 +289,36 @@ hash = [
         value = 0x39000500
     [[patch.be32]]
         address = 0x821952f8
-        value = 0x3920021c
+        value = 0x39200224
     [[patch.be32]]
         address = 0x8219360c
         value = 0x60000000
     [[patch.be16]]
         address = 0x827f70ba
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f70ca
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f70da
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f70ea
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827adb76
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f6f82
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f701e
-        value = 0x021c
+        value = 0x0224
     [[patch.be16]]
         address = 0x827f702e
-        value = 0x021c
+        value = 0x0224
     [[patch.f32]]
-        address = 0x8208b94b # General FOV Multiplier
+        address = 0x8208b94c # General FOV Multiplier
         value = 1.777741190
     [[patch.f32]]
         address = 0x8208c818 # Cutscene FOV Multiplier.
@@ -338,3 +365,13 @@ hash = [
     [[patch.f32]]
         address = 0x8208c88c
         value = -0.5
+
+[[patch]]
+    name = "LUA debug_print to log"
+    desc = "Prints mostly unused debug_print to Xenia's log, mostly useful in mod making."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824f1164
+        value = 0x482ae6f9 # bl DbgPrint

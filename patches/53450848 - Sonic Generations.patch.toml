@@ -9,7 +9,7 @@ hash = "A2B4FE86257B769F" # default.xex
     name = "60 FPS"
     desc = "See note about framerate patches in the README."
     author = "boma, Xbox 360 Forever, Windsurf7"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be8]]
         address = 0x82dc44e3

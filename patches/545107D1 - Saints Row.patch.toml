@@ -4,6 +4,44 @@ hash = "437A5F51A72C9C6A" # default.xex
 #media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
 
 [[patch]]
+    name = "Enable MP actions in SP"
+    desc = "Lets you perform the D-pad actions from MP in SP (tauting and healing)"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8216a2c8
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8216a94c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x821678c8
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Item Glow"
+    desc = "Gets rid of the glow that is normally applied on dropped items such as cash and weapons"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82405520
+        value = 0x4e800020
+    [[patch.be8]]
+        address = 0x827ad06f
+        value = 0x00
+
+[[patch]]
+    name = "Disable Aim Assist"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82077944
+        value = 0x60000000
+
+[[patch]]
     name = "Enable r_ugly_mode"
     desc = "Higher FPS but worse graphics. Might crash when starting a game."
     author = "Hasster, boma"

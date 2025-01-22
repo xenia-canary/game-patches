@@ -7,6 +7,44 @@ hash = "581D207BBF22F59E" # default.xex
 #]
 
 [[patch]]
+    name = "PS3 Button Prompts"
+    desc = "Swaps out the platform strings to load the PS3 localization (has hardcoded button prompts) and to fool Lua to display PS3 buttons (has hardcoded buttons too)."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.string]]
+        address = 0x8208d990
+        value = "PS3"
+    [[patch.be8]]
+        address = 0x8208d993
+        value = 0x00
+    [[patch.string]]
+        address = 0x8208eb90
+        value = "PS3"
+    [[patch.be8]]
+        address = 0x8208eb93
+        value = 0x00
+
+[[patch]]
+    name = "Motion Blur Strength Fix"
+    desc = "Corrects the motion blur strength so that it is consistent regardless of your framerate."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821d393c
+        value = 0x48867aac
+    [[patch.be32]]
+        address = 0x82a3b3e8
+        value = 0x3ec082b6
+    [[patch.be32]]
+        address = 0x82a3b3ec
+        value = 0xc0362330
+    [[patch.be32]]
+        address = 0x82a3b3f0
+        value = 0x4b798550
+
+[[patch]]
     name = "Force 720p"
     desc = "Makes the game run at 720p instead of the default 640p."
     author = "Tervel"

@@ -7,6 +7,44 @@ hash = [
 #media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
 
 [[patch]]
+    name = "Enable MP actions in SP"
+    desc = "Lets you perform the D-pad actions from MP in SP (tauting and healing)"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8217a468
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8217aaf4
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x821779d0
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Item Glow"
+    desc = "Gets rid of the glow that is normally applied on dropped items such as cash and weapons"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8241b328
+        value = 0x4e800020
+    [[patch.be8]]
+        address = 0x827cd14f
+        value = 0x00
+
+[[patch]]
+    name = "Disable Aim Assist"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82079cbc
+        value = 0x60000000
+
+[[patch]]
     name = "Unlock FPS"
     author = "illusion"
     is_enabled = false

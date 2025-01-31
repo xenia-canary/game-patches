@@ -1,50 +1,8 @@
 {
-  "eslintConfig": {
-    "extends": "plugin:toml/standard",
-    "rules": {
-      "toml/indent": [
-        "error",
-        4,
-        {
-          "subTables": 1,
-          "keyValuePairs": 1
-        }
-      ],
-      "toml/padding-line-between-tables": "off",
-      "toml/spaced-comment": "off",
-      "toml/tables-order": "off",
-      "toml/no-mixed-type-in-array": "error",
-      "eol-last": [
-        "error",
-        "always"
-      ],
-      "indent": "error",
-      "no-mixed-spaces-and-tabs": "error",
-      "no-multi-spaces": [
-        "error",
-        {
-          "ignoreEOLComments": true
-        }
-      ],
-      "no-multiple-empty-lines": [
-        "error",
-        {
-          "max": 1,
-          "maxBOF": 0,
-          "maxEOF": 0
-        }
-      ],
-      "no-tabs": "error",
-      "no-trailing-spaces": "error",
-      "unicode-bom": "error"
-    }
-  },
-  "eslintIgnore": [
-    "/*.toml",
-    "**/*.config.toml"
-  ],
+  "type": "module",
   "devDependencies": {
-    "eslint": "^8.45.0",
-    "eslint-plugin-toml": "^0.5.0"
+    "eslint": "latest",
+    "eslint-plugin-toml": "latest",
+    "@stylistic/eslint-plugin": "latest"
   }
 }

@@ -1,7 +1,7 @@
 title_name = "Import Tuner Challange"
 title_id = "555307EE" # US-2030
 hash = "AAD3CAA44B5F7D92" # default.xex
-#media_id = "1E9F4315"
+#media_id = "1E9F4315" # Disc (USA): http://redump.org/disc/14544
 
 [[patch]]
     name = "Fix blackscreen after returning to menu"

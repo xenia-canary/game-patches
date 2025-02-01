@@ -5,6 +5,7 @@ on:
     branches-ignore: [wip, nohash]
     paths:
       - '.github/workflows/ci.yml'
+      - 'eslint.config.js'
       - 'package.json'
       - 'patches/*.patch.toml'
   pull_request:

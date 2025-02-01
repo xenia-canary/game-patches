@@ -4,5 +4,6 @@
 !.gitignore
 
 !/.github/**/*
+!/eslint.config.js
 !/package.json
 !/patches/*.patch.toml

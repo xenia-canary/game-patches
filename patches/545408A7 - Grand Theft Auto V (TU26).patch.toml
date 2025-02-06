@@ -4,6 +4,28 @@ hash = "9CA9BEC3E4E5039A" # default.xex
 #media_id = "79E465C5"
 
 [[patch]]
+    name = "FPS Uncap"
+    Desc = "Removes all of the FPS caps in the game, including the audio engine cap."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825a2d5c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x824881c8
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8248ea8c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x831d8588
+        value = 0x409a0028
+    [[patch.be8]]
+        address = 0x8391d9d7
+        value = 0x00 # 0x01 for 60 FPS, 0x02 for 30 (default)
+
+[[patch]]
     name = "Skip Intro Logos"
     author = "illusion"
     is_enabled = false

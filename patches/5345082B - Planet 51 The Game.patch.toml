@@ -1,0 +1,14 @@
+title_name = "Planet 51: The Game"
+title_id = "5345082B" # SE-2091
+hash = "D057A31F821B498A" # default.xex
+#media_id = "1A7DFC39" # Disc (USA, Europe): http://redump.org/disc/68692
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Solves most dynamic lighting artifacts caused by an issue with light environments and MSAA tiling."
+    author = "noxrim, thx boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8230c118
+        value = 0x39200000

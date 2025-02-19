@@ -4,6 +4,7 @@ hash = [ # default.xex
     "FB9D1825EAC7AA75", # NTSC-U
     "B001C754E3DB6C0B", # PAL
     "406DA35685AD7559", # PAL-ENG
+    "2B596DB6DF23684F"  # PAL-ITA
 ]
 #media_id = "36775B18" # Disc (Europe): http://redump.org/disc/55849
 

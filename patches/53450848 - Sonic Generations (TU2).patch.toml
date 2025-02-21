@@ -1,0 +1,14 @@
+title_name = "Sonic Generations" # TU2
+title_id = "53450848" # SE-2120
+hash = "2ACF25AAA5102F0C" # default.xex
+#media_id = "6BD87620" # Disc (World): http://redump.org/disc/37081
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README."
+    author = "boma, Xbox 360 Forever, Windsurf7, ICUP321"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82dc70b3
+        value = 0x01

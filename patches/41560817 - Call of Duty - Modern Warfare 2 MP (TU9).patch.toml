@@ -1,0 +1,27 @@
+title_name = "Call of Duty: Modern Warfare 2"
+title_id = "41560817" # AV-2071
+hash = "766CC31C6293CB73" # default_mp.xex
+#media_id = "2C8C0267" # Disc (USA, Europe): http://redump.org/disc/11809
+
+[[patch]]
+    name = "Native 1280x720 resolution"
+    desc = "Reduces flickering on upscaled resolutions x2 and x3"
+    author = "mo"
+    is_enabled = false
+
+    # R_SetWndParms
+
+    # wndParms->sceneWidth
+    [[patch.be16]]
+        address = 0x8234c6a6
+        value = 0x0500       # 1024 -> 1280
+
+    # wndParms->sceneHeight
+    [[patch.be16]]
+        address = 0x8234c6aa
+        value = 0x02d0       # 600 -> 720
+
+    # wndParms->aaSamples
+    [[patch.be16]]
+        address = 0x8234c6be
+        value = 0x0000       # 2 -> 0

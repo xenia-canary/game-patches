@@ -4,6 +4,102 @@ hash = "9CA9BEC3E4E5039A" # default.xex
 #media_id = "79E465C5"
 
 [[patch]]
+    name = "GTA IV Wanted System"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82519333 # PC pattern provided by ghostie, used to find it on 360
+        value = 0x01 # Enables the GTA IV-like cop search radius (stay out of it to lose your wanted level)
+    [[patch.be8]]
+        address = 0x82519337 # Same as above
+        value = 0x00 # Disables the ability to lose your wanted level by hiding
+    [[patch.be8]]
+        address = 0x8254ce37
+        value = 0x00 # Disables the search cone for the cop blips
+    [[patch.be32]]
+        address = 0x8229d7a8
+        value = 0x4e800020 # Disable the wanted flash on the minimap as the GTA IV-like system has its own one
+    [[patch.be32]]
+        address = 0x8229583c
+        value = 0x60000000 # Disable the player minimap icon color change when not in sight
+    [[patch.be32]]
+        address = 0x822bc428
+        value = 0x4955aa50 # Workaround to not display the weird (possibly debug?) last seen arrow while the wanted circle is active
+    [[patch.be32]]
+        address = 0x83816e78
+        value = 0x3d608390
+    [[patch.be32]]
+        address = 0x83816e7c
+        value = 0x816b1164
+    [[patch.be32]]
+        address = 0x83816e80
+        value = 0x2b0b0000
+    [[patch.be32]]
+        address = 0x83816e84
+        value = 0x409a0018
+    [[patch.be32]]
+        address = 0x83816e88
+        value = 0x7ec4b378
+    [[patch.be32]]
+        address = 0x83816e8c
+        value = 0x4aaa55a0
+    [[patch.be32]]
+        address = 0x83816e9c
+        value = 0x4aaa559c # End of workaround
+
+[[patch]]
+    name = "Disable Minimap Zoom"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8227e163
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8228a37b
+        value = 0x01
+
+[[patch]]
+    name = "Disable Snow/Raindrops"
+    author = "Tervel"
+    desc = "Avoid the vertex explosions that occur when snowing/raining"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83178f18
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Sunflare"
+    author = "Tervel"
+    desc = "Workaround that allows you to leave the occlusion query count untouched"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82f3b52c
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Ocean Waves"
+    author = "Tervel"
+    desc = "Avoid the incorrect wave detection without readback resolve"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827293b4
+        value = 0x60000000
+
+[[patch]]
+    name = "Aspect Ratio"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82003a4c
+        value = 2.38888888889
+
+[[patch]]
     name = "FPS Uncap"
     Desc = "Removes all of the FPS caps in the game, including the audio engine cap."
     author = "Tervel"

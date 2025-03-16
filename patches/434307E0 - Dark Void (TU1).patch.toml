@@ -1,0 +1,14 @@
+title_name = "Dark Void" # v3.0.1
+title_id = "434307E0" # CC-2016
+hash = "E86882B0119B686A" # default.xex
+#media_id = "2150EAC1" # Disc (USA, Europe): http://redump.org/disc/35201
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83635e23
+        value = 0x04

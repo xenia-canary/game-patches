@@ -47,7 +47,7 @@ hash = "2C06E5E920A8291E" # default.xex
     [[patch.be8]]
         address = 0x82422ab3
         value = 0x00
-		
-	[[patch.be8]]
+
+    [[patch.be8]]
         address = 0x824ac373
         value = 0x00

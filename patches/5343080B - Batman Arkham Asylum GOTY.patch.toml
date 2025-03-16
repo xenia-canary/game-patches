@@ -31,28 +31,26 @@ hash = "2C06E5E920A8291E" # default.xex
 
 [[patch]]
     name = "Anisotropic Filtering x16"
-    desc = ""
     author = "HouseofTudor"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82372AE8
+        address = 0x82372ae8
         value = 0x38A00010
 
 [[patch]]
     name = "Upscaling Post Processing Fix"
-    desc = ""
     author = "HouseofTudor"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82351D7B
+        address = 0x82351d7b
         value = 0x00
 
     [[patch.be8]]
-        address = 0x82422AB3
+        address = 0x82422ab3
         value = 0x00
 		
 	[[patch.be8]]
-        address = 0x824AC373
+        address = 0x824ac373
         value = 0x00

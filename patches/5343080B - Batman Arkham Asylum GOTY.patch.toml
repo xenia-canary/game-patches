@@ -1,10 +1,7 @@
 title_name = "Batman: Arkham Asylum GOTY" # Game Of The Year
 title_id = "5343080B" # SC-2059
 hash = "2C06E5E920A8291E" # default.xex
-#media_id = [
-#    "71D29B88" # Disc (Europe): http://redump.org/disc/68344
-#    "2150EAC1" # Disc (USA): http://redump.org/disc/50243
-#]
+#media_id = "71D29B88" # Disc (Europe): http://redump.org/disc/68344
 
 [[patch]]
     name = "Debug Menu"
@@ -17,40 +14,4 @@ hash = "2C06E5E920A8291E" # default.xex
         value = 0x00
     [[patch.be8]]
         address = 0x82749ffb
-        value = 0x00
-
-[[patch]]
-    name = "Black Shading Fix"
-    desc = "Disables MSAA"
-    author = "HouseofTudor"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82878ABC
-        value = 0x39600000
-
-[[patch]]
-    name = "Anisotropic Filtering x16"
-    author = "HouseofTudor"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x82372ae8
-        value = 0x38A00010
-
-[[patch]]
-    name = "Upscaling Post Processing Fix"
-    author = "HouseofTudor"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x82351d7b
-        value = 0x00
-
-    [[patch.be8]]
-        address = 0x82422ab3
-        value = 0x00
-		
-	[[patch.be8]]
-        address = 0x824ac373
         value = 0x00

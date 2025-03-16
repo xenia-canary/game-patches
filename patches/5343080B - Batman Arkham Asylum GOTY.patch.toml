@@ -36,7 +36,7 @@ hash = "2C06E5E920A8291E" # default.xex
 
     [[patch.be32]]
         address = 0x82372ae8
-        value = 0x38A00010
+        value = 0x38a00010
 
 [[patch]]
     name = "Upscaling Post Processing Fix"

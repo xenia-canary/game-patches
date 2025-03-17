@@ -6,7 +6,7 @@ hash = "F97F7C0C3071DC58" # default.xex
 [[patch]]
     name = "Black Shading Fix"
     desc = "Disables MSAA"
-    author = "Sowa_95"
+    author = "HouseofTudor, Sowa_95"
     is_enabled = false
 
     [[patch.be8]]

@@ -1,0 +1,14 @@
+title_name = "Alien Breed 2: Assault"
+title_id = "58410A22" # XA-2594
+hash = "94AAFFEBA9610ED3" # default.xex
+#media_id = "04AF61CE" # XBLA: 7B007FF583B8EBEEB53F2B70309B9B7D484A8CDC58
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8314d99f
+        value = 0x04

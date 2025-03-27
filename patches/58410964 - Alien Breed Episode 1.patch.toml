@@ -1,0 +1,14 @@
+title_name = "Alien Breed Episode 1"
+title_id = "58410964" # XA-2404
+hash = "05C6194A488DAB24" # default.xex
+#media_id = "4004D622" # XBLA: 083833CC99CEE294786FBDFE8E89ACFE48C3B44B58
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82f9b843
+        value = 0x04

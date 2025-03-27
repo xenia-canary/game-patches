@@ -15,3 +15,39 @@ hash = "2C06E5E920A8291E" # default.xex
     [[patch.be8]]
         address = 0x82749ffb
         value = 0x00
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82878abc
+        value = 0x39600000
+
+[[patch]]
+    name = "Anisotropic Filtering x16"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82372ae8
+        value = 0x38a00010
+
+[[patch]]
+    name = "Upscaling Post Processing Fix"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82351d7b
+        value = 0x00
+
+    [[patch.be8]]
+        address = 0x82422ab3
+        value = 0x00
+
+    [[patch.be8]]
+        address = 0x824ac373
+        value = 0x00

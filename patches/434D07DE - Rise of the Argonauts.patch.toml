@@ -1,0 +1,14 @@
+title_name = "Rise of the Argonauts"
+title_id = "434D07DE" # CM-2014
+hash = "1829F77474D8740D" # default.xex
+#media_id = "43140262" # Disc (USA, Europe): http://redump.org/disc/14547
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83893fe3
+        value = 0x04

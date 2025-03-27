@@ -1,0 +1,17 @@
+title_name = "The Last Remnant"
+title_id = "535107DA" # SQ-2010
+hash = "E0184D285EBBE8B8" # default.xex
+#media_id = [
+#    "2D6FF16D", # Disc 1 (USA): http://redump.org/disc/12494
+#    "7205C131", # Disc 2 (USA): http://redump.org/disc/12495
+#]
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8347b98b
+        value = 0x04

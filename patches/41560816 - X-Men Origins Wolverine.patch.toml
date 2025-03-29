@@ -1,0 +1,17 @@
+title_name = "X-Men Origins: Wolverine"
+title_id = "41560816" # AV-2070
+hash = "D95CA1F5D153A3AC" # default.xex
+#media_id = "09FF5403" # Disc (USA, Europe): http://redump.org/disc/13323
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8242495c
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82b42657
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

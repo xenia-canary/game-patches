@@ -1,0 +1,27 @@
+title_name = "Deadlight" # v1.0.1
+title_id = "58410B8D" # XA-2957
+hash = "A05A2F1120EAB086" # default.xex
+#media_id = "5F7A6572" # XBLA: 528F64F7BA74EFF04E34D59B78605A065C99011058
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824e2b18
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x829701c7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82801a28
+        value = 0x39400000

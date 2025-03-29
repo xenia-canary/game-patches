@@ -1,7 +1,7 @@
-title_name = "Alien Breed Episode 1"
-title_id = "58410964" # XA-2404
-hash = "05C6194A488DAB24" # default.xex
-#media_id = "4004D622" # XBLA: 083833CC99CEE294786FBDFE8E89ACFE48C3B44B58
+title_name = "Hour of Victory"
+title_id = "4D5707D9" # MW-2009
+hash = "AE84E1B93D6448EE" # default.xex
+#media_id = "5A8BFF60" # Disc (USA, Europe): http://redump.org/disc/14535
 
 [[patch]]
     name = "Unlock FPS"
@@ -9,11 +9,8 @@ hash = "05C6194A488DAB24" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x8250f8dc
-        value = 0x60000000
     [[patch.be8]]
-        address = 0x827a0877
+        address = 0x821d6bef
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -23,5 +20,5 @@ hash = "05C6194A488DAB24" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82f9b843
+        address = 0x82b9d32b
         value = 0x04

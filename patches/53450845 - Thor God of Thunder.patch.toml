@@ -1,0 +1,14 @@
+title_name = "Thor: God of Thunder"
+title_id = "53450845" # SE-2117
+hash = "3E20BD86375842AD" # default.xex
+#media_id = "09EB1F21" # Disc (USA, Europe): http://redump.org/disc/57375
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x832d75a7
+        value = 0x04

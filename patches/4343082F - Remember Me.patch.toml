@@ -1,0 +1,36 @@
+title_name = "Remember Me"
+title_id = "4343082F" # CC-2095
+hash = "EC584EF58089DFCD" # default.xex
+#media_id = "6893C713" # Disc (USA, Europe): http://redump.org/disc/58914
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825a8508
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82c54fd7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828e0880
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a174f4
+        value = 0x38a00010

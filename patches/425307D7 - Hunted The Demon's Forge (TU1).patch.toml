@@ -1,0 +1,17 @@
+title_name = "Hunted: The Demon's Forge" # v2.0.1
+title_id = "425307D7" # BS-2007
+hash = "7FCEB2E89622CD7B" # default.xex
+#media_id = "7084F7FD" # Disc (USA): http://redump.org/disc/100843
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825f7880
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82d1676f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

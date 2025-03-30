@@ -5,7 +5,7 @@ hash = "9418D950A761031F" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "See note about framerate patches in the README. More difficult QTE above 60 FPS"
+    desc = "See note about framerate patches in the README. More difficult QTE above 60 FPS."
     author = "Sowa_95"
     is_enabled = false
 

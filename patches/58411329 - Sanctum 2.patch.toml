@@ -1,0 +1,17 @@
+title_name = "Sanctum 2"
+title_id = "58411329" # XA-4905
+hash = "F99F86F328FDF4B9" # default.xex
+#media_id = "1BB944FE" # XBLA: 730FB9510EF76E316B8CDA9B059D66E1E5359BBA58
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824fdfe0
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x829bdaf7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

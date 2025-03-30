@@ -1,0 +1,17 @@
+title_name = "Warp"
+title_id = "584111DC" # XA-4572
+hash = "CF14CB072AEACCB5" # default.xex
+#media_id = "18E1C9E4" # XBLA: 6BAFFA3FA6EDD340C53FD7CB35281598B364358058
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. FPS higher than 60 not recommended, multiple issues."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82561688
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a3eca7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

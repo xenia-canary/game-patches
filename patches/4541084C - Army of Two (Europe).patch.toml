@@ -1,0 +1,14 @@
+title_name = "Army of Two"
+title_id = "4541084C" # EA-2124
+hash = "AA1EA03FEC9A549C" # default.xex
+#media_id = "7E3E9BEA" # Disc (Europe): http://redump.org/disc/20571
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x830b6fe7
+        value = 0x04

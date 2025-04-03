@@ -1,0 +1,27 @@
+title_name = "Alien Rage"
+title_id = "58410B22" # XA-2850
+hash = "A820301A931819CA" # default.xex
+#media_id = "53F13AAD" # XBLA: 95B6F6741F0262ECAB528CA5A26628731B5EBE2058
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825db0a8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82cc8f5b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82976af0
+        value = 0x39400000

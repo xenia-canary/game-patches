@@ -1,0 +1,17 @@
+title_name = "Bloodforge"
+title_id = "58410B7A" # XA-2938
+hash = "2CBBB16999DB0D4F" # default.xex
+#media_id = "0DDFABF9" # XBLA: 03D4580DD6E5ED73643CDEED0C29D6B632703D9E58
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. FPS higher than 60 can cause movement issues."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825580f8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a4a893
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

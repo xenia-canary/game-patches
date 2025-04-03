@@ -17,6 +17,16 @@ hash = "2C06E5E920A8291E" # default.xex
         value = 0x00
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82a2eb0f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
     name = "Black Shading Fix"
     desc = "Disables MSAA"
     author = "HouseofTudor"

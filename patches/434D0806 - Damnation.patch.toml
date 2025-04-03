@@ -1,0 +1,14 @@
+title_name = "Damnation"
+title_id = "434D0806" # CM-2054
+hash = "6501104B4566E0E3" # default.xex
+#media_id = "2BCAA97E" # Disc (USA, Europe): http://redump.org/disc/13446
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83035837
+        value = 0x04

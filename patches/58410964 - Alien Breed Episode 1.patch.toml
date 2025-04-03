@@ -4,6 +4,19 @@ hash = "05C6194A488DAB24" # default.xex
 #media_id = "4004D622" # XBLA: 083833CC99CEE294786FBDFE8E89ACFE48C3B44B58
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8250f8dc
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x827a0877
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
     name = "Black Shading Fix"
     desc = "Disables MSAA"
     author = "HouseofTudor, Sowa_95"

@@ -1,0 +1,17 @@
+title_name = "Brothers: A Tale of Two Sons"
+title_id = "584112A5" # XA-4773
+hash = "C81497E4B2AE280F" # default.xex
+#media_id = "3C5D9AC7" # XBLA: B3080C274C16ADE0F49B4F55235974A08AE2B1B858
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824d6758
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x829788d7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

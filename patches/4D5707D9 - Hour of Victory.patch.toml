@@ -1,7 +1,7 @@
-title_name = "Rise of the Argonauts"
-title_id = "434D07DE" # CM-2014
-hash = "1829F77474D8740D" # default.xex
-#media_id = "43140262" # Disc (USA, Europe): http://redump.org/disc/14547
+title_name = "Hour of Victory"
+title_id = "4D5707D9" # MW-2009
+hash = "AE84E1B93D6448EE" # default.xex
+#media_id = "5A8BFF60" # Disc (USA, Europe): http://redump.org/disc/14535
 
 [[patch]]
     name = "Unlock FPS"
@@ -9,11 +9,8 @@ hash = "1829F77474D8740D" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x825fb72c
-        value = 0x60000000
     [[patch.be8]]
-        address = 0x8292c35b
+        address = 0x821d6bef
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -23,5 +20,5 @@ hash = "1829F77474D8740D" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x83893fe3
+        address = 0x82b9d32b
         value = 0x04

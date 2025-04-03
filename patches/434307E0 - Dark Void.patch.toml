@@ -4,6 +4,19 @@ hash = "229C8C1F0CE190B0" # default.xex
 #media_id = "2150EAC1" # Disc (USA, Europe): http://redump.org/disc/35201
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825d5c84
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82b98a27
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
     name = "Black Shading Fix"
     desc = "Disables MSAA"
     author = "HouseofTudor, Sowa_95"

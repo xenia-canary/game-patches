@@ -1,0 +1,14 @@
+title_name = "Killer Is Dead"
+title_id = "565707D6" # VW-2006
+hash = "1E38C15F7BF3CD01" # default.xex
+#media_id = "3E830B80" # Disc (USA): http://redump.org/disc/57658
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Menus speed tied to FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82594800
+        value = 0x60000000

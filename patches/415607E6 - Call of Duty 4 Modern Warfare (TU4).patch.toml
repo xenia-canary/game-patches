@@ -1,0 +1,27 @@
+title_name = "Call of Duty 4: Modern Warfare"
+title_id = "415607E6" # AV-2071
+hash = "B4B0A3571D5160E2" # default.xex
+#media_id = "15E8CF88" # Disc (USA, Europe): http://redump.org/disc/12660
+
+[[patch]]
+    name = "Native 1280x720 resolution"
+    desc = "Reduces flickering on upscaled resolutions x2 and x3"
+    author = "mo"
+    is_enabled = false
+
+    # R_SetWndParms
+
+    # wndParms->sceneWidth
+    [[patch.be16]]
+        address = 0x8213537a
+        value = 0x0500       # 1024 -> 1280
+
+    # wndParms->sceneHeight
+    [[patch.be16]]
+        address = 0x8213537e
+        value = 0x02d0       # 600 -> 720
+
+    # wndParms->aaSamples
+    [[patch.be16]]
+        address = 0x82135376
+        value = 0x0000       # 2 -> 0

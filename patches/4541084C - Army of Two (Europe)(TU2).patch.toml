@@ -4,6 +4,19 @@ hash = "A7CA8E7F5FA44611" # default.xex
 #media_id = "7E3E9BEA" # Disc (Europe): http://redump.org/disc/20571
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Game speed tied to FPS, kicks in above ~90FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82545adc # MaxSmoothedFrameRate
+        value = 0x00
+    [[patch.be8]]
+        address = 0x82b231c7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
     name = "Black Shading Fix"
     desc = "Disables MSAA"
     author = "HouseofTudor, Sowa_95"

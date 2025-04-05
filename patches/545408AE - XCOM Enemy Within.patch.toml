@@ -1,0 +1,36 @@
+title_name = "XCOM: Enemy Within"
+title_id = "545408AE" # TT-2222
+hash = "3B33B5481D1AB6D8" # default.xex
+#media_id = "39BC979B" # Disc (USA, Europe): http://redump.org/disc/72080
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824feb24
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x8224bc67
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8271fca8 # OcclusionStepSize
+        value = 0x00
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828defd4
+        value = 0x38a00010

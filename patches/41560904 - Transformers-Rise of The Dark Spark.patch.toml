@@ -4,6 +4,19 @@ hash = "5821E90CE3C7FBB3" # default.xex
 #media_id = "50D83F2D" # Disc (USA): http://redump.org/disc/41959
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Minor issue with levers above 30FPS. Interact while moving, not while stationary."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826b83ad
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x83291e9b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
     name = "Disable Lens Flares"
     desc = "Fixes unoccluded bright lights on-screen."
     author = "boma"

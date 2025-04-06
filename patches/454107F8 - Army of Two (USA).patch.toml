@@ -5,13 +5,13 @@ hash = "2EDC4C4CEC3F7F8D" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "See note about framerate patches in the README. Game speed tied to FPS, kicks in above ~90FPS"
+    desc = "See note about framerate patches in the README. Game speed tied to FPS, kicks in above ~90FPS."
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be8]]
-        address = 0x8247d53f # MaxSmoothedFrameRate
-        value = 0x00
+    [[patch.be32]]
+        address = 0x8247d550
+        value = 0x60000000
     [[patch.be8]]
         address = 0x82a56447
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

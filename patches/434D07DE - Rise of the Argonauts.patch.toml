@@ -25,3 +25,13 @@ hash = "1829F77474D8740D" # default.xex
     [[patch.be8]]
         address = 0x83893fe3
         value = 0x04
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    desc = "This game has moderate texture streaming issues, 16xAF could potentially make it worse."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824b061c
+        value = 0x38a00010

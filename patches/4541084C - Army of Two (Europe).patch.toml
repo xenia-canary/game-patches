@@ -9,9 +9,9 @@ hash = "AA1EA03FEC9A549C" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be8]]
-        address = 0x8247d53f # MaxSmoothedFrameRate
-        value = 0x00
+    [[patch.be32]]
+        address = 0x8247d550
+        value = 0x60000000
     [[patch.be8]]
         address = 0x82a56447
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

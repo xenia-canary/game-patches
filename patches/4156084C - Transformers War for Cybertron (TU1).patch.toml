@@ -1,6 +1,6 @@
-title_name = "Transformers War for Cybertron"
+title_name = "Transformers War for Cybertron" # v4.0.1
 title_id = "4156084C" # AV-2124
-hash = "0D6CA1E3F19F0087" # default.xex
+hash = "3AF46199AE02D5C7" # default.xex
 #media_id = [
 #    "02619995", # Disc (USA): http://redump.org/disc/14254/
 #    "3AFEC771" # Disc (Europe): http://redump.org/disc/67200/
@@ -13,10 +13,10 @@ hash = "0D6CA1E3F19F0087" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826ed364
+        address = 0x826fd274
         value = 0x60000000
     [[patch.be8]]
-        address = 0x8248e3f7
+        address = 0x8249e3ef
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -25,7 +25,7 @@ hash = "0D6CA1E3F19F0087" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x830d54d8
+        address = 0x830e7b10
         value = 0x38600000
 
 [[patch]]
@@ -35,7 +35,7 @@ hash = "0D6CA1E3F19F0087" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82fe684c
+        address = 0x82ff93ac
         value = 0x39400000
 
 [[patch]]
@@ -44,7 +44,7 @@ hash = "0D6CA1E3F19F0087" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x829e3204
+        address = 0x829f4d4c
         value = 0x38a00010
 
 [[patch]]
@@ -54,5 +54,5 @@ hash = "0D6CA1E3F19F0087" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x83900000
+        address = 0x83910000
         value = 0x60000000

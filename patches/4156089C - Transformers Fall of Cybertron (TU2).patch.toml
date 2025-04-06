@@ -5,13 +5,13 @@ hash = "CD1E22093B0ACD1E" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "See note about framerate patches in the README. Some interactible objects softlock above 30FPS. Interact while moving, do not interact while stationary."
+    desc = "See note about framerate patches in the README. Some interactibles softlock above 30FPS. Interact while moving, not while stationary."
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be8]]
-        address = 0x82ab7f54 # MaxSmoothedFrameRate
-        value = 0x00
+    [[patch.be32]]
+        address = 0x82ab7f54
+        value = 0x60000000
     [[patch.be8]]
         address = 0x82e773c3
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

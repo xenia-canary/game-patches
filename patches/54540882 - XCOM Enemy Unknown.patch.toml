@@ -1,0 +1,36 @@
+title_name = "XCOM: Enemy Unknown"
+title_id = "54540882" # TT-2178
+hash = "150D9A7FBC155CA9" # default.xex
+#media_id = "24F29664" # Disc (USA, Europe): http://redump.org/disc/39565
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824f1358
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a3d70f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82399dc0 # OcclusionStepSize
+        value = 0x00
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828e7c4c
+        value = 0x38a00010

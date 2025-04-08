@@ -1,0 +1,36 @@
+title_name = "Deadpool"
+title_id = "415608EC" # AV-2284
+hash = "5F598C9C0797823D" # default.xex
+#media_id = "28D1E78A" # Disc (USA, Europe): http://redump.org/disc/53608
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Physics break at very high FPS. Some chests might require a few attempts to open above 30FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8253ec0a
+        value = 0x4800
+    [[patch.be8]]
+        address = 0x82da39fb
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826e1d44
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829b5764
+        value = 0x38a00010

@@ -1,0 +1,36 @@
+title_name = "Transformers: Dark of the Moon" # v2.0.1
+title_id = "415608A4" # AV-2212
+hash = "F408C5D3F843BA68" # default.xex
+#media_id = "262F2D45" # Disc (USA): http://redump.org/disc/41956
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Physics break at very high FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827711ec
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x825120ff
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82f6dfd4
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications. Coalesced still has to be decrypted/encrypted."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83a90000
+        value = 0x60000000

@@ -1,0 +1,26 @@
+title_name = "Dungeons & Dragons: Daggerdale"
+title_id = "58410AA2" # XA-2722
+hash = "CF263D7E03CA15A5" # default.xex
+#media_id = "6CFE8CE9" # XBLA: 0AEC26B87B4AB64D8EA6C1ADBBD189E9C1E5EBB858
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Camera rotation breaks above 75-80FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824de598
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x829a874f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8290ac0c
+        value = 0x38a00010

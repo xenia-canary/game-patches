@@ -1,36 +1,36 @@
-title_name = "Transformers: Rise of The Dark Spark"
-title_id = "41560904" # AV-2308
-hash = "5821E90CE3C7FBB3" # default.xex
-#media_id = "50D83F2D" # Disc (USA): http://redump.org/disc/41959
+title_name = "XCOM: Enemy Within" # v2.0.1
+title_id = "545408AE" # TT-2222
+hash = "6A23BE57D5715B6D" # default.xex
+#media_id = "39BC979B" # Disc (USA, Europe): http://redump.org/disc/72080
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "See note about framerate patches in the README. Minor issue with levers above 30FPS. Interact while moving, not while stationary."
+    desc = "See note about framerate patches in the README."
     author = "Sowa_95"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826b83ad
+        address = 0x824fcff4
         value = 0x60000000
     [[patch.be8]]
-        address = 0x83291e9b
+        address = 0x8224bc67
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
     name = "Disable Lens Flares"
     desc = "Fixes unoccluded bright lights on-screen."
-    author = "boma"
+    author = "Sowa_95"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82808cac
+        address = 0x8271f4c8 # OcclusionStepSize
         value = 0x39400000
 
 [[patch]]
     name = "16x Anisotropic Filtering"
-    author = "boma"
+    author = "Sowa_95"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82b5ce6c
+        address = 0x828de91c
         value = 0x38a00010

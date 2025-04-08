@@ -1,0 +1,36 @@
+title_name = "The Bureau: XCOM Declassified" # v2.0.1
+title_id = "545407DD" # TT-2013
+hash = "35885346223315AB" # default.xex
+#media_id = "271B66A0" # Disc (World): http://redump.org/disc/67799
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826d76bc
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x823ba55b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen without breaking waypoints."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8290e3a0 # OcclusionStepSize
+        value = 0x00
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82ae3054
+        value = 0x38a00010

@@ -1,0 +1,26 @@
+title_name = "Yaiba: Ninja Gaiden Z"
+title_id = "4B5607E2" # KV-2018
+hash = "740C95869A412AAE" # default.xex
+#media_id = "4DC9C68B" # Disc (USA, Europe): http://redump.org/disc/57599
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82675b0c
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x823305f7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82b35d04
+        value = 0x38a00010

@@ -1,7 +1,7 @@
-title_name = "Legendary"
-title_id = "475007D3" # GP-2003
-hash = "03B014AB8C6401D3" # default.xex
-#media_id = "6E38B2BE" # Disc (USA): http://redump.org/disc/14552
+title_name = "Life Is Strange" # v3.0.9
+title_id = "5841147C" # XA-5244
+hash = "C7F1BC64D4EBC6D6" # default.xex
+#media_id = "25EC0976" # XBLA: 7D712A01A804848890EE92F38CAD2229786E33B258
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,21 +10,11 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822bed65
+        address = 0x825be570
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82280c2b
+        address = 0x82c1a01f
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
-
-[[patch]]
-    name = "Black Shading Fix"
-    desc = "Disables MSAA"
-    author = "HouseofTudor, Sowa_95"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x8311e157
-        value = 0x04
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -33,7 +23,7 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82abe694
+        address = 0x828f2f50
         value = 0x39400000
 
 [[patch]]
@@ -42,5 +32,5 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82633780
+        address = 0x82a33bd4
         value = 0x38a00010

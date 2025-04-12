@@ -15,3 +15,12 @@ hash = "2CBBB16999DB0D4F" # default.xex
     [[patch.be8]]
         address = 0x82a4a893
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82996784
+        value = 0x38a00010

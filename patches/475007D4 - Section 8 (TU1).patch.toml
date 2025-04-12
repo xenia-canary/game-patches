@@ -1,7 +1,7 @@
-title_name = "Legendary"
-title_id = "475007D3" # GP-2003
-hash = "03B014AB8C6401D3" # default.xex
-#media_id = "6E38B2BE" # Disc (USA): http://redump.org/disc/14552
+title_name = "Section 8" # v2.0.1
+title_id = "475007D4" # GP-2004
+hash = "833FCF9A91896897" # default.xex
+#media_id = "377B57C7" # Disc (USA, Europe): http://redump.org/disc/15728
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,10 +10,10 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822bed65
+        address = 0x8254b420
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82280c2b
+        address = 0x82ab4137
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -23,7 +23,7 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8311e157
+        address = 0x8327eb4b
         value = 0x04
 
 [[patch]]
@@ -33,7 +33,7 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82abe694
+        address = 0x82884484
         value = 0x39400000
 
 [[patch]]
@@ -42,5 +42,15 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82633780
+        address = 0x82900e5c
         value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    author = "Sowa_95"
+    desc = "Allows for Coalesced modifications."
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83390004
+        value = 0x60000000

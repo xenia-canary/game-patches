@@ -1,0 +1,36 @@
+title_name = "Borderlands: The Pre-Sequel!"
+title_id = "545408B4" # TT-2228
+hash = "4FB22DA70D606550" # default.xex
+#media_id = "3B9FF6CD" # Disc (World): http://redump.org/disc/43229
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825e7bc8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82e27737
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82ac2c04
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    author = "Sowa_95"
+    desc = "Allows for Coalesced modifications."
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x839d0004
+        value = 0x60000000

@@ -1,0 +1,36 @@
+title_name = "Borderlands 2" # v2.0.14
+title_id = "5454087C" # TT-2172
+hash = "6E3935C259817E40" # default.xex
+#media_id = "00A8D174" # Disc (World): http://redump.org/disc/43227
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826b1f08
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82eea797
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82bae9f4
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    author = "Sowa_95"
+    desc = "Allows for Coalesced modifications."
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83bd0004
+        value = 0x60000000

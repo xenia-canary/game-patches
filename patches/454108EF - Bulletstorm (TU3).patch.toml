@@ -1,6 +1,6 @@
-title_name = "Bulletstorm"
+title_name = "Bulletstorm" # v4.0.3
 title_id = "454108EF" # EA-2287
-hash = "D61EAED8BB6A1365" # default.xex
+hash = "6A7504D7D0275AA5" # default.xex
 #media_id = "1D93E609" # Disc (USA, Europe): http://redump.org/disc/21494
 
 [[patch]]
@@ -10,10 +10,10 @@ hash = "D61EAED8BB6A1365" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82591de8
+        address = 0x82592bd0
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82c7bb5f
+        address = 0x82c7d597
         value = 0x01
 
 [[patch]]
@@ -23,7 +23,7 @@ hash = "D61EAED8BB6A1365" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8293c978
+        address = 0x8293dbe8
         value = 0x39400000
 
 [[patch]]
@@ -33,7 +33,7 @@ hash = "D61EAED8BB6A1365" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8232e680
+        address = 0x8232f070
         value = 0x39200000
 
 [[patch]]
@@ -42,7 +42,7 @@ hash = "D61EAED8BB6A1365" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82a514cc
+        address = 0x82a51fe4
         value = 0x38a00010
 
 [[patch]]
@@ -52,13 +52,13 @@ hash = "D61EAED8BB6A1365" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825e6870
+        address = 0x825e7d30
         value = 0x39600000
     [[patch.be32]]
-        address = 0x82422708
+        address = 0x824231f0
         value = 0x39600000
     [[patch.be32]]
-        address = 0x8266b920
+        address = 0x8266d2b8
         value = 0x39600000
 
 [[patch]]
@@ -68,5 +68,5 @@ hash = "D61EAED8BB6A1365" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x83500284
+        address = 0x83540284
         value = 0x60000000

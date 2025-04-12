@@ -1,7 +1,7 @@
-title_name = "Legendary"
-title_id = "475007D3" # GP-2003
-hash = "03B014AB8C6401D3" # default.xex
-#media_id = "6E38B2BE" # Disc (USA): http://redump.org/disc/14552
+title_name = "Painkiller: Hell & Damnation" # v3.0.1
+title_id = "354807D1" # 5H-2001
+hash = "56209C4732826FCF" # default.xex
+#media_id = "35185D64" # Disc (Europe): http://redump.org/disc/71444
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,21 +10,11 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822bed65
+        address = 0x8250fa48
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82280c2b
+        address = 0x82a00797
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
-
-[[patch]]
-    name = "Black Shading Fix"
-    desc = "Disables MSAA"
-    author = "HouseofTudor, Sowa_95"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x8311e157
-        value = 0x04
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -33,7 +23,7 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82abe694
+        address = 0x8283cdb8
         value = 0x39400000
 
 [[patch]]
@@ -42,5 +32,5 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82633780
+        address = 0x8295177c
         value = 0x38a00010

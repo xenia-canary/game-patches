@@ -1,8 +1,8 @@
-title_name = "Army of Two: The 40th Day" # TFD
+title_name = "Army of Two: The 40th Day" # TFD, v2.0.3
 title_id = "454108D8" # EA-2264
 hash = [
-    "7C5F016EA6A81E95" # default.xex
-#    "2330F2A205951B81" # AO3MPGame-XeReleaseLTCG.xex
+    "4B6EDCD2321B637A" # default.xex
+#    "F9EEBD231B6BEE78" # AO3MPGame-XeReleaseLTCG.xex
 ]
 #media_id = "44388CF4" # Disc (USA, Australia): http://redump.org/disc/13279
 
@@ -13,10 +13,10 @@ hash = [
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8275f382
+        address = 0x8276ec92
         value = 0x4800
     [[patch.be8]]
-        address = 0x82eb05d7
+        address = 0x82ec1017
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -26,17 +26,8 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8292b858
+        address = 0x8293b138
         value = 0x48000020
-
-[[patch]]
-    name = "16x Anisotropic Filtering"
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x82cff13f
-        value = 0x10
 
 [[patch]]
     name = "Disable Motion Blur"
@@ -44,7 +35,7 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82c9e2a8
+        address = 0x82cae2c8
         value = 0x480001c4
 
 [[patch]]
@@ -54,5 +45,5 @@ hash = [
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8371360b
+        address = 0x837237fb
         value = 0x00

@@ -1,7 +1,7 @@
-title_name = "Borderlands 2" # v2.0.14
-title_id = "5454087C" # TT-2172
-hash = "6E3935C259817E40" # default.xex
-#media_id = "00A8D174" # Disc (World): http://redump.org/disc/43227
+title_name = "Singularity"
+title_id = "415607EF" # AV-2031
+hash = "AFB45E9586F98A97" # default.xex
+#media_id = "1B62BF41" # Disc (USA, Europe): http://redump.org/disc/14264
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,10 +10,10 @@ hash = "6E3935C259817E40" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826b1f08
+        address = 0x83348238
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82eea797
+        address = 0x82691eaf
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -22,7 +22,7 @@ hash = "6E3935C259817E40" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82bae9f4
+        address = 0x82dbbd94
         value = 0x38a00010
 
 [[patch]]
@@ -32,5 +32,5 @@ hash = "6E3935C259817E40" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x83bd0004
+        address = 0x83a02e84
         value = 0x60000000

@@ -40,8 +40,8 @@ hash = "E0184D285EBBE8B8" # default.xex
 
 [[patch]]
     name = "Disable Coalesced hash check"
-    author = "Sowa_95"
     desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
     is_enabled = false
 
     [[patch.be32]]

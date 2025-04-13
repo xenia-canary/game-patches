@@ -30,6 +30,15 @@ hash = [
         value = 0x48000020
 
 [[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma, Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82d07b38
+        value = 0x38a00010
+
+[[patch]]
     name = "Disable Motion Blur"
     author = "boma"
     is_enabled = false

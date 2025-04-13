@@ -15,8 +15,8 @@ hash = "C01C5BA21C8272D2" # default.xex
 
 [[patch]]
     name = "Show FPS"
-    author = "Adrian"
     desc = "White = current frame time, Red = average frame time."
+    author = "Adrian"
     is_enabled = false
 
     [[patch.be8]]

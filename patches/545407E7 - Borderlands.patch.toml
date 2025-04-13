@@ -1,0 +1,36 @@
+title_name = "Borderlands"
+title_id = "545407E7" # TT-2023
+hash = "84FDDE09DD33636B" # default.xex
+#media_id = "380D3355" # Disc (World): http://redump.org/disc/12477
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a3be40
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82c265e7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a1a19c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    author = "Sowa_95"
+    desc = "Allows for Coalesced modifications."
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x836d0004
+        value = 0x60000000

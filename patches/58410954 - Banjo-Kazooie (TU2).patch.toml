@@ -1,0 +1,14 @@
+title_name = "Banjo-Kazooie (TU2)"
+title_id = "58410954" # XA-2388
+hash = "CAFD5CE4E98048D9" # default.xex
+#media_id = "69C685B7"
+
+[[patch]]
+    name = "Always HD Banjo"
+    desc = "Devs neglected to change the outdoors model ID."
+    author = "retroben"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8209d24e
+        value = 0x034e

@@ -49,6 +49,15 @@ hash = "13D07541617C6257" # default.xex
         value = 0x4800
 
 [[patch]]
+    name = "Disable LoD"
+    author = "retroben, ICUP321"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82bc40b0
+        value = 0x48000018
+
+[[patch]]
     name = "Notes Never Decrease"
     author = "Etokapa, Serenity, ICUP321"
     is_enabled = false
@@ -72,8 +81,35 @@ hash = "13D07541617C6257" # default.xex
     is_enabled = false
 
     [[patch.be32]]
+        address = 0x824facf8
+        value = 0x38e000ff
+    [[patch.be32]]
+        address = 0x824fb6f4
+        value = 0x394000ff
+    [[patch.be32]]
         address = 0x825425c4
         value = 0x392000ff
+
+[[patch]]
+    name = "Extended Build Range"
+    author = "retroben, ICUP321"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826333ec
+        value = 0x2f09001f
+    [[patch.be32]]
+        address = 0x82633408
+        value = 0x2f09001f
+    [[patch.be32]]
+        address = 0x82633424
+        value = 0x2f0b001f
+    [[patch.be32]]
+        address = 0x82633510
+        value = 0x21290020
+    [[patch.be32]]
+        address = 0x82633580
+        value = 0x216b0020
 
 [[patch]]
     name = "Screen Always Bright"

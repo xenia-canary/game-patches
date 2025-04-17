@@ -1,6 +1,6 @@
-title_name = "Turok"
+title_name = "Turok" # v2.0.2
 title_id = "425607D3" # BV-2003
-hash = "C01C5BA21C8272D2" # default.xex
+hash = "1FB4E3210AB7A7A9" # default.xex
 #media_id = "3926BB9B" # Disc (USA, Europe): http://redump.org/disc/13439
 
 [[patch]]
@@ -10,7 +10,7 @@ hash = "C01C5BA21C8272D2" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x827ffd5f
+        address = 0x827fff77
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]

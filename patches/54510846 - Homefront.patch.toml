@@ -1,7 +1,7 @@
-title_name = "Legendary"
-title_id = "475007D3" # GP-2003
-hash = "03B014AB8C6401D3" # default.xex
-#media_id = "6E38B2BE" # Disc (USA): http://redump.org/disc/14552
+title_name = "Homefront"
+title_id = "54510846" # TQ-2118
+hash = "D75C3C58EF304ACC" # default.xex
+#media_id = "3CD18BAF" # Disc (USA, Europe): http://redump.org/disc/48620
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,21 +10,11 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822bed65
+        address = 0x82f2654d # alternatively set cl = -nostartupmovies. For some reason it disables bSmoothFrameRate.
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82280c2b
+        address = 0x82409e87
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
-
-[[patch]]
-    name = "Black Shading Fix"
-    desc = "Disables MSAA"
-    author = "HouseofTudor, Sowa_95"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x8311e157
-        value = 0x04
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -32,9 +22,9 @@ hash = "03B014AB8C6401D3" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x82abe694
-        value = 0x39400000
+    [[patch.be8]]
+        address = 0x82c922af # OcclusionStepSize
+        value = 0x00
 
 [[patch]]
     name = "16x Anisotropic Filtering"
@@ -42,5 +32,5 @@ hash = "03B014AB8C6401D3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82633780
+        address = 0x82e92b78
         value = 0x38a00010

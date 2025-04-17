@@ -62,6 +62,16 @@ hash = "D61EAED8BB6A1365" # default.xex
         value = 0x39600000
 
 [[patch]]
+    name = "Disable Ambient Occlusion - Nvidia RTV fix"
+    desc = "Fixes black shade on textures. Required only on Nvidia GPUs with driver 526.47 or later. Not neccesary when using ROV."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82845cb8
+        value = 0x39600000
+
+[[patch]]
     name = "Disable Coalesced hash check"
     desc = "Allows for Coalesced modifications."
     author = "Sowa_95"

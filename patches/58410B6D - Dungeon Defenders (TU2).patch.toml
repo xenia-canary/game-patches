@@ -1,7 +1,7 @@
-title_name = "Planet 51: The Game"
-title_id = "5345082B" # SE-2091
-hash = "D057A31F821B498A" # default.xex
-#media_id = "1A7DFC39" # Disc (USA, Europe): http://redump.org/disc/68692
+title_name = "Dungeon Defenders" # v4.0.2
+title_id = "58410B6D" # XA-2925
+hash = "803E2C7920B0A202" # default.xex
+#media_id = "6DEC0B16" # XBLA: 01E9D20124D14A2277BE973B966011B35250EA5258
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,21 +10,11 @@ hash = "D057A31F821B498A" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82493b2c
+        address = 0x824de4d8
         value = 0x60000000
     [[patch.be8]]
-        address = 0x8274c91f
+        address = 0x82985ab7
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
-
-[[patch]]
-    name = "Black Shading Fix"
-    desc = "Solves most dynamic lighting artifacts caused by an issue with light environments and MSAA tiling."
-    author = "noxrim, thx boma"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8230c118
-        value = 0x39200000
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -33,7 +23,7 @@ hash = "D057A31F821B498A" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82635ebc
+        address = 0x828987ac
         value = 0x39400000
 
 [[patch]]
@@ -42,5 +32,15 @@ hash = "D057A31F821B498A" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822cfbe4
+        address = 0x82920894
         value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x830e0f84
+        value = 0x60000000

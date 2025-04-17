@@ -1,7 +1,7 @@
-title_name = "Sanctum 2"
-title_id = "58411329" # XA-4905
-hash = "F99F86F328FDF4B9" # default.xex
-#media_id = "1BB944FE" # XBLA: 730FB9510EF76E316B8CDA9B059D66E1E5359BBA58
+title_name = "Alpha Protocol"
+title_id = "5345080E" # SE-2062
+hash = "FC3BAE12B708EC58" # default.xex
+#media_id = "49303842" # Disc (USA, Europe): http://redump.org/disc/14703
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,10 +10,10 @@ hash = "F99F86F328FDF4B9" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824fdfe0
+        address = 0x825fd954
         value = 0x60000000
     [[patch.be8]]
-        address = 0x829bdaf7
+        address = 0x822ea447
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -22,5 +22,5 @@ hash = "F99F86F328FDF4B9" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8293568c
+        address = 0x822e2c1c
         value = 0x38a00010

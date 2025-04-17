@@ -1,0 +1,36 @@
+title_name = "Homefront"
+title_id = "54510846" # TQ-2118
+hash = "D75C3C58EF304ACC" # default.xex
+#media_id = "3CD18BAF" # Disc (USA, Europe): http://redump.org/disc/48620
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82f2654d # alternatively set cl = -nostartupmovies. For some reason it disables bSmoothFrameRate.
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82409e87
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82c922af # OcclusionStepSize
+        value = 0x00
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82e92b78
+        value = 0x38a00010

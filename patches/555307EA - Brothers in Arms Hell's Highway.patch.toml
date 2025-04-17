@@ -1,0 +1,36 @@
+title_name = "Brothers in Arms: Hell's Highway"
+title_id = "555307EA" # US-2026
+hash = "5F08144107199D46" # default.xex
+#media_id = "3284AD25" # Disc (USA, Europe): http://redump.org/disc/13280
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82d642da
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x8282e207
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8268015c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x832f0004
+        value = 0x60000000

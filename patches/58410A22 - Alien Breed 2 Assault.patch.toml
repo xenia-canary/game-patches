@@ -25,3 +25,34 @@ hash = "94AAFFEBA9610ED3" # default.xex
     [[patch.be8]]
         address = 0x8314d99f
         value = 0x04
+
+[[patch]]
+    name = "Disable Motion Blur"
+    desc = "Solves most ghosting and artifacting caused by quickly panning cameras."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8255dfd4
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8238f17c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x831ac1a8
+        value = 0x01
+    [[patch.be8]]
+        address = 0x831ac1b0 # Frametime
+        value = 0x01

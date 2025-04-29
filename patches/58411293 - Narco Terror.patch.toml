@@ -1,0 +1,81 @@
+title_name = "Narco Terror"
+title_id = "58411293" # XA-4755
+hash = "9750E833E0851857" # default.xex
+#media_id = "2221251F" # XBLA: BCA420340979266ED7C8EDFA08698F3F8D60D08D58
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821d9f4b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Corrupted Graphics Fix"
+    desc = "Prevents multiple issues by increasing Resource Memory pool from 300 to 350Mb. Maximum is 455, higher values will break the game."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x825ae0c8
+        value = 0x3960
+    [[patch.be16]]
+        address = 0x825ae0ca
+        value = 0x015e # 350
+
+[[patch]]
+    name = "Disable FXAA"
+    desc = "Improves overall sharpness at the cost of increased aliasing."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82b9fa13
+        value = 0x00 # 0x00=disabled; 0x01=enabled
+    [[patch.be32]]
+        address = 0x82b9fa18
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Camera Shake"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82b82f24
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen. Probably not required on default occlusion = 100, most (if not all) flares are hidden."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ba76d3
+        value = 0x00 # 0x00=disabled; 0x01=enabled
+
+[[patch]]
+    name = "Set Post-Processing quality"
+    desc = "This game is using high quality preset by default. Disabling all Post-Processing will dramatically change overall look of the game."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82b9f803
+        value = 0x02 # 0x00=none; 0x01=low; 0x02=high (default)
+    [[patch.be32]]
+        address = 0x82b9f808
+        value = 0x60000000
+
+[[patch]]
+    name = "Show Engine Statistics"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82bada0b
+        value = 0x01 # 0x01=FPS; 0x02=detailed; 0x03=profiler with jobs; 0x04=profiler without jobs; 0x05=GPU profile

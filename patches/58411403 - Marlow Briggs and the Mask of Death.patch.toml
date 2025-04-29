@@ -1,0 +1,105 @@
+title_name = "Marlow Briggs and the Mask of Death"
+title_id = "58411403" # XA-5123
+hash = "5E23D542B161E724" # default.xex
+#media_id = "680A0B6F" # XBLA: 50406CF7F03848B2058D852220F3C0258833DFD258
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821d9f4b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Corrupted Graphics Fix"
+    desc = "Prevents multiple issues by increasing Resource Memory pool from 300 to 350Mb. Maximum is 455, higher values will break the game."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x825c4380
+        value = 0x3960
+    [[patch.be16]]
+        address = 0x825c4382
+        value = 0x015e # 350
+
+[[patch]]
+    name = "Disable FXAA"
+    desc = "Improves overall sharpness at the cost of increased aliasing."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ba4f0b
+        value = 0x00 # 0x00=disabled; 0x01=enabled
+    [[patch.be32]]
+        address = 0x82ba4f10
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Film Grain"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ba546b
+        value = 0x00 # 0x00=disabled; 0x01=enabled
+    [[patch.be32]]
+        address = 0x82ba5470
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Bloom"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ba6813
+        value = 0x00 # 0x00=disabled; 0x01=enabled
+    [[patch.be32]]
+        address = 0x82ba6818
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Camera Shake"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82b863e4
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82bacbcb
+        value = 0x00 # 0x00=disabled; 0x01=enabled
+
+[[patch]]
+    name = "Set Post-Processing quality"
+    desc = "This game is using high quality preset by default. Disabling all Post-Processing will dramatically change overall look of the game."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ba4cfb
+        value = 0x02 # 0x00=none; 0x01=low; 0x02=high (default)
+    [[patch.be32]]
+        address = 0x82ba4d00
+        value = 0x60000000
+
+[[patch]]
+    name = "Show Engine Statistics"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82bb2f83
+        value = 0x01 # 0x01=FPS; 0x02=detailed; 0x03=profiler with jobs; 0x04=profiler without jobs; 0x05=GPU profile

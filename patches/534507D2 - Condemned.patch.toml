@@ -9,6 +9,9 @@ hash = "B8C0F56B4E0F9380" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be8]]
+    [[patch.be32]]
         address = 0x8217d7f8
-        value = 0x00
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x826ca4c7
+        value = 0x01 # 0x01=60FPS; 0x02=30FPS

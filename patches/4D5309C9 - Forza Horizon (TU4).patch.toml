@@ -1,6 +1,6 @@
-title_name = "Forza Horizon"
+title_name = "Forza Horizon" # Title Update 4
 title_id = "4D5309C9" # MS-2505
-hash = "D48ABF1704CE5C4A" # default.xex
+hash = "336A44DC03EC8782" # default.xex
 #media_id = [
 #    "2B7A1346", # Disc (Europe, Asia): http://redump.org/disc/84331
 #    "4000D145", # Disc (Europe):       http://redump.org/disc/88563
@@ -13,7 +13,7 @@ hash = "D48ABF1704CE5C4A" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82d7894c
+        address = 0x82e3a924
         value = 0x60000000
 
 [[patch]]
@@ -22,13 +22,13 @@ hash = "D48ABF1704CE5C4A" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8245b494
+        address = 0x8248ab7c
         value = 0x39600000
     [[patch.be32]]
-        address = 0x8245846c
+        address = 0x82487b54
         value = 0x39600000
     [[patch.be32]]
-        address = 0x8245849c
+        address = 0x82487b84
         value = 0x39600000
 
 [[patch]]
@@ -37,18 +37,8 @@ hash = "D48ABF1704CE5C4A" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824408b0
+        address = 0x824709b8
         value = 0x39600000
     [[patch.be32]]
-        address = 0x82442478
+        address = 0x82472698
         value = 0x39600000
-
-[[patch]]
-    name = "Disabe gamedb.slt check"
-    desc = "Allows for gamedb modifications. Not required on TU4 - gamedb has to be edited through TU files."
-    author = "Sowa_95"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x83520004
-        value = 0x60000000

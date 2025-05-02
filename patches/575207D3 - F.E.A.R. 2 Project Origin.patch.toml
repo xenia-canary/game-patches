@@ -6,6 +6,7 @@ hash = "B59664B425CE8FD3" # default.xex
 [[patch]]
     name = "Unlock FPS"
     desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
     is_enabled = false
 
     [[patch.be32]]

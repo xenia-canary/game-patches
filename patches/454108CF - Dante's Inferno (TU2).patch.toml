@@ -9,6 +9,7 @@ hash = "C81DD5288EA71831" # default.xex
 [[patch]]
     name = "60 FPS Cutscenes"
     desc = "Disables vsync modifier for real time cutscenes, making them run at the same interval as gameplay."
+    author = "Sowa_95"
     is_enabled = false
 
     [[patch.be8]]

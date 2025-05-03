@@ -42,7 +42,7 @@ jobs:
             if [ -n "$patch_errored" ]; then
               case $3 in
                 match)
-                  local grep_result_lines=($(grep -oP '[0-9]+(?=:)' <<<"$grep_result"))
+                  local grep_result_lines=($(pcregrep -o '[0-9]+(?=:)' <<<"$grep_result"))
                   for grep_result_line in "${grep_result_lines[@]}"; do
                     if [ -n "$5" ]; then
                       local grep_result_line_end=",endLine=$(( grep_result_line + $5 ))"
@@ -58,7 +58,7 @@ jobs:
             patch_content="$(cat "$patch")"
             patch_check 'patches\/[0-9A-F]{8} - .+\.patch\.toml'                                                                      "$patch"         nomatch "Filename is invalid!"
             patch_check 'title_name = ".+"'                                                                                           "$patch_content" nomatch "title_name is invalid or missing!"
-            patch_check 'title_id = "[0-9A-F]{8}" # [A-Z]{2}-[0-9]{4,5}'                                                              "$patch_content" nomatch "title_id is invalid or missing!"
+            patch_check 'title_id = "[0-9A-F]{8}" # [0-9A-Z]{2}-[0-9]{4,5}'                                                           "$patch_content" nomatch "title_id is invalid or missing!"
             patch_check 'hash = ("[0-9A-F]{16}"|\[.*\n {4}"[0-9A-F]{16}",?) # .+|#hash = (""|\[(\n# {4}"".*)+\n#])'                   "$patch_content" nomatch "hash is invalid or missing!"
             patch_check '#hash = (""|\[\n# {4}"").*'                                                                                  "$patch_content" match   "hash is empty."
             patch_check '#media_id = ("[0-9A-F]{8}".*|\[( # .+)?\n# {4}"[0-9A-F]{8}".*(\n# {4}"[0-9A-F]{8}".*)*\n#\])|#media_id = ""' "$patch_content" nomatch "media_id is invalid or missing!"

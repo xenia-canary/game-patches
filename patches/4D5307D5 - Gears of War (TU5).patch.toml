@@ -56,3 +56,22 @@ hash = "34849A59634915F6" # default.xex
     [[patch.be32]]
         address = 0x8249d4d4
         value = 0x38a00008 # li r5, 8
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829f4f2f
+        value = 0x00
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82fdace4
+        value = 0x01

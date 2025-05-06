@@ -1,4 +1,4 @@
-title_name = "Deadlight" # v1.0.1
+title_name = "Deadlight" # TU1
 title_id = "58410B8D" # XA-2957
 hash = "A05A2F1120EAB086" # default.xex
 #media_id = "5F7A6572" # XBLA: 528F64F7BA74EFF04E34D59B78605A065C99011058
@@ -25,3 +25,25 @@ hash = "A05A2F1120EAB086" # default.xex
     [[patch.be32]]
         address = 0x82801a28
         value = 0x39400000
+
+[[patch]]
+    name = "Disable Depth of Field"
+    desc = "Dramatically changes the overall look of the game, but solves DoF related issues."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82537bdc
+        value = 0x39600000
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83743cb4
+        value = 0x01
+    [[patch.be8]]
+        address = 0x83743cc8 # Frametime
+        value = 0x01

@@ -1,0 +1,46 @@
+title_name = "Fairytale Fights"
+title_id = "504307D1" # PC-2001
+hash = "8748DD0E9327790A" # default.xex
+#media_id = "245AF362" # Disc (USA, Europe): http://redump.org/disc/13448
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82493154
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x828dce5f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ea3b03
+        value = 0x04
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82785d6c
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827e725c
+        value = 0x38a00010

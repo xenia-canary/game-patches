@@ -1,0 +1,38 @@
+title_name = "Mass Effect 3" # TU6
+title_id = "4541095D" # EA-2397
+hash = "A1207A38D9B33B66" # default.xex
+#media_id = [
+#    "445C882A", # Disc 1 (World): http://redump.org/disc/35945
+#    "3FCD7B99"  # Disc 2 (World): http://redump.org/disc/35946
+#]
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82736ea8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82e91b53
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827efd9c
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82b701b4
+        value = 0x38a00010

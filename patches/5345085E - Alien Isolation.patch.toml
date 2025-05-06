@@ -1,0 +1,29 @@
+title_name = "Alien: Isolation"
+title_id = "5345085E" # SE-2142
+hash = "42B77D03F09244A3" # default.xex
+#media_id = [
+#    "6C4728D7", # Disc 1 (USA, Europe): http://redump.org/disc/39140
+#    "7D5B2F26"  # Disc 2 (USA, Europe): http://redump.org/disc/39141
+#]
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x827125e3
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82005218
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82005234
+        value = 0x60000000

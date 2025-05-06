@@ -5,7 +5,7 @@ hash = "F965DFB1F254E4E2" # default.xex
 
 [[patch]]
     name = "Unlock FPS"
-    desc = "See note about framerate patches in the README."
+    desc = "See note about framerate patches in the README. Alternatively use framerate option in-game, it will fully unlock FPS regardless of Xenia's vsync setting."
     author = "boma"
     is_enabled = false
 
@@ -33,4 +33,14 @@ hash = "F965DFB1F254E4E2" # default.xex
 
     [[patch.be32]]
         address = 0x826d7984
+        value = 0x38a00010
+
+[[patch]]
+    name = "16x Anisotropic Filtering - alternative"
+    desc = "Original patch doesn't filter properly, some textures look even worse than default. It might have something to do with ambient occlusion."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8270d7b8
         value = 0x38a00010

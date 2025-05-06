@@ -1,0 +1,152 @@
+title_name = "Mass Effect 2"
+title_id = "454108CE" # EA-2254
+hash = "2F1248679FD451B2" # default.xex
+#media_id = [
+#    "6EE5A52F", # Disc 1 (USA, Europe): http://redump.org/disc/12501
+#    "027D8AAF"  # Disc 2 (USA, Europe): http://redump.org/disc/12502
+#]
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8244b6e4 # bSmoothFrameRate = FALSE
+        value = 0x60000000 # nop
+    [[patch.be8]]
+        address = 0x82a94ca7 # D3DPRESENT_INTERVAL_ONE
+        value = 0x01
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Solves most dynamic lighting artifacts caused by an issue with light environments and MSAA tiling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8336afd7 # .data, GTilingMode = 0
+        value = 0x00
+    [[patch.be32]]
+        address = 0x827cab80 # XenonClient, GTilingMode = 0
+        value = 0x39600000 # li r11, 0
+    [[patch.be32]]
+        address = 0x827caaf4 # XenonClient, GTilingMode = 0
+        value = 0x39600000 # li r11, 0
+    [[patch.be32]]
+        address = 0x827cf00c # InitD3D, GMaxShadowDepthBufferSize = 0x800
+        value = 0x39600800 # li r11, 0x800
+    [[patch.be32]]
+        address = 0x827cf02c # InitD3D, GUseTilingCode = 0
+        value = 0x93e70000 # stw r31, 0(r7)
+    [[patch.be32]]
+        address = 0x82854280 # FEngineLoop, GUseTilingCode = 0
+        value = 0x93860000 # stw r28, 0(r6)
+    [[patch.be32]]
+        address = 0x8274b508 # UmbraFrustumCulling, GUseTilingCode = 0
+        value = 0x3b400000 # li r26, 0
+    [[patch.be32]]
+        address = 0x8269ecec # RenderSceneCaptures, GUseTilingCode = 0
+        value = 0x3ae00000 # li r23, 0
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen without breaking interactibles."
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x827170e0
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x827170fc
+        value = 0xc01e0000
+
+[[patch]]
+    name = "HQ Post-Processing"
+    desc = "Fixes pixelated DOF double-vision and forces bloom with higher sample count."
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822eafd4
+        value = 0xc0050000
+    [[patch.be32]]
+        address = 0x822eb1e0
+        value = 0x39600003
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8249e9f4 # bAllowMotionBlur = FALSE
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x8249ea00 # bShowMotionBlur = FALSE
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827d5bfc # MaxAnisotropy = 16
+        value = 0x38a00010 # li r5, 0x10
+
+[[patch]]
+    name = "Disable Bloom"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822ebc44 # bAllowBloom = FALSE
+        value = 0x39400000 # li r10, 0
+
+[[patch]]
+    name = "Disable Low-Resolution Depth of Field"
+    desc = "Only enable if you're experiencing a pixelated image when upscaling. Affects other post-processing which uses the same shader pipeline DoF does."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822ebc50 # bAllowDepthofField = FALSE
+        value = 0x39600000 # li r11, 0
+    [[patch.be32]]
+        address = 0x823b4618 # bAllowDepthofField = FALSE
+        value = 0x39600000 # li r11, 0
+
+[[patch]]
+    name = "Disable All Post-Processing"
+    desc = "Dramatically changes the overall look of the game. Only enable unless troubleshooting upscaling-related artifacts or if any post-processing is considered undesirable."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8269e984
+        value = 0x4800 # b 8269ea58
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x834a7ee0
+        value = 0x60000000
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x833c5d38
+        value = 0x01
+    [[patch.be8]]
+        address = 0x833c5d40
+        value = 0x01

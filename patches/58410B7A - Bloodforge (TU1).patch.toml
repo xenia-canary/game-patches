@@ -1,4 +1,4 @@
-title_name = "Bloodforge" # v1.0.1
+title_name = "Bloodforge" # TU1
 title_id = "58410B7A" # XA-2938
 hash = "8BBA1C14F78D0CB5" # default.xex
 #media_id = "0DDFABF9" # XBLA: 03D4580DD6E5ED73643CDEED0C29D6B632703D9E58
@@ -15,3 +15,12 @@ hash = "8BBA1C14F78D0CB5" # default.xex
     [[patch.be8]]
         address = 0x82a4a5d3
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82996da4
+        value = 0x38a00010

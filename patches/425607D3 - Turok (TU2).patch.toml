@@ -1,0 +1,43 @@
+title_name = "Turok" # TU2
+title_id = "425607D3" # BV-2003
+hash = "1FB4E3210AB7A7A9" # default.xex
+#media_id = "3926BB9B" # Disc (USA, Europe): http://redump.org/disc/13439
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x827fff77
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Show FPS"
+    desc = "White = current frame time, Red = average frame time."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x834893a4
+        value = 0x01
+
+[[patch]]
+    name = "Show Location"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x834893ac
+        value = 0x01
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x834c0021
+        value = 0x60000000

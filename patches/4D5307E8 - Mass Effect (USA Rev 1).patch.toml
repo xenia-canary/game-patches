@@ -1,0 +1,52 @@
+title_name = "Mass Effect" # Mass Effect Trilogy
+title_id = "4D5307E8" # MS-2024
+hash = "8B5DAEAF86BFDD29" # default.xex
+#media_id = "38575660" # Disc (USA Rev 1): http://redump.org/disc/38463
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82233bc3
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA."
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be8]] # tilingcode
+        address = 0x82e5dcb7
+        value = 0x00
+
+[[patch]]
+    name = "Skip Intro Movies"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8223b3f8
+        value = 0x41
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x826de80f
+        value = 0x00
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82eaf10c
+        value = 0x01

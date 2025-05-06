@@ -100,3 +100,25 @@ hash = "BDB97753374D520A" # default.xex
     [[patch.be32]]
         address = 0x824ed0a4
         value = 0x39400000
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82aa8907
+        value = 0x00
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83123468
+        value = 0x01
+    [[patch.be8]]
+        address = 0x83123470 # Frametime
+        value = 0x01

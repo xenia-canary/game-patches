@@ -28,3 +28,22 @@ hash = "E0184D285EBBE8B8" # default.xex
     [[patch.be8]]
         address = 0x8347b98b
         value = 0x04
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829ae308
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83560024
+        value = 0x60000000

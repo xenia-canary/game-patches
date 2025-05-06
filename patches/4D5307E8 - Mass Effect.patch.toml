@@ -1,7 +1,27 @@
 title_name = "Mass Effect"
-title_id = "4D5307E8" # XA-5174
-hash = "8F4ECF10C53859FE" # default.xex
-#media_id = "572BA75D" # Disc (USA): http://redump.org/disc/38463
+title_id = "4D5307E8" # MS-2024
+hash = [ # default.xex
+    "D29E208F252C9051", # World
+    "F41D9C07DAD397F4", # Europe, Canada
+    "6B421E084407EDC0", # Germany
+    "E395D130B2F31B6F"  # Italy
+]
+#media_id = [
+#    "572BA75D", # Disc (World):          http://redump.org/disc/11416
+#    "70630A1A", # Disc (Europe, Canada): http://redump.org/disc/67845
+#    "5ED90C8E", # Disc (Germany):        http://redump.org/disc/9688
+#    "5BE7B26E"  # Disc (Italy):          http://redump.org/disc/66654
+#]
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x822339b3
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
     name = "Black Shading Fix"
@@ -21,3 +41,22 @@ hash = "8F4ECF10C53859FE" # default.xex
     [[patch.be8]]
         address = 0x8223b1e8
         value = 0x41
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x826df2bf
+        value = 0x00
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82eaf12c
+        value = 0x01

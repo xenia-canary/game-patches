@@ -1,0 +1,17 @@
+title_name = "F.E.A.R. 2: Project Origin" # TU3
+title_id = "575207D3" # WR-2003
+hash = "842EE0B627CB3E91" # default.xex
+#media_id = "47FF209F" # Disc (USA, Korea): http://redump.org/disc/16110
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8242493c
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x823e6e6b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

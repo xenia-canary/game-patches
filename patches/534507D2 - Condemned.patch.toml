@@ -1,0 +1,17 @@
+title_name = "Condemned" # Criminal Origins
+title_id = "534507D2" # SE-2002
+hash = "B8C0F56B4E0F9380" # default.xex
+#media_id = "00000000" # Disc (USA, Europe): http://redump.org/disc/7661
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8217d7f8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x826ca4c7
+        value = 0x01 # 0x01=60FPS; 0x02=30FPS

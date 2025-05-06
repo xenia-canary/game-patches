@@ -15,3 +15,24 @@ hash = "C81497E4B2AE280F" # default.xex
     [[patch.be8]]
         address = 0x829788d7
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8290958c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x837a7a50
+        value = 0x01
+    [[patch.be8]]
+        address = 0x837a7a64 # Frametime
+        value = 0x01

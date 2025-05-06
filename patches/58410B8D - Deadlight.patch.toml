@@ -25,3 +25,25 @@ hash = "14E0D504B14AA95D" # default.xex
     [[patch.be32]]
         address = 0x82803358
         value = 0x39400000
+
+[[patch]]
+    name = "Disable Depth of Field"
+    desc = "Dramatically changes the overall look of the game, but solves DoF related issues."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822e3bf4
+        value = 0x39600000
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8370e5f0
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8370e604 # Frametime
+        value = 0x01

@@ -4,6 +4,19 @@ hash = "03B014AB8C6401D3" # default.xex
 #media_id = "6E38B2BE" # Disc (USA): http://redump.org/disc/14552
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822bed65
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82280c2b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
     name = "Black Shading Fix"
     desc = "Disables MSAA"
     author = "HouseofTudor, Sowa_95"
@@ -12,3 +25,22 @@ hash = "03B014AB8C6401D3" # default.xex
     [[patch.be8]]
         address = 0x8311e157
         value = 0x04
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82abe694
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82633780
+        value = 0x38a00010

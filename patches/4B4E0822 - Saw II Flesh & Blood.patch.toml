@@ -1,0 +1,26 @@
+title_name = "Saw II: Flesh & Blood" # SAW2
+title_id = "4B4E0822" # KN-2082
+hash = "73B613DF4D91AD7A" # default.xex
+#media_id = "32FBD29B" # Disc (World): http://redump.org/disc/58057
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. At very high FPS fluorescent symbols take more time to absorb the light and disappear faster. Would recommend staying below 120FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825243fc
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a2a3c7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8296cb74
+        value = 0x38a00010

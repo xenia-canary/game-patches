@@ -1,0 +1,26 @@
+title_name = "Alpha Protocol"
+title_id = "5345080E" # SE-2062
+hash = "FC3BAE12B708EC58" # default.xex
+#media_id = "49303842" # Disc (USA, Europe): http://redump.org/disc/14703
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825fd954
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x822ea447
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822e2c1c
+        value = 0x38a00010

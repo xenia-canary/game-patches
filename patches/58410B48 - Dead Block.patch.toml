@@ -1,0 +1,26 @@
+title_name = "Dead Block"
+title_id = "58410B48" # XA-2888
+hash = "89A0E820CBB0755D" # default.xex
+#media_id = "283B540E" # XBLA: 5172EAEAE677C122AD796960825347AD7ACB9B7D58
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824dcf30
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x829b56f7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82972f4c
+        value = 0x38a00010

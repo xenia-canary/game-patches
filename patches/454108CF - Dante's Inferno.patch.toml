@@ -1,0 +1,17 @@
+title_name = "Dante's Inferno"
+title_id = "454108CF" # EA-2255
+hash = "5C20AFE8455FEE7D" # default.xex
+#media_id = [
+#    "27C36C6C", # Disc (Europe): http://redump.org/disc/12655
+#    "49028C6A"  # Disc (USA):    http://redump.org/disc/13282
+#]
+
+[[patch]]
+    name = "60 FPS Cutscenes"
+    desc = "Disables vsync modifier for real time cutscenes, making them run at the same interval as gameplay."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821a671b
+        value = 0x00

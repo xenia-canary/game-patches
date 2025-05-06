@@ -1,7 +1,11 @@
 title_name = "Forza Horizon"
 title_id = "4D5309C9" # MS-2505
 hash = "D48ABF1704CE5C4A" # default.xex
-#media_id = "2B7A1346" # Disc (Asia): http://redump.org/disc/84331
+#media_id = [
+#    "2B7A1346", # Disc (Europe, Asia): http://redump.org/disc/84331
+#    "4000D145", # Disc (Europe):       http://redump.org/disc/88563
+#    "2DC7007B"  # Disc (USA):          http://redump.org/disc/40611
+#]
 
 [[patch]]
     name = "Disable Motion Blur"
@@ -38,3 +42,13 @@ hash = "D48ABF1704CE5C4A" # default.xex
     [[patch.be32]]
         address = 0x82442478
         value = 0x39600000
+
+[[patch]]
+    name = "Disabe gamedb.slt check"
+    desc = "Allows for gamedb modifications. Not required on TU4 - gamedb has to be edited through TU files."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83520004
+        value = 0x60000000

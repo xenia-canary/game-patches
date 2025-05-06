@@ -1,0 +1,36 @@
+title_name = "Life Is Strange"
+title_id = "5841147C" # XA-5244
+hash = "FC21D90E7290F63C" # default.xex
+#media_id = "25EC0976" # XBLA: 7D712A01A804848890EE92F38CAD2229786E33B258
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825bb7a0
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82c02807
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828eec70
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a2a18c
+        value = 0x38a00010

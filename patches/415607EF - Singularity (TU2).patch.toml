@@ -1,0 +1,36 @@
+title_name = "Singularity" # TU2
+title_id = "415607EF" # AV-2031
+hash = "E3D3817546C9A20F" # default.xex
+#media_id = "1B62BF41" # Disc (USA, Europe): http://redump.org/disc/14264
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83348430
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82691f17
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82dbbdd4
+        value = 0x38a00000
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83a02e84
+        value = 0x60000000

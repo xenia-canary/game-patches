@@ -105,3 +105,38 @@ hash = "7775898137CE1CE3" # default.xex
     [[patch.be32]]
         address = 0x82372718
         value = 0x39400000
+
+[[patch]]
+    name = "Disable most Dynamic Shadows - Performance Mode"
+    desc = "Significantly improves performance if GPU limited. Not recommended on high end GPUs. Most effective on Nvidia, as it struggles with UE3 dynamic shadows when using RTV."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827e0a88
+        value = 0x39600000
+    [[patch.be8]]
+        address = 0x8237d02c # Light Environment Shadows
+        value = 0x00
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications. Not required on base version of the game."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82cf94b7
+        value = 0x00
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83439898
+        value = 0x01
+    [[patch.be8]]
+        address = 0x834398ac # Frametime
+        value = 0x01

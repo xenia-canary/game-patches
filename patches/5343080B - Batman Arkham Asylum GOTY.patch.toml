@@ -61,3 +61,13 @@ hash = "2C06E5E920A8291E" # default.xex
     [[patch.be8]]
         address = 0x824ac373
         value = 0x00
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Disables flares, but lights casting flares don't light up at all. Can be improved."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826c9b9c
+        value = 0x39400000

@@ -105,3 +105,28 @@ hash = "EF4AD5E9DD1982ED" # default.xex
     [[patch.be32]]
         address = 0x82593dc0
         value = 0x39400000
+
+[[patch]]
+    name = "Disable most Dynamic Shadows - Performance Mode"
+    desc = "Significantly improves performance if GPU limited. Not recommended on high end GPUs. Most effective on Nvidia, as it struggles with UE3 dynamic shadows when using RTV."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827ce810
+        value = 0x39600000
+    [[patch.be8]]
+        address = 0x8236c98c # Light Environment Shadows
+        value = 0x00
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x834290d8
+        value = 0x01
+    [[patch.be8]]
+        address = 0x834290ec # Frametime
+        value = 0x01

@@ -1,0 +1,36 @@
+title_name = "Painkiller: Hell & Damnation" # TU1
+title_id = "354807D1" # 5H-2001
+hash = "56209C4732826FCF" # default.xex
+#media_id = "35185D64" # Disc (Europe): http://redump.org/disc/71444
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8250fa48
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a00797
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8283cdb8
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8295177c
+        value = 0x38a00010

@@ -1,10 +1,23 @@
-title_name = "Mass Effect 2" # TU2, v1.0.2
+title_name = "Mass Effect 2" # TU2
 title_id = "454108CE" # EA-2254
 hash = "3D790F44F99FCF0E" # default.xex
 #media_id = [
 #    "6EE5A52F", # Disc 1 (USA, Europe): http://redump.org/disc/12501
-#    "027D8AAF", # Disc 2 (USA, Europe): http://redump.org/disc/12502
+#    "027D8AAF"  # Disc 2 (USA, Europe): http://redump.org/disc/12502
 #]
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8244b254 # bSmoothFrameRate = FALSE
+        value = 0x60000000 # nop
+    [[patch.be8]]
+        address = 0x82aa4de7 # D3DPRESENT_INTERVAL_ONE
+        value = 0x01
 
 [[patch]]
     name = "Black Shading Fix"
@@ -39,6 +52,7 @@ hash = "3D790F44F99FCF0E" # default.xex
 
 [[patch]]
     name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen without breaking interactibles."
     author = "HouseofTudor"
     is_enabled = false
 
@@ -61,3 +75,78 @@ hash = "3D790F44F99FCF0E" # default.xex
     [[patch.be32]]
         address = 0x822ea830
         value = 0x39600003
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8249e7dc # bAllowMotionBlur = FALSE
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x8249e7e8 # bShowMotionBlur = FALSE
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827e4a04 # MaxAnisotropy = 16
+        value = 0x38a00010 # li r5, 0x10
+
+[[patch]]
+    name = "Disable Bloom"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822eb294 # bAllowBloom = FALSE
+        value = 0x39400000 # li r10, 0
+
+[[patch]]
+    name = "Disable Low-Resolution Depth of Field"
+    desc = "Only enable if you're experiencing a pixelated image when upscaling. Affects other post-processing which uses the same shader pipeline DoF does."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822eb2a0 # bAllowDepthofField = FALSE
+        value = 0x39600000 # li r11, 0
+    [[patch.be32]]
+        address = 0x823b4498 # bAllowDepthofField = FALSE
+        value = 0x39600000 # li r11, 0
+
+[[patch]]
+    name = "Disable All Post-Processing"
+    desc = "Dramatically changes the overall look of the game. Only enable unless troubleshooting upscaling-related artifacts or if any post-processing is considered undesirable."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8269daec
+        value = 0x4800 # b 8269ea58
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x834c7ee0
+        value = 0x60000000
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x833d5d58
+        value = 0x01
+    [[patch.be8]]
+        address = 0x833d5d60
+        value = 0x01

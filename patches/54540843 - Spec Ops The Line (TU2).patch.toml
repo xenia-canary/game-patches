@@ -1,0 +1,34 @@
+title_name = "Spec Ops: The Line" # TU2
+title_id = "54540843" # TT-2115
+hash = "AAF6F46C863E1CD8" # default.xex
+#media_id = "22D4312F" # Disc (USA, Europe): http://redump.org/disc/86927
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82df4483
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Ambient Occlusion - Nvidia RTV fix"
+    desc = "Fixes black shade on textures. Required only on Nvidia GPUs with driver 526.47 or later. Not neccesary when using ROV."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82842aa8
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen. Probably not required on default occlusion = 100, most (if not all) flares are hidden."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82943440
+        value = 0x39400000

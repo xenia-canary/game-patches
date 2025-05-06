@@ -1,0 +1,58 @@
+title_name = "Army of Two: The 40th Day" # TFD, TU3
+title_id = "454108D8" # EA-2264
+hash = [
+    "4B6EDCD2321B637A" # default.xex
+#    "F9EEBD231B6BEE78" # AO3MPGame-XeReleaseLTCG.xex
+]
+#media_id = "44388CF4" # Disc (USA, Australia): http://redump.org/disc/13279
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Game speed tied to FPS, kicks in above ~90FPS."
+    author = "boma, Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8276ec92
+        value = 0x4800
+    [[patch.be8]]
+        address = 0x82ec1017
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8293b138
+        value = 0x48000020
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma, Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82d07b38
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82cae2c8
+        value = 0x480001c4
+
+[[patch]]
+    name = "Disable FSAA (Full-Screen Anti-Aliasing)"
+    desc = "May help with edge-detection issues when upscaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x837237fb
+        value = 0x00

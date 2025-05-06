@@ -1,0 +1,46 @@
+title_name = "Section 8: Prejudice"
+title_id = "58410B45" # XA-2885
+hash = "C32C51664A0E3167" # default.xex
+#media_id = "083F8E41" # XBLA: CD0E5DF6A17270F4A4059C88BC8E15C0990ECC3E58
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82625f10
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82cd9b27
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829fc19c
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82afdddc
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications. Not required on TU2."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83610004
+        value = 0x60000000

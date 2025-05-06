@@ -1,4 +1,4 @@
-title_name = "Army of Two" # v1.0.2
+title_name = "Army of Two" # TU2
 title_id = "454107F8" # EA-2040
 hash = "33D8BF773EF962B0" # default.xex
 #media_id = "38595BF0" # Disc (USA): http://redump.org/disc/13278
@@ -25,3 +25,12 @@ hash = "33D8BF773EF962B0" # default.xex
     [[patch.be8]]
         address = 0x831876d7
         value = 0x04
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82aa22c0
+        value = 0x38a00010

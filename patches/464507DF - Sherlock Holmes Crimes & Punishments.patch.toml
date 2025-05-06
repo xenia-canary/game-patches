@@ -1,0 +1,36 @@
+title_name = "Sherlock Holmes: Crimes & Punishments"
+title_id = "464507DF" # FE-2015
+hash = "33F439B38AA965C0" # default.xex
+#media_id = "51206D91" # Disc (USA, Europe): http://redump.org/disc/38998
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8257db48
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a7c547
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828a9050
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829c2ddc
+        value = 0x38a00010

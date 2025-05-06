@@ -1,4 +1,4 @@
-title_name = "Dark Void" # v3.0.1
+title_name = "Dark Void" # TU1
 title_id = "434307E0" # CC-2016
 hash = "E86882B0119B686A" # default.xex
 #media_id = "2150EAC1" # Disc (USA, Europe): http://redump.org/disc/35201
@@ -25,3 +25,12 @@ hash = "E86882B0119B686A" # default.xex
     [[patch.be8]]
         address = 0x83635e23
         value = 0x04
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a0b424
+        value = 0x38a00010

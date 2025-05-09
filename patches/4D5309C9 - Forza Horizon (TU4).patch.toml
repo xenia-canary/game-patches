@@ -42,3 +42,13 @@ hash = "336A44DC03EC8782" # default.xex
     [[patch.be32]]
         address = 0x82472698
         value = 0x39600000
+
+[[patch]]
+    name = "Disabe hash checks"
+    desc = "Allows modifying protected files. Certain files are overwritten by TU and are no longer read from the game folder."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83610004
+        value = 0x60000000

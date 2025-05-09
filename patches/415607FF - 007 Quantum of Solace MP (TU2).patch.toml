@@ -1,0 +1,20 @@
+title_name = "007: Quantum of Solace" # MP TU2
+title_id = "415607FF" # AV-2047
+hash = "590402F61DEF8050" # default_mp.xex
+#media_id = "06DD88A0" # Disc (USA, Europe): http://redump.org/disc/12335
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8225f7c8
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8225f7fc
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x820f2283
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

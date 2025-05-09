@@ -1,0 +1,22 @@
+title_name = "Forza Motorsport 3: Ultimate Collection"
+title_id = "4D53084D" # MS-2125
+hash = [ # default.xex
+    "7DB6FA5913A8C1DC", # Disc 1 (Play Disc)
+    #"2AA7EEF2907154FE" # Disc 2 (Content Install Disc)
+]
+#media_id = [
+#    "4BE13908", # Disc 1 (Europe): http://redump.org/disc/23451
+#    "79276431", # Disc 2 (Europe): http://redump.org/disc/23452
+#    "6F74359D", # Disc 1 (USA):    http://redump.org/disc/62253
+#    "6E76ABF4"  # Disc 2 (USA):    http://redump.org/disc/62254
+#]
+
+[[patch]]
+    name = "Disable hash checks"
+    desc = "Allows modifying protected files."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82cf0004
+        value = 0x60000000

@@ -1,0 +1,18 @@
+title_name = "Forza Motorsport 2"
+title_id = "4D5307EA" # MS-2026
+hash = "7C0DFA18B33B4FF7" # default.xex
+#media_id = [
+#    "3E3180AE", # Disc (Europe):      http://redump.org/disc/21642
+#    "5480CCFF", # Disc (Japan, Asia): http://redump.org/disc/65271
+#    "0DF2D3F6"  # Disc (USA):         http://redump.org/disc/12488
+#]
+
+[[patch]]
+    name = "Disabe hash checks"
+    desc = "Allows modifying protected files."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a80004
+        value = 0x60000000

@@ -44,8 +44,8 @@ hash = "D48ABF1704CE5C4A" # default.xex
         value = 0x39600000
 
 [[patch]]
-    name = "Disabe gamedb.slt check"
-    desc = "Allows for gamedb modifications. Not required on TU4 - gamedb has to be edited through TU files."
+    name = "Disabe hash checks"
+    desc = "Allows modifying protected files."
     author = "Sowa_95"
     is_enabled = false
 

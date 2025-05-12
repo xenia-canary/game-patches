@@ -1,6 +1,6 @@
-title_name = "Forza Horizon 2"
+title_name = "Forza Horizon 2" # TU2
 title_id = "4D530AA4" # MS-2724
-hash = "64E28BBC49532373" # default.xex
+hash = "92D3C7CA892E747B" # default.xex
 #media_id = [
 #    "15E4FA3D", # Disc (Europe): http://redump.org/disc/90844
 #    "54FD9324", # Disc (Spain):  http://redump.org/disc/113268
@@ -13,7 +13,7 @@ hash = "64E28BBC49532373" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x92f04494
+        address = 0x82f0483c
         value = 0x60000000
 
 [[patch]]
@@ -22,12 +22,12 @@ hash = "64E28BBC49532373" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82452608
+        address = 0x824526f8
         value = 0x39600000
 
 [[patch]]
     name = "Disable hash checks"
-    desc = "Allows modifying protected files."
+    desc = "Allows modifying protected files. Certain files are overwritten by TU and are no longer read from the game folder."
     author = "Sowa_95"
     is_enabled = false
 

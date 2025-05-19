@@ -44,6 +44,6 @@ hash = "E0184D285EBBE8B8" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x83560024
-        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82f2d97f
+        value = 0x00

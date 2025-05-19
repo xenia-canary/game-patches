@@ -17,8 +17,8 @@ hash = "2C06E5E920A8291E" # default.xex
         value = 0x00
 
 [[patch]]
-    name = "Unlock FPS"
-    desc = "See note about framerate patches in the README."
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
     author = "Sowa_95"
     is_enabled = false
 
@@ -53,11 +53,9 @@ hash = "2C06E5E920A8291E" # default.xex
     [[patch.be8]]
         address = 0x82351d7b
         value = 0x00
-
     [[patch.be8]]
         address = 0x82422ab3
         value = 0x00
-
     [[patch.be8]]
         address = 0x824ac373
         value = 0x00

@@ -34,3 +34,15 @@ hash = "725589D4AB362E87" # default.xex
     [[patch.be32]]
         address = 0x82afe37c
         value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x835642e0
+        value = 0x01
+    [[patch.be8]]
+        address = 0x835642e8 # Frametime
+        value = 0x01

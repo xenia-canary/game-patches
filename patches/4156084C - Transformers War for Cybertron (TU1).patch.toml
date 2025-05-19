@@ -1,4 +1,4 @@
-title_name = "Transformers War for Cybertron" # v4.0.1
+title_name = "Transformers War for Cybertron" # TU1
 title_id = "4156084C" # AV-2124
 hash = "3AF46199AE02D5C7" # default.xex
 #media_id = [
@@ -53,6 +53,6 @@ hash = "3AF46199AE02D5C7" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x83910000
-        value = 0x60000000
+    [[patch.be8]]
+        address = 0x833170ff
+        value = 0x00

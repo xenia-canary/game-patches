@@ -1,0 +1,26 @@
+title_name = "Crysis 2" # TU4
+title_id = "454108E3" # EA-2275
+hash = "329BA0A669E3A538" # default.xex
+#media_id = "6A9CA6D7" # Disc (World): http://redump.org/disc/35659
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828939a0
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x836f6307
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8208f9de
+        value = 0x60000000

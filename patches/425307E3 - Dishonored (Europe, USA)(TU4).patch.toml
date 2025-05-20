@@ -1,0 +1,51 @@
+title_name = "Dishonored" # TU4
+title_id = "425307E3" # BS-2019
+hash = "ED822C700FE29D2D" # default.xex
+#media_id = [
+#    "76D06EBB", # Disc (Europe): http://redump.org/disc/36105
+#    "4FEBCE15"  # Disc (Europe): http://redump.org/disc/72633
+#    "17FDBCB6"  # Disc (USA):    http://redump.org/disc/41939
+#]
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82461838
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82b025d3
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8277f014
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x834ea644
+        value = 0x01
+    [[patch.be8]]
+        address = 0x834ea650 # Frametime
+        value = 0x01
+
+[[patch]]
+    name = "Show FPS Graph"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x834ea65c
+        value = 0x01

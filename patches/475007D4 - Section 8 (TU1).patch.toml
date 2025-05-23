@@ -51,6 +51,18 @@ hash = "833FCF9A91896897" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x83390004
-        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82c6b04f
+        value = 0x00
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x832dd72c
+        value = 0x01
+    [[patch.be8]]
+        address = 0x832dd734
+        value = 0x01

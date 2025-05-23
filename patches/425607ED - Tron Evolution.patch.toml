@@ -1,7 +1,7 @@
-title_name = "Borderlands 2"
-title_id = "5454087C" # TT-2172
-hash = "7902273991112C47" # default.xex
-#media_id = "00A8D174" # Disc (World): http://redump.org/disc/43227
+title_name = "Tron: Evolution" # Disney TRON: Evolution
+title_id = "425607ED" # BV-2029
+hash = "1E096524EB5AEF06" # default.xex
+#media_id = "4BB00DF7" # Disc (USA, Europe): http://redump.org/disc/18770
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,10 +10,10 @@ hash = "7902273991112C47" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82671090
+        address = 0x825875b0
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82e642e7
+        address = 0x82be1e1f
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -22,15 +22,17 @@ hash = "7902273991112C47" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82b5e2bc
+        address = 0x82a094b4
         value = 0x38a00010
 
 [[patch]]
-    name = "Disable Coalesced hash check"
-    desc = "Allows for Coalesced modifications."
+    name = "Show Frametime"
     author = "Sowa_95"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x83190587
-        value = 0x00
+        address = 0x83658e9c
+        value = 0x01
+    [[patch.be8]]
+        address = 0x83658ea4
+        value = 0x01

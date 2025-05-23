@@ -1,0 +1,67 @@
+title_name = "Murdered: Soul Suspect"
+title_id = "5351081E" # SQ-2078
+hash = "B2682D54AB44B0F7" # default.xex
+#media_id = "796B07CA" # Disc (USA, Europe): http://redump.org/disc/59676
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825eb7b8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82bd382f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Ghost Glow Fix"
+    desc = "Eliminates distant objects being visible through ghost glow."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82408984
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen. Also disables big flare in Julia encounters, changing overall look of this scene."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82919388
+        value = 0x39400000
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824d2850
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a84824
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x84cf3664
+        value = 0x01
+    [[patch.be8]]
+        address = 0x84cf3678 # Frametime
+        value = 0x01

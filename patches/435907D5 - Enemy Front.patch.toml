@@ -1,0 +1,26 @@
+title_name = "Enemy Front"
+title_id = "435907D5" # CY-2005
+hash = "A2C91F93FB0DF7D8" # default.xex
+#media_id = "40C7D6E5" # Disc (USA, Europe): http://redump.org/disc/54086
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83000ad8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x835a5553
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820ea7fa
+        value = 0x60000000

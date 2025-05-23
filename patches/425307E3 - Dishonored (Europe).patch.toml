@@ -1,7 +1,10 @@
-title_name = "Hunted: The Demon's Forge"
-title_id = "425307D7" # BS-2007
-hash = "9D75E44A2E84CC51" # default.xex
-#media_id = "7084F7FD" # Disc (USA): http://redump.org/disc/100843
+title_name = "Dishonored"
+title_id = "425307E3" # BS-2019
+hash = "FDFA2324099CE50E" # default.xex
+#media_id = [
+#    "76D06EBB", # Disc (Europe): http://redump.org/disc/36105
+#    "4FEBCE15"  # Disc (Europe): http://redump.org/disc/72633
+#]
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,10 +13,10 @@ hash = "9D75E44A2E84CC51" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x825f7cb0
+        address = 0x8242d308
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82d1648f
+        address = 0x82a4e9bb
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -22,7 +25,7 @@ hash = "9D75E44A2E84CC51" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82a3783c
+        address = 0x8274a10c
         value = 0x38a00010
 
 [[patch]]
@@ -31,8 +34,17 @@ hash = "9D75E44A2E84CC51" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8398cb74
+        address = 0x834114a8
         value = 0x01
     [[patch.be8]]
-        address = 0x8398cb84 # Frametime
+        address = 0x834114b4 # Frametime
+        value = 0x01
+
+[[patch]]
+    name = "Show FPS Graph"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x834114c0
         value = 0x01

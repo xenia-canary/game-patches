@@ -1,0 +1,47 @@
+title_name = "Enslaved: Odyssey to the West" # TU1
+title_id = "4E4D07F1" # NM-2033
+hash = "BBD70C6C2FF754FB" # default.xex
+#media_id = "68F2B28B" # Disc (USA, Europe): http://redump.org/disc/16210
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. FPS higher than 60 can cause an issue in Chapter 13."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825766ec
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82b2673f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829bc934
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a7feac
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8330bdec
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8330bdf4
+        value = 0x01

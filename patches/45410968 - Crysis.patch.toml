@@ -1,0 +1,26 @@
+title_name = "Crysis"
+title_id = "45410968" # EA-2408
+hash = "64FCB384D5B1B42C" # default.xex
+#media_id = "4F4EA672" # XBL Marketplace: 801FA873A37D786F8DB0879D89FCEF5245
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828147a8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x831c453f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8207a170
+        value = 0x60000000

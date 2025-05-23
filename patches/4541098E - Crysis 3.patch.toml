@@ -1,0 +1,26 @@
+title_name = "Crysis 3"
+title_id = "4541098E" # EA-2446
+hash = "66A70FE14B99E819" # default.xex
+#media_id = "23955AA4" # Disc (USA, Europe): http://redump.org/disc/52966
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82e01b10
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x836c5923
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820bf2fa
+        value = 0x60000000

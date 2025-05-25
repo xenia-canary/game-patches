@@ -1,8 +1,8 @@
 title_name = "Middle-Earth: Shadow of Mordor"
 title_id = "5752082C" # WR-2092
 hash = [ # default.xex
-    #"91346A3E96D946BB", # Disc 1 (Content Install Disc)
-    "BB56CDFB30C504B8"   # Disc 2 (Play Disc)
+    "BB56CDFB30C504B8", # Disc 2 (Play Disc)
+    #"91346A3E96D946BB" # Disc 1 (Content Install Disc)
 ]
 #media_id = [
 #    "01219FCA", # Disc 1 (World): http://redump.org/disc/38987

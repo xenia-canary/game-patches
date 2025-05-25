@@ -1,0 +1,17 @@
+title_name = "IL-2 Sturmovik: Birds of Prey"
+title_id = "464F07D1" # FO-2001
+hash = "E9B716F428A3F741" # default.xex
+#media_id = "794A557F" # Disc (USA, Europe): http://redump.org/disc/74910
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Doesn't matter if Xenia vsync is enabled or not."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82465750
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x8246575f
+        value = 0x00 # 0x00=unlimited; 0x01=60FPS

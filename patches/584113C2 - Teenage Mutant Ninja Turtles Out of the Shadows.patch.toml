@@ -1,0 +1,54 @@
+title_name = "Teenage Mutant Ninja Turtles: Out of the Shadows" # TMNT:OOTS
+title_id = "584113C2" # XA-5058
+hash = "165D0A96E1707894" # default.xex
+#media_id = "3A067010" # XBLA: 96F6959E5FFEC726B7BB8E8F21A489E78AA809DD58
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82a7b94f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828692c8
+        value = 0x39400000
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82421e18
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8297f49c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x838b2978
+        value = 0x01
+    [[patch.be8]]
+        address = 0x838b298c # Frametime
+        value = 0x01

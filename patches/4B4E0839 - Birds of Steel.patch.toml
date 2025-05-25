@@ -1,0 +1,17 @@
+title_name = "Birds of Steel"
+title_id = "4B4E0839" # KN-2105
+hash = "E059B2E2EE0C19F1" # default.xex
+#media_id = "54DF8378" # Disc (USA): http://redump.org/disc/51944
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Doesn't matter if Xenia vsync is enabled or not."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8262d560
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x8262d56f
+        value = 0x00 # 0x00=unlimited; 0x01=60FPS

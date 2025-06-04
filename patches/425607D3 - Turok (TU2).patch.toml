@@ -4,8 +4,8 @@ hash = "1FB4E3210AB7A7A9" # default.xex
 #media_id = "3926BB9B" # Disc (USA, Europe): http://redump.org/disc/13439
 
 [[patch]]
-    name = "Unlock FPS"
-    desc = "See note about framerate patches in the README."
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
     author = "Sowa_95"
     is_enabled = false
 
@@ -38,6 +38,6 @@ hash = "1FB4E3210AB7A7A9" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x834c0021
-        value = 0x60000000
+    [[patch.be8]]
+        address = 0x828a2bbf
+        value = 0x00

@@ -1,0 +1,23 @@
+title_name = "Middle-Earth: Shadow of Mordor"
+title_id = "5752082C" # WR-2092
+hash = [ # default.xex
+    "BB56CDFB30C504B8", # Disc 2 (Play Disc)
+    #"91346A3E96D946BB" # Disc 1 (Content Install Disc)
+]
+#media_id = [
+#    "01219FCA", # Disc 1 (World): http://redump.org/disc/38987
+#    "4451D6B8"  # Disc 2 (World): http://redump.org/disc/38988
+#]
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Very high FPS can cause issues."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82be61f8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82c30ec3
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

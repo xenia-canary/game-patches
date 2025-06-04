@@ -1,0 +1,17 @@
+title_name = "Thief" # TU2
+title_id = "53510803" # SQ-2051
+hash = "F76E3F7FE75E1B64" # default.xex
+#media_id = "7FF9783D" # Disc (USA, Europe): http://redump.org/disc/50634
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8267a0cc
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x832a8603
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

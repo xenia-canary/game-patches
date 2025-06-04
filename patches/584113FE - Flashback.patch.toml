@@ -1,7 +1,7 @@
-title_name = "Dead Block"
-title_id = "58410B48" # XA-2888
-hash = "89A0E820CBB0755D" # default.xex
-#media_id = "283B540E" # XBLA: 5172EAEAE677C122AD796960825347AD7ACB9B7D58
+title_name = "Flashback"
+title_id = "584113FE" # XA-5118
+hash = "AD76DCA3312AEB24" # default.xex
+#media_id = "27960299" # XBLA: AE7FE87EEDAD897576C94D13BC0E04C523B8B01658
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,20 +10,21 @@ hash = "89A0E820CBB0755D" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824dcf30
+        address = 0x82539500
         value = 0x60000000
     [[patch.be8]]
-        address = 0x829b56f7
+        address = 0x82ad5287
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
-    name = "Disable Motion Blur"
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
     author = "Sowa_95"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8236ca80
-        value = 0x39600000
+        address = 0x82878c18
+        value = 0x39400000
 
 [[patch]]
     name = "16x Anisotropic Filtering"
@@ -31,7 +32,7 @@ hash = "89A0E820CBB0755D" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82972f4c
+        address = 0x8298efcc
         value = 0x38a00010
 
 [[patch]]
@@ -40,8 +41,8 @@ hash = "89A0E820CBB0755D" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8320423c
+        address = 0x83916448
         value = 0x01
     [[patch.be8]]
-        address = 0x83204248 # Frametime
+        address = 0x8391645c # Frametime
         value = 0x01

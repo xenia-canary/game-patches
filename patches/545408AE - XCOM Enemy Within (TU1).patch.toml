@@ -1,4 +1,4 @@
-title_name = "XCOM: Enemy Within" # v2.0.1
+title_name = "XCOM: Enemy Within" # TU1
 title_id = "545408AE" # TT-2222
 hash = "6A23BE57D5715B6D" # default.xex
 #media_id = "39BC979B" # Disc (USA, Europe): http://redump.org/disc/72080
@@ -22,9 +22,9 @@ hash = "6A23BE57D5715B6D" # default.xex
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
+    [[patch.be8]]
         address = 0x8271f4c8 # OcclusionStepSize
-        value = 0x39400000
+        value = 0x00
 
 [[patch]]
     name = "16x Anisotropic Filtering"

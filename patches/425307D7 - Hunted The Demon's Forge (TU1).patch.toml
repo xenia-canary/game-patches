@@ -1,4 +1,4 @@
-title_name = "Hunted: The Demon's Forge" # v2.0.1
+title_name = "Hunted: The Demon's Forge" # TU1
 title_id = "425307D7" # BS-2007
 hash = "7FCEB2E89622CD7B" # default.xex
 #media_id = "7084F7FD" # Disc (USA): http://redump.org/disc/100843
@@ -15,3 +15,24 @@ hash = "7FCEB2E89622CD7B" # default.xex
     [[patch.be8]]
         address = 0x82d1676f
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a37d54
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8398cb78
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8398cb88 # Frametime
+        value = 0x01

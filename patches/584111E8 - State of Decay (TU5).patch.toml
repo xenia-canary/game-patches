@@ -1,10 +1,24 @@
 title_name = "State of Decay" # TU5
 title_id = "584111E8" # XA-4584
 hash = "EE3D121EE9877C9E" # default.xex
-#media_id = "6F32E742"
+#media_id = "6F32E742" # XBLA: 575B340E3A01D77D7C71736AC3B63886D02F23D958
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x830d3578
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x837a65cb
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
     name = "Disable conditional rendering"
+    desc = "Not required since Canary b447699."
     author = "illusion"
     is_enabled = false
 
@@ -17,3 +31,12 @@ hash = "EE3D121EE9877C9E" # default.xex
     [[patch.be32]]
         address = 0x831394cc
         value = 0x39200000
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820f273c
+        value = 0x60000000

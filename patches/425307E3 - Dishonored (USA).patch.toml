@@ -1,7 +1,7 @@
-title_name = "Dead Block"
-title_id = "58410B48" # XA-2888
-hash = "89A0E820CBB0755D" # default.xex
-#media_id = "283B540E" # XBLA: 5172EAEAE677C122AD796960825347AD7ACB9B7D58
+title_name = "Dishonored"
+title_id = "425307E3" # BS-2019
+hash = "967D5DD52EF02E20" # default.xex
+#media_id = "17FDBCB6" # Disc (USA): http://redump.org/disc/41939
 
 [[patch]]
     name = "Unlock FPS"
@@ -10,20 +10,11 @@ hash = "89A0E820CBB0755D" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x824dcf30
+        address = 0x8242d4d0
         value = 0x60000000
     [[patch.be8]]
-        address = 0x829b56f7
+        address = 0x82a4e9db
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
-
-[[patch]]
-    name = "Disable Motion Blur"
-    author = "Sowa_95"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8236ca80
-        value = 0x39600000
 
 [[patch]]
     name = "16x Anisotropic Filtering"
@@ -31,7 +22,7 @@ hash = "89A0E820CBB0755D" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82972f4c
+        address = 0x8274a374
         value = 0x38a00010
 
 [[patch]]
@@ -40,8 +31,17 @@ hash = "89A0E820CBB0755D" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8320423c
+        address = 0x83410ea4
         value = 0x01
     [[patch.be8]]
-        address = 0x83204248 # Frametime
+        address = 0x83410eb0 # Frametime
+        value = 0x01
+
+[[patch]]
+    name = "Show FPS Graph"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83410ebc
         value = 0x01

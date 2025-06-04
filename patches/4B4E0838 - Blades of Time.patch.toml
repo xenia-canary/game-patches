@@ -1,0 +1,23 @@
+title_name = "Blades of Time"
+title_id = "4B4E0838" # KN-2104
+hash = "6502DB9D18BAEF2A" # default.xex
+#media_id = "70B71AF6" # Disc (USA): http://redump.org/disc/53076
+
+[[patch]]
+    name = "Disable HDR"
+    desc = "Fixes brightness. Not required if readback_resolve enabled."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821308df
+        value = 0x00
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82085650
+        value = 0x60000000

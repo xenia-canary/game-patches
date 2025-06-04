@@ -1,0 +1,26 @@
+title_name = "Apache: Air Assault"
+title_id = "4156088B" # AV-2187
+hash = "FF58690C63F21B40" # default.xex
+#media_id = "089FC7A8" # Disc (USA): http://redump.org/disc/51087
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Doesn't matter if Xenia vsync is enabled or not."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82589b98
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82589ba7
+        value = 0x00 # 0x00=unlimited; 0x01=60FPS
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8228d7cf
+        value = 0x00

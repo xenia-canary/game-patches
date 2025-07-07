@@ -1,0 +1,65 @@
+title_name = "Batman: Arkham Asylum"
+title_id = "534307F6" # SC-2038
+hash = "C7034514E7759D3C" # default.xex
+#media_id = "4A2B74A4" # Disc (USA, Europe): http://redump.org/disc/12475
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82a0f697
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Debug Menu"
+    desc = "Activate with RB+Start."
+    author = "dron_3" # https://dron-3.blogspot.com/2020/11/batman-arkham-series-xbox-360-debug-menu.html
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8272b3a7
+        value = 0x00
+    [[patch.be8]]
+        address = 0x8272b3c3
+        value = 0x00
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8285907c
+        value = 0x39600000
+
+[[patch]]
+    name = "Anisotropic Filtering x16"
+    author = "HouseofTudor"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823646d8
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82262ea4
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Disables flares, but lights casting flares don't light up at all. Can be improved."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826b920c
+        value = 0x39400000

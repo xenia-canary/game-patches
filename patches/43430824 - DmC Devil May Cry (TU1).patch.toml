@@ -1,6 +1,6 @@
-title_name = "DmC: Devil May Cry"
+title_name = "DmC: Devil May Cry" # TU1
 title_id = "43430824" # CC-2084
-hash = "81CA50FFA700F9D8" # default.xex
+hash = "C48862A2CB0389FB" # default.xex
 #media_id = "021BEF7B" # Disc (USA, Europe): http://redump.org/disc/53445
 
 [[patch]]
@@ -10,7 +10,7 @@ hash = "81CA50FFA700F9D8" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x825384b7
+        address = 0x82538527
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -20,7 +20,7 @@ hash = "81CA50FFA700F9D8" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827c3cb8
+        address = 0x827c4160
         value = 0x38600000
 
 [[patch]]
@@ -29,7 +29,7 @@ hash = "81CA50FFA700F9D8" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82e10a7c
+        address = 0x82e15b3c
         value = 0x38a00010
 
 [[patch]]
@@ -38,8 +38,8 @@ hash = "81CA50FFA700F9D8" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x83663ab4
+        address = 0x83663aa4
         value = 0x01
     [[patch.be8]]
-        address = 0x83663ac8 # Frametime
+        address = 0x83663ab8 # Frametime
         value = 0x01

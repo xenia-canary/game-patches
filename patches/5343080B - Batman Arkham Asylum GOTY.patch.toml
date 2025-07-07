@@ -1,7 +1,10 @@
 title_name = "Batman: Arkham Asylum GOTY" # Game Of The Year
 title_id = "5343080B" # SC-2059
 hash = "2C06E5E920A8291E" # default.xex
-#media_id = "71D29B88" # Disc (Europe): http://redump.org/disc/68344
+#media_id = [
+#    "71D29B88", # Disc (Europe): http://redump.org/disc/68344
+#    "1BBF41A8"  # Disc (USA):    http://redump.org/disc/50243
+#]
 
 [[patch]]
     name = "Debug Menu"
@@ -59,6 +62,15 @@ hash = "2C06E5E920A8291E" # default.xex
     [[patch.be8]]
         address = 0x824ac373
         value = 0x00
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82273164
+        value = 0x39600000
 
 [[patch]]
     name = "Disable Lens Flares"

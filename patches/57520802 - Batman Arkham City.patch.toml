@@ -1,6 +1,6 @@
-title_name = "Batman: Arkham City" # TU6
+title_name = "Batman: Arkham City"
 title_id = "57520802" # WR-2050
-hash = "DF9C269BB979E4A2" # default.xex
+hash = "74ED6FBB15218B9E" # default.xex
 #media_id = "7ACAB0B0" # Disc (World): http://redump.org/disc/50716
 
 [[patch]]
@@ -10,7 +10,7 @@ hash = "DF9C269BB979E4A2" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8244e9e4
+        address = 0x8244e46c
         value = 0x60000000
     [[patch.be8]]
         address = 0x8224f803
@@ -23,7 +23,7 @@ hash = "DF9C269BB979E4A2" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82436500
+        address = 0x82435e20
         value = 0x38600000
 
 [[patch]]
@@ -33,7 +33,7 @@ hash = "DF9C269BB979E4A2" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8270d7e0
+        address = 0x8270d308
         value = 0x39400000
 
 [[patch]]
@@ -42,7 +42,7 @@ hash = "DF9C269BB979E4A2" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827ea8c0
+        address = 0x827ea770
         value = 0x38a00010
 
 [[patch]]
@@ -51,5 +51,5 @@ hash = "DF9C269BB979E4A2" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82090621
+        address = 0x8208fd21
         value = 0x60000000

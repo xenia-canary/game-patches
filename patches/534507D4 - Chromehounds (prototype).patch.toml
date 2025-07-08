@@ -5,7 +5,7 @@ hash = "EC12F1293810BF8F" # Release.xex
 
 [[patch]]
     name = "Fix Crash"
-    desc = "References sane memory region to prevent crash in Chromehounds Prototype"
+    desc = "References sane memory region to prevent crash in Chromehounds prototype."
     author = "imaginebeingatcomputers"
     is_enabled = false
 

@@ -4,11 +4,11 @@ hash = "EC12F1293810BF8F" # Release.xex
 #media_id = "00000000"
 
 [[patch]]
-name = "Fix Crash"
-desc = "References sane memory region to prevent crash in Chromehounds Prototype"
-author = "imaginebeingatcomputers"
-is_enabled = false
+    name = "Fix Crash"
+    desc = "References sane memory region to prevent crash in Chromehounds Prototype"
+    author = "imaginebeingatcomputers"
+    is_enabled = false
 
-[[patch.be32]]
-address = 0x82770778
-value = 0x3d2082a0
+    [[patch.be32]]
+        address = 0x82770778
+        value = 0x3d2082a0

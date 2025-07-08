@@ -1,6 +1,6 @@
 title_name = "Chromehounds" # 2006
-title_id = "534507D4"       # SE-2004
-hash = "EC12F1293810BF8F"   # Release.xex
+title_id = "534507D4" # SE-2004
+hash = "EC12F1293810BF8F" # Release.xex
 #media_id = "00000000"
 
 [[patch]]

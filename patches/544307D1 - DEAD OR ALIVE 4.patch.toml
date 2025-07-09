@@ -74,7 +74,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
         value = 0x3ed80000
 
 [[patch]]
-    name = "Unused Helena 'Opera' Costume on Slot 1"
+    name = "Cinematic-Only Helena 'Opera' Costume on Slot 1"
     author = "ryu_highabusa"
     is_enabled = false
 
@@ -95,7 +95,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
         value = 0x03
 
 [[patch]]
-    name = "Unused Christie Costume on Slot 1"
+    name = "Cinematic-Only Christie Costume on Slot 1"
     author = "ryu_highabusa"
     is_enabled = false
 

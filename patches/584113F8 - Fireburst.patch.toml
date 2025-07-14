@@ -1,0 +1,35 @@
+title_name = "Fireburst"
+title_id = "584113F8" # XA-5112
+hash = "731C55364395382D" # default.xex
+#media_id = "0B646885" # XBLA: FDDFD315419A7E2115F70DA74B81E9F39B84D3F858
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS. Acceleration and heat buildup is not accurate at very high FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82937abf
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828b1a3c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8323fe24
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8323fe38 # Frametime
+        value = 0x01

@@ -1,11 +1,11 @@
-title_name = "Batman: Arkham Origins"
+title_name = "Batman: Arkham Origins" # TU4
 title_id = "57520828" # WR-2088
 hash = [
-    "781A52190A894062" # Disc 1, SP.xex
-#    "2CF45F1F92753D3B" # Disc 1, default.xex
-#    "2CF45F1F92753D3B" # Disc 2, default.xex
+    "290C224437F4B2EF" # Disc 1, SP.xex
+#    "4EFF9937076EB088" # Disc 1, default.xex
+#    "4EFF9937076EB088" # Disc 2, default.xex
 #    "E52F7825EF8C9EC9" # Disc 2, ExpansionInstaller.xex
-#    "BE71DCED57D96DCC" # Disc 2, MP.xex
+#    "34A4384ADD8E670D" # Disc 2, MP.xex
 ]
 #media_id = [
 #    "1E1F12E7", # Disc 1 (USA, Europe): http://redump.org/disc/50852
@@ -19,10 +19,10 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82445c50
+        address = 0x82448878
         value = 0x60000000
     [[patch.be8]]
-        address = 0x82a651bb
+        address = 0x82a7956b
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
@@ -32,7 +32,7 @@ hash = [
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8242ad77
+        address = 0x8242d6cf
         value = 0x00
 
 [[patch]]
@@ -42,17 +42,8 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826aff18
+        address = 0x826b4b78
         value = 0x39400000
-
-[[patch]]
-    name = "Disable MLAA (Morphological Anti-Aliasing)"
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be16]]
-        address = 0x8236ec6a
-        value = 0x0000
 
 [[patch]]
     name = "Disable Motion Blur"
@@ -60,7 +51,7 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826da5e0
+        address = 0x826df228
         value = 0x39600000
 
 [[patch]]
@@ -69,7 +60,7 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827a93e8
+        address = 0x827adb90
         value = 0x38a00010
 
 [[patch]]
@@ -78,5 +69,5 @@ hash = [
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x821365e0
+        address = 0x82136798
         value = 0x60000000

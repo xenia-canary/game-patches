@@ -4,8 +4,8 @@ hash = "8BA2ADD6C386B083" # default.xex
 #media_id = "5A2BEFE6" # XBLA: FCDFD1BB110203B0BB75B4DFB3C74F308A0EE66F58
 
 [[patch]]
-    name = "Unlock FPS"
-    desc = "See note about framerate patches in the README."
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
     author = "Sowa_95"
     is_enabled = false
 

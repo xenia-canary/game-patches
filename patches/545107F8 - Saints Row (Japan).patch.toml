@@ -159,6 +159,12 @@ hash = "2EA8096D55CF4F50" # default.xex
         address = 0x8208c330
         value = 2.38888888889
     [[patch.f32]]
+        address = 0x82041b70 # Gameplay FOV Multiplier
+        value = 1.777741190  # Default: 1.3333334
+    [[patch.f32]]
+        address = 0x82041b74 # Cutscene FOV Multiplier
+        value = 1.34375 # Default: 1.0
+    [[patch.f32]]
         address = 0x8211aa40
         value = 0x60000000
     [[patch.be32]]
@@ -244,7 +250,7 @@ hash = "2EA8096D55CF4F50" # default.xex
         value = 0x22
     [[patch.array]]
         address = 0x82081dfc
-        value = "0x00420049004E00540045005800540000"
+        value = "00420049004E00540045005800540000"
     [[patch.be8]]
         address = 0x82531d53
         value = 0x07

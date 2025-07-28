@@ -1,6 +1,6 @@
-title_name = "State of Decay" # TU5
+title_name = "State of Decay" # TU7
 title_id = "584111E8" # XA-4584
-hash = "EE3D121EE9877C9E" # default.xex
+hash = "87C9561D4440AB73" # default.xex
 #media_id = "6F32E742" # XBLA: 575B340E3A01D77D7C71736AC3B63886D02F23D958
 
 [[patch]]
@@ -10,27 +10,11 @@ hash = "EE3D121EE9877C9E" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x830d3578
+        address = 0x830d4748
         value = 0x60000000
     [[patch.be8]]
-        address = 0x837a65cb
+        address = 0x837a5a53
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
-
-[[patch]]
-    name = "Disable conditional rendering"
-    desc = "Not required since Canary b447699."
-    author = "illusion"
-    is_enabled = false
-
-    [[patch.be32]]
-        address = 0x8313a1bc
-        value = 0x39600000
-    [[patch.be32]]
-        address = 0x83139c24
-        value = 0x39600000
-    [[patch.be32]]
-        address = 0x831394cc
-        value = 0x39200000
 
 [[patch]]
     name = "Disable most shadows"
@@ -39,10 +23,10 @@ hash = "EE3D121EE9877C9E" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x83115f6c
+        address = 0x83116ec4
         value = 0x39400000
     [[patch.be32]]
-        address = 0x83115fb8
+        address = 0x83116f10
         value = 0x39400000
 
 [[patch]]
@@ -51,5 +35,5 @@ hash = "EE3D121EE9877C9E" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x820f273c
+        address = 0x820f27bc
         value = 0x60000000

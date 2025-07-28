@@ -33,6 +33,15 @@ hash = "C01C5BA21C8272D2" # default.xex
         value = 0x01
 
 [[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma, Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83027c04
+        value = 0x38a00010
+
+[[patch]]
     name = "Disable Coalesced hash check"
     desc = "Allows for Coalesced modifications."
     author = "Sowa_95"

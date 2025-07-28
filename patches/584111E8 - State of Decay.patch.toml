@@ -17,6 +17,19 @@ hash = "DE77FE6490F9E7F5" # default.xex
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
+    name = "Disable most shadows"
+    desc = "Improves visibility in shaded areas. Best paired with Vulkan for better remaining shadows. Can be improved to properly disable all shadows."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x831148f8
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x83114944
+        value = 0x39400000
+
+[[patch]]
     name = "Skip intro"
     author = "Sowa_95"
     is_enabled = false

@@ -1,6 +1,6 @@
-title_name = "Fable Anniversary"
+title_name = "Fable Anniversary" # TU5
 title_id = "4D530A87" # MS-2695
-hash = "6E1372DAA51E685F" # default.xex
+hash = "D5207ABB2DC04430" # default.xex
 #media_id = [
 #    "07522886", # XBLA
 #    "27BEFD97", # Disc (Europe):      http://redump.org/disc/59058
@@ -16,7 +16,7 @@ hash = "6E1372DAA51E685F" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826f348c
+        address = 0x826f3154
         value = 0x60000000
     [[patch.be8]]
         address = 0x823e303f
@@ -28,7 +28,7 @@ hash = "6E1372DAA51E685F" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82bbe34c
+        address = 0x82bbf1e4
         value = 0x38a00010
 
 [[patch]]
@@ -38,7 +38,7 @@ hash = "6E1372DAA51E685F" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8267f6f4
+        address = 0x8267f944
         value = 0x39600000
 
 [[patch]]
@@ -47,8 +47,8 @@ hash = "6E1372DAA51E685F" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x83fa59c4
+        address = 0x83fa5b44
         value = 0x01
     [[patch.be8]]
-        address = 0x83fa59d8 # Frametime
+        address = 0x83fa5b58 # Frametime
         value = 0x01

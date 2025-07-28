@@ -7,7 +7,7 @@ hash = "1E38C15F7BF3CD01" # default.xex
 #]
 
 [[patch]]
-    name = "Unlock FPS."
+    name = "Unlock FPS"
     desc = "See note about framerate patches in the README. Disables additional vsync for menus/cutscenes to match FPS with gameplay. Menus speed tied to FPS."
     author = "Sowa_95"
     is_enabled = false

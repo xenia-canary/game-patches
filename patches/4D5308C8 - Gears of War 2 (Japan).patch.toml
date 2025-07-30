@@ -1,0 +1,88 @@
+title_name = "Gears of War 2"
+title_id = "4D5308C8" # MS-2248
+hash = "E16F67527BD62DBD" # default.xex
+#media_id = "7738282D" # Disc (Japan): http://redump.org/disc/63729
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "illusion, boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824a584c
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82996543
+        value = 0x01
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x830d9e23
+        value = 0x04
+
+[[patch]]
+    name = "Disable Ambient Occlusion"
+    desc = "Fixes various artifacts when using upscaling."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826fc0b8
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Motion Blur"
+    desc = "Solves most ghosting and artifacting caused by quickly panning cameras."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823619cc
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82813254
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827ba0e4
+        value = 0x39400000
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ab322f
+        value = 0x00
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83133bac
+        value = 0x01
+    [[patch.be8]]
+        address = 0x83133bb4
+        value = 0x01

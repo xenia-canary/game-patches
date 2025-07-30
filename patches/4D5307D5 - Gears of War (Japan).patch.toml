@@ -1,0 +1,65 @@
+title_name = "Gears Of War"
+title_id = "4D5307D5" # MS-2005
+hash = "9C6FEF626FA0B86D" # default.xex
+#media_id = "0793179D" # Disc (Japan): http://redump.org/disc/53041
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Increases the default vsync target to 60 FPS. See note about framerate patches in the README. Above 100 FPS there can be timing-related physics and audio issues."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x822309a3 # D3DPRESENT_INTERVAL_ONE
+        value = 0x01
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Solves most dynamic lighting artifacts caused by an issue with light environments and MSAA tiling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82be700b # GTilingMode = 0
+        value = 0x00
+    [[patch.be8]]
+        address = 0x82be6fa3 # GUseTilingCode = FALSE
+        value = 0x00
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8228fdd0
+        value = 0x4800
+
+[[patch]]
+    name = "8x Anisotropic Filtering"
+    desc = "Game does not natively support 16x filtering."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824860f8
+        value = 0x38a00008 # li r5, 8
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82611f7f
+        value = 0x00
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82c2aaa4
+        value = 0x01

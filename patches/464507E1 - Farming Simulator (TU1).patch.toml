@@ -1,0 +1,16 @@
+title_name = "Farming Simulator" # TU1
+title_id = "464507DC" # FE-2012
+hash = "4AF9D6FA7F42E667" # default.xex
+#media_id = [
+#    "2D336B87", # Disc (Europe): http://redump.org/disc/70102
+#    "374462A6"  # Disc (USA):    http://redump.org/disc/39337
+#]
+
+[[patch]]
+    name = "60 FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821082c8
+        value = 0x60000000

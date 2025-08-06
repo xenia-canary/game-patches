@@ -1,0 +1,38 @@
+title_name = "Game of Thrones"
+title_id = "415407DE" # AT-2014
+hash = "662C828F701E4EAB" # default.xex
+#media_id = "16AD03C5" # Disc (USA): http://redump.org/disc/55875
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8251b6c0
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a391c3
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8295911c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8314e910
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8314e91c # Frametime
+        value = 0x01

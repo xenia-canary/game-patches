@@ -1,0 +1,534 @@
+title_name = "Saints Row"
+title_id = "545107F8" # TQ-2040
+hash = "2EA8096D55CF4F50" # default.xex
+#media_id = "4FA0E553" # Disc (Japan): http://redump.org/disc/83898
+
+[[patch]]
+    name = "1201x675"
+    desc = "Lowest 16:9 resolution that can be upscaled without flickering. (1200 breaks so it's technically off by 1 pixel on X.)"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8219553c
+        value = 0x390004b1
+    [[patch.be32]]
+        address = 0x82195540
+        value = 0x392002a3
+    [[patch.be16]]
+        address = 0x827e712a
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e71e6
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e707e
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e7262
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e730e
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e739a
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e7456
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e74d2
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e757e
+        value = 0x04b1
+    [[patch.be16]]
+        address = 0x827e711e
+        value = 0x02a3
+    [[patch.be16]]
+        address = 0x827e712e
+        value = 0x02a3
+    [[patch.be16]]
+        address = 0x827e7082
+        value = 0x02a3
+    [[patch.be16]]
+        address = 0x827e71ea
+        value = 0x02a3
+    [[patch.be16]]
+        address = 0x827e7266
+        value = 0x02a3
+    [[patch.be16]]
+        address = 0x827e7312
+        value = 0x02a3
+    [[patch.be16]]
+        address = 0x827e739e
+        value = 0x02a3
+    [[patch.be16]]
+        address = 0x827e745a
+        value = 0x02a3
+    [[patch.be16]]
+        address = 0x827e74d6
+        value = 0x02a3
+
+[[patch]]
+    name = "1280x610"
+    desc = "Lowest ~21:9 resolution that can be upscaled without flickering. Use the AR real patch to correct the 3D aspect ratio. This is, mostly, to make the UI less stretched in 21:9."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8219553c
+        value = 0x39000500
+    [[patch.be32]]
+        address = 0x82195540
+        value = 0x39200262
+    [[patch.be16]]
+        address = 0x827e712a
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e71e6
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e707e
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e7262
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e730e
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e739a
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e7456
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e74d2
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e757e
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x827e711e
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e712e
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e7082
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e71ea
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e7266
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e7312
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e739e
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e745a
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e74d6
+        value = 0x0262
+    [[patch.be16]]
+        address = 0x827e74d6
+        value = 0x0262
+    [[patch.be32]]
+        address = 0x8228f0c4 # NOP to prevent the X position from being written to
+        value = 0x60000000
+    [[patch.f32]]
+        address = 0x82ece28c # UI X positioning
+        value = 0.847222222
+
+[[patch]]
+    name = "Aspect Ratio real"
+    desc = "To get proper Aspect Ratio FOV = Default * (Width/Height) / (16/9)"
+    author = "Tervel, Clippy95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x827ede2c
+        value = 0x01
+    [[patch.f32]]
+        address = 0x8208c330
+        value = 2.38888888889
+    [[patch.f32]]
+        address = 0x82041b70 # Gameplay FOV Multiplier
+        value = 1.777741190  # Default: 1.3333334
+    [[patch.f32]]
+        address = 0x82041b74 # Cutscene FOV Multiplier
+        value = 1.34375 # Default: 1.0
+    [[patch.f32]]
+        address = 0x8211aa40
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8211aa80
+        value = 0x48141a4c
+    [[patch.be32]]
+        address = 0x8225c4cc
+        value = 0x3d60835e
+    [[patch.be32]]
+        address = 0x8225c4d0
+        value = 0x896b1f68
+    [[patch.be32]]
+        address = 0x8225c4d4
+        value = 0x2b0b0000
+    [[patch.be32]]
+        address = 0x8225c4d8
+        value = 0x3d608204
+    [[patch.be32]]
+        address = 0x8225c4dc
+        value = 0x409a000c
+    [[patch.be32]]
+        address = 0x8225c4e0
+        value = 0xc00b1b70
+    [[patch.be32]]
+        address = 0x8225c4e4
+        value = 0x4bebe5a4
+    [[patch.be32]]
+        address = 0x8225c4e8
+        value = 0xc00b1b74
+    [[patch.be32]]
+        address = 0x8225c4ec
+        value = 0x4bebe59c
+
+[[patch]]
+    name = "Tree LODs"
+    desc = "Makes the game always display the high-detail models of the trees."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x827bc5cc
+        value = -1.0
+
+[[patch]]
+    name = "Disable Japanese Cutscene Letterboxing"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822f4dec
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Aim Assist"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82079a64
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Item Glow"
+    desc = "Gets rid of the glow that is normally applied on dropped items such as cash and weapons"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82418068
+        value = 0x4e800020
+    [[patch.be8]]
+        address = 0x827bd219
+        value = 0x00
+
+[[patch]]
+    name = "Force US"
+    desc = "Restores the world-wide release's font scale, forces the game to load the US strings and fixes the string tag comparison. Does not change the font used by the game, to fix that use the font patch with this one."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8264f037
+        value = 0x22
+    [[patch.array]]
+        address = 0x82081dfc
+        value = "00420049004E00540045005800540000"
+    [[patch.be8]]
+        address = 0x82531d53
+        value = 0x07
+    [[patch.be8]]
+        address = 0x82531d6b
+        value = 0x07
+    [[patch.be8]]
+        address = 0x82531d8f
+        value = 0x07
+    [[patch.string]]
+        address = 0x82081c78 # Other languages can be set by editing this (e.g. IT, ES, FR, DE), though do note that compressed unicode languages require the patches above to be removed.
+        value = "US"
+    [[patch.f32]]
+        address = 0x827ba5bc # Font scale, default is 1.5.
+        value = 1.0
+
+[[patch]]
+    name = "Restore US Fonts functionality"
+    desc = "Attempts to restore original fonts and their scale/behaviour from the original world-wide release."
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8264f037
+        value = 0x22
+    [[patch.array]]
+        address = 0x827ba518
+        value = "3f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f800000"
+    [[patch.f32]]
+        address = 0x827ba5bc
+        value = 1.0
+    [[patch.be16]]
+        address = 0x8219458a
+        value = 0x8207
+    [[patch.be16]]
+        address = 0x82194592
+        value = 0x7a10
+    [[patch.array]]
+        address = 0x82077a10
+        value = "0000000000000000000000000000"
+    [[patch.string]]
+        address = 0x82077a10
+        value = "px_giantvar"
+    [[patch.be32]]
+        address = 0x82661f90
+        value = 0x4bbfa4c8
+    [[patch.be32]]
+        address = 0x8225c458
+        value = 0x56ea103a
+    [[patch.be32]]
+        address = 0x8225c45c
+        value = 0x7f6a582e
+    [[patch.be32]]
+        address = 0x8225c460
+        value = 0x48405b34
+    [[patch.be32]]
+        address = 0x82662128
+        value = 0x4bbfa33c
+    [[patch.be32]]
+        address = 0x8225c464
+        value = 0x57ea103a
+    [[patch.be32]]
+        address = 0x8225c468
+        value = 0x7f4a582e
+    [[patch.be32]]
+        address = 0x8225c46c
+        value = 0x48405cc0
+    [[patch.be32]]
+        address = 0x8264f0fc
+        value = 0x4bc0d374
+    [[patch.be32]]
+        address = 0x8225c470
+        value = 0x546a103a
+    [[patch.be32]]
+        address = 0x8225c474
+        value = 0x7d2a582e
+    [[patch.be32]]
+        address = 0x8225c478
+        value = 0x483f2c88
+    [[patch.be32]]
+        address = 0x8264f610
+        value = 0x4bc0ce6c
+    [[patch.be32]]
+        address = 0x8225c47c
+        value = 0x56ea103a
+    [[patch.be32]]
+        address = 0x8225c480
+        value = 0x7f4a582e
+    [[patch.be32]]
+        address = 0x8225c484
+        value = 0x483f3190
+    [[patch.be32]]
+        address = 0x8264fc00
+        value = 0x4bc0c888
+    [[patch.be32]]
+        address = 0x8225c488
+        value = 0x54ea103a
+    [[patch.be32]]
+        address = 0x8225c48c
+        value = 0x7f4a582e
+    [[patch.be32]]
+        address = 0x8225c490
+        value = 0x483f3774
+
+[[patch]]
+    name = "Allow Toggle Crouch While Moving"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8217b198
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Censorship"
+    author = "Clippy95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x835e4655
+        value = 0x01
+    [[patch.be8]]
+        address = 0x835e4656
+        value = 0x01
+    [[patch.be8]]
+        address = 0x82530f9f
+        value = 0x01
+
+[[patch]]
+    name = "Unlock FPS"
+    author = "illusion, Clippy95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82211fc8
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x82211fcc
+        value = 0x906bfffc
+    [[patch.be32]]
+        address = 0x82382378
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x8238237c
+        value = 0x906bfffc
+
+[[patch]]
+    name = "Enable Debug Console"
+    desc = "Requires keyboard_passthru to be changed from false to true in the Xenia Canary config; Requires Xenia Canary version 271befc from January 25th or older."
+    author = "emoose, Tervel, Clippy"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8265c0a4
+        value = 0x48000aa4
+    [[patch.be32]]
+        address = 0x8265cb44
+        value = 0x480b9159
+    [[patch.be32]]
+        address = 0x8265cc78
+        value = 0x480b9074
+    [[patch.be32]]
+        address = 0x8263ac24
+        value = 0x4bb6cc40 # b 821A7864
+    [[patch.be32]]
+        address = 0x821a7864
+        value = 0x8b1b0001 # lbz r24,0xb(r27)
+    [[patch.be32]]
+        address = 0x821a7868
+        value = 0x6b180001 # xori r24,r24,0x1 # originally set to 0 to close the console window, now just xor to open/close.
+    [[patch.be32]]
+        address = 0x821a786c
+        value = 0x9b1b0001 # stb r24,0xb(r27)
+    [[patch.be32]]
+        address = 0x821a7870
+        value = 0x484933b8 # b 0x8263AC28
+    [[patch.be32]]
+        address = 0x82198d18
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82198d20
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82639b48
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82639c20
+        value = 0x8263ac20 # Allow to open/close console with ~ key
+    [[patch.be32]]
+        address = 0x82639b80
+        value = 0x8263ab24 # Stop ESC from closing/opening console.
+
+[[patch]]
+    name = "Havok physics FPS fix"
+    desc = "Fixes Cutscene Objects desyncing and doors teleporting on high fps, at the cost of framerates."
+    author = "Clippy95" # Initially found by uzis for SR2 PC.
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82642c4c
+        value = 0x4bb64bc4
+    [[patch.be32]]
+        address = 0x821a7810
+        value = 0x3c608209
+    [[patch.be32]]
+        address = 0x821a7814
+        value = 0xc023b7b0
+    [[patch.be32]]
+        address = 0x821a7818
+        value = 0x3c608200
+    [[patch.be32]]
+        address = 0x821a781c
+        value = 0xc0430adc
+    [[patch.be32]]
+        address = 0x821a7820
+        value = 0xfc801024
+    [[patch.be32]]
+        address = 0x821a7824
+        value = 0xfc040800
+    [[patch.be32]]
+        address = 0x821a7828
+        value = 0x41800008
+    [[patch.be32]]
+        address = 0x821a782c
+        value = 0xfc800890
+    [[patch.be32]]
+        address = 0x821a7830
+        value = 0x3c60835e
+    [[patch.be32]]
+        address = 0x821a7834
+        value = 0xd083221c
+    [[patch.be32]]
+        address = 0x821a7838
+        value = 0x4849b418
+
+[[patch]]
+    name = "Loose VPP Content loading" # loose->dlcs->vpps
+    desc = "Allows loading of loose files e.g xtbls, pegs, lua & more, just by dragging the files into the game directory without the need to pack them into VPPs"
+    author = "Clippy95, Scanti"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82195737
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8219573b
+        value = 0x00
+    [[patch.be8]]
+        address = 0x8264b53b
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8264b533
+        value = 0x01
+
+[[patch]]
+    name = "Skip Intros"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8229357c
+        value = 0x3ba00003
+    [[patch.be32]]
+        address = 0x8220f9e0
+        value = 0x60000000
+
+[[patch]]
+    name = "Enable MP actions in SP"
+    desc = "Lets you perform the D-pad actions from MP in SP (tauting and healing)"
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8217a6c0
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8217ad4c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82177c40
+        value = 0x60000000

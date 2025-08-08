@@ -4,8 +4,8 @@ hash = "F97F7C0C3071DC58" # default.xex
 #media_id = "3329B940" # Disc (USA): http://redump.org/disc/16842
 
 [[patch]]
-    name = "Unlock FPS"
-    desc = "See note about framerate patches in the README."
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
     author = "Sowa_95"
     is_enabled = false
 
@@ -22,3 +22,21 @@ hash = "F97F7C0C3071DC58" # default.xex
     [[patch.be8]]
         address = 0x82fa57bb
         value = 0x04
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "boma, Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82342c14
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ffbda0
+        value = 0x01

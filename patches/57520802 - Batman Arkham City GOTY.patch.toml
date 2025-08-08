@@ -1,7 +1,13 @@
 title_name = "Batman: Arkham City: Game of the Year Edition"
 title_id = "57520802" # WR-2050
-hash = "BD0E0E99E84F554B" # default.xex
-#media_id = "5D278B66" # Disc (USA, Europe): http://redump.org/disc/50850
+hash = [
+    "BD0E0E99E84F554B" # Disc 1, default.xex
+#    "A2E1B657B4B6F71E" # Disc 2, default.xex
+]
+#media_id = [
+#    "5D278B66", # Disc 1 (USA, Europe): http://redump.org/disc/50850
+#    "69B8A24F"  # Disc 2 (USA, Europe): http://redump.org/disc/50851
+#]
 
 [[patch]]
     name = "Unlock FPS"
@@ -44,6 +50,15 @@ hash = "BD0E0E99E84F554B" # default.xex
     [[patch.be32]]
         address = 0x824370b8
         value = 0x38600000
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8273d9f8
+        value = 0x39600000
 
 [[patch]]
     name = "Skip intro"

@@ -1,7 +1,10 @@
 title_name = "The Bureau: XCOM Declassified"
 title_id = "545407DD" # TT-2013
 hash = "C075E7B7EE3DA59E" # default.xex
-#media_id = "271B66A0" # Disc (World): http://redump.org/disc/67799
+#media_id = [
+#    "2E24D800", # Disc (Europe): http://redump.org/disc/57371
+#    "271B66A0"  # Disc (World):  http://redump.org/disc/67799
+#]
 
 [[patch]]
     name = "Unlock FPS"

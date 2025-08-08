@@ -95,7 +95,7 @@ hash = "7F840B8DEFDB5C5E" # default.xex
         value = 0x03
 
 [[patch]]
-    name = "Cinematic-Only Christie Costume on Slot 1"
+    name = "Cutscene-Only Christie Costume on Slot 1"
     author = "ryu_highabusa"
     is_enabled = false
 

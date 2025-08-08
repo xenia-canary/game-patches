@@ -73,7 +73,7 @@ hash = "EBBE6FD79DF4133E" # disc default.xex + TU1
         value = 0x3ed80000
 
 [[patch]]
-    name = "Cinematic-Only Helena 'Opera' Costume on Slot 1"
+    name = "Cutscene-Only Helena 'Opera' Costume on Slot 1"
     author = "ryu_highabusa"
     is_enabled = false
 

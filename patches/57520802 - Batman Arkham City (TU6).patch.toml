@@ -46,6 +46,15 @@ hash = "DF9C269BB979E4A2" # default.xex
         value = 0x38a00010
 
 [[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8273cb80
+        value = 0x39600000
+
+[[patch]]
     name = "Skip intro"
     author = "Sowa_95"
     is_enabled = false

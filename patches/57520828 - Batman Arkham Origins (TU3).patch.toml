@@ -7,13 +7,67 @@ hash = [
 #    "E52F7825EF8C9EC9" # Disc 2, ExpansionInstaller.xex
 #    "34A4384ADD8E670D" # Disc 2, MP.xex
 ]
-#media_id = "1E1F12E7" # Disc (USA, Europe): http://redump.org/disc/50852
+#media_id = [
+#    "1E1F12E7", # Disc 1 (USA, Europe): http://redump.org/disc/50852
+#    "7F06EB44"  # Disc 2 (USA, Europe): http://redump.org/disc/50853
+#]
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82447950
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a702f3
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
     name = "Debug Menu"
+    desc = "Activate with RB+Start."
     author = "dron_3" # https://dron-3.blogspot.com/2020/11/batman-arkham-series-xbox-360-debug-menu.html
     is_enabled = false
 
     [[patch.be8]]
         address = 0x8242c407
         value = 0x00
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826b2518
+        value = 0x39400000
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826dc948
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827ab048
+        value = 0x38a00010
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821371b0
+        value = 0x60000000

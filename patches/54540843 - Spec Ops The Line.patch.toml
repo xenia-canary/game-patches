@@ -4,8 +4,8 @@ hash = "982C1EC1B8C38D2E" # default.xex
 #media_id = "22D4312F" # Disc (USA, Europe): http://redump.org/disc/86927
 
 [[patch]]
-    name = "Unlock FPS"
-    desc = "See note about framerate patches in the README."
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
     author = "Sowa_95"
     is_enabled = false
 
@@ -24,11 +24,32 @@ hash = "982C1EC1B8C38D2E" # default.xex
         value = 0x39600000
 
 [[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82459504
+        value = 0x39600000
+
+[[patch]]
     name = "Disable Lens Flares"
-    desc = "Fixes unoccluded bright lights on-screen. Probably not required on default occlusion = 100, most (if not all) flares are hidden."
+    desc = "Fixes unoccluded bright lights on-screen. Probably not required on default occlusion 80/100, most (if not all) flares are hidden."
     author = "Sowa_95"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x82932560
         value = 0x39400000
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8369a2d8
+        value = 0x01
+    [[patch.be8]]
+        address = 0x8369a2f0 # Frametime
+        value = 0x01

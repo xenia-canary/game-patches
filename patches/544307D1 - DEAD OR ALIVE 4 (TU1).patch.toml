@@ -150,7 +150,7 @@ hash = "EBBE6FD79DF4133E" # disc default.xex + TU1
         address = 0x82c32bc9
         value = 0x01
     [[patch.be8]] #Waterfall Valley 0x1a
-        address = 0x82c32bd8
+        address = 0x82c32bd9
         value = 0x01
     [[patch.be8]] #Gamblers Paradise 0x11
         address = 0x82c32be9

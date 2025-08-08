@@ -7,6 +7,16 @@ hash = [
 #media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
 
 [[patch]]
+    name = "Tree LODs"
+    desc = "Makes the game always display the high-detail models of the trees."
+    author = "Tervel"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x827cc500
+        value = -1.0
+
+[[patch]]
     name = "Enable MP actions in SP"
     desc = "Lets you perform the D-pad actions from MP in SP (tauting and healing)"
     author = "Tervel"
@@ -141,14 +151,15 @@ hash = [
 
 [[patch]]
     name = "Skip Logos"
-    author = "illusion"
+    desc = "Skips the intro videos & legal disclaimers. Updated to not break loading screens."
+    author = "illusion, Tervel"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x82293344
         value = 0x3ba00003
     [[patch.be32]]
-        address = 0x82219d44
+        address = 0x8220f88c
         value = 0x60000000
 
 [[patch]]

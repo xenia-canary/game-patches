@@ -5,6 +5,7 @@ hash = "013148141A27D4C7" # default.xex
 #    "0308370F", # XBLA: 74581ca18a3167fccf2210e120d69c73d2562442, ja-JP pt-BR
 #    "250B2C78", # Disc (Europe):      http://redump.org/disc/65904
 #    "3528321A", # Disc (USA, Europe): http://redump.org/disc/57311
+#    "4AF734C4", # Disc (Japan):       http://redump.org/disc/69679
 #    "40589F37", # XBLA: 78255903a89666c9d40deb8568cb32c2d84b39fb, en-GB en-IE ru-RU
 #    "52ABEBAF", # XBLA: 38c1bdea0e6237ac9afbc91e184d09bb280a65ca, de-AT de-CH de-DE fr-CH fr-FR
 #    "6DCAF3C2", # XBLA: 87daed863476d86f36a9c740aa6514cfd19d4e9d, da-DK en-AU en-CA en-HK en-IN en-NZ en-SG en-US en-ZA es-AR es-CL es-CO es-MX fi-FI fr-BE fr-CA ko-KR nb-NO nl-BE nl-NL pl-PL pt-PT
@@ -101,3 +102,25 @@ hash = "013148141A27D4C7" # default.xex
     [[patch.be32]]
         address = 0x825b7478
         value = 0x39400000
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82dbe807
+        value = 0x00
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83544e20
+        value = 0x01
+    [[patch.be8]]
+        address = 0x83544e34 # Frametime
+        value = 0x01

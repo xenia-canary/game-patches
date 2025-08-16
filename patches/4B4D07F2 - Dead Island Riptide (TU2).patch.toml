@@ -1,0 +1,23 @@
+title_name = "Dead Island: Riptide" # TU2
+title_id = "4B4D07F2" # KM-2034
+hash = "799E6E92E3886A15" # default.xex
+#media_id = "2C62B3EF" # Disc (USA, Europe): http://redump.org/disc/35198
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x827414a3
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82de2338
+        value = 0x60000000

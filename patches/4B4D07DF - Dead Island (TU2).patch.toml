@@ -1,0 +1,23 @@
+title_name = "Dead Island" # TU2
+title_id = "4B4D07DF" # KM-2015
+hash = "0217B8D589CC9B13" # default.xex
+#media_id = "2BCF9BDE" # Disc (USA, Europe): http://redump.org/disc/72661
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8314cfaf
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829ae1b4
+        value = 0x60000000

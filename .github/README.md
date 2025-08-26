@@ -10,7 +10,7 @@ Plugin documentation can be found [here](Plugin-Docs.md).
 
 ## Installing/Updating
 0. Prerequisites
-    * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary/releases/download/experimental/xenia_canary.zip).
+    * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary-releases/releases/latest).
         * Patches aren't supported on master or outdated versions of Xenia Canary.
 1. Download [this zip](../../../releases/latest/download/game-patches.zip).
 2. Go to where `xenia_canary.exe` is.
@@ -32,7 +32,7 @@ Plugin documentation can be found [here](Plugin-Docs.md).
 
 ## How to use
 0. Prerequisites
-    * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary/releases/download/experimental/xenia_canary.zip)
+    * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary-releases/releases/latest)
         * Patches aren't supported on master or outdated versions of Xenia Canary.
     * The right version of the game e.g. Title Update (TU).
     <!--

@@ -1,0 +1,34 @@
+title_name = "Aliens: Colonial Marines"
+title_id = "5345080C" # SE-2060
+hash = "54F36E4571EB4FFC" # default.xex
+#media_id = "4FB3C8B1" # Disc (USA, Europe): http://redump.org/disc/35188
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "Vsync disabled internally, Xenia's vsync/framerate_limit have no effect."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82630324
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82922e00
+        value = 0x39400000
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8305b8d7
+        value = 0x00

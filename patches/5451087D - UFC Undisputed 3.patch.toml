@@ -1,7 +1,7 @@
 title_name = "UFC Undisputed 3"
 title_id = "5451087D" # TQ-2173
 hash = "3B0B17028E4FA27B" # default.xex
-#media_id = "3E0E52AB" # Disc (USA): http://redump.org/disc/42443
+#media_id = "3E0E52AB" # Disc (USA, Europe): http://redump.org/disc/42443
 
 [[patch]]
     name = "Disable Gloves"
@@ -12,3 +12,21 @@ hash = "3B0B17028E4FA27B" # default.xex
     [[patch.be8]] # Break string
         address = 0x82135a10
         value = 0x00
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]] # Break string
+        address = 0x82000cb8
+        value = 0x00
+    [[patch.be8]] # Break string
+        address = 0x82004299
+        value = 0x00
+    [[patch.be8]] # Break string
+        address = 0x820042ad
+        value = 0x00
+    [[patch.array]]
+        address = 0x82000cc4
+        value = "0x7070765f7265702e62696b00"

@@ -12,9 +12,9 @@ hash = "28813E928E2D4C4A" # default.xex
     [[patch.be8]]
         address = 0x82165faf # present interval, currently useless
         value = 0x02
-    [[patch.be8]]
-        address = 0x828519b7 # com_PreciseTic
-        value = 0x00
+    [[patch.be32]]
+        address = 0x828519a8 # com_PreciseTic
+        value = 0x39400000
     [[patch.be32]]
         address = 0x82816504 # com_FixedTic
         value = 0x39600001

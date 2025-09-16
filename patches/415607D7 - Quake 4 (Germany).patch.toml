@@ -1,0 +1,20 @@
+title_name = "Quake 4"
+title_id = "415607D7" # AV-2007
+hash = "D506EE87FFB9E3DC" # default.xex
+#media_id = [
+#    "00000000", # Disc (Germany): http://redump.org/disc/114465
+#    "0DD85566"  # Disc (Germany): http://redump.org/disc/69176
+#]
+
+[[patch]]
+    name = "Performance fix"
+    desc = "Game speed tied to FPS, don't disable vsync. Menus remain slow."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821b7548 # com_FixedTic menu
+        value = 0x39600001
+    [[patch.be32]]
+        address = 0x821b7828 # com_FixedTic gameplay
+        value = 0x39600001

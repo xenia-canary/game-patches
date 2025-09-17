@@ -1,0 +1,17 @@
+title_name = "Quake Arena Arcade"
+title_id = "584108C8" # XA-2248
+hash = "72FB135885F47D7E" # default.xex
+#media_id = "0D9A2BB2" # XBLA: 0ED9DD87783BD72BA56ED67ACD52BBFF1F47F08458
+
+[[patch]]
+    name = "Graphics fix"
+    desc = "Eliminates bright stuff obstructing the screen. Could be improved to skip shaders properly, right now it replaces them with another shader, which works, but is not ideal."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.array]]
+        address = 0x820c973c # g_DownScale2x2PS.pso
+        value = "0x675F73747232445368616465722E76736F000000"
+    [[patch.array]]
+        address = 0x820c975c # g_DownScale4x4PS.pso
+        value = "0x675F73747232445368616465722E76736F000000"

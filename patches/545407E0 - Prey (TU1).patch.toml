@@ -1,0 +1,20 @@
+title_name = "Prey" # TU1
+title_id = "545407E0" # TT-2016
+hash = "28813E928E2D4C4A" # default.xex
+#media_id = "1ABA0DD5" # Disc (USA, Europe): http://redump.org/disc/13758
+
+[[patch]]
+    name = "Stutter fix"
+    desc = "Game speed tied to FPS, don't disable vsync. Could be improved to achieve 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82165faf # present interval, currently useless
+        value = 0x02
+    [[patch.be32]]
+        address = 0x828519a8 # com_PreciseTic
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x82816504 # com_FixedTic
+        value = 0x39600001

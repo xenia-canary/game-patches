@@ -22,3 +22,24 @@ hash = "4D8B43915E41A1EA" # default.xex
     [[patch.be8]]
         address = 0x82e018af
         value = 0x04
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822a6efc
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show Frametime"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82e62ab8
+        value = 0x01
+    [[patch.be8]]
+        address = 0x82e62ac4
+        value = 0x01

@@ -1,0 +1,20 @@
+title_name = "Quake 2" # Quake 4 Bonus Content
+title_id = "415607D6" # AV-2006
+hash = [
+    "AD878C34DCD9880F", # quake2-xenon.exe
+#    "370E041FDC7BB432" # default.xex
+]
+#media_id = "00000000" # Disc (USA, Europe): http://redump.org/disc/23965
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. Potential issues at very high FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8205c158
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x8209ffa7
+        value = 0x01 # 0x01=60FPS; 0x02=30FPS

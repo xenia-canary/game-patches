@@ -1,0 +1,13 @@
+title_name = "Fuse"
+title_id = "4541096E" # EA-2414
+hash = "34AD8CB8A7A6A172" # default.xex
+#media_id = "566B2842" # Disc (USA, Europe): http://redump.org/disc/39344
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82089a43
+        value = 0x00

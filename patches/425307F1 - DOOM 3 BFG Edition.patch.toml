@@ -1,0 +1,25 @@
+title_name = "DOOM 3: BFG Edition"
+title_id = "425307F1" # BS-2033
+hash = "76D3A8E336C47D43" # default.xex
+#media_id = [
+#    "4257B465", # Disc (Europe): http://redump.org/disc/71440
+#    "0843620B"  # Disc (USA):    http://redump.org/disc/38465
+#]
+
+[[patch]]
+    name = "3rd person camera"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82425914
+        value = 0x39400001
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82004cf2
+        value = 0x00

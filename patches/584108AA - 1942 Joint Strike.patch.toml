@@ -1,0 +1,14 @@
+title_name = "1942: Joint Strike"
+title_id = "584108AA" # XA-2218
+hash = "16DEFCD17D3FDA4E" # default.xex
+#media_id = "7810361B" # XBLA: 022129BA22D72A560A093A63D5A77A77C1BD722A58
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82043cf6
+        value = 0x0438

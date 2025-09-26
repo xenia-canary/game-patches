@@ -1,0 +1,39 @@
+title_name = "Outland"
+title_id = "58410A05" # XA-2565
+hash = "8EF1BA69F2606388" # default.xex
+#media_id = "7D2833D4" # XBLA: 6BD5308C55925320D16A6C4C4EEAB68506A4266F58
+
+[[patch]]
+    name = "1504x846 Resolution"
+    desc = "Original resolution is 1280x720. Highest 16:9 without breaking the game."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x828484e2
+        value = 0x05e0
+    [[patch.be16]]
+        address = 0x828484da
+        value = 0x034e
+
+[[patch]]
+    name = "960x540 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x828484e2
+        value = 0x03c0
+    [[patch.be16]]
+        address = 0x828484da
+        value = 0x021c
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8217e820
+        value = 0x00

@@ -1,0 +1,46 @@
+title_name = "Blur" # TU2
+title_id = "41560845" # AV-2117
+hash = "A9C00C97C7BFE65F" # default.xex
+#media_id = "01C784D3" # Disc (USA, Europe): http://redump.org/disc/13442
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS. Game speed tied to FPS above 60 FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82254447
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "HDR fix"
+    desc = "Readback_resolve alternative. Disables HDR luminance. It's recommended to increase in-game brigthness to offset darker image."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82ab1d1f
+        value = 0x00
+
+[[patch]]
+    name = "Disable HDR"
+    desc = "Readback_resolve alternative. Disables HDR completely and affects multiple post-processing effects relying on HDR. Dramatically changes the overall look of the game."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82ab2bcf
+        value = 0x00
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8207a8fe
+        value = 0x00
+    [[patch.be8]]
+        address = 0x8207a91a
+        value = 0x00

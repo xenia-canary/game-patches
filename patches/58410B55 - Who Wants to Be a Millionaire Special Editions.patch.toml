@@ -1,0 +1,37 @@
+title_name = "Who Wants to Be a Millionaire? Special Editions"
+title_id = "58410B55" # XA-2901
+hash = "1E27173671F6DFD4" # default.xex
+#media_id = "53D0502C" # XBLA: AF268394D4D91C5A99994D2C3EBF37D2F558F14D58
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824bc160
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x8295cf97
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82f25947
+        value = 0x04
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8281ea78
+        value = 0x39400000

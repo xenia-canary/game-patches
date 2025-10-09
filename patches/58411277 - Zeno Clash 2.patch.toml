@@ -1,0 +1,58 @@
+title_name = "Zeno Clash 2"
+title_id = "58411277" # XA-4727
+hash = "87ED637D615A0B8E" # default.xex
+#media_id = "47797890" # XBLA: 18BE756E72FFF70673A96A4D76818327E888E47158
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824f0cf8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82981187
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82812718
+        value = 0x39400000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82929b2c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced hash check"
+    desc = "Allows for Coalesced modifications."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82cf0f6f
+        value = 0x00
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83767a88
+        value = 0x01
+    [[patch.be8]]
+        address = 0x83767a9c # Frametime
+        value = 0x01

@@ -1,0 +1,36 @@
+title_name = "Karateka" # 2012 Remake
+title_id = "5841128C" # XA-4748
+hash = "536435BBA6C6E105" # default.xex
+#media_id = "7409C3BB" # XBLA: 3D6CA834C5B0F5AFE43280D455AA8DF3EF6DD11C58
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82f57278
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x8283e1cb
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Black Shading Fix"
+    desc = "Disables MSAA"
+    author = "HouseofTudor, Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x831a9263
+        value = 0x04
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82320814
+        value = 0x38a00010

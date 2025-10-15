@@ -1,0 +1,28 @@
+title_name = "Syndicate"
+title_id = "45410923" # EA-2339
+hash = [ # default.xex
+    "4FBBB0B26C6B75E4", # TU 0
+    "81F72A468E1032B7", # TU 1
+]
+#media_id = "66BB25D9" # Disc (Europe): http://redump.org/disc/35947
+
+[[patch]]
+    name = "Render Debug Information"
+    desc = "Render on-screen debug info"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83061b81
+        value = 0x01
+
+[[patch]]
+    name = "Enable Logging"
+    desc = "Internal Logging"
+    author = "Adrian"
+    is_enabled = false
+
+    # Set log_level = 3 see output in RtlInitAnsiString or hook OutputDebugStringA for clean log
+    [[patch.be8]]
+        address = 0x83061b80
+        value = 0x01

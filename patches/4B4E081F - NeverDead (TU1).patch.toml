@@ -1,0 +1,17 @@
+title_name = "NeverDead" # TU1
+title_id = "4B4E081F" # KN-2079
+hash = "4D28CB8CF1F0AD44" # default.xex
+#media_id = "5D5CA48B" # Disc (USA, Europe): http://redump.org/disc/59927
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824db7f8
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x826bc31b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

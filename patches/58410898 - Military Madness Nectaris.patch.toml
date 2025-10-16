@@ -1,0 +1,14 @@
+title_name = "Military Madness: Nectaris"
+title_id = "58410898" # XA-2200
+hash = "D2B14E84275E5409" # default.xex
+#media_id = "08F1D4DA" # XBLA: A7345292F98B6936EA32A2EA41867B00290B4EC258
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8206c302
+        value = 0x0438

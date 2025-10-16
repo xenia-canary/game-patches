@@ -1,0 +1,64 @@
+title_name = "Pro Evolution Soccer 6" # PES 6; TU3
+title_id = "4B4E07DA" # KN-2010
+hash = "38A7B87C6B6071C4" # default.xex
+#media_id = "617138EB" # Disc (Europe): http://redump.org/disc/7746
+
+[[patch]]
+    name = "3840x2160 Resolution"
+    desc = "Original resolution is 1024x576."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8209469a
+        value = 0x0f00
+    [[patch.be16]]
+        address = 0x8210310a
+        value = 0x0f00
+    [[patch.be16]]
+        address = 0x82094692
+        value = 0x0870
+    [[patch.be16]]
+        address = 0x8209469e
+        value = 0x0870
+    [[patch.be16]]
+        address = 0x82103112
+        value = 0x0870
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1024x576."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8209469a
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x8210310a
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x82094692
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x8209469e
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x82103112
+        value = 0x0438
+
+[[patch]]
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 1024x576."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8209469a
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x82094692
+        value = 0x02d0
+    [[patch.be16]]
+        address = 0x8209469e
+        value = 0x02d0

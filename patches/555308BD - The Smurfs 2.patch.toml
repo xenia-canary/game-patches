@@ -1,0 +1,17 @@
+title_name = "The Smurfs 2"
+title_id = "555308BD" # US-2237
+hash = "E40B8A6D53145B07" # default.xex
+#media_id = "6A8D52D0" # Disc (USA, Europe): http://redump.org/disc/40494
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1728x960."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8234128e
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x82341296
+        value = 0x0438

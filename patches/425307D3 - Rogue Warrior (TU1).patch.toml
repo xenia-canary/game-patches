@@ -1,0 +1,13 @@
+title_name = "Rogue Warrior" # TU1
+title_id = "425307D3" # BS-2003
+hash = "88EFF9A42987C0DF" # default.xex
+#media_id = "0A3D6C7E" # Disc (USA, Europe): http://redump.org/disc/14039
+
+[[patch]]
+    name = "60 FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823360a0
+        value = 0x60000000

@@ -1,0 +1,27 @@
+title_name = "Shrek n' Roll"
+title_id = "584108C7" # XA-2247
+hash = "1FA2726ACE2D7FB9" # default.xex
+#media_id = "704A30F4" # XBLA: 8D8521330ADC5542AC2A87B7747B1DFE57C6EFD358
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821303b7
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82043426
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x8204342e
+        value = 0x0438

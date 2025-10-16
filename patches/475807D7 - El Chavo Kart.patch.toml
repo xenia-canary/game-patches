@@ -1,0 +1,35 @@
+title_name = "El Chavo Kart"
+title_id = "475807D7" # GX-2007
+hash = "FB4E76375A183F97" # default.xex
+#media_id = "5C2ECDD6" # Disc (USA): http://redump.org/disc/103647
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82b5864f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829f329c
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x83ce2644
+        value = 0x01
+    [[patch.be8]]
+        address = 0x83ce2658 # Frametime
+        value = 0x01

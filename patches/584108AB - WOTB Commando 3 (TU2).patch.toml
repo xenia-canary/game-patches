@@ -1,0 +1,14 @@
+title_name = "WOTB: Commando 3" # TU2; Wolf of the Battlefield: Commando 3
+title_id = "584108AB" # XA-2219
+hash = "16716F8770D92EBA" # default.xex
+#media_id = "230A82D4" # XBLA: B572E6B6CC1AF0CE3AD934261BB778E843CE516258
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82043896
+        value = 0x0438

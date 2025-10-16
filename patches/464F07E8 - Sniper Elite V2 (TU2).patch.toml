@@ -1,0 +1,26 @@
+title_name = "Sniper Elite V2" # TU2
+title_id = "464F07E8" # FO-2024
+hash = "69BFF7E0D5E5EAF6" # default.xex
+#media_id = "40D59EC2" # Disc (USA, Europe): http://redump.org/disc/54603
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x825e5413
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82138228
+        value = 0x00
+    [[patch.be8]]
+        address = 0x82138234
+        value = 0x00

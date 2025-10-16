@@ -1,0 +1,31 @@
+title_name = "Aliens vs. Predator" # TU3
+title_id = "5345082A" # SE-2090
+hash = "1B7DC32EDFEE5EFA" # default.xex
+#media_id = [
+#    "496CECB4", # Disc (Russia):      http://redump.org/disc/109499
+#    "5C19C70F"  # Disc (USA, Europe): http://redump.org/disc/37076
+#]
+
+[[patch]]
+    name = "60 FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8257243c
+        value = 0x60000000
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82142a74
+        value = 0x00
+    [[patch.be8]]
+        address = 0x82142a78
+        value = 0x00
+    [[patch.be8]]
+        address = 0x82142a80
+        value = 0x00

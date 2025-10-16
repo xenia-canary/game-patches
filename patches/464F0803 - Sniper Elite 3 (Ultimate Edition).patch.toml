@@ -1,0 +1,14 @@
+title_name = "Sniper Elite 3" # Ultimate Edition
+title_id = "464F0803" # FO-2051
+hash = "8B12B41639CDE85F" # default.xex
+#media_id = "4F384D1A" # Disc (USA, Europe): http://redump.org/disc/66431
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82802e3b
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS

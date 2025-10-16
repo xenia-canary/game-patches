@@ -19,10 +19,20 @@ hash = "29362A3C8309E1AC" # default.xex
 # Credit to patcher Bader for FOV patch, taken from https://www.reddit.com/r/ps4homebrew/comments/o2xe6u/60fps_patch_for_ghost_of_tsushima_ps4_pro_only/h35tfuy
 [[patch]]
     name = "Extended FOV"
-    desc = "Increases 16:9 horizontal FOV from 90 degrees to 105 degress."
+    desc = "Increases 16:9 horizontal FOV from 70 degrees to 90 degrees."
     author = "Bader"
     is_enabled = false
 
-    [[patch.be32]]
+    [[patch.f32]]
         address = 0x8209dff4
-        value = 0x42b40000
+        value = 90
+
+[[patch]]
+    name = "60 FPS"
+    desc = "60 FPS patch"
+    author = "Vex"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x8209de08
+        value = 0.01666666666

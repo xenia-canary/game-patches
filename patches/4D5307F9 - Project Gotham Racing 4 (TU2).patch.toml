@@ -1,0 +1,33 @@
+title_name = "Project Gotham Racing 4" # PGR; TU2
+title_id = "4D5307F9" # MS-2041
+hash = "DC8AF285927D06D6" # default.xex
+#media_id = "5A381A4E" # Disc (World): http://redump.org/disc/11813
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Some video playback may run at double speed."
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826cad54
+        value = 0x39400001
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "illusion"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829deaa7
+        value = 0x00
+
+[[patch]]
+    name = "Disable HDR"
+    desc = "Allows for upscaling without major flickering issues."
+    author = "remco, SuperType1"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829d703f
+        value = 0x00

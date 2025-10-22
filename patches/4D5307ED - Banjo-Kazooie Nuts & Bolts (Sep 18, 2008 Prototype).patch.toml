@@ -1,0 +1,15 @@
+title_name = "Banjo-Kazooie Nuts & Bolts (Sep 18, 2008 Prototype)"
+title_id = "4D5307ED" # MS-2029
+hash = "CC167C77FC8D6D79" # BanjoXT_Xenon_062.xex
+#media_id = "00000000"
+
+[[patch]]
+    name = "Fix crashing on start-up"
+    desc = "Fixed BanjoXT_Xenon_062.xex from crashing."
+    author = "Adrian, OlieGamerTV"
+    is_enabled = false
+
+    # Crash is present on retail console, but not devkit.
+    [[patch.be32]]
+        address = 0x826110e4
+        value = 0x60000000

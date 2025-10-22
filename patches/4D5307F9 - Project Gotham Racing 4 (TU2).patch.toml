@@ -1,6 +1,6 @@
-title_name = "Project Gotham Racing 4" # PGR
+title_name = "Project Gotham Racing 4" # PGR; TU2
 title_id = "4D5307F9" # MS-2041
-hash = "C68266E1F9C7F634" # default.xex
+hash = "DC8AF285927D06D6" # default.xex
 #media_id = "5A381A4E" # Disc (World): http://redump.org/disc/11813
 
 [[patch]]
@@ -10,7 +10,7 @@ hash = "C68266E1F9C7F634" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826957ec
+        address = 0x826cad54
         value = 0x39400001
 
 [[patch]]
@@ -19,7 +19,7 @@ hash = "C68266E1F9C7F634" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x829a9a9f
+        address = 0x829deaa7
         value = 0x00
 
 [[patch]]
@@ -29,5 +29,5 @@ hash = "C68266E1F9C7F634" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x829a89ef
+        address = 0x829d703f
         value = 0x00

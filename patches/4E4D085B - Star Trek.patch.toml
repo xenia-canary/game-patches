@@ -1,0 +1,42 @@
+title_name = "Star Trek"
+title_id = "4E4D085B" # NM-2139
+hash = "8CE82C4BDCED4B16" # default.xex
+#media_id = "13A9103C" # Disc (USA): http://redump.org/disc/38455
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82fe1bcb
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8306c080
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Radial Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x83051450
+        value = 0x60000000
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8209b100
+        value = 0x00

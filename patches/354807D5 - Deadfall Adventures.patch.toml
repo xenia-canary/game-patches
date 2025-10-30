@@ -17,6 +17,16 @@ hash = "088C950FC9389B09" # default.xex
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828359b0
+        value = 0x39400000
+
+[[patch]]
     name = "Disable Motion Blur"
     author = "Sowa_95"
     is_enabled = false

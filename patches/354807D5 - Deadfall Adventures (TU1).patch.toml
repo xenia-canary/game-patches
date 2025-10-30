@@ -1,0 +1,47 @@
+title_name = "Deadfall Adventures" # TU1
+title_id = "354807D5" # 5H-2005
+hash = "F9BDA57D6CAA0565" # default.xex
+#media_id = "3252C22A" # Disc (World): http://redump.org/disc/72640
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82509850
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82a0e897
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823e91a8
+        value = 0x39600000
+
+[[patch]]
+    name = "16x Anisotropic Filtering"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8294f5dc
+        value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x837ea970
+        value = 0x01
+    [[patch.be8]]
+        address = 0x837ea984 # Frametime
+        value = 0x01

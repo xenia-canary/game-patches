@@ -12,3 +12,22 @@ hash = "F27E7B130CFFC9D7" # default.xex
     [[patch.be32]]
         address = 0x820d8828
         value = 0x60000000
+
+[[patch]]
+    name = "1504x846 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x825a59a2
+        value = 0x05e0
+    [[patch.be16]]
+        address = 0x825a59a6
+        value = 0x034e
+    [[patch.be16]]
+        address = 0x825a59c2
+        value = 0x05e0
+    [[patch.be16]]
+        address = 0x825a59c6
+        value = 0x034e

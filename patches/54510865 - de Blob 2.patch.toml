@@ -1,0 +1,23 @@
+title_name = "de Blob 2"
+title_id = "54510865" # TQ-2149
+hash = "3C0A4AE8664E3FB0" # default.xex
+#media_id = "42DCD5EC" # Disc (USA, Europe): http://redump.org/disc/26919
+
+[[patch]]
+    name = "Horizontal Line Fix"
+    desc = "Decreasing resolution from 1152x648 to 1040x585 prevents horizontal line. Increased resolution of menus and HUD from 1280x720 to 1520x855."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82627a6e
+        value = 0x0410
+    [[patch.be16]]
+        address = 0x82627a72
+        value = 0x0249
+    [[patch.be16]]
+        address = 0x8243b906 # menus and HUD
+        value = 0x05f0
+    [[patch.be16]]
+        address = 0x8243b90a # menus and HUD
+        value = 0x0357

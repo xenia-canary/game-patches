@@ -11,3 +11,31 @@ hash = "ED5C2458F214AB36" # default.xex
     [[patch.be8]]
         address = 0x82414ff7
         value = 0x03
+
+[[patch]]
+    name = "All Characters Unlocked"
+    desc = "Characters' files aren't included, often resulting in a crash."
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be32]] #unlock Helena
+        address = 0x82aaf920
+        value = 0x07010101
+    [[patch.be32]] #unlock Ein
+        address = 0x82aaf948
+        value = 0x03010101
+    [[patch.be32]] #unlock Genfu
+        address = 0x82aaf970
+        value = 0x06010101
+    [[patch.be32]] #unlock Leon
+        address = 0x82aaf998
+        value = 0x08010101
+    [[patch.be32]] #unlock Alpha152
+        address = 0x82aaf9c0
+        value = 0x10010101
+    [[patch.be32]] #unlock Tengu
+        address = 0x82aaf9e8
+        value = 0x11010101
+    [[patch.be32]] #unlock Spartan-458
+        address = 0x82aafa10
+        value = 0x12010101

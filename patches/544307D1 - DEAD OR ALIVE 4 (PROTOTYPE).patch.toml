@@ -13,29 +13,29 @@ hash = "ED5C2458F214AB36" # default.xex
         value = 0x03
 
 [[patch]]
-    name = "All Characters Unlocked"
-    desc = "Characters' files aren't included, often resulting in a crash."
+    name = "Show Locked Characters"
+    desc = "Locked Characters' (and Greyed-Out Characters') files aren't included in the prototype, so you can't actually select those characters. Merely a cosmetic mod to showcase the prototype roster."
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.be32]] #unlock Helena
+    [[patch.be32]] #show Helena
         address = 0x82aaf920
-        value = 0x07010101
-    [[patch.be32]] #unlock Ein
+        value = 0x07010001
+    [[patch.be32]] #show Ein
         address = 0x82aaf948
-        value = 0x03010101
-    [[patch.be32]] #unlock Genfu
+        value = 0x03010001
+    [[patch.be32]] #show Genfu
         address = 0x82aaf970
-        value = 0x06010101
-    [[patch.be32]] #unlock Leon
+        value = 0x06010001
+    [[patch.be32]] #show Leon
         address = 0x82aaf998
-        value = 0x08010101
-    [[patch.be32]] #unlock Alpha152
+        value = 0x08010001
+    [[patch.be32]] #show Alpha152
         address = 0x82aaf9c0
-        value = 0x10010101
-    [[patch.be32]] #unlock Tengu
+        value = 0x10010001
+    [[patch.be32]] #show Tengu
         address = 0x82aaf9e8
-        value = 0x11010101
-    [[patch.be32]] #unlock Spartan-458
+        value = 0x11010001
+    [[patch.be32]] #show Spartan-458
         address = 0x82aafa10
-        value = 0x12010101
+        value = 0x12010001

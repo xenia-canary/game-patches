@@ -1,0 +1,32 @@
+title_name = "Toy Story 3"
+title_id = "425607E5" # BV-2021
+hash = "A75D707A47A9A416" # default.xex
+#media_id = [
+#    "42433220", # Disc (Europe): http://redump.org/disc/57365
+#    "1D93523B", # Disc (Spain):  http://redump.org/disc/113263
+#    "0B11B88B", # Disc (USA):    http://redump.org/disc/14248
+#    "578D1701"  # Disc (USA):    http://redump.org/disc/117487
+#]
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82708907
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "1024x576 Resolution"
+    desc = "Prevents flickering garbage in the bottom half of the screen. Original resolution is 1152x640."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82533712
+        value = 0x0400
+    [[patch.be16]]
+        address = 0x82533716
+        value = 0x0240

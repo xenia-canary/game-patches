@@ -1,0 +1,36 @@
+title_name = "Alan Wake's American Nightmare"
+title_id = "58411233" # XA-4659
+hash = "EABFE0398BFFDD2E" # default.xex
+#media_id = "78B89007" # XBLA: 10B9122134DE13D8B85827EBC29CBB6396E314BC58
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x825156ab # vsync gameplay
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+    [[patch.be8]]
+        address = 0x825156b3 # vsync menus
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8286340c
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen. Warning: also disables blinking flares for collectibles, making them harder to notice from a distance."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8288dcea
+        value = 0x0000

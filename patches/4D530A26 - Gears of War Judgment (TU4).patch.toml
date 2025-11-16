@@ -159,11 +159,11 @@ hash = "013148141A27D4C7" # default.xex
     name = "Steam Deck / 16:10 Aspect Ratio"
     desc = "Must set letterbox = false in the Xenia Canary config."
     author = "TudorHorse, Mr Pibb"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be16]]
         address = 0x82992666
-        value = 0x320
+        value = 0x0320
     [[patch.f32]]
         address = 0x82083350
         value = 1.6

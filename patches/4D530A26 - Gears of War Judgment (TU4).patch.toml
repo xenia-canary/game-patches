@@ -47,7 +47,7 @@ hash = "013148141A27D4C7" # default.xex
 [[patch]]
     name = "Disable All Post-Processing"
     desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing when upscaling."
-    author = "boma"
+    author = "boma, Mr Pibb"
     is_enabled = false
 
     [[patch.be16]]
@@ -154,3 +154,19 @@ hash = "013148141A27D4C7" # default.xex
     [[patch.be8]]
         address = 0x83544e34 # Frametime
         value = 0x01
+
+[[patch]]
+    name = "Steam Deck / 16:10 Aspect Ratio"
+    desc = "Must set letterbox = false in the Xenia Canary config."
+    author = "TudorHorse, Mr Pibb"
+    is_enabled = true
+
+    [[patch.be16]]
+        address = 0x82992666
+        value = 0x320
+    [[patch.f32]]
+        address = 0x82083350
+        value = 1.6
+    [[patch.be16]]
+        address = 0x82640504
+        value = 0x4800

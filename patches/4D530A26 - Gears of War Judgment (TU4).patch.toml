@@ -61,10 +61,10 @@ hash = "013148141A27D4C7" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x8236AEFF
+        address = 0x8236aeff
         value = 0x00
     [[patch.be8]]
-        address = 0x8236AF3F
+        address = 0x8236af3f
         value = 0x00
 
 [[patch]]
@@ -74,7 +74,7 @@ hash = "013148141A27D4C7" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8243FFB0
+        address = 0x8243ffb0
         value = 0x39600000
 
 [[patch]]
@@ -130,8 +130,8 @@ hash = "013148141A27D4C7" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8243CF5C
-        value = 0xC01F0000
+        address = 0x8243cf5c
+        value = 0xc01f0000
 
 [[patch]]
     name = "Disable Coalesced hash check"

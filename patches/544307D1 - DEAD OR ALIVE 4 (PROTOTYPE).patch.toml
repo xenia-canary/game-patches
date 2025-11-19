@@ -4,6 +4,7 @@ hash = [
     "ED5C2458F214AB36",   # default.xex
     "26928621530F792D"    # unlocked_default.xex
 ]
+#media_id = "00000000"
 
 [[patch]]
     name = "Unlock All Menus"

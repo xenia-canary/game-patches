@@ -11,7 +11,7 @@ hash = [
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.be8]]  #patch lock_flag write 
+    [[patch.be8]] #patch lock_flag write
         address = 0x82414ff7
         value = 0x03
 
@@ -48,7 +48,7 @@ hash = [
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.be8]] #patch lock_flag write 
+    [[patch.be8]] #patch lock_flag write
         address = 0x82417c07
         value = 0x03
 
@@ -57,7 +57,7 @@ hash = [
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.be8]] #patch lock_flag write 
+    [[patch.be8]] #patch lock_flag write
         address = 0x82417be7
         value = 0x03
     [[patch.be32]] #make random_select default stage

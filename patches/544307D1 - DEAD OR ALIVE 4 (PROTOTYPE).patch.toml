@@ -1,6 +1,7 @@
 title_name = "DEAD OR ALIVE 4"
 title_id = "544307D1" # TC-2001
 hash = "ED5C2458F214AB36" # default.xex
+hash = "26928621530F792D" # unlocked_default.xex
 #media_id = "00000000"
 
 [[patch]]
@@ -13,8 +14,8 @@ hash = "ED5C2458F214AB36" # default.xex
         value = 0x03
 
 [[patch]]
-    name = "Show Locked Characters"
-    desc = "Locked Characters' (and Greyed-Out Characters') files aren't included in the prototype, so you can't actually select those characters. Merely a cosmetic mod to showcase the prototype roster."
+    name = "Display All Character Select Icons"
+    desc = "Visually reveals the full prototype roster on the character select screen. The hidden characters are shown as greyed-out icons and are not selectable."
     author = "ryu_highabusa"
     is_enabled = false
 
@@ -39,3 +40,13 @@ hash = "ED5C2458F214AB36" # default.xex
     [[patch.be32]] #show Spartan-458
         address = 0x82aafa10
         value = 0x12010001
+
+[[patch]]
+    name = "Unlock 'Jurassic Jamboree' Stage"
+    desc = ""
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82417c07
+        value = 0x03

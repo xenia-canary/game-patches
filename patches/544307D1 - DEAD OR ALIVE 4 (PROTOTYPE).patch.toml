@@ -1,8 +1,8 @@
 title_name = "DEAD OR ALIVE 4"
 title_id = "544307D1" # TC-2001
 hash = [
-"ED5C2458F214AB36",   # default.xex
-"26928621530F792D"    # unlocked_default.xex
+    "ED5C2458F214AB36",   # default.xex
+    "26928621530F792D"    # unlocked_default.xex
 ]
 
 [[patch]]

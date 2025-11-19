@@ -43,7 +43,6 @@ hash = "26928621530F792D" # unlocked_default.xex
 
 [[patch]]
     name = "Unlock 'Jurassic Jamboree' Stage"
-    desc = ""
     author = "ryu_highabusa"
     is_enabled = false
 

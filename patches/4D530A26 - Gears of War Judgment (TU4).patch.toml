@@ -45,17 +45,37 @@ hash = "013148141A27D4C7" # default.xex
         value = 0x38a00010
 
 [[patch]]
-    name = "Resolution Scaling Fix / Disable All Post-Processing"
+    name = "Disable All Post-Processing"
     desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing when upscaling."
-    author = "boma"
+    author = "boma, Mr Pibb"
     is_enabled = false
 
     [[patch.be16]]
         address = 0x827e50ec
         value = 0x4800
-    [[patch.be32]] # nop finishing render pass from branching to temporal AA resolve
-        address = 0x827e42a4
-        value = 0x60000000
+
+[[patch]]
+    name = "Resolution Scaling Fix"
+    desc = "Use alongside Disable FXAA. Patches post-processing effects to be upscaling-friendly."
+    author = "Mr Pibb"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8236aeff
+        value = 0x00
+    [[patch.be8]]
+        address = 0x8236af3f
+        value = 0x00
+
+[[patch]]
+    name = "Disable FXAA"
+    desc = "A clearer image at the expense of slightly more aliasing."
+    author = "Mr Pibb"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8243ffb0
+        value = 0x39600000
 
 [[patch]]
     name = "Disable Ambient Occlusion"
@@ -104,6 +124,16 @@ hash = "013148141A27D4C7" # default.xex
         value = 0x39400000
 
 [[patch]]
+    name = "Disable Film Grain"
+    desc = "Disables the film grain post-process effect. Does not impact performance."
+    author = "Mr Pibb"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8243cf5c
+        value = 0xc01f0000
+
+[[patch]]
     name = "Disable Coalesced hash check"
     desc = "Allows for Coalesced modifications."
     author = "Sowa_95"
@@ -124,3 +154,19 @@ hash = "013148141A27D4C7" # default.xex
     [[patch.be8]]
         address = 0x83544e34 # Frametime
         value = 0x01
+
+[[patch]]
+    name = "Steam Deck / 16:10 Aspect Ratio"
+    desc = "Must set present_letterbox = false in the Xenia Canary config."
+    author = "TudorHorse, Mr Pibb"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82992666
+        value = 0x0320
+    [[patch.f32]]
+        address = 0x82083350
+        value = 1.6
+    [[patch.be16]]
+        address = 0x82640504
+        value = 0x4800

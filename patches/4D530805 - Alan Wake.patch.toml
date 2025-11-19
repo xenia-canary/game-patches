@@ -1,0 +1,52 @@
+title_name = "Alan Wake"
+title_id = "4D530805" # MS-2053
+hash = "C7BBFAD65BC0D6B3" # default.xex
+#media_id = "54E34DF4" # Disc (World): http://redump.org/disc/13756
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x821ee44f # vsync gameplay
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+    [[patch.be8]]
+        address = 0x821ee457 # vsync menus
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Blur Fix"
+    desc = "Removes radial blur when aiming or dodging. Not neccesary on ROV."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822cddd4
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x822ce2e0
+        value = 0x60000000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82227a72
+        value = 0x0000
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x820d2bd8
+        value = 0x00
+    [[patch.be8]]
+        address = 0x820d2bec
+        value = 0x00

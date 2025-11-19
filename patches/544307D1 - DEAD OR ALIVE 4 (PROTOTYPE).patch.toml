@@ -11,13 +11,13 @@ hash = [
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.be8]]
+    [[patch.be8]]  #patch lock_flag write 
         address = 0x82414ff7
         value = 0x03
 
 [[patch]]
     name = "Display All Character Select Icons"
-    desc = "Visually reveals the full prototype roster on the character select screen. The hidden characters are shown as greyed-out icons and are not selectable."
+    desc = "Visually reveals the full roster on the character select screen. The hidden characters are shown as greyed-out icons and are not selectable."
     author = "ryu_highabusa"
     is_enabled = false
 
@@ -48,6 +48,18 @@ hash = [
     author = "ryu_highabusa"
     is_enabled = false
 
-    [[patch.be8]]
+    [[patch.be8]] #patch lock_flag write 
         address = 0x82417c07
         value = 0x03
+
+[[patch]]
+    name = "Restore Random Stage Select"
+    author = "ryu_highabusa"
+    is_enabled = false
+
+    [[patch.be8]] #patch lock_flag write 
+        address = 0x82417be7
+        value = 0x03
+    [[patch.be32]] #make random_select default stage
+        address = 0x82ab12ac
+        value = 0x000000ff

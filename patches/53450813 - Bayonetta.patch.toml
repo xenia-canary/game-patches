@@ -1,0 +1,23 @@
+title_name = "Bayonetta"
+title_id = "53450813" # SE-2067
+hash = "7B5CEE819A2D50D9" # default.xex
+#media_id = "1BDF2032" # Disc (Europe): http://redump.org/disc/11495
+
+[[patch]]
+    name = "Game Speed x2"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82fd62b4
+        value = 2.0
+
+    # Skip setting default game speed
+    [[patch.be32]]
+        address = 0x82d659f8
+        value = 0x60000000
+
+    # Skip setting default game speed
+    [[patch.be32]]
+        address = 0x82d659fc
+        value = 0x60000000

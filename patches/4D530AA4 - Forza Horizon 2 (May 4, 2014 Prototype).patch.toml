@@ -1,0 +1,14 @@
+title_name = "Forza Horizon 2" # May 4, 2014 Prototype
+title_id = "4D530AA4" # MS-2724
+hash = "01CD4E45407DC7E9" # default.xex
+#media_id = "00000000"
+
+[[patch]]
+    name = "Force insecure=true parameter"
+    desc = "Allows modifying protected files."
+    author = "Doliman100"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82540028
+        value = 0x9bbf0de3

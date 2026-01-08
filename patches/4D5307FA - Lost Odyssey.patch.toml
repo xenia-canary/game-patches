@@ -46,7 +46,7 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
 
 [[patch]]
     name = "Post-Processing Upscaling Fix"
-    desc = "Patches post-processing effects to be be upscaling friendly. Some minor checkboarding artifacts may remain."
+    desc = "Patches post-processing effects to be upscaling friendly. Some minor checkboarding artifacts may remain."
     author = "boma"
     is_enabled = false
 

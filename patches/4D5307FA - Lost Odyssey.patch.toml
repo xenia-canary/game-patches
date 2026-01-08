@@ -27,7 +27,7 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
      [[patch.be32]]
         address = 0x82558000
         value = 0x38600001 # li r3, 1
-    [[patch.be32]]]
+    [[patch.be32]]
         address = 0x82558004
         value = 0x4e800020 # blr
 

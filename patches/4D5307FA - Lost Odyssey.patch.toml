@@ -23,8 +23,8 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
     desc = "Vulkan FBO and D3D12 RTV exhibits fast, flickering dark spots or shapes crawling over characters, especially during cutscenes. This patch eliminates the flicker by switching to CPU skinning, a safer render method."
     author = "boma"
     is_enabled = false
- 
-     [[patch.be32]]
+
+    [[patch.be32]]
         address = 0x82558000
         value = 0x38600001 # li r3, 1
     [[patch.be32]]
@@ -32,7 +32,7 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
         value = 0x4e800020 # blr
 
 [[patch]]
-    name = "Disable Occlusion Queries - Stability Fix" 
+    name = "Disable Occlusion Queries - Stability Fix"
     desc = "May prevent crashing, especially when using Vulkan."
     author = "boma"
     is_enabled = false
@@ -125,15 +125,15 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
     [[patch.f32]]
         address = 0x82218598
         value = 2.3333
-	[[patch.be32]]
-		address = 0x8264f558 # UI Viewport Size-Y
-		value = 0x38600226  # li r3, 0x226 (550)
-	[[patch.be32]]
-		address = 0x8264f55c # Skip if null then get from world
-		value = 0x48000008
-	[[patch.be32]]
-		address = 0x8230065c # Skip ConstrainAspectRatio path, stops pillarboxed cutscenes
-		value = 0x480000ac
+    [[patch.be32]]
+        address = 0x8264f558 # UI Viewport Size-Y
+        value = 0x38600226  # li r3, 0x226 (550)
+    [[patch.be32]]
+        address = 0x8264f55c # Skip if null then get from world
+        value = 0x48000008
+    [[patch.be32]]
+        address = 0x8230065c # Skip ConstrainAspectRatio path, stops pillarboxed cutscenes
+        value = 0x480000ac
     [[patch.be32]]
         address = 0x823007ac
         value = 0x48059d34 # b 0x8235a4e0
@@ -165,9 +165,9 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
     [[patch.f32]]
         address = 0x82218598
         value = 1.6
-	[[patch.be32]]
-		address = 0x8230065c # Skip ConstrainAspectRatio path, stops pillarboxed cutscenes
-		value = 0x480000ac
+    [[patch.be32]]
+        address = 0x8230065c # Skip ConstrainAspectRatio path, stops pillarboxed cutscenes
+        value = 0x480000ac
     [[patch.be32]]
         address = 0x823007ac
         value = 0x48059d34 # b 0x8235a4e0

@@ -20,46 +20,102 @@ hash = "1B591620508434A2" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82bb6bbb # GTilingMode = 0
+        address = 0x82bb6bbb # GUseTilingCode = FALSE
         value = 0x00
     [[patch.be8]]
-        address = 0x82bb6b53 # GUseTilingCode = FALSE
-        value = 0x00
+        address = 0x82bb6b53 # GTilingMode = 4
+        value = 0x04
+
+[[patch]]
+    name = "Flickering Decals Fix"
+    desc = "Fixes decals (bloodpools, bullet holes, etc.) that flicker when using the Vulkan FBO or D3D12 RTV render paths."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82596a40 # replace DepthBias lfs, BSP receivers
+        value = 0x4bcf0984 # b 0x822873c4 code cave
+    [[patch.be32]]
+        address = 0x822873c4
+        value = 0x3c00bc23
+    [[patch.be32]]
+        address = 0x822873c8
+        value = 0x6000d70a # 0xbc23d70a = -0.01f
+    [[patch.be32]]
+        address = 0x822873cc
+        value = 0x90010180
+    [[patch.be32]]
+        address = 0x822873d0 # Clamp DepthBias
+        value = 0xc0010180 # lfs f0, 0x180(r1)
+    [[patch.be32]]
+        address = 0x822873d4
+        value = 0x4830f670 # b 0x82596a44
+    [[patch.be32]]
+        address = 0x825c6688 # replace DepthBias lfs, static mesh receivers
+        value = 0x4bcc0ba4 # b 0x8228722c code cave
+    [[patch.be32]]
+        address = 0x8228722c
+        value = 0x3c00bc23
+    [[patch.be32]]
+        address = 0x82287230
+        value = 0x6000d70a # 0xbc23d70a = -0.01f
+    [[patch.be32]]
+        address = 0x82287234
+        value = 0x90010178
+    [[patch.be32]]
+        address = 0x82287238 # Clamp DepthBias
+        value = 0xc0010178 # lfs f0, 0x178(r1)
+    [[patch.be32]]
+        address = 0x8228723c
+        value = 0x4833f450 # b 0x825c668c
+
+[[patch]]
+    name = "Texture Streaming Fix"
+    desc = "Minimizes the slow pop-in behavior common in heavy scenes, especially when using custom resolution scaling, allowing textures to stream in sooner and maintain higher visual detail during gameplay."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82587f94 # PoolSize = 196
+        value = 0x396000c4 # li r11, 0xc4 (196)
+    [[patch.be32]]
+        address = 0x82446000 # Remove 3MB per-frame streaming limit
+        value = 0x60000000 # nop
+    [[patch.be32]]
+        address = 0x82445cb0 # Lock FudgeFactor to 1.0f
+        value = 0x60000000 # nop
 
 [[patch]]
     name = "Disable Motion Blur"
-    author = "illusion"
+    author = "illusion, boma"
     is_enabled = false
 
-    [[patch.be16]]
-        address = 0x8228fa40
-        value = 0x4800
+    [[patch.be32]]
+        address = 0x825307ec
+        value = 0x39600000
 
 [[patch]]
     name = "Disable All Post-Processing"
+    desc = "This will also disable all color grading and gamma correction, massively changing the look of the game."
     author = "illusion, boma"
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82289dc0
+        address = 0x82554b8c
         value = 0x4800
-    [[patch.be32]]
-        address = 0x8227e660
-        value = 0x48000008
 
 [[patch]]
-    name = "8x Anisotropic Filtering"
-    desc = "Game does not natively support 16x filtering."
+    name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x82487484
-        value = 0x38a00008 # li r5, 8
+        value = 0x38a00010 # li r5, 0x10 (16)
 
 [[patch]]
-    name = "Disable Coalesced hash check"
-    desc = "Allows for Coalesced modifications."
+    name = "Disable Coalesced Hash Check"
+    desc = "Allows the Coalesced.ini engine file to be edited without triggering the dirty disc error at launch."
     author = "Sowa_95"
     is_enabled = false
 

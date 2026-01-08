@@ -117,10 +117,10 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
         value = 0x93df0054
 
 [[patch]]
-	name = "21:9 Ultrawide Aspect Ratio Support"
-	desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands all gameplay and cutscenes to true 21:9 and updates FOV for proper ultrawide framing, though FMVs and UI are stretched. Because the game now renders at a lower pixel count, certain elements may appear more aliased."
-	author = "boma"
-	is_enabled = false
+    name = "21:9 Ultrawide Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands all gameplay and cutscenes to true 21:9 and updates FOV for proper ultrawide framing, though FMVs and UI are stretched. Because the game now renders at a lower pixel count, certain elements may appear more aliased."
+    author = "boma"
+    is_enabled = false
 
     [[patch.f32]]
         address = 0x82218598
@@ -154,10 +154,10 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
         value = 0.01163553 # (pi / 360) * 1.3333334
 
 [[patch]]
-	name = "Steam Deck / 16:10 Aspect Ratio Support"
-	desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands all gameplay, UI, and cutscenes to true 21:9 and updates FOV for proper framing, though FMVs are slightly stretched."
-	author = "boma"
-	is_enabled = false
+    name = "Steam Deck / 16:10 Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands all gameplay, UI, and cutscenes to true 21:9 and updates FOV for proper framing, though FMVs are slightly stretched."
+    author = "boma"
+    is_enabled = false
 
     [[patch.be16]]
         address = 0x8248635e

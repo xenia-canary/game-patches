@@ -130,7 +130,7 @@ hash = "EF4AD5E9DD1982ED" # default.xex
         address = 0x827b6c40 # Ignore occlusion queries from gumming up InitViews
         value = 0x39600001 # li r11, 1
     [[patch.be32]]
-        address = 0x827b8af4 # Skip allocate query pool 
+        address = 0x827b8af4 # Skip allocate query pool
         value = 0x39600001 # li r11, 1
     [[patch.be32]]
         address = 0x827d0878 # projected shadow render, gathering draw lists

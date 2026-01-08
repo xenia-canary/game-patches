@@ -18,19 +18,44 @@ hash = "BDB97753374D520A" # default.xex
 
 [[patch]]
     name = "Black Shading Fix"
-    desc = "Solves most artifacting caused by light environments. Use in tandem with ambient occlusion patch to prevent nearly all other artifacts."
+    desc = "Effectively turns off MSAA, solving the dynamic lighting artifacts caused by MSAA resolve imperfections. Use in tandem with either Ambient Occlusion or Upscaling Fix patches to prevent nearly all other artifacts."
     author = "illusion, boma"
     is_enabled = false
 
-    [[patch.be32]] # Force 2x MSAA without tiling
+    [[patch.be32]] # GUseTilingMode = FALSE
         address = 0x82806a44
         value = 0x39600000 # li r11, 0
-    [[patch.be32]] # GMaxShadowDepthBufferSize, increased from default 0x320
-        address = 0x82806a64
-        value = 0x39400c80 # li r10, 0xc80
 
 [[patch]]
-    name = "Disable Ambient Occlusion"
+    name = "Ambient Occlusion - Option A: Upscaling Fix"
+    desc = "Mitigates most post-processing ghosting, shimmer, and checkerboard artifacts caused by resolution upscaling. With this patch, Disable Ambient Occlusion and Disable Depth of Field are no longer required when upscaling. For best results, do not use 3×3 scaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82806b12 # Force screen height to 0x2c0 (704)
+        value = 0x02c0
+    [[patch.be32]]
+        address = 0x8272e00c
+        value = 0x39400001
+    [[patch.be32]]
+        address = 0x8272ff54
+        value = 0x39600001
+    [[patch.be32]]
+        address = 0x82807594
+        value = 0x38600001
+    [[patch.be32]]
+        address = 0x8280759c
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x8272b1f8
+        value = 0x4e800020
+    [[patch.be16]]
+        address = 0x8252d608 # Constrain Aspect Ratio
+        value = 0x4800
+
+[[patch]]
+    name = "Ambient Occlusion - Option B: Disable"
     desc = "Fixes various artifacts when using upscaling."
     author = "illusion"
     is_enabled = false
@@ -48,6 +73,22 @@ hash = "BDB97753374D520A" # default.xex
     [[patch.be32]]
         address = 0x8236004c
         value = 0x39600000
+
+[[patch]]
+    name = "Texture Streaming Fix"
+    desc = "Minimizes the texture pop-in common in heavy scenes, especially when using custom resolution scaling, allowing textures to stream in sooner and maintain higher visual detail during gameplay."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8280d534 # Set PoolSize=196
+        value = 0x388000c4
+    [[patch.be32]]
+        address = 0x8280ddc8 # RHIGetTextureMemoryStats=FALSE, effectively locking FudgeFactor=1.0
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x8280ddcc
+        value = 0x4e800020
 
 [[patch]]
     name = "16x Anisotropic Filtering"
@@ -69,7 +110,21 @@ hash = "BDB97753374D520A" # default.xex
         value = 0x39400000
 
 [[patch]]
-    name = "Disable Depth of Field"
+    name = "Depth of Field, Option A - Disable Gaussian Blur (Upscaling Fix)"
+    desc = "Recommended when using upscaling. Disables gaussian blur which reduces ghosting caused by blur sampling/resolves at higher internal resolutions."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827296bc
+        value = 0xec210828
+    [[patch.be32]]
+        address = 0x82729700
+        value = 0xec210828
+
+[[patch]]
+    name = "Depth of Field, Option B - Disable Entire DoF Pipeline"
+    desc = "Disables the Uber postprocess shader pipeline. Produces a completely sharp image at all distances but also removes most post-processing effects, including tonemapping and color grading. Use Option A if you do not like the results of this patch."
     author = "boma"
     is_enabled = false
 
@@ -102,8 +157,8 @@ hash = "BDB97753374D520A" # default.xex
         value = 0x39400000
 
 [[patch]]
-    name = "Disable Coalesced hash check"
-    desc = "Allows for Coalesced modifications."
+    name = "Disable Coalesced Hash Check"
+    desc = "Allows for editing the Coalesced engine files without triggering the dirty disc error at launch."
     author = "Sowa_95"
     is_enabled = false
 

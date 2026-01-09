@@ -65,6 +65,40 @@ hash = "BDB97753374D520A" # default.xex
         value = 0x39600000
 
 [[patch]]
+    name = "Performance Patch: Optimized Settings (Smart Shadow Cuts)"
+    desc = "Recommended for most people who want a moderate FPS boost without major visual loss. Some cutscenes and specific situations may be missing shadows, but the change is generally mild. The largest performance gains are typically with NVIDIA GPUs. Use in tandem with the Ambient Occlusion Upscaling Fix for best results."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827dbfbc
+        value = 0x7edfb378 # mr r31, r22
+    [[patch.be32]]
+        address = 0x827dbfc0
+        value = 0x2c160008 # cmpwi r22, 8
+    [[patch.be32]]
+        address = 0x827dbfc4
+        value = 0x41800010 # blt 0x10
+    [[patch.be32]]
+        address = 0x827dbfc8
+        value = 0x3be00007 # li r31, 7
+    [[patch.be32]]
+        address = 0x827dbfcc
+        value = 0x3ac00007 # li r22, 7
+    [[patch.be32]]
+        address = 0x827dbfd0
+        value = 0x4bf5a0f4
+    [[patch.be32]]
+        address = 0x827dbfd4
+        value = 0x4bf5a0f4
+    [[patch.be32]]
+        address = 0x82741300 # Force MaxShadowResolution=400, BCPF shader choose state
+        value = 0x39600190
+    [[patch.be32]]
+        address = 0x82741884 # Force MaxShadowResolution=400, init projected shadow depths
+        value = 0x39600190
+
+[[patch]]
     name = "Disable Motion Blur"
     desc = "Solves most ghosting and artifacting caused by quickly panning cameras."
     author = "illusion"
@@ -177,3 +211,84 @@ hash = "BDB97753374D520A" # default.xex
     [[patch.be8]]
         address = 0x83123470 # Frametime
         value = 0x01
+
+[[patch]]
+    name = "21:9 Ultrawide Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands gameplay and cutscene rendering to true 21:9 ultrawide, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x550, certain elements may appear more aliased."
+    author = "boma, TudorHorse"
+    is_enabled = false
+
+# GAMEPLAY & CUTSCENE FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.0005
+    [[patch.f32]]
+        address = 0x8263f7d4
+        value = 0.0106355 # (pi / 360) * 1.295, change this value to adjust FOV
+    [[patch.be32]]
+        address = 0x8252d73c
+        value = 0x48112088 # b 0x8263f7c4 code cave
+    [[patch.be32]]
+        address = 0x8263f7c4
+        value = 0x3d808263 # lis r12, 0x8263
+    [[patch.be32]]
+        address = 0x8263f7c8
+        value = 0x618cf7d4 # lwz r12, 0xf7d4, r12 = 0x8263f7d4 literal
+    [[patch.be32]]
+        address = 0x8263f7cc
+        value = 0xc00c0000 # lfs f0, 0(r12)
+    [[patch.be32]]
+        address = 0x8263f7d0 # Return to calculate scene view
+        value = 0x4beedf70 # b 0x8252d740
+    [[patch.be16]]
+        address = 0x82806b12 # Define scene color buffer height
+        value = 0x0226 # 550 (1280x550)
+    [[patch.be16]]
+        address = 0x8252d608 # ConstrainAspectRatio = FALSE, prevents pillarboxed cutscenes
+        value = 0x4800
+    [[patch.f32]]
+        address = 0x821d0b28 # .rdata float, controls split-screen FOV adjustments
+        value = 2.33333333
+    [[patch.be32]]
+        address = 0x826e3720 # Set UIScene viewport height with additional height for overscan
+        value = 0x38600234  # li r3, 0x234 (564)
+    [[patch.be32]]
+        address = 0x826e3724 # Skip if null then get from world
+        value = 0x48000008
+
+[[patch]]
+    name = "Steam Deck / 16:10 Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Designed for Steam Deck and modern gaming laptop displays. Expands gameplay and cutscene rendering to true 16:10, updates the FOV axis constraint for proper framing, and adds letterboxing for pre-rendered videos."
+    author = "boma, TudorHorse"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82888508 # Different FOV adj approach than the ultrawide patch.
+        value = 0x4801c888 # b 0x828a4d90
+    [[patch.be32]]
+        address = 0x828a4d90
+        value = 0x3d603f66 # lis r11, 0x3f66
+    [[patch.be32]]
+        address = 0x828a4d94
+        value = 0x616b6666 # lwz r11, 0x6666
+    [[patch.be32]]
+        address = 0x828a4d98
+        value = 0x91610020 # stw r11, 0x20(r1)
+    [[patch.be32]]
+        address = 0x828a4d9c
+        value = 0xc0010020 # lfs f0, 0x20(r1)
+    [[patch.be32]]
+        address = 0x828a4da0
+        value = 0xec210032 # fmuls f1, f1, f0
+    [[patch.be32]]
+        address = 0x828a4da4 # Recreate original 0x82888508 instruction
+        value = 0x38210090 # addi r1, r1, 0x90
+    [[patch.be32]]
+        address = 0x828a4da8
+        value = 0x4bfe3764 # b 0x8288850c
+    [[patch.be16]]
+        address = 0x82806e6a # Define scene color buffer width
+        value = 0x0480 # 1152 (1152x720)
+    [[patch.be16]]
+        address = 0x8252d608 # ConstrainAspectRatio = FALSE, prevents letterboxed cutscenes
+        value = 0x4800
+    [[patch.f32]]
+        address = 0x821d0b28 # .rdata float, controls split-screen FOV adjustments
+        value = 1.6

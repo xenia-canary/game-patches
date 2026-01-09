@@ -218,8 +218,7 @@ hash = "BDB97753374D520A" # default.xex
     author = "boma, TudorHorse"
     is_enabled = false
 
-# GAMEPLAY & CUTSCENE FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.0005
-    [[patch.f32]]
+    [[patch.f32]] # GAMEPLAY & CUTSCENE FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.0005
         address = 0x8263f7d4
         value = 0.0106355 # (pi / 360) * 1.295, change this value to adjust FOV
     [[patch.be32]]

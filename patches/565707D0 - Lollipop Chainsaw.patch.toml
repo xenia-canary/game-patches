@@ -37,8 +37,33 @@ hash = "9FEE77798A2E765C" # default.xex
         value = 0x39600000
 
 [[patch]]
-    name = "Image Quality Fix"
-    desc = "Disables film grain, vignette, comic-book filter and other post-processing effects that do not render correctly."
+    name = "Disable Film Grain"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823e4448
+        value = 0xc01b002c
+    [[patch.be32]]
+        address = 0x823e4450
+        value = 0xc01b002c
+
+[[patch]]
+    name = "Post-Processing, Option A: Disable Gaussian Blur (helps upscaling)"
+    desc = "Reduces ghosting and checkerboard artifacts when upscaling. Using this patch in tandem with Disable Film Grain achieves a much cleaner look without having to disable all post-processing."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827d6244
+        value = 0xec210828
+    [[patch.be32]]
+        address = 0x827d624c
+        value = 0x60000000
+
+[[patch]]
+    name = "Post-Processing, Option B: Disable All Effects"
+    desc = "Disables all post-processing effects, including color grading, gamma correction, and tonemapping. If this patch makes the game appear too flat, use Option A instead."
     author = "boma"
     is_enabled = false
 

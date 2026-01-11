@@ -162,7 +162,7 @@ hash = "8429D0AE190C10DB" # default.xex
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82990ae8 # Define scene color buffer width
+        address = 0x82990aea # Define scene color buffer width
         value = 0x0480 # 1152 (1152x720)
     [[patch.f32]]
         address = 0x82082c50 # .rdata float for post-process effect scaling

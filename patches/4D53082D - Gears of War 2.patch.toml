@@ -193,12 +193,15 @@ hash = "BDB97753374D520A" # default.xex
 [[patch]]
     name = "Disable Coalesced Hash Check"
     desc = "Allows for editing the Coalesced engine files without triggering the dirty disc error at launch."
-    author = "Sowa_95"
+    author = "Sowa_95, boma"
     is_enabled = false
 
     [[patch.be8]]
         address = 0x82aa8907
         value = 0x00
+    [[patch.be32]]
+        address = 0x827f9148
+        value = 0x4e800020
 
 [[patch]]
     name = "Show FPS"

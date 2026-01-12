@@ -34,6 +34,37 @@ hash = [ # default.xex
         value = 0x00
 
 [[patch]]
+    name = "Flickering Decals Fix"
+    desc = "Fixes decals (bloodpools, bullet holes, etc.) that flicker when using the Vulkan FBO or D3D12 RTV render paths."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8263ca88
+        value = 0x4bf994dc
+    [[patch.be32]]
+        address = 0x825d5f68
+        value = 0x9421fff0
+    [[patch.be32]]
+        address = 0x825d5f6c
+        value = 0x3c00bc23
+    [[patch.be32]]
+        address = 0x825d5f70
+        value = 0x6000d70a
+    [[patch.be32]]
+        address = 0x825d5f74
+        value = 0x9001000c
+    [[patch.be32]]
+        address = 0x825d5f78
+        value = 0xc001000c
+    [[patch.be32]]
+        address = 0x825d5f7c
+        value = 0x38210010
+    [[patch.be32]]
+        address = 0x825d5f80
+        value = 0x48066b0c
+
+[[patch]]
     name = "Skip Intro Movies"
     author = "HouseofTudor"
     is_enabled = false
@@ -69,3 +100,210 @@ hash = [ # default.xex
     [[patch.be8]]
         address = 0x82eaf12c
         value = 0x01
+
+[[patch]]
+    name = "Upscaling Fix (Choose One), Option A: 1440P Post-Processing"
+    desc = "Only use with 2x2 resolution upscaling. Rebuilds post-process effects that rely on 720P assumptions to be more upscaling friendly."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82673870 # buffersizex; 3x post-process upscale fix
+        value = 0x4bcf116d # bl 0x823649dc
+    [[patch.be32]]
+        address = 0x826738e0 # buffersizey; 3x post-process upscale fix
+        value = 0x4bcf1119 # bl 0x823649f8
+    [[patch.be32]]
+        address = 0x823649dc # code cave buffersizex
+        value = 0x3d808236 # lis r12, 0x8236
+    [[patch.be32]]
+        address = 0x823649e0
+        value = 0x618c4a48 # ori r12, r12, 0x4a48
+    [[patch.be32]]
+        address = 0x823649e4
+        value = 0xc1ac0000 # lfs f13, 0(r12)
+    [[patch.be32]]
+        address = 0x823649e8
+        value = 0xec000372 # fmuls f0, f0, f13
+    [[patch.be32]]
+        address = 0x823649ec # replace original instruction
+        value = 0xd0010050 # stfs f0, 0x50(r1)
+    [[patch.be32]]
+        address = 0x823649f0
+        value = 0x4e800020 # blr
+    [[patch.be32]]
+        address = 0x823649f8 # code cave buffersizey
+        value = 0x3d808236 # lis r12, 0x8236
+    [[patch.be32]]
+        address = 0x823649fc
+        value = 0x618c4a48 # ori r12, r12, 0x4a48
+    [[patch.be32]]
+        address = 0x82364a00
+        value = 0xc1ac0000 # lfs f13, 0(r12)
+    [[patch.be32]]
+        address = 0x82364a04
+        value = 0xec000372 # fmuls f0, f0, f13
+    [[patch.be32]]
+        address = 0x82364a08 # replace original instruction
+        value = 0xd0010054 # stfs f0, 0x54(r1)
+    [[patch.be32]]
+        address = 0x82364a0c
+        value = 0x4e800020 # blr
+    [[patch.be32]] # blurkernelsize fix 1
+        address = 0x82364a10 # replace original instruction
+        value = 0xec2006f2 # fmuls f1, f0, f27
+    [[patch.be32]]
+        address = 0x82364a14
+        value = 0x3d808236 # lis r12, 0x8236
+    [[patch.be32]]
+        address = 0x82364a18
+        value = 0x618c4a4c # ori r12, r12, 0x4a4c
+    [[patch.be32]]
+        address = 0x82364a1c
+        value = 0xc1ac0000 # lfs f13, 0(r12)
+    [[patch.be32]]
+        address = 0x82364a20
+        value = 0xec210372 # fmuls f1, f1, f13
+    [[patch.be32]]
+        address = 0x82364a24
+        value = 0x4e800020 # blr
+    [[patch.be32]] # blurkernelsize fix 2
+        address = 0x82364a2c # replace original instruction
+        value = 0xec2006f2 # fmuls f1, f0, f27
+    [[patch.be32]]
+        address = 0x82364a30
+        value = 0x3d808236 # lis r12, 0x8236
+    [[patch.be32]]
+        address = 0x82364a34
+        value = 0x618c4a4c # ori r12, r12, 0x4a4c
+    [[patch.be32]]
+        address = 0x82364a38
+        value = 0xc1ac0000 # lfs f13, 0(r12)
+    [[patch.be32]]
+        address = 0x82364a3c
+        value = 0xec210372 # fmuls f1, f1, f13
+    [[patch.be32]]
+        address = 0x82364a40
+        value = 0x4e800020 # blr
+    [[patch.be32]]
+        address = 0x826738a4
+        value = 0x4bcf116d # bl 0x82364a10
+    [[patch.be32]]
+        address = 0x826738cc
+        value = 0x4bcf1161 # bl 0x82364a2c
+    [[patch.f32]]
+        address = 0x82364a48
+        value = 0.5
+    [[patch.f32]]
+        address = 0x82364a4c
+        value = 1.75 # blurkernelsize multiplier, lower this value for less bloom
+
+[[patch]]
+    name = "Upscaling Fix (Choose One), Option B: 4K Post-Processing"
+    desc = "Only use with 3x3 resolution upscaling. Rebuilds post-process effects that rely on 720P assumptions to be more upscaling friendly."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82673870 # buffersizex; 3x post-process upscale fix
+        value = 0x4bcf116d # bl 0x823649dc
+    [[patch.be32]]
+        address = 0x826738e0 # buffersizey; 3x post-process upscale fix
+        value = 0x4bcf1119 # bl 0x823649f8
+    [[patch.be32]]
+        address = 0x823649dc # code cave buffersizex
+        value = 0x3d808236 # lis r12, 0x8236
+    [[patch.be32]]
+        address = 0x823649e0
+        value = 0x618c4a48 # ori r12, r12, 0x4a48
+    [[patch.be32]]
+        address = 0x823649e4
+        value = 0xc1ac0000 # lfs f13, 0(r12)
+    [[patch.be32]]
+        address = 0x823649e8
+        value = 0xec000372 # fmuls f0, f0, f13
+    [[patch.be32]]
+        address = 0x823649ec # replace original instruction
+        value = 0xd0010050 # stfs f0, 0x50(r1)
+    [[patch.be32]]
+        address = 0x823649f0
+        value = 0x4e800020 # blr
+    [[patch.be32]]
+        address = 0x823649f8 # code cave buffersizey
+        value = 0x3d808236 # lis r12, 0x8236
+    [[patch.be32]]
+        address = 0x823649fc
+        value = 0x618c4a48 # ori r12, r12, 0x4a48
+    [[patch.be32]]
+        address = 0x82364a00
+        value = 0xc1ac0000 # lfs f13, 0(r12)
+    [[patch.be32]]
+        address = 0x82364a04
+        value = 0xec000372 # fmuls f0, f0, f13
+    [[patch.be32]]
+        address = 0x82364a08 # replace original instruction
+        value = 0xd0010054 # stfs f0, 0x54(r1)
+    [[patch.be32]]
+        address = 0x82364a0c
+        value = 0x4e800020 # blr
+    [[patch.be32]] # blurkernelsize fix 1
+        address = 0x82364a10 # replace original instruction
+        value = 0xec2006f2 # fmuls f1, f0, f27
+    [[patch.be32]]
+        address = 0x82364a14
+        value = 0x3d808236 # lis r12, 0x8236
+    [[patch.be32]]
+        address = 0x82364a18
+        value = 0x618c4a4c # ori r12, r12, 0x4a4c
+    [[patch.be32]]
+        address = 0x82364a1c
+        value = 0xc1ac0000 # lfs f13, 0(r12)
+    [[patch.be32]]
+        address = 0x82364a20
+        value = 0xec210372 # fmuls f1, f1, f13
+    [[patch.be32]]
+        address = 0x82364a24
+        value = 0x4e800020 # blr
+    [[patch.be32]] # blurkernelsize fix 2
+        address = 0x82364a2c # replace original instruction
+        value = 0xec2006f2 # fmuls f1, f0, f27
+    [[patch.be32]]
+        address = 0x82364a30
+        value = 0x3d808236 # lis r12, 0x8236
+    [[patch.be32]]
+        address = 0x82364a34
+        value = 0x618c4a4c # ori r12, r12, 0x4a4c
+    [[patch.be32]]
+        address = 0x82364a38
+        value = 0xc1ac0000 # lfs f13, 0(r12)
+    [[patch.be32]]
+        address = 0x82364a3c
+        value = 0xec210372 # fmuls f1, f1, f13
+    [[patch.be32]]
+        address = 0x82364a40
+        value = 0x4e800020 # blr
+    [[patch.be32]]
+        address = 0x826738a4
+        value = 0x4bcf116d # bl 0x82364a10
+    [[patch.be32]]
+        address = 0x826738cc
+        value = 0x4bcf1161 # bl 0x82364a2c
+    [[patch.f32]]
+        address = 0x82364a48
+        value = 0.33333334
+    [[patch.f32]]
+        address = 0x82364a4c
+        value = 2.25 # blurkernelsize multiplier, lower this value for less bloom
+
+[[patch]]
+    name = "Upscaling Fix (Choose One), Option C: Disable Gaussian Blur (sharper, less bloom/DoF)"
+    desc = "Forces the blur radius to 0, disabling gaussian blur. Helps upscaling without having to disable all post-processing."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826738a4
+        value = 0xec210828
+    [[patch.be32]]
+        address = 0x826738d0
+        value = 0xec210828

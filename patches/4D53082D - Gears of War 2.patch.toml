@@ -71,26 +71,29 @@ hash = "BDB97753374D520A" # default.xex
     is_enabled = false
 
     [[patch.be32]]
+        address = 0x827360c0
+        value = 0x480a5efc # b 0x827dbfbc
+    [[patch.be32]]
         address = 0x827dbfbc
         value = 0x7edfb378 # mr r31, r22
     [[patch.be32]]
         address = 0x827dbfc0
-        value = 0x2c160008 # cmpwi r22, 8
+        value = 0x2f16000c # cmpwi r22, 12
     [[patch.be32]]
         address = 0x827dbfc4
-        value = 0x41800010 # blt 0x10
+        value = 0x41980010 # blt 0x827dbfd4
     [[patch.be32]]
         address = 0x827dbfc8
-        value = 0x3be00007 # li r31, 7
+        value = 0x3be0000b # li r31, 11
     [[patch.be32]]
         address = 0x827dbfcc
-        value = 0x3ac00007 # li r22, 7
+        value = 0x3ac0000b # li r22, 11
     [[patch.be32]]
         address = 0x827dbfd0
-        value = 0x4bf5a0f4
+        value = 0x4bf5a0f4 # b 0x827360c4
     [[patch.be32]]
         address = 0x827dbfd4
-        value = 0x4bf5a0f4
+        value = 0x4bf5a0f0 # b 0x827360c4
     [[patch.be32]]
         address = 0x82741300 # Force MaxShadowResolution=400, BCPF shader choose state
         value = 0x39600190

@@ -1,0 +1,28 @@
+title_name = "Burnout Revenge"
+title_id = "454107DC" # EA-2012
+hash = "D629EA67090E3137" # default.xex
+#media_id = "223759FA" # Disc (USA): http://redump.org/disc/11823
+
+[[patch]]
+    name = "Disable Sky Bloom and Low-Resolution Gaussian Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821439e8
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x82173190
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x8215b068
+        value = 0x4e800020
+
+[[patch]]
+    name = "Disable Motion Blur and Radial Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821436f7
+        value = 0x01

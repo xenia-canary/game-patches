@@ -23,6 +23,6 @@ hash = "D629EA67090E3137" # default.xex
     author = "boma"
     is_enabled = false
 
-    [[patch.be32]]
+    [[patch.be8]]
         address = 0x821436f7
         value = 0x01

@@ -1,0 +1,16 @@
+title_name = "Tomb Raider"
+title_id = "53510802" # SQ-2050
+hash = "34E3C875D0D9D552" # default.xex
+#media_id = [
+#    "6A6BC1B7", # Disc (Russia):      http://redump.org/disc/109505
+#    "03B32B71"  # Disc (USA, Europe): http://redump.org/disc/38453
+#]
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82000c90
+        value = 0x00000000

@@ -17,6 +17,15 @@ hash = "8BBA1C14F78D0CB5" # default.xex
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823d8d10
+        value = 0x39600000
+
+[[patch]]
     name = "16x Anisotropic Filtering"
     author = "Sowa_95"
     is_enabled = false

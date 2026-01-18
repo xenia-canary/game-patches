@@ -63,6 +63,24 @@ hash = [ # default.xex
     [[patch.be32]]
         address = 0x825d5f80
         value = 0x48066b0c
+    [[patch.be32]]
+        address = 0x8263cf28
+        value = 0x4bf99094
+    [[patch.be32]]
+        address = 0x825d5fbc
+        value = 0x3d80c000
+    [[patch.be32]]
+        address = 0x825d5fc0
+        value = 0x618c0000
+    [[patch.be32]]
+        address = 0x825d5fc4
+        value = 0x918101b4
+    [[patch.be32]]
+        address = 0x825d5fc8
+        value = 0xc00101b4
+    [[patch.be32]]
+        address = 0x825d5fcc
+        value = 0x48066f60
 
 [[patch]]
     name = "Skip Intro Movies"

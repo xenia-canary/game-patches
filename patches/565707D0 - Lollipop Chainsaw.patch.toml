@@ -27,18 +27,76 @@ hash = "9FEE77798A2E765C" # default.xex
         value = 0x39400000
 
 [[patch]]
-    name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    name = "Flickering Decals Fix"
+    desc = "Fixes decals (bloodpools, bullet holes, etc.) that flicker when using the Vulkan FBO or D3D12 RTV render paths."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x822ed998
-        value = 0x39600000
+        address = 0x826dd484
+        value = 0x4bc1bcf4
+    [[patch.be32]]
+        address = 0x822f9178
+        value = 0x3c00bc23
+    [[patch.be32]]
+        address = 0x822f917c
+        value = 0x6000d70a
+    [[patch.be32]]
+        address = 0x822f9180
+        value = 0x90010124
+    [[patch.be32]]
+        address = 0x822f9184
+        value = 0xc0010124
+    [[patch.be32]]
+        address = 0x822f9188
+        value = 0x483e4300
+    [[patch.be32]]
+        address = 0x82596848
+        value = 0x4bd6291c
+    [[patch.be32]]
+        address = 0x822f9164
+        value = 0x3c00bc23
+    [[patch.be32]]
+        address = 0x822f9168
+        value = 0x6000d70a
+    [[patch.be32]]
+        address = 0x822f916c
+        value = 0x90010124
+    [[patch.be32]]
+        address = 0x822f9170
+        value = 0xc0010124
+    [[patch.be32]]
+        address = 0x822f9174
+        value = 0x4829d6d8
 
 [[patch]]
-    name = "Image Quality Fix"
-    desc = "Disables film grain, vignette, comic-book filter and other post-processing effects that do not render correctly."
+    name = "Disable Film Grain"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823e4448
+        value = 0xc01b002c
+    [[patch.be32]]
+        address = 0x823e4450
+        value = 0xc01b002c
+
+[[patch]]
+    name = "Post-Processing, Option A: Disable Gaussian Blur (helps upscaling)"
+    desc = "Reduces ghosting and checkerboard artifacts when upscaling. Using this patch in tandem with Disable Film Grain achieves a much cleaner look without having to disable all post-processing."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827d6244
+        value = 0xec210828
+    [[patch.be32]]
+        address = 0x827d624c
+        value = 0x60000000
+
+[[patch]]
+    name = "Post-Processing, Option B: Disable All Effects"
+    desc = "Disables all post-processing effects, including color grading, gamma correction, and tonemapping. If this patch makes the game appear too flat, use Option A instead."
     author = "boma"
     is_enabled = false
 
@@ -54,3 +112,40 @@ hash = "9FEE77798A2E765C" # default.xex
     [[patch.be32]]
         address = 0x829877ac
         value = 0x38a00010
+
+[[patch]]
+    name = "21:9 Ultrawide Aspect Ratio Patch"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands gameplay, cutscene, and UI rendering to true 21:9 ultrawide, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Subtitles will occasionally get cropped. Because the game now renders at 1280x550, certain elements may appear more aliased."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.f32]] # GAMEPLAY & CUTSCENE FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.0005
+        address = 0x822f9000
+        value = 0.0106355
+    [[patch.be8]]
+        address = 0x8297f657
+        value = 0x26
+    [[patch.f32]]
+        address = 0x820822e8
+        value = 2.3272
+    [[patch.be16]]
+        address = 0x82620334
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x82ac5134
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x826203bc
+        value = 0x4bcd8c30
+    [[patch.be32]]
+        address = 0x822f8fec
+        value = 0x3d60822f
+    [[patch.be32]]
+        address = 0x822f8ff0
+        value = 0x616b9000
+    [[patch.be32]]
+        address = 0x822f8ff4
+        value = 0xc00b0000
+    [[patch.be32]]
+        address = 0x822f8ff8
+        value = 0x483273c8

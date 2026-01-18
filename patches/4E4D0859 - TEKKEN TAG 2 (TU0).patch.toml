@@ -1,7 +1,7 @@
 title_name = "TEKKEN TAG 2"
-title_id = "4E4D0859" #NM-2137
-hash = "CA0E150A3A39374E" #default.xex TU0
-#media_id = "5D762D06" #Disc (USA, Europe): http://redump.org/disc/57385
+title_id = "4E4D0859" # NM-2137
+hash = "CA0E150A3A39374E" # default.xex TU0
+#media_id = "5D762D06" # Disc (USA, Europe): http://redump.org/disc/57385
 
 [[patch]]
     name = "Reduce input lag"
@@ -11,4 +11,4 @@ hash = "CA0E150A3A39374E" #default.xex TU0
 
     [[patch.be32]]
         address = 0x8224c1a8
-        value = 0x60000000 #aob:908300003D008200->600000003D008200
+        value = 0x60000000 # aob:908300003D008200->600000003D008200

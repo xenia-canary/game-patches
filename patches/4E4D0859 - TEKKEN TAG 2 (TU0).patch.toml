@@ -1,14 +1,14 @@
-title_name      = "TEKKEN TAG 2"
-title_id        = "4E4D0859" #NM-2137
-hash            = "CA0E150A3A39374E" #default.xex TU0
-#media_id       = "5D762D06" #Disc (USA, Europe): http://redump.org/disc/57385
+title_name = "TEKKEN TAG 2"
+title_id = "4E4D0859" #NM-2137
+hash = "CA0E150A3A39374E" #default.xex TU0
+#media_id = "5D762D06" #Disc (USA, Europe): http://redump.org/disc/57385
 
 [[patch]]
-    name        = "Reduce input lag"
-    desc        = "Reduce the delay of your button presses by 2 frames in all offline modes. This works by completely disabling the forced 'Input Delay' system listed in Practice Mode."
-    author      = "WAZAAAAA"
-    is_enabled  = false
+    name = "Reduce input lag"
+    desc = "Reduce the delay of your button presses by 2 frames in all offline modes. This works by completely disabling the forced 'Input Delay' system listed in Practice Mode."
+    author = "WAZAAAAA"
+    is_enabled = false
 
     [[patch.be32]]
-        address = 0x8224C1A8
-        value   = 0x60000000 #aob:908300003D008200->600000003D008200
+        address = 0x8224c1a8
+        value = 0x60000000 #aob:908300003D008200->600000003D008200

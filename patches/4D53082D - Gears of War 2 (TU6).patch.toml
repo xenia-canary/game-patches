@@ -15,22 +15,53 @@ hash = "62547A005C0420D2" # default.xex
     [[patch.be8]]
         address = 0x829a6f53
         value = 0x01
+    [[patch.be32]]
+        address = 0x8262a638
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8262a648
+        value = 0x60000000
 
 [[patch]]
     name = "Black Shading Fix"
-    desc = "Solves most artifacting caused by light environments. Use in tandem with ambient occlusion patch to prevent nearly all other artifacts."
+    desc = "Effectively turns off MSAA, solving the dynamic lighting artifacts caused by MSAA resolve imperfections. Use in tandem with either Ambient Occlusion or Upscaling Fix patches to prevent nearly all other artifacts."
     author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]] # Force 2x MSAA without tiling
         address = 0x828165fc
         value = 0x39600000 # li r11, 0
-    [[patch.be32]] # GMaxShadowDepthBufferSize, increased from default 0x320
-        address = 0x8281661c
-        value = 0x39400c80 # li r10, 0xc80
 
 [[patch]]
-    name = "Disable Ambient Occlusion"
+    name = "Ambient Occlusion - Option A: Upscaling Fix"
+    desc = "Mitigates most post-processing ghosting, shimmer, and checkerboard artifacts caused by resolution upscaling. With this patch, Disable Ambient Occlusion and Disable Depth of Field are no longer required when upscaling. For best results, do not use 3×3 scaling."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x828166ca
+        value = 0x02c0
+    [[patch.be32]]
+        address = 0x82734734
+        value = 0x39400001
+    [[patch.be32]]
+        address = 0x8273667c
+        value = 0x39600001
+    [[patch.be32]]
+        address = 0x828170fc
+        value = 0x38600001
+    [[patch.be32]]
+        address = 0x82817104
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x82731908
+        value = 0x4e800020
+    [[patch.be16]]
+        address = 0x8253239c
+        value = 0x4800
+
+[[patch]]
+    name = "Ambient Occlusion - Option B: Disable"
     desc = "Fixes various artifacts when using upscaling."
     author = "illusion, boma"
     is_enabled = false
@@ -50,6 +81,43 @@ hash = "62547A005C0420D2" # default.xex
         value = 0x39600000
 
 [[patch]]
+    name = "Performance Patch: Optimized Settings (Smart Shadow Cuts)"
+    desc = "Recommended for most people who want a moderate FPS boost without major visual loss. Some cutscenes and specific situations may be missing shadows, but the change is generally mild. The largest performance gains are typically with NVIDIA GPUs. Use in tandem with the Ambient Occlusion Upscaling Fix for best results."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8273c920
+        value = 0x480a619c
+    [[patch.be32]]
+        address = 0x827e2abc
+        value = 0x7edfb378
+    [[patch.be32]]
+        address = 0x827e2ac0
+        value = 0x2f16000c
+    [[patch.be32]]
+        address = 0x827e2ac4
+        value = 0x41980010
+    [[patch.be32]]
+        address = 0x827e2ac8
+        value = 0x3be0000b
+    [[patch.be32]]
+        address = 0x827e2acc
+        value = 0x3ac0000b
+    [[patch.be32]]
+        address = 0x827e2ad0
+        value = 0x4bf59e54
+    [[patch.be32]]
+        address = 0x827e2ad4
+        value = 0x4bf59e50
+    [[patch.be32]]
+        address = 0x82748038
+        value = 0x39600190
+    [[patch.be32]]
+        address = 0x827485bc
+        value = 0x39600190
+
+[[patch]]
     name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
@@ -57,6 +125,22 @@ hash = "62547A005C0420D2" # default.xex
     [[patch.be32]]
         address = 0x8281e3b4
         value = 0x38a00010
+
+[[patch]]
+    name = "Texture Streaming Fix"
+    desc = "Minimizes the texture pop-in common in heavy scenes, especially when using custom resolution scaling, allowing textures to stream in sooner and maintain higher visual detail during gameplay."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8281d0e4 # Set PoolSize=196
+        value = 0x388000c4
+    [[patch.be32]]
+        address = 0x8281d978
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x8281d97c
+        value = 0x4e800020
 
 [[patch]]
     name = "Disable Lens Flares"
@@ -69,7 +153,21 @@ hash = "62547A005C0420D2" # default.xex
         value = 0x39400000
 
 [[patch]]
-    name = "Disable Depth of Field"
+    name = "Depth of Field, Option A - Disable Gaussian Blur (Upscaling Fix)"
+    desc = "Recommended when using upscaling. Disables gaussian blur which reduces ghosting caused by blur sampling/resolves at higher internal resolutions."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8272fdac
+        value = 0xec210828
+    [[patch.be32]]
+        address = 0x8272fdf0
+        value = 0xec210828
+
+[[patch]]
+    name = "Depth of Field, Option B - Disable Entire DoF Pipeline"
+    desc = "Disables the Uber postprocess shader pipeline. Produces a completely sharp image at all distances but also removes most post-processing effects, including tonemapping and color grading. Use Option A if you do not like the results of this patch."
     author = "boma"
     is_enabled = false
 
@@ -102,14 +200,17 @@ hash = "62547A005C0420D2" # default.xex
         value = 0x39600000
 
 [[patch]]
-    name = "Disable Coalesced hash check"
-    desc = "Allows for Coalesced modifications."
-    author = "Sowa_95"
+    name = "Disable Coalesced Hash Check"
+    desc = "Allows for editing the Coalesced engine files without triggering the dirty disc error at launch."
+    author = "Sowa_95, boma"
     is_enabled = false
 
     [[patch.be8]]
         address = 0x82ac3387
         value = 0x00
+    [[patch.be32]]
+        address = 0x828089c0
+        value = 0x4e800020
 
 [[patch]]
     name = "Show FPS"
@@ -122,3 +223,83 @@ hash = "62547A005C0420D2" # default.xex
     [[patch.be8]]
         address = 0x831457c0 # Frametime
         value = 0x01
+
+[[patch]]
+    name = "21:9 Ultrawide Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands gameplay and cutscene rendering to true 21:9 ultrawide, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x550, certain elements may appear more aliased."
+    author = "boma, TudorHorse"
+    is_enabled = false
+
+    [[patch.f32]] # GAMEPLAY & CUTSCENE FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.0005
+        address = 0x828b972c
+        value = 0.0106355
+    [[patch.be16]]
+        address = 0x828166ca
+        value = 0x0226
+    [[patch.be16]]
+        address = 0x8253239c
+        value = 0x4800
+    [[patch.f32]]
+        address = 0x821d55a0
+        value = 2.32723
+    [[patch.be32]]
+        address = 0x826e9bf0
+        value = 0x38600234
+    [[patch.be32]]
+        address = 0x826e9bf4
+        value = 0x48000008
+    [[patch.be32]]
+        address = 0x825324b4
+        value = 0x48387268
+    [[patch.be32]]
+        address = 0x828b971c
+        value = 0x3d60828b
+    [[patch.be32]]
+        address = 0x828b9720
+        value = 0x616b972c
+    [[patch.be32]]
+        address = 0x828b9724
+        value = 0xc00b0000
+    [[patch.be32]]
+        address = 0x828b9728
+        value = 0x4bc78d90
+
+[[patch]]
+    name = "Steam Deck / 16:10 Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Designed for Steam Deck and modern gaming laptop displays. Expands gameplay and cutscene rendering to true 16:10, updates the FOV axis constraint for proper framing, and adds letterboxing for pre-rendered videos."
+    author = "boma, TudorHorse"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8289aa98
+        value = 0x4801f188
+    [[patch.be32]]
+        address = 0x828b9c20
+        value = 0x3d603f66
+    [[patch.be32]]
+        address = 0x828b9c24
+        value = 0x616b6666
+    [[patch.be32]]
+        address = 0x828b9c28
+        value = 0x91610020
+    [[patch.be32]]
+        address = 0x828b9c2c
+        value = 0xc0010020
+    [[patch.be32]]
+        address = 0x828b9c30
+        value = 0xec210032
+    [[patch.be32]]
+        address = 0x828b9c34
+        value = 0x38210090
+    [[patch.be32]]
+        address = 0x828b9c38
+        value = 0x4bfe0e64
+    [[patch.be16]]
+        address = 0x82816a22
+        value = 0x0480
+    [[patch.be16]]
+        address = 0x8253239c
+        value = 0x4800
+    [[patch.f32]]
+        address = 0x821d55a0
+        value = 1.6

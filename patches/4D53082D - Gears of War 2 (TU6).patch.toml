@@ -15,12 +15,6 @@ hash = "62547A005C0420D2" # default.xex
     [[patch.be8]]
         address = 0x829a6f53
         value = 0x01
-    [[patch.be32]]
-        address = 0x8262a638
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x8262a648
-        value = 0x60000000
 
 [[patch]]
     name = "Black Shading Fix"

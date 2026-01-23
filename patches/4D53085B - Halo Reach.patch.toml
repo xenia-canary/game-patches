@@ -22,3 +22,13 @@ hash = "17887E84979FCCC7" # default.xex
     [[patch.be8]]
         address = 0x8213d85f
         value = 0x20
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Removes unoccluded bright lights on-screen."
+    author = "boma, Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82245464
+        value = 0x4800

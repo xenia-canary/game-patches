@@ -45,23 +45,37 @@ hash = "8429D0AE190C10DB" # default.xex
         value = 0x38a00010
 
 [[patch]]
-    name = "Resolution Scaling Fix / Disable All Post-Processing"
-    desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing."
+    name = "Disable All Post-Processing"
+    desc = "Dramatically changes the overall look of the game. Try using Disable Motion Blur, Disable FXAA and Resolution Scaling Fix instead if this patch makes the game look too flat."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x827e4774
+        value = 0x4800
+
+[[patch]]
+    name = "Resolution Scaling Fix"
+    desc = "Use alongside Disable FXAA. Patches post-processing effects to be upscaling-friendly."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8236ab07
+        value = 0x00
+    [[patch.be8]]
+        address = 0x8236ab47
+        value = 0x00
+
+[[patch]]
+    name = "Disable FXAA"
+    desc = "A clearer image at the expense of slightly more aliasing."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827e363c
-        value = 0x38a00000
-    [[patch.be32]]
-        address = 0x827e3810
-        value = 0x38a00000
-    [[patch.be32]]
-        address = 0x827e3970
-        value = 0x38800004
-    [[patch.be32]] # nop finishing render pass from branching to temporal AA resolve
-        address = 0x827e392c
-        value = 0x60000000
+        address = 0x824408a8
+        value = 0x39600000
 
 [[patch]]
     name = "Disable Ambient Occlusion"
@@ -110,6 +124,16 @@ hash = "8429D0AE190C10DB" # default.xex
         value = 0x39400000
 
 [[patch]]
+    name = "Disable Film Grain"
+    desc = "Disables the film grain post-process effect. Does not impact performance."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8243d854
+        value = 0xc01f0000
+
+[[patch]]
     name = "Disable Coalesced hash check"
     desc = "Allows for Coalesced modifications."
     author = "Sowa_95"
@@ -130,3 +154,49 @@ hash = "8429D0AE190C10DB" # default.xex
     [[patch.be8]]
         address = 0x835349ec # Frametime
         value = 0x01
+
+[[patch]]
+    name = "Steam Deck / 16:10 Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Designed for Steam Deck and modern gaming laptop displays. Expands gameplay and cutscene rendering to true 16:10, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos."
+    author = "TudorHorse, boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82990aea # Define scene color buffer width
+        value = 0x0480 # 1152 (1152x720)
+    [[patch.f32]]
+        address = 0x82082c50 # .rdata float for post-process effect scaling
+        value = 1.6
+    [[patch.be16]]
+        address = 0x826400ec # ConstrainAspectRatio = FALSE
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x82901ae8 # Ignore cameraactor
+        value = 0x60000000 # nop
+    [[patch.be32]]
+        address = 0x82901b44 # AdjustFOVForViewport
+        value = 0x4ba61414 # b 0x82362f58 code cave
+    [[patch.be32]]
+        address = 0x82362f58 # recreate instruction
+        value = 0xecc94024 # fdivs f6, f9, f8
+    [[patch.be32]]
+        address = 0x82362f5c
+        value = 0xec2701b2 # fmuls f1, f7, f6
+    [[patch.be32]]
+        address = 0x82362f60
+        value = 0x3d603f66 # lis r11, 0x3f66
+    [[patch.be32]]
+        address = 0x82362f64
+        value = 0x616b6666 # ori r11, r11, 0x6666 (0x3f666666 = 0.9f)
+    [[patch.be32]]
+        address = 0x82362f68
+        value = 0x91610058 # stw r11, 0x58(r1)
+    [[patch.be32]]
+        address = 0x82362f6c
+        value = 0xc0010058 # lfs f0, 0x58(r1)
+    [[patch.be32]]
+        address = 0x82362f70 # apply FOV multiplier
+        value = 0xec210032 # fmuls f1, f1, f0
+    [[patch.be32]]
+        address = 0x82362f74 # return
+        value = 0x4859ebd4 # b 0x82901B48

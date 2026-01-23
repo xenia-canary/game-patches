@@ -4,16 +4,6 @@ hash = "355BF86D7238F120" # default.xex
 #media_id = "6FF4F789" # Disc (USA, Europe): http://redump.org/disc/14040
 
 [[patch]]
-    name = "60 FPS"
-    desc = "See note about framerate patches in the README."
-    author = "boma"
-    is_enabled = false
-
-    [[patch.be8]]
-        address = 0x82316c9b # D3DPRESENT_INTERVAL_ONE
-        value = 0x01
-
-[[patch]]
     name = "Dynamic Lighting & Shadows Shading Fix"
     desc = "Solves most dynamic lighting artifacts caused by an issue with light environments and MSAA tiling."
     author = "boma"
@@ -21,38 +11,48 @@ hash = "355BF86D7238F120" # default.xex
 
     [[patch.be8]]
         address = 0x83777f4f # GTilingMode = 0
-        value = 0x00
+        value = 0x04
     [[patch.be32]]
         address = 0x8256a998 # GUseTilingCode = FALSE, RHI
         value = 0x39200000
     [[patch.be32]]
         address = 0x8256abb8 # GUseTilingCode = FALSE, FSceneRenderTargets
         value = 0x39200000
-    [[patch.be32]]
-        address = 0x828324e4 # GMaxShadowDepthBufferSize = 2000, RHI
-        value = 0x396007d0
-    [[patch.be32]]
-        address = 0x82832704 # GMaxShadowDepthBufferSize = 2000, FSceneRenderTargets
-        value = 0x396007d0
 
 [[patch]]
-    name = "RTV - Flickering Decals Fix"
-    desc = "Disables static decals that cause z-fighting with RTV rendering. Some visual artifacts may remain. Not necessary when using ROV."
+    name = "Flickering Decals Fix"
+    desc = "Fixes decals (bloodpools, bullet holes, etc.) that flicker when using the Vulkan FBO or D3D12 RTV render paths."
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x82b23f50
-        value = 0x39400000
+        address = 0x82c2987c
+        value = 0x4b9142c8
     [[patch.be32]]
-        address = 0x82b23f64
-        value = 0x39600000
+        address = 0x8253db44
+        value = 0x3c00bc23
     [[patch.be32]]
-        address = 0x82b237a0
-        value = 0x39200000
+        address = 0x8253db48
+        value = 0x6000d70a
     [[patch.be32]]
-        address = 0x82b237b4
-        value = 0x39600000
+        address = 0x8253db4c
+        value = 0x90010160
+    [[patch.be32]]
+        address = 0x8253db50
+        value = 0xc0010160
+    [[patch.be32]]
+        address = 0x8253db54
+        value = 0x486ebd2c
+
+[[patch]]
+    name = "Upscaling Fix - Disable Gaussian Blur (sharper, less bloom/DoF)"
+    desc = "Forces the blur radius to 0, disabling gaussian blur. Helps upscaling without having to disable all post-processing."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82c9f860
+        value = 0xec210828
 
 [[patch]]
     name = "Disable Motion Blur"
@@ -74,3 +74,75 @@ hash = "355BF86D7238F120" # default.xex
     [[patch.be32]]
         address = 0x825c6c84
         value = 0x38a00010
+
+[[patch]]
+    name = "Disable Coalesced Hash Check"
+    desc = "Allows the Coalesced.ini engine file to be edited without triggering the dirty disc error at launch."
+    author = "Sowa_95, boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8332c5c7
+        value = 0x00
+    [[patch.be32]]
+        address = 0x82474768
+        value = 0x4e800020
+
+[[patch]]
+    name = "21:9 Ultrawide Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands gameplay rendering to true 21:9 ultrawide and updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. HUD and UI elements will appear moderately stretched and cutscenes will be slightly cropped. Because the game now renders at 1280x550, certain elements may appear more aliased."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8256ac1a
+        value = 0x0226
+    [[patch.f32]]
+        address = 0x82113724
+        value = 2.3333
+    [[patch.be16]]
+        address = 0x825cdaf8
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x82f62df8
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82f62e3c
+        value = 0x4b5daaf0
+    [[patch.be32]]
+        address = 0x8253d92c
+        value = 0xec290232
+    [[patch.be32]]
+        address = 0x8253d930
+        value = 0x3d603fa8
+    [[patch.be32]]
+        address = 0x8253d934
+        value = 0x616b0000
+    [[patch.be32]]
+        address = 0x8253d938
+        value = 0x91610050
+    [[patch.be32]]
+        address = 0x8253d93c
+        value = 0xc0010050
+    [[patch.be32]]
+        address = 0x8253d940
+        value = 0xec210032
+    [[patch.be32]]
+        address = 0x8253d944
+        value = 0x48a254fc
+
+[[patch]]
+    name = "Steam Deck / 16:10 Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Designed for Steam Deck and modern gaming laptop displays. Expands gameplay and cutscene rendering to true 16:10 and adds pillarboxing for pre-rendered videos."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8256ac1e
+        value = 0x0480
+    [[patch.f32]]
+        address = 0x82113724
+        value = 1.6
+    [[patch.be16]]
+        address = 0x825cdaf8
+        value = 0x4800

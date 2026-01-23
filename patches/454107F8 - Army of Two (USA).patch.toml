@@ -27,6 +27,62 @@ hash = "2EDC4C4CEC3F7F8D" # default.xex
         value = 0x04
 
 [[patch]]
+    name = "Flickering Decals Fix"
+    desc = "Fixes decals (bloodpools, bullet holes, etc.) that flicker when using the Vulkan FBO or D3D12 RTV render paths."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82894c44 # BSP receivers
+        value = 0x4be47d24 # b 0x826dc968
+    [[patch.be32]]
+        address = 0x826dc968 # BSP code cave
+        value = 0x3c00bc23 # lis r0, 0xbc23
+    [[patch.be32]]
+        address = 0x826dc96c
+        value = 0x6000d70a # ori r0, r0, 0xd70a
+    [[patch.be32]]
+        address = 0x826dc970
+        value = 0x900101f0 # stw r0, 0x01f0(r1)
+    [[patch.be32]]
+        address = 0x826dc974 # Clamp DepthBias to -0.01f
+        value = 0xc00101f0 # lfs f0, 0x01f0(r1)
+    [[patch.be32]]
+        address = 0x826dc978
+        value = 0x481b82d0 # b 0x82894c48
+    [[patch.be32]]
+        address = 0x82894800 # Static mesh receivers
+        value = 0x4be48180 # b 0x826dc980
+    [[patch.be32]]
+        address = 0x826dc980 # Static mesh code cave
+        value = 0x3c00bc23 # lis r0, 0xbc23
+    [[patch.be32]]
+        address = 0x826dc984
+        value = 0x6000d70a # ori r0, r0, 0xd70a
+    [[patch.be32]]
+        address = 0x826dc988
+        value = 0x900101b0 # stw r0, 0x01b0(r1)
+    [[patch.be32]]
+        address = 0x826dc98c # Clamp DepthBias to -0.01f
+        value = 0xc00101b0 # lfs f0, 0x01b0(r1)
+    [[patch.be32]]
+        address = 0x826dc990
+        value = 0x481b7e74 # b 0x82894804
+
+[[patch]]
+    name = "Upscaling Fix - Disable Gaussian Blur (sharper, less bloom/DoF)"
+    desc = "Forces the blur radius to 0, disabling gaussian blur. Helps upscaling without having to disable all post-processing."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825600a0
+        value = 0xec210828 # fsubs f1, f1, f1
+    [[patch.be32]]
+        address = 0x825600c4
+        value = 0xec210828 # fsubs f1, f1, f1
+
+[[patch]]
     name = "16x Anisotropic Filtering"
     author = "Sowa_95"
     is_enabled = false

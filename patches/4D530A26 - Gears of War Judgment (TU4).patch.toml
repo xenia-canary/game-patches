@@ -46,8 +46,8 @@ hash = "013148141A27D4C7" # default.xex
 
 [[patch]]
     name = "Disable All Post-Processing"
-    desc = "Dramatically changes the overall look of the game, but fixes all edge-detection overcorrection and color smearing when upscaling."
-    author = "boma, Mr Pibb"
+    desc = "Dramatically changes the overall look of the game. Try using Disable Motion Blur, Disable FXAA and Resolution Scaling Fix instead if this patch makes the game look too flat."
+    author = "boma"
     is_enabled = false
 
     [[patch.be16]]
@@ -57,7 +57,7 @@ hash = "013148141A27D4C7" # default.xex
 [[patch]]
     name = "Resolution Scaling Fix"
     desc = "Use alongside Disable FXAA. Patches post-processing effects to be upscaling-friendly."
-    author = "Mr Pibb"
+    author = "boma"
     is_enabled = false
 
     [[patch.be8]]
@@ -70,7 +70,7 @@ hash = "013148141A27D4C7" # default.xex
 [[patch]]
     name = "Disable FXAA"
     desc = "A clearer image at the expense of slightly more aliasing."
-    author = "Mr Pibb"
+    author = "boma"
     is_enabled = false
 
     [[patch.be32]]
@@ -126,7 +126,7 @@ hash = "013148141A27D4C7" # default.xex
 [[patch]]
     name = "Disable Film Grain"
     desc = "Disables the film grain post-process effect. Does not impact performance."
-    author = "Mr Pibb"
+    author = "boma"
     is_enabled = false
 
     [[patch.be32]]
@@ -156,17 +156,47 @@ hash = "013148141A27D4C7" # default.xex
         value = 0x01
 
 [[patch]]
-    name = "Steam Deck / 16:10 Aspect Ratio"
-    desc = "Must set present_letterbox = false in the Xenia Canary config."
-    author = "TudorHorse, Mr Pibb"
+    name = "Steam Deck / 16:10 Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Designed for Steam Deck and modern gaming laptop displays. Expands gameplay and cutscene rendering to true 16:10, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos."
+    author = "TudorHorse, boma"
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x82992666
-        value = 0x0320
+        address = 0x82992692 # Define scene color buffer width
+        value = 0x0480 # 1152 (1152x720)
     [[patch.f32]]
-        address = 0x82083350
+        address = 0x82082c30 # .rdata float for post-process effect scaling
         value = 1.6
     [[patch.be16]]
-        address = 0x82640504
+        address = 0x826404f8 # ConstrainAspectRatio = FALSE
         value = 0x4800
+    [[patch.be32]]
+        address = 0x82902d18 # Ignore cameraactor
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82902d74 # AdjustFOVForViewport
+        value = 0x4ba6003c # b 0x82362db0 code cave
+    [[patch.be32]]
+        address = 0x82362db0 # recreate instruction
+        value = 0xecc94024 # fdivs f6, f9, f8
+    [[patch.be32]]
+        address = 0x82362db4
+        value = 0xec2701b2 # fmuls f1, f7, f6
+    [[patch.be32]]
+        address = 0x82362db8
+        value = 0x3d603f66 # lis r11, 0x3f66
+    [[patch.be32]]
+        address = 0x82362dbc
+        value = 0x616b6666 # ori r11, r11, 0x6666 (0x3f666666 = 0.9f)
+    [[patch.be32]]
+        address = 0x82362dc0
+        value = 0x91610058 # stw r11, 0x58(r1)
+    [[patch.be32]]
+        address = 0x82362dc4
+        value = 0xc0010058 # lfs f0, 0x58(r1)
+    [[patch.be32]]
+        address = 0x82362dc8 # apply FOV multiplier
+        value = 0xec210032 # fmuls f1, f1, f0
+    [[patch.be32]]
+        address = 0x82362dcc # return
+        value = 0x4859ffac # b 0x82902d78

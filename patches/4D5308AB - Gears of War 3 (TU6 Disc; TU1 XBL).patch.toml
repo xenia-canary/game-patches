@@ -108,8 +108,8 @@ hash = "7775898137CE1CE3" # default.xex
         value = 0x39400000
 
 [[patch]]
-    name = "Disable most Dynamic Shadows - Performance Mode"
-    desc = "Significantly improves performance if GPU limited. Not recommended on high end GPUs. Most effective on Nvidia, as it struggles with UE3 dynamic shadows when using RTV."
+    name = "Performance Patch, Option A: Low Settings (No Dynamic Shadows)"
+    desc = "Significantly improves performance if GPU limited. Not recommended on high-end GPUs. Most effective on NVIDIA GPUs, as it struggles with UE3 dynamic shadows when using Vulkan FBO or D3D12 RTV render paths."
     author = "Sowa_95"
     is_enabled = false
 
@@ -119,6 +119,55 @@ hash = "7775898137CE1CE3" # default.xex
     [[patch.be8]]
         address = 0x8237d02c # Light Environment Shadows
         value = 0x00
+
+[[patch]]
+    name = "Performance Patch, Option B: Optimized Settings (Smart Shadow Cuts)"
+    desc = "Recommended for most people who want a big FPS boost without major visual loss. Some cutscenes and specific situations may be missing shadows, but the change is generally mild. Can nearly double average FPS, with the largest gains typically on NVIDIA GPUs."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x827c9078 # Ignore occlusion queries from gumming up InitViews
+        value = 0x39600001 # li r11, 1
+    [[patch.be32]]
+        address = 0x827caf2c # Skip allocate query pool
+        value = 0x39600001 # li r11, 1
+    [[patch.be32]]
+        address = 0x827e2af0 # projected shadow render, gathering draw lists
+        value = 0x4bb2edb0 # b 0x823118a0 code cave
+    [[patch.be32]]
+        address = 0x823118a0 # load flags
+        value = 0x815e04e0 # lwz r10, 0x4e0(r30)
+    [[patch.be32]]
+        address = 0x823118a4 # whole-scene & preshadow mask
+        value = 0x5549014c # rlwinm r9, r10, 0, 5, 6
+    [[patch.be32]]
+        address = 0x823118a8
+        value = 0x2b290000 # cmplwi cr6, r9, 0
+    [[patch.be32]]
+        address = 0x823118ac # not per-object, allow, send back to render
+        value = 0x409a000c # bne cr6 0xc
+    [[patch.be32]]
+        address = 0x823118b0 # not to exceed more than 20 shadow depth calls per frame
+        value = 0x2f100014 # cmpwi cr6, r16, 20
+    [[patch.be32]]
+        address = 0x823118b4 # if more than 12, jump to skip stub
+        value = 0x4098000c
+    [[patch.be32]]
+        address = 0x823118b8 # recreate overwritten insruction
+        value = 0x396b0001 # addi r11, r16, 1
+    [[patch.be32]]
+        address = 0x823118bc # resume original shadow render flow
+        value = 0x484d1238 # b 0x827e2af4
+    [[patch.be32]]
+        address = 0x823118c0 # skip stub
+        value = 0x484d128c # b 0x827e2b4c
+    [[patch.be32]]
+        address = 0x827dcf3c # Skip pre-allocated shadow caching which blows up NVIDIA when upscaling
+        value = 0x3aa00001
+    [[patch.be32]]
+        address = 0x829b29d4 # OneFrameRenderLag = FALSE
+        value = 0x38600000
 
 [[patch]]
     name = "Disable Coalesced hash check"

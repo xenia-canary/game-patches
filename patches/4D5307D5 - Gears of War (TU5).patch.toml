@@ -5,67 +5,144 @@ hash = "34849A59634915F6" # default.xex
 
 [[patch]]
     name = "60 FPS"
-    desc = "Increases the default vsync target to 60 FPS. See note about framerate patches in the README. Above 100 FPS there can be timing-related physics and audio issues."
+    desc = "Increases the default vsync target to 60 FPS. See note about framerate patches in the README. Above 100 FPS there can be audio issues."
     author = "boma"
     is_enabled = false
 
     [[patch.be8]]
         address = 0x82250ddb # D3DPRESENT_INTERVAL_ONE
         value = 0x01
+    [[patch.be32]]
+        address = 0x82498dc0 # Stop refitting MaxSubstep each frame, usually fixes ragdolls wonking out when framerate is uncapped
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82498dd0
+        value = 0x60000000
 
 [[patch]]
     name = "Black Shading Fix"
-    desc = "Solves most dynamic lighting artifacts caused by an issue with light environments and MSAA tiling."
+    desc = "Effectively turns off MSAA, solving the dynamic lighting artifacts caused by MSAA resolve imperfections."
     author = "boma"
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x82f9779b # GTilingMode = 0
+        address = 0x82f9779b # GUseTilingCode = FALSE
         value = 0x00
     [[patch.be8]]
-        address = 0x82f97733 # GUseTilingCode = FALSE
-        value = 0x00
+        address = 0x82f97733 # GTilingMode = 4
+        value = 0x04
+
+[[patch]]
+    name = "Flickering Decals Fix"
+    desc = "Fixes decals (bloodpools, bullet holes, etc.) that flicker when using the Vulkan FBO or D3D12 RTV render paths."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825acf60
+        value = 0x4bcec03c
+    [[patch.be32]]
+        address = 0x82298f9c
+        value = 0x3c00bc23
+    [[patch.be32]]
+        address = 0x82298fa0
+        value = 0x6000d70a
+    [[patch.be32]]
+        address = 0x82298fa4
+        value = 0x90010180
+    [[patch.be32]]
+        address = 0x82298fa8
+        value = 0xc0010180
+    [[patch.be32]]
+        address = 0x82298fac
+        value = 0x48313fb8
+    [[patch.be32]]
+        address = 0x829a84d0
+        value = 0x4b8f0934
+    [[patch.be32]]
+        address = 0x82298e04
+        value = 0x3c00bc23
+    [[patch.be32]]
+        address = 0x82298e08
+        value = 0x6000d70a
+    [[patch.be32]]
+        address = 0x82298e0c
+        value = 0x90010178
+    [[patch.be32]]
+        address = 0x82298e10
+        value = 0xc0010178
+    [[patch.be32]]
+        address = 0x82298e14
+        value = 0x4870f6c0
 
 [[patch]]
     name = "Disable Motion Blur"
     author = "illusion, boma"
     is_enabled = false
 
-    [[patch.be16]]
-        address = 0x822a14c8
-        value = 0x4800
+    [[patch.be32]]
+        address = 0x82548e34
+        value = 0x39600000
 
 [[patch]]
-    name = "Disable Most Post-Processing"
+    name = "Texture Streaming Fix"
+    desc = "Minimizes the slow pop-in behavior common in heavy scenes, especially when using custom resolution scaling, allowing textures to stream in sooner and maintain higher visual detail during gameplay."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8259e474
+        value = 0x396000c4
+    [[patch.be32]]
+        address = 0x82459b98
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82459848
+        value = 0x60000000
+
+[[patch]]
+    name = "Upscaling Fix - Disable Gaussian Blur (sharper, less bloom/DoF)"
+    desc = "Forces the blur radius to 0, disabling gaussian blur. Helps upscaling without having to disable all post-processing."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8253956b
+        value = 0x00
+    [[patch.be8]]
+        address = 0x8255af0b
+        value = 0x00
+
+[[patch]]
+    name = "Disable All Post-Processing"
     author = "illusion, boma"
     is_enabled = false
 
     [[patch.be16]]
-        address = 0x8229b988
+        address = 0x8256b25c
         value = 0x4800
-    [[patch.be32]]
-        address = 0x82290b18
-        value = 0x48000008
 
 [[patch]]
-    name = "8x Anisotropic Filtering"
-    desc = "Game does not natively support 16x filtering."
+    name = "16x Anisotropic Filtering"
     author = "boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x8249d4d4
-        value = 0x38a00008 # li r5, 8
+        value = 0x38a00010 # li r5, 0x10
 
 [[patch]]
-    name = "Disable Coalesced hash check"
-    desc = "Allows for Coalesced modifications."
-    author = "Sowa_95"
+    name = "Disable Coalesced Hash Check"
+    desc = "Allows the Coalesced.ini engine file to be edited without triggering the dirty disc error at launch."
+    author = "Sowa_95, boma"
     is_enabled = false
 
     [[patch.be8]]
         address = 0x829f4f2f
         value = 0x00
+    [[patch.be32]]
+        address = 0x82472e88
+        value = 0x4e800020
 
 [[patch]]
     name = "Show Frametime"
@@ -75,3 +152,83 @@ hash = "34849A59634915F6" # default.xex
     [[patch.be8]]
         address = 0x82fdace4
         value = 0x01
+
+[[patch]]
+    name = "21:9 Ultrawide Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands all gameplay, UI, and cutscenes to true 21:9 and updates FOV for proper ultrawide framing, though pre-rendered videos are stretched. Because the game now renders at a lower pixel count, certain elements may appear more aliased."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.f32]] # GAMEPLAY & CUTSCENE FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.0005
+        address = 0x82298e70
+        value = 0.0108355
+    [[patch.be16]]
+        address = 0x824bc446
+        value = 0x0226
+    [[patch.be16]]
+        address = 0x82392530
+        value = 0x4800
+    [[patch.f32]]
+        address = 0x8213e7fc
+        value = 2.3273
+    [[patch.be32]]
+        address = 0x8239265c
+        value = 0x4bf06808
+    [[patch.be32]]
+        address = 0x82392660
+        value = 0xc1ab0000
+    [[patch.be32]]
+        address = 0x82298e64
+        value = 0x3d608229
+    [[patch.be32]]
+        address = 0x82298e68
+        value = 0x616b8e70
+    [[patch.be32]]
+        address = 0x82298e6c
+        value = 0x480f97f4
+    [[patch.be32]]
+        address = 0x823045f0
+        value = 0x38600226
+    [[patch.be32]]
+        address = 0x823045f4
+        value = 0x48000008
+
+[[patch]]
+    name = "Steam Deck / 16:10 Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Designed for Steam Deck and modern gaming laptop displays. Expands gameplay, cutscene, and UI rendering to true 16:10, and updates the FOV axis constraint for proper framing. Pre-rendered videos will be slightly stretched."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.f32]] # GAMEPLAY FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.05
+        address = 0x82393224
+        value = 0.95
+    [[patch.be16]]
+        address = 0x824bc55a
+        value = 0x0480
+    [[patch.be16]]
+        address = 0x82392530
+        value = 0x4800
+    [[patch.f32]]
+        address = 0x8213e7fc
+        value = 1.6
+    [[patch.be32]]
+        address = 0x821c0b10
+        value = 0x481d26fc
+    [[patch.be32]]
+        address = 0x8239320c
+        value = 0x3d608239
+    [[patch.be32]]
+        address = 0x82393210
+        value = 0x616b3224
+    [[patch.be32]]
+        address = 0x82393214
+        value = 0xc00b0000
+    [[patch.be32]]
+        address = 0x82393218
+        value = 0xec210032
+    [[patch.be32]]
+        address = 0x8239321c
+        value = 0x38210090
+    [[patch.be32]]
+        address = 0x82393220
+        value = 0x4be2d8f4

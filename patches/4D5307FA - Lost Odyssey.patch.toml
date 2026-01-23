@@ -19,6 +19,48 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
         value = 0x01
 
 [[patch]]
+    name = "Flickering Characters Fix"
+    desc = "Vulkan FBO and D3D12 RTV exhibits fast, flickering dark spots or shapes crawling over characters, especially during cutscenes. This patch eliminates the flicker by switching to CPU skinning, a safer render method."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82558000
+        value = 0x38600001 # li r3, 1
+    [[patch.be32]]
+        address = 0x82558004
+        value = 0x4e800020 # blr
+
+[[patch]]
+    name = "Disable Occlusion Queries - Stability Fix"
+    desc = "May prevent crashing, especially when using Vulkan."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823bad3c
+        value = 0x39600001 # li r11, 1
+    [[patch.be32]]
+        address = 0x823bd618
+        value = 0x39400001 # li r10, 1
+
+[[patch]]
+    name = "Post-Processing Upscaling Fix"
+    desc = "Patches post-processing effects to be upscaling friendly. Some minor checkboarding artifacts may remain."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8295b62c
+        value = 0xc0000000
+    [[patch.be32]]
+        address = 0x82698f50
+        value = 0xc0200000
+    [[patch.be32]]
+        address = 0x8271c49c
+        value = 0xc01f0000
+
+[[patch]]
     name = "Disable Depth of Field"
     author = "boma"
     is_enabled = false
@@ -47,7 +89,7 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
 
 [[patch]]
     name = "Disable Dynamic Shadows"
-    desc = "Provides a moderate performance boost, especially when using custom resolution scaling."
+    desc = "Provides a moderate performance boost, especially when using resolution upscaling."
     author = "boma"
     is_enabled = false
 
@@ -73,3 +115,74 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
     [[patch.be32]]
         address = 0x828f9ed4
         value = 0x93df0054
+
+[[patch]]
+    name = "21:9 Ultrawide Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands all gameplay and cutscenes to true 21:9 and updates FOV for proper ultrawide framing, though FMVs and UI are stretched. Because the game now renders at a lower pixel count, certain elements may appear more aliased."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82218598
+        value = 2.3333
+    [[patch.be32]]
+        address = 0x8264f558 # UI Viewport Size-Y
+        value = 0x38600226  # li r3, 0x226 (550)
+    [[patch.be32]]
+        address = 0x8264f55c # Skip if null then get from world
+        value = 0x48000008
+    [[patch.be32]]
+        address = 0x8230065c # Skip ConstrainAspectRatio path, stops pillarboxed cutscenes
+        value = 0x480000ac
+    [[patch.be32]]
+        address = 0x823007ac
+        value = 0x48059d34 # b 0x8235a4e0
+    [[patch.be32]]
+        address = 0x8235a4e0
+        value = 0x3d808235 # lis r12, 0x8235
+    [[patch.be32]]
+        address = 0x8235a4e4
+        value = 0x618ca4f0 # lwz r12, 0xa4f0(r12)
+    [[patch.be32]]
+        address = 0x8235a4e8
+        value = 0xc00c0000 # lfs f0, 0(r12)
+    [[patch.be32]]
+        address = 0x8235a4ec
+        value = 0x4bfa62c4 # b 0x823007b0
+    [[patch.f32]]
+        address = 0x8235a4f0
+        value = 0.01163553 # (pi / 360) * 1.3333334
+
+[[patch]]
+    name = "Steam Deck / 16:10 Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands all gameplay, UI, and cutscenes to true 21:9 and updates FOV for proper framing, though FMVs are slightly stretched."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8248635e
+        value = 0x0480 # define 1152 color buffer width
+    [[patch.f32]]
+        address = 0x82218598
+        value = 1.6
+    [[patch.be32]]
+        address = 0x8230065c # Skip ConstrainAspectRatio path, stops pillarboxed cutscenes
+        value = 0x480000ac
+    [[patch.be32]]
+        address = 0x823007ac
+        value = 0x48059d34 # b 0x8235a4e0
+    [[patch.be32]]
+        address = 0x8235a4e0
+        value = 0x3d808235 # lis r12, 0x8235
+    [[patch.be32]]
+        address = 0x8235a4e4
+        value = 0x618ca4f0 # lwz r12, 0xa4f0(r12)
+    [[patch.be32]]
+        address = 0x8235a4e8
+        value = 0xc00c0000 # lfs f0, 0(r12)
+    [[patch.be32]]
+        address = 0x8235a4ec
+        value = 0x4bfa62c4 # b 0x823007b0
+    [[patch.f32]]
+        address = 0x8235a4f0
+        value = 0.00784999 # (pi / 360) * 0.9

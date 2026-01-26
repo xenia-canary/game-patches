@@ -1,0 +1,56 @@
+title_name = "Serious Sam HD: TFE" # The Serious Sam Collection
+title_id = "584109DA" # XA-2522
+hash = "D47AE752F78BB0C1" # default.xex
+#media_id = [
+#    "720CFE01", # Disc (Europe): http://redump.org/disc/58066
+#    "720CFE01", # Disc (USA):    http://redump.org/disc/62599
+#    "720CFE01"  # XBLA: BD3DDDF75BD246402A39903300AD4F2CAABF736B58
+#]
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Increases vsync target to 60FPS."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x829aa97f
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Fixed HDR Exposure"
+    desc = "Readback_resolve alternative. Fixed exposure instead of auto exposure."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825e3fec
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826a573c
+        value = 0x39600000
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82777da8
+        value = 0x39600001
+
+[[patch]]
+    name = "Show FPS Graph"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8277829c
+        value = 0x39600001

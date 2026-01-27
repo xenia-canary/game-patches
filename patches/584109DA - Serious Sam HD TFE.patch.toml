@@ -19,7 +19,7 @@ hash = "D47AE752F78BB0C1" # default.xex
 
 [[patch]]
     name = "Fixed HDR Exposure"
-    desc = "Readback_resolve alternative. pitch black areas by using fixed exposure instead of auto exposure."
+    desc = "Readback_resolve alternative. Fixes pitch black areas by disabling auto exposure."
     author = "Sowa_95"
     is_enabled = false
 

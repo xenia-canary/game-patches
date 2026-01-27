@@ -1,0 +1,46 @@
+title_name = "Serious Sam 3: BFE" # The Serious Sam Collection
+title_id = "5841127F" # XA-4735
+hash = "8BC0CFFDDA0FD81E" # default.xex
+#media_id = [
+#    "20CD3963", # Disc (Europe): http://redump.org/disc/58066
+#    "20CD3963", # Disc (USA):    http://redump.org/disc/62599
+#    "20CD3963"  # XBLA: BCE125B996BC4BCA5A33D9583EB31204177CB88458
+#]
+
+[[patch]]
+    name = "Fixed HDR Exposure"
+    desc = "Readback_resolve alternative. Fixes pitch black areas by disabling auto exposure."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828021f8
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Lens Flares"
+    desc = "Fixes unoccluded bright lights on-screen. Probably not required on default occlusion 80/100, most (if not all) flares are hidden."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x828de96c
+        value = 0x39600000
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829e4240
+        value = 0x39600001
+
+[[patch]]
+    name = "Show FPS Graph"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x829e485c
+        value = 0x39600001

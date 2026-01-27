@@ -19,7 +19,7 @@ hash = "D47AE752F78BB0C1" # default.xex
 
 [[patch]]
     name = "Fixed HDR Exposure"
-    desc = "Readback_resolve alternative. Fixed exposure instead of auto exposure."
+    desc = "Readback_resolve alternative. pitch black areas by using fixed exposure instead of auto exposure."
     author = "Sowa_95"
     is_enabled = false
 
@@ -36,6 +36,19 @@ hash = "D47AE752F78BB0C1" # default.xex
     [[patch.be32]]
         address = 0x826a573c
         value = 0x39600000
+
+[[patch]]
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 1040x624."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82c985ae
+        value = 0x0500
+    [[patch.be16]]
+        address = 0x82c985b2
+        value = 0x02d0
 
 [[patch]]
     name = "Show FPS"

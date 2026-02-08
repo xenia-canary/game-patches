@@ -1,0 +1,23 @@
+title_name = "Catherine"
+title_id = "415407D7" # AT-2007
+hash = "C451BB35FB61698F" # default.xex
+#media_id = "580DEC6A" # Disc (USA): http://redump.org/disc/50527
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8204a9a2
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x8204a9a6
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x821dc332
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x821dc336
+        value = 0x0780

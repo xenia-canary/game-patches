@@ -1,0 +1,30 @@
+title_name = "Marvel: Ultimate Alliance"
+title_id = "415607DA" # AV-2010
+hash = "7FF9FFABF2E048FE" # default.xex
+#media_id = "26848425" # Disc (USA, Europe): http://redump.org/disc/14044
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8211144c
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x8248a21b
+        value = 0x01 # 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Internal_display_resolution must be set to 16. Some post-processing doesn't scale properly, could be improved. Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8243df96
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x8243df9a
+        value = 0x0438

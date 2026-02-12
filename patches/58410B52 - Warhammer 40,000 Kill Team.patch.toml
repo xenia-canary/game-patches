@@ -1,0 +1,17 @@
+title_name = "Warhammer 40,000: Kill Team"
+title_id = "58410B52" # XA-2898
+hash = "C9C9EC25AF1E9558" # default.xex
+#media_id = "14FE46EF" # XBLA: 0DE7FF0B12D8219C74503C88C4392F98211C1A4F58
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82356afa
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x82356afe
+        value = 0x0438

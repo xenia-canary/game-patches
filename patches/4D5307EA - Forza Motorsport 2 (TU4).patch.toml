@@ -8,7 +8,7 @@ hash = "A44CFC5E264B4EE6" # default.xex
 #]
 
 [[patch]]
-    name = "Disabe hash checks"
+    name = "Disable hash checks"
     desc = "Allows modifying protected files."
     author = "Sowa_95"
     is_enabled = false

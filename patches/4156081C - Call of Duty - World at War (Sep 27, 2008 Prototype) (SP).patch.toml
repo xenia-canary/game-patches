@@ -1,0 +1,34 @@
+title_name = "Call of Duty - World at War (Sep 27, 2008 Prototype)" # SP
+title_id = "4156081C" # AV-2076
+hash = "CA4035D9F3A3B290" # CoDSP.exe
+#media_id = "00000000"
+
+[[patch]]
+    name = "Fixed on-startup crash"
+    desc = "Something related to memory."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823caac0
+        value = 0x60000000
+
+[[patch]]
+    name = "Toggle r_drawEntities"
+    desc = "Toggle entity rendering. Disabling r_drawEntities prevents missions from crashing, however characters will no longer render."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x825e912b
+        value = 0x0 # 0x1 to enable
+
+[[patch]]
+    name = "Fixed black screen on start-up"
+    desc = "Skip connecting to blackbox server."
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82556ef0
+        value = 0x60000000

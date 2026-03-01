@@ -1,0 +1,23 @@
+title_name = "Defense Grid: The Awakening"
+title_id = "584108CB" # XA-2251
+hash = "721BED8154B02256" # default.xex
+#media_id = "6A39B357" # XBLA: 28D935C7B0D5AC69FF0C085F6DFBDC1A254BA61958
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x829ea1ee
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x829ea1f6
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x82a2f422
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x82a2f42a
+        value = 0x0438

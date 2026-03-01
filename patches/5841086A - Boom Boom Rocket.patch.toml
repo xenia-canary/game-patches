@@ -1,0 +1,17 @@
+title_name = "Boom Boom Rocket"
+title_id = "5841086A" # XA-2154
+hash = "9A94EBB5BC7A2585" # default.xex
+#media_id = "1853E06B" # XBLA: B5E072E74D680F44619103EEBA838E8CC7710B6258
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Internal_display_resolution must be set to 12 or more. Original resolution is 1280x1024."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x820cc8ee
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x820cc8f6
+        value = 0x0438

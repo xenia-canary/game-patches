@@ -1,0 +1,16 @@
+title_name = "Viking: Battle for Asgard"
+title_id = "534507E0" # SE-2016
+hash = "BCE436AD3B1D05B6" # default.xex
+#media_id = "621AB556" # Disc (USA, Europe): http://redump.org/disc/13762
+
+[[patch]]
+    name = "60 FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82849080
+        value = 0x4270
+    [[patch.be8]]
+        address = 0x821fe3d7
+        value = 0x01

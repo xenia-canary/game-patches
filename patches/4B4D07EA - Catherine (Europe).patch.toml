@@ -1,0 +1,23 @@
+title_name = "Catherine"
+title_id = "4B4D07EA" # KM-2026
+hash = "C763782F9B444A55" # default.xex
+#media_id = "5055E63C" # Disc (Europe): http://redump.org/disc/73228
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8205443a
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x8205443e
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x821e93ea
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x821e93ee
+        value = 0x0780

@@ -1,0 +1,43 @@
+title_name = "Iron Brigade" # TU6
+title_id = "58410A95" # XA-2709
+hash = "CF37AF559A37B77C" # default.xex
+#media_id = "4836A4E6" # XBLA: 878AB257730B01956E00D0668E4DB846EF53039458
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Subtitles in prerendered cutscenes end prematurely."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x82077f0c
+        value = 0x4270
+    [[patch.be32]]
+        address = 0x82b618b0
+        value = 0x3c888889
+    [[patch.be8]]
+        address = 0x8264d093
+        value = 0x01
+
+[[patch]]
+    name = "Disable Anti Aliasing"
+    desc = "Improves overall sharpness at the cost of increased aliasing."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823709cc
+        value = 0x60000000
+
+[[patch]]
+    name = "960x540 Resolution"
+    desc = "Original resolution is 1280x646."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x823df48a
+        value = 0x03c0
+    [[patch.be16]]
+        address = 0x823df48e
+        value = 0x021c

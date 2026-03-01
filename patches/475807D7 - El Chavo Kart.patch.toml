@@ -1,7 +1,7 @@
 title_name = "El Chavo Kart"
 title_id = "475807D7" # GX-2007
 hash = "FB4E76375A183F97" # default.xex
-#media_id = "5C2ECDD6" # Disc (USA): http://redump.org/disc/103647
+#media_id = "5C2ECDD6" # Disc (Latin America): http://redump.org/disc/103647
 
 [[patch]]
     name = "60 FPS"

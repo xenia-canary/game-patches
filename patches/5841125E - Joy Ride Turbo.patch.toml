@@ -1,0 +1,17 @@
+title_name = "Joy Ride Turbo"
+title_id = "5841125E" # XA-4702
+hash = "F456260753FB922D" # default.xex
+#media_id = "5AE6F0CA" # XBLA: 0DCA97BEDBC9F634B097355CA6558AEB31E4AF4858
+
+[[patch]]
+    name = "Pixelated Graphics Fix"
+    desc = "Best paired with Vulkan for nearly accurate graphics. Replaces troublesome shaders with another shader, could be improved to skip them cleanly."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.array]]
+        address = 0x82012c90 # singleplayer.vso and singleplayer.pso
+        value = "0x636F70797465787475726500"
+    [[patch.array]]
+        address = 0x82010ed0 # pfx_edramrestore.vso and pfx_edramrestore_c1_z_msaa.pso
+        value = "0x636F7079746578747572650000000000000000000000"

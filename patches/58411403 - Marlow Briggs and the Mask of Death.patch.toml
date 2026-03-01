@@ -96,6 +96,31 @@ hash = "5E23D542B161E724" # default.xex
         value = 0x60000000
 
 [[patch]]
+    name = "960x540 Resolution"
+    desc = "Original resolution is 1280x720."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x825ba066
+        value = 0x03c0
+    [[patch.be16]]
+        address = 0x825ba05a
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x825ba036
+        value = 0x03c0
+    [[patch.be16]]
+        address = 0x825ba03e
+        value = 0x021c
+    [[patch.be16]]
+        address = 0x825bdd42
+        value = 0x03c0
+    [[patch.be16]]
+        address = 0x825bdd4a
+        value = 0x021c
+
+[[patch]]
     name = "Show Engine Statistics"
     author = "Sowa_95"
     is_enabled = false

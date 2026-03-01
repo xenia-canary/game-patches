@@ -1,0 +1,14 @@
+title_name = "Carrier Command: Gaea Mission"
+title_id = "545A07D5" # TZ-2005
+hash = "D822B29869E591F0" # default.xex
+#media_id = "08B2A1CB" # Disc (USA): http://redump.org/disc/52561
+
+[[patch]]
+    name = "Disable God Rays"
+    desc = "Reduces extreme bloom when looking at the sun. Also removes sun flare effect."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82211f54
+        value = 0x60000000

@@ -27,6 +27,15 @@ hash = "C93226A24A871C0E" # default.xex
         value = 0x39400000
 
 [[patch]]
+    name = "Disable Motion Blur"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823ee0a8
+        value = 0x39600000
+
+[[patch]]
     name = "16x Anisotropic Filtering"
     author = "Sowa_95"
     is_enabled = false
@@ -34,3 +43,15 @@ hash = "C93226A24A871C0E" # default.xex
     [[patch.be32]]
         address = 0x829517ec
         value = 0x38a00010
+
+[[patch]]
+    name = "Show FPS"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x837f04b0
+        value = 0x01
+    [[patch.be8]]
+        address = 0x837f04c4 # Frametime
+        value = 0x01

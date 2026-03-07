@@ -5,10 +5,14 @@ hash = "AC429E9FFB91904C" # default.xex
 
 [[patch]]
     name = "60 FPS"
-    desc = "Game speeds up past ~60 FPS."
-    author = "illusion, Margen67"
+    desc = "Unlocks the framerate to 60 FPS. No clipping, collision bugs, or animation issues."
+    author = "tronuo"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x826b8394
-        value = 0x60000000
+        address = 0x82867a70
+        value = 0x38800001
+
+    [[patch.be32]]
+        address = 0x82159238
+        value = 0x3c88ab86

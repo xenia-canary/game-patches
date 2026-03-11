@@ -62,8 +62,8 @@ hash = "D61EAED8BB6A1365" # default.xex
         value = 0x39600000
 
 [[patch]]
-    name = "Disable Ambient Occlusion - Nvidia RTV fix"
-    desc = "Fixes black shade on textures. Required only on Nvidia GPUs with driver 526.47 or later. Not neccesary when using ROV."
+    name = "Disable Ambient Occlusion"
+    desc = "Might help with upscaling artifacts or slightly improve GPU performance. Also prevents blacked out textures on Nvidia GPUs with driver 526.47 - 591.86."
     author = "Sowa_95"
     is_enabled = false
 

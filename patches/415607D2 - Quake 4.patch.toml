@@ -11,7 +11,7 @@ hash = [
 
 [[patch]]
     name = "Performance fix"
-    desc = "Game speed tied to FPS, don't disable vsync. Menus remain slow."
+    desc = "Not required since Canary d680f5a. Can be used to disable FPS limit, but game speed is tied to FPS."
     author = "Sowa_95"
     is_enabled = false
 

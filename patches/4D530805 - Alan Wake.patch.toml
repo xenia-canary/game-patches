@@ -17,17 +17,14 @@ hash = "C7BBFAD65BC0D6B3" # default.xex
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
-    name = "Blur Fix"
-    desc = "Removes radial blur when aiming or dodging. Not neccesary on ROV."
+    name = "Disable Motion Blur"
+    desc = "Disables vector blur, preventing excessive ghosting on camera movement. Also disables radial blur, preventing blurry mess on RTV when aiming or dodging."
     author = "Sowa_95"
     is_enabled = false
 
-    [[patch.be32]]
-        address = 0x822cddd4
-        value = 0x60000000
-    [[patch.be32]]
-        address = 0x822ce2e0
-        value = 0x60000000
+    [[patch.be8]]
+        address = 0x82d2a031
+        value = 0x00
 
 [[patch]]
     name = "Disable Lens Flares"

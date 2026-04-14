@@ -1,0 +1,26 @@
+title_name = "Sniper: Ghost Warrior 2" # TU2
+title_id = "435907D4" # CY-2004
+hash = "B67AC9C28D3D7600" # default.xex
+#media_id = "079424BE" # Disc (USA, Europe): http://redump.org/disc/60677
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README."
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82f8cb88
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x834c4463
+        value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
+
+[[patch]]
+    name = "Skip intro"
+    author = "Sowa_95"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820e2396
+        value = 0x60000000

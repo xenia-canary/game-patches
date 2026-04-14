@@ -1,0 +1,14 @@
+title_name = "Disney Pirates of the Caribbean: At World's End"
+title_id = "425607D1" # BV-2001
+hash = "1FCB4BC2DAD834A3" # default.xex
+#media_id = "66DCBB9F"
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Unlocks frame rate to 60 FPS"
+    author = "tronuo"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822b5750
+        value = 0x3ba00001

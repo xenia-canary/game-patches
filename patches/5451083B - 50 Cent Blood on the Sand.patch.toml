@@ -10,14 +10,8 @@ hash = "355BF86D7238F120" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x83777f4f # GTilingMode = 0
+        address = 0x83777f4f # GTilingMode = 4
         value = 0x04
-    [[patch.be32]]
-        address = 0x8256a998 # GUseTilingCode = FALSE, RHI
-        value = 0x39200000
-    [[patch.be32]]
-        address = 0x8256abb8 # GUseTilingCode = FALSE, FSceneRenderTargets
-        value = 0x39200000
 
 [[patch]]
     name = "Flickering Decals Fix"

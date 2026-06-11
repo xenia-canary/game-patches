@@ -258,6 +258,47 @@ hash = "62547A005C0420D2" # default.xex
         address = 0x828b9728
         value = 0x4bc78d90
 
+
+[[patch]]
+    name = "32:9 Super Ultrawide Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Experimental 32:9 patch using the known-working 21:9 hook/render-target values."
+    author = "boma, TudorHorse, killswitch"
+    is_enabled = false
+
+    [[patch.f32]] # GAMEPLAY & CUTSCENE FOV. If too wide/narrow, adjust in increments of 0.0005.
+        address = 0x828b972c
+        value = 0.0122500
+    [[patch.be16]] # Keep this known-working 21:9 render height
+        address = 0x828166ca
+        value = 0x0226
+    [[patch.be16]]
+        address = 0x8253239c
+        value = 0x4800
+    [[patch.f32]] # 32:9 aspect ratio = 3.55556
+        address = 0x821d55a0
+        value = 3.55556
+    [[patch.be32]] # Keep this known-working 21:9 video/cutscene hook value
+        address = 0x826e9bf0
+        value = 0x38600234
+    [[patch.be32]]
+        address = 0x826e9bf4
+        value = 0x48000008
+    [[patch.be32]]
+        address = 0x825324b4
+        value = 0x48387268
+    [[patch.be32]]
+        address = 0x828b971c
+        value = 0x3d60828b
+    [[patch.be32]]
+        address = 0x828b9720
+        value = 0x616b972c
+    [[patch.be32]]
+        address = 0x828b9724
+        value = 0xc00b0000
+    [[patch.be32]]
+        address = 0x828b9728
+        value = 0x4bc78d90
+
 [[patch]]
     name = "Steam Deck / 16:10 Aspect Ratio Support"
     desc = "Must set present_letterbox = FALSE in the xenia canary config. Designed for Steam Deck and modern gaming laptop displays. Expands gameplay and cutscene rendering to true 16:10, updates the FOV axis constraint for proper framing, and adds letterboxing for pre-rendered videos."

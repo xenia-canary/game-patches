@@ -1,0 +1,18 @@
+title_name = "Deadly Premonition"
+title_id = "494F07D4"
+hash = "439D4F4A66F41F9B" # default.xex
+#media_id = "5E4E45E2" # Disc (USA): http://redump.org/disc/14704/
+
+[[patch]]
+    name = "60 FPS"
+    desc = "60 FPS hack. Requires vsync = true."
+    author = "ehw"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x000000008252a274
+        value = 0x0000000048000020
+
+    [[patch.be32]]
+        address = 0x000000008252a2a0
+        value = 0x000000002b0b0001

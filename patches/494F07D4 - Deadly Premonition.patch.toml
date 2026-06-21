@@ -5,7 +5,7 @@ hash = "439D4F4A66F41F9B" # default.xex
 
 [[patch]]
     name = "60 FPS"
-    desc = "60 FPS hack. Requires vsync = true."
+    desc = "Requires "vsync = true" or "framerate_limit = 60". The patch makes the game render one frame per vblank and removes the in game limiter. Without vsync or a framelimit, the game goes beyond 60fps and runs extremely fast."
     author = "ehw"
     is_enabled = false
 

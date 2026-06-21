@@ -5,14 +5,18 @@ hash = "439D4F4A66F41F9B" # default.xex
 
 [[patch]]
     name = "60 FPS"
-    desc = "Requires vsync = true or framerate_limit = 60. The patch makes the game render one frame per vblank and removes the in game limiter. Without vsync or a framelimit, the game goes beyond 60fps and runs extremely fast."
+    desc = "See note about framerate patches in the README."
     author = "ehw"
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x8252a274
-        value = 0x48000020
+        address = 0x8252a27c
+        value = 0xfda00090
 
     [[patch.be32]]
-        address = 0x8252a2a0
-        value = 0x2b0b0001
+        address = 0x8252a2a4
+        value = 0x48000010
+        
+    [[patch.be32]]
+        address = 0x8252a310
+        value = 0x39000001        

@@ -1,0 +1,22 @@
+title_name = "Deadly Premonition"
+title_id = "494F07D4" # IO-2004
+hash = "439D4F4A66F41F9B" # default.xex
+#media_id = "5E4E45E2" # Disc (USA): http://redump.org/disc/14704
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README."
+    author = "ehw"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8252a27c
+        value = 0xfda00090
+
+    [[patch.be32]]
+        address = 0x8252a2a4
+        value = 0x48000010
+
+    [[patch.be32]]
+        address = 0x8252a310
+        value = 0x39000001

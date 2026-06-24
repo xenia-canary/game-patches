@@ -10,12 +10,12 @@ Plugin documentation can be found [here](Plugin-Docs.md).
 
 ## Installing/Updating
 0. Prerequisites
-    * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary-releases/releases/latest).
+    * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary/releases/latest).
         * Patches aren't supported on master or outdated versions of Xenia Canary.
-1. Download [this zip](../../../releases/latest/download/game-patches.zip).
+1. Download [this 7z](../../../releases/latest/download/game-patches.7z).
 2. Go to where `xenia_canary.exe` is.
 3. Delete `patches` folder if present (backup if needed).
-4. Open `game-patches.zip` and extract `patches` in the same directory as `xenia_canary.exe`.
+4. Open `game-patches.7z` and extract `patches` in the same directory as `xenia_canary.exe`.
     The folder structure should look like this:
 <br>![](./README/patch_location.png)
     ```

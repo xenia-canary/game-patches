@@ -17,12 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: Setup
-        run: |
+        run: |-
           npm i -D --no-fund
           sudo apt -y install pcregrep
       - name: Lint
         id: lint
-        run: |
+        run: |-
           misplaced_patches=($(find -name "*.patch.toml" -not -path "./patches/*"))
           if [ -n "$misplaced_patches" ]; then
             for misplaced_patch in ${misplaced_patches[@]}; do
@@ -83,14 +83,14 @@ jobs:
             exit 1
           fi
       - name: Release
-        if: |
+        if: |-
           steps.lint.conclusion == 'success' &&
           github.event_name  == 'push'       &&
           github.ref == 'refs/heads/main'    &&
           github.repository == 'xenia-canary/game-patches'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
+        run: |-
           mkdir -p assets
           echo -n $GITHUB_SHA > assets/version.txt
           7z a assets/game-patches.zip patches
@@ -101,7 +101,7 @@ jobs:
           gh release create $tag assets/* --target $GITHUB_SHA -t $tag
 
 #  workflow_dispatch:
-#    if: |
+#    if: |-
 #      github.event_name  == 'push' &&
 #      github.ref == 'refs/heads/main' &&
 #      github.repository == 'xenia-canary/game-patches'

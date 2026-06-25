@@ -266,10 +266,13 @@ hash = "62547A005C0420D2" # default.xex
 
     [[patch.f32]] # GAMEPLAY & CUTSCENE FOV. If too wide/narrow, adjust in increments of 0.0005.
         address = 0x828b972c
-        value = 0.0122500
+        value = 0.013325
     [[patch.be16]] # Keep this known-working 21:9 render height
         address = 0x828166ca
-        value = 0x0226
+        value = 0x0168
+    [[patch.be32]]
+        address = 0x82738550
+        value = 0x394002d0
     [[patch.be16]]
         address = 0x8253239c
         value = 0x4800

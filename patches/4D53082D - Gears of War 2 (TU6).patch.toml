@@ -259,15 +259,15 @@ hash = "62547A005C0420D2" # default.xex
         value = 0x4bc78d90
 
 [[patch]]
-    name = "32:9 Super Ultrawide Aspect Ratio Support"
-    desc = "Must set present_letterbox = FALSE in the xenia canary config. Experimental 32:9 patch using the known-working 21:9 hook/render-target values."
+    name = "Experimental 32:9 Super Ultrawide Aspect Ratio Support"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config."
     author = "boma, TudorHorse, killswitch"
     is_enabled = false
 
     [[patch.f32]] # GAMEPLAY & CUTSCENE FOV. If too wide/narrow, adjust in increments of 0.0005.
         address = 0x828b972c
         value = 0.013325
-    [[patch.be16]] # Keep this known-working 21:9 render height
+    [[patch.be16]]
         address = 0x828166ca
         value = 0x0168
     [[patch.be32]]

@@ -156,6 +156,52 @@ hash = "013148141A27D4C7" # default.xex
         value = 0x01
 
 [[patch]]
+    name = "21:9 Aspect Ratio Ultrawide Patch"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Must download Ultrawide Support Patch zip (found on xenia-game-settings Github Gears Judgment wiki page) to prevent UI artifacts when alerts pop up. Expands gameplay and cutscene rendering to true 21:9 ultrawide, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x550, certain elements may appear more aliased."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.f32]] # GAMEPLAY & CUTSCENE FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.0005
+        address = 0x8261c898
+        value = 0.0109750
+    [[patch.be16]]
+        address = 0x82992666
+        value = 0x0226
+    [[patch.f32]]
+        address = 0x82082c30
+        value = 2.3273
+    [[patch.f32]]
+        address = 0x82083350
+        value = 2.3273
+    [[patch.be16]]
+        address = 0x82640514
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x82369e30 # Vignette needs to be disabled for this mode; texture cannot be rescaled.
+        value = 0x4800000c
+    [[patch.be32]]
+        address = 0x827f1dd4 # Define screen height in SceneRenderTargets, avoid crashing.
+        value = 0x3bc002d0
+    [[patch.be32]]
+        address = 0x82cba684 # Scale Scaleform UI
+        value = 0x38800001
+    [[patch.be32]]
+        address = 0x82640588 # jump to cave
+        value = 0x4bfdc300
+    [[patch.be32]]
+        address = 0x8261c888 # beginning of cave
+        value = 0x3d808261
+    [[patch.be32]]
+        address = 0x8261c88c
+        value = 0x618cc898
+    [[patch.be32]]
+        address = 0x8261c890
+        value = 0xc00c0000
+    [[patch.be32]]
+        address = 0x8261c894
+        value = 0x48023cf8
+
+[[patch]]
     name = "Steam Deck / 16:10 Aspect Ratio Support"
     desc = "Must set present_letterbox = FALSE in the xenia canary config. Designed for Steam Deck and modern gaming laptop displays. Expands gameplay and cutscene rendering to true 16:10, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos."
     author = "TudorHorse, boma"

@@ -127,12 +127,6 @@ hash = "7775898137CE1CE3" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x827c9078 # Ignore occlusion queries from gumming up InitViews
-        value = 0x39600001 # li r11, 1
-    [[patch.be32]]
-        address = 0x827caf2c # Skip allocate query pool
-        value = 0x39600001 # li r11, 1
-    [[patch.be32]]
         address = 0x827e2af0 # projected shadow render, gathering draw lists
         value = 0x4bb2edb0 # b 0x823118a0 code cave
     [[patch.be32]]
@@ -190,3 +184,43 @@ hash = "7775898137CE1CE3" # default.xex
     [[patch.be8]]
         address = 0x834398ac # Frametime
         value = 0x01
+
+[[patch]]
+    name = "21:9 Aspect Ratio Ultrawide Patch"
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Must download GOW3 Fixes zip (found on xenia-game-settings Github Gears 3 wiki page) to prevent UI artifacts when alerts pop up. Expands gameplay, cutscene and UI rendering to true 21:9 ultrawide and updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x550, certain elements may appear more aliased."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.f32]] # GAMEPLAY & CUTSCENE FOV CAN BE ADJUSTED BY INCREASING/DECREASING THIS FIRST FLOAT IN INCREMENTS OF 0.0005
+        address = 0x826096c8
+        value = 0.0109750
+    [[patch.f32]]
+        address = 0x820cded8
+        value = 2.3272
+    [[patch.be32]]
+        address = 0x82bdd3bc
+        value = 0x38800001
+    [[patch.be16]]
+        address = 0x82971c52
+        value = 0x0226
+    [[patch.be32]]
+        address = 0x827d7acc
+        value = 0x3bc002d0
+    [[patch.be16]]
+        address = 0x8262cdf0
+        value = 0x4800
+    [[patch.be32]]
+        address = 0x8262ce80
+        value = 0x4bfdc838
+    [[patch.be32]]
+        address = 0x826096b8
+        value = 0x3d808260
+    [[patch.be32]]
+        address = 0x826096bc
+        value = 0x618c96c8
+    [[patch.be32]]
+        address = 0x826096c0
+        value = 0xc00c0000
+    [[patch.be32]]
+        address = 0x826096c4
+        value = 0x480237c0

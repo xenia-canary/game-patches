@@ -18,7 +18,7 @@ hash = "B2682D54AB44B0F7" # default.xex
 
 [[patch]]
     name = "Ghost Glow Fix"
-    desc = "Eliminates distant objects being visible through ghost glow."
+    desc = "Eliminates distant objects being visible through ghost glow on occlusion_query = fake or fast. Prevents ghost glow flickering on occlusion_query = strict."
     author = "Sowa_95"
     is_enabled = false
 
@@ -28,7 +28,7 @@ hash = "B2682D54AB44B0F7" # default.xex
 
 [[patch]]
     name = "Disable Lens Flares"
-    desc = "Fixes unoccluded bright lights on-screen. Also disables big flare in Julia encounters, changing overall look of this scene."
+    desc = "Fixes unoccluded bright lights on-screen. Also disables big flare in Julia encounters, changing overall look of this scene. Not required on occlusion_query = strict."
     author = "Sowa_95"
     is_enabled = false
 

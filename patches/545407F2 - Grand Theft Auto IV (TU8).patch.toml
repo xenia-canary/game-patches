@@ -1,7 +1,7 @@
 title_name = "Grand Theft Auto IV (TU8)" # Four, 4
 title_id = "545407F2" # TT-2034
 hash = "797B4775D3BC9853" # default.xex
-#media_id = "6AC07221" # Disc (USA): http://redump.org/disc/12492
+#media_id = "6AC07221" # Disc (USA): https://redump.info/disc/12492
 
 [[patch]]
     name = "Unlock FPS"

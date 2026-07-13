@@ -1,7 +1,7 @@
 title_name = "Red Dead Redemption: Undead Nightmare"
 title_id = "5454082B" # TT-2091
 hash = "17A27E1218741DDD" # default.xex
-#media_id = "5B48AF70" # Disc (USA, Europe): http://redump.org/disc/21650
+#media_id = "5B48AF70" # Disc (USA, Europe): https://redump.info/disc/21650
 
 [[patch]]
     name = "Unlock FPS"

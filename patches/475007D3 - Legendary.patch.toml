@@ -1,7 +1,7 @@
 title_name = "Legendary"
 title_id = "475007D3" # GP-2003
 hash = "03B014AB8C6401D3" # default.xex
-#media_id = "6E38B2BE" # Disc (USA): http://redump.org/disc/14552
+#media_id = "6E38B2BE" # Disc (USA): https://redump.info/disc/14552
 
 [[patch]]
     name = "Unlock FPS"

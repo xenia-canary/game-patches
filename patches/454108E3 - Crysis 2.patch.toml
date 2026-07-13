@@ -1,7 +1,7 @@
 title_name = "Crysis 2"
 title_id = "454108E3" # EA-2275
 hash = "5806D7FB6E48CE49" # default.xex
-#media_id = "6A9CA6D7" # Disc (World): http://redump.org/disc/35659
+#media_id = "6A9CA6D7" # Disc (World): https://redump.info/disc/35659
 
 [[patch]]
     name = "Unlock FPS"

@@ -1,7 +1,7 @@
 title_name = "Game of Thrones"
 title_id = "464507DB" # FE-2011
 hash = "6E363B823DEE3928" # default.xex
-#media_id = "2AD79B13" # Disc (Europe): http://redump.org/disc/61837
+#media_id = "2AD79B13" # Disc (Europe): https://redump.info/disc/61837
 
 [[patch]]
     name = "Unlock FPS"

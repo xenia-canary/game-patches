@@ -2,8 +2,8 @@ title_name = "Mass Effect 3"
 title_id = "4541095D" # EA-2397
 hash = "CE537D474E2CC944" # default.xex
 #media_id = [
-#    "445C882A", # Disc 1 (World): http://redump.org/disc/35945
-#    "3FCD7B99"  # Disc 2 (World): http://redump.org/disc/35946
+#    "445C882A", # Disc 1 (World): https://redump.info/disc/35945
+#    "3FCD7B99"  # Disc 2 (World): https://redump.info/disc/35946
 #]
 
 [[patch]]

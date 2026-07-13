@@ -1,7 +1,7 @@
 title_name = "Star Trek"
 title_id = "4E4D085B" # NM-2139
 hash = "8CE82C4BDCED4B16" # default.xex
-#media_id = "13A9103C" # Disc (USA): http://redump.org/disc/38455
+#media_id = "13A9103C" # Disc (USA): https://redump.info/disc/38455
 
 [[patch]]
     name = "60 FPS"

@@ -2,8 +2,8 @@ title_name = "Tomb Raider" # TU3
 title_id = "53510802" # SQ-2050
 hash = "EEBBD0E3F7DDEB72" # default.xex
 #media_id = [
-#    "6A6BC1B7", # Disc (Russia):      http://redump.org/disc/109505
-#    "03B32B71"  # Disc (USA, Europe): http://redump.org/disc/38453
+#    "6A6BC1B7", # Disc (Russia):      https://redump.info/disc/109505
+#    "03B32B71"  # Disc (USA, Europe): https://redump.info/disc/38453
 #]
 
 [[patch]]

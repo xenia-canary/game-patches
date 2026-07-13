@@ -1,7 +1,7 @@
 title_name = "Dead Island" # TU2
 title_id = "4B4D07DF" # KM-2015
 hash = "0217B8D589CC9B13" # default.xex
-#media_id = "2BCF9BDE" # Disc (USA, Europe): http://redump.org/disc/72661
+#media_id = "2BCF9BDE" # Disc (USA, Europe): https://redump.info/disc/72661
 
 [[patch]]
     name = "60 FPS"

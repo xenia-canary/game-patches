@@ -1,7 +1,7 @@
 title_name = "Midnight Club: Los Angeles" # MCLA
 title_id = "545407F8" # TT-2040
 hash = "B9BE89200A856E37" # default.xex
-#media_id = "11CCEA2A" # Disc (USA): http://redump.org/disc/13311
+#media_id = "11CCEA2A" # Disc (USA): https://redump.info/disc/13311
 
 [[patch]]
     name = "Game Speed Fix"

@@ -2,8 +2,8 @@ title_name = "DOOM 3: BFG Edition"
 title_id = "425307F1" # BS-2033
 hash = "76D3A8E336C47D43" # default.xex
 #media_id = [
-#    "4257B465", # Disc (Europe): http://redump.org/disc/71440
-#    "0843620B"  # Disc (USA):    http://redump.org/disc/38465
+#    "4257B465", # Disc (Europe): https://redump.info/disc/71440
+#    "0843620B"  # Disc (USA):    https://redump.info/disc/38465
 #]
 
 [[patch]]

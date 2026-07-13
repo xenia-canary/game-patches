@@ -1,7 +1,7 @@
 title_name = "Homefront"
 title_id = "54510846" # TQ-2118
 hash = "D75C3C58EF304ACC" # default.xex
-#media_id = "3CD18BAF" # Disc (USA, Europe): http://redump.org/disc/48620
+#media_id = "3CD18BAF" # Disc (USA, Europe): https://redump.info/disc/48620
 
 [[patch]]
     name = "Unlock FPS"

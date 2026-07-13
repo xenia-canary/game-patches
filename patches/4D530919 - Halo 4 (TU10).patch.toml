@@ -2,8 +2,8 @@ title_name = "Halo 4" # TU10
 title_id = "4D530919" # MS-2329
 hash = "465947D76056C3DA" # default.xex
 #media_id = [
-#    "1C9D20BC", # Disc 1 (World): http://redump.org/disc/37084
-#    "761B5A0A"  # Disc 2 (World): http://redump.org/disc/37085
+#    "1C9D20BC", # Disc 1 (World): https://redump.info/disc/37084
+#    "761B5A0A"  # Disc 2 (World): https://redump.info/disc/37085
 #]
 
 [[patch]]

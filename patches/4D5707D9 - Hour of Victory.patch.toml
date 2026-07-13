@@ -1,7 +1,7 @@
 title_name = "Hour of Victory"
 title_id = "4D5707D9" # MW-2009
 hash = "AE84E1B93D6448EE" # default.xex
-#media_id = "5A8BFF60" # Disc (USA, Europe): http://redump.org/disc/14535
+#media_id = "5A8BFF60" # Disc (USA, Europe): https://redump.info/disc/14535
 
 [[patch]]
     name = "60 FPS"

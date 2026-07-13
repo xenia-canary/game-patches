@@ -1,7 +1,7 @@
 title_name = "Mass Effect"
 title_id = "4D5307E8" # MS-2024
 hash = "64BF4A18E169C250" # default.xex
-#media_id = "5F50F8E6" # Disc (Japan): http://redump.org/disc/59553
+#media_id = "5F50F8E6" # Disc (Japan): https://redump.info/disc/59553
 
 [[patch]]
     name = "60 FPS"

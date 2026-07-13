@@ -1,7 +1,7 @@
 title_name = "Batman: Arkham Asylum"
 title_id = "534307F6" # SC-2038
 hash = "C7034514E7759D3C" # default.xex
-#media_id = "4A2B74A4" # Disc (USA, Europe): http://redump.org/disc/12475
+#media_id = "4A2B74A4" # Disc (USA, Europe): https://redump.info/disc/12475
 
 [[patch]]
     name = "60 FPS"

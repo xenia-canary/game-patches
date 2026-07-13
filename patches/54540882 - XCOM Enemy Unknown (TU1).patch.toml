@@ -1,7 +1,7 @@
 title_name = "XCOM: Enemy Unknown" # TU1
 title_id = "54540882" # TT-2178
 hash = "8F4A93C17ADC7606" # default.xex
-#media_id = "24F29664" # Disc (USA, Europe): http://redump.org/disc/39565
+#media_id = "24F29664" # Disc (USA, Europe): https://redump.info/disc/39565
 
 [[patch]]
     name = "Unlock FPS"

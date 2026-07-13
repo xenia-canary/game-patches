@@ -1,7 +1,7 @@
 title_name = "Enslaved: Odyssey to the West" # TU1
 title_id = "4E4D07F1" # NM-2033
 hash = "BBD70C6C2FF754FB" # default.xex
-#media_id = "68F2B28B" # Disc (USA, Europe): http://redump.org/disc/16210
+#media_id = "68F2B28B" # Disc (USA, Europe): https://redump.info/disc/16210
 
 [[patch]]
     name = "Unlock FPS"

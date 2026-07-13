@@ -1,7 +1,7 @@
 title_name = "Birds of Steel"
 title_id = "4B4E0839" # KN-2105
 hash = "E059B2E2EE0C19F1" # default.xex
-#media_id = "54DF8378" # Disc (USA): http://redump.org/disc/51944
+#media_id = "54DF8378" # Disc (USA): https://redump.info/disc/51944
 
 [[patch]]
     name = "Unlock FPS"

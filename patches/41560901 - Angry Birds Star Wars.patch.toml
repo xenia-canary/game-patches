@@ -1,7 +1,7 @@
 title_name = "Angry Birds: Star Wars"
 title_id = "41560901" # AV-2305
 hash = "0FE4DAF1B7659591" # default.xex
-#media_id = "116000C4" # Disc (USA, Europe): http://redump.org/disc/46912
+#media_id = "116000C4" # Disc (USA, Europe): https://redump.info/disc/46912
 
 [[patch]]
     name = "Bypass multiplayer menu crash"

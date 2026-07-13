@@ -1,7 +1,7 @@
 title_name = "Saints Row"
 title_id = "545107F8" # TQ-2040
 hash = "2EA8096D55CF4F50" # default.xex
-#media_id = "4FA0E553" # Disc (Japan): http://redump.org/disc/83898
+#media_id = "4FA0E553" # Disc (Japan): https://redump.info/disc/83898
 
 [[patch]]
     name = "1201x675"

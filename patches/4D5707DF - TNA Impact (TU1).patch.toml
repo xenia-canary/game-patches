@@ -1,7 +1,7 @@
 title_name = "TNA Impact!" # TU1
 title_id = "4D5707DF" # MW-2015
 hash = "4C67CACD08FD5F08" # default.xex
-#media_id = "37AE817A", # Disc (USA, Europe): http://redump.org/disc/57591
+#media_id = "37AE817A", # Disc (USA, Europe): https://redump.info/disc/57591
 
 [[patch]]
     name = "Dynamic Lighting & Shadows Shading Fix"

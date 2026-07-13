@@ -1,7 +1,7 @@
 title_name = "Pro Evolution Soccer 6" # PES 6
 title_id = "4B4E07DA" # KN-2010
 hash = "109264B0C9B0C630" # default.xex
-#media_id = "617138EB" # Disc (Europe): http://redump.org/disc/7746
+#media_id = "617138EB" # Disc (Europe): https://redump.info/disc/7746
 
 [[patch]]
     name = "3840x2160 Resolution"

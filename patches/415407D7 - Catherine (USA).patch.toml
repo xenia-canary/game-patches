@@ -1,7 +1,7 @@
 title_name = "Catherine"
 title_id = "415407D7" # AT-2007
 hash = "C451BB35FB61698F" # default.xex
-#media_id = "580DEC6A" # Disc (USA): http://redump.org/disc/50527
+#media_id = "580DEC6A" # Disc (USA): https://redump.info/disc/50527
 
 [[patch]]
     name = "1920x1080 Resolution"

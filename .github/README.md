@@ -171,7 +171,7 @@ hash = "################" # Module the hash applies to (i.e. default.xex)
 hash = [
   "################"     # See above
 ]
-#media_id = "1234ABCD" # Optionally you can add a redump link; Disc (Region): http://redump.org/disc/1234
+#media_id = "1234ABCD" # Optionally you can add a redump link; Disc (Region): https://redump.info/disc/1234
 #                        Can also be an array if applicable:
 #media_id = [
 #  "1234ABCD"          # See above

@@ -1,7 +1,7 @@
 title_name = "Gears Of War"
 title_id = "4D5307D5" # MS-2005
 hash = "9C6FEF626FA0B86D" # default.xex
-#media_id = "0793179D" # Disc (Japan): http://redump.org/disc/53041
+#media_id = "0793179D" # Disc (Japan): https://redump.info/disc/53041
 
 [[patch]]
     name = "60 FPS"

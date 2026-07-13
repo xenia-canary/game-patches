@@ -1,7 +1,7 @@
 title_name = "Sniper Elite V2" # TU2
 title_id = "464F07E8" # FO-2024
 hash = "69BFF7E0D5E5EAF6" # default.xex
-#media_id = "40D59EC2" # Disc (USA, Europe): http://redump.org/disc/54603
+#media_id = "40D59EC2" # Disc (USA, Europe): https://redump.info/disc/54603
 
 [[patch]]
     name = "60 FPS"

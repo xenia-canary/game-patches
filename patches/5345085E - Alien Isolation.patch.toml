@@ -2,8 +2,8 @@ title_name = "Alien: Isolation"
 title_id = "5345085E" # SE-2142
 hash = "42B77D03F09244A3" # default.xex
 #media_id = [
-#    "6C4728D7", # Disc 1 (USA, Europe): http://redump.org/disc/39140
-#    "7D5B2F26"  # Disc 2 (USA, Europe): http://redump.org/disc/39141
+#    "6C4728D7", # Disc 1 (USA, Europe): https://redump.info/disc/39140
+#    "7D5B2F26"  # Disc 2 (USA, Europe): https://redump.info/disc/39141
 #]
 
 [[patch]]

@@ -1,7 +1,7 @@
 title_name = "Transformers: Dark of the Moon"
 title_id = "415608A4" # AV-2212
 hash = "AEC574493A626D6A" # default.xex
-#media_id = "262F2D45" # Disc (USA): http://redump.org/disc/41956
+#media_id = "262F2D45" # Disc (USA): https://redump.info/disc/41956
 
 [[patch]]
     name = "Unlock FPS"

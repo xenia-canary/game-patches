@@ -1,7 +1,7 @@
 title_name = "IL-2 Sturmovik: Birds of Prey"
 title_id = "464F07D1" # FO-2001
 hash = "E9B716F428A3F741" # default.xex
-#media_id = "794A557F" # Disc (USA, Europe): http://redump.org/disc/74910
+#media_id = "794A557F" # Disc (USA, Europe): https://redump.info/disc/74910
 
 [[patch]]
     name = "Unlock FPS"

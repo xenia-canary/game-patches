@@ -5,8 +5,8 @@ hash = [
     "2B6EE9E95E23E2A5"  # Rerelease, default.xex
 ]
 #media_id = [
-#    "00000000", # Disc (USA, Europe): http://redump.org/disc/16840
-#    "4C27792A"  # Disc (USA, Europe): http://redump.org/disc/72288
+#    "00000000", # Disc (USA, Europe): https://redump.info/disc/16840
+#    "4C27792A"  # Disc (USA, Europe): https://redump.info/disc/72288
 #]
 
 [[patch]]

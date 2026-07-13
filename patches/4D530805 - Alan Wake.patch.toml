@@ -1,7 +1,7 @@
 title_name = "Alan Wake"
 title_id = "4D530805" # MS-2053
 hash = "C7BBFAD65BC0D6B3" # default.xex
-#media_id = "54E34DF4" # Disc (World): http://redump.org/disc/13756
+#media_id = "54E34DF4" # Disc (World): https://redump.info/disc/13756
 
 [[patch]]
     name = "60 FPS"

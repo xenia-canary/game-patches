@@ -4,7 +4,7 @@ hash = [ # default.xex
     "4FBBB0B26C6B75E4", # TU 0
     "81F72A468E1032B7", # TU 1
 ]
-#media_id = "66BB25D9" # Disc (Europe): http://redump.org/disc/35947
+#media_id = "66BB25D9" # Disc (Europe): https://redump.info/disc/35947
 
 [[patch]]
     name = "Render Debug Information"

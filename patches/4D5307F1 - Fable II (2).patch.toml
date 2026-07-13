@@ -2,9 +2,9 @@ title_name = "Fable II" # 2
 title_id = "4D5307F1" # MS-2033
 hash = "43FFE5AFC5042DD2" # default.xex
 #media_id = [
-#    "0962B000", # Disc (USA, Europe) (Rev 1): http://redump.org/disc/42254
-#    "768FC8D1", # Disc (Russia) (Rev 1):      http://redump.org/disc/90843
-#    "6306C101", # Disc (Germany):             http://redump.org/disc/46610
+#    "0962B000", # Disc (USA, Europe) (Rev 1): https://redump.info/disc/42254
+#    "768FC8D1", # Disc (Russia) (Rev 1):      https://redump.info/disc/90843
+#    "6306C101", # Disc (Germany):             https://redump.info/disc/46610
 #]
 
 [[patch]]

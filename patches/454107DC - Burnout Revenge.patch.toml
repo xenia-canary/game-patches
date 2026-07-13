@@ -1,7 +1,7 @@
 title_name = "Burnout Revenge"
 title_id = "454107DC" # EA-2012
 hash = "D629EA67090E3137" # default.xex
-#media_id = "223759FA" # Disc (USA): http://redump.org/disc/11823
+#media_id = "223759FA" # Disc (USA): https://redump.info/disc/11823
 
 [[patch]]
     name = "Disable Sky Bloom and Low-Resolution Gaussian Blur"

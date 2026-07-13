@@ -1,7 +1,7 @@
 title_name = "Sherlock Holmes: Crimes & Punishments"
 title_id = "464507DF" # FE-2015
 hash = "33F439B38AA965C0" # default.xex
-#media_id = "51206D91" # Disc (USA, Europe): http://redump.org/disc/38998
+#media_id = "51206D91" # Disc (USA, Europe): https://redump.info/disc/38998
 
 [[patch]]
     name = "Unlock FPS"

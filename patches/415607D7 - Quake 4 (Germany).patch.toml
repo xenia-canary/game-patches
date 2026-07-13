@@ -2,8 +2,8 @@ title_name = "Quake 4"
 title_id = "415607D7" # AV-2007
 hash = "D506EE87FFB9E3DC" # default.xex
 #media_id = [
-#    "00000000", # Disc (Germany): http://redump.org/disc/114465
-#    "0DD85566"  # Disc (Germany): http://redump.org/disc/69176
+#    "00000000", # Disc (Germany): https://redump.info/disc/114465
+#    "0DD85566"  # Disc (Germany): https://redump.info/disc/69176
 #]
 
 [[patch]]

@@ -1,7 +1,7 @@
 title_name = "Condemned" # Criminal Origins
 title_id = "534507D2" # SE-2002
 hash = "B8C0F56B4E0F9380" # default.xex
-#media_id = "00000000" # Disc (USA, Europe): http://redump.org/disc/7661
+#media_id = "00000000" # Disc (USA, Europe): https://redump.info/disc/7661
 
 [[patch]]
     name = "Unlock FPS"

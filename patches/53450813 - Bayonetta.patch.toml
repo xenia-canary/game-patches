@@ -1,7 +1,7 @@
 title_name = "Bayonetta"
 title_id = "53450813" # SE-2067
 hash = "7B5CEE819A2D50D9" # default.xex
-#media_id = "1BDF2032" # Disc (USA, Europe): http://redump.org/disc/11495
+#media_id = "1BDF2032" # Disc (USA, Europe): https://redump.info/disc/11495
 
 [[patch]]
     name = "Game Speed x2"

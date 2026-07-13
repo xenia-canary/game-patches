@@ -5,8 +5,8 @@ hash = [
 #    "A2E1B657B4B6F71E" # Disc 2, default.xex
 ]
 #media_id = [
-#    "5D278B66", # Disc 1 (USA, Europe): http://redump.org/disc/50850
-#    "69B8A24F"  # Disc 2 (USA, Europe): http://redump.org/disc/50851
+#    "5D278B66", # Disc 1 (USA, Europe): https://redump.info/disc/50850
+#    "69B8A24F"  # Disc 2 (USA, Europe): https://redump.info/disc/50851
 #]
 
 [[patch]]

@@ -1,7 +1,7 @@
 title_name = "Army of Two"
 title_id = "454107F8" # EA-2040
 hash = "2EDC4C4CEC3F7F8D" # default.xex
-#media_id = "38595BF0" # Disc (USA): http://redump.org/disc/13278
+#media_id = "38595BF0" # Disc (USA): https://redump.info/disc/13278
 
 [[patch]]
     name = "Unlock FPS"

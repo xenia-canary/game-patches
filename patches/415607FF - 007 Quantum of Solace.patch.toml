@@ -1,7 +1,7 @@
 title_name = "007: Quantum of Solace"
 title_id = "415607FF" # AV-2047
 hash = "A29428CB1432DD9E" # default.xex
-#media_id = "06DD88A0" # Disc (USA, Europe): http://redump.org/disc/12335
+#media_id = "06DD88A0" # Disc (USA, Europe): https://redump.info/disc/12335
 
 [[patch]]
     name = "Unlock FPS"

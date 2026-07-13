@@ -1,7 +1,7 @@
 title_name = "Brothers in Arms: Hell's Highway"
 title_id = "555307EA" # US-2026
 hash = "5F08144107199D46" # default.xex
-#media_id = "3284AD25" # Disc (USA, Europe): http://redump.org/disc/13280
+#media_id = "3284AD25" # Disc (USA, Europe): https://redump.info/disc/13280
 
 [[patch]]
     name = "Unlock FPS"

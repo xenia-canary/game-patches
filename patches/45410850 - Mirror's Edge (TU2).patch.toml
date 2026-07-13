@@ -2,8 +2,8 @@ title_name = "Mirror's Edge" # TU2
 title_id = "45410850" # EA-2128
 hash = "64079AA28F886F3C" # default.xex
 #media_id = [
-#    "426CA5A2", # Disc (Europe): http://redump.org/disc/11415
-#    "214A9845", # Disc (USA):    http://redump.org/disc/15254
+#    "426CA5A2", # Disc (Europe): https://redump.info/disc/11415
+#    "214A9845", # Disc (USA):    https://redump.info/disc/15254
 #]
 
 [[patch]]

@@ -1,7 +1,7 @@
 title_name = "Alpha Protocol"
 title_id = "5345080E" # SE-2062
 hash = "FC3BAE12B708EC58" # default.xex
-#media_id = "49303842" # Disc (USA, Europe): http://redump.org/disc/14703
+#media_id = "49303842" # Disc (USA, Europe): https://redump.info/disc/14703
 
 [[patch]]
     name = "Unlock FPS"

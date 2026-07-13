@@ -4,7 +4,7 @@ hash = [
     "2537D5F11410BE0A", # default.xex
     "2C1C83BE7103BB3D"  # PhantasyRow.xex
 ]
-#media_id = "24367742" # Disc (USA, Europe): http://redump.org/disc/11811
+#media_id = "24367742" # Disc (USA, Europe): https://redump.info/disc/11811
 
 [[patch]]
     name = "Tree LODs"

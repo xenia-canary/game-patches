@@ -1,7 +1,7 @@
 title_name = "Ride to Hell: Retribution"
 title_id = "4B4D07E9" # KM-2025
 hash = "AE008C959D40A0FB" # default.xex
-#media_id = "17FAF9F9" # Disc (USA, Europe): http://redump.org/disc/50641
+#media_id = "17FAF9F9" # Disc (USA, Europe): https://redump.info/disc/50641
 
 [[patch]]
     name = "Unlock FPS"

@@ -1,7 +1,7 @@
 title_name = "Dark Void" # TU1
 title_id = "434307E0" # CC-2016
 hash = "E86882B0119B686A" # default.xex
-#media_id = "2150EAC1" # Disc (USA, Europe): http://redump.org/disc/35201
+#media_id = "2150EAC1" # Disc (USA, Europe): https://redump.info/disc/35201
 
 [[patch]]
     name = "Unlock FPS"

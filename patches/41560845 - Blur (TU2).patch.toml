@@ -1,7 +1,7 @@
 title_name = "Blur" # TU2
 title_id = "41560845" # AV-2117
 hash = "A9C00C97C7BFE65F" # default.xex
-#media_id = "01C784D3" # Disc (USA, Europe): http://redump.org/disc/13442
+#media_id = "01C784D3" # Disc (USA, Europe): https://redump.info/disc/13442
 
 [[patch]]
     name = "60 FPS"

@@ -1,7 +1,7 @@
 title_name = "Rogue Warrior" # TU1
 title_id = "425307D3" # BS-2003
 hash = "88EFF9A42987C0DF" # default.xex
-#media_id = "0A3D6C7E" # Disc (USA, Europe): http://redump.org/disc/14039
+#media_id = "0A3D6C7E" # Disc (USA, Europe): https://redump.info/disc/14039
 
 [[patch]]
     name = "60 FPS"

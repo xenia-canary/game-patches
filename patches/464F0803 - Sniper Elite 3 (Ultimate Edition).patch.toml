@@ -1,7 +1,7 @@
 title_name = "Sniper Elite 3" # Ultimate Edition
 title_id = "464F0803" # FO-2051
 hash = "8B12B41639CDE85F" # default.xex
-#media_id = "4F384D1A" # Disc (USA, Europe): http://redump.org/disc/66431
+#media_id = "4F384D1A" # Disc (USA, Europe): https://redump.info/disc/66431
 
 [[patch]]
     name = "60 FPS"

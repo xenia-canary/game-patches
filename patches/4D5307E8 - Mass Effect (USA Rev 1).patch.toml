@@ -1,7 +1,7 @@
 title_name = "Mass Effect" # Mass Effect Trilogy
 title_id = "4D5307E8" # MS-2024
 hash = "8B5DAEAF86BFDD29" # default.xex
-#media_id = "38575660" # Disc (USA Rev 1): http://redump.org/disc/38463
+#media_id = "38575660" # Disc (USA Rev 1): https://redump.info/disc/38463
 
 [[patch]]
     name = "60 FPS"

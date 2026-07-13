@@ -2,8 +2,8 @@ title_name = "Transformers War for Cybertron" # TU1
 title_id = "4156084C" # AV-2124
 hash = "3AF46199AE02D5C7" # default.xex
 #media_id = [
-#    "02619995", # Disc (USA): http://redump.org/disc/14254/
-#    "3AFEC771" # Disc (Europe): http://redump.org/disc/67200/
+#    "02619995", # Disc (USA): https://redump.info/disc/14254/
+#    "3AFEC771" # Disc (Europe): https://redump.info/disc/67200/
 #]
 
 [[patch]]

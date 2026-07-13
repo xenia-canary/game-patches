@@ -1,7 +1,7 @@
 title_name = "Tron: Evolution" # Disney TRON: Evolution, TU1
 title_id = "425607ED" # BV-2029
 hash = "91B424CA633016BD" # default.xex
-#media_id = "4BB00DF7" # Disc (USA, Europe): http://redump.org/disc/18770
+#media_id = "4BB00DF7" # Disc (USA, Europe): https://redump.info/disc/18770
 
 [[patch]]
     name = "Unlock FPS"

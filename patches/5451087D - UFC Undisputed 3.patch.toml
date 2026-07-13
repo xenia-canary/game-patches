@@ -1,7 +1,7 @@
 title_name = "UFC Undisputed 3"
 title_id = "5451087D" # TQ-2173
 hash = "3B0B17028E4FA27B" # default.xex
-#media_id = "3E0E52AB" # Disc (USA, Europe): http://redump.org/disc/42443
+#media_id = "3E0E52AB" # Disc (USA, Europe): https://redump.info/disc/42443
 
 [[patch]]
     name = "Disable Gloves"

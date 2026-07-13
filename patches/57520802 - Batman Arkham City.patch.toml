@@ -1,7 +1,7 @@
 title_name = "Batman: Arkham City"
 title_id = "57520802" # WR-2050
 hash = "74ED6FBB15218B9E" # default.xex
-#media_id = "7ACAB0B0" # Disc (World): http://redump.org/disc/50716
+#media_id = "7ACAB0B0" # Disc (World): https://redump.info/disc/50716
 
 [[patch]]
     name = "Unlock FPS"

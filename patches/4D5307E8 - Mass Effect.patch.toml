@@ -7,10 +7,10 @@ hash = [ # default.xex
     "E395D130B2F31B6F"  # Italy
 ]
 #media_id = [
-#    "572BA75D", # Disc (World):          http://redump.org/disc/11416
-#    "70630A1A", # Disc (Europe, Canada): http://redump.org/disc/67845
-#    "5ED90C8E", # Disc (Germany):        http://redump.org/disc/9688
-#    "5BE7B26E"  # Disc (Italy):          http://redump.org/disc/66654
+#    "572BA75D", # Disc (World):          https://redump.info/disc/11416
+#    "70630A1A", # Disc (Europe, Canada): https://redump.info/disc/67845
+#    "5ED90C8E", # Disc (Germany):        https://redump.info/disc/9688
+#    "5BE7B26E"  # Disc (Italy):          https://redump.info/disc/66654
 #]
 
 [[patch]]

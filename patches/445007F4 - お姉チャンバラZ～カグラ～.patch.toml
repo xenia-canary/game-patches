@@ -1,7 +1,7 @@
 title_name = "お姉チャンバラZ～カグラ～"
 title_id = "445007F4" # DP-2036
 hash = "CA0DDC9147C17B17" # default.xex
-#media_id = "02E8BF56" # Disc (Japan): http://redump.org/disc/65900
+#media_id = "02E8BF56" # Disc (Japan): https://redump.info/disc/65900
 
 [[patch]]
     name = "Invincibility with dual daggers"

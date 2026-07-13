@@ -1,7 +1,7 @@
 title_name = "Farming Simulator 15"
 title_id = "464507E1" # FE-2017
 hash = "F27E7B130CFFC9D7" # default.xex
-#media_id = "576D3D13" # Disc (USA, Europe): http://redump.org/disc/38994
+#media_id = "576D3D13" # Disc (USA, Europe): https://redump.info/disc/38994
 
 [[patch]]
     name = "60 FPS"

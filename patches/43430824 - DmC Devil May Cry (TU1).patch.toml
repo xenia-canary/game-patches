@@ -1,7 +1,7 @@
 title_name = "DmC: Devil May Cry" # TU1
 title_id = "43430824" # CC-2084
 hash = "C48862A2CB0389FB" # default.xex
-#media_id = "021BEF7B" # Disc (USA, Europe): http://redump.org/disc/53445
+#media_id = "021BEF7B" # Disc (USA, Europe): https://redump.info/disc/53445
 
 [[patch]]
     name = "60 FPS"

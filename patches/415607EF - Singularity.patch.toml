@@ -1,7 +1,7 @@
 title_name = "Singularity"
 title_id = "415607EF" # AV-2031
 hash = "AFB45E9586F98A97" # default.xex
-#media_id = "1B62BF41" # Disc (USA, Europe): http://redump.org/disc/14264
+#media_id = "1B62BF41" # Disc (USA, Europe): https://redump.info/disc/14264
 
 [[patch]]
     name = "Unlock FPS"

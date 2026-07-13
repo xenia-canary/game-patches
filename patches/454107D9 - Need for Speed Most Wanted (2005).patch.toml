@@ -9,12 +9,12 @@ hash = [ # default.xex
     "FB9D1825EAC7AA75"  # NTSC-U
 ]
 #media_id = [
-#    "36775B18", # Disc (Europe):   http://redump.org/disc/55849
-#    "00000000", # Disc (Germany):  http://redump.org/disc/73244
-#    "00000000", # Disc (Italy):    http://redump.org/disc/66281
-#    "0E7D604D", # Disc (Japan):    http://redump.org/disc/59055
-#    "00000000", # Disc (Spain):    http://redump.org/disc/21641
-#    "00000000"  # Disc (USA):      http://redump.org/disc/16682
+#    "36775B18", # Disc (Europe):   https://redump.info/disc/55849
+#    "00000000", # Disc (Germany):  https://redump.info/disc/73244
+#    "00000000", # Disc (Italy):    https://redump.info/disc/66281
+#    "0E7D604D", # Disc (Japan):    https://redump.info/disc/59055
+#    "00000000", # Disc (Spain):    https://redump.info/disc/21641
+#    "00000000"  # Disc (USA):      https://redump.info/disc/16682
 #]
 
 [[patch]]

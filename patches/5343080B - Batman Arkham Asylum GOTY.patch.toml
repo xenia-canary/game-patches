@@ -2,8 +2,8 @@ title_name = "Batman: Arkham Asylum GOTY" # Game Of The Year
 title_id = "5343080B" # SC-2059
 hash = "2C06E5E920A8291E" # default.xex
 #media_id = [
-#    "71D29B88", # Disc (Europe): http://redump.org/disc/68344
-#    "1BBF41A8"  # Disc (USA):    http://redump.org/disc/50243
+#    "71D29B88", # Disc (Europe): https://redump.info/disc/68344
+#    "1BBF41A8"  # Disc (USA):    https://redump.info/disc/50243
 #]
 
 [[patch]]

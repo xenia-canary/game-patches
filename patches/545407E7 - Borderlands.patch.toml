@@ -1,7 +1,7 @@
 title_name = "Borderlands"
 title_id = "545407E7" # TT-2023
 hash = "84FDDE09DD33636B" # default.xex
-#media_id = "380D3355" # Disc (World): http://redump.org/disc/12477
+#media_id = "380D3355" # Disc (World): https://redump.info/disc/12477
 
 [[patch]]
     name = "Unlock FPS"

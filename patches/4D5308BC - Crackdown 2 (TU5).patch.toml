@@ -1,7 +1,7 @@
 title_name = "Crackdown 2"
 title_id = "4D5308BC" # MS-2236
 hash = "8309EB7166C1B9C3" # default.xex
-#media_id = "18B6CD67" # Disc (World): http://redump.org/disc/14538
+#media_id = "18B6CD67" # Disc (World): https://redump.info/disc/14538
 
 [[patch]]
     name = "Disable Achievements"

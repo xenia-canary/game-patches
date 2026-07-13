@@ -1,7 +1,7 @@
 title_name = "The Orange Box"
 title_id = "4541080F" # EA-2063
 hash = "60AAD59F84CCE211" # engine_360.dll (TU5)
-#media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
+#media_id = "651A85DA" # Disc (World): https://redump.info/disc/11838
 
 [[patch]]
     name = "Team Fortress 2: Bypass internet requirement" # TF2

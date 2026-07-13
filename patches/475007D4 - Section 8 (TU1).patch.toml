@@ -1,7 +1,7 @@
 title_name = "Section 8" # TU1
 title_id = "475007D4" # GP-2004
 hash = "833FCF9A91896897" # default.xex
-#media_id = "377B57C7" # Disc (USA, Europe): http://redump.org/disc/15728
+#media_id = "377B57C7" # Disc (USA, Europe): https://redump.info/disc/15728
 
 [[patch]]
     name = "Unlock FPS"

@@ -4,7 +4,7 @@ hash = [
     "4B6EDCD2321B637A" # default.xex
 #    "F9EEBD231B6BEE78" # AO3MPGame-XeReleaseLTCG.xex
 ]
-#media_id = "44388CF4" # Disc (USA, Australia): http://redump.org/disc/13279
+#media_id = "44388CF4" # Disc (USA, Australia): https://redump.info/disc/13279
 
 [[patch]]
     name = "Unlock FPS"

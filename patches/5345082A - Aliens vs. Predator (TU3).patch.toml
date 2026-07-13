@@ -2,8 +2,8 @@ title_name = "Aliens vs. Predator" # TU3
 title_id = "5345082A" # SE-2090
 hash = "1B7DC32EDFEE5EFA" # default.xex
 #media_id = [
-#    "496CECB4", # Disc (Russia):      http://redump.org/disc/109499
-#    "5C19C70F"  # Disc (USA, Europe): http://redump.org/disc/37076
+#    "496CECB4", # Disc (Russia):      https://redump.info/disc/109499
+#    "5C19C70F"  # Disc (USA, Europe): https://redump.info/disc/37076
 #]
 
 [[patch]]

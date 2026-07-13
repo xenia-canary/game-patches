@@ -1,7 +1,7 @@
 title_name = "SOULCALIBUR V"
 title_id = "4E4D083D" # NM-2109
 hash = "C42992AED094B83E" # default.xex TU0
-#media_id = "165FAD4F" # Disc (World): http://redump.org/disc/43237
+#media_id = "165FAD4F" # Disc (World): https://redump.info/disc/43237
 
 [[patch]]
     name = "Reduce input lag"

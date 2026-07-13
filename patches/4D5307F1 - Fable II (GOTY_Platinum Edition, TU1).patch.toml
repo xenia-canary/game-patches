@@ -1,7 +1,7 @@
 title_name = "Fable II" # 2, GOTY (Game Of The Year)/Platinum Edition, TU1
 title_id = "4D5307F1" # MS-2033
 hash = "EE56F849188A6A20" # default.xex
-#media_id = "716F0A0D" # Disc (USA, Europe): http://redump.org/disc/20202
+#media_id = "716F0A0D" # Disc (USA, Europe): https://redump.info/disc/20202
 
 [[patch]]
     name = "60 FPS"

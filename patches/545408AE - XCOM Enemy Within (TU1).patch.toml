@@ -1,7 +1,7 @@
 title_name = "XCOM: Enemy Within" # TU1
 title_id = "545408AE" # TT-2222
 hash = "6A23BE57D5715B6D" # default.xex
-#media_id = "39BC979B" # Disc (USA, Europe): http://redump.org/disc/72080
+#media_id = "39BC979B" # Disc (USA, Europe): https://redump.info/disc/72080
 
 [[patch]]
     name = "Unlock FPS"

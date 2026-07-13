@@ -1,7 +1,7 @@
 title_name = "Hunted: The Demon's Forge" # TU1
 title_id = "425307D7" # BS-2007
 hash = "7FCEB2E89622CD7B" # default.xex
-#media_id = "7084F7FD" # Disc (USA): http://redump.org/disc/100843
+#media_id = "7084F7FD" # Disc (USA): https://redump.info/disc/100843
 
 [[patch]]
     name = "Unlock FPS"

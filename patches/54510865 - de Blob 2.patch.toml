@@ -1,7 +1,7 @@
 title_name = "de Blob 2"
 title_id = "54510865" # TQ-2149
 hash = "3C0A4AE8664E3FB0" # default.xex
-#media_id = "42DCD5EC" # Disc (USA, Europe): http://redump.org/disc/26919
+#media_id = "42DCD5EC" # Disc (USA, Europe): https://redump.info/disc/26919
 
 [[patch]]
     name = "Horizontal Line Fix"

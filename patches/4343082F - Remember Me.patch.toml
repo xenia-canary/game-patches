@@ -1,7 +1,7 @@
 title_name = "Remember Me"
 title_id = "4343082F" # CC-2095
 hash = "EC584EF58089DFCD" # default.xex
-#media_id = "6893C713" # Disc (USA, Europe): http://redump.org/disc/58914
+#media_id = "6893C713" # Disc (USA, Europe): https://redump.info/disc/58914
 
 [[patch]]
     name = "Unlock FPS"

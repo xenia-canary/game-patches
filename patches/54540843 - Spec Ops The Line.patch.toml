@@ -1,7 +1,7 @@
 title_name = "Spec Ops: The Line"
 title_id = "54540843" # TT-2115
 hash = "982C1EC1B8C38D2E" # default.xex
-#media_id = "22D4312F" # Disc (USA, Europe): http://redump.org/disc/86927
+#media_id = "22D4312F" # Disc (USA, Europe): https://redump.info/disc/86927
 
 [[patch]]
     name = "60 FPS"

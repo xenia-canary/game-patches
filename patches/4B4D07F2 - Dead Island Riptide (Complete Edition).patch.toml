@@ -1,7 +1,7 @@
 title_name = "Dead Island: Riptide" # Complete Edition
 title_id = "4B4D07F2" # KM-2034
 hash = "8702278D8AF60A96" # default.xex
-#media_id = "148AAE50" # Disc (Europe): http://redump.org/disc/121152
+#media_id = "148AAE50" # Disc (Europe): https://redump.info/disc/121152
 
 [[patch]]
     name = "60 FPS"

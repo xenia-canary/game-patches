@@ -2,8 +2,8 @@ title_name = "Project Gotham Racing 3" # PGR
 title_id = "4D5307D1" # MS-2001
 hash = "1DBBA44F305E61A9" # default.xex, v10.0 or higher
 #media_id = [
-#    "21906FBC", # Disc (USA):    http://redump.org/disc/72289
-#    "1E371802", # Disc (Europe): http://redump.org/disc/7718
+#    "21906FBC", # Disc (USA):    https://redump.info/disc/72289
+#    "1E371802", # Disc (Europe): https://redump.info/disc/7718
 #]
 
 [[patch]]

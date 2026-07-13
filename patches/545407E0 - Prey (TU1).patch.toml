@@ -1,7 +1,7 @@
 title_name = "Prey" # TU1
 title_id = "545407E0" # TT-2016
 hash = "28813E928E2D4C4A" # default.xex
-#media_id = "1ABA0DD5" # Disc (USA, Europe): http://redump.org/disc/13758
+#media_id = "1ABA0DD5" # Disc (USA, Europe): https://redump.info/disc/13758
 
 [[patch]]
     name = "Stutter fix"

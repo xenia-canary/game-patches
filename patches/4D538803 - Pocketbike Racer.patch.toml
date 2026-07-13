@@ -1,7 +1,7 @@
 title_name = "Pocketbike Racer" # Pocket Bike
 title_id = "4D538803" # MS-34819
 hash = "5E9EB194AF391903" # default.xex
-#media_id = "346E875D" # Disc (USA): http://redump.org/disc/48914
+#media_id = "346E875D" # Disc (USA): https://redump.info/disc/48914
 
 [[patch]]
     name = "Disable Glow/Bloom"

@@ -1,7 +1,7 @@
 title_name = "The Orange Box"
 title_id = "4541080F" # EA-2063
 hash = "9E53F69A6E1EACF2" # TF2 Server_360.dll (TU5)
-#media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
+#media_id = "651A85DA" # Disc (World): https://redump.info/disc/11838
 
 [[patch]]
     name = "Developer Commentary Player Damage"

@@ -1,7 +1,7 @@
 title_name = "Dead Island" # Game of the Year Edition
 title_id = "4B4D07DF" # KM-2015
 hash = "E1084E471E88C070" # default.xex
-#media_id = "02C977C2" # Disc (USA, Europe): http://redump.org/disc/35660
+#media_id = "02C977C2" # Disc (USA, Europe): https://redump.info/disc/35660
 
 [[patch]]
     name = "60 FPS"

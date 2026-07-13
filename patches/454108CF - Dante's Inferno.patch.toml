@@ -2,8 +2,8 @@ title_name = "Dante's Inferno"
 title_id = "454108CF" # EA-2255
 hash = "5C20AFE8455FEE7D" # default.xex
 #media_id = [
-#    "27C36C6C", # Disc (Europe): http://redump.org/disc/12655
-#    "49028C6A"  # Disc (USA):    http://redump.org/disc/13282
+#    "27C36C6C", # Disc (Europe): https://redump.info/disc/12655
+#    "49028C6A"  # Disc (USA):    https://redump.info/disc/13282
 #]
 
 [[patch]]

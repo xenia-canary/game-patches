@@ -1,7 +1,7 @@
 title_name = "Fuse"
 title_id = "4541096E" # EA-2414
 hash = "34AD8CB8A7A6A172" # default.xex
-#media_id = "566B2842" # Disc (USA, Europe): http://redump.org/disc/39344
+#media_id = "566B2842" # Disc (USA, Europe): https://redump.info/disc/39344
 
 [[patch]]
     name = "Skip intro"

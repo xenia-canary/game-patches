@@ -2,10 +2,10 @@ title_name = "Toy Story 3"
 title_id = "425607E5" # BV-2021
 hash = "A75D707A47A9A416" # default.xex
 #media_id = [
-#    "42433220", # Disc (Europe): http://redump.org/disc/57365
-#    "1D93523B", # Disc (Spain):  http://redump.org/disc/113263
-#    "0B11B88B", # Disc (USA):    http://redump.org/disc/14248
-#    "578D1701"  # Disc (USA):    http://redump.org/disc/117487
+#    "42433220", # Disc (Europe): https://redump.info/disc/57365
+#    "1D93523B", # Disc (Spain):  https://redump.info/disc/113263
+#    "0B11B88B", # Disc (USA):    https://redump.info/disc/14248
+#    "578D1701"  # Disc (USA):    https://redump.info/disc/117487
 #]
 
 [[patch]]

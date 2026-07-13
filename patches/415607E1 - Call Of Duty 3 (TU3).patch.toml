@@ -1,7 +1,7 @@
 title_name = "Call Of Duty 3" # SP
 title_id = "415607E1" # AV-2017
 hash = "7CAEC18CD0C372B6" # default.xex # TU3
-#media_id = "2E07093A" # Disc (USA, Europe): http://redump.org/disc/12479/
+#media_id = "2E07093A" # Disc (USA, Europe): https://redump.info/disc/12479/
 
 [[patch]]
     name = "Remove Grass"

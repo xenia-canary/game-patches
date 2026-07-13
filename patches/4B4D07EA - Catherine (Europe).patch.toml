@@ -1,7 +1,7 @@
 title_name = "Catherine"
 title_id = "4B4D07EA" # KM-2026
 hash = "C763782F9B444A55" # default.xex
-#media_id = "5055E63C" # Disc (Europe): http://redump.org/disc/73228
+#media_id = "5055E63C" # Disc (Europe): https://redump.info/disc/73228
 
 [[patch]]
     name = "1920x1080 Resolution"

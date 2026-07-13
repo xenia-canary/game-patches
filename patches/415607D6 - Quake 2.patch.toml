@@ -4,7 +4,7 @@ hash = [
     "AD878C34DCD9880F", # quake2-xenon.exe
 #    "370E041FDC7BB432" # default.xex
 ]
-#media_id = "00000000" # Disc (USA, Europe): http://redump.org/disc/23965
+#media_id = "00000000" # Disc (USA, Europe): https://redump.info/disc/23965
 
 [[patch]]
     name = "Unlock FPS"

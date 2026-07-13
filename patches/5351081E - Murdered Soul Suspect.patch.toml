@@ -1,7 +1,7 @@
 title_name = "Murdered: Soul Suspect"
 title_id = "5351081E" # SQ-2078
 hash = "B2682D54AB44B0F7" # default.xex
-#media_id = "796B07CA" # Disc (USA, Europe): http://redump.org/disc/59676
+#media_id = "796B07CA" # Disc (USA, Europe): https://redump.info/disc/59676
 
 [[patch]]
     name = "Unlock FPS"

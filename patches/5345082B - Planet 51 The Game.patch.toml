@@ -1,7 +1,7 @@
 title_name = "Planet 51: The Game"
 title_id = "5345082B" # SE-2091
 hash = "D057A31F821B498A" # default.xex
-#media_id = "1A7DFC39" # Disc (USA, Europe): http://redump.org/disc/68692
+#media_id = "1A7DFC39" # Disc (USA, Europe): https://redump.info/disc/68692
 
 [[patch]]
     name = "Unlock FPS"

@@ -1,7 +1,7 @@
 title_name = "Crysis 3" # TU3
 title_id = "4541098E" # EA-2446
 hash = "F6B549D7091155F6" # default.xex
-#media_id = "23955AA4" # Disc (USA, Europe): http://redump.org/disc/52966
+#media_id = "23955AA4" # Disc (USA, Europe): https://redump.info/disc/52966
 
 [[patch]]
     name = "Unlock FPS"

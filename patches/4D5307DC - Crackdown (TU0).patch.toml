@@ -1,7 +1,7 @@
 title_name = "Crackdown"
 title_id = "4D5307DC" # MS-2012
 hash = "D086E9E42A44EB2C" # default.xex
-#media_id = "596F9615" # Disc (World): http://redump.org/disc/11830
+#media_id = "596F9615" # Disc (World): https://redump.info/disc/11830
 
 [[patch]]
     name = "Global Lights Rendering"

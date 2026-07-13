@@ -2,8 +2,8 @@ title_name = "Dishonored"
 title_id = "425307E3" # BS-2019
 hash = "FDFA2324099CE50E" # default.xex
 #media_id = [
-#    "76D06EBB", # Disc (Europe): http://redump.org/disc/36105
-#    "4FEBCE15"  # Disc (Europe): http://redump.org/disc/72633
+#    "76D06EBB", # Disc (Europe): https://redump.info/disc/36105
+#    "4FEBCE15"  # Disc (Europe): https://redump.info/disc/72633
 #]
 
 [[patch]]

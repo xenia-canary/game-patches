@@ -1,7 +1,7 @@
 title_name = "The Orange Box"
 title_id = "4541080F" # EA-2063
 hash = "B2D30DDB83DBF3C0" # shaderapidx9_360.dll
-#media_id = "651A85DA" # Disc (World): http://redump.org/disc/11838
+#media_id = "651A85DA" # Disc (World): https://redump.info/disc/11838
 
 [[patch]]
     name = "Unlock FPS"

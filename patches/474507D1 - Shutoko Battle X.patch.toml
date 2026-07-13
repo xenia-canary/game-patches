@@ -1,7 +1,7 @@
 title_name = "Shutoko Battle X"
 title_id = "474507D1" # GE-2001
 hash = "6F28AFEC824C4213" # default.xex
-#media_id = "14DA48DA" # Disc (Japan, Asia) http://redump.org/disc/86493/
+#media_id = "14DA48DA" # Disc (Japan, Asia) https://redump.info/disc/86493/
 
 [[patch]]
     name = "Change required loading check cycles from 0x3C to 0x1A"

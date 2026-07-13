@@ -1,7 +1,7 @@
 title_name = "Painkiller: Hell & Damnation" # TU1
 title_id = "354807D1" # 5H-2001
 hash = "56209C4732826FCF" # default.xex
-#media_id = "35185D64" # Disc (Europe): http://redump.org/disc/71444
+#media_id = "35185D64" # Disc (Europe): https://redump.info/disc/71444
 
 [[patch]]
     name = "Unlock FPS"

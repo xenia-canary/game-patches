@@ -1,7 +1,7 @@
 title_name = "Thor: God of Thunder"
 title_id = "53450845" # SE-2117
 hash = "3E20BD86375842AD" # default.xex
-#media_id = "09EB1F21" # Disc (USA, Europe): http://redump.org/disc/57375
+#media_id = "09EB1F21" # Disc (USA, Europe): https://redump.info/disc/57375
 
 [[patch]]
     name = "Unlock FPS"

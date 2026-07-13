@@ -5,10 +5,10 @@ hash = [ # default.xex
     #"2AA7EEF2907154FE" # Disc 2 (Content Install Disc)
 ]
 #media_id = [
-#    "4BE13908", # Disc 1 (Europe): http://redump.org/disc/23451
-#    "79276431", # Disc 2 (Europe): http://redump.org/disc/23452
-#    "6F74359D", # Disc 1 (USA):    http://redump.org/disc/62253
-#    "6E76ABF4"  # Disc 2 (USA):    http://redump.org/disc/62254
+#    "4BE13908", # Disc 1 (Europe): https://redump.info/disc/23451
+#    "79276431", # Disc 2 (Europe): https://redump.info/disc/23452
+#    "6F74359D", # Disc 1 (USA):    https://redump.info/disc/62253
+#    "6E76ABF4"  # Disc 2 (USA):    https://redump.info/disc/62254
 #]
 
 [[patch]]

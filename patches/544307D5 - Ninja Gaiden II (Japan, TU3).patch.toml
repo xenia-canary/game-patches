@@ -1,7 +1,7 @@
 title_name = "Ninja Gaiden II" # 2
 title_id = "544307D5" # TC-2005
 hash = "4CC4201C0C4ED58B" # default.xex, Japan, TU3
-#media_id = "0E6FB1CE", # Disc (Japan): http://redump.org/disc/93943
+#media_id = "0E6FB1CE", # Disc (Japan): https://redump.info/disc/93943
 
 [[patch]]
     name = "1280x720 Resolution"

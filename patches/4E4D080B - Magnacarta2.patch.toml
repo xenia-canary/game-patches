@@ -2,8 +2,8 @@ title_name = "Magnacarta 2"
 title_id = "4E4D080B" # NM-2059
 hash = "B4CC5A66F752EBC3" # default.xex
 #media_id = [
-#    "60DA537D", # Disc 1 (USA, Europe): http://redump.org/disc/13307
-#    "5DB3BBBC", # Disc 2 (USA, Europe): http://redump.org/disc/13308
+#    "60DA537D", # Disc 1 (USA, Europe): https://redump.info/disc/13307
+#    "5DB3BBBC", # Disc 2 (USA, Europe): https://redump.info/disc/13308
 #]
 
 [[patch]]

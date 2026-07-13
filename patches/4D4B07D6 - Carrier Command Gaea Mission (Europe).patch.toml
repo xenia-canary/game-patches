@@ -1,7 +1,7 @@
 title_name = "Carrier Command: Gaea Mission"
 title_id = "4D4B07D6" # MK-2006
 hash = "D934234ED6CF93F5" # default.xex
-#media_id = "758D9246" # Disc (Europe): http://redump.org/disc/50528
+#media_id = "758D9246" # Disc (Europe): https://redump.info/disc/50528
 
 [[patch]]
     name = "Disable God Rays"

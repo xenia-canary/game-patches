@@ -1,7 +1,7 @@
 title_name = "Marvel: Ultimate Alliance" # TU2
 title_id = "415607DA" # AV-2010
 hash = "1141BBAD734B478F" # default.xex
-#media_id = "26848425" # Disc (USA, Europe): http://redump.org/disc/14044
+#media_id = "26848425" # Disc (USA, Europe): https://redump.info/disc/14044
 
 [[patch]]
     name = "Unlock FPS"

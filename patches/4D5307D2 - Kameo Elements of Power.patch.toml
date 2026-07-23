@@ -5,12 +5,62 @@ hash = "1A83A0AF5C0EDFE8" # default.xex
 
 [[patch]]
     name = "60 FPS"
+    desc = "Runs the game at 60 FPS with vsync = true and framerate_limit = 0. Higher framerates can be selected with framerate_limit. Use with the FPS Camera Fix."
     author = "Margen67"
     is_enabled = false
 
     [[patch.be8]]
         address = 0x820cf93f
         value = 0x01
+
+[[patch]]
+    name = "FPS Camera Fix"
+    desc = "Fixes automatic camera following at higher and variable framerates. Enable when running above 30 FPS."
+    author = "ISpectre23"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82440f18
+        value = 0xc0bf0084
+    [[patch.be32]]
+        address = 0x82440f20
+        value = 0xc31b112c
+    [[patch.be32]]
+        address = 0x82440f34
+        value = 0xd0b90008
+    [[patch.be32]]
+        address = 0x82440f88
+        value = 0xec40c024
+    [[patch.be32]]
+        address = 0x82440f90
+        value = 0xc1bf007c
+    [[patch.be32]]
+        address = 0x82440f94
+        value = 0xc19f0080
+    [[patch.be32]]
+        address = 0x82440f98
+        value = 0xed1a6828
+    [[patch.be32]]
+        address = 0x82440fa0
+        value = 0xecca2828
+    [[patch.be32]]
+        address = 0x82440fa4
+        value = 0xec6628ba
+    [[patch.be32]]
+        address = 0x82440fa8
+        value = 0xd0790008
+    [[patch.be32]]
+        address = 0x82440fac
+        value = 0xeca868ba
+    [[patch.be32]]
+        address = 0x82440fb0
+        value = 0xd0b90000
+    [[patch.be32]]
+        address = 0x82440fb4
+        value = 0xec87603a
+    [[patch.be32]]
+        address = 0x82440fb8
+        value = 0xd0990004
 
 [[patch]]
     name = "Aspect Ratio"

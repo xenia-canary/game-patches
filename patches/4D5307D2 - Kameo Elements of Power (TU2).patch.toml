@@ -4,12 +4,48 @@ hash = "B94D3AB68548DF97" # default.xex
 #media_id = "45BB5521" # Disc (Europe): redump.org/disc/8561
 
 [[patch]]
-    name = "60 FPS"
-    author = "Margen67, ICUP321"
+    name = "60 FPS + Camera Fix"
+    desc = "Enables 60 FPS and fixes automatic camera following. Do not enable with 100 FPS + Camera Fix. Requires vsync = true and framerate_limit = 60."
+    author = "Margen67, ICUP321, ISpectre23"
     is_enabled = false
+
     [[patch.be8]]
         address = 0x820d17c7
         value = 0x01
+    [[patch.be32]]
+        address = 0x82493198
+        value = 0xc0bf0084
+    [[patch.be32]]
+        address = 0x824931a0
+        value = 0xefbde82a
+    [[patch.be32]]
+        address = 0x824931b4
+        value = 0xd0b90008
+
+[[patch]]
+    name = "100 FPS + Camera Fix"
+    desc = "Enables 100 FPS and fixes automatic camera following. Do not enable with 60 FPS + Camera Fix. Requires vsync = true and framerate_limit = 100."
+    author = "Margen67, ICUP321, ISpectre23"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x820d17c7
+        value = 0x01
+    [[patch.be32]]
+        address = 0x82493198
+        value = 0xc0bf0084
+    [[patch.be32]]
+        address = 0x824931a0
+        value = 0xc31ac1c8
+    [[patch.be32]]
+        address = 0x824931b4
+        value = 0xd0b90008
+    [[patch.be32]]
+        address = 0x824931f4
+        value = 0xefbfc024
+    [[patch.be32]]
+        address = 0x824931fc
+        value = 0xc1bafff8
 
 [[patch]]
     name = "Aspect Ratio"

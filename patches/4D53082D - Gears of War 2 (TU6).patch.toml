@@ -260,7 +260,7 @@ hash = "62547A005C0420D2" # default.xex
 
 [[patch]]
     name = "Experimental 32:9 Super Ultrawide Aspect Ratio Support"
-    desc = Must set present_letterbox = FALSE in the xenia canary config. Expands gameplay and cutscene rendering to true 32:9 ultrawide, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x360, certain elements will appear more aliased.
+    desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands gameplay and cutscene rendering to true 32:9 ultrawide, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x360, certain elements will appear more aliased."
     author = "boma, TudorHorse, killswitch"
     is_enabled = false
 

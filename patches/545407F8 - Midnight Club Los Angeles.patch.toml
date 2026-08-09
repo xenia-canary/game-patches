@@ -1,17 +1,20 @@
 title_name = "Midnight Club: Los Angeles" # MCLA
 title_id = "545407F8" # TT-2040
 hash = "B9BE89200A856E37" # default.xex
-#media_id = "11CCEA2A" # Disc (USA): https://redump.info/disc/13311
+#media_id = "11CCEA2A" # Disc (USA): http://redump.org/disc/13311
 
 [[patch]]
-    name = "Game Speed Fix"
+    name = "60 FPS - Game Speed Fix"
     desc = "Enables deltatime, preventing game speed fluctuations based on frame rate. See note about framerate patches in the README."
     author = "illusion, boma"
-    is_enabled = false
+    is_enabled = true
 
     [[patch.be32]]
         address = 0x821bf2c8
         value = 0x4800012c # b 0x821bdc34
+    [[patch.be8]]
+        address = 0x824d78cb
+        value = 0x01
 
 [[patch]]
     name = "Disable Motion Blur"

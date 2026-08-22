@@ -1,9 +1,10 @@
 title_name = "Bean (GoldenEye 007) Community Edition"
-title_id = "584108A9"
+title_id = "584108A9" # XA-2217
 hash = [
     "55FE9ECAB778EE4A", # defaultCE.xex (Community Edition, built from the modified default.xex)
     "49CAD59B32AB3217"  # defaultCE-surround.xex (Community Edition, 5.1 surround build)
 ]
+#media_id = "00000000"
 
 [[patch]]
     name = "Restore music"

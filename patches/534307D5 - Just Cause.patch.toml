@@ -1,0 +1,16 @@
+title_name = "Just Cause"
+title_id = "534307D5" # SC-2005
+hash = "A0E5289AF35E88F2" # default.xex
+#media_id = "6C47A625" # Disc (USA, Europe): http://redump.org/disc/14045
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822e7a94
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x822ed158
+        value = 0x38800014

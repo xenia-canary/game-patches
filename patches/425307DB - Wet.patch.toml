@@ -20,3 +20,27 @@ hash = "9A084828F85F951B" # default.xex
     [[patch.be32]]
         address = 0x82cb09b8
         value = 0xc3e92aa0
+
+[[patch]]
+    name = "Disable Depth of Field"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82ae6a1c
+        value = 0x39600000
+
+[[patch]]
+    name = "Disable Shaky Camera and Film Effect"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8274f58c
+        value = 0x99430015
+    [[patch.be32]]
+        address = 0x82751514
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x82751660
+        value = 0x39400000

@@ -1,0 +1,78 @@
+title_name = "Rumble Roses XX"
+title_id = "4B4E07D1" # KN-2001
+hash = "2E2AEA278FC17517" # default.xex
+#media_id = "1A6D4362" # Disc (USA) : http://redump.org/disc/27098
+
+[[patch]]
+    name = "Blur Off"
+    desc = "Removes blur from the game"
+    author = "Rumble XX"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8226bf23
+        value = 0x00
+
+    [[patch.be8]]
+        address = 0x8226c0a7
+        value = 0x00
+
+    [[patch.be32]]
+        address = 0x8226de12
+        value = 0x00000000
+
+[[patch]]
+    name = "Bloom Slight Off 1"
+    author = "Rumble XX"
+    desc = "Enable Bloom Slight off 1+2 will disable bloom"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8226c12f
+        value = 0x00
+
+[[patch]]
+    name = "Bloom Slight Off 2"
+    author = "Rumble XX"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8226c153
+        value = 0x00
+
+[[patch]]
+    name = "Remove Background Crowds"
+    author = "Rumble XX"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82498daf
+        value = 0x00
+
+[[patch]]
+    name = "Remove Weapon Icons"
+    author = "Rumble XX"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8228a7ef
+        value = 0x00
+
+[[patch]]
+    name = "Remove Queen Match Banner"
+    author = "Rumble XX"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x822a5b87
+        value = 0x00
+
+[[patch]]
+    name = "Change Ratio to 21:9"
+    desc = "HUD will be stretch but not the characters. Must set present_letterbox to false"
+    author = "Rumble XX"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82012d00
+        value = 0x4018e38e

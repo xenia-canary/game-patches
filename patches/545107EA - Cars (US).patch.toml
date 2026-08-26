@@ -1,0 +1,31 @@
+title_name = "Cars"
+title_id = "545107EA"
+hash = "02BA26954BF22D11"
+media_id = "5A9FC4C4"
+
+[[patch]]
+name = "60 FPS"
+desc = "Enabling 'Skip Intros' is recommended, as FMV cutscenes play at 2x speed."
+author = "tronuo"
+is_enabled = false
+
+    [[patch.be32]]
+    address = 0x82569410
+    value = 0x3ae00001
+
+    [[patch.be32]]
+    address = 0x8237571c
+    value = 0x3d4042f0
+
+    [[patch.be32]]
+    address = 0x82375728
+    value = 0x914b5b64
+
+[[patch]]
+name = "Skip Intros"
+author = "tronuo"
+is_enabled = false
+
+    [[patch.be16]]
+    address = 0x8244fcd6
+    value = 0xe5ac

@@ -16,3 +16,21 @@ hash = "AC429E9FFB91904C" # default.xex
     [[patch.be32]]
         address = 0x82159238
         value = 0x3c88ab86
+
+[[patch]]
+    name = "120 FPS"
+    desc = "Set vsync = false in the emulator config and force vertical sync through your GPU driver settings."
+    author = "tronuo"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x826b8394
+        value = 0x60000000
+
+    [[patch.be32]]
+        address = 0x82159238
+        value = 0x3c08ab86
+
+    [[patch.be32]]
+        address = 0x82cf0394
+        value = 0x42efc28f

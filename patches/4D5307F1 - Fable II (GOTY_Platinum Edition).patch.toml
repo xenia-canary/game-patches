@@ -105,3 +105,26 @@ hash = "4145F96D2DEE2AB5" # default.xex
     [[patch.be32]]
         address = 0x8209fe7c
         value = 0x40638e39
+
+[[patch]]
+    name = "Higher HF Tick Rate"
+    desc = "Doubles HF to 60 Hz. Use with Guy's High Tick Rate (30 Hz LF) to keep a 2:1 HF:LF ratio."
+    author = "Ultra"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8233ae98
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x83319519
+        value = 0x4e
+
+[[patch]]
+    name = "High Tick Rate Stairs & Ledge Fix"
+    desc = "Caps hkpCharacterProxy::integrate to 1 substep so 30 Hz LF does not wedge on stairs and ledges."
+    author = "Ultra"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82e41f54
+        value = 0x39600001

@@ -32,56 +32,56 @@ hash = "EE56F849188A6A20" # default.xex
         value = 0x01
 
 [[patch]]
-	name = "Disable Texture Morphing"
-	desc = "Workaround for the dog's & hero's broken textures. Makeup is still bugged. Can make morphs look strange."
-	author = "Guy, Ultra"
-	is_enabled = false
-	
-	[[patch.be16]]
-		address = 0x8220edd8
-		value = 0x4280
+    name = "Disable Texture Morphing"
+    desc = "Workaround for the dog's & hero's broken textures. Makeup is still bugged. Can make morphs look strange."
+    author = "Guy, Ultra"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x8220edd8
+        value = 0x4280
 
 [[patch]]
-	name = "High Tick Rate"
-	desc = "Doubles tickrate LF to 30Hz, HF to 60Hz retains 2:1 scheduler ratio. Vastly improves UI and input delay."
-	author = "Guy, Ultra"
-	is_enabled = false
-	
-	[[patch.be32]]
-		address = 0x8231091c
-		value = 0x60000000
-	[[patch.be8]]
-		address = 0x83319661
-		value = 0x3e
-	[[patch.be32]]
-		address = 0x82310900
-		value = 0x60000000
-	[[patch.be8]]
-		address = 0x83319669
-		value = 0x4e
+    name = "High Tick Rate"
+    desc = "Doubles tickrate LF to 30Hz, HF to 60Hz retains 2:1 scheduler ratio. Vastly improves UI and input delay."
+    author = "Guy, Ultra"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8231091c
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x83319661
+        value = 0x3e
+    [[patch.be32]]
+        address = 0x82310900
+        value = 0x60000000
+    [[patch.be8]]
+        address = 0x83319669
+        value = 0x4e
 
 [[patch]]
-	name = "Unlock Website Items"
-	desc = "Unlocks the Guild chest containing the items that were obtainable from the Fable 2 website."
-	author = "Guy, Ultra"
-	is_enabled = false
-	
-	[[patch.be8]]
-		address = 0x8253b1d3
-		value = 0x01
-	[[patch.be32]]
-		address = 0x8253b1a8
-		value = 0x42800028
+    name = "Unlock Website Items"
+    desc = "Unlocks the Guild chest containing the items that were obtainable from the Fable 2 website."
+    author = "Guy, Ultra"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8253b1d3
+        value = 0x01
+    [[patch.be32]]
+        address = 0x8253b1a8
+        value = 0x42800028
 
 [[patch]]
-	name = "Unlock Collectors Edition Content"
-	desc = "Unlocks Hal's items in the Guild chest, and enables the Hall of the Dead dungeon."
-	author = "Guy, Ultra"
-	is_enabled = false
-	
-	[[patch.be32]]
-		address = 0x824edcf4
-		value = 0x39200001
+    name = "Unlock Collectors Edition Content"
+    desc = "Unlocks Hal's items in the Guild chest, and enables the Hall of the Dead dungeon."
+    author = "Guy, Ultra"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824edcf4
+        value = 0x39200001
 
 [[patch]]
     name = "High Tick Rate Stairs & Ledge Fix"

@@ -1,0 +1,14 @@
+title_name = "Assassin's Creed"
+title_id = "555307D4" # US-2004
+hash = "2EC6A531C57BFF72" # default.xex
+#media_id = "59A9DD10" # Disk (USA, Europe): https://redump.info/disc/12472
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. UI animation acceleration and small physics bugs occur above 60 FPS."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8214cb7c
+        value = 0x3d408000

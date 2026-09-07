@@ -13,3 +13,12 @@ hash = "29362A3C8309E1AC" # default.xex
     [[patch.f32]]
         address = 0x8209dff4
         value = 90
+
+[[patch]]
+    name = "Disable Motion Blur"
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825e95a8
+        value = 0x39600000

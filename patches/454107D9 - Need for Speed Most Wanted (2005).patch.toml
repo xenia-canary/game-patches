@@ -18,6 +18,15 @@ hash = [ # default.xex
 #]
 
 [[patch]]
+    name = "Black Edition content"
+    author = "tuhana"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a2ce04
+        value = 0x00000100
+
+[[patch]]
     name = "Disable Post Processing"
     author = "illusion"
     is_enabled = false

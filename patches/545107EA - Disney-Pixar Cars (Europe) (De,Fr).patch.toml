@@ -1,0 +1,47 @@
+title_name = "Disney-Pixar Cars"
+title_id = "545107EA" # TQ-2026
+hash = "726B4DFD12ED25FC" # default.xex
+#media_id = "031CEB32" # Disc (Europe) (De,Fr)
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Enables 60 FPS with correct timing and video playback."
+    author = "Pixelplix93"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820d6d38
+        value = 0x39400001
+    [[patch.be32]]
+        address = 0x823ad58c
+        value = 0x3d608204
+    [[patch.be32]]
+        address = 0x823ad590
+        value = 0xc00b40bc
+    [[patch.be32]]
+        address = 0x825851bc
+        value = 0x4800d5d9
+    [[patch.be32]]
+        address = 0x82592794
+        value = 0x3d60825b
+    [[patch.be32]]
+        address = 0x82592798
+        value = 0x814b0790
+    [[patch.be32]]
+        address = 0x8259279c
+        value = 0x694a0001
+    [[patch.be32]]
+        address = 0x825927a0
+        value = 0x914b0790
+    [[patch.be32]]
+        address = 0x825927a4
+        value = 0x2c0a0000
+    [[patch.be32]]
+        address = 0x825927a8
+        value = 0x4d820020
+    [[patch.be32]]
+        address = 0x825927ac
+        value = 0x48001cfc
+    [[patch.be32]]
+        address = 0x825b0790
+        value = 0x00000000

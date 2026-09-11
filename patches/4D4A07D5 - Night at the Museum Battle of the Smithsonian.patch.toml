@@ -1,0 +1,17 @@
+title_name = "Night at the Museum - Battle of the Smithsonian - The Video Game"
+title_id = "4D4A07D5" # MJ-2005
+hash = "31BC5CE2174A60C1" # default.xex
+#media_id = "10A4C729" # Disc (USA, Europe) (En,Fr,De): https://redump.info/disc/69924/
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Enables 60 FPS with correct engine timing."
+    author = "Pixelplix93"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820e5d2c
+        value = 0x3920003c
+    [[patch.be32]]
+        address = 0x8206d854
+        value = 0x3c888889

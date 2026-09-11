@@ -1,0 +1,24 @@
+title_name = "DreamWorks Shrek the Third"
+title_id = "415607E8" # AV-2024
+hash = [
+    "3BDFD6669451C813", # default.xex
+    "C3C21E8231E6A752", # default.xex
+]
+#media_id = [
+#    "1E6F69FA", # Disc (Europe) (Fr,Nl): https://redump.info/disc/131186
+#    "7ACD823A", # Disc (Europe) (It): https://redump.info/disc/66608
+#    "72F3F6C6" # Disc (Europe) (De,Es): https://redump.info/disc/66429
+#]
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Enables 60 FPS and fixes the FPS cap."
+    author = "Pixelplix93"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8224e0c0
+        value = 0x48000030
+    [[patch.be32]]
+        address = 0x82351728 # VSync 30 -> 60 FPS
+        value = 0x39000001

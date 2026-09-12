@@ -186,3 +186,199 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
     [[patch.f32]]
         address = 0x8235a4f0
         value = 0.00784999 # (pi / 360) * 0.9
+
+[[patch]]
+    name = "Infinite Gold"
+    desc = "Buying anything sets your gold to 9,999,999."
+    author = "peerloomllc"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82905f5c
+        value = 0x9143004c
+    [[patch.be32]]
+        address = 0x82905f7c
+        value = 0x60000000
+
+[[patch]]
+    name = "Infinite Health"
+    desc = "Your party takes no damage. Enemies still take theirs."
+    author = "peerloomllc"
+    is_enabled = false
+
+    # The damage store is shared with the enemies, so it branches to a few
+    # spare bytes that skip it only when the character is one of yours
+    # (0x40000000 at +0x90 of the character record).
+    [[patch.be32]]
+        address = 0x82b2b6a4
+        value = 0x485dde2c        # b 0x831094d0, replacing stfs f0, 0xa1c(r30)
+    [[patch.be32]]
+        address = 0x831094d0
+        value = 0x801e0090        # lwz r0, 0x90(r30)
+    [[patch.be32]]
+        address = 0x831094d4
+        value = 0x74004000        # andis. r0, r0, 0x4000
+    [[patch.be32]]
+        address = 0x831094d8
+        value = 0x40820008        # bne +8, one of ours: skip the store
+    [[patch.be32]]
+        address = 0x831094dc
+        value = 0xd01e0a1c        # stfs f0, 0xa1c(r30)
+    [[patch.be32]]
+        address = 0x831094e0
+        value = 0x4ba221c8        # b 0x82b2b6a8, back
+
+[[patch]]
+    name = "Infinite MP"
+    desc = "Casting a spell does not use up your party's MP."
+    author = "peerloomllc"
+    is_enabled = false
+
+    # Two blocks subtract the spell's cost and store it back; each branches
+    # to a few spare bytes that skip the store for your party only.
+    [[patch.be32]]
+        address = 0x82ad3948
+        value = 0x48635b48        # b 0x83109490, replacing stfs f0, 0xa38(r29)
+    [[patch.be32]]
+        address = 0x83109490
+        value = 0x801d0090        # lwz r0, 0x90(r29)
+    [[patch.be32]]
+        address = 0x83109494
+        value = 0x74004000        # andis. r0, r0, 0x4000
+    [[patch.be32]]
+        address = 0x83109498
+        value = 0x40820008        # bne +8, one of ours: skip the store
+    [[patch.be32]]
+        address = 0x8310949c
+        value = 0xd01d0a38        # stfs f0, 0xa38(r29)
+    [[patch.be32]]
+        address = 0x831094a0
+        value = 0x4b9ca4ac        # b 0x82ad394c, back
+    [[patch.be32]]
+        address = 0x82ad3a20
+        value = 0x48635a90        # b 0x831094b0, the second block
+    [[patch.be32]]
+        address = 0x831094b0
+        value = 0x801d0090        # lwz r0, 0x90(r29)
+    [[patch.be32]]
+        address = 0x831094b4
+        value = 0x74004000        # andis. r0, r0, 0x4000
+    [[patch.be32]]
+        address = 0x831094b8
+        value = 0x40820008        # bne +8
+    [[patch.be32]]
+        address = 0x831094bc
+        value = 0xd01d0a38        # stfs f0, 0xa38(r29)
+    [[patch.be32]]
+        address = 0x831094c0
+        value = 0x4b9ca564        # b 0x82ad3a24, back
+
+[[patch]]
+    name = "One Hit Kills"
+    desc = "Any hit you land takes an enemy to zero health."
+    author = "peerloomllc"
+    is_enabled = false
+
+    # Only one of the health cheats can be on: they replace the same
+    # instruction.
+    [[patch.be32]]
+        address = 0x82b2b6a4
+        value = 0x485dde4c        # b 0x831094f0
+    [[patch.be32]]
+        address = 0x831094f0
+        value = 0x801e0090        # lwz r0, 0x90(r30)
+    [[patch.be32]]
+        address = 0x831094f4
+        value = 0x74004000        # andis. r0, r0, 0x4000
+    [[patch.be32]]
+        address = 0x831094f8
+        value = 0x40820008        # bne +8, one of ours: the real total
+    [[patch.be32]]
+        address = 0x831094fc
+        value = 0xec000028        # fsubs f0, f0, f0 -> 0.0
+    [[patch.be32]]
+        address = 0x83109500
+        value = 0xd01e0a1c        # stfs f0, 0xa1c(r30)
+    [[patch.be32]]
+        address = 0x83109504
+        value = 0x4ba221a4        # b 0x82b2b6a8, back
+
+[[patch]]
+    name = "Infinite Health and One Hit Kills"
+    desc = "Your party takes no damage and any hit you land kills."
+    author = "peerloomllc"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82b2b6a4
+        value = 0x485dde6c        # b 0x83109510
+    [[patch.be32]]
+        address = 0x83109510
+        value = 0x801e0090        # lwz r0, 0x90(r30)
+    [[patch.be32]]
+        address = 0x83109514
+        value = 0x74004000        # andis. r0, r0, 0x4000
+    [[patch.be32]]
+        address = 0x83109518
+        value = 0x4082000c        # bne +0xc, one of ours: no store at all
+    [[patch.be32]]
+        address = 0x8310951c
+        value = 0xec000028        # fsubs f0, f0, f0 -> 0.0
+    [[patch.be32]]
+        address = 0x83109520
+        value = 0xd01e0a1c        # stfs f0, 0xa1c(r30)
+    [[patch.be32]]
+        address = 0x83109524
+        value = 0x4ba22184        # b 0x82b2b6a8, back
+
+[[patch]]
+    name = "Experience x8"
+    desc = "Every battle gives eight times the experience."
+    author = "peerloomllc"
+    is_enabled = false
+
+    # The award is a float; the cave doubles it three times before the
+    # game's own store writes it.
+    [[patch.be32]]
+        address = 0x82af5738
+        value = 0x48613df8        # b 0x83109530, replacing stfs f0, 0x10(r30)
+    [[patch.be32]]
+        address = 0x83109530
+        value = 0xec00002a        # fadds f0, f0, f0
+    [[patch.be32]]
+        address = 0x83109534
+        value = 0xec00002a        # fadds f0, f0, f0
+    [[patch.be32]]
+        address = 0x83109538
+        value = 0xec00002a        # fadds f0, f0, f0
+    [[patch.be32]]
+        address = 0x8310953c
+        value = 0xd01e0010        # stfs f0, 0x10(r30)
+    [[patch.be32]]
+        address = 0x83109540
+        value = 0x4b9ec1fc        # b 0x82af573c, back
+
+[[patch]]
+    name = "Skill points x8"
+    desc = "Every battle gives eight times the skill points."
+    author = "peerloomllc"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82af5740
+        value = 0x48613e10        # b 0x83109550, replacing stfs f0, 0x14(r30)
+    [[patch.be32]]
+        address = 0x83109550
+        value = 0xec00002a        # fadds f0, f0, f0
+    [[patch.be32]]
+        address = 0x83109554
+        value = 0xec00002a        # fadds f0, f0, f0
+    [[patch.be32]]
+        address = 0x83109558
+        value = 0xec00002a        # fadds f0, f0, f0
+    [[patch.be32]]
+        address = 0x8310955c
+        value = 0xd01e0014        # stfs f0, 0x14(r30)
+    [[patch.be32]]
+        address = 0x83109560
+        value = 0x4b9ec1e4        # b 0x82af5744, back

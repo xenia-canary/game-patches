@@ -1,0 +1,34 @@
+title_name = "Ticket to Ride"
+title_id = "584108EC" #
+hash = "554A4E41A97A6919" # default.xex
+#media_id = "4C6F67D5"
+
+[[patch]]
+    name = "Display FPS"
+    desc = "Rendering/Statistics"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x825c7def
+        value = 0x01
+
+[[patch]]
+    name = "Display FPS Graph"
+    desc = "Rendering/Statistics"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x825c7e4f
+        value = 0x01
+
+[[patch]]
+    name = "Display FPS Smiler"
+    desc = "Rendering/Statistics"
+    author = "Adrian"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x825c7eaf
+        value = 0x01

@@ -1,0 +1,18 @@
+title_name = "Gun"
+title_id = "415607D3" # AV-2003
+hash = "AA0CCC7214BB72B5" # default.xex
+#media_id = "6526336C" # Disc (Germany): https://redump.info/disc/61848
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Enables 60 FPS with VSync and corrects in-game cutscene timing."
+    author = "Pixelplix93"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x821b23c8
+        value = 0x39600001
+
+    [[patch.be32]]
+        address = 0x8212abb0
+        value = 0xc36b3b64

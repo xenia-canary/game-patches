@@ -1,0 +1,22 @@
+title_name = "Deadly Premonition"
+title_id = "4D5607D1" # MV-2001
+hash = "90ABEF31A341543A" # default.xex
+#media_id = "7DE95D93" # Disc (PAL): https://redump.info/disc/16853
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Enables 60 FPS with correct game timing."
+    author = "ehw, Pixelplix93"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82522654
+        value = 0xfda00090
+
+    [[patch.be32]]
+        address = 0x8252267c
+        value = 0x48000010
+
+    [[patch.be32]]
+        address = 0x825226e8
+        value = 0x39000001

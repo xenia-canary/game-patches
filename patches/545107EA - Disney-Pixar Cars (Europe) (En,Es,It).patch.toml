@@ -1,0 +1,47 @@
+title_name = "Disney-Pixar Cars"
+title_id = "545107EA" # TQ-2026
+hash = "099DC6C22A7DC6D2" # default.xex
+#media_id = "261AC944" # Disc (Europe) (En,Es,It): http://redump.info/disc/87735/
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Enables 60 FPS with correct timing and video playback."
+    author = "Pixelplix93"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820d6d80
+        value = 0x39400001
+    [[patch.be32]]
+        address = 0x823ad5dc
+        value = 0x3d608204
+    [[patch.be32]]
+        address = 0x823ad5e0
+        value = 0xc00b40bc
+    [[patch.be32]]
+        address = 0x8258527c
+        value = 0x4800d5d9
+    [[patch.be32]]
+        address = 0x82592854
+        value = 0x3d60825b
+    [[patch.be32]]
+        address = 0x82592858
+        value = 0x814b0790
+    [[patch.be32]]
+        address = 0x8259285c
+        value = 0x694a0001
+    [[patch.be32]]
+        address = 0x82592860
+        value = 0x914b0790
+    [[patch.be32]]
+        address = 0x82592864
+        value = 0x2c0a0000
+    [[patch.be32]]
+        address = 0x82592868
+        value = 0x4d820020
+    [[patch.be32]]
+        address = 0x8259286c
+        value = 0x48001e3c
+    [[patch.be32]]
+        address = 0x825b0790
+        value = 0x00000000

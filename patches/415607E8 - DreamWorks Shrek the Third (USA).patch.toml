@@ -15,4 +15,3 @@ hash = "7F8E480F9B69FB7B" # default.xex
     [[patch.be32]]
         address = 0x82350690 # VSync 30 -> 60 FPS
         value = 0x39000001
-

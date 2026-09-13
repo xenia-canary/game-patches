@@ -22,4 +22,3 @@ hash = [
     [[patch.be32]]
         address = 0x82351728 # VSync 30 -> 60 FPS
         value = 0x39000001
-

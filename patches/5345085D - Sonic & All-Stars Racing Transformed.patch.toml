@@ -1,0 +1,14 @@
+title_name = "Sonic & All-Stars Racing Transformed"
+title_id = "5345085D" # SE-2141
+hash = "559ED70FF388B5D7" # default.xex
+#media_id = "1A24E92E" # Disc (World): http://redump.org/disc/58143
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README."
+    author = "theboy181, Windsurf7"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x82cd9633
+        value = 0x01

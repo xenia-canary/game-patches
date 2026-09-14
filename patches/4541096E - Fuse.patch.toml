@@ -11,3 +11,23 @@ hash = "34AD8CB8A7A6A172" # default.xex
     [[patch.be8]]
         address = 0x82089a43
         value = 0x00
+
+[[patch]]
+    name = "Texture Streaming Fix"
+    desc = "Disables the running RAM compactor that seems to be tied to texture streaming. Could theoretically cause stalling or crashing."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be8]]
+        address = 0x8346aab1
+        value = 0x01
+
+[[patch]]
+    name = "60 FPS"
+    desc = "See note about framerate patches in the README. Physics stays at 30 FPS since lowering the fixed timestep breaks things."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824d1028
+        value = 0xc0076b38

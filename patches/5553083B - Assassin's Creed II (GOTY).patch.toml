@@ -1,0 +1,14 @@
+title_name = "Assassin's Creed II (GOTY)"
+title_id = "5553083B" # US-2107
+hash = "8B80FF41FE0EF8F0" # default.xex
+#media_id = "7A2F4667" # Disc (Europe): https://redump.info/disc/20264
+
+[[patch]]
+    name = "Unlock FPS"
+    desc = "See note about framerate patches in the README. UI animation acceleration occurs above 60 FPS."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823de290
+        value = 0x39600003

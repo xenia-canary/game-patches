@@ -4,14 +4,17 @@ hash = "B9BE89200A856E37" # default.xex
 #media_id = "11CCEA2A" # Disc (USA): https://redump.info/disc/13311
 
 [[patch]]
-    name = "Game Speed Fix"
-    desc = "Enables deltatime, preventing game speed fluctuations based on frame rate. See note about framerate patches in the README."
+    name = "60 FPS - Game Speed Fix"
+    desc = "Increases vsync target to 60 FPS and enables deltatime, preventing game speed fluctuations based on frame rate. See note about framerate patches in the README."
     author = "illusion, boma"
     is_enabled = false
 
     [[patch.be32]]
         address = 0x821bf2c8
         value = 0x4800012c # b 0x821bdc34
+    [[patch.be8]]
+        address = 0x824d78cb
+        value = 0x01
 
 [[patch]]
     name = "Disable Motion Blur"

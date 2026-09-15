@@ -1,0 +1,27 @@
+title_name = "Forza Motorsport 3"
+title_id = "4D53084D" # MS-2125
+hash = "684232D4683E26C5" # default.xex
+#media_id = [
+#    "5DD89BE4", # Disc 1 (Europe, Australia): https://redump.info/disc/11494
+#    "0CC8C158", # Disc 1 (USA):               https://redump.info/disc/12489
+#]
+
+[[patch]]
+    name = "Skip intro"
+    desc = "Force disablesplashintro=true parameter."
+    author = "Doliman100"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8225eb40
+        value = 0x9bbf09b4
+
+[[patch]]
+    name = "Disable hash checks"
+    desc = "Allows modifying protected files. Force insecure=true parameter."
+    author = "Doliman100"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8225e918
+        value = 0x9bbf070e

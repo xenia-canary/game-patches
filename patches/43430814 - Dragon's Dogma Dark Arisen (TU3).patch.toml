@@ -1,0 +1,14 @@
+title_name = "Dragon's Dogma: Dark Arisen" # TU3
+title_id = "43430814" # CC-2068
+hash = "D70485DF8B88645D" # Default.xex
+#media_id = "0F61AFF2" # Game Disc (Disc 1)
+
+[[patch]]
+    name = "Remove Letterbox"
+    desc = "The game renders the 3D scene into a 1280x608 viewport with 56 px black bars at the top and bottom. The engine derives the viewport rect, the camera's vertical FOV and the HUD offsets from a single screen aspect constant (height/width = 0.475). Changing it to 0.5625 (16:9) makes the scene fill the whole 1280x720 frame with a correct wider vertical FOV, like the PC version, without stretching."
+    author = "LuismaSP89"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x820d26f8 # float 0.475 (608/1280) -> 0.5625 (720/1280)
+        value = 0x3f100000

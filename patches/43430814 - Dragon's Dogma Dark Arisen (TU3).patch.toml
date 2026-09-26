@@ -5,10 +5,399 @@ hash = "D70485DF8B88645D" # Default.xex
 
 [[patch]]
     name = "Remove Letterbox"
-    desc = "The game renders the 3D scene into a 1280x608 viewport with 56 px black bars at the top and bottom. The engine derives the viewport rect, the camera's vertical FOV and the HUD offsets from a single screen aspect constant (height/width = 0.475). Changing it to 0.5625 (16:9) makes the scene fill the whole 1280x720 frame with a correct wider vertical FOV, like the PC version, without stretching."
+    desc = "The game renders the 3D scene into a 1280x608 viewport (56 px black bars). The bars are the main view rectangle (0,56,1280,664) that the engine derives from a screen aspect of 0.475 and stores into view slot 0 of its screen object; the map screen reads that rectangle back and hard-codes the 56 px bar offset in its own maths, so it only works with the letterboxed rectangle (the first version of this patch, which just changed the aspect constant, made the map auto-scroll and flicker whenever the cursor touched a location icon). This version forces the engine onto its native 16:9 branch (aspect 0.5625, no letterbox flag) for the viewport, FOV and HUD, keeps computing the letterbox rectangle from the untouched 0.475 constant but stores it into the unused view slot 7, and redirects the map/UI module reads of the main view rectangle to that slot, so the 3D scene fills the whole frame while the map keeps its original geometry and cursor magnet behaviour. The HUD offset code is left reading 0.475 on purpose: elements the map leaves unplaced sit at (0,0) and that -56 px offset keeps them off screen."
     author = "LuismaSP89"
     is_enabled = false
 
+    # Aspect selection: always the native 16:9 branch (0.5625 into +0xd14, letterbox flag +0xd19 cleared)
     [[patch.be32]]
-        address = 0x820d26f8 # float 0.475 (608/1280) -> 0.5625 (720/1280)
-        value = 0x3f100000
+        address = 0x823cace8 # was 0x893f0d18 : aspect selection: lbz d18 -> li 0 (always 0.5625, d19=0)
+        value = 0x39200000
+
+    [[patch.be32]]
+        address = 0x823c8bdc # was 0x89430d18 : letterbox setter: lbz d18 -> li 0
+        value = 0x39400000
+
+    [[patch.be32]]
+        address = 0x823cae6c # was 0xc00726f8 : event setup: 0.475 -> 0.5625
+        value = 0xc0072700
+
+    [[patch.be32]]
+        address = 0x823cae70 # was 0x993f0d19 : event setup: no d19=1
+        value = 0x60000000
+
+    # View rectangle: still computed from the untouched 0.475 constant, but stored into the unused view slot 7 instead of the main slot 0
+    [[patch.be32]]
+        address = 0x823cad34 # was 0xfda00090 : selection path: view rect from 0.475 (letterbox) instead of the chosen aspect
+        value = 0xc1a726f8
+
+    [[patch.be32]]
+        address = 0x823cad70 # was 0x38800000 : selection path: store that rect into view slot 7 instead of slot 0
+        value = 0x38800007
+
+    # Camera vertical FOV: 0.475 -> 0.5625
+    [[patch.be32]]
+        address = 0x8281d338 # was 0xc00926f8 : 0.475 -> 0.5625 (HUD offset / FOV consumers, as in v1)
+        value = 0xc0092700
+
+    # Map/UI module (0x826b0000-0x82700000): reads of the main view rectangle (+0x58/+0x5c/+0x60/+0x64 of the screen object) redirected to view slot 7 (+0xb48/+0xb4c/+0xb50/+0xb54)
+    [[patch.be32]]
+        address = 0x826bf38c # was 0x814b0058 : rect read 0x58 -> slot 7
+        value = 0x814b0b48
+
+    [[patch.be32]]
+        address = 0x826bf394 # was 0x812b005c : rect read 0x5c -> slot 7
+        value = 0x812b0b4c
+
+    [[patch.be32]]
+        address = 0x826bf39c # was 0x810b0060 : rect read 0x60 -> slot 7
+        value = 0x810b0b50
+
+    [[patch.be32]]
+        address = 0x826bf3a4 # was 0x80eb0064 : rect read 0x64 -> slot 7
+        value = 0x80eb0b54
+
+    [[patch.be32]]
+        address = 0x826c2b2c # was 0x814b0058 : rect read 0x58 -> slot 7
+        value = 0x814b0b48
+
+    [[patch.be32]]
+        address = 0x826c2b34 # was 0x812b005c : rect read 0x5c -> slot 7
+        value = 0x812b0b4c
+
+    [[patch.be32]]
+        address = 0x826c2b3c # was 0x810b0060 : rect read 0x60 -> slot 7
+        value = 0x810b0b50
+
+    [[patch.be32]]
+        address = 0x826c2b44 # was 0x80eb0064 : rect read 0x64 -> slot 7
+        value = 0x80eb0b54
+
+    [[patch.be32]]
+        address = 0x826c4c34 # was 0x812b0058 : rect read 0x58 -> slot 7
+        value = 0x812b0b48
+
+    [[patch.be32]]
+        address = 0x826c4c3c # was 0x810b005c : rect read 0x5c -> slot 7
+        value = 0x810b0b4c
+
+    [[patch.be32]]
+        address = 0x826c4c44 # was 0x80eb0060 : rect read 0x60 -> slot 7
+        value = 0x80eb0b50
+
+    [[patch.be32]]
+        address = 0x826c4c4c # was 0x80cb0064 : rect read 0x64 -> slot 7
+        value = 0x80cb0b54
+
+    [[patch.be32]]
+        address = 0x826c55f0 # was 0x812b0058 : rect read 0x58 -> slot 7
+        value = 0x812b0b48
+
+    [[patch.be32]]
+        address = 0x826c55f8 # was 0x810b005c : rect read 0x5c -> slot 7
+        value = 0x810b0b4c
+
+    [[patch.be32]]
+        address = 0x826c5600 # was 0x80eb0060 : rect read 0x60 -> slot 7
+        value = 0x80eb0b50
+
+    [[patch.be32]]
+        address = 0x826c5608 # was 0x80cb0064 : rect read 0x64 -> slot 7
+        value = 0x80cb0b54
+
+    [[patch.be32]]
+        address = 0x826c59ec # was 0x810b0058 : rect read 0x58 -> slot 7
+        value = 0x810b0b48
+
+    [[patch.be32]]
+        address = 0x826c59f4 # was 0x80eb005c : rect read 0x5c -> slot 7
+        value = 0x80eb0b4c
+
+    [[patch.be32]]
+        address = 0x826c59fc # was 0x80cb0060 : rect read 0x60 -> slot 7
+        value = 0x80cb0b50
+
+    [[patch.be32]]
+        address = 0x826c5a04 # was 0x80ab0064 : rect read 0x64 -> slot 7
+        value = 0x80ab0b54
+
+    [[patch.be32]]
+        address = 0x826cac3c # was 0x80eb0058 : rect read 0x58 -> slot 7
+        value = 0x80eb0b48
+
+    [[patch.be32]]
+        address = 0x826cac40 # was 0x808b005c : rect read 0x5c -> slot 7
+        value = 0x808b0b4c
+
+    [[patch.be32]]
+        address = 0x826cac44 # was 0x80cb0060 : rect read 0x60 -> slot 7
+        value = 0x80cb0b50
+
+    [[patch.be32]]
+        address = 0x826cac48 # was 0x83eb0064 : rect read 0x64 -> slot 7
+        value = 0x83eb0b54
+
+    [[patch.be32]]
+        address = 0x826cc6c0 # was 0x808a0058 : rect read 0x58 -> slot 7
+        value = 0x808a0b48
+
+    [[patch.be32]]
+        address = 0x826cc6c8 # was 0x806a0060 : rect read 0x60 -> slot 7
+        value = 0x806a0b50
+
+    [[patch.be32]]
+        address = 0x826cca68 # was 0x808a0058 : rect read 0x58 -> slot 7
+        value = 0x808a0b48
+
+    [[patch.be32]]
+        address = 0x826cca70 # was 0x806a0060 : rect read 0x60 -> slot 7
+        value = 0x806a0b50
+
+    [[patch.be32]]
+        address = 0x826cd8fc # was 0x814b0058 : rect read 0x58 -> slot 7
+        value = 0x814b0b48
+
+    [[patch.be32]]
+        address = 0x826cd900 # was 0x812b0060 : rect read 0x60 -> slot 7
+        value = 0x812b0b50
+
+    [[patch.be32]]
+        address = 0x826cd904 # was 0x810b005c : rect read 0x5c -> slot 7
+        value = 0x810b0b4c
+
+    [[patch.be32]]
+        address = 0x826cd90c # was 0x816b0064 : rect read 0x64 -> slot 7
+        value = 0x816b0b54
+
+    [[patch.be32]]
+        address = 0x826ce074 # was 0x814b0058 : rect read 0x58 -> slot 7
+        value = 0x814b0b48
+
+    [[patch.be32]]
+        address = 0x826ce078 # was 0x80eb0060 : rect read 0x60 -> slot 7
+        value = 0x80eb0b50
+
+    [[patch.be32]]
+        address = 0x826ce07c # was 0x832b005c : rect read 0x5c -> slot 7
+        value = 0x832b0b4c
+
+    [[patch.be32]]
+        address = 0x826ce084 # was 0x830b0064 : rect read 0x64 -> slot 7
+        value = 0x830b0b54
+
+    [[patch.be32]]
+        address = 0x826ce43c # was 0x83ab0058 : rect read 0x58 -> slot 7
+        value = 0x83ab0b48
+
+    [[patch.be32]]
+        address = 0x826ce440 # was 0x836b005c : rect read 0x5c -> slot 7
+        value = 0x836b0b4c
+
+    [[patch.be32]]
+        address = 0x826ce444 # was 0x838b0060 : rect read 0x60 -> slot 7
+        value = 0x838b0b50
+
+    [[patch.be32]]
+        address = 0x826ce448 # was 0x834b0064 : rect read 0x64 -> slot 7
+        value = 0x834b0b54
+
+    [[patch.be32]]
+        address = 0x826ce6e8 # was 0x80cb0058 : rect read 0x58 -> slot 7
+        value = 0x80cb0b48
+
+    [[patch.be32]]
+        address = 0x826ce6f0 # was 0x80ab005c : rect read 0x5c -> slot 7
+        value = 0x80ab0b4c
+
+    [[patch.be32]]
+        address = 0x826ce6f8 # was 0x814b0060 : rect read 0x60 -> slot 7
+        value = 0x814b0b50
+
+    [[patch.be32]]
+        address = 0x826ce6fc # was 0x812b0064 : rect read 0x64 -> slot 7
+        value = 0x812b0b54
+
+    [[patch.be32]]
+        address = 0x826cea38 # was 0x812b0060 : rect read 0x60 -> slot 7
+        value = 0x812b0b50
+
+    [[patch.be32]]
+        address = 0x826cea3c # was 0x814b0058 : rect read 0x58 -> slot 7
+        value = 0x814b0b48
+
+    [[patch.be32]]
+        address = 0x826cea40 # was 0x810b005c : rect read 0x5c -> slot 7
+        value = 0x810b0b4c
+
+    [[patch.be32]]
+        address = 0x826cea48 # was 0x816b0064 : rect read 0x64 -> slot 7
+        value = 0x816b0b54
+
+    [[patch.be32]]
+        address = 0x826ceba8 # was 0x83cb005c : rect read 0x5c -> slot 7
+        value = 0x83cb0b4c
+
+    [[patch.be32]]
+        address = 0x826cebb0 # was 0x80ab0060 : rect read 0x60 -> slot 7
+        value = 0x80ab0b50
+
+    [[patch.be32]]
+        address = 0x826cf3b4 # was 0x814b0060 : rect read 0x60 -> slot 7
+        value = 0x814b0b50
+
+    [[patch.be32]]
+        address = 0x826cf3b8 # was 0x808b0058 : rect read 0x58 -> slot 7
+        value = 0x808b0b48
+
+    [[patch.be32]]
+        address = 0x826cf3bc # was 0x80eb005c : rect read 0x5c -> slot 7
+        value = 0x80eb0b4c
+
+    [[patch.be32]]
+        address = 0x826cf3c4 # was 0x816b0064 : rect read 0x64 -> slot 7
+        value = 0x816b0b54
+
+    [[patch.be32]]
+        address = 0x826d1120 # was 0x83ab005c : rect read 0x5c -> slot 7
+        value = 0x83ab0b4c
+
+    [[patch.be32]]
+        address = 0x826d2580 # was 0x814b0058 : rect read 0x58 -> slot 7
+        value = 0x814b0b48
+
+    [[patch.be32]]
+        address = 0x826d2588 # was 0x83cb0060 : rect read 0x60 -> slot 7
+        value = 0x83cb0b50
+
+    [[patch.be32]]
+        address = 0x826d2594 # was 0x83ab005c : rect read 0x5c -> slot 7
+        value = 0x83ab0b4c
+
+    [[patch.be32]]
+        address = 0x826d2598 # was 0x816b0064 : rect read 0x64 -> slot 7
+        value = 0x816b0b54
+
+    [[patch.be32]]
+        address = 0x826d49cc # was 0x80eb0058 : rect read 0x58 -> slot 7
+        value = 0x80eb0b48
+
+    [[patch.be32]]
+        address = 0x826d49d4 # was 0x808b0064 : rect read 0x64 -> slot 7
+        value = 0x808b0b54
+
+    [[patch.be32]]
+        address = 0x826d49d8 # was 0x80ab005c : rect read 0x5c -> slot 7
+        value = 0x80ab0b4c
+
+    [[patch.be32]]
+        address = 0x826d49e0 # was 0x80cb0060 : rect read 0x60 -> slot 7
+        value = 0x80cb0b50
+
+    [[patch.be32]]
+        address = 0x826d519c # was 0x83ab0058 : rect read 0x58 -> slot 7
+        value = 0x83ab0b48
+
+    [[patch.be32]]
+        address = 0x826d51a0 # was 0x832b005c : rect read 0x5c -> slot 7
+        value = 0x832b0b4c
+
+    [[patch.be32]]
+        address = 0x826d51a4 # was 0x838b0060 : rect read 0x60 -> slot 7
+        value = 0x838b0b50
+
+    [[patch.be32]]
+        address = 0x826d51a8 # was 0x830b0064 : rect read 0x64 -> slot 7
+        value = 0x830b0b54
+
+    [[patch.be32]]
+        address = 0x826d5314 # was 0x80cb005c : rect read 0x5c -> slot 7
+        value = 0x80cb0b4c
+
+    [[patch.be32]]
+        address = 0x826d5318 # was 0x812b0058 : rect read 0x58 -> slot 7
+        value = 0x812b0b48
+
+    [[patch.be32]]
+        address = 0x826d531c # was 0x80eb0060 : rect read 0x60 -> slot 7
+        value = 0x80eb0b50
+
+    [[patch.be32]]
+        address = 0x826d5320 # was 0x814b0064 : rect read 0x64 -> slot 7
+        value = 0x814b0b54
+
+    [[patch.be32]]
+        address = 0x826d95f4 # was 0x814b0058 : rect read 0x58 -> slot 7
+        value = 0x814b0b48
+
+    [[patch.be32]]
+        address = 0x826d95f8 # was 0x812b0060 : rect read 0x60 -> slot 7
+        value = 0x812b0b50
+
+    [[patch.be32]]
+        address = 0x826d95fc # was 0x810b005c : rect read 0x5c -> slot 7
+        value = 0x810b0b4c
+
+    [[patch.be32]]
+        address = 0x826d9608 # was 0x816b0064 : rect read 0x64 -> slot 7
+        value = 0x816b0b54
+
+    [[patch.be32]]
+        address = 0x826d9884 # was 0x80eb0058 : rect read 0x58 -> slot 7
+        value = 0x80eb0b48
+
+    [[patch.be32]]
+        address = 0x826d9888 # was 0x80ab0060 : rect read 0x60 -> slot 7
+        value = 0x80ab0b50
+
+    [[patch.be32]]
+        address = 0x826d988c # was 0x808b005c : rect read 0x5c -> slot 7
+        value = 0x808b0b4c
+
+    [[patch.be32]]
+        address = 0x826de3d8 # was 0x812b005c : rect read 0x5c -> slot 7
+        value = 0x812b0b4c
+
+    [[patch.be32]]
+        address = 0x826de3dc # was 0x816b0064 : rect read 0x64 -> slot 7
+        value = 0x816b0b54
+
+    [[patch.be32]]
+        address = 0x826df188 # was 0x80ab005c : rect read 0x5c -> slot 7
+        value = 0x80ab0b4c
+
+    [[patch.be32]]
+        address = 0x826df18c # was 0x816b0064 : rect read 0x64 -> slot 7
+        value = 0x816b0b54
+
+    [[patch.be32]]
+        address = 0x826e75dc # was 0x814b0058 : rect read 0x58 -> slot 7
+        value = 0x814b0b48
+
+    [[patch.be32]]
+        address = 0x826e75e4 # was 0x812b005c : rect read 0x5c -> slot 7
+        value = 0x812b0b4c
+
+    [[patch.be32]]
+        address = 0x826e75ec # was 0x810b0060 : rect read 0x60 -> slot 7
+        value = 0x810b0b50
+
+    [[patch.be32]]
+        address = 0x826e75f4 # was 0x80eb0064 : rect read 0x64 -> slot 7
+        value = 0x80eb0b54
+
+    [[patch.be32]]
+        address = 0x826fc9d8 # was 0x810b0058 : rect read 0x58 -> slot 7
+        value = 0x810b0b48
+
+    [[patch.be32]]
+        address = 0x826fc9e0 # was 0x80eb005c : rect read 0x5c -> slot 7
+        value = 0x80eb0b4c
+
+    [[patch.be32]]
+        address = 0x826fc9e8 # was 0x80cb0060 : rect read 0x60 -> slot 7
+        value = 0x80cb0b50
+
+    [[patch.be32]]
+        address = 0x826fc9f0 # was 0x80ab0064 : rect read 0x64 -> slot 7
+        value = 0x80ab0b54
+

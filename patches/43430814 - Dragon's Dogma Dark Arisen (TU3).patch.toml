@@ -400,4 +400,3 @@ hash = "D70485DF8B88645D" # Default.xex
     [[patch.be32]]
         address = 0x826fc9f0 # was 0x80ab0064 : rect read 0x64 -> slot 7
         value = 0x80ab0b54
-

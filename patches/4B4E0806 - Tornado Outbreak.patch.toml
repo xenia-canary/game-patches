@@ -1,0 +1,32 @@
+title_name = "Tornado Outbreak"
+title_id = "4B4E0806" # KN-2054
+hash = "9EEFBEED02750FAE"
+
+[[patch]]
+    name = "60 FPS"
+    author = "larryeedwards"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82033868
+        value = 0.01666667
+
+[[patch]]
+    name = "120 FPS"
+    desc = "Requires vsync = false and framerate_limit set to either 120 or 0."
+    author = "larryeedwards"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82033868
+        value = 0.00833333
+
+[[patch]]
+    name = "Uncapped FPS"
+    desc = "Requires vsync = false and framerate_limit = 0."
+    author = "larryeedwards"
+    is_enabled = false
+
+    [[patch.f32]]
+        address = 0x82033868
+        value = 0.0

@@ -1,10 +1,10 @@
 title_name = "Tornado Outbreak"
 title_id = "4B4E0806" # KN-2054
-hash = "9EEFBEED02750FAE"
+hash = "9EEFBEED02750FAE" # default.xex
 #media_id = [
-#    "232CC36C", # Disc: (USA): https://redump.info/disc/100844
-#    "6E1D035A ", # Disc: (PAL) https://redump.info/disc/57595
-#]
+#     "232CC36C", # Disc (USA): https://redump.info/disc/100844
+#     "6E1D035A", # Disc (PAL): https://redump.info/disc/57595
+# ]
 
 [[patch]]
     name = "60 FPS"

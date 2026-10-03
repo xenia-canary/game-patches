@@ -1,0 +1,50 @@
+title_name = "Golden Axe" # Sega Vintage Collection (XBLA)
+title_id = "58410862" # XA-2146
+hash = "E144DC735E6D9883" # default.xex
+#media_id = "5A27A44F"
+
+[[patch]]
+    name = "Skip Xbox Live init (fixes Press Start hang)"
+    desc = "M2's firmware shell opens a Live matchmaking listen-socket on port 1000 and waits forever for an inbound Live infrastructure handshake. Patches network import stubs so the shell takes the offline code path and reaches gameplay."
+    author = "preservation-pipeline"
+    is_enabled = false
+
+    # NetDll_socket -> li r3, -1 ; blr  (return INVALID_SOCKET)
+    [[patch.be32]]
+        address = 0x822c841c
+        value = 0x3860ffff
+    [[patch.be32]]
+        address = 0x822c8420
+        value = 0x4e800020
+
+    # NetDll_bind -> li r3, -1 ; blr  (defense in depth)
+    [[patch.be32]]
+        address = 0x822c844c
+        value = 0x3860ffff
+    [[patch.be32]]
+        address = 0x822c8450
+        value = 0x4e800020
+
+    # NetDll_listen -> li r3, -1 ; blr  (defense in depth)
+    [[patch.be32]]
+        address = 0x822c846c
+        value = 0x3860ffff
+    [[patch.be32]]
+        address = 0x822c8470
+        value = 0x4e800020
+
+    # NetDll_XNetStartup -> li r3, 1 ; blr  (defense in depth)
+    [[patch.be32]]
+        address = 0x822c838c
+        value = 0x38600001
+    [[patch.be32]]
+        address = 0x822c8390
+        value = 0x4e800020
+
+    # NetDll_XNetGetEthernetLinkStatus -> li r3, 0 ; blr  (defense in depth)
+    [[patch.be32]]
+        address = 0x822c83fc
+        value = 0x38600000
+    [[patch.be32]]
+        address = 0x822c8400
+        value = 0x4e800020

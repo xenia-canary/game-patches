@@ -32,6 +32,229 @@ hash = "C0A4515E25B5D74B" # Disc 1/2/3/4, default.xex
         value = 0x4e800020 # blr
 
 [[patch]]
+    name = "Train Freeze Cutscene Crash Fix"
+    desc = "Stops the crash in the disc 3 cutscene where the King and his guards are frozen on the train."
+    author = "peerloomllc"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822c91c8
+        value = 0x48e64239 # bl 0x8312d400 (was bl 0x822c9498)
+    [[patch.be32]]
+        address = 0x8312d400
+        value = 0x7d8802a6 # mflr 12
+    [[patch.be32]]
+        address = 0x8312d404
+        value = 0x9181fff8 # stw 12, -8(1)
+    [[patch.be32]]
+        address = 0x8312d408
+        value = 0x9421ff90 # stwu 1, -112(1)
+    [[patch.be32]]
+        address = 0x8312d40c
+        value = 0x90610050 # stw 3, 80(1)
+    [[patch.be32]]
+        address = 0x8312d410
+        value = 0x4b19c089 # bl 0x822c9498
+    [[patch.be32]]
+        address = 0x8312d414
+        value = 0x28030000 # cmplwi 3, 0
+    [[patch.be32]]
+        address = 0x8312d418
+        value = 0x418200f4 # beq 0x8312d50c
+    [[patch.be32]]
+        address = 0x8312d41c
+        value = 0x7d6902a6 # mfctr 11
+    [[patch.be32]]
+        address = 0x8312d420
+        value = 0x3d808261 # lis 12, -32159
+    [[patch.be32]]
+        address = 0x8312d424
+        value = 0x618c4ae8 # ori 12, 12, 19176
+    [[patch.be32]]
+        address = 0x8312d428
+        value = 0x7c0b6040 # cmplw 11, 12
+    [[patch.be32]]
+        address = 0x8312d42c
+        value = 0x408200e0 # bne 0x8312d50c
+    [[patch.be32]]
+        address = 0x8312d430
+        value = 0x90610054 # stw 3, 84(1)
+    [[patch.be32]]
+        address = 0x8312d434
+        value = 0x80610050 # lwz 3, 80(1)
+    [[patch.be32]]
+        address = 0x8312d438
+        value = 0x81630000 # lwz 11, 0(3)
+    [[patch.be32]]
+        address = 0x8312d43c
+        value = 0x3d808200 # lis 12, -32256
+    [[patch.be32]]
+        address = 0x8312d440
+        value = 0x618cfab0 # ori 12, 12, 64176
+    [[patch.be32]]
+        address = 0x8312d444
+        value = 0x7c0b6040 # cmplw 11, 12
+    [[patch.be32]]
+        address = 0x8312d448
+        value = 0x4182002c # beq 0x8312d474
+    [[patch.be32]]
+        address = 0x8312d44c
+        value = 0x816b011c # lwz 11, 284(11)
+    [[patch.be32]]
+        address = 0x8312d450
+        value = 0x7d6903a6 # mtctr 11
+    [[patch.be32]]
+        address = 0x8312d454
+        value = 0x4e800421 # bctrl
+    [[patch.be32]]
+        address = 0x8312d458
+        value = 0x28030000 # cmplwi 3, 0
+    [[patch.be32]]
+        address = 0x8312d45c
+        value = 0x418200ac # beq 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d460
+        value = 0x81630000 # lwz 11, 0(3)
+    [[patch.be32]]
+        address = 0x8312d464
+        value = 0x3d808200 # lis 12, -32256
+    [[patch.be32]]
+        address = 0x8312d468
+        value = 0x618cfab0 # ori 12, 12, 64176
+    [[patch.be32]]
+        address = 0x8312d46c
+        value = 0x7c0b6040 # cmplw 11, 12
+    [[patch.be32]]
+        address = 0x8312d470
+        value = 0x40820098 # bne 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d474
+        value = 0x89630050 # lbz 11, 80(3)
+    [[patch.be32]]
+        address = 0x8312d478
+        value = 0x280b0002 # cmplwi 11, 2
+    [[patch.be32]]
+        address = 0x8312d47c
+        value = 0x4082008c # bne 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d480
+        value = 0x816300b0 # lwz 11, 176(3)
+    [[patch.be32]]
+        address = 0x8312d484
+        value = 0x280b0000 # cmplwi 11, 0
+    [[patch.be32]]
+        address = 0x8312d488
+        value = 0x41820080 # beq 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d48c
+        value = 0x814b0000 # lwz 10, 0(11)
+    [[patch.be32]]
+        address = 0x8312d490
+        value = 0x3d808200 # lis 12, -32256
+    [[patch.be32]]
+        address = 0x8312d494
+        value = 0x618c3928 # ori 12, 12, 14632
+    [[patch.be32]]
+        address = 0x8312d498
+        value = 0x7c0a6040 # cmplw 10, 12
+    [[patch.be32]]
+        address = 0x8312d49c
+        value = 0x4082006c # bne 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d4a0
+        value = 0x816b0030 # lwz 11, 48(11)
+    [[patch.be32]]
+        address = 0x8312d4a4
+        value = 0x280b0000 # cmplwi 11, 0
+    [[patch.be32]]
+        address = 0x8312d4a8
+        value = 0x41820060 # beq 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d4ac
+        value = 0x814b001c # lwz 10, 28(11)
+    [[patch.be32]]
+        address = 0x8312d4b0
+        value = 0x812b0020 # lwz 9, 32(11)
+    [[patch.be32]]
+        address = 0x8312d4b4
+        value = 0x28090000 # cmplwi 9, 0
+    [[patch.be32]]
+        address = 0x8312d4b8
+        value = 0x41820048 # beq 0x8312d500
+    [[patch.be32]]
+        address = 0x8312d4bc
+        value = 0x28090400 # cmplwi 9, 1024
+    [[patch.be32]]
+        address = 0x8312d4c0
+        value = 0x41810048 # bgt 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d4c4
+        value = 0x7d2903a6 # mtctr 9
+    [[patch.be32]]
+        address = 0x8312d4c8
+        value = 0x3d808336 # lis 12, -31946
+    [[patch.be32]]
+        address = 0x8312d4cc
+        value = 0x618cca10 # ori 12, 12, 51728
+    [[patch.be32]]
+        address = 0x8312d4d0
+        value = 0x810a0000 # lwz 8, 0(10)
+    [[patch.be32]]
+        address = 0x8312d4d4
+        value = 0x28080000 # cmplwi 8, 0
+    [[patch.be32]]
+        address = 0x8312d4d8
+        value = 0x41820030 # beq 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d4dc
+        value = 0x80e80014 # lwz 7, 20(8)
+    [[patch.be32]]
+        address = 0x8312d4e0
+        value = 0x7c076040 # cmplw 7, 12
+    [[patch.be32]]
+        address = 0x8312d4e4
+        value = 0x40820014 # bne 0x8312d4f8
+    [[patch.be32]]
+        address = 0x8312d4e8
+        value = 0x80e80004 # lwz 7, 4(8)
+    [[patch.be32]]
+        address = 0x8312d4ec
+        value = 0x28070000 # cmplwi 7, 0
+    [[patch.be32]]
+        address = 0x8312d4f0
+        value = 0x41820010 # beq 0x8312d500
+    [[patch.be32]]
+        address = 0x8312d4f4
+        value = 0x48000014 # b 0x8312d508
+    [[patch.be32]]
+        address = 0x8312d4f8
+        value = 0x394a0004 # addi 10, 10, 4
+    [[patch.be32]]
+        address = 0x8312d4fc
+        value = 0x4200ffd4 # bdnz 0x8312d4d0
+    [[patch.be32]]
+        address = 0x8312d500
+        value = 0x38600000 # li 3, 0
+    [[patch.be32]]
+        address = 0x8312d504
+        value = 0x48000008 # b 0x8312d50c
+    [[patch.be32]]
+        address = 0x8312d508
+        value = 0x80610054 # lwz 3, 84(1)
+    [[patch.be32]]
+        address = 0x8312d50c
+        value = 0x38210070 # addi 1, 1, 112
+    [[patch.be32]]
+        address = 0x8312d510
+        value = 0x8181fff8 # lwz 12, -8(1)
+    [[patch.be32]]
+        address = 0x8312d514
+        value = 0x7d8803a6 # mtlr 12
+    [[patch.be32]]
+        address = 0x8312d518
+        value = 0x4e800020 # blr
+
+[[patch]]
     name = "Disable Occlusion Queries - Stability Fix"
     desc = "May prevent crashing, especially when using Vulkan."
     author = "boma"

@@ -1,0 +1,27 @@
+title_name = "Forza Motorsport 4"
+title_id = "4D530910" # MS-2320
+hash = "06DEF37749E2CEAC" # default.xex
+#media_id = [
+#    "61D62D9F", # Disc 1 (Europe, Australia): https://redump.info/disc/50817
+#    "26FF1101", # Disc 1 (USA):               https://redump.info/disc/79785
+#]
+
+[[patch]]
+    name = "Skip intro"
+    desc = "Force disablesplashintro=true parameter."
+    author = "Doliman100"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823e7ec4
+        value = 0x9bbf0b5c
+
+[[patch]]
+    name = "Disable hash checks"
+    desc = "Allows modifying protected files. Force insecure=true parameter."
+    author = "Doliman100"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823e7c70
+        value = 0x9bbf08b7

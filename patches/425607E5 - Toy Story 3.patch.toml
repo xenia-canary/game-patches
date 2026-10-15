@@ -19,14 +19,14 @@ hash = "A75D707A47A9A416" # default.xex
         value = 0x01 # 0x00=unlimited; 0x01=60FPS; 0x02=30FPS
 
 [[patch]]
-    name = "1024x576 Resolution"
-    desc = "Prevents flickering garbage in the bottom half of the screen. Original resolution is 1152x640."
+    name = "1280x720 Resolution"
+    desc = "Original resolution is 1152x640."
     author = "Sowa_95"
     is_enabled = false
 
     [[patch.be16]]
         address = 0x82533712
-        value = 0x0400
+        value = 0x0500
     [[patch.be16]]
         address = 0x82533716
-        value = 0x0240
+        value = 0x02d0

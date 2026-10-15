@@ -52,6 +52,459 @@ hash = "3C19B6F951F93D49" # Disc 1/2/3, default.xex
         value = 0x39400001
 
 [[patch]]
+    name = "60 FPS outside cutscenes"
+    desc = "60 fps when exploring and in battles; cutscenes and summons stay at 30. Do not enable with 60 FPS (WIP)."
+    author = "peerloomllc"
+    is_enabled = false
+
+    # swap path: pick the frame rate and speed
+    [[patch.be32]]
+        address = 0x8246ab68
+        value = 0x482dab98
+    [[patch.be32]]
+        address = 0x82745700
+        value = 0x3d208277
+    [[patch.be32]]
+        address = 0x82745704
+        value = 0x81293ff8
+    [[patch.be32]]
+        address = 0x82745708
+        value = 0x3d0082de
+    [[patch.be32]]
+        address = 0x8274570c
+        value = 0x3908a878
+    [[patch.be32]]
+        address = 0x82745710
+        value = 0x3cc03f00
+    [[patch.be32]]
+        address = 0x82745714
+        value = 0x60c60001
+    [[patch.be32]]
+        address = 0x82745718
+        value = 0x71270006
+    [[patch.be32]]
+        address = 0x8274571c
+        value = 0x4182003c
+    [[patch.be32]]
+        address = 0x82745720
+        value = 0x3ce082e4
+    [[patch.be32]]
+        address = 0x82745724
+        value = 0x80a75620
+    [[patch.be32]]
+        address = 0x82745728
+        value = 0x80e75600
+    [[patch.be32]]
+        address = 0x8274572c
+        value = 0x7ce72b78
+    [[patch.be32]]
+        address = 0x82745730
+        value = 0x2f070000
+    [[patch.be32]]
+        address = 0x82745734
+        value = 0x409a0024
+    [[patch.be32]]
+        address = 0x82745738
+        value = 0x90c80008
+    [[patch.be32]]
+        address = 0x8274573c
+        value = 0x3ce03f00
+    [[patch.be32]]
+        address = 0x82745740
+        value = 0x90e8000c
+    [[patch.be32]]
+        address = 0x82745744
+        value = 0x90e80014
+    [[patch.be32]]
+        address = 0x82745748
+        value = 0x3cc082df
+    [[patch.be32]]
+        address = 0x8274574c
+        value = 0x90e6c57c
+    [[patch.be32]]
+        address = 0x82745750
+        value = 0x39400001
+    [[patch.be32]]
+        address = 0x82745754
+        value = 0x4bd25418
+    [[patch.be32]]
+        address = 0x82745758
+        value = 0x80e80008
+    [[patch.be32]]
+        address = 0x8274575c
+        value = 0x7f073000
+    [[patch.be32]]
+        address = 0x82745760
+        value = 0x409a0020
+    [[patch.be32]]
+        address = 0x82745764
+        value = 0x3ce03f80
+    [[patch.be32]]
+        address = 0x82745768
+        value = 0x90e80008
+    [[patch.be32]]
+        address = 0x8274576c
+        value = 0x80c80004
+    [[patch.be32]]
+        address = 0x82745770
+        value = 0x90c8000c
+    [[patch.be32]]
+        address = 0x82745774
+        value = 0x90c80014
+    [[patch.be32]]
+        address = 0x82745778
+        value = 0x3cc082df
+    [[patch.be32]]
+        address = 0x8274577c
+        value = 0x90e6c57c
+    [[patch.be32]]
+        address = 0x82745780
+        value = 0x815f33a4
+    [[patch.be32]]
+        address = 0x82745784
+        value = 0x4bd253e8
+    # event start: count it
+    [[patch.be32]]
+        address = 0x823f6c00
+        value = 0x4834ec00
+    [[patch.be32]]
+        address = 0x82745800
+        value = 0x3d6082e4
+    [[patch.be32]]
+        address = 0x82745804
+        value = 0x818b5600
+    [[patch.be32]]
+        address = 0x82745808
+        value = 0x398c0001
+    [[patch.be32]]
+        address = 0x8274580c
+        value = 0x918b5600
+    [[patch.be32]]
+        address = 0x82745810
+        value = 0x7d8802a6
+    [[patch.be32]]
+        address = 0x82745814
+        value = 0x4bcb13f0
+    # event end: uncount it
+    [[patch.be32]]
+        address = 0x823f65d0
+        value = 0x4834f270
+    [[patch.be32]]
+        address = 0x82745840
+        value = 0x3d6082e4
+    [[patch.be32]]
+        address = 0x82745844
+        value = 0x818b5600
+    [[patch.be32]]
+        address = 0x82745848
+        value = 0x2c0c0000
+    [[patch.be32]]
+        address = 0x8274584c
+        value = 0x4182000c
+    [[patch.be32]]
+        address = 0x82745850
+        value = 0x398cffff
+    [[patch.be32]]
+        address = 0x82745854
+        value = 0x918b5600
+    [[patch.be32]]
+        address = 0x82745858
+        value = 0x7d8802a6
+    [[patch.be32]]
+        address = 0x8274585c
+        value = 0x4bcb0d78
+    # summon map change: 1 while a summon plays its own scene
+    [[patch.be32]]
+        address = 0x821eb620
+        value = 0x4855a260
+    [[patch.be32]]
+        address = 0x82745880
+        value = 0x3d6082e4
+    [[patch.be32]]
+        address = 0x82745884
+        value = 0x908b5620
+    [[patch.be32]]
+        address = 0x82745888
+        value = 0x7d8802a6
+    [[patch.be32]]
+        address = 0x8274588c
+        value = 0x4baa5d98
+    # animation player: at 60 fps hold a loop's last frame for two frames
+    [[patch.be32]]
+        address = 0x82141754
+        value = 0x486044ac
+    [[patch.be32]]
+        address = 0x82745c00
+        value = 0xff006800
+    [[patch.be32]]
+        address = 0x82745c04
+        value = 0x4099003c
+    [[patch.be32]]
+        address = 0x82745c08
+        value = 0x3d4082de
+    [[patch.be32]]
+        address = 0x82745c0c
+        value = 0x814aa880
+    [[patch.be32]]
+        address = 0x82745c10
+        value = 0x6d4a3f00
+    [[patch.be32]]
+        address = 0x82745c14
+        value = 0x2b0a0001
+    [[patch.be32]]
+        address = 0x82745c18
+        value = 0x409a002c
+    [[patch.be32]]
+        address = 0x82745c1c
+        value = 0xff0c6800
+    [[patch.be32]]
+        address = 0x82745c20
+        value = 0x41990024
+    [[patch.be32]]
+        address = 0x82745c24
+        value = 0x41980018
+    [[patch.be32]]
+        address = 0x82745c28
+        value = 0xd1bffff8
+    [[patch.be32]]
+        address = 0x82745c2c
+        value = 0x815ffff8
+    [[patch.be32]]
+        address = 0x82745c30
+        value = 0x394a0001
+    [[patch.be32]]
+        address = 0x82745c34
+        value = 0x915ffff8
+    [[patch.be32]]
+        address = 0x82745c38
+        value = 0x48000008
+    [[patch.be32]]
+        address = 0x82745c3c
+        value = 0xd1bffff8
+    [[patch.be32]]
+        address = 0x82745c40
+        value = 0x4b9fbb60
+    [[patch.be32]]
+        address = 0x82745c44
+        value = 0x4b9fbb18
+    # timeline start: at 60 fps begin the step accumulator at half a step
+    [[patch.be32]]
+        address = 0x821f3e28
+        value = 0x485520d8
+    [[patch.be32]]
+        address = 0x82745f00
+        value = 0x3d6082de
+    [[patch.be32]]
+        address = 0x82745f04
+        value = 0x816ba880
+    [[patch.be32]]
+        address = 0x82745f08
+        value = 0x6d6b3f00
+    [[patch.be32]]
+        address = 0x82745f0c
+        value = 0x2b0b0001
+    [[patch.be32]]
+        address = 0x82745f10
+        value = 0x409a0010
+    [[patch.be32]]
+        address = 0x82745f14
+        value = 0x3d603f00
+    [[patch.be32]]
+        address = 0x82745f18
+        value = 0x917f004c
+    [[patch.be32]]
+        address = 0x82745f1c
+        value = 0x4baadf10
+    [[patch.be32]]
+        address = 0x82745f20
+        value = 0xd01f004c
+    [[patch.be32]]
+        address = 0x82745f24
+        value = 0x4baadf08
+    # timer tick (charge gauge and the like): at 60 fps add half a step
+    [[patch.be32]]
+        address = 0x823f0eb4
+        value = 0x4835508c
+    [[patch.be32]]
+        address = 0x82745f40
+        value = 0x3d6082de
+    [[patch.be32]]
+        address = 0x82745f44
+        value = 0x816ba880
+    [[patch.be32]]
+        address = 0x82745f48
+        value = 0x6d6b3f00
+    [[patch.be32]]
+        address = 0x82745f4c
+        value = 0x2b0b0001
+    [[patch.be32]]
+        address = 0x82745f50
+        value = 0x409a0014
+    [[patch.be32]]
+        address = 0x82745f54
+        value = 0x3d6082de
+    [[patch.be32]]
+        address = 0x82745f58
+        value = 0xc18ba884
+    [[patch.be32]]
+        address = 0x82745f5c
+        value = 0xec006b3a
+    [[patch.be32]]
+        address = 0x82745f60
+        value = 0x4bcaaf58
+    [[patch.be32]]
+        address = 0x82745f64
+        value = 0xec00682a
+    [[patch.be32]]
+        address = 0x82745f68
+        value = 0x4bcaaf50
+    # timeline update: at normal speed drop the half step left from 60 fps
+    [[patch.be32]]
+        address = 0x821f3fa0
+        value = 0x48551960
+    [[patch.be32]]
+        address = 0x82745900
+        value = 0x3d6082de
+    [[patch.be32]]
+        address = 0x82745904
+        value = 0x816ba880
+    [[patch.be32]]
+        address = 0x82745908
+        value = 0x6d6b3f80
+    [[patch.be32]]
+        address = 0x8274590c
+        value = 0x2b0b0000
+    [[patch.be32]]
+        address = 0x82745910
+        value = 0x409a00a4
+    [[patch.be32]]
+        address = 0x82745914
+        value = 0xc19f0048
+    [[patch.be32]]
+        address = 0x82745918
+        value = 0xed4c602a
+    [[patch.be32]]
+        address = 0x8274591c
+        value = 0xfd20565c
+    [[patch.be32]]
+        address = 0x82745920
+        value = 0xd921fff0
+    [[patch.be32]]
+        address = 0x82745924
+        value = 0x8121fff4
+    [[patch.be32]]
+        address = 0x82745928
+        value = 0xc901fff0
+    [[patch.be32]]
+        address = 0x8274592c
+        value = 0xfd00469c
+    [[patch.be32]]
+        address = 0x82745930
+        value = 0xfd004018
+    [[patch.be32]]
+        address = 0x82745934
+        value = 0xecea4028
+    [[patch.be32]]
+        address = 0x82745938
+        value = 0xfce03a10
+    [[patch.be32]]
+        address = 0x8274593c
+        value = 0x3d603c23
+    [[patch.be32]]
+        address = 0x82745940
+        value = 0x616bd70a
+    [[patch.be32]]
+        address = 0x82745944
+        value = 0x9161ffec
+    [[patch.be32]]
+        address = 0x82745948
+        value = 0xc0c1ffec
+    [[patch.be32]]
+        address = 0x8274594c
+        value = 0xff873000
+    [[patch.be32]]
+        address = 0x82745950
+        value = 0x409c0064
+    [[patch.be32]]
+        address = 0x82745954
+        value = 0xc01f004c
+    [[patch.be32]]
+        address = 0x82745958
+        value = 0xeca0002a
+    [[patch.be32]]
+        address = 0x8274595c
+        value = 0xfc802e5c
+    [[patch.be32]]
+        address = 0x82745960
+        value = 0xd881ffe0
+    [[patch.be32]]
+        address = 0x82745964
+        value = 0x8141ffe4
+    [[patch.be32]]
+        address = 0x82745968
+        value = 0x2b0a0001
+    [[patch.be32]]
+        address = 0x8274596c
+        value = 0x41990048
+    [[patch.be32]]
+        address = 0x82745970
+        value = 0x712c0001
+    [[patch.be32]]
+        address = 0x82745974
+        value = 0x41820010
+    [[patch.be32]]
+        address = 0x82745978
+        value = 0x39290001
+    [[patch.be32]]
+        address = 0x8274597c
+        value = 0x7d2a4850
+    [[patch.be32]]
+        address = 0x82745980
+        value = 0x7d2a4850
+    [[patch.be32]]
+        address = 0x82745984
+        value = 0x39800000
+    [[patch.be32]]
+        address = 0x82745988
+        value = 0x9181fff0
+    [[patch.be32]]
+        address = 0x8274598c
+        value = 0x9121fff4
+    [[patch.be32]]
+        address = 0x82745990
+        value = 0xc921fff0
+    [[patch.be32]]
+        address = 0x82745994
+        value = 0xfd204e9c
+    [[patch.be32]]
+        address = 0x82745998
+        value = 0xfd204818
+    [[patch.be32]]
+        address = 0x8274599c
+        value = 0x3d603f00
+    [[patch.be32]]
+        address = 0x827459a0
+        value = 0x9161ffec
+    [[patch.be32]]
+        address = 0x827459a4
+        value = 0xc0c1ffec
+    [[patch.be32]]
+        address = 0x827459a8
+        value = 0xed2901b2
+    [[patch.be32]]
+        address = 0x827459ac
+        value = 0xd13f0048
+    [[patch.be32]]
+        address = 0x827459b0
+        value = 0x919f004c
+    [[patch.be32]]
+        address = 0x827459b4
+        value = 0xc01f004c
+    [[patch.be32]]
+        address = 0x827459b8
+        value = 0x4baae5ec
+
+[[patch]]
     name = "Debug Menu"
     author = "Wylie"
     is_enabled = false

@@ -1,0 +1,20 @@
+title_name = "Eternal Sonata"
+title_id = "4E4D07E4" # NM-2020
+hash = "B8538F24FAFE941D" # default.xex (USA)
+#media_id = "6DEF2F38" # Disc (USA)
+
+[[patch]]
+    name = "60 FPS"
+    desc = "60 fps in exploration, cutscenes and battles at normal game speed."
+    author = "peerloomllc"
+    is_enabled = false
+
+    # frame-rate table entry for gameplay: 30 -> 60
+    [[patch.be8]]
+        address = 0x8202e5f4
+        value = 0x3c
+
+    # battle start: SetFrameRate(30) -> SetFrameRate(60)
+    [[patch.be32]]
+        address = 0x82179f70
+        value = 0x3880003c

@@ -99,19 +99,3 @@ jobs:
           git push --delete origin $tag || true
           gh release delete $tag || true
           gh release create $tag assets/* --target $GITHUB_SHA -t $tag
-
-#  workflow_dispatch:
-#    if: |-
-#      github.event_name  == 'push' &&
-#      github.ref == 'refs/heads/main' &&
-#      github.repository == 'xenia-canary/game-patches'
-#    needs: lint
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@main
-#        with:
-#          repository: xenia-canary/xenia-canary.github.io
-#      - name: Workflow dispatch
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.WORKFLOW }}
-#        run: gh workflow run jekyll.yml

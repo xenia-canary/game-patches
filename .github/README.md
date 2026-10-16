@@ -35,18 +35,7 @@ Plugin documentation can be found [here](Plugin-Docs.md).
     * [Latest Xenia Canary experimental](https://github.com/xenia-canary/xenia-canary-releases/releases/latest)
         * Patches aren't supported on master or outdated versions of Xenia Canary.
     * The right version of the game e.g. Title Update (TU).
-    <!--
-        * Try commenting out the `hash` of the patch like so:
-            ```toml
-            # Add # before hash
-            hash = "################"
-            # like this
-            #hash = "################"
-            ```
-            **This isn't guaranteed to work, and may cause crashes.**
-            <br>Hashes are used to verify the correct version of a game is being patched, and this bypasses it.
-            <br><br>If the game has multiple modules you will need to [get the hash(es)](#How-to-get-the-module-hash-and-filename)
-    -->
+        * DON'T change the hash unless you know what you're doing. Expect crashes or the patch to not work if you do this.
     * `apply_patches` set to `true` (default) in the [Xenia Canary config](https://github.com/xenia-canary/xenia-canary/wiki/Options#canary).
 1. Open the .patch.toml file that corresponds to your game in a text editor (Notepad, [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [Notepad++](https://notepad-plus-plus.org/), etc.)
 2. Change `is_enabled` from `false` to `true`. For example, to enable a 60 FPS patch:
@@ -123,7 +112,7 @@ Framerates above 60 FPS require [vsync to be changed from true to false in the X
     * See [Editor Integrations](https://ota-meshi.github.io/eslint-plugin-toml/user-guide/#editor-integrations)
   * Visual Studio Code/VSCodium extensions:
     * [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
-  * To make things easier, put Xenia Canary in the directory that contains `/patches` and run it with [`portable.txt`](https://github.com/xenia-project/xenia/wiki/Options#how-to-use).
+  * To make things easier, put Xenia Canary in the directory that contains `/patches`.
 
 ### Guidelines
 * Patch must be named `Title ID - Game Title.patch.toml` and be in `/patches`.
@@ -132,7 +121,8 @@ Framerates above 60 FPS require [vsync to be changed from true to false in the X
   * Only exception being if you're patching a different module.
 * Submitting patches:
   * No whitespace.
-  * Lowercase hex for address/value hex, uppercase for title ID/hash/media ID.
+  * Uppercase hex for title ID/hash/media ID, lowercase for address/value hex.
+  * Pull requests and patches must be in English except where appropriate like the game's name or referencing something within the code.
 
 ### How to get the module hash and filename:
 0. ***Don't change the hash of existing patches. If your version of the game is different then the patch(es) need to be ported to that version.***

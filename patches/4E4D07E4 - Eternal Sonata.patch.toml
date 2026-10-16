@@ -11,10 +11,10 @@ hash = "B8538F24FAFE941D" # default.xex (USA)
 
     # frame-rate table entry for gameplay: 30 -> 60
     [[patch.be8]]
-        address = 0x8202E5F4
-        value = 0x3C
+        address = 0x8202e5f4
+        value = 0x3c
 
     # battle start: SetFrameRate(30) -> SetFrameRate(60)
     [[patch.be32]]
-        address = 0x82179F70
-        value = 0x3880003C
+        address = 0x82179f70
+        value = 0x3880003c

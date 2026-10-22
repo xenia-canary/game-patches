@@ -1,0 +1,14 @@
+title_name = "Tiger Woods PGA TOUR 12: The Masters"
+title_id = "4541094D" # EA-2381
+hash = "0F6FF3982A0E265A" # default.xex
+#media_id = "6F937ECB" # Disc (World)
+
+[[patch]]
+    name = "Fix Crash on Hole Transitions"
+    desc = "Fixes freezes/crashes when moving to the next hole. While loading, the game runs its audio update in a busy loop for up to 250 ms, which Xenia executes much faster than real hardware; this overflows the audio parameter command queue before the audio thread can drain it and corrupts memory. Makes the loop run a single update per call."
+    author = "ljordan97"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x830093c8
+        value = 0x60000000

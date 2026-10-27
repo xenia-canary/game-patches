@@ -1,0 +1,730 @@
+title_name = "Eternal Sonata"
+title_id = "4E4D07E2" # NM-2018
+hash = "CC59CF837100C7A1" # default.xex (Europe)
+#media_id = "525E9AA8" # Disc (Europe)
+
+# Two variants of the same patch. ENABLE ONLY ONE (they write the same addresses):
+#   A) "60 FPS with Battles and Cutscenes fixed at 30": 60 fps in the field, 30 fps in cutscenes, 30 fps fixed for the whole battle (no mid-battle switches).
+#   B) "60 FPS With battles at 60, (dialogue in battles and cutscenes at 30FPS)": 60 fps in the field and in battles, 30 fps in cutscenes and whenever a voiced dialogue window is shown (also in battle).
+# Switch by setting is_enabled = true on one block and false on the other, then restart Xenia.
+
+[[patch]]
+    name = "60 FPS with Battles and Cutscenes fixed at 30"
+    desc = "60 fps in exploration; 30 fps during cutscenes and battles"
+    author = "Co-authored by peerloomllc & LuismaSP89"
+    is_enabled = false
+
+    # frame-rate table entry for gameplay: 30 -> 60
+    [[patch.be8]]
+        address = 0x8205e87c
+        value = 0x3c
+
+    # battle enter handler (scene type 3, "battle start" in PR 525): li r4,30 -> bl battle-enter stub (sets the in-battle word, r4 = 30)
+    [[patch.be32]]
+        address = 0x821ba640
+        value = 0x4812db51
+
+    # battle exit handler (scene type 3 exit): first instruction (mfspr r12,lr) -> b battle-exit stub (clears the in-battle word)
+    [[patch.be32]]
+        address = 0x821ba708
+        value = 0x4812da9c
+
+    # script AddPosition: branch to the icy-slope hook below
+    [[patch.be32]]
+        address = 0x820e91d0
+        value = 0x481fee30
+
+    # top of the frame loop: branch to the frame counter + frame-rate selection below
+    [[patch.be32]]
+        address = 0x82132a88
+        value = 0x481b5660
+
+    # data block: +0 frame counter, +4 scale for repeated pushes (0.45f), +0x14 saved LR, +0x44 in-battle word (set/cleared by the stubs)
+    #   +0xc/+0x10  flag 1: script-VM event-mode byte == 1 -> 30 fps (set while a field cutscene runs)
+    #   +0x18/+0x1c flag 2: message-window-active byte == 1 -> 30 fps (set while a voiced dialogue window is shown)
+    #   +0x3c       battle frame rate (0x1e = 30, 0x3c = 60); keep equal to the li r4 in the battle-enter stub
+    #   a flag address of 0 disables that check
+    [[patch.be32]]
+        address = 0x82568004
+        value = 0x3ee66666
+    [[patch.be32]]
+        address = 0x8256800c
+        value = 0x82440579
+    [[patch.be32]]
+        address = 0x82568010
+        value = 0x00000001
+    [[patch.be32]]
+        address = 0x82568018
+        value = 0x00000000
+    [[patch.be32]]
+        address = 0x8256801c
+        value = 0x00000001
+    [[patch.be32]]
+        address = 0x8256803c
+        value = 0x0000001e
+
+    # code (unused space at the end of the code section): AddPosition hook, frame hook at +0xe8, battle-enter stub at +0x190, battle-exit stub at +0x1a4
+    [[patch.be32]]
+        address = 0x822e8000
+        value = 0x3d608246
+    [[patch.be32]]
+        address = 0x822e8004
+        value = 0x896b5f90
+    [[patch.be32]]
+        address = 0x822e8008
+        value = 0x2c0b003c
+    [[patch.be32]]
+        address = 0x822e800c
+        value = 0x408200d4
+    [[patch.be32]]
+        address = 0x822e8010
+        value = 0x3d608257
+    [[patch.be32]]
+        address = 0x822e8014
+        value = 0x396b8000
+    [[patch.be32]]
+        address = 0x822e8018
+        value = 0x812b0000
+    [[patch.be32]]
+        address = 0x822e801c
+        value = 0x3d408244
+    [[patch.be32]]
+        address = 0x822e8020
+        value = 0x814a05fc
+    [[patch.be32]]
+        address = 0x822e8024
+        value = 0x80c30000
+    [[patch.be32]]
+        address = 0x822e8028
+        value = 0x39800000
+    [[patch.be32]]
+        address = 0x822e802c
+        value = 0x390b0040
+    [[patch.be32]]
+        address = 0x822e8030
+        value = 0x2c0c0008
+    [[patch.be32]]
+        address = 0x822e8034
+        value = 0x40800028
+    [[patch.be32]]
+        address = 0x822e8038
+        value = 0x80e80000
+    [[patch.be32]]
+        address = 0x822e803c
+        value = 0x7c075000
+    [[patch.be32]]
+        address = 0x822e8040
+        value = 0x40820010
+    [[patch.be32]]
+        address = 0x822e8044
+        value = 0x80e80004
+    [[patch.be32]]
+        address = 0x822e8048
+        value = 0x7c073000
+    [[patch.be32]]
+        address = 0x822e804c
+        value = 0x4182003c
+    [[patch.be32]]
+        address = 0x822e8050
+        value = 0x39080010
+    [[patch.be32]]
+        address = 0x822e8054
+        value = 0x398c0001
+    [[patch.be32]]
+        address = 0x822e8058
+        value = 0x4bffffd8
+    [[patch.be32]]
+        address = 0x822e805c
+        value = 0x818b0008
+    [[patch.be32]]
+        address = 0x822e8060
+        value = 0x55872036
+    [[patch.be32]]
+        address = 0x822e8064
+        value = 0x7d0b3a14
+    [[patch.be32]]
+        address = 0x822e8068
+        value = 0x39080040
+    [[patch.be32]]
+        address = 0x822e806c
+        value = 0x398c0001
+    [[patch.be32]]
+        address = 0x822e8070
+        value = 0x718c0007
+    [[patch.be32]]
+        address = 0x822e8074
+        value = 0x918b0008
+    [[patch.be32]]
+        address = 0x822e8078
+        value = 0x91480000
+    [[patch.be32]]
+        address = 0x822e807c
+        value = 0x90c80004
+    [[patch.be32]]
+        address = 0x822e8080
+        value = 0x91280008
+    [[patch.be32]]
+        address = 0x822e8084
+        value = 0x4800005c
+    [[patch.be32]]
+        address = 0x822e8088
+        value = 0x80e80008
+    [[patch.be32]]
+        address = 0x822e808c
+        value = 0x91280008
+    [[patch.be32]]
+        address = 0x822e8090
+        value = 0x7ce74850
+    [[patch.be32]]
+        address = 0x822e8094
+        value = 0x38e7ffff
+    [[patch.be32]]
+        address = 0x822e8098
+        value = 0x28070001
+    [[patch.be32]]
+        address = 0x822e809c
+        value = 0x41810044
+    [[patch.be32]]
+        address = 0x822e80a0
+        value = 0x394b0020
+    [[patch.be32]]
+        address = 0x822e80a4
+        value = 0x90ca0000
+    [[patch.be32]]
+        address = 0x822e80a8
+        value = 0x392a0008
+    [[patch.be32]]
+        address = 0x822e80ac
+        value = 0x912a0004
+    [[patch.be32]]
+        address = 0x822e80b0
+        value = 0x81230004
+    [[patch.be32]]
+        address = 0x822e80b4
+        value = 0xc0090000
+    [[patch.be32]]
+        address = 0x822e80b8
+        value = 0xc0290004
+    [[patch.be32]]
+        address = 0x822e80bc
+        value = 0xc0490008
+    [[patch.be32]]
+        address = 0x822e80c0
+        value = 0xc06b0004
+    [[patch.be32]]
+        address = 0x822e80c4
+        value = 0xec0000f2
+    [[patch.be32]]
+        address = 0x822e80c8
+        value = 0xec2100f2
+    [[patch.be32]]
+        address = 0x822e80cc
+        value = 0xec4200f2
+    [[patch.be32]]
+        address = 0x822e80d0
+        value = 0xd00a0008
+    [[patch.be32]]
+        address = 0x822e80d4
+        value = 0xd02a000c
+    [[patch.be32]]
+        address = 0x822e80d8
+        value = 0xd04a0010
+    [[patch.be32]]
+        address = 0x822e80dc
+        value = 0x7d435378
+    [[patch.be32]]
+        address = 0x822e80e0
+        value = 0x7d8802a6
+    [[patch.be32]]
+        address = 0x822e80e4
+        value = 0x4be010f0
+    [[patch.be32]]
+        address = 0x822e80e8
+        value = 0x3d608257
+    [[patch.be32]]
+        address = 0x822e80ec
+        value = 0x396b8000
+    [[patch.be32]]
+        address = 0x822e80f0
+        value = 0x818b0000
+    [[patch.be32]]
+        address = 0x822e80f4
+        value = 0x398c0001
+    [[patch.be32]]
+        address = 0x822e80f8
+        value = 0x918b0000
+    [[patch.be32]]
+        address = 0x822e80fc
+        value = 0x3880003c
+    [[patch.be32]]
+        address = 0x822e8100
+        value = 0x814b0044
+    [[patch.be32]]
+        address = 0x822e8104
+        value = 0x2c0a0000
+    [[patch.be32]]
+        address = 0x822e8108
+        value = 0x4182000c
+    [[patch.be32]]
+        address = 0x822e810c
+        value = 0x808b003c
+    [[patch.be32]]
+        address = 0x822e8110
+        value = 0x48000044
+    [[patch.be32]]
+        address = 0x822e8114
+        value = 0x814b000c
+    [[patch.be32]]
+        address = 0x822e8118
+        value = 0x2c0a0000
+    [[patch.be32]]
+        address = 0x822e811c
+        value = 0x41820018
+    [[patch.be32]]
+        address = 0x822e8120
+        value = 0x894a0000
+    [[patch.be32]]
+        address = 0x822e8124
+        value = 0x812b0010
+    [[patch.be32]]
+        address = 0x822e8128
+        value = 0x7c0a4800
+    [[patch.be32]]
+        address = 0x822e812c
+        value = 0x40820008
+    [[patch.be32]]
+        address = 0x822e8130
+        value = 0x3880001e
+    [[patch.be32]]
+        address = 0x822e8134
+        value = 0x814b0018
+    [[patch.be32]]
+        address = 0x822e8138
+        value = 0x2c0a0000
+    [[patch.be32]]
+        address = 0x822e813c
+        value = 0x41820018
+    [[patch.be32]]
+        address = 0x822e8140
+        value = 0x894a0000
+    [[patch.be32]]
+        address = 0x822e8144
+        value = 0x812b001c
+    [[patch.be32]]
+        address = 0x822e8148
+        value = 0x7c0a4800
+    [[patch.be32]]
+        address = 0x822e814c
+        value = 0x40820008
+    [[patch.be32]]
+        address = 0x822e8150
+        value = 0x3880001e
+    [[patch.be32]]
+        address = 0x822e8154
+        value = 0x3d408246
+    [[patch.be32]]
+        address = 0x822e8158
+        value = 0x394a5e80
+    [[patch.be32]]
+        address = 0x822e815c
+        value = 0x892a0110
+    [[patch.be32]]
+        address = 0x822e8160
+        value = 0x7c092000
+    [[patch.be32]]
+        address = 0x822e8164
+        value = 0x41820024
+    [[patch.be32]]
+        address = 0x822e8168
+        value = 0x7d8802a6
+    [[patch.be32]]
+        address = 0x822e816c
+        value = 0x918b0014
+    [[patch.be32]]
+        address = 0x822e8170
+        value = 0x7d435378
+    [[patch.be32]]
+        address = 0x822e8174
+        value = 0x4be22545
+    [[patch.be32]]
+        address = 0x822e8178
+        value = 0x3d608257
+    [[patch.be32]]
+        address = 0x822e817c
+        value = 0x396b8000
+    [[patch.be32]]
+        address = 0x822e8180
+        value = 0x818b0014
+    [[patch.be32]]
+        address = 0x822e8184
+        value = 0x7d8803a6
+    [[patch.be32]]
+        address = 0x822e8188
+        value = 0x38610050
+    [[patch.be32]]
+        address = 0x822e818c
+        value = 0x4be4a900
+    [[patch.be32]]
+        address = 0x822e8190
+        value = 0x3c808257
+    [[patch.be32]]
+        address = 0x822e8194
+        value = 0x38848000
+    [[patch.be32]]
+        address = 0x822e8198
+        value = 0x90840044
+    [[patch.be32]]
+        address = 0x822e819c
+        value = 0x3880001e
+    [[patch.be32]]
+        address = 0x822e81a0
+        value = 0x4e800020
+    [[patch.be32]]
+        address = 0x822e81a4
+        value = 0x7d8802a6
+    [[patch.be32]]
+        address = 0x822e81a8
+        value = 0x3d608257
+    [[patch.be32]]
+        address = 0x822e81ac
+        value = 0x396b8000
+    [[patch.be32]]
+        address = 0x822e81b0
+        value = 0x39400000
+    [[patch.be32]]
+        address = 0x822e81b4
+        value = 0x914b0044
+    [[patch.be32]]
+        address = 0x822e81b8
+        value = 0x4bed2554
+
+[[patch]]
+    name = "60 FPS With battles at 60, (dialogue in battles and cutscenes at 30FPS)"
+    desc = "60 fps in exploration and battles, 30 fps during cutscenes and voiced dialogue in battles (keeps lip sync)"
+    author = "Co-authored by peerloomllc & LuismaSP89"
+    is_enabled = false
+
+    # frame-rate table entry for gameplay: 30 -> 60
+    [[patch.be8]]
+        address = 0x8205e87c
+        value = 0x3c
+
+    # battle start: SetFrameRate(30) -> SetFrameRate(60)
+    [[patch.be32]]
+        address = 0x821ba640
+        value = 0x3880003c
+
+    # script AddPosition: branch to the icy-slope hook below
+    [[patch.be32]]
+        address = 0x820e91d0
+        value = 0x481fee30
+
+    # top of the frame loop: branch to the frame counter + frame-rate check below
+    [[patch.be32]]
+        address = 0x82132a88
+        value = 0x481b5660
+
+    # data block: +4 scale for repeated pushes (0.45f); +0xc/+0x10 flag 1 (event mode byte == 1 -> 30 fps);
+    # +0x18/+0x1c flag 2 (message window active byte == 1 -> 30 fps). Address 0 disables a flag.
+    [[patch.be32]]
+        address = 0x82568004
+        value = 0x3ee66666
+    [[patch.be32]]
+        address = 0x8256800c
+        value = 0x82440579
+    [[patch.be32]]
+        address = 0x82568010
+        value = 0x00000001
+    [[patch.be32]]
+        address = 0x82568018
+        value = 0x824bbd0c
+    [[patch.be32]]
+        address = 0x8256801c
+        value = 0x00000001
+
+    # code (unused space at the end of the code section)
+    [[patch.be32]]
+        address = 0x822e8000
+        value = 0x3d608246
+    [[patch.be32]]
+        address = 0x822e8004
+        value = 0x896b5f90
+    [[patch.be32]]
+        address = 0x822e8008
+        value = 0x2c0b003c
+    [[patch.be32]]
+        address = 0x822e800c
+        value = 0x408200d4
+    [[patch.be32]]
+        address = 0x822e8010
+        value = 0x3d608257
+    [[patch.be32]]
+        address = 0x822e8014
+        value = 0x396b8000
+    [[patch.be32]]
+        address = 0x822e8018
+        value = 0x812b0000
+    [[patch.be32]]
+        address = 0x822e801c
+        value = 0x3d408244
+    [[patch.be32]]
+        address = 0x822e8020
+        value = 0x814a05fc
+    [[patch.be32]]
+        address = 0x822e8024
+        value = 0x80c30000
+    [[patch.be32]]
+        address = 0x822e8028
+        value = 0x39800000
+    [[patch.be32]]
+        address = 0x822e802c
+        value = 0x390b0040
+    [[patch.be32]]
+        address = 0x822e8030
+        value = 0x2c0c0008
+    [[patch.be32]]
+        address = 0x822e8034
+        value = 0x40800028
+    [[patch.be32]]
+        address = 0x822e8038
+        value = 0x80e80000
+    [[patch.be32]]
+        address = 0x822e803c
+        value = 0x7c075000
+    [[patch.be32]]
+        address = 0x822e8040
+        value = 0x40820010
+    [[patch.be32]]
+        address = 0x822e8044
+        value = 0x80e80004
+    [[patch.be32]]
+        address = 0x822e8048
+        value = 0x7c073000
+    [[patch.be32]]
+        address = 0x822e804c
+        value = 0x4182003c
+    [[patch.be32]]
+        address = 0x822e8050
+        value = 0x39080010
+    [[patch.be32]]
+        address = 0x822e8054
+        value = 0x398c0001
+    [[patch.be32]]
+        address = 0x822e8058
+        value = 0x4bffffd8
+    [[patch.be32]]
+        address = 0x822e805c
+        value = 0x818b0008
+    [[patch.be32]]
+        address = 0x822e8060
+        value = 0x55872036
+    [[patch.be32]]
+        address = 0x822e8064
+        value = 0x7d0b3a14
+    [[patch.be32]]
+        address = 0x822e8068
+        value = 0x39080040
+    [[patch.be32]]
+        address = 0x822e806c
+        value = 0x398c0001
+    [[patch.be32]]
+        address = 0x822e8070
+        value = 0x718c0007
+    [[patch.be32]]
+        address = 0x822e8074
+        value = 0x918b0008
+    [[patch.be32]]
+        address = 0x822e8078
+        value = 0x91480000
+    [[patch.be32]]
+        address = 0x822e807c
+        value = 0x90c80004
+    [[patch.be32]]
+        address = 0x822e8080
+        value = 0x91280008
+    [[patch.be32]]
+        address = 0x822e8084
+        value = 0x4800005c
+    [[patch.be32]]
+        address = 0x822e8088
+        value = 0x80e80008
+    [[patch.be32]]
+        address = 0x822e808c
+        value = 0x91280008
+    [[patch.be32]]
+        address = 0x822e8090
+        value = 0x7ce74850
+    [[patch.be32]]
+        address = 0x822e8094
+        value = 0x38e7ffff
+    [[patch.be32]]
+        address = 0x822e8098
+        value = 0x28070001
+    [[patch.be32]]
+        address = 0x822e809c
+        value = 0x41810044
+    [[patch.be32]]
+        address = 0x822e80a0
+        value = 0x394b0020
+    [[patch.be32]]
+        address = 0x822e80a4
+        value = 0x90ca0000
+    [[patch.be32]]
+        address = 0x822e80a8
+        value = 0x392a0008
+    [[patch.be32]]
+        address = 0x822e80ac
+        value = 0x912a0004
+    [[patch.be32]]
+        address = 0x822e80b0
+        value = 0x81230004
+    [[patch.be32]]
+        address = 0x822e80b4
+        value = 0xc0090000
+    [[patch.be32]]
+        address = 0x822e80b8
+        value = 0xc0290004
+    [[patch.be32]]
+        address = 0x822e80bc
+        value = 0xc0490008
+    [[patch.be32]]
+        address = 0x822e80c0
+        value = 0xc06b0004
+    [[patch.be32]]
+        address = 0x822e80c4
+        value = 0xec0000f2
+    [[patch.be32]]
+        address = 0x822e80c8
+        value = 0xec2100f2
+    [[patch.be32]]
+        address = 0x822e80cc
+        value = 0xec4200f2
+    [[patch.be32]]
+        address = 0x822e80d0
+        value = 0xd00a0008
+    [[patch.be32]]
+        address = 0x822e80d4
+        value = 0xd02a000c
+    [[patch.be32]]
+        address = 0x822e80d8
+        value = 0xd04a0010
+    [[patch.be32]]
+        address = 0x822e80dc
+        value = 0x7d435378
+    [[patch.be32]]
+        address = 0x822e80e0
+        value = 0x7d8802a6
+    [[patch.be32]]
+        address = 0x822e80e4
+        value = 0x4be010f0
+    [[patch.be32]]
+        address = 0x822e80e8
+        value = 0x3d608257
+    [[patch.be32]]
+        address = 0x822e80ec
+        value = 0x396b8000
+    [[patch.be32]]
+        address = 0x822e80f0
+        value = 0x818b0000
+    [[patch.be32]]
+        address = 0x822e80f4
+        value = 0x398c0001
+    [[patch.be32]]
+        address = 0x822e80f8
+        value = 0x918b0000
+    [[patch.be32]]
+        address = 0x822e80fc
+        value = 0x3880003c
+    [[patch.be32]]
+        address = 0x822e8100
+        value = 0x814b000c
+    [[patch.be32]]
+        address = 0x822e8104
+        value = 0x2c0a0000
+    [[patch.be32]]
+        address = 0x822e8108
+        value = 0x41820018
+    [[patch.be32]]
+        address = 0x822e810c
+        value = 0x894a0000
+    [[patch.be32]]
+        address = 0x822e8110
+        value = 0x812b0010
+    [[patch.be32]]
+        address = 0x822e8114
+        value = 0x7c0a4800
+    [[patch.be32]]
+        address = 0x822e8118
+        value = 0x40820008
+    [[patch.be32]]
+        address = 0x822e811c
+        value = 0x3880001e
+    [[patch.be32]]
+        address = 0x822e8120
+        value = 0x814b0018
+    [[patch.be32]]
+        address = 0x822e8124
+        value = 0x2c0a0000
+    [[patch.be32]]
+        address = 0x822e8128
+        value = 0x41820018
+    [[patch.be32]]
+        address = 0x822e812c
+        value = 0x894a0000
+    [[patch.be32]]
+        address = 0x822e8130
+        value = 0x812b001c
+    [[patch.be32]]
+        address = 0x822e8134
+        value = 0x7c0a4800
+    [[patch.be32]]
+        address = 0x822e8138
+        value = 0x40820008
+    [[patch.be32]]
+        address = 0x822e813c
+        value = 0x3880001e
+    [[patch.be32]]
+        address = 0x822e8140
+        value = 0x3d408246
+    [[patch.be32]]
+        address = 0x822e8144
+        value = 0x394a5e80
+    [[patch.be32]]
+        address = 0x822e8148
+        value = 0x892a0110
+    [[patch.be32]]
+        address = 0x822e814c
+        value = 0x7c092000
+    [[patch.be32]]
+        address = 0x822e8150
+        value = 0x41820024
+    [[patch.be32]]
+        address = 0x822e8154
+        value = 0x7d8802a6
+    [[patch.be32]]
+        address = 0x822e8158
+        value = 0x918b0014
+    [[patch.be32]]
+        address = 0x822e815c
+        value = 0x7d435378
+    [[patch.be32]]
+        address = 0x822e8160
+        value = 0x4be22559
+    [[patch.be32]]
+        address = 0x822e8164
+        value = 0x3d608257
+    [[patch.be32]]
+        address = 0x822e8168
+        value = 0x396b8000
+    [[patch.be32]]
+        address = 0x822e816c
+        value = 0x818b0014
+    [[patch.be32]]
+        address = 0x822e8170
+        value = 0x7d8803a6
+    [[patch.be32]]
+        address = 0x822e8174
+        value = 0x38610050
+    [[patch.be32]]
+        address = 0x822e8178
+        value = 0x4be4a914

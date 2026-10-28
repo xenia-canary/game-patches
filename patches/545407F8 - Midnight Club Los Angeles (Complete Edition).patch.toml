@@ -58,6 +58,37 @@ hash = "1984A3354B78CE19" # default.xex
         value = 0x39600001
 
 [[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x827d426e # Render width constant
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x827d4272 # Render height constant
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x82410e36 # CreateSurface
+        value = 0x1000
+    [[patch.be32]]
+        address = 0x822e4924 # RT pool size 0x1626000
+        value = 0x3fa00162
+    [[patch.be32]]
+        address = 0x822e4928
+        value = 0x63bd6000
+    [[patch.be32]]
+        address = 0x821312dc # Reduce physical pool 299.5MB --> 267.5MB
+        value = 0x613e2e00
+    [[patch.be32]]
+        address = 0x82178298 # Clear the texture in the shared framebuffer slot.
+        value = 0x48645a69
+    [[patch.array]]
+        address = 0x827bdd00 # Other texture allocations still use MmQueryAllocationSize.
+        value = "3d60827d816b1424546a00fe556b00fe7d4b50503d608283816b09b45569103a7f0a4840409800187d2a5B967d2959d67d4950507c6a58504e8000204b9748c4"
+
+[[patch]]
     name = "DbgPrint"
     author = "illusion"
     is_enabled = false

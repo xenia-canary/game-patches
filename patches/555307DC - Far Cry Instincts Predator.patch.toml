@@ -27,3 +27,40 @@ hash = "F35793FBFB34BD49" # default.xex
     [[patch.be32]]
         address = 0x820f3694
         value = 0x918b1180 # stw r12, 0x1180(r11)
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x823af566
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x823af576
+        value = 0x0438
+    [[patch.be16]]
+        address = 0x823af5fa
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x823af606
+        value = 0x0438
+    [[patch.be64]]
+        address = 0x823af6b0
+        value = 0x38c0043838a00780
+    [[patch.be16]]
+        address = 0x82736cb2
+        value = 0x1000
+    [[patch.be16]]
+        address = 0x823ade5e
+        value = 0x1000
+    [[patch.be16]]
+        address = 0x823adf2e
+        value = 0x1000
+    [[patch.be32]]
+        address = 0x823adf34
+        value = 0x3d000022
+    [[patch.be32]]
+        address = 0x823adf54
+        value = 0x611a0000

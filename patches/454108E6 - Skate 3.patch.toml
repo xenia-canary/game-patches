@@ -12,3 +12,17 @@ hash = "5E967D21BA33F7F5" # default.xex
     [[patch.be32]]
         address = 0x82d65eb0
         value = 0xc80b13fc
+
+[[patch]]
+    name = "Unlock motorized mode"
+    desc = "Allows the 'motorized' difficulty to be selected in settings. It's based on normal, but when holding RB on your board you accelerate."
+    author = "MCT32"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x825f5110
+        value = 0x2f0b0003
+
+    [[patch.be32]]
+        address = 0x825f5128
+        value = 0x39600003

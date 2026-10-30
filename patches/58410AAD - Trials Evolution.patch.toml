@@ -1,0 +1,41 @@
+title_name = "Trials Evolution"
+title_id = "58410AAD" # XA-2733
+hash = "B9CBCD2C91C8155D" # default.xex
+#media_id = "739182AD" # XBLA: FB397172C4B4BDBE075DF758DAE196759A388B6958
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be64]]
+        address = 0x82b033c0 # Display constants
+        value = 0x0000078000000438 # 1152x672 --> 1920x1080
+    [[patch.be64]]
+        address = 0x82329ba0 # Scene buffers
+        value = 0x3960078039400438 # li r11 1920; li r10 1080
+    [[patch.be16]]
+        address = 0x82592f56 # CreateSurface, raise 2048 tile check
+        value = 0x1000 # cmplwi cr6 r11 0x800 --> 0x1000
+    [[patch.be32]]
+        address = 0x8265dba8 # Cap/queue virtual texture pages at 1024 cache page
+        value = 0x484962f8
+    [[patch.array]]
+        address = 0x82af3ea0 # add r26 r27 r18; stay 0x400; return
+        value = "7f5b92142b1a0400409900083b4004004bb69cfc"
+    [[patch.be32]]
+        address = 0x8265dc08 # Always evict the excess pages
+        value = 0x484962b8
+    [[patch.array]]
+        address = 0x82af3ec0 # Check r24 before keeping the page or use the free slot
+        value = "2b180400419800084bb69dac7f0bc3784bb69d3c"
+    [[patch.be32]]
+        address = 0x82325e84 # Increase post-process combine shader's 1152x672 constants
+        value = 0x487ce06c
+    [[patch.array]]
+        address = 0x82af3ef0 # c253-c255 uploaded after binding normal/underwater
+        value = "807e0034806300303880000038a000fd38c000034bee4a653c8082af38843f4038a000304ba92cbd807e00344b831f6c"
+    [[patch.array]]
+        address = 0x82af3f40 # Half view 576x336 --> 960x540; texel center 575.5/335.5 --> 959.5/539.5
+        value = "3f000000447000004407000000000000c0400000c0000000000000003f8000004406e000446fe0000000000000000000"

@@ -52,3 +52,187 @@ hash = "D48ABF1704CE5C4A" # default.xex
     [[patch.be32]]
         address = 0x83520004
         value = 0x60000000
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be64]]
+        address = 0x82004dc8 # Startup movies rect
+        value = 0x44f0000044870000 # 1280x720 --> 1920x1080
+    [[patch.be64]]
+        address = 0x823f0b20 # Movie viewport
+        value = 0x3900078038e00438 # li r8 0x500 --> li r8 0x780; li r7 0x2d0 --> li r7 0x438
+    [[patch.be64]]
+        address = 0x824537e0 # Shadow depth
+        value = 0x3940078039600438 # li r10 0x500 --> li r10 0x780; li r11 0x2d0 --> li r11 0x438
+    [[patch.be64]]
+        address = 0x82453b38
+        value = 0x38a0043838800780 # li r5 0x2d0 --> li r5 0x438; li r4 0x500 --> li r4 0x780
+    [[patch.be64]]
+        address = 0x824549e8
+        value = 0x38a0043838800780 # li r5 0x2d0 --> li r5 0x438; li r4 0x500 --> li r4 0x780
+    [[patch.be32]]
+        address = 0x8247250c # Keep the original UI project after all the offscreen passes?
+        value = 0x9b6b00b4 # stb r28 0xb4(r11) --> stb r27 0xb4(r11)
+    [[patch.be32]]
+        address = 0x82484694 # Primary viewport
+        value = 0x38e00438 # li r7 0x2d0 --> li r7 0x438
+    [[patch.be32]]
+        address = 0x8248469c
+        value = 0x38c00780 # li r6 0x500 --> li r6 0x780
+    [[patch.be64]]
+        address = 0x82484888
+        value = 0x3960078039400438 # li r11 0x500 --> li r11 0x780; li r10 0x2d0 --> li r10 0x438
+    [[patch.be32]]
+        address = 0x8257c294
+        value = 0x39600780 # li r11 0x500 --> li r11 0x780
+    [[patch.be32]]
+        address = 0x8257c29c
+        value = 0x39400438 # li r10 0x2d0 --> li r10 0x438
+    [[patch.be64]]
+        address = 0x825861ac
+        value = 0x38e0043838c00780 # li r7 0x2d0 --> li r7 0x438; li r6 0x500 --> li r6 0x780
+    [[patch.be64]]
+        address = 0x82589b74
+        value = 0x38e0043838c00780 # li r7 0x2d0 --> li r7 0x438; li r6 0x500 --> li r6 0x780
+    [[patch.be32]]
+        address = 0x825934a0 # For the loading screen. Need to skip the fixed 720p boot image copy.
+        value = 0x39600000 # lwz r11 0x10(r4) --> li r11 0
+    [[patch.be64]]
+        address = 0x8259d6bc
+        value = 0x38e0043838c00780 # li r7 0x2d0 --> li r7 0x438; li r6 0x500 --> li r6 0x780
+    [[patch.be32]]
+        address = 0x825e6f5c
+        value = 0x38e00438 # li r7 0x2d0 --> li r7 0x438
+    [[patch.be32]]
+        address = 0x825e6f64
+        value = 0x38c00780 # li r6 0x500 --> li r6 0x780
+    [[patch.be64]]
+        address = 0x825efec0
+        value = 0x38e0043838c00780
+    [[patch.be64]]
+        address = 0x8265eeb0 # Homespace
+        value = 0x38e0043838c00780
+    [[patch.be64]]
+        address = 0x826604f0 # Overlay texure
+        value = 0x38a0043838800780
+    [[patch.be32]]
+        address = 0x829e7d0c # CreateSurface tile check
+        value = 0x2b0b1000 # cmplwi cr6 r11 0x800 --> cmplwi cr6 r11 0x1000
+    [[patch.be32]]
+        address = 0x829ebba0 # 720p scissors while command buffers load
+        value = 0x48803a60 # lwz r10 0x6c(r31) --> b 0x831ef600
+    [[patch.be32]]
+        address = 0x82c32c20 # Photo tiles
+        value = 0x39400780 # li r10 0x500 --> li r10 0x780
+    [[patch.be32]]
+        address = 0x82c32c28
+        value = 0x39200438 # li r9 0x2d0 --> li r9 0x438
+    [[patch.be32]]
+        address = 0x82c32c44
+        value = 0x2f040780 # cmpwi cr6 r4 0x500 --> cmpwi cr6 r4 0x780
+    [[patch.be32]]
+        address = 0x82c32c50
+        value = 0x2f050438 # cmpwi cr6 r5 0x2d0 --> cmpwi cr6 r5 0x438
+    [[patch.be64]]
+        address = 0x82c32c64
+        value = 0x214b0780216b0438 # subfic r10 r11 0x500 --> subfic r10 r11 0x780; subfic r11 r11 0x2d0 --> subfic r11 r11 0x438
+    [[patch.be64]]
+        address = 0x82c32cc4 # Photo reset dimensions.
+        value = 0x38c0078039200438 # li r6 0x500 --> li r6 0x780; li r9 0x2d0 --> li r9 0x438
+    [[patch.be64]]
+        address = 0x82c32f80 # Photo accumulation surface and texture.
+        value = 0x3880043838600780 # li r4 0x2d0 --> li r4 0x438; li r3 0x500 --> li r3 0x780
+    [[patch.be64]]
+        address = 0x82c32fcc
+        value = 0x3880043838600780 # li r4 0x2d0 --> li r4 0x438; li r3 0x500 --> li r3 0x780
+    [[patch.be64]]
+        address = 0x82c333a8 # Photo defaults.
+        value = 0x3900078039200438 # li r8 0x500 --> li r8 0x780; li r9 0x2d0 --> li r9 0x438
+    [[patch.be64]]
+        address = 0x82c33cdc # Photo exit dimensions.
+        value = 0x38c0078039200438 # li r6 0x500 --> li r6 0x780; li r9 0x2d0 --> li r9 0x438
+    [[patch.be32]]
+        address = 0x82d7b590 # Presentation defaults.
+        value = 0x39000780 # li r8 0x500 --> li r8 0x780
+    [[patch.be32]]
+        address = 0x82d7b598
+        value = 0x38e00438 # li r7 0x2d0 --> li r7 0x438
+    [[patch.be64]]
+        address = 0x82ddb1dc # Car command-buffer viewport.
+        value = 0x3960078039400438 # li r11 0x500 --> li r11 0x780; li r10 0x2d0 --> li r10 0x438
+    [[patch.be64]]
+        address = 0x82ddef50 # Depth and shadow-mask surfaces.
+        value = 0x3880043838600780 # li r4 0x2d0 --> li r4 0x438; li r3 0x500 --> li r3 0x780
+    [[patch.be64]]
+        address = 0x82ddef6c # Half-resolution 4x MSAA depth surface.
+        value = 0x3880021c386003c0 # li r4 0x168 --> li r4 0x21c; li r3 0x280 --> li r3 0x3c0
+    [[patch.be32]]
+        address = 0x82ddef78 # Hi-Z offset after the full-screen depth surface.
+        value = 0x3b800ff0 # li r28 0x708 --> li r28 0xff0
+    [[patch.be64]]
+        address = 0x82ddef98 # Depth and shadow-mask surfaces.
+        value = 0x3880043838600780 # li r4 0x2d0 --> li r4 0x438; li r3 0x500 --> li r3 0x780
+    [[patch.be64]]
+        address = 0x82ddefb8 # Half-resolution 4x MSAA depth surface.
+        value = 0x3880021c386003c0 # li r4 0x168 --> li r4 0x21c; li r3 0x280 --> li r3 0x3c0
+    [[patch.be32]]
+        address = 0x82ddefd0 # EDRAM offset after the full-screen depth surface.
+        value = 0x396b0660 # addi r11 r11 0x2d0 --> addi r11 r11 0x660
+    [[patch.be64]]
+        address = 0x82ddefe8 # Depth and shadow-mask surfaces.
+        value = 0x3880043838600780 # li r4 0x2d0 --> li r4 0x438; li r3 0x500 --> li r3 0x780
+    [[patch.be32]]
+        address = 0x82e6404c # UI: initialize the original-projection flag.
+        value = 0x4838b6b4 # mr r3 r31 --> b 0x831ef700
+    [[patch.be64]]
+        address = 0x832a4864 # Scenario 0: frame 1280x720 --> 1920x1080.
+        value = 0x0000078000000438
+    [[patch.be64]]
+        address = 0x832a4888 # Scenario 0, tile 0: right, bottom = 1280, 256 --> 1920, 384.
+        value = 0x0000078000000180
+    [[patch.array]]
+        address = 0x832a4894 # Scenario 0, tile 1: top, right, bottom = 256, 1280, 512 --> 384, 1920, 768.
+        value = "000001800000078000000300"
+    [[patch.array]]
+        address = 0x832a48a4 # Scenario 0, tile 2: top, right, bottom = 512, 1280, 720 --> 768, 1920, 1080.
+        value = "000003000000078000000438"
+    [[patch.be64]]
+        address = 0x832a4d34 # Scenario 1: frame 1280x720 --> 1920x1080.
+        value = 0x0000078000000438
+    [[patch.be64]]
+        address = 0x832a4d58 # Scenario 1, tile 0: right, bottom = 1280, 512 --> 1920, 768.
+        value = 0x0000078000000300
+    [[patch.array]]
+        address = 0x832a4d64 # Scenario 1, tile 1: top, right, bottom = 512, 1280, 720 --> 768, 1920, 1080.
+        value = "000003000000078000000438"
+    [[patch.be64]]
+        address = 0x832a5204 # Scenario 2: frame 1280x720 --> 1920x1080.
+        value = 0x0000078000000438
+    [[patch.be64]]
+        address = 0x832a5228 # Scenario 2, tile 0: right, bottom = 1280, 720 --> 1920, 1080.
+        value = 0x0000078000000438
+    [[patch.be64]]
+        address = 0x832a56d4 # Scenario 3: frame 1280x720 --> 1920x1080.
+        value = 0x0000078000000438
+    [[patch.be64]]
+        address = 0x832a56f8 # Scenario 3, tile 0: right, bottom = 1120, 584 --> 1680, 876.
+        value = 0x000006900000036c
+    [[patch.be64]]
+        address = 0x832a5ba4 # Scenario 4: frame 1280x720 --> 1920x1080.
+        value = 0x0000078000000438
+    [[patch.be64]]
+        address = 0x832a5bc8 # Scenario 4, tile 0: right, bottom = 1280, 368 --> 1920, 544.
+        value = 0x0000078000000220
+    [[patch.array]]
+        address = 0x831ef600 # Empty code padding --> scan reconstructed commands once, within the segment bounds.
+        value = "80ff007480e7000854e711ba7cfe3a147fc6f378390600107f083840419900c4812600003d400002614a20807f095040409a003881460004816600087d4a5b79408200988146000c3d6002d0616b05007f0a5840409a00843d400438614a07809146000c480000743d40c000614a60007f095040409a0064390600547f083840419900583c80831e6084f8007cc3337838a000157ca903a681430000816400007f0a5840409a003438630004388400044200ffe87cc3337838a000157ca903a6814400009143000038630004388400044200fff038c6005038c600044bffff38815f006c4b7fc4c0" # Replace the 720p full scissor or the matching three-tile sequence below. Replay lwz r10 0x6c(r31); b 0x829ebba4.
+    [[patch.array]]
+        address = 0x831ef700 # Empty code padding --> li r10 1; stb r10 0xb4(r31). Enable the UI projection flag.
+        value = "39400001995f00b47fe3fb784bc74944" # Replay mr r3 r31; b 0x82e64050.
+    [[patch.array]]
+        address = 0x831ef800 # 720p match / 1080p replacement: width 1280 --> 1920; tile ends 256/512/720 --> 384/768/1080.
+        value = "c000600000000003c0032d0100040080000000000000000001000500c00060000000000cc0032d01000400807f0000000100000002000500c000600000000030c0032d01000400807e0000000200000002d00500c000600000000003c0032d0100040080000000000000000001800780c00060000000000cc0032d01000400807e8000000180000003000780c000600000000030c0032d01000400807d0000000300000004380780" # Window offsets: 0/-256/-512 --> 0/-384/-768.

@@ -303,6 +303,64 @@ hash = [
         value = 0x48356058 # call console command
 
 [[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count. Don't combine with any of the aspect ratio patches."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be64]]
+        address = 0x821952f4 # HD width and height
+        value = 0x3900078039200438
+    [[patch.be64]]
+        address = 0x8219532c # Forced HD width and height
+        value = 0x3900078039200438
+    [[patch.be32]]
+        address = 0x821935f4 # HD tiling table width limit
+        value = 0x2f1f0780
+    [[patch.be32]]
+        address = 0x821935fc # HD tiling table height limit
+        value = 0x2f0b0438
+    [[patch.be32]]
+        address = 0x8220bbe0 # Fit movie playback to the screen, including upscaling
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x8220bbf8 # Compare the fitted movie height with the screen height
+        value = 0xff045000
+    [[patch.be32]]
+        address = 0x82194bb8 # Direct3D pool: add the four larger resolve allocations
+        value = 0x3d400302
+    [[patch.array]]
+        address = 0x827f6f74 # HD scenario 0: tile rectangles
+        value = "00000000000000000000078000000438"
+    [[patch.array]]
+        address = 0x827f7010 # HD scenario 1: tile rectangles
+        value = "0000000000000000000004b000000438000004b0000000000000078000000438"
+    [[patch.array]]
+        address = 0x827f70ac # HD scenario 2: tile rectangles
+        value = "0000000000000000000001e000000438000001e000000000000003c000000438000003c000000000000005a000000438000005a0000000000000078000000438"
+    [[patch.array]]
+        address = 0x827f7148 # HD scenario 3: tile rectangles
+        value = "0000000000000000000007800000024000000000000002400000078000000438"
+    [[patch.array]]
+        address = 0x827f71e4 # HD scenario 4: tile rectangles
+        value = "000000000000000000000780000001800000000000000180000007800000030000000000000003000000078000000438"
+    [[patch.array]]
+        address = 0x827f7280 # HD scenario 5: tile rectangles
+        value = "0000000000000000000003c000000438000003c0000000000000078000000438"
+    [[patch.array]]
+        address = 0x827f731c # HD scenario 6: tile rectangles
+        value = "0000000000000000000001e000000438000001e000000000000003c000000438000003c000000000000005a000000438000005a0000000000000078000000438"
+    [[patch.array]]
+        address = 0x827f73b8 # HD scenario 7: tile rectangles
+        value = "0000000000000000000007800000024000000000000002400000078000000438"
+    [[patch.array]]
+        address = 0x827f7454 # HD scenario 8: tile rectangles
+        value = "000000000000000000000780000001800000000000000180000007800000030000000000000003000000078000000438"
+    [[patch.be16]]
+        address = 0x825e3316 # CreateSurface
+        value = 0x1000 # cmplwi cr6 r28 0x800 --> 0x1000
+
+[[patch]]
     name = "Aspect Ratio"
     desc = "To get proper Aspect Ratio FOV = Default * (Width/Height) / (16/9)"
     author = "Tervel"

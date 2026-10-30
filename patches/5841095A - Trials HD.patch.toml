@@ -1,0 +1,35 @@
+title_name = "Trials HD"
+title_id = "5841095A" # XA-2394
+hash = "021BB8A049B3E5D9" # default.xex
+#media_id = "22E417BF" # XBLA: 6E133151FC02CFA6D6653C9AAE46D1DC8014605158
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be64]]
+        address = 0x82664800 # Display
+        value = 0x3960078039400438 # li r11 0x500 / li r10 0x2d0 --> 0x780 / 0x438
+    [[patch.be64]]
+        address = 0x82576a98 # Scene buffers
+        value = 0x3940078039200438 # li r10 0x500 / li r9 0x2a0 --> 0x780 / 0x438
+    [[patch.be64]]
+        address = 0x820bcb30 # HDR downsample
+        value = 0x000003c00000021c
+    [[patch.be64]]
+        address = 0x820bcb38 # Blur buffers
+        value = 0x000001e00000010e
+    [[patch.be64]]
+        address = 0x820f0cf8 # XUI root. Keep the old menu layout and scale it.
+        value = 0x39200500390002d0 # lwz r9 0x50(r1) / lwz r8 0x54(r1) --> li r9 0x500 / li r8 0x2d0
+    [[patch.be32]]
+        address = 0x8265fb84 # XUI matrix. z = 1.0 and x/y = 1.5 from loaded constants.
+        value = 0x3ce0820c # lis r7 0x8272 --> lis r7 0x820c
+    [[patch.array]]
+        address = 0x8265fb8c # Keep z = 1.0
+        value = "c067d228c047d380fc201090" # lfs f3 0x3dec(r7) --> lfs f3 -0x2dd8(r7); fmr f2 f3 --> lfs f2 -0x2c80(r7); fmr f1 f3 --> fmr f1 f2
+    [[patch.be16]]
+        address = 0x82133f56 # CreateSurface
+        value = 0x1000 # cmplwi cr6 r11 0x800 --> 0x1000

@@ -194,6 +194,40 @@ hash = "7775898137CE1CE3" # default.xex
         value = 0x01
 
 [[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count. Don't combine with any of the aspect ratio patches."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be16]]
+        address = 0x833a2bd6 # GScreenWidth
+        value = 0x0780
+    [[patch.be32]]
+        address = 0x833a2bda # GScreenHeight
+        value = 0x0438
+    [[patch.be32]]
+        address = 0x82971c50
+        value = 0x39600438
+    [[patch.be32]]
+        address = 0x82971c6c
+        value = 0x39600780
+    [[patch.be32]]
+        address = 0x82971c70
+        value = 0x480002d0
+    [[patch.be16]]
+        address = 0x82b0298e # CreateSurface
+        value = 0x1000
+    [[patch.be8]]
+        address = 0x82c5327f # Scaleform UI scaling
+        value = 0x01
+    [[patch.be16]]
+        address = 0x82ad6166 # Split screen sniper zoom
+        value = 0x0780 # cmpwi cr6 r11 1280 --> 1920
+    [[patch.be16]]
+        address = 0x82ad617a # Single player sniper zoom
+        value = 0x0780 # cmpwi cr6 r11 1280 --> 1920
+
+[[patch]]
     name = "21:9 Aspect Ratio Ultrawide Patch"
     desc = "Must set present_letterbox = FALSE in the xenia canary config. Must download GOW3 Fixes zip (found on xenia-game-settings Github Gears 3 wiki page) to prevent UI artifacts when alerts pop up. Expands gameplay, cutscene and UI rendering to true 21:9 ultrawide and updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x550, certain elements may appear more aliased."
     author = "boma"

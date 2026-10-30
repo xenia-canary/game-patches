@@ -58,6 +58,52 @@ hash = "355BF86D7238F120" # default.xex
         value = 0x4e800020
 
 [[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count. Disables MSAA. Don't combine with any aspect ratio patches."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be64]]
+        address = 0x8377405c # GScreenWidth, GScreenHeight
+        value = 0x0000078000000438
+    [[patch.be64]]
+        address = 0x8256ac18 # XeInitD3DDevice XGetVideoMode fix
+        value = 0x3960043839400780
+    [[patch.be32]]
+        address = 0x8256ac3c
+        value = 0x39400780
+    [[patch.be32]]
+        address = 0x8256ac4c
+        value = 0x39000438
+    [[patch.be32]]
+        address = 0x8256a998 # GUseTilingCode = FALSE; RHIInit
+        value = 0x39200000
+    [[patch.be32]]
+        address = 0x8256abb8 # GUseTilingCode = FALSE; XeInitD3DDevice
+        value = 0x39200000
+    [[patch.be8]]
+        address = 0x83777f4f # GTilingMode = 4
+        value = 0x04
+    [[patch.be64]]
+        address = 0x82099538 # 1920x1080 mode 4 tile rect
+        value = 0x0000078000000438
+    [[patch.be32]]
+        address = 0x828a6210 # UIScene, keep 1280 width
+        value = 0x39200500
+    [[patch.be32]]
+        address = 0x828a623c # UIScene viewport scaling via projection
+        value = 0x38c002d0
+    [[patch.be32]]
+        address = 0x82c18f6c # EndRenderingPrePass bl RHISetRenderTarget, forcing a depth clear
+        value = 0x48b282b4
+    [[patch.array]]
+        address = 0x83741220 # Restore targets/viewport and clear depth/stencil after godrays
+        value = "4b07b9a9386000003880000080de001880fe001c3d608200c02b12b8c04b12a44b07b8f1386000003c8083773884766c38a0000138e00001390000003d608200c02b12a44b07a9ad4b4d7d08"
+    [[patch.be16]]
+        address = 0x8231b016 # CreateSurface
+        value = 0x1000
+
+[[patch]]
     name = "21:9 Ultrawide Aspect Ratio Support"
     desc = "Must set present_letterbox = FALSE in the xenia canary config. Expands gameplay rendering to true 21:9 ultrawide and updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. HUD and UI elements will appear moderately stretched and cutscenes will be slightly cropped. Because the game now renders at 1280x550, certain elements may appear more aliased."
     author = "boma"

@@ -11,3 +11,32 @@ hash = "5B8298726E0B36A7" # default.xex
     [[patch.be32]]
         address = 0x8216ad94
         value = 0x419affec
+
+[[patch]]
+    name = "Skip Quiz Timer"
+    desc = "Skips the quiz after a level has finished loading."
+    author = "Pixelplix93"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822ec6f8
+        value = 0x60000000
+
+[[patch]]
+    name = "Enable Moves in Hub World"
+    desc = "Allows jumping and attacking in the hub world."
+    author = "Pixelplix93"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82256470
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x822574e8
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x82257c6c
+        value = 0x60000000
+    [[patch.be32]]
+        address = 0x822586fc
+        value = 0x60000000

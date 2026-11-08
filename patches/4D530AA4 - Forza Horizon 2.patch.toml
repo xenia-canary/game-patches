@@ -13,7 +13,7 @@ hash = "64E28BBC49532373" # default.xex
     is_enabled = false
 
     [[patch.be32]]
-        address = 0x92f04494
+        address = 0x82f04494
         value = 0x60000000
 
 [[patch]]
@@ -33,4 +33,17 @@ hash = "64E28BBC49532373" # default.xex
 
     [[patch.be32]]
         address = 0x83660004
+        value = 0x60000000
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Game logic is frame rate independent; tested at normal speed in races."
+    author = "tecmax0ne"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82b713a8 # D3D flip queue: flip every vblank instead of every 2nd
+        value = 0x3ba00001
+    [[patch.be32]]
+        address = 0x8248baec # Vblank callback: signal the game loop every vblank instead of every 2nd
         value = 0x60000000

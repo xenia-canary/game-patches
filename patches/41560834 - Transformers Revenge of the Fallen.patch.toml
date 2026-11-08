@@ -1,0 +1,37 @@
+title_name = "Transformers: Revenge of the Fallen"
+title_id = "41560834" # AV-2100
+hash = "18C95D27370F8628" # default.xex
+#media_id = "338852BF" # Disc (USA, Europe)
+
+[[patch]]
+    name = "Skip Intro Videos"
+    desc = "Skips the Luxoflux, Activision and Hasbro logo movies on boot."
+    author = "JustTam"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a9bdd4
+        value = 0x480002f4 # b 0x82a9c0c8, jump over the boot movie loop
+
+[[patch]]
+    name = "Skip Intro Logo Screens"
+    desc = "Skips the Paramount, DreamWorks, ESRB and legal screens on boot."
+    author = "JustTam"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82a9c7b8
+        value = 0x60000000 # nop, don't create the StillLogosThread
+
+[[patch]]
+    name = "60 FPS"
+    desc = "Unlocks the framerate to 60 FPS. Game speed and timers stay correct. Gameplay is CPU heavy, a fast CPU is needed to hold 60."
+    author = "JustTam"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x822d7b14
+        value = 0x39600001 # li r11,1 (present interval two waits 1 vblank instead of 2)
+    [[patch.be32]]
+        address = 0x822d7b00
+        value = 0x39400001 # li r10,1 (present interval three waits 1 vblank instead of 3)

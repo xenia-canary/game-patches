@@ -1,0 +1,13 @@
+title_name = "Switchball"
+title_id = "58410830"
+hash = "D737828A2DE57BE0"
+
+[[patch]]
+name = "Unlock 60 FPS"
+author = "Jao"
+is_enabled = false
+
+[[patch.be32]]
+address = 0x8200127c
+value = 0x3c888889
+

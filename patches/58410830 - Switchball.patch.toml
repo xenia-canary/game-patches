@@ -1,6 +1,6 @@
 title_name = "Switchball"
 title_id = "58410830"
-hash = "D737828A2DE57BE0"
+hash = "D737828A2DE57BE0" # default.xex
 
 [[patch]]
     name = "Unlock 60 FPS"

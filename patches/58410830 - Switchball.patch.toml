@@ -1,9 +1,10 @@
 title_name = "Switchball"
-title_id = "58410830" # XA-2096
+title_id = "58410830"
 hash = "D737828A2DE57BE0" # default.xex
 
 [[patch]]
     name = "Unlock 60 FPS"
+    desc = "Unlock 60 FPS in game."
     author = "Jao"
     is_enabled = false
 

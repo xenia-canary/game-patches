@@ -1,0 +1,149 @@
+title_name = "Forza Motorsport 4"
+title_id = "4D530910" # MS-2320
+hash = "06DEF37749E2CEAC" # default.xex
+#media_id = [
+#    "61D62D9F", # Disc 1 (Europe, Australia): https://redump.info/disc/50817
+#    "26FF1101", # Disc 1 (USA):               https://redump.info/disc/79785
+#]
+
+[[patch]]
+    name = "Skip intro"
+    desc = "Force disablesplashintro=true parameter."
+    author = "Doliman100"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823e7ec4
+        value = 0x9bbf0b5c
+
+[[patch]]
+    name = "Disable hash checks"
+    desc = "Allows modifying protected files. Force insecure=true parameter."
+    author = "Doliman100"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x823e7c70
+        value = 0x9bbf08b7
+
+[[patch]]
+    name = "FPS-independent home screen camera"
+    desc = "Makes the home screen camera movement FPS independent."
+    author = "kamil00110"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x824b9d80
+        value = 0x48888381  # bl 0x82d42100 (was lfs f1,0x14b4(r11))
+
+    [[patch.be32]]
+        address = 0x82d42100
+        value = 0x7d8c42e6  # mftb r12
+
+    [[patch.be32]]
+        address = 0x82d42104
+        value = 0x3d6082db  # lis r11, -0x7d25
+
+    [[patch.be32]]
+        address = 0x82d42108
+        value = 0x616b8800  # ori r11, r11, 0x8800
+
+    [[patch.be32]]
+        address = 0x82d4210c
+        value = 0xe94b0000  # ld r10, 0(r11)
+
+    [[patch.be32]]
+        address = 0x82d42110
+        value = 0x7d2a6050  # subf r9, r10, r12
+
+    [[patch.be32]]
+        address = 0x82d42114
+        value = 0x390061a8  # li r8, 0x61a8
+
+    [[patch.be32]]
+        address = 0x82d42118
+        value = 0x7c294040  # cmpld r9, r8
+
+    [[patch.be32]]
+        address = 0x82d4211c
+        value = 0x41800048  # blt 0x82d42164
+
+    [[patch.be32]]
+        address = 0x82d42120
+        value = 0xf98b0000  # std r12, 0(r11)
+
+    [[patch.be32]]
+        address = 0x82d42124
+        value = 0x3d00004c  # lis r8, 0x4c
+
+    [[patch.be32]]
+        address = 0x82d42128
+        value = 0x61084b40  # ori r8, r8, 0x4b40
+
+    [[patch.be32]]
+        address = 0x82d4212c
+        value = 0x7c294040  # cmpld r9, r8
+
+    [[patch.be32]]
+        address = 0x82d42130
+        value = 0x4081000c  # ble 0x82d4213c
+
+    [[patch.be32]]
+        address = 0x82d42134
+        value = 0x3d20000c  # lis r9, 0xc
+
+    [[patch.be32]]
+        address = 0x82d42138
+        value = 0x6129b735  # ori r9, r9, 0xb735
+
+    [[patch.be32]]
+        address = 0x82d4213c
+        value = 0xf92b0010  # std r9, 0x10(r11)
+
+    [[patch.be32]]
+        address = 0x82d42140
+        value = 0xc80b0010  # lfd f0, 0x10(r11)
+
+    [[patch.be32]]
+        address = 0x82d42144
+        value = 0xfc00069c  # fcfid f0, f0
+
+    [[patch.be32]]
+        address = 0x82d42148
+        value = 0x3d4082d4  # lis r10, -0x7d2c
+
+    [[patch.be32]]
+        address = 0x82d4214c
+        value = 0x614a21f8  # ori r10, r10, 0x21f8
+
+    [[patch.be32]]
+        address = 0x82d42150
+        value = 0xc82a0000  # lfd f1, 0(r10)
+
+    [[patch.be32]]
+        address = 0x82d42154
+        value = 0xfc200072  # fmul f1, f0, f1
+
+    [[patch.be32]]
+        address = 0x82d42158
+        value = 0xfc200818  # frsp f1, f1
+
+    [[patch.be32]]
+        address = 0x82d4215c
+        value = 0xd02b0008  # stfs f1, 8(r11)
+
+    [[patch.be32]]
+        address = 0x82d42160
+        value = 0x4e800020  # blr
+
+    [[patch.be32]]
+        address = 0x82d42164
+        value = 0xc02b0008  # lfs f1, 8(r11)
+
+    [[patch.be32]]
+        address = 0x82d42168
+        value = 0x4e800020  # blr
+
+    [[patch.f64]]
+        address = 0x82d421f8
+        value = 2.0e-8  # seconds per 50 MHz tick

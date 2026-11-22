@@ -101,7 +101,7 @@ hash = "A5A9398D2D412519" # default.xex
 
 [[patch]]
     name = "FPS Uncap"
-    Desc = "Removes all of the FPS caps in the game, including the audio engine cap."
+    desc = "Removes all of the FPS caps in the game, including the audio engine cap."
     author = "Tervel"
     is_enabled = false
 

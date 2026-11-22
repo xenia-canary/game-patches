@@ -40,8 +40,8 @@ hash = "A820301A931819CA" # default.xex
     is_enabled = false
 
     [[patch.be8]]
-        address = 0x18340043c
+        address = 0x8340043c
         value = 0x01
     [[patch.be8]]
-        address = 0x18340044c # Frametime
+        address = 0x8340044c # Frametime
         value = 0x01

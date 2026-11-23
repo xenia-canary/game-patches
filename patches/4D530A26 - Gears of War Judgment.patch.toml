@@ -167,6 +167,40 @@ hash = "8429D0AE190C10DB" # default.xex
         value = 0x01
 
 [[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count. Don't combine with any aspect ratio patches."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be64]]
+        address = 0x8349d0ec
+        value = 0x0000078000000438
+    [[patch.be32]]
+        address = 0x82990abc
+        value = 0x39600438
+    [[patch.be64]]
+        address = 0x82990acc
+        value = 0x38a007804800001c
+    [[patch.be32]]
+        address = 0x82990afc
+        value = 0x38c00438
+    [[patch.be32]]
+        address = 0x82bd8784
+        value = 0x2b1d1000
+    [[patch.be32]]
+        address = 0x82d2dfbc
+        value = 0x3be00001
+    [[patch.be32]]
+        address = 0x82b7651c
+        value = 0x2f0b0780
+    [[patch.be32]]
+        address = 0x82b76530
+        value = 0x2f0b0780
+    [[patch.be32]]
+        address = 0x8243d804
+        value = 0x39400006
+
+[[patch]]
     name = "21:9 Ultrawide Aspect Ratio Patch"
     desc = "Must set present_letterbox = FALSE in the xenia canary config. Must download Ultrawide Support Patch zip (found on xenia-game-settings Github Gears Judgment wiki page) and Disable Coalesced Hash Check patch to prevent UI artifacts when alerts pop up. Expands gameplay and cutscene rendering to true 21:9 ultrawide, updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x550, certain elements may appear more aliased."
     author = "boma"

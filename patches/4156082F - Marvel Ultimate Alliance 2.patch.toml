@@ -24,7 +24,7 @@ hash = "8BC78D3019FD8760" # default.xex
 
 [[patch]]
     name = "Enable Invincibility cheat"
-    note = "May also enable other cheats, saving still possible"
+    desc = "May also enable other cheats, saving still possible"
     author = "illusion"
     is_enabled = false
 

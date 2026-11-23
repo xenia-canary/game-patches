@@ -28,6 +28,55 @@ hash = "4145F96D2DEE2AB5" # default.xex
         value = 0x0500
 
 [[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count. Don't combine with any of the aspect ratio or resolution patches."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be64]]
+        address = 0x82a14d34 # Display
+        value = 0x3940078039200438 # li r10 0x500 / li r9 0x2d0 --> 0x780 / 0x438.
+    [[patch.be32]]
+        address = 0x8238df4c # Scene height
+        value = 0x39400438 # li r10 0x2d0 --> 0x438.
+    [[patch.be32]]
+        address = 0x8238df58 # Scene width
+        value = 0x39600780 # li r11 0x460 --> 0x780.
+    [[patch.be32]]
+        address = 0x8238df60
+        value = 0x39600780 # li r11 0x3c0 --> 0x780.
+    [[patch.be32]]
+        address = 0x8328c310 # Menu target
+        value = 0x39400438 # li r10 0x2d0 --> 0x438.
+    [[patch.be32]]
+        address = 0x8328c324
+        value = 0x39600780 # li r11 0x500 --> 0x780.
+    [[patch.be64]]
+        address = 0x8328c340 # Menu rect
+        value = 0x3940078039200438 # li r10 0x500 / li r9 0x2d0 --> 0x780 / 0x438.
+    [[patch.be64]]
+        address = 0x8328c3d0 # 2x target
+        value = 0x3960078039400438 # li r11 0x500 / li r10 0x2d0 --> 0x780 / 0x438.
+    [[patch.be32]]
+        address = 0x8328c3e4 # Color and depth fit without splitting the frame.
+        value = 0x39400001 # li r10 2 --> 1.
+    [[patch.be16]]
+        address = 0x8328c3fe # First tile
+        value = 0x0780 # li r10 0x500 --> 0x780
+    [[patch.be16]]
+        address = 0x8328c40a
+        value = 0x0438 # li r11 0x200 --> 0x438
+    [[patch.be8]]
+        address = 0x8328c433 # No tiled one-pass Z pass for this preset.
+        value = 0x00 # li r9 1 --> 0.
+    [[patch.be16]]
+        address = 0x82294fbe # Depth wrapper, for accepting the 3264 tile 2x surface.
+        value = 0x1000 # cmplwi cr6 r3 0x800 --> 0x1000
+    [[patch.be16]]
+        address = 0x821f4e56 # CreateSurface
+        value = 0x1000 # cmplwi cr6 r29 0x800 --> 0x1000
+
+[[patch]]
     name = "Disable MSAA (Multi-Sample Anti-Aliasing)"
     author = "Margen67"
     is_enabled = false

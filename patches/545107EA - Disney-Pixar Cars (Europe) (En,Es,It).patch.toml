@@ -4,44 +4,49 @@ hash = "099DC6C22A7DC6D2" # default.xex
 #media_id = "261AC944" # Disc (Europe) (En,Es,It): http://redump.info/disc/87735/
 
 [[patch]]
-    name = "60 FPS"
-    desc = "Enables 60 FPS with correct timing and video playback."
+    name = "60 FPS + Jump Fix"
+    desc = "Enables 60 FPS with correct timing, video playback and restored jump launch height."
     author = "Pixelplix93"
     is_enabled = false
-
-    [[patch.be32]]
+    [[patch.array]]
         address = 0x820d6d80
-        value = 0x39400001
-    [[patch.be32]]
+        value = "0x39400001"
+    [[patch.array]]
         address = 0x823ad5dc
-        value = 0x3d608204
-    [[patch.be32]]
-        address = 0x823ad5e0
-        value = 0xc00b40bc
-    [[patch.be32]]
+        value = "0x3d608204c00b40bc"
+    [[patch.array]]
+        address = 0x823c5af4
+        value = "0x481dcd0c"
+    [[patch.array]]
+        address = 0x8240746c
+        value = "0x4819af94"
+    [[patch.array]]
         address = 0x8258527c
-        value = 0x4800d5d9
-    [[patch.be32]]
+        value = "0x4800d5d9"
+    [[patch.array]]
         address = 0x82592854
-        value = 0x3d60825b
-    [[patch.be32]]
-        address = 0x82592858
-        value = 0x814b0790
-    [[patch.be32]]
-        address = 0x8259285c
-        value = 0x694a0001
-    [[patch.be32]]
-        address = 0x82592860
-        value = 0x914b0790
-    [[patch.be32]]
-        address = 0x82592864
-        value = 0x2c0a0000
-    [[patch.be32]]
-        address = 0x82592868
-        value = 0x4d820020
-    [[patch.be32]]
-        address = 0x8259286c
-        value = 0x48001e3c
-    [[patch.be32]]
+        value = "0x3d60825b814b0790694a0001914b07902c0a00004d82002048001e3c"
+    [[patch.array]]
+        address = 0x825a2400
+        value = "0xf821ff81f8010008f8c10010f8e10018f9010020f9210028f9410030f9610038f98100407c000026f80100503d608261616b2f00814b08002c0a0001418200283940000039800200914b0000396b0004398cffff2c0c00004082fff039400001914b0000813f012c2c090000418201403d608261616b2f003900000039800020"
+    [[patch.array]]
+        address = 0x825a2480
+        value = "0x814b00007c0a4840418200542c0a0000408200102c080000408200087d685b78396b0040398cffff2c0c00004082ffd4895f0414714a0080418200f42c080000418200ec7d0b4378912b000039400000914b0004914b000848000084814b00082c0a000140820078814900642c0a00004081006c3d807f807c0a604040800060"
+    [[patch.array]]
+        address = 0x825a2500
+        value = "0x80c9005480eb002c54ca007e7c0a60404080004c54ea007e7c0a6040408000407ce83b782c0800004080000c7d0840f8480000086d0880007cca33782c0a00004080000c7d4a50f8480000086d4a80007c0850404081000890e9005439400000914b0008914b000c895f0414714a008041820018815f012c914b000039400002"
+    [[patch.array]]
+        address = 0x825a2580
+        value = "0x914b000448000028814b00042c0a000041820014394affff914b00042c0a00004082000c39400000914b0000e80100507c0ff120e8c10010e8e10018e9010020e9210028e9410030e9610038e9810040e801000838210080c01f06184be64e94"
+    [[patch.array]]
+        address = 0x825a2800
+        value = "0xf821fe81f8010110f9210050f9410058f9610060f98100687c000026f80101487c0102a6f80101687c0802a6f8010118396000007cec3b787d6b6214556b0036398b00043d20826161292f00814908002c0a00014082006438000020814900002c0a000041820010394a00547c0c504041820018392900403000ffff2c000000"
+    [[patch.array]]
+        address = 0x825a2880
+        value = "0x4082ffdc48000034814c0000396101707da059ce816101747c0b50404182001c9169002c81890008280c00204080000c398c000191890008e80101687c0103a6e80101487c0ff120e9210050e9410058e9610060e9810068e8010110382101807da039ce4be23214"
+    [[patch.array]]
         address = 0x825b0790
-        value = 0x00000000
+        value = "0x00000000"
+    [[patch.array]]
+        address = 0x82613700
+        value = "0x00000000"

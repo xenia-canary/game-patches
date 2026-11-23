@@ -19,7 +19,7 @@ jobs:
       - name: Setup
         run: |-
           npm i -D --no-fund
-          sudo apt -y install pcregrep
+          sudo apt -y install pcre2-utils
       - name: Lint
         id: lint
         run: |-
@@ -32,7 +32,7 @@ jobs:
           fi
           npx eslint patches/*.patch.toml || patch_errored_fatal=1
           patch_check() {
-            local grep_result=$(pcregrep -Mno "$1" <<<"$2")
+            local grep_result=$(pcre2grep -Mno "$1" <<<"$2")
             if [[ ( -z "$grep_result" && $3 = nomatch ) || ( -n "$grep_result" && $3 = match ) ]]; then
               local patch_errored=1
               if [[ -z $patch_errored_fatal ]]; then
@@ -42,7 +42,7 @@ jobs:
             if [ -n "$patch_errored" ]; then
               case $3 in
                 match)
-                  local grep_result_lines=($(pcregrep -o '[0-9]+(?=:)' <<<"$grep_result"))
+                  local grep_result_lines=($(pcre2grep -o '[0-9]+(?=:)' <<<"$grep_result"))
                   for grep_result_line in "${grep_result_lines[@]}"; do
                     if [ -n "$5" ]; then
                       local grep_result_line_end=",endLine=$(( grep_result_line + $5 ))"

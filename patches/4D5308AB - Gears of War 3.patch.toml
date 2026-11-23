@@ -184,6 +184,34 @@ hash = "EF4AD5E9DD1982ED" # default.xex
         value = 0x01
 
 [[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count. Don't combine with any of the aspect ratio patches."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.be64]]
+        address = 0x83392428
+        value = 0x0000078000000438
+    [[patch.be16]]
+        address = 0x82960c7a
+        value = 0x0438
+    [[patch.be64]]
+        address = 0x82960c94
+        value = 0x39600780480002d0
+    [[patch.be16]]
+        address = 0x82aef1ee
+        value = 0x1000
+    [[patch.be8]]
+        address = 0x82c3fa6f
+        value = 0x01
+    [[patch.be16]]
+        address = 0x82ac316e
+        value = 0x0780
+    [[patch.be16]]
+        address = 0x82ac3182
+        value = 0x0780
+
+[[patch]]
     name = "21:9 Aspect Ratio Ultrawide Patch"
     desc = "Must set present_letterbox = FALSE in the xenia canary config. Must download GOW3 Fixes zip (found on xenia-game-settings Github Gears Judgment wiki page) and Disable Coalesced Hash Check patch to prevent UI artifacts when alerts pop up. Expands gameplay, cutscene and UI rendering to true 21:9 ultrawide and updates the FOV axis constraint for proper framing, and adds pillarboxing for pre-rendered videos. Because the game now renders at 1280x550, certain elements may appear more aliased."
     author = "boma"

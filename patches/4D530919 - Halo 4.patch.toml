@@ -14,3 +14,520 @@ hash = "28B1F695AC7E881F" # default.xex
     [[patch.be16]]
         address = 0x82628ce0
         value = 0x4800
+
+[[patch]]
+    name = "1920x1080 Resolution"
+    desc = "Requires extended edram_tile_count and 1x resolution scaling. Disables post-process AA."
+    author = "boma"
+    is_enabled = false
+
+    [[patch.array]]
+        address = 0x821124f8 # Tiling configuration 0 dimensions
+        value = "00000780000004380000078000000438" # 1280 720 1280 720 --> 1920 1080 1920 1080
+    [[patch.be64]]
+        address = 0x82112518 # Tiling configuration 0 tile 0 bounds
+        value = 0x0000078000000438 # 1280 720 --> 1920 1080
+    [[patch.array]]
+        address = 0x82112590 # Tiling configuration 1 dimensions
+        value = "000007800000021c000007800000021c" # 1280 360 1280 360 --> 1920 540 1920 540
+    [[patch.be64]]
+        address = 0x821125b0 # Tiling configuration 1 tile 0 bounds
+        value = 0x000007800000021c # 1280 360 --> 1920 540
+    [[patch.array]]
+        address = 0x82112628 # Tiling configuration 2 dimensions
+        value = "000003c00000021c000003c00000021c" # 640 360 640 360 --> 960 540 960 540
+    [[patch.be64]]
+        address = 0x82112648 # Tiling configuration 2 tile 0 bounds
+        value = 0x000003c00000021c # 640 360 --> 960 540
+    [[patch.array]]
+        address = 0x821126c0 # Tiling configuration 3 dimensions
+        value = "000005a00000021c000005a00000021c" # 960 360 960 360 --> 1440 540 1440 540
+    [[patch.be64]]
+        address = 0x821126e0 # Tiling configuration 3 tile 0 bounds
+        value = 0x000005a00000021c # 960 360 --> 1440 540
+    [[patch.array]]
+        address = 0x82112758 # Tiling configuration 4 dimensions
+        value = "000007800000043800000780000003f0" # 1280 720 1280 672 --> 1920 1080 1920 1008
+    [[patch.be64]]
+        address = 0x82112778 # Tiling configuration 4 tile 0 bounds
+        value = 0x00000780000003f0 # 1280 672 --> 1920 1008
+    [[patch.array]]
+        address = 0x82112784 # Tiling configuration 4 tile 1 bounds
+        value = "000003f00000078000000438" # 672 1280 720 --> 1008 1920 1080
+    [[patch.array]]
+        address = 0x821127f0 # Tiling configuration 5 dimensions
+        value = "000003c000000180000003c00000009c" # 640 256 640 104 --> 960 384 960 156
+    [[patch.be64]]
+        address = 0x82112810 # Tiling configuration 5 tile 0 bounds
+        value = 0x000003c000000180 # 640 256 --> 960 384
+    [[patch.array]]
+        address = 0x8211281c # Tiling configuration 5 tile 1 bounds
+        value = "00000180000003c00000021c" # 256 640 360 --> 384 960 540
+    [[patch.be32]]
+        address = 0x822ad7cc # Disable post-process AA
+        value = 0x39000000 # lwz r8 8(r9) --> li r8 0
+    [[patch.be32]]
+        address = 0x822b94e4 # Keep the authored UI projection size
+        value = 0x4903aadc # bl 0x8229b3b8 --> b 0x832f3fc0
+    [[patch.be32]]
+        address = 0x82307644 # Render width after device reset
+        value = 0x39600780 # li r11 0x500 --> li r11 0x780
+    [[patch.be32]]
+        address = 0x8230764c # Render height after device reset
+        value = 0x39400438 # li r10 0x2d0 --> li r10 0x438
+    [[patch.be32]]
+        address = 0x82608b5c # Surface sizing: use the native render dimensions
+        value = 0x48ceb424 # lfs f0 0x570(r31) --> b 0x832f3f80
+    [[patch.be32]]
+        address = 0x82608b90 # Surface sizing: use the native render dimensions
+        value = 0x48ceb400 # lfs f13 0x574(r31) --> b 0x832f3f90
+    [[patch.be32]]
+        address = 0x82608bc4 # Surface sizing: use the native render dimensions
+        value = 0x48ceb3dc # lfs f13 0x570(r31) --> b 0x832f3fa0
+    [[patch.be32]]
+        address = 0x82608bf8 # Surface sizing: use the native render dimensions
+        value = 0x48ceb3b8 # lfs f13 0x574(r31) --> b 0x832f3fb0
+    [[patch.be32]]
+        address = 0x8309a380 # D3D surface base uses 13 bits
+        value = 0x552304fe # clrlwi r3 r9 0x14 --> clrlwi r3 r9 0x13
+    [[patch.be32]]
+        address = 0x8309b13c # D3D depth surface base uses 13 bits
+        value = 0x552a04fe # clrlwi r10 r9 0x14 --> clrlwi r10 r9 0x13
+    [[patch.be32]]
+        address = 0x8309b1e0 # D3D color surface base uses 13 bits
+        value = 0x552a04fe # clrlwi r10 r9 0x14 --> clrlwi r10 r9 0x13
+    [[patch.be32]]
+        address = 0x8309b4c4 # Allow the existing 6144-tile allocator extent
+        value = 0x2b0b1800 # cmplwi cr6 r11 0x800 --> cmplwi cr6 r11 0x1800
+    [[patch.be32]]
+        address = 0x8309b4f4 # Implicit depth surface: retain 13 base bits
+        value = 0x51430024 # rlwimi r3 r10 0 0 0x13 --> rlwimi r3 r10 0 0 0x12
+    [[patch.be32]]
+        address = 0x8309b524 # Implicit color surface: retain 13 base bits
+        value = 0x51630024 # rlwimi r3 r11 0 0 0x13 --> rlwimi r3 r11 0 0 0x12
+    [[patch.array]]
+        address = 0x832f3f80 # Load 1920 into f0 for surface sizing
+        value = "3d6044f091610050c00100504b314bd4" # lis r11 0x44f0 / stw r11 0x50(r1) / lfs f0 0x50(r1) / b 0x82608b60
+    [[patch.array]]
+        address = 0x832f3f90 # Load 1080 into f13 for surface sizing
+        value = "3d60448791610050c1a100504b314bf8" # lis r11 0x4487 / stw r11 0x50(r1) / lfs f13 0x50(r1) / b 0x82608b94
+    [[patch.array]]
+        address = 0x832f3fa0 # Load 1920 into f13 for surface sizing
+        value = "3d6044f091610050c1a100504b314c1c" # lis r11 0x44f0 / stw r11 0x50(r1) / lfs f13 0x50(r1) / b 0x82608bc8
+    [[patch.array]]
+        address = 0x832f3fb0 # Load 1080 into f13 for surface sizing
+        value = "3d60448791610050c1a100504b314c40" # lis r11 0x4487 / stw r11 0x50(r1) / lfs f13 0x50(r1) / b 0x82608bfc
+    [[patch.array]]
+        address = 0x832f3fc0 # Save the UI render bounds
+        value = "d0210050d0410054" # stfs f1 0x50(r1) / stfs f2 0x54(r1)
+    [[patch.array]]
+        address = 0x832f3fc8 # Load the 720p UI projection scale
+        value = "3d603f2a616baaab91610058c0010058" # lis r11 0x3f2a / ori r11 r11 0xaaab / stw r11 0x58(r1) / lfs f0 0x58(r1)
+    [[patch.array]]
+        address = 0x832f3fd8 # Scale the UI projection and call the original setup
+        value = "ec210032ec4200324afa73d9" # fmuls f1 f1 f0 / fmuls f2 f2 f0 / bl 0x8229b3b8
+    [[patch.array]]
+        address = 0x832f3fe4 # Restore the 1080p render bounds
+        value = "c0010050d01e0130c0010054d01e0134" # lfs f0 0x50(r1) / stfs f0 0x130(r30) / lfs f0 0x54(r1) / stfs f0 0x134(r30)
+    [[patch.be32]]
+        address = 0x832f3ff4 # Return to the UI setup
+        value = 0x4afc54f4 # b 0x822b94e8
+    [[patch.be32]]
+        address = 0x8338ebb0 # shadow_mask: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338ec00 # shadow_0: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338ec50 # shadow_1: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338eca0 # shadow_2: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338ecf0 # shadow_3: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be64]]
+        address = 0x8338ed60 # depth_stencil_padding: dimensions
+        value = 0x44f0000042400000 # 1280 32 --> 1920 48
+    [[patch.be64]]
+        address = 0x8338ed78 # depth_stencil_padding: dimensions
+        value = 0x44f0000042400000 # 1280 32 --> 1920 48
+    [[patch.be32]]
+        address = 0x8338ee80 # depth_stencil_vectorhud: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be64]]
+        address = 0x8338eea0 # depth_stencil_tron_edram: dimensions
+        value = 0x4470000044070000 # 640 360 --> 960 540
+    [[patch.be64]]
+        address = 0x8338eeb8 # depth_stencil_tron_edram: dimensions
+        value = 0x4470000044070000 # 640 360 --> 960 540
+    [[patch.be64]]
+        address = 0x8338eef0 # depth_stencil_tron_edram_8x3: dimensions
+        value = 0x44b4000044070000 # 960 360 --> 1440 540
+    [[patch.be64]]
+        address = 0x8338ef08 # depth_stencil_tron_edram_8x3: dimensions
+        value = 0x44b4000044070000 # 960 360 --> 1440 540
+    [[patch.be32]]
+        address = 0x8338ef70 # particleize_depth: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338efc0 # particleize_albedo: EDRAM base
+        value = 0x00000cf0 # 1456 --> 3312
+    [[patch.be32]]
+        address = 0x8338efcc # particleize_albedo: shared resolve offset
+        value = 0x00048000 # 0x20000 --> 0x48000
+    [[patch.be32]]
+        address = 0x8338f010 # particleize_normal: EDRAM base
+        value = 0x00000d10 # 1472 --> 3344
+    [[patch.be32]]
+        address = 0x8338f01c # particleize_normal: shared resolve offset
+        value = 0x00090000 # 0x40000 --> 0x90000
+    [[patch.be32]]
+        address = 0x8338f060 # particleize_accum: EDRAM base
+        value = 0x00000d30 # 1488 --> 3376
+    [[patch.be32]]
+        address = 0x8338f06c # particleize_accum: shared resolve offset
+        value = 0x000d8000 # 0x60000 --> 0xd8000
+    [[patch.be32]]
+        address = 0x8338f150 # depth_stencil_post: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f1a0 # depth_stencil_post_ms: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f290 # depth_stencil_fill_debug: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f330 # UI_scratch: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f380 # screenshot_composite_8bit: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f470 # accum_LDR: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f4c0 # albedo: EDRAM base
+        value = 0x000005e8 # 672 --> 1512
+    [[patch.be32]]
+        address = 0x8338f510 # albedo_linear: EDRAM base
+        value = 0x000005e8 # 672 --> 1512
+    [[patch.be32]]
+        address = 0x8338f560 # normal: EDRAM base
+        value = 0x00000bd0 # 1344 --> 3024
+    [[patch.be64]]
+        address = 0x8338f580 # depth0_tiled: dimensions
+        value = 0x44f0000044100000 # 1280 384 --> 1920 576
+    [[patch.be64]]
+        address = 0x8338f598 # depth0_tiled: dimensions
+        value = 0x44f0000044100000 # 1280 384 --> 1920 576
+    [[patch.be64]]
+        address = 0x8338f5d0 # depth1_tiled: dimensions
+        value = 0x44f0000043fc0000 # 1280 336 --> 1920 504
+    [[patch.be64]]
+        address = 0x8338f5e8 # depth1_tiled: dimensions
+        value = 0x44f0000043fc0000 # 1280 336 --> 1920 504
+    [[patch.be32]]
+        address = 0x8338f600 # depth1_tiled: EDRAM base
+        value = 0x00000360 # 384 --> 864
+    [[patch.be32]]
+        address = 0x8338f60c # depth1_tiled: shared resolve offset
+        value = 0x0010e000 # 0x78000 --> 0x10e000
+    [[patch.be32]]
+        address = 0x8338f650 # albedo_debug: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f6a0 # single_pass_result: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f6f0 # accum_resolve_camo: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f740 # accum_resolve_motion_blur: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f790 # fullscreen_blur: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f7e0 # fullscreen_warp: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f830 # albedo_fast: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f880 # normal_biased: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f8d0 # accum_LDR_temp: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338f920 # color_half: EDRAM base
+        value = 0x00000e60 # 1624 --> 3680
+    [[patch.be32]]
+        address = 0x8338f970 # colormrt_half: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338f97c # colormrt_half: shared resolve offset
+        value = 0x001fe000 # 0xf0000 --> 0x1fe000
+    [[patch.be32]]
+        address = 0x8338f9c0 # depth_half: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338f9cc # depth_half: shared resolve offset
+        value = 0x003fc000 # 0x1e0000 --> 0x3fc000
+    [[patch.be32]]
+        address = 0x8338fa10 # color_quarter: EDRAM base
+        value = 0x00001070 # 1856 --> 4208
+    [[patch.be32]]
+        address = 0x8338fa60 # colormrt_quarter: EDRAM base
+        value = 0x000010e0 # 1904 --> 4320
+    [[patch.be32]]
+        address = 0x8338fa6c # colormrt_quarter: shared resolve offset
+        value = 0x00087000 # 0x3c000 --> 0x87000
+    [[patch.be32]]
+        address = 0x8338fab0 # depth_quarter: EDRAM base
+        value = 0x00001000 # 1808 --> 4096
+    [[patch.be32]]
+        address = 0x8338fabc # depth_quarter: shared resolve offset
+        value = 0x0010e000 # 0x78000 --> 0x10e000
+    [[patch.be32]]
+        address = 0x8338fb00 # antialias_curframe: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338fb50 # antialias_lastframe: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8338fc40 # aux_bloom: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338fc90 # aux_star: EDRAM base
+        value = 0x00000d40 # 1490 --> 3392
+    [[patch.be32]]
+        address = 0x8338fce0 # aux_small: EDRAM base
+        value = 0x00000db0 # 1540 --> 3504
+    [[patch.be32]]
+        address = 0x8338fd30 # aux_tiny: EDRAM base
+        value = 0x00000e20 # 1590 --> 3616
+    [[patch.be32]]
+        address = 0x8338fd80 # aux_mini: EDRAM base
+        value = 0x00000e90 # 1640 --> 3728
+    [[patch.be32]]
+        address = 0x8338fdd0 # aux_small_gamma2: EDRAM base
+        value = 0x00000f00 # 1690 --> 3840
+    [[patch.be32]]
+        address = 0x8338fe20 # aux_exposure_0: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338fe70 # aux_exposure_1: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338fec0 # aux_exposure_2: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338ff10 # aux_exposure_3: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338ff60 # aux_exposure_4: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x8338ffb0 # aux_exposure_5: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390000 # aux_exposure_6: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390050 # aux_exposure_7: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x833900a0 # aux_chud_overlay: EDRAM base
+        value = 0x00000bd0 # 1344 --> 3024
+    [[patch.be32]]
+        address = 0x833900f0 # aux_depth_of_field_high_rez: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83390140 # aux_volumetric_light_shafts_temp: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83390190 # aux_volumetric_light_shafts: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x8339019c # aux_volumetric_light_shafts: shared resolve offset
+        value = 0x00480000 # 0x200000 --> 0x480000
+    [[patch.be32]]
+        address = 0x833901e0 # aux_for_blurring: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83390230 # distortion: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83390280 # depth_camera_depth: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390320 # depth_camera: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390370 # aux_water_interaction_height: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x833903c0 # aux_water_interaction_slope: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390410 # persistent_rain_buffer: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390460 # persistent_splash_buffer: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x833904b0 # resolve_half_0: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x833904bc # resolve_half_0: shared resolve offset
+        value = 0x003fc000 # 0x1e0000 --> 0x3fc000
+    [[patch.be32]]
+        address = 0x83390500 # resolve_half_1: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390550 # resolve_half_8x3_0: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x833905a0 # resolve_half_8x3_1: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x833905f0 # resolve_quarter_0: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390640 # resolve_quarter_1: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390690 # resolve_quarter_2: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x833906e0 # resolve_quarter_3: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390730 # aux_ocean_mask: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390780 # particle_overdraw: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x833907d0 # particle_lighting: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390820 # particle_blur: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390870 # depth_blur: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390910 # rain_occlusion: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390960 # cheap_particles_position_and_age: EDRAM base
+        value = 0x00000ff0 # 1800 --> 4080
+    [[patch.be32]]
+        address = 0x833909b0 # cheap_particles_velocity_and_delta_age: EDRAM base
+        value = 0x00001040 # 1832 --> 4160
+    [[patch.be32]]
+        address = 0x83390a00 # cheap_particles_parameters: EDRAM base
+        value = 0x00001070 # 1856 --> 4208
+    [[patch.be32]]
+        address = 0x83390a50 # atmosphere_fog_table_buffer: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390aa0 # patchy_fog_buffer0: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390aac # patchy_fog_buffer0: shared resolve offset
+        value = 0x00120000 # 0x80000 --> 0x120000
+    [[patch.be32]]
+        address = 0x83390af0 # patchy_fog_buffer1: EDRAM base
+        value = 0x00000d30 # 1488 --> 3376
+    [[patch.be32]]
+        address = 0x83390afc # patchy_fog_buffer1: shared resolve offset
+        value = 0x001b0000 # 0xc0000 --> 0x1b0000
+    [[patch.be32]]
+        address = 0x83390b40 # atmosphere_fog_mask: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390b90 # atmosphere_fog_mask_depth: EDRAM base
+        value = 0x00000d30 # 1488 --> 3376
+    [[patch.be32]]
+        address = 0x83390be0 # atmosphere_fog_mask_depth_fill: EDRAM base
+        value = 0x00000d30 # 1488 --> 3376
+    [[patch.be32]]
+        address = 0x83390c30 # ssao_downsampled_depth: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390c80 # ssao_downsampled_depth4: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390cd0 # ssao_mask0: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390d20 # ssao_mask1: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390d70 # ssao_mask2: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390dc0 # ssao_downsampled_normals: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390e10 # ssao: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390e1c # ssao: shared resolve offset
+        value = 0x0028f000 # 0x123000 --> 0x28f000
+    [[patch.be32]]
+        address = 0x83390e60 # ssao_blur_surface: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83390e6c # ssao_blur_surface: shared resolve offset
+        value = 0x0028f000 # 0x123000 --> 0x28f000
+    [[patch.be32]]
+        address = 0x83390eb0 # mlaa_edge_buffer: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83390f00 # volume_fog: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83390f50 # volume_fog_small: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83390fa0 # volume_fog_small_MSAA: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83390ff0 # shadow_mask_div2: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83391040 # shadow_mask_div4: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83391090 # hologram: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x833910e0 # hologram_bias: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83391130 # hologram_resolve: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be32]]
+        address = 0x83391220 # forge_lightmap_shadow: EDRAM base
+        value = 0x00000fe0 # 1792 --> 4064
+    [[patch.be32]]
+        address = 0x83391270 # forge_lightmap_reverse_shadow: EDRAM base
+        value = 0x00000fe0 # 1792 --> 4064
+    [[patch.be32]]
+        address = 0x833912c0 # shadow_variance: EDRAM base
+        value = 0x00000cc0 # 1440 --> 3264
+    [[patch.be32]]
+        address = 0x83391310 # fxaa: EDRAM base
+        value = 0x00000660 # 720 --> 1632
+    [[patch.be64]]
+        address = 0x833ea034 # Render width and height
+        value = 0x0000078000000438 # 1280 720 --> 1920 1080
+    [[patch.be32]]
+        address = 0x8405dd60 # Reserve extra resolve storage outside the physical heap
+        value = 0x020d0000 # 0x0 --> 0x20d0000

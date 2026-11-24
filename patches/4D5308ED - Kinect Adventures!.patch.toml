@@ -1,0 +1,24 @@
+title_name = "Kinect Adventures!"
+title_id = "4D5308ED" # MS-2285
+hash = "FEF1C9FF272B3BD9" # default.xex (Rev 2)
+#media_id = "6F0C4542"
+
+[[patch]]
+    name = "Reflex Ridge loading figure"
+    desc = "Use the loading figure when avatar assets cannot load so Reflex Ridge can start."
+    author = "Tim Ryan"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x82b63f18
+        value = 0x48000048 # Original: 0x419a0048
+
+[[patch]]
+    name = "Skip forced River Rush introduction"
+    desc = "Start at the normal menu instead of the forced introductory River Rush round. Explicit introduction launch options still work."
+    author = "Tim Ryan"
+    is_enabled = false
+
+    [[patch.be32]]
+        address = 0x8237a5c8
+        value = 0x38600001 # Original: 0x48e33761
